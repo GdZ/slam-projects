@@ -1,0 +1,36 @@
+[submodule "ORB_SLAM/ORB-SLAM2-CHINESE"]
+	path = ORB_SLAM/ORB-SLAM2-CHINESE
+	url = https://gitee.com/vincentqin/ORB-SLAM2-CHINESE.git
+[submodule "ORB_SLAM/ORB_SLAM2"]
+	path = ORB_SLAM/ORB_SLAM2
+	url = https://github.com/raulmur/ORB_SLAM2.git
+[submodule "ORB_SLAM/ORB-SLAM2_RGBD_DENSE_MAP"]
+	path = ORB_SLAM/ORB-SLAM2_RGBD_DENSE_MAP
+	url = https://github.com/tiantiandabaojian/ORB-SLAM2_RGBD_DENSE_MAP
+[submodule "ORB_SLAM/ORB_SLAM2_SSD_Semantic"]
+	path = ORB_SLAM/ORB_SLAM2_SSD_Semantic
+	url = https://github.com/Ewenwan/ORB_SLAM2_SSD_Semantic
+[submodule "ORB_SLAM/ORB-YGZ-SLAM"]
+	path = ORB_SLAM/ORB-YGZ-SLAM
+	url = https://github.com/gaoxiang12/ORB-YGZ-SLAM
+[submodule "ORB_SLAM/ORB-Code-Notes"]
+	path = ORB_SLAM/ORB-Code-Notes
+	url = https://github.com/zhaoxuhui/ORB-Code-Notes.git
+[submodule "ORB_SLAM/ORBSLAM2_with_pointcloud_map"]
+	path = ORB_SLAM/ORBSLAM2_with_pointcloud_map
+	url = https://github.com/gaoxiang12/ORBSLAM2_with_pointcloud_map
+[submodule "ORB_SLAM/ORB_SLAM3"]
+	path = ORB_SLAM/ORB_SLAM3
+	url = https://github.com/jahaniam/ORB_SLAM3
+[submodule "ORB_SLAM/ORB_SLAM3-RGBD-Inertial"]
+	path = ORB_SLAM/ORB_SLAM3-RGBD-Inertial
+	url = https://github.com/xiefei2929/ORB_SLAM3-RGBD-Inertial
+[submodule "ORB_SLAM/slam_docker_container"]
+	path = ORB_SLAM/slam_docker_container
+	url = https://github.com/Kvasir8/slam_docker_container.git
+[submodule "ORB_SLAM/ORB_SLAM3_detailed_comments"]
+	path = ORB_SLAM/ORB_SLAM3_detailed_comments
+	url = https://github.com/electech6/ORB_SLAM3_detailed_comments.git
+[submodule "ORB_SLAM/TE-ORB_SLAM2"]
+	path = ORB_SLAM/TE-ORB_SLAM2
+	url = https://github.com/Eralien/TE-ORB_SLAM2
