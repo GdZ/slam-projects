@@ -52,3 +52,24 @@
 [submodule "LIO/faster-lio"]
 	path = LIO/faster-lio
 	url = https://github.com/gaoxiang12/faster-lio.git
+[submodule "DSO/DSO"]
+	path = DSO/DSO
+	url = https://github.com/alalagong/DSO.git
+[submodule "DSO/LDSO"]
+	path = DSO/LDSO
+	url = https://github.com/tum-vision/LDSO.git
+[submodule "DSO/dsol"]
+	path = DSO/dsol
+	url = https://github.com/versatran01/dsol.git
+[submodule "DSO/dso_ros"]
+	path = DSO/dso_ros
+	url = https://github.com/JakobEngel/dso_ros.git
+[submodule "DSO/dso"]
+	path = DSO/dso
+	url = https://github.com/JakobEngel/dso.git
+[submodule "DSO/jakob-dso"]
+	path = DSO/jakob-dso
+	url = https://github.com/JakobEngel/dso.git
+[submodule "DSO/stereo-dso"]
+	path = DSO/stereo-dso
+	url = https://github.com/JiatianWu/stereo-dso.git
