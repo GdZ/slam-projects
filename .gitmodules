@@ -34,3 +34,21 @@
 [submodule "ORB_SLAM/TE-ORB_SLAM2"]
 	path = ORB_SLAM/TE-ORB_SLAM2
 	url = https://github.com/Eralien/TE-ORB_SLAM2
+[submodule "LIO/LIO-SAM-DetailedNote"]
+	path = LIO/LIO-SAM-DetailedNote
+	url = https://github.com/smilefacehh/LIO-SAM-DetailedNote.git
+[submodule "LIO/Simple-LIO-SAM"]
+	path = LIO/Simple-LIO-SAM
+	url = https://github.com/zeal-up/Simple-LIO-SAM.git
+[submodule "LIO/S-FAST_LIO"]
+	path = LIO/S-FAST_LIO
+	url = https://github.com/zlwang7/S-FAST_LIO.git
+[submodule "LIO/FAST_LIO"]
+	path = LIO/FAST_LIO
+	url = https://github.com/hku-mars/FAST_LIO.git
+[submodule "LIO/LIO-SAM-note"]
+	path = LIO/LIO-SAM-note
+	url = https://github.com/chennuo0125-HIT/LIO-SAM-note.git
+[submodule "LIO/faster-lio"]
+	path = LIO/faster-lio
+	url = https://github.com/gaoxiang12/faster-lio.git
