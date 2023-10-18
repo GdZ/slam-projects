@@ -73,3 +73,15 @@
 [submodule "DSO/stereo-dso"]
 	path = DSO/stereo-dso
 	url = https://github.com/JiatianWu/stereo-dso.git
+[submodule "DVO/dvo"]
+	path = DVO/dvo
+	url = https://github.com/tum-vision/dvo.git
+[submodule "DVO/dvo_slam"]
+	path = DVO/dvo_slam
+	url = https://github.com/tum-vision/dvo_slam.git
+[submodule "DVO/simple_dvo"]
+	path = DVO/simple_dvo
+	url = https://github.com/muskie82/simple_dvo.git
+[submodule "DVO/dvo_python"]
+	path = DVO/dvo_python
+	url = https://github.com/krrish94/dvo_python.git
