@@ -85,3 +85,31 @@
 [submodule "DVO/dvo_python"]
 	path = DVO/dvo_python
 	url = https://github.com/krrish94/dvo_python.git
+[submodule "LIO/LIO-SAM"]
+	path = LIO/LIO-SAM
+	url = https://github.com/TixiaoShan/LIO-SAM.git
+[submodule "LIO/LVI-SAM_detailed_comments"]
+	path = LIO/LVI-SAM_detailed_comments
+	url = https://github.com/electech6/LVI-SAM_detailed_comments.git
+[submodule "Cartographer/cartographer_detailed_comments_ws"]
+	path = Cartographer/cartographer_detailed_comments_ws
+    #url = https://github.com/electech6/cartographer_detailed_comments_ws.git
+	url = https://github.com/xiangli0608/cartographer_detailed_comments_ws.git
+[submodule "docs/Owesome-3D-Semantic-Segmentation-Reconstruction"]
+	path = docs/Owesome-3D-Semantic-Segmentation-Reconstruction
+	url = https://github.com/electech6/Owesome-3D-Semantic-Segmentation-Reconstruction.git
+[submodule "docs/awesome-RGBD-SLAM"]
+	path = docs/awesome-RGBD-SLAM
+	url = https://github.com/electech6/awesome-RGBD-SLAM.git
+[submodule "LIO/LVI-SAM"]
+	path = LIO/LVI-SAM
+	url = https://github.com/TixiaoShan/LVI-SAM.git
+[submodule "ORB_SLAM/ORB_SLAM2_Offical"]
+	path = ORB_SLAM/ORB_SLAM2_Offical
+	url = https://github.com/raulmur/ORB_SLAM2.git
+[submodule "calibrate/lidar_IMU_calib"]
+	path = calibrate/lidar_IMU_calib
+	url = https://github.com/APRIL-ZJU/lidar_IMU_calib.git
+[submodule "interview/cpp_programming"]
+	path = interview/cpp_programming
+	url = https://github.com/xiaoguangcong/cpp_pro.git
