@@ -152,3 +152,12 @@
 [submodule "docs/smart-city"]
 	path = docs/smart-city
 	url = https://github.com/enryteam/smart-city.git
+[submodule "PCL/pcl-learning"]
+	path = PCL/pcl-learning
+	url = https://github.com/HuangCongQing/pcl-learning.git
+[submodule "data_fusion/Multi_Sensor_Fusion"]
+	path = data_fusion/Multi_Sensor_Fusion
+	url = https://github.com/2013fangwentao/Multi_Sensor_Fusion.git
+[submodule "vslam_imu/MSCKF_comments"]
+	path = vslam_imu/MSCKF_comments
+	url = https://github.com/electech6/MSCKF_comments.git
