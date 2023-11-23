@@ -113,3 +113,42 @@
 [submodule "interview/cpp_programming"]
 	path = interview/cpp_programming
 	url = https://github.com/xiaoguangcong/cpp_pro.git
+[submodule "interview/clang-uml"]
+	path = interview/clang-uml
+	url = https://github.com/bkryza/clang-uml.git
+[submodule "maps/nds-dev/zserio"]
+	path = maps/nds-dev/zserio
+	url = https://github.com/ndsev/zserio.git
+[submodule "maps/nds-dev/zswag"]
+	path = maps/nds-dev/zswag
+	url = https://github.com/ndsev/zswag.git
+[submodule "maps/nds-dev/erdblick"]
+	path = maps/nds-dev/erdblick
+	url = https://github.com/ndsev/erdblick.git
+[submodule "maps/nds-dev/zserio-tutorial-cpp"]
+	path = maps/nds-dev/zserio-tutorial-cpp
+	url = https://github.com/ndsev/zserio-tutorial-cpp.git
+[submodule "maps/nds-dev/mapget"]
+	path = maps/nds-dev/mapget
+	url = https://github.com/ndsev/mapget.git
+[submodule "maps/nds-dev/zserio-service-grpc-cpp"]
+	path = maps/nds-dev/zserio-service-grpc-cpp
+	url = https://github.com/ndsev/zserio-service-grpc-cpp.git
+[submodule "maps/nds-dev/zserio-service-rmi-java"]
+	path = maps/nds-dev/zserio-service-rmi-java
+	url = https://github.com/ndsev/zserio-service-rmi-java.git
+[submodule "maps/nds-dev/zserio-service-rest-java"]
+	path = maps/nds-dev/zserio-service-rest-java
+	url = https://github.com/ndsev/zserio-service-rest-java.git
+[submodule "calibrate/kalibr"]
+	path = calibrate/kalibr
+	url = https://github.com/ethz-asl/kalibr.git
+[submodule "calibrate/imu_utils"]
+	path = calibrate/imu_utils
+	url = https://github.com/gaowenliang/imu_utils.git
+[submodule "scenarios/OSC-ALKS-scenarios"]
+	path = scenarios/OSC-ALKS-scenarios
+	url = https://github.com/asam-oss/OSC-ALKS-scenarios.git
+[submodule "docs/smart-city"]
+	path = docs/smart-city
+	url = https://github.com/enryteam/smart-city.git
