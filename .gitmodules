@@ -161,3 +161,15 @@
 [submodule "vslam_imu/MSCKF_comments"]
 	path = vslam_imu/MSCKF_comments
 	url = https://github.com/electech6/MSCKF_comments.git
+[submodule "maps/nds-dev/zserio-service-http-python"]
+	path = maps/nds-dev/zserio-service-http-python
+	url = https://github.com/ndsev/zserio-service-http-python.git
+[submodule "maps/nds-dev/zserio-pubsub-mosquitto-cpp"]
+	path = maps/nds-dev/zserio-pubsub-mosquitto-cpp
+	url = https://github.com/ndsev/zserio-pubsub-mosquitto-cpp
+[submodule "maps/nds-dev/zserio-pubsub-paho-mqtt-java"]
+	path = maps/nds-dev/zserio-pubsub-paho-mqtt-java
+	url = https://github.com/ndsev/zserio-pubsub-paho-mqtt-java
+[submodule "maps/nds-dev/zserio-pubsub-paho-mqtt-python"]
+	path = maps/nds-dev/zserio-pubsub-paho-mqtt-python
+	url = https://github.com/ndsev/zserio-pubsub-paho-mqtt-python
