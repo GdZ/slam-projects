@@ -1,0 +1,36 @@
+/**
+ * This dot file creates symbol collaboration diagram for DisplayNameLayerContent.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="DisplayNameLayerContent collaboration diagram";
+
+    subgraph "cluster_nds.name.metadata"
+    {
+        style="dashed, rounded";
+        label="nds.name.metadata";
+        tooltip="Package nds.name.metadata";
+        href="../../../content/packages/nds.name.metadata.html#Package-nds-name-metadata";
+        target="_parent";
+
+        "DisplayNameLayerContent" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.metadata.html#Bitmask-DisplayNameLayerContent" title="Bitmask defined in nds.name.metadata">DisplayNameLayerContent</td></tr></table></font>>];
+        "DisplayNameLayerMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.metadata.html#Structure-DisplayNameLayerMetadata" title="Structure defined in nds.name.metadata">DisplayNameLayerMetadata</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.name.layer"
+    {
+        style="dashed, rounded";
+        label="nds.name.layer";
+        tooltip="Package nds.name.layer";
+        href="../../../content/packages/nds.name.layer.html#Package-nds-name-layer";
+        target="_parent";
+
+        "DisplayNameLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.layer.html#Structure-DisplayNameLayer" title="Structure defined in nds.name.layer">DisplayNameLayer</td></tr></table></font>>];
+    }
+
+    "DisplayNameLayer" -> "DisplayNameLayerContent" [label="uses", fontsize=10];
+    "DisplayNameLayerMetadata" -> "DisplayNameLayerContent" [label="uses", fontsize=10];
+}

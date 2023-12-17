@@ -1,0 +1,50 @@
+/**
+ * This dot file creates symbol collaboration diagram for BoundaryElementDefinitions.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="BoundaryElementDefinitions collaboration diagram";
+
+    subgraph "cluster_nds.lane.boundaries"
+    {
+        style="dashed, rounded";
+        label="nds.lane.boundaries";
+        tooltip="Package nds.lane.boundaries";
+        href="../../../content/packages/nds.lane.boundaries.html#Package-nds-lane-boundaries";
+        target="_parent";
+
+        "BoundaryElementDefinitions" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.boundaries.html#Structure-BoundaryElementDefinitions" title="Structure defined in nds.lane.boundaries">BoundaryElementDefinitions</td></tr></table></font>>];
+        "BoundaryElement" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.boundaries.html#Structure-BoundaryElement" title="Structure defined in nds.lane.boundaries">BoundaryElement</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.lane.layer"
+    {
+        style="dashed, rounded";
+        label="nds.lane.layer";
+        tooltip="Package nds.lane.layer";
+        href="../../../content/packages/nds.lane.layer.html#Package-nds-lane-layer";
+        target="_parent";
+
+        "LaneLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.layer.html#Structure-LaneLayer" title="Structure defined in nds.lane.layer">LaneLayer</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.lane.topics"
+    {
+        style="dashed, rounded";
+        label="nds.lane.topics";
+        tooltip="Package nds.lane.topics";
+        href="../../../content/packages/nds.lane.topics.html#Package-nds-lane-topics";
+        target="_parent";
+
+        "LaneGroupsOnPathTopic" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.topics.html#Structure-LaneGroupsOnPathTopic" title="Structure defined in nds.lane.topics">LaneGroupsOnPathTopic</td></tr></table></font>>];
+        "LaneBoundaryGeometryOnPathTopic" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.topics.html#Structure-LaneBoundaryGeometryOnPathTopic" title="Structure defined in nds.lane.topics">LaneBoundaryGeometryOnPathTopic</td></tr></table></font>>];
+    }
+
+    "BoundaryElementDefinitions" -> "BoundaryElement" [label="uses", fontsize=10];
+    "LaneLayer" -> "BoundaryElementDefinitions" [label="uses", fontsize=10];
+    "LaneGroupsOnPathTopic" -> "BoundaryElementDefinitions" [label="uses", fontsize=10];
+    "LaneBoundaryGeometryOnPathTopic" -> "BoundaryElementDefinitions" [label="uses", fontsize=10];
+}

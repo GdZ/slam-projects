@@ -1,0 +1,64 @@
+/**
+ * This dot file creates symbol collaboration diagram for RegionRulesLayerMetadata.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="RegionRulesLayerMetadata collaboration diagram";
+
+    subgraph "cluster_nds.rules.metadata"
+    {
+        style="dashed, rounded";
+        label="nds.rules.metadata";
+        tooltip="Package nds.rules.metadata";
+        href="../../../content/packages/nds.rules.metadata.html#Package-nds-rules-metadata";
+        target="_parent";
+
+        "RegionRulesLayerMetadata" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.metadata.html#Structure-RegionRulesLayerMetadata" title="Structure defined in nds.rules.metadata">RegionRulesLayerMetadata</td></tr></table></font>>];
+        "RegionRulesLayerContent" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.metadata.html#Bitmask-RegionRulesLayerContent" title="Bitmask defined in nds.rules.metadata">RegionRulesLayerContent</td></tr></table></font>>];
+        "RegionRulesLayerRoadsMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.metadata.html#Subtype-RegionRulesLayerRoadsMetadata" title="Subtype defined in nds.rules.metadata">RegionRulesLayerRoadsMetadata</td></tr></table></font>>];
+        "RegionRulesLayerLanesMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.metadata.html#Subtype-RegionRulesLayerLanesMetadata" title="Subtype defined in nds.rules.metadata">RegionRulesLayerLanesMetadata</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.rules.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.rules.instantiations";
+        tooltip="Package nds.rules.instantiations";
+        href="../../../content/packages/nds.rules.instantiations.html#Package-nds-rules-instantiations";
+        target="_parent";
+
+        "RulesRegionAttributeMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.instantiations.html#InstantiateType-RulesRegionAttributeMetadata" title="InstantiateType defined in nds.rules.instantiations">RulesRegionAttributeMetadata</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.types"
+    {
+        style="dashed, rounded";
+        label="nds.core.types";
+        tooltip="Package nds.core.types";
+        href="../../../content/packages/nds.core.types.html#Package-nds-core-types";
+        target="_parent";
+
+        "RoadType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Structure-RoadType" title="Structure defined in nds.core.types">RoadType</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.language"
+    {
+        style="dashed, rounded";
+        label="nds.core.language";
+        tooltip="Package nds.core.language";
+        href="../../../content/packages/nds.core.language.html#Package-nds-core-language";
+        target="_parent";
+
+        "AvailableLanguages" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.language.html#Structure-AvailableLanguages" title="Structure defined in nds.core.language">AvailableLanguages</td></tr></table></font>>];
+    }
+
+    "RegionRulesLayerMetadata" -> "RegionRulesLayerContent" [label="uses", fontsize=10];
+    "RegionRulesLayerMetadata" -> "RulesRegionAttributeMetadata" [label="uses", fontsize=10];
+    "RegionRulesLayerMetadata" -> "RoadType" [label="uses", fontsize=10];
+    "RegionRulesLayerMetadata" -> "AvailableLanguages" [label="uses", fontsize=10];
+    "RegionRulesLayerRoadsMetadata" -> "RegionRulesLayerMetadata" [label="uses", fontsize=10];
+    "RegionRulesLayerLanesMetadata" -> "RegionRulesLayerMetadata" [label="uses", fontsize=10];
+}

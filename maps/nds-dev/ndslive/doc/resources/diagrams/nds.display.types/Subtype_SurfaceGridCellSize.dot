@@ -1,0 +1,38 @@
+/**
+ * This dot file creates symbol collaboration diagram for SurfaceGridCellSize.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="SurfaceGridCellSize collaboration diagram";
+
+    subgraph "cluster_nds.display.types"
+    {
+        style="dashed, rounded";
+        label="nds.display.types";
+        tooltip="Package nds.display.types";
+        href="../../../content/packages/nds.display.types.html#Package-nds-display-types";
+        target="_parent";
+
+        "SurfaceGridCellSize" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.types.html#Subtype-SurfaceGridCellSize" title="Subtype defined in nds.display.types">SurfaceGridCellSize</td></tr></table></font>>];
+        "BdamSurfaceGrid" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.types.html#Structure-BdamSurfaceGrid" title="Structure defined in nds.display.types">BdamSurfaceGrid</td></tr></table></font>>];
+        "BdamSurface" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.types.html#Structure-BdamSurface" title="Structure defined in nds.display.types">BdamSurface</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.grid"
+    {
+        style="dashed, rounded";
+        label="nds.core.grid";
+        tooltip="Package nds.core.grid";
+        href="../../../content/packages/nds.core.grid.html#Package-nds-core-grid";
+        target="_parent";
+
+        "GridCellSize" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.grid.html#Subtype-GridCellSize" title="Subtype defined in nds.core.grid">GridCellSize</td></tr></table></font>>];
+    }
+
+    "SurfaceGridCellSize" -> "GridCellSize" [label="uses", fontsize=10];
+    "BdamSurfaceGrid" -> "SurfaceGridCellSize" [label="uses", fontsize=10];
+    "BdamSurface" -> "SurfaceGridCellSize" [label="uses", fontsize=10];
+}

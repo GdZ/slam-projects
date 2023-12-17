@@ -1,0 +1,48 @@
+/**
+ * This dot file creates symbol collaboration diagram for RoadLocationCharacteristicsLayerMetadata.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="RoadLocationCharacteristicsLayerMetadata collaboration diagram";
+
+    subgraph "cluster_nds.characteristics.metadata"
+    {
+        style="dashed, rounded";
+        label="nds.characteristics.metadata";
+        tooltip="Package nds.characteristics.metadata";
+        href="../../../content/packages/nds.characteristics.metadata.html#Package-nds-characteristics-metadata";
+        target="_parent";
+
+        "RoadLocationCharacteristicsLayerMetadata" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.metadata.html#Structure-RoadLocationCharacteristicsLayerMetadata" title="Structure defined in nds.characteristics.metadata">RoadLocationCharacteristicsLayerMetadata</td></tr></table></font>>];
+        "RoadLocationCharacsLayerContent" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.metadata.html#Bitmask-RoadLocationCharacsLayerContent" title="Bitmask defined in nds.characteristics.metadata">RoadLocationCharacsLayerContent</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.characteristics.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.characteristics.instantiations";
+        tooltip="Package nds.characteristics.instantiations";
+        href="../../../content/packages/nds.characteristics.instantiations.html#Package-nds-characteristics-instantiations";
+        target="_parent";
+
+        "CharacsRoadRangeAttributeMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.instantiations.html#InstantiateType-CharacsRoadRangeAttributeMetadata" title="InstantiateType defined in nds.characteristics.instantiations">CharacsRoadRangeAttributeMetadata</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.types"
+    {
+        style="dashed, rounded";
+        label="nds.core.types";
+        tooltip="Package nds.core.types";
+        href="../../../content/packages/nds.core.types.html#Package-nds-core-types";
+        target="_parent";
+
+        "RoadType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Structure-RoadType" title="Structure defined in nds.core.types">RoadType</td></tr></table></font>>];
+    }
+
+    "RoadLocationCharacteristicsLayerMetadata" -> "RoadLocationCharacsLayerContent" [label="uses", fontsize=10];
+    "RoadLocationCharacteristicsLayerMetadata" -> "CharacsRoadRangeAttributeMetadata" [label="uses", fontsize=10];
+    "RoadLocationCharacteristicsLayerMetadata" -> "RoadType" [label="uses", fontsize=10];
+}

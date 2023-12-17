@@ -1,0 +1,212 @@
+/**
+ * This dot file creates symbol collaboration diagram for Flag.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="Flag collaboration diagram";
+
+    subgraph "cluster_nds.core.types"
+    {
+        style="dashed, rounded";
+        label="nds.core.types";
+        tooltip="Package nds.core.types";
+        href="../../../content/packages/nds.core.types.html#Package-nds-core-types";
+        target="_parent";
+
+        "Flag" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Structure-Flag" title="Structure defined in nds.core.types">Flag</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.traffic.types"
+    {
+        style="dashed, rounded";
+        label="nds.traffic.types";
+        tooltip="Package nds.traffic.types";
+        href="../../../content/packages/nds.traffic.types.html#Package-nds-traffic-types";
+        target="_parent";
+
+        "CurrentRoadCondition" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.traffic.types.html#Subtype-CurrentRoadCondition" title="Subtype defined in nds.traffic.types">CurrentRoadCondition</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.adas.types"
+    {
+        style="dashed, rounded";
+        label="nds.adas.types";
+        tooltip="Package nds.adas.types";
+        href="../../../content/packages/nds.adas.types.html#Package-nds-adas-types";
+        target="_parent";
+
+        "EnhancedGeometry" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.adas.types.html#Subtype-EnhancedGeometry" title="Subtype defined in nds.adas.types">EnhancedGeometry</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.poi.types"
+    {
+        style="dashed, rounded";
+        label="nds.poi.types";
+        tooltip="Package nds.poi.types";
+        href="../../../content/packages/nds.poi.types.html#Package-nds-poi-types";
+        target="_parent";
+
+        "Open24Hrs" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.types.html#Subtype-Open24Hrs" title="Subtype defined in nds.poi.types">Open24Hrs</td></tr></table></font>>];
+        "EvFreeCharging" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.types.html#Subtype-EvFreeCharging" title="Subtype defined in nds.poi.types">EvFreeCharging</td></tr></table></font>>];
+        "EvFreeParking" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.types.html#Subtype-EvFreeParking" title="Subtype defined in nds.poi.types">EvFreeParking</td></tr></table></font>>];
+        "OpeningHrs" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.types.html#Subtype-OpeningHrs" title="Subtype defined in nds.poi.types">OpeningHrs</td></tr></table></font>>];
+        "InVicinity" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.types.html#Subtype-InVicinity" title="Subtype defined in nds.poi.types">InVicinity</td></tr></table></font>>];
+        "PrivateAccess" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.types.html#Subtype-PrivateAccess" title="Subtype defined in nds.poi.types">PrivateAccess</td></tr></table></font>>];
+        "NationalImportance" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.types.html#Subtype-NationalImportance" title="Subtype defined in nds.poi.types">NationalImportance</td></tr></table></font>>];
+        "RestaurantFacilitiesAvailable" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.types.html#Subtype-RestaurantFacilitiesAvailable" title="Subtype defined in nds.poi.types">RestaurantFacilitiesAvailable</td></tr></table></font>>];
+        "MajorImportance" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.types.html#Subtype-MajorImportance" title="Subtype defined in nds.poi.types">MajorImportance</td></tr></table></font>>];
+        "AirportMilitary" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.types.html#Subtype-AirportMilitary" title="Subtype defined in nds.poi.types">AirportMilitary</td></tr></table></font>>];
+        "ParkAndRideFacility" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.types.html#Subtype-ParkAndRideFacility" title="Subtype defined in nds.poi.types">ParkAndRideFacility</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.venue.details.types"
+    {
+        style="dashed, rounded";
+        label="nds.venue.details.types";
+        tooltip="Package nds.venue.details.types";
+        href="../../../content/packages/nds.venue.details.types.html#Package-nds-venue-details-types";
+        target="_parent";
+
+        "ProhibitedAccess" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.details.types.html#Subtype-ProhibitedAccess" title="Subtype defined in nds.venue.details.types">ProhibitedAccess</td></tr></table></font>>];
+        "Available" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.details.types.html#Subtype-Available" title="Subtype defined in nds.venue.details.types">Available</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.display.details.types"
+    {
+        style="dashed, rounded";
+        label="nds.display.details.types";
+        tooltip="Package nds.display.details.types";
+        href="../../../content/packages/nds.display.details.types.html#Package-nds-display-details-types";
+        target="_parent";
+
+        "DetachedFromTerrain" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.details.types.html#Subtype-DetachedFromTerrain" title="Subtype defined in nds.display.details.types">DetachedFromTerrain</td></tr></table></font>>];
+        "Has3dRepresentation" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.details.types.html#Subtype-Has3dRepresentation" title="Subtype defined in nds.display.details.types">Has3dRepresentation</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.name.types"
+    {
+        style="dashed, rounded";
+        label="nds.name.types";
+        tooltip="Package nds.name.types";
+        href="../../../content/packages/nds.name.types.html#Package-nds-name-types";
+        target="_parent";
+
+        "PreferredName" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.types.html#Subtype-PreferredName" title="Subtype defined in nds.name.types">PreferredName</td></tr></table></font>>];
+        "AddressOnly" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.types.html#Subtype-AddressOnly" title="Subtype defined in nds.name.types">AddressOnly</td></tr></table></font>>];
+        "NotAddressRelevant" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.types.html#Subtype-NotAddressRelevant" title="Subtype defined in nds.name.types">NotAddressRelevant</td></tr></table></font>>];
+        "PreferRoadNameOverRoadNumber" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.types.html#Subtype-PreferRoadNameOverRoadNumber" title="Subtype defined in nds.name.types">PreferRoadNameOverRoadNumber</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.rules.types"
+    {
+        style="dashed, rounded";
+        label="nds.rules.types";
+        tooltip="Package nds.rules.types";
+        href="../../../content/packages/nds.rules.types.html#Package-nds-rules-types";
+        target="_parent";
+
+        "WarningTriangleRequired" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.types.html#Subtype-WarningTriangleRequired" title="Subtype defined in nds.rules.types">WarningTriangleRequired</td></tr></table></font>>];
+        "FirstAidKitRequired" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.types.html#Subtype-FirstAidKitRequired" title="Subtype defined in nds.rules.types">FirstAidKitRequired</td></tr></table></font>>];
+        "SafetyVestsRequired" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.types.html#Subtype-SafetyVestsRequired" title="Subtype defined in nds.rules.types">SafetyVestsRequired</td></tr></table></font>>];
+        "BreathalizerRequired" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.types.html#Subtype-BreathalizerRequired" title="Subtype defined in nds.rules.types">BreathalizerRequired</td></tr></table></font>>];
+        "TollVignetteInfo" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.types.html#Subtype-TollVignetteInfo" title="Subtype defined in nds.rules.types">TollVignetteInfo</td></tr></table></font>>];
+        "RequiresTollRegistration" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.types.html#Subtype-RequiresTollRegistration" title="Subtype defined in nds.rules.types">RequiresTollRegistration</td></tr></table></font>>];
+        "WinterTiresRequired" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.types.html#Subtype-WinterTiresRequired" title="Subtype defined in nds.rules.types">WinterTiresRequired</td></tr></table></font>>];
+        "FireExtinguisherRequired" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.types.html#Subtype-FireExtinguisherRequired" title="Subtype defined in nds.rules.types">FireExtinguisherRequired</td></tr></table></font>>];
+        "TowRopeRequired" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.types.html#Subtype-TowRopeRequired" title="Subtype defined in nds.rules.types">TowRopeRequired</td></tr></table></font>>];
+        "PreferredUTurn" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.types.html#Subtype-PreferredUTurn" title="Subtype defined in nds.rules.types">PreferredUTurn</td></tr></table></font>>];
+        "ProhibitedPassage" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.types.html#Subtype-ProhibitedPassage" title="Subtype defined in nds.rules.types">ProhibitedPassage</td></tr></table></font>>];
+        "ProhibitedTransition" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.types.html#Subtype-ProhibitedTransition" title="Subtype defined in nds.rules.types">ProhibitedTransition</td></tr></table></font>>];
+        "OvertakingProhibition" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.types.html#Subtype-OvertakingProhibition" title="Subtype defined in nds.rules.types">OvertakingProhibition</td></tr></table></font>>];
+        "SeasonalClosed" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.types.html#Subtype-SeasonalClosed" title="Subtype defined in nds.rules.types">SeasonalClosed</td></tr></table></font>>];
+        "DontStopZone" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.types.html#Subtype-DontStopZone" title="Subtype defined in nds.rules.types">DontStopZone</td></tr></table></font>>];
+        "ProhibitedParking" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.types.html#Subtype-ProhibitedParking" title="Subtype defined in nds.rules.types">ProhibitedParking</td></tr></table></font>>];
+        "ProhibitedStopping" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.types.html#Subtype-ProhibitedStopping" title="Subtype defined in nds.rules.types">ProhibitedStopping</td></tr></table></font>>];
+        "NonDefaultDrivingSide" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.types.html#Subtype-NonDefaultDrivingSide" title="Subtype defined in nds.rules.types">NonDefaultDrivingSide</td></tr></table></font>>];
+        "TrafficLights" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.types.html#Subtype-TrafficLights" title="Subtype defined in nds.rules.types">TrafficLights</td></tr></table></font>>];
+        "TrafficLightsLongterm" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.types.html#Subtype-TrafficLightsLongterm" title="Subtype defined in nds.rules.types">TrafficLightsLongterm</td></tr></table></font>>];
+        "Roadworks" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.types.html#Subtype-Roadworks" title="Subtype defined in nds.rules.types">Roadworks</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.characteristics.types"
+    {
+        style="dashed, rounded";
+        label="nds.characteristics.types";
+        tooltip="Package nds.characteristics.types";
+        href="../../../content/packages/nds.characteristics.types.html#Package-nds-characteristics-types";
+        target="_parent";
+
+        "StationTemporary" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.types.html#Subtype-StationTemporary" title="Subtype defined in nds.characteristics.types">StationTemporary</td></tr></table></font>>];
+        "StopLine" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.types.html#Subtype-StopLine" title="Subtype defined in nds.characteristics.types">StopLine</td></tr></table></font>>];
+        "WaitingLine" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.types.html#Subtype-WaitingLine" title="Subtype defined in nds.characteristics.types">WaitingLine</td></tr></table></font>>];
+        "PedestrianCrossing" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.types.html#Subtype-PedestrianCrossing" title="Subtype defined in nds.characteristics.types">PedestrianCrossing</td></tr></table></font>>];
+        "MovableBridge" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.types.html#Subtype-MovableBridge" title="Subtype defined in nds.characteristics.types">MovableBridge</td></tr></table></font>>];
+        "HasSidewalk" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.types.html#Subtype-HasSidewalk" title="Subtype defined in nds.characteristics.types">HasSidewalk</td></tr></table></font>>];
+        "CompleteCarpoolRoad" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.types.html#Subtype-CompleteCarpoolRoad" title="Subtype defined in nds.characteristics.types">CompleteCarpoolRoad</td></tr></table></font>>];
+        "PartialCarpoolRoad" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.types.html#Subtype-PartialCarpoolRoad" title="Subtype defined in nds.characteristics.types">PartialCarpoolRoad</td></tr></table></font>>];
+        "Stubble" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.types.html#Subtype-Stubble" title="Subtype defined in nds.characteristics.types">Stubble</td></tr></table></font>>];
+        "StartOrDestinationRoadOnly" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.types.html#Subtype-StartOrDestinationRoadOnly" title="Subtype defined in nds.characteristics.types">StartOrDestinationRoadOnly</td></tr></table></font>>];
+        "HasStreetLights" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.types.html#Subtype-HasStreetLights" title="Subtype defined in nds.characteristics.types">HasStreetLights</td></tr></table></font>>];
+        "SharedRoadSurfaceWithPedestrians" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.types.html#Subtype-SharedRoadSurfaceWithPedestrians" title="Subtype defined in nds.characteristics.types">SharedRoadSurfaceWithPedestrians</td></tr></table></font>>];
+        "InBusinessDistrict" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.types.html#Subtype-InBusinessDistrict" title="Subtype defined in nds.characteristics.types">InBusinessDistrict</td></tr></table></font>>];
+    }
+
+    "CurrentRoadCondition" -> "Flag" [label="uses", fontsize=10];
+    "EnhancedGeometry" -> "Flag" [label="uses", fontsize=10];
+    "Open24Hrs" -> "Flag" [label="uses", fontsize=10];
+    "EvFreeCharging" -> "Flag" [label="uses", fontsize=10];
+    "EvFreeParking" -> "Flag" [label="uses", fontsize=10];
+    "OpeningHrs" -> "Flag" [label="uses", fontsize=10];
+    "InVicinity" -> "Flag" [label="uses", fontsize=10];
+    "PrivateAccess" -> "Flag" [label="uses", fontsize=10];
+    "NationalImportance" -> "Flag" [label="uses", fontsize=10];
+    "RestaurantFacilitiesAvailable" -> "Flag" [label="uses", fontsize=10];
+    "MajorImportance" -> "Flag" [label="uses", fontsize=10];
+    "AirportMilitary" -> "Flag" [label="uses", fontsize=10];
+    "ParkAndRideFacility" -> "Flag" [label="uses", fontsize=10];
+    "ProhibitedAccess" -> "Flag" [label="uses", fontsize=10];
+    "Available" -> "Flag" [label="uses", fontsize=10];
+    "DetachedFromTerrain" -> "Flag" [label="uses", fontsize=10];
+    "Has3dRepresentation" -> "Flag" [label="uses", fontsize=10];
+    "PreferredName" -> "Flag" [label="uses", fontsize=10];
+    "AddressOnly" -> "Flag" [label="uses", fontsize=10];
+    "NotAddressRelevant" -> "Flag" [label="uses", fontsize=10];
+    "PreferRoadNameOverRoadNumber" -> "Flag" [label="uses", fontsize=10];
+    "WarningTriangleRequired" -> "Flag" [label="uses", fontsize=10];
+    "FirstAidKitRequired" -> "Flag" [label="uses", fontsize=10];
+    "SafetyVestsRequired" -> "Flag" [label="uses", fontsize=10];
+    "BreathalizerRequired" -> "Flag" [label="uses", fontsize=10];
+    "TollVignetteInfo" -> "Flag" [label="uses", fontsize=10];
+    "RequiresTollRegistration" -> "Flag" [label="uses", fontsize=10];
+    "WinterTiresRequired" -> "Flag" [label="uses", fontsize=10];
+    "FireExtinguisherRequired" -> "Flag" [label="uses", fontsize=10];
+    "TowRopeRequired" -> "Flag" [label="uses", fontsize=10];
+    "PreferredUTurn" -> "Flag" [label="uses", fontsize=10];
+    "ProhibitedPassage" -> "Flag" [label="uses", fontsize=10];
+    "ProhibitedTransition" -> "Flag" [label="uses", fontsize=10];
+    "OvertakingProhibition" -> "Flag" [label="uses", fontsize=10];
+    "SeasonalClosed" -> "Flag" [label="uses", fontsize=10];
+    "DontStopZone" -> "Flag" [label="uses", fontsize=10];
+    "ProhibitedParking" -> "Flag" [label="uses", fontsize=10];
+    "ProhibitedStopping" -> "Flag" [label="uses", fontsize=10];
+    "NonDefaultDrivingSide" -> "Flag" [label="uses", fontsize=10];
+    "TrafficLights" -> "Flag" [label="uses", fontsize=10];
+    "TrafficLightsLongterm" -> "Flag" [label="uses", fontsize=10];
+    "Roadworks" -> "Flag" [label="uses", fontsize=10];
+    "StationTemporary" -> "Flag" [label="uses", fontsize=10];
+    "StopLine" -> "Flag" [label="uses", fontsize=10];
+    "WaitingLine" -> "Flag" [label="uses", fontsize=10];
+    "PedestrianCrossing" -> "Flag" [label="uses", fontsize=10];
+    "MovableBridge" -> "Flag" [label="uses", fontsize=10];
+    "HasSidewalk" -> "Flag" [label="uses", fontsize=10];
+    "CompleteCarpoolRoad" -> "Flag" [label="uses", fontsize=10];
+    "PartialCarpoolRoad" -> "Flag" [label="uses", fontsize=10];
+    "Stubble" -> "Flag" [label="uses", fontsize=10];
+    "StartOrDestinationRoadOnly" -> "Flag" [label="uses", fontsize=10];
+    "HasStreetLights" -> "Flag" [label="uses", fontsize=10];
+    "SharedRoadSurfaceWithPedestrians" -> "Flag" [label="uses", fontsize=10];
+    "InBusinessDistrict" -> "Flag" [label="uses", fontsize=10];
+}

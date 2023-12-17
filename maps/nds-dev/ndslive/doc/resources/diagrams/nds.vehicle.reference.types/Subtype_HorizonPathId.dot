@@ -1,0 +1,70 @@
+/**
+ * This dot file creates symbol collaboration diagram for HorizonPathId.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="HorizonPathId collaboration diagram";
+
+    subgraph "cluster_nds.vehicle.reference.types"
+    {
+        style="dashed, rounded";
+        label="nds.vehicle.reference.types";
+        tooltip="Package nds.vehicle.reference.types";
+        href="../../../content/packages/nds.vehicle.reference.types.html#Package-nds-vehicle-reference-types";
+        target="_parent";
+
+        "HorizonPathId" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.vehicle.reference.types.html#Subtype-HorizonPathId" title="Subtype defined in nds.vehicle.reference.types">HorizonPathId</td></tr></table></font>>];
+        "NO_PATH" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.vehicle.reference.types.html#Constant-NO_PATH" title="Constant defined in nds.vehicle.reference.types">NO_PATH</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.vehicle.topics"
+    {
+        style="dashed, rounded";
+        label="nds.vehicle.topics";
+        tooltip="Package nds.vehicle.topics";
+        href="../../../content/packages/nds.vehicle.topics.html#Package-nds-vehicle-topics";
+        target="_parent";
+
+        "MatchedGeoRoadNetworkTopic" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.vehicle.topics.html#Structure-MatchedGeoRoadNetworkTopic" title="Structure defined in nds.vehicle.topics">MatchedGeoRoadNetworkTopic</td></tr></table></font>>];
+        "MppTopic" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.vehicle.topics.html#Structure-MppTopic" title="Structure defined in nds.vehicle.topics">MppTopic</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.vehicle.types"
+    {
+        style="dashed, rounded";
+        label="nds.vehicle.types";
+        tooltip="Package nds.vehicle.types";
+        href="../../../content/packages/nds.vehicle.types.html#Package-nds-vehicle-types";
+        target="_parent";
+
+        "Horizon" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.vehicle.types.html#Structure-Horizon" title="Structure defined in nds.vehicle.types">Horizon</td></tr></table></font>>];
+        "HorizonPath" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.vehicle.types.html#Structure-HorizonPath" title="Structure defined in nds.vehicle.types">HorizonPath</td></tr></table></font>>];
+        "PoseRoadPathMatched" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.vehicle.types.html#Structure-PoseRoadPathMatched" title="Structure defined in nds.vehicle.types">PoseRoadPathMatched</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.lane.topics"
+    {
+        style="dashed, rounded";
+        label="nds.lane.topics";
+        tooltip="Package nds.lane.topics";
+        href="../../../content/packages/nds.lane.topics.html#Package-nds-lane-topics";
+        target="_parent";
+
+        "LaneGroupsOnPathTopic" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.topics.html#Structure-LaneGroupsOnPathTopic" title="Structure defined in nds.lane.topics">LaneGroupsOnPathTopic</td></tr></table></font>>];
+        "LaneGeometryOnPathTopic" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.topics.html#Structure-LaneGeometryOnPathTopic" title="Structure defined in nds.lane.topics">LaneGeometryOnPathTopic</td></tr></table></font>>];
+        "LaneBoundaryGeometryOnPathTopic" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.topics.html#Structure-LaneBoundaryGeometryOnPathTopic" title="Structure defined in nds.lane.topics">LaneBoundaryGeometryOnPathTopic</td></tr></table></font>>];
+    }
+
+    "NO_PATH" -> "HorizonPathId" [label="uses", fontsize=10];
+    "MatchedGeoRoadNetworkTopic" -> "HorizonPathId" [label="uses", fontsize=10];
+    "MppTopic" -> "HorizonPathId" [label="uses", fontsize=10];
+    "Horizon" -> "HorizonPathId" [label="uses", fontsize=10];
+    "HorizonPath" -> "HorizonPathId" [label="uses", fontsize=10];
+    "PoseRoadPathMatched" -> "HorizonPathId" [label="uses", fontsize=10];
+    "LaneGroupsOnPathTopic" -> "HorizonPathId" [label="uses", fontsize=10];
+    "LaneGeometryOnPathTopic" -> "HorizonPathId" [label="uses", fontsize=10];
+    "LaneBoundaryGeometryOnPathTopic" -> "HorizonPathId" [label="uses", fontsize=10];
+}

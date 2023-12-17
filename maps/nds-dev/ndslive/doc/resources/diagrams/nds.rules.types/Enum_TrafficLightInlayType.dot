@@ -1,0 +1,24 @@
+/**
+ * This dot file creates symbol collaboration diagram for TrafficLightInlayType.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="TrafficLightInlayType collaboration diagram";
+
+    subgraph "cluster_nds.rules.types"
+    {
+        style="dashed, rounded";
+        label="nds.rules.types";
+        tooltip="Package nds.rules.types";
+        href="../../../content/packages/nds.rules.types.html#Package-nds-rules-types";
+        target="_parent";
+
+        "TrafficLightInlayType" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.types.html#Enum-TrafficLightInlayType" title="Enum defined in nds.rules.types">TrafficLightInlayType</td></tr></table></font>>];
+        "TrafficLightLensDetails" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.types.html#Structure-TrafficLightLensDetails" title="Structure defined in nds.rules.types">TrafficLightLensDetails</td></tr></table></font>>];
+    }
+
+    "TrafficLightLensDetails" -> "TrafficLightInlayType" [label="uses", fontsize=10];
+}

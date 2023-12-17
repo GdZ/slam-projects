@@ -1,0 +1,36 @@
+/**
+ * This dot file creates symbol collaboration diagram for FuelLiters.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="FuelLiters collaboration diagram";
+
+    subgraph "cluster_nds.core.vehicle"
+    {
+        style="dashed, rounded";
+        label="nds.core.vehicle";
+        tooltip="Package nds.core.vehicle";
+        href="../../../content/packages/nds.core.vehicle.html#Package-nds-core-vehicle";
+        target="_parent";
+
+        "FuelLiters" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.vehicle.html#Subtype-FuelLiters" title="Subtype defined in nds.core.vehicle">FuelLiters</td></tr></table></font>>];
+        "CombustionConsumption" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.vehicle.html#Structure-CombustionConsumption" title="Structure defined in nds.core.vehicle">CombustionConsumption</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.routing.types"
+    {
+        style="dashed, rounded";
+        label="nds.routing.types";
+        tooltip="Package nds.routing.types";
+        href="../../../content/packages/nds.routing.types.html#Package-nds-routing-types";
+        target="_parent";
+
+        "RouteSegmentConsumption" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routing.types.html#Structure-RouteSegmentConsumption" title="Structure defined in nds.routing.types">RouteSegmentConsumption</td></tr></table></font>>];
+    }
+
+    "CombustionConsumption" -> "FuelLiters" [label="uses", fontsize=10];
+    "RouteSegmentConsumption" -> "FuelLiters" [label="uses", fontsize=10];
+}

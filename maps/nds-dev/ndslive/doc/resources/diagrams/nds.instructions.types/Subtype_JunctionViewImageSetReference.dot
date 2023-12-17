@@ -1,0 +1,26 @@
+/**
+ * This dot file creates symbol collaboration diagram for JunctionViewImageSetReference.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="JunctionViewImageSetReference collaboration diagram";
+
+    subgraph "cluster_nds.instructions.types"
+    {
+        style="dashed, rounded";
+        label="nds.instructions.types";
+        tooltip="Package nds.instructions.types";
+        href="../../../content/packages/nds.instructions.types.html#Package-nds-instructions-types";
+        target="_parent";
+
+        "JunctionViewImageSetReference" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.instructions.types.html#Subtype-JunctionViewImageSetReference" title="Subtype defined in nds.instructions.types">JunctionViewImageSetReference</td></tr></table></font>>];
+        "JunctionViewImageSetId" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.instructions.types.html#Subtype-JunctionViewImageSetId" title="Subtype defined in nds.instructions.types">JunctionViewImageSetId</td></tr></table></font>>];
+        "JunctionViewScene" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.instructions.types.html#Structure-JunctionViewScene" title="Structure defined in nds.instructions.types">JunctionViewScene</td></tr></table></font>>];
+    }
+
+    "JunctionViewImageSetReference" -> "JunctionViewImageSetId" [label="uses", fontsize=10];
+    "JunctionViewScene" -> "JunctionViewImageSetReference" [label="uses", fontsize=10];
+}

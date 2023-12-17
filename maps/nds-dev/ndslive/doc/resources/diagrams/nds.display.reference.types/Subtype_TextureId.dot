@@ -1,0 +1,36 @@
+/**
+ * This dot file creates symbol collaboration diagram for TextureId.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="TextureId collaboration diagram";
+
+    subgraph "cluster_nds.display.reference.types"
+    {
+        style="dashed, rounded";
+        label="nds.display.reference.types";
+        tooltip="Package nds.display.reference.types";
+        href="../../../content/packages/nds.display.reference.types.html#Package-nds-display-reference-types";
+        target="_parent";
+
+        "TextureId" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.reference.types.html#Subtype-TextureId" title="Subtype defined in nds.display.reference.types">TextureId</td></tr></table></font>>];
+        "TextureReference" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.reference.types.html#Structure-TextureReference" title="Structure defined in nds.display.reference.types">TextureReference</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.display.types"
+    {
+        style="dashed, rounded";
+        label="nds.display.types";
+        tooltip="Package nds.display.types";
+        href="../../../content/packages/nds.display.types.html#Package-nds-display-types";
+        target="_parent";
+
+        "Texture" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.types.html#Structure-Texture" title="Structure defined in nds.display.types">Texture</td></tr></table></font>>];
+    }
+
+    "TextureReference" -> "TextureId" [label="uses", fontsize=10];
+    "Texture" -> "TextureId" [label="uses", fontsize=10];
+}

@@ -1,0 +1,52 @@
+/**
+ * This dot file creates symbol collaboration diagram for PoiAttributeLayerMetadata.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="PoiAttributeLayerMetadata collaboration diagram";
+
+    subgraph "cluster_nds.poi.metadata"
+    {
+        style="dashed, rounded";
+        label="nds.poi.metadata";
+        tooltip="Package nds.poi.metadata";
+        href="../../../content/packages/nds.poi.metadata.html#Package-nds-poi-metadata";
+        target="_parent";
+
+        "PoiAttributeLayerMetadata" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.metadata.html#Structure-PoiAttributeLayerMetadata" title="Structure defined in nds.poi.metadata">PoiAttributeLayerMetadata</td></tr></table></font>>];
+        "PoiAttributeLayerContent" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.metadata.html#Bitmask-PoiAttributeLayerContent" title="Bitmask defined in nds.poi.metadata">PoiAttributeLayerContent</td></tr></table></font>>];
+        "AttributeValueIconMap" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.metadata.html#Structure-AttributeValueIconMap" title="Structure defined in nds.poi.metadata">AttributeValueIconMap</td></tr></table></font>>];
+        "PoiAttributeLayerIndirectMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.metadata.html#Subtype-PoiAttributeLayerIndirectMetadata" title="Subtype defined in nds.poi.metadata">PoiAttributeLayerIndirectMetadata</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.poi.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.poi.instantiations";
+        tooltip="Package nds.poi.instantiations";
+        href="../../../content/packages/nds.poi.instantiations.html#Package-nds-poi-instantiations";
+        target="_parent";
+
+        "PoiAttributeMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.instantiations.html#InstantiateType-PoiAttributeMetadata" title="InstantiateType defined in nds.poi.instantiations">PoiAttributeMetadata</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.language"
+    {
+        style="dashed, rounded";
+        label="nds.core.language";
+        tooltip="Package nds.core.language";
+        href="../../../content/packages/nds.core.language.html#Package-nds-core-language";
+        target="_parent";
+
+        "AvailableLanguages" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.language.html#Structure-AvailableLanguages" title="Structure defined in nds.core.language">AvailableLanguages</td></tr></table></font>>];
+    }
+
+    "PoiAttributeLayerMetadata" -> "PoiAttributeLayerContent" [label="uses", fontsize=10];
+    "PoiAttributeLayerMetadata" -> "AttributeValueIconMap" [label="uses", fontsize=10];
+    "PoiAttributeLayerMetadata" -> "PoiAttributeMetadata" [label="uses", fontsize=10];
+    "PoiAttributeLayerMetadata" -> "AvailableLanguages" [label="uses", fontsize=10];
+    "PoiAttributeLayerIndirectMetadata" -> "PoiAttributeLayerMetadata" [label="uses", fontsize=10];
+}

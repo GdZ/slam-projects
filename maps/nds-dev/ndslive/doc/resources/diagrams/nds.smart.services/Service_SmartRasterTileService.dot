@@ -1,0 +1,82 @@
+/**
+ * This dot file creates symbol collaboration diagram for SmartRasterTileService.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="SmartRasterTileService collaboration diagram";
+
+    subgraph "cluster_nds.smart.services"
+    {
+        style="dashed, rounded";
+        label="nds.smart.services";
+        tooltip="Package nds.smart.services";
+        href="../../../content/packages/nds.smart.services.html#Package-nds-smart-services";
+        target="_parent";
+
+        "SmartRasterTileService" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.services.html#Service-SmartRasterTileService" title="Service defined in nds.smart.services">SmartRasterTileService</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.types"
+    {
+        style="dashed, rounded";
+        label="nds.core.types";
+        tooltip="Package nds.core.types";
+        href="../../../content/packages/nds.core.types.html#Package-nds-core-types";
+        target="_parent";
+
+        "Empty" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Structure-Empty" title="Structure defined in nds.core.types">Empty</td></tr></table></font>>];
+        "TileId" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Structure-TileId" title="Structure defined in nds.core.types">TileId</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.system.types"
+    {
+        style="dashed, rounded";
+        label="nds.system.types";
+        tooltip="Package nds.system.types";
+        href="../../../content/packages/nds.system.types.html#Package-nds-system-types";
+        target="_parent";
+
+        "ModuleDefinition" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.system.types.html#Structure-ModuleDefinition" title="Structure defined in nds.system.types">ModuleDefinition</td></tr></table></font>>];
+        "NdsSystemToken" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.system.types.html#Structure-NdsSystemToken" title="Structure defined in nds.system.types">NdsSystemToken</td></tr></table></font>>];
+        "NdsNodeLegalInfo" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.system.types.html#Structure-NdsNodeLegalInfo" title="Structure defined in nds.system.types">NdsNodeLegalInfo</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.smart.metadata"
+    {
+        style="dashed, rounded";
+        label="nds.smart.metadata";
+        tooltip="Package nds.smart.metadata";
+        href="../../../content/packages/nds.smart.metadata.html#Package-nds-smart-metadata";
+        target="_parent";
+
+        "RasterTileServiceCapabilitiesResponse" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.metadata.html#Structure-RasterTileServiceCapabilitiesResponse" title="Structure defined in nds.smart.metadata">RasterTileServiceCapabilitiesResponse</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.smart.types"
+    {
+        style="dashed, rounded";
+        label="nds.smart.types";
+        tooltip="Package nds.smart.types";
+        href="../../../content/packages/nds.smart.types.html#Package-nds-smart-types";
+        target="_parent";
+
+        "RasterTileImageRequest" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.types.html#Structure-RasterTileImageRequest" title="Structure defined in nds.smart.types">RasterTileImageRequest</td></tr></table></font>>];
+        "RasterImage" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.types.html#Subtype-RasterImage" title="Subtype defined in nds.smart.types">RasterImage</td></tr></table></font>>];
+        "RasterTileInfo" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.types.html#Structure-RasterTileInfo" title="Structure defined in nds.smart.types">RasterTileInfo</td></tr></table></font>>];
+        "RasterTileImageVersionRequest" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.types.html#Structure-RasterTileImageVersionRequest" title="Structure defined in nds.smart.types">RasterTileImageVersionRequest</td></tr></table></font>>];
+    }
+
+    "SmartRasterTileService" -> "Empty" [label="uses", fontsize=10];
+    "SmartRasterTileService" -> "ModuleDefinition" [label="uses", fontsize=10];
+    "SmartRasterTileService" -> "NdsSystemToken" [label="uses", fontsize=10];
+    "SmartRasterTileService" -> "NdsNodeLegalInfo" [label="uses", fontsize=10];
+    "SmartRasterTileService" -> "RasterTileServiceCapabilitiesResponse" [label="uses", fontsize=10];
+    "SmartRasterTileService" -> "RasterTileImageRequest" [label="uses", fontsize=10];
+    "SmartRasterTileService" -> "RasterImage" [label="uses", fontsize=10];
+    "SmartRasterTileService" -> "TileId" [label="uses", fontsize=10];
+    "SmartRasterTileService" -> "RasterTileInfo" [label="uses", fontsize=10];
+    "SmartRasterTileService" -> "RasterTileImageVersionRequest" [label="uses", fontsize=10];
+}

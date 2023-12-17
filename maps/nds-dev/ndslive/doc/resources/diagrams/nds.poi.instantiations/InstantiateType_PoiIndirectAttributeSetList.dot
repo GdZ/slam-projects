@@ -1,0 +1,88 @@
+/**
+ * This dot file creates symbol collaboration diagram for PoiIndirectAttributeSetList.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="PoiIndirectAttributeSetList collaboration diagram";
+
+    subgraph "cluster_nds.poi.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.poi.instantiations";
+        tooltip="Package nds.poi.instantiations";
+        href="../../../content/packages/nds.poi.instantiations.html#Package-nds-poi-instantiations";
+        target="_parent";
+
+        "PoiIndirectAttributeSetList" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.instantiations.html#InstantiateType-PoiIndirectAttributeSetList" title="InstantiateType defined in nds.poi.instantiations">PoiIndirectAttributeSetList</td></tr></table></font>>];
+        "AttributeSetList&lt;PoiReferenceIndirect,Validity,PoiAttributeType,PoiAttributeValue,PoiPropertyType,PoiPropertyValue&gt;" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.attributemap.html#Structure-AttributeSetList" title="Structure defined in nds.core.attributemap">AttributeSetList</td><td>&lt;</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.reference.types.html#Structure-PoiReferenceIndirect" title="Structure defined in nds.poi.reference.types">PoiReferenceIndirect</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.attributemap.html#Structure-Validity" title="Structure defined in nds.core.attributemap">Validity</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.attributes.html#Enum-PoiAttributeType" title="Enum defined in nds.poi.attributes">PoiAttributeType</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.attributes.html#Choice-PoiAttributeValue" title="Choice defined in nds.poi.attributes">PoiAttributeValue</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.properties.html#Structure-PoiPropertyType" title="Structure defined in nds.poi.properties">PoiPropertyType</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.properties.html#Structure-PoiPropertyValue" title="Structure defined in nds.poi.properties">PoiPropertyValue</td></tr></table></td><td>&gt;</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.poi.reference.types"
+    {
+        style="dashed, rounded";
+        label="nds.poi.reference.types";
+        tooltip="Package nds.poi.reference.types";
+        href="../../../content/packages/nds.poi.reference.types.html#Package-nds-poi-reference-types";
+        target="_parent";
+
+        "PoiReferenceIndirect" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.reference.types.html#Structure-PoiReferenceIndirect" title="Structure defined in nds.poi.reference.types">PoiReferenceIndirect</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.attributemap"
+    {
+        style="dashed, rounded";
+        label="nds.core.attributemap";
+        tooltip="Package nds.core.attributemap";
+        href="../../../content/packages/nds.core.attributemap.html#Package-nds-core-attributemap";
+        target="_parent";
+
+        "Validity" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.attributemap.html#Structure-Validity" title="Structure defined in nds.core.attributemap">Validity</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.poi.attributes"
+    {
+        style="dashed, rounded";
+        label="nds.poi.attributes";
+        tooltip="Package nds.poi.attributes";
+        href="../../../content/packages/nds.poi.attributes.html#Package-nds-poi-attributes";
+        target="_parent";
+
+        "PoiAttributeType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.attributes.html#Enum-PoiAttributeType" title="Enum defined in nds.poi.attributes">PoiAttributeType</td></tr></table></font>>];
+        "PoiAttributeValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.attributes.html#Choice-PoiAttributeValue" title="Choice defined in nds.poi.attributes">PoiAttributeValue</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.poi.properties"
+    {
+        style="dashed, rounded";
+        label="nds.poi.properties";
+        tooltip="Package nds.poi.properties";
+        href="../../../content/packages/nds.poi.properties.html#Package-nds-poi-properties";
+        target="_parent";
+
+        "PoiPropertyType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.properties.html#Structure-PoiPropertyType" title="Structure defined in nds.poi.properties">PoiPropertyType</td></tr></table></font>>];
+        "PoiPropertyValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.properties.html#Structure-PoiPropertyValue" title="Structure defined in nds.poi.properties">PoiPropertyValue</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.poi.layer"
+    {
+        style="dashed, rounded";
+        label="nds.poi.layer";
+        tooltip="Package nds.poi.layer";
+        href="../../../content/packages/nds.poi.layer.html#Package-nds-poi-layer";
+        target="_parent";
+
+        "PoiAttributeLayerIndirect" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.layer.html#Structure-PoiAttributeLayerIndirect" title="Structure defined in nds.poi.layer">PoiAttributeLayerIndirect</td></tr></table></font>>];
+    }
+
+    "PoiIndirectAttributeSetList" -> "AttributeSetList&lt;PoiReferenceIndirect,Validity,PoiAttributeType,PoiAttributeValue,PoiPropertyType,PoiPropertyValue&gt;" [label="uses", fontsize=10];
+    "PoiIndirectAttributeSetList" -> "PoiReferenceIndirect" [label="uses", fontsize=10];
+    "PoiIndirectAttributeSetList" -> "Validity" [label="uses", fontsize=10];
+    "PoiIndirectAttributeSetList" -> "PoiAttributeType" [label="uses", fontsize=10];
+    "PoiIndirectAttributeSetList" -> "PoiAttributeValue" [label="uses", fontsize=10];
+    "PoiIndirectAttributeSetList" -> "PoiPropertyType" [label="uses", fontsize=10];
+    "PoiIndirectAttributeSetList" -> "PoiPropertyValue" [label="uses", fontsize=10];
+    "PoiAttributeLayerIndirect" -> "PoiIndirectAttributeSetList" [label="uses", fontsize=10];
+}

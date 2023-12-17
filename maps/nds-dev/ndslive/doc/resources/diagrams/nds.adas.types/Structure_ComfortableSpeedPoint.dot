@@ -1,0 +1,28 @@
+/**
+ * This dot file creates symbol collaboration diagram for ComfortableSpeedPoint.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="ComfortableSpeedPoint collaboration diagram";
+
+    subgraph "cluster_nds.adas.types"
+    {
+        style="dashed, rounded";
+        label="nds.adas.types";
+        tooltip="Package nds.adas.types";
+        href="../../../content/packages/nds.adas.types.html#Package-nds-adas-types";
+        target="_parent";
+
+        "ComfortableSpeedPoint" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.adas.types.html#Structure-ComfortableSpeedPoint" title="Structure defined in nds.adas.types">ComfortableSpeedPoint</td></tr></table></font>>];
+        "AdasGeometryPosition" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.adas.types.html#Subtype-AdasGeometryPosition" title="Subtype defined in nds.adas.types">AdasGeometryPosition</td></tr></table></font>>];
+        "ComfortableSpeed" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.adas.types.html#Subtype-ComfortableSpeed" title="Subtype defined in nds.adas.types">ComfortableSpeed</td></tr></table></font>>];
+        "ComfortableSpeedPointList" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.adas.types.html#Structure-ComfortableSpeedPointList" title="Structure defined in nds.adas.types">ComfortableSpeedPointList</td></tr></table></font>>];
+    }
+
+    "ComfortableSpeedPoint" -> "AdasGeometryPosition" [label="uses", fontsize=10];
+    "ComfortableSpeedPoint" -> "ComfortableSpeed" [label="uses", fontsize=10];
+    "ComfortableSpeedPointList" -> "ComfortableSpeedPoint" [label="uses", fontsize=10];
+}

@@ -1,0 +1,62 @@
+/**
+ * This dot file creates symbol collaboration diagram for LaneRoutingLayerMetadata.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="LaneRoutingLayerMetadata collaboration diagram";
+
+    subgraph "cluster_nds.routingdata.metadata"
+    {
+        style="dashed, rounded";
+        label="nds.routingdata.metadata";
+        tooltip="Package nds.routingdata.metadata";
+        href="../../../content/packages/nds.routingdata.metadata.html#Package-nds-routingdata-metadata";
+        target="_parent";
+
+        "LaneRoutingLayerMetadata" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routingdata.metadata.html#Structure-LaneRoutingLayerMetadata" title="Structure defined in nds.routingdata.metadata">LaneRoutingLayerMetadata</td></tr></table></font>>];
+        "LaneRoutingLayerContent" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routingdata.metadata.html#Bitmask-LaneRoutingLayerContent" title="Bitmask defined in nds.routingdata.metadata">LaneRoutingLayerContent</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.routingdata.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.routingdata.instantiations";
+        tooltip="Package nds.routingdata.instantiations";
+        href="../../../content/packages/nds.routingdata.instantiations.html#Package-nds-routingdata-instantiations";
+        target="_parent";
+
+        "RoutingLaneRangeAttributeMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routingdata.instantiations.html#InstantiateType-RoutingLaneRangeAttributeMetadata" title="InstantiateType defined in nds.routingdata.instantiations">RoutingLaneRangeAttributeMetadata</td></tr></table></font>>];
+        "RoutingLaneTransitionAttributeMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routingdata.instantiations.html#InstantiateType-RoutingLaneTransitionAttributeMetadata" title="InstantiateType defined in nds.routingdata.instantiations">RoutingLaneTransitionAttributeMetadata</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.types"
+    {
+        style="dashed, rounded";
+        label="nds.core.types";
+        tooltip="Package nds.core.types";
+        href="../../../content/packages/nds.core.types.html#Package-nds-core-types";
+        target="_parent";
+
+        "LaneType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Structure-LaneType" title="Structure defined in nds.core.types">LaneType</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.routingdata.types"
+    {
+        style="dashed, rounded";
+        label="nds.routingdata.types";
+        tooltip="Package nds.routingdata.types";
+        href="../../../content/packages/nds.routingdata.types.html#Package-nds-routingdata-types";
+        target="_parent";
+
+        "ExcessSlope" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routingdata.types.html#Subtype-ExcessSlope" title="Subtype defined in nds.routingdata.types">ExcessSlope</td></tr></table></font>>];
+    }
+
+    "LaneRoutingLayerMetadata" -> "LaneRoutingLayerContent" [label="uses", fontsize=10];
+    "LaneRoutingLayerMetadata" -> "RoutingLaneRangeAttributeMetadata" [label="uses", fontsize=10];
+    "LaneRoutingLayerMetadata" -> "RoutingLaneTransitionAttributeMetadata" [label="uses", fontsize=10];
+    "LaneRoutingLayerMetadata" -> "LaneType" [label="uses", fontsize=10];
+    "LaneRoutingLayerMetadata" -> "ExcessSlope" [label="uses", fontsize=10];
+}

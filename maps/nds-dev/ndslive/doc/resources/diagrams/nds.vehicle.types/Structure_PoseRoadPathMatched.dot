@@ -1,0 +1,62 @@
+/**
+ * This dot file creates symbol collaboration diagram for PoseRoadPathMatched.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="PoseRoadPathMatched collaboration diagram";
+
+    subgraph "cluster_nds.vehicle.types"
+    {
+        style="dashed, rounded";
+        label="nds.vehicle.types";
+        tooltip="Package nds.vehicle.types";
+        href="../../../content/packages/nds.vehicle.types.html#Package-nds-vehicle-types";
+        target="_parent";
+
+        "PoseRoadPathMatched" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.vehicle.types.html#Structure-PoseRoadPathMatched" title="Structure defined in nds.vehicle.types">PoseRoadPathMatched</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.vehicle.reference.types"
+    {
+        style="dashed, rounded";
+        label="nds.vehicle.reference.types";
+        tooltip="Package nds.vehicle.reference.types";
+        href="../../../content/packages/nds.vehicle.reference.types.html#Package-nds-vehicle-reference-types";
+        target="_parent";
+
+        "HorizonPathId" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.vehicle.reference.types.html#Subtype-HorizonPathId" title="Subtype defined in nds.vehicle.reference.types">HorizonPathId</td></tr></table></font>>];
+        "HorizonPathOffset" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.vehicle.reference.types.html#Subtype-HorizonPathOffset" title="Subtype defined in nds.vehicle.reference.types">HorizonPathOffset</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.vehicle"
+    {
+        style="dashed, rounded";
+        label="nds.core.vehicle";
+        tooltip="Package nds.core.vehicle";
+        href="../../../content/packages/nds.core.vehicle.html#Package-nds-core-vehicle";
+        target="_parent";
+
+        "Heading" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.vehicle.html#Subtype-Heading" title="Subtype defined in nds.core.vehicle">Heading</td></tr></table></font>>];
+        "MatchProbability" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.vehicle.html#Structure-MatchProbability" title="Structure defined in nds.core.vehicle">MatchProbability</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.types"
+    {
+        style="dashed, rounded";
+        label="nds.core.types";
+        tooltip="Package nds.core.types";
+        href="../../../content/packages/nds.core.types.html#Package-nds-core-types";
+        target="_parent";
+
+        "SpeedKmh" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Subtype-SpeedKmh" title="Subtype defined in nds.core.types">SpeedKmh</td></tr></table></font>>];
+    }
+
+    "PoseRoadPathMatched" -> "HorizonPathId" [label="uses", fontsize=10];
+    "PoseRoadPathMatched" -> "HorizonPathOffset" [label="uses", fontsize=10];
+    "PoseRoadPathMatched" -> "Heading" [label="uses", fontsize=10];
+    "PoseRoadPathMatched" -> "SpeedKmh" [label="uses", fontsize=10];
+    "PoseRoadPathMatched" -> "MatchProbability" [label="uses", fontsize=10];
+}

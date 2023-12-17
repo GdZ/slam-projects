@@ -1,0 +1,26 @@
+/**
+ * This dot file creates symbol collaboration diagram for Currency.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="Currency collaboration diagram";
+
+    subgraph "cluster_nds.core.types"
+    {
+        style="dashed, rounded";
+        label="nds.core.types";
+        tooltip="Package nds.core.types";
+        href="../../../content/packages/nds.core.types.html#Package-nds-core-types";
+        target="_parent";
+
+        "Currency" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Enum-Currency" title="Enum defined in nds.core.types">Currency</td></tr></table></font>>];
+        "MonetaryAmount" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Structure-MonetaryAmount" title="Structure defined in nds.core.types">MonetaryAmount</td></tr></table></font>>];
+        "Currencies" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Structure-Currencies" title="Structure defined in nds.core.types">Currencies</td></tr></table></font>>];
+    }
+
+    "MonetaryAmount" -> "Currency" [label="uses", fontsize=10];
+    "Currencies" -> "Currency" [label="uses", fontsize=10];
+}

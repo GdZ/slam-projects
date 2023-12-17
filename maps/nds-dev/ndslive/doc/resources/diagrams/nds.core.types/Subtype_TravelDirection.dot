@@ -1,0 +1,24 @@
+/**
+ * This dot file creates symbol collaboration diagram for TravelDirection.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="TravelDirection collaboration diagram";
+
+    subgraph "cluster_nds.core.types"
+    {
+        style="dashed, rounded";
+        label="nds.core.types";
+        tooltip="Package nds.core.types";
+        href="../../../content/packages/nds.core.types.html#Package-nds-core-types";
+        target="_parent";
+
+        "TravelDirection" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Subtype-TravelDirection" title="Subtype defined in nds.core.types">TravelDirection</td></tr></table></font>>];
+        "Direction" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Enum-Direction" title="Enum defined in nds.core.types">Direction</td></tr></table></font>>];
+    }
+
+    "TravelDirection" -> "Direction" [label="uses", fontsize=10];
+}

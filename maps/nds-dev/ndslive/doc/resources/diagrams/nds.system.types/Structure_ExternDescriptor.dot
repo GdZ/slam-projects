@@ -1,0 +1,42 @@
+/**
+ * This dot file creates symbol collaboration diagram for ExternDescriptor.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="ExternDescriptor collaboration diagram";
+
+    subgraph "cluster_nds.system.types"
+    {
+        style="dashed, rounded";
+        label="nds.system.types";
+        tooltip="Package nds.system.types";
+        href="../../../content/packages/nds.system.types.html#Package-nds-system-types";
+        target="_parent";
+
+        "ExternDescriptor" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.system.types.html#Structure-ExternDescriptor" title="Structure defined in nds.system.types">ExternDescriptor</td></tr></table></font>>];
+        "ModuleName" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.system.types.html#Subtype-ModuleName" title="Subtype defined in nds.system.types">ModuleName</td></tr></table></font>>];
+        "ModuleVersion" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.system.types.html#Subtype-ModuleVersion" title="Subtype defined in nds.system.types">ModuleVersion</td></tr></table></font>>];
+        "ModuleExtern" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.system.types.html#Subtype-ModuleExtern" title="Subtype defined in nds.system.types">ModuleExtern</td></tr></table></font>>];
+        "ExternData" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.system.types.html#Structure-ExternData" title="Structure defined in nds.system.types">ExternData</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.smart.types"
+    {
+        style="dashed, rounded";
+        label="nds.smart.types";
+        tooltip="Package nds.smart.types";
+        href="../../../content/packages/nds.smart.types.html#Package-nds-smart-types";
+        target="_parent";
+
+        "DataLayerDefinition" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.types.html#Structure-DataLayerDefinition" title="Structure defined in nds.smart.types">DataLayerDefinition</td></tr></table></font>>];
+    }
+
+    "ExternDescriptor" -> "ModuleName" [label="uses", fontsize=10];
+    "ExternDescriptor" -> "ModuleVersion" [label="uses", fontsize=10];
+    "ExternDescriptor" -> "ModuleExtern" [label="uses", fontsize=10];
+    "ExternData" -> "ExternDescriptor" [label="uses", fontsize=10];
+    "DataLayerDefinition" -> "ExternDescriptor" [label="uses", fontsize=10];
+}

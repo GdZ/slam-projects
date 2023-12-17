@@ -1,0 +1,38 @@
+/**
+ * This dot file creates symbol collaboration diagram for CharacsLanePositionAttribute.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="CharacsLanePositionAttribute collaboration diagram";
+
+    subgraph "cluster_nds.characteristics.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.characteristics.instantiations";
+        tooltip="Package nds.characteristics.instantiations";
+        href="../../../content/packages/nds.characteristics.instantiations.html#Package-nds-characteristics-instantiations";
+        target="_parent";
+
+        "CharacsLanePositionAttribute" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.instantiations.html#InstantiateType-CharacsLanePositionAttribute" title="InstantiateType defined in nds.characteristics.instantiations">CharacsLanePositionAttribute</td></tr></table></font>>];
+        "Attribute&lt;CharacsLanePositionAttributeType,CharacsLanePositionAttributeValue&gt;" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.attributemap.html#Structure-Attribute" title="Structure defined in nds.core.attributemap">Attribute</td><td>&lt;</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.attributes.html#Enum-CharacsLanePositionAttributeType" title="Enum defined in nds.characteristics.attributes">CharacsLanePositionAttributeType</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.attributes.html#Choice-CharacsLanePositionAttributeValue" title="Choice defined in nds.characteristics.attributes">CharacsLanePositionAttributeValue</td></tr></table></td><td>&gt;</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.characteristics.attributes"
+    {
+        style="dashed, rounded";
+        label="nds.characteristics.attributes";
+        tooltip="Package nds.characteristics.attributes";
+        href="../../../content/packages/nds.characteristics.attributes.html#Package-nds-characteristics-attributes";
+        target="_parent";
+
+        "CharacsLanePositionAttributeType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.attributes.html#Enum-CharacsLanePositionAttributeType" title="Enum defined in nds.characteristics.attributes">CharacsLanePositionAttributeType</td></tr></table></font>>];
+        "CharacsLanePositionAttributeValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.attributes.html#Choice-CharacsLanePositionAttributeValue" title="Choice defined in nds.characteristics.attributes">CharacsLanePositionAttributeValue</td></tr></table></font>>];
+    }
+
+    "CharacsLanePositionAttribute" -> "Attribute&lt;CharacsLanePositionAttributeType,CharacsLanePositionAttributeValue&gt;" [label="uses", fontsize=10];
+    "CharacsLanePositionAttribute" -> "CharacsLanePositionAttributeType" [label="uses", fontsize=10];
+    "CharacsLanePositionAttribute" -> "CharacsLanePositionAttributeValue" [label="uses", fontsize=10];
+}

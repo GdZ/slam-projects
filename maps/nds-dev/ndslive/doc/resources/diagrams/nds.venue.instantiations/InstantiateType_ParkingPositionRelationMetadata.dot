@@ -1,0 +1,60 @@
+/**
+ * This dot file creates symbol collaboration diagram for ParkingPositionRelationMetadata.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="ParkingPositionRelationMetadata collaboration diagram";
+
+    subgraph "cluster_nds.venue.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.venue.instantiations";
+        tooltip="Package nds.venue.instantiations";
+        href="../../../content/packages/nds.venue.instantiations.html#Package-nds-venue-instantiations";
+        target="_parent";
+
+        "ParkingPositionRelationMetadata" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.instantiations.html#InstantiateType-ParkingPositionRelationMetadata" title="InstantiateType defined in nds.venue.instantiations">ParkingPositionRelationMetadata</td></tr></table></font>>];
+        "AttributeMetadata&lt;ParkingPositionRelationType,CorePropertyType&gt;" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.attributemap.html#Structure-AttributeMetadata" title="Structure defined in nds.core.attributemap">AttributeMetadata</td><td>&lt;</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.parking.html#Enum-ParkingPositionRelationType" title="Enum defined in nds.venue.parking">ParkingPositionRelationType</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.properties.html#Enum-CorePropertyType" title="Enum defined in nds.core.properties">CorePropertyType</td></tr></table></td><td>&gt;</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.venue.parking"
+    {
+        style="dashed, rounded";
+        label="nds.venue.parking";
+        tooltip="Package nds.venue.parking";
+        href="../../../content/packages/nds.venue.parking.html#Package-nds-venue-parking";
+        target="_parent";
+
+        "ParkingPositionRelationType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.parking.html#Enum-ParkingPositionRelationType" title="Enum defined in nds.venue.parking">ParkingPositionRelationType</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.properties"
+    {
+        style="dashed, rounded";
+        label="nds.core.properties";
+        tooltip="Package nds.core.properties";
+        href="../../../content/packages/nds.core.properties.html#Package-nds-core-properties";
+        target="_parent";
+
+        "CorePropertyType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.properties.html#Enum-CorePropertyType" title="Enum defined in nds.core.properties">CorePropertyType</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.venue.metadata"
+    {
+        style="dashed, rounded";
+        label="nds.venue.metadata";
+        tooltip="Package nds.venue.metadata";
+        href="../../../content/packages/nds.venue.metadata.html#Package-nds-venue-metadata";
+        target="_parent";
+
+        "ParkingFacilityRelationLayerMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.metadata.html#Structure-ParkingFacilityRelationLayerMetadata" title="Structure defined in nds.venue.metadata">ParkingFacilityRelationLayerMetadata</td></tr></table></font>>];
+    }
+
+    "ParkingPositionRelationMetadata" -> "AttributeMetadata&lt;ParkingPositionRelationType,CorePropertyType&gt;" [label="uses", fontsize=10];
+    "ParkingPositionRelationMetadata" -> "ParkingPositionRelationType" [label="uses", fontsize=10];
+    "ParkingPositionRelationMetadata" -> "CorePropertyType" [label="uses", fontsize=10];
+    "ParkingFacilityRelationLayerMetadata" -> "ParkingPositionRelationMetadata" [label="uses", fontsize=10];
+}

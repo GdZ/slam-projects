@@ -1,0 +1,36 @@
+/**
+ * This dot file creates symbol collaboration diagram for HorizonServiceCapabilitiesResponse.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="HorizonServiceCapabilitiesResponse collaboration diagram";
+
+    subgraph "cluster_nds.vehicle.metadata"
+    {
+        style="dashed, rounded";
+        label="nds.vehicle.metadata";
+        tooltip="Package nds.vehicle.metadata";
+        href="../../../content/packages/nds.vehicle.metadata.html#Package-nds-vehicle-metadata";
+        target="_parent";
+
+        "HorizonServiceCapabilitiesResponse" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.vehicle.metadata.html#Structure-HorizonServiceCapabilitiesResponse" title="Structure defined in nds.vehicle.metadata">HorizonServiceCapabilitiesResponse</td></tr></table></font>>];
+        "HorizonServiceCapabilities" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.vehicle.metadata.html#Bitmask-HorizonServiceCapabilities" title="Bitmask defined in nds.vehicle.metadata">HorizonServiceCapabilities</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.vehicle.services"
+    {
+        style="dashed, rounded";
+        label="nds.vehicle.services";
+        tooltip="Package nds.vehicle.services";
+        href="../../../content/packages/nds.vehicle.services.html#Package-nds-vehicle-services";
+        target="_parent";
+
+        "VehicleHorizonService" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.vehicle.services.html#Service-VehicleHorizonService" title="Service defined in nds.vehicle.services">VehicleHorizonService</td></tr></table></font>>];
+    }
+
+    "HorizonServiceCapabilitiesResponse" -> "HorizonServiceCapabilities" [label="uses", fontsize=10];
+    "VehicleHorizonService" -> "HorizonServiceCapabilitiesResponse" [label="uses", fontsize=10];
+}

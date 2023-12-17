@@ -1,0 +1,40 @@
+/**
+ * This dot file creates symbol collaboration diagram for RegularGridVertex.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="RegularGridVertex collaboration diagram";
+
+    subgraph "cluster_nds.display.types"
+    {
+        style="dashed, rounded";
+        label="nds.display.types";
+        tooltip="Package nds.display.types";
+        href="../../../content/packages/nds.display.types.html#Package-nds-display-types";
+        target="_parent";
+
+        "RegularGridVertex" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.types.html#Structure-RegularGridVertex" title="Structure defined in nds.display.types">RegularGridVertex</td></tr></table></font>>];
+        "NormalSphere" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.types.html#Structure-NormalSphere" title="Structure defined in nds.display.types">NormalSphere</td></tr></table></font>>];
+        "TextureCoords" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.types.html#Structure-TextureCoords" title="Structure defined in nds.display.types">TextureCoords</td></tr></table></font>>];
+        "BdamSurface" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.types.html#Structure-BdamSurface" title="Structure defined in nds.display.types">BdamSurface</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.geometry"
+    {
+        style="dashed, rounded";
+        label="nds.core.geometry";
+        tooltip="Package nds.core.geometry";
+        href="../../../content/packages/nds.core.geometry.html#Package-nds-core-geometry";
+        target="_parent";
+
+        "CoordShift" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Subtype-CoordShift" title="Subtype defined in nds.core.geometry">CoordShift</td></tr></table></font>>];
+    }
+
+    "RegularGridVertex" -> "CoordShift" [label="uses", fontsize=10];
+    "RegularGridVertex" -> "NormalSphere" [label="uses", fontsize=10];
+    "RegularGridVertex" -> "TextureCoords" [label="uses", fontsize=10];
+    "BdamSurface" -> "RegularGridVertex" [label="uses", fontsize=10];
+}

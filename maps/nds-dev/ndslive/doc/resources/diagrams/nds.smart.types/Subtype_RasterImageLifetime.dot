@@ -1,0 +1,28 @@
+/**
+ * This dot file creates symbol collaboration diagram for RasterImageLifetime.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="RasterImageLifetime collaboration diagram";
+
+    subgraph "cluster_nds.smart.types"
+    {
+        style="dashed, rounded";
+        label="nds.smart.types";
+        tooltip="Package nds.smart.types";
+        href="../../../content/packages/nds.smart.types.html#Package-nds-smart-types";
+        target="_parent";
+
+        "RasterImageLifetime" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.types.html#Subtype-RasterImageLifetime" title="Subtype defined in nds.smart.types">RasterImageLifetime</td></tr></table></font>>];
+        "DataLayerLifetime" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.types.html#Structure-DataLayerLifetime" title="Structure defined in nds.smart.types">DataLayerLifetime</td></tr></table></font>>];
+        "RasterTileInfo" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.types.html#Structure-RasterTileInfo" title="Structure defined in nds.smart.types">RasterTileInfo</td></tr></table></font>>];
+        "RasterTileImageVersionRequest" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.types.html#Structure-RasterTileImageVersionRequest" title="Structure defined in nds.smart.types">RasterTileImageVersionRequest</td></tr></table></font>>];
+    }
+
+    "RasterImageLifetime" -> "DataLayerLifetime" [label="uses", fontsize=10];
+    "RasterTileInfo" -> "RasterImageLifetime" [label="uses", fontsize=10];
+    "RasterTileImageVersionRequest" -> "RasterImageLifetime" [label="uses", fontsize=10];
+}

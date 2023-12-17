@@ -1,0 +1,38 @@
+/**
+ * This dot file creates symbol collaboration diagram for LaneValidityDirection.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="LaneValidityDirection collaboration diagram";
+
+    subgraph "cluster_nds.lane.reference.types"
+    {
+        style="dashed, rounded";
+        label="nds.lane.reference.types";
+        tooltip="Package nds.lane.reference.types";
+        href="../../../content/packages/nds.lane.reference.types.html#Package-nds-lane-reference-types";
+        target="_parent";
+
+        "LaneValidityDirection" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.reference.types.html#Subtype-LaneValidityDirection" title="Subtype defined in nds.lane.reference.types">LaneValidityDirection</td></tr></table></font>>];
+        "LaneGroupPositionValidity" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.reference.types.html#Structure-LaneGroupPositionValidity" title="Structure defined in nds.lane.reference.types">LaneGroupPositionValidity</td></tr></table></font>>];
+        "LaneGroupRangeValidity" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.reference.types.html#Structure-LaneGroupRangeValidity" title="Structure defined in nds.lane.reference.types">LaneGroupRangeValidity</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.types"
+    {
+        style="dashed, rounded";
+        label="nds.core.types";
+        tooltip="Package nds.core.types";
+        href="../../../content/packages/nds.core.types.html#Package-nds-core-types";
+        target="_parent";
+
+        "Direction" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Enum-Direction" title="Enum defined in nds.core.types">Direction</td></tr></table></font>>];
+    }
+
+    "LaneValidityDirection" -> "Direction" [label="uses", fontsize=10];
+    "LaneGroupPositionValidity" -> "LaneValidityDirection" [label="uses", fontsize=10];
+    "LaneGroupRangeValidity" -> "LaneValidityDirection" [label="uses", fontsize=10];
+}

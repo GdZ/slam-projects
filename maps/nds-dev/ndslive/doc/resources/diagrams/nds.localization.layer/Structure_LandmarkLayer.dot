@@ -1,0 +1,64 @@
+/**
+ * This dot file creates symbol collaboration diagram for LandmarkLayer.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="LandmarkLayer collaboration diagram";
+
+    subgraph "cluster_nds.localization.layer"
+    {
+        style="dashed, rounded";
+        label="nds.localization.layer";
+        tooltip="Package nds.localization.layer";
+        href="../../../content/packages/nds.localization.layer.html#Package-nds-localization-layer";
+        target="_parent";
+
+        "LandmarkLayer" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.localization.layer.html#Structure-LandmarkLayer" title="Structure defined in nds.localization.layer">LandmarkLayer</td></tr></table></font>>];
+        "LandmarkLayerHeader" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.localization.layer.html#Structure-LandmarkLayerHeader" title="Structure defined in nds.localization.layer">LandmarkLayerHeader</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.geometry"
+    {
+        style="dashed, rounded";
+        label="nds.core.geometry";
+        tooltip="Package nds.core.geometry";
+        href="../../../content/packages/nds.core.geometry.html#Package-nds-core-geometry";
+        target="_parent";
+
+        "GeometryLayerType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Enum-GeometryLayerType" title="Enum defined in nds.core.geometry">GeometryLayerType</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.localization.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.localization.instantiations";
+        tooltip="Package nds.localization.instantiations";
+        href="../../../content/packages/nds.localization.instantiations.html#Package-nds-localization-instantiations";
+        target="_parent";
+
+        "LandmarkLineGeometryLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.localization.instantiations.html#InstantiateType-LandmarkLineGeometryLayer" title="InstantiateType defined in nds.localization.instantiations">LandmarkLineGeometryLayer</td></tr></table></font>>];
+        "LandmarkPolygonGeometryLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.localization.instantiations.html#InstantiateType-LandmarkPolygonGeometryLayer" title="InstantiateType defined in nds.localization.instantiations">LandmarkPolygonGeometryLayer</td></tr></table></font>>];
+        "LandmarkMeshGeometryLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.localization.instantiations.html#InstantiateType-LandmarkMeshGeometryLayer" title="InstantiateType defined in nds.localization.instantiations">LandmarkMeshGeometryLayer</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.system.types"
+    {
+        style="dashed, rounded";
+        label="nds.system.types";
+        tooltip="Package nds.system.types";
+        href="../../../content/packages/nds.system.types.html#Package-nds-system-types";
+        target="_parent";
+
+        "LayerType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.system.types.html#Enum-LayerType" title="Enum defined in nds.system.types">LayerType</td></tr></table></font>>];
+    }
+
+    "LandmarkLayer" -> "LandmarkLayerHeader" [label="uses", fontsize=10];
+    "LandmarkLayer" -> "GeometryLayerType" [label="uses", fontsize=10];
+    "LandmarkLayer" -> "LandmarkLineGeometryLayer" [label="uses", fontsize=10];
+    "LandmarkLayer" -> "LandmarkPolygonGeometryLayer" [label="uses", fontsize=10];
+    "LandmarkLayer" -> "LandmarkMeshGeometryLayer" [label="uses", fontsize=10];
+    "LandmarkLayer" -> "LayerType" [label="uses", fontsize=10];
+}

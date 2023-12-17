@@ -1,0 +1,76 @@
+/**
+ * This dot file creates symbol collaboration diagram for InstructionsTransitionAttributeSetMap.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="InstructionsTransitionAttributeSetMap collaboration diagram";
+
+    subgraph "cluster_nds.instructions.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.instructions.instantiations";
+        tooltip="Package nds.instructions.instantiations";
+        href="../../../content/packages/nds.instructions.instantiations.html#Package-nds-instructions-instantiations";
+        target="_parent";
+
+        "InstructionsTransitionAttributeSetMap" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.instructions.instantiations.html#InstantiateType-InstructionsTransitionAttributeSetMap" title="InstantiateType defined in nds.instructions.instantiations">InstructionsTransitionAttributeSetMap</td></tr></table></font>>];
+        "AttributeSetMap&lt;TransitionReference,Validity,InstructionsTransitionAttributeType,InstructionsTransitionAttributeValue,InstructionsPropertyType,InstructionsPropertyValue&gt;" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.attributemap.html#Structure-AttributeSetMap" title="Structure defined in nds.core.attributemap">AttributeSetMap</td><td>&lt;</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.road.reference.types.html#Structure-TransitionReference" title="Structure defined in nds.road.reference.types">TransitionReference</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.attributemap.html#Structure-Validity" title="Structure defined in nds.core.attributemap">Validity</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.instructions.attributes.html#Enum-InstructionsTransitionAttributeType" title="Enum defined in nds.instructions.attributes">InstructionsTransitionAttributeType</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.instructions.attributes.html#Choice-InstructionsTransitionAttributeValue" title="Choice defined in nds.instructions.attributes">InstructionsTransitionAttributeValue</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.instructions.properties.html#Structure-InstructionsPropertyType" title="Structure defined in nds.instructions.properties">InstructionsPropertyType</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.instructions.properties.html#Structure-InstructionsPropertyValue" title="Structure defined in nds.instructions.properties">InstructionsPropertyValue</td></tr></table></td><td>&gt;</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.road.reference.types"
+    {
+        style="dashed, rounded";
+        label="nds.road.reference.types";
+        tooltip="Package nds.road.reference.types";
+        href="../../../content/packages/nds.road.reference.types.html#Package-nds-road-reference-types";
+        target="_parent";
+
+        "TransitionReference" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.road.reference.types.html#Structure-TransitionReference" title="Structure defined in nds.road.reference.types">TransitionReference</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.attributemap"
+    {
+        style="dashed, rounded";
+        label="nds.core.attributemap";
+        tooltip="Package nds.core.attributemap";
+        href="../../../content/packages/nds.core.attributemap.html#Package-nds-core-attributemap";
+        target="_parent";
+
+        "Validity" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.attributemap.html#Structure-Validity" title="Structure defined in nds.core.attributemap">Validity</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.instructions.attributes"
+    {
+        style="dashed, rounded";
+        label="nds.instructions.attributes";
+        tooltip="Package nds.instructions.attributes";
+        href="../../../content/packages/nds.instructions.attributes.html#Package-nds-instructions-attributes";
+        target="_parent";
+
+        "InstructionsTransitionAttributeType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.instructions.attributes.html#Enum-InstructionsTransitionAttributeType" title="Enum defined in nds.instructions.attributes">InstructionsTransitionAttributeType</td></tr></table></font>>];
+        "InstructionsTransitionAttributeValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.instructions.attributes.html#Choice-InstructionsTransitionAttributeValue" title="Choice defined in nds.instructions.attributes">InstructionsTransitionAttributeValue</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.instructions.properties"
+    {
+        style="dashed, rounded";
+        label="nds.instructions.properties";
+        tooltip="Package nds.instructions.properties";
+        href="../../../content/packages/nds.instructions.properties.html#Package-nds-instructions-properties";
+        target="_parent";
+
+        "InstructionsPropertyType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.instructions.properties.html#Structure-InstructionsPropertyType" title="Structure defined in nds.instructions.properties">InstructionsPropertyType</td></tr></table></font>>];
+        "InstructionsPropertyValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.instructions.properties.html#Structure-InstructionsPropertyValue" title="Structure defined in nds.instructions.properties">InstructionsPropertyValue</td></tr></table></font>>];
+    }
+
+    "InstructionsTransitionAttributeSetMap" -> "AttributeSetMap&lt;TransitionReference,Validity,InstructionsTransitionAttributeType,InstructionsTransitionAttributeValue,InstructionsPropertyType,InstructionsPropertyValue&gt;" [label="uses", fontsize=10];
+    "InstructionsTransitionAttributeSetMap" -> "TransitionReference" [label="uses", fontsize=10];
+    "InstructionsTransitionAttributeSetMap" -> "Validity" [label="uses", fontsize=10];
+    "InstructionsTransitionAttributeSetMap" -> "InstructionsTransitionAttributeType" [label="uses", fontsize=10];
+    "InstructionsTransitionAttributeSetMap" -> "InstructionsTransitionAttributeValue" [label="uses", fontsize=10];
+    "InstructionsTransitionAttributeSetMap" -> "InstructionsPropertyType" [label="uses", fontsize=10];
+    "InstructionsTransitionAttributeSetMap" -> "InstructionsPropertyValue" [label="uses", fontsize=10];
+}

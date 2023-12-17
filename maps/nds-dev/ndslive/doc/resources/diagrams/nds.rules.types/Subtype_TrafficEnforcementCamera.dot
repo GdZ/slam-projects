@@ -1,0 +1,50 @@
+/**
+ * This dot file creates symbol collaboration diagram for TrafficEnforcementCamera.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="TrafficEnforcementCamera collaboration diagram";
+
+    subgraph "cluster_nds.rules.types"
+    {
+        style="dashed, rounded";
+        label="nds.rules.types";
+        tooltip="Package nds.rules.types";
+        href="../../../content/packages/nds.rules.types.html#Package-nds-rules-types";
+        target="_parent";
+
+        "TrafficEnforcementCamera" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.types.html#Subtype-TrafficEnforcementCamera" title="Subtype defined in nds.rules.types">TrafficEnforcementCamera</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.types"
+    {
+        style="dashed, rounded";
+        label="nds.core.types";
+        tooltip="Package nds.core.types";
+        href="../../../content/packages/nds.core.types.html#Package-nds-core-types";
+        target="_parent";
+
+        "TrafficEnforcementCameraType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Enum-TrafficEnforcementCameraType" title="Enum defined in nds.core.types">TrafficEnforcementCameraType</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.rules.attributes"
+    {
+        style="dashed, rounded";
+        label="nds.rules.attributes";
+        tooltip="Package nds.rules.attributes";
+        href="../../../content/packages/nds.rules.attributes.html#Package-nds-rules-attributes";
+        target="_parent";
+
+        "RulesRoadPositionAttributeValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.attributes.html#Choice-RulesRoadPositionAttributeValue" title="Choice defined in nds.rules.attributes">RulesRoadPositionAttributeValue</td></tr></table></font>>];
+        "RulesLanePositionAttributeValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.attributes.html#Choice-RulesLanePositionAttributeValue" title="Choice defined in nds.rules.attributes">RulesLanePositionAttributeValue</td></tr></table></font>>];
+        "RulesDisplayLinePositionAttributeValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.attributes.html#Choice-RulesDisplayLinePositionAttributeValue" title="Choice defined in nds.rules.attributes">RulesDisplayLinePositionAttributeValue</td></tr></table></font>>];
+    }
+
+    "TrafficEnforcementCamera" -> "TrafficEnforcementCameraType" [label="uses", fontsize=10];
+    "RulesRoadPositionAttributeValue" -> "TrafficEnforcementCamera" [label="uses", fontsize=10];
+    "RulesLanePositionAttributeValue" -> "TrafficEnforcementCamera" [label="uses", fontsize=10];
+    "RulesDisplayLinePositionAttributeValue" -> "TrafficEnforcementCamera" [label="uses", fontsize=10];
+}

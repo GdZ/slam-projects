@@ -1,0 +1,24 @@
+/**
+ * This dot file creates symbol collaboration diagram for AbsoluteBearing.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="AbsoluteBearing collaboration diagram";
+
+    subgraph "cluster_nds.core.location"
+    {
+        style="dashed, rounded";
+        label="nds.core.location";
+        tooltip="Package nds.core.location";
+        href="../../../content/packages/nds.core.location.html#Package-nds-core-location";
+        target="_parent";
+
+        "AbsoluteBearing" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.location.html#Subtype-AbsoluteBearing" title="Subtype defined in nds.core.location">AbsoluteBearing</td></tr></table></font>>];
+        "LocationSegment" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.location.html#Structure-LocationSegment" title="Structure defined in nds.core.location">LocationSegment</td></tr></table></font>>];
+    }
+
+    "LocationSegment" -> "AbsoluteBearing" [label="uses", fontsize=10];
+}

@@ -1,0 +1,38 @@
+/**
+ * This dot file creates symbol collaboration diagram for ElectricConsumptionCurve.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="ElectricConsumptionCurve collaboration diagram";
+
+    subgraph "cluster_nds.core.vehicle"
+    {
+        style="dashed, rounded";
+        label="nds.core.vehicle";
+        tooltip="Package nds.core.vehicle";
+        href="../../../content/packages/nds.core.vehicle.html#Package-nds-core-vehicle";
+        target="_parent";
+
+        "ElectricConsumptionCurve" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.vehicle.html#Structure-ElectricConsumptionCurve" title="Structure defined in nds.core.vehicle">ElectricConsumptionCurve</td></tr></table></font>>];
+        "WattHrsPer100km" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.vehicle.html#Subtype-WattHrsPer100km" title="Subtype defined in nds.core.vehicle">WattHrsPer100km</td></tr></table></font>>];
+        "ElectricConsumption" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.vehicle.html#Structure-ElectricConsumption" title="Structure defined in nds.core.vehicle">ElectricConsumption</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.types"
+    {
+        style="dashed, rounded";
+        label="nds.core.types";
+        tooltip="Package nds.core.types";
+        href="../../../content/packages/nds.core.types.html#Package-nds-core-types";
+        target="_parent";
+
+        "SpeedKmh" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Subtype-SpeedKmh" title="Subtype defined in nds.core.types">SpeedKmh</td></tr></table></font>>];
+    }
+
+    "ElectricConsumptionCurve" -> "SpeedKmh" [label="uses", fontsize=10];
+    "ElectricConsumptionCurve" -> "WattHrsPer100km" [label="uses", fontsize=10];
+    "ElectricConsumption" -> "ElectricConsumptionCurve" [label="uses", fontsize=10];
+}

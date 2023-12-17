@@ -1,0 +1,52 @@
+/**
+ * This dot file creates symbol collaboration diagram for ProtocolType.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="ProtocolType collaboration diagram";
+
+    subgraph "cluster_nds.registry.node"
+    {
+        style="dashed, rounded";
+        label="nds.registry.node";
+        tooltip="Package nds.registry.node";
+        href="../../../content/packages/nds.registry.node.html#Package-nds-registry-node";
+        target="_parent";
+
+        "ProtocolType" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.registry.node.html#Subtype-ProtocolType" title="Subtype defined in nds.registry.node">ProtocolType</td></tr></table></font>>];
+        "REST" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.registry.node.html#Constant-REST" title="Constant defined in nds.registry.node">REST</td></tr></table></font>>];
+        "GRPC" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.registry.node.html#Constant-GRPC" title="Constant defined in nds.registry.node">GRPC</td></tr></table></font>>];
+        "MQTT" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.registry.node.html#Constant-MQTT" title="Constant defined in nds.registry.node">MQTT</td></tr></table></font>>];
+        "REST_OPENAPI30" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.registry.node.html#Constant-REST_OPENAPI30" title="Constant defined in nds.registry.node">REST_OPENAPI30</td></tr></table></font>>];
+        "SOME_IP" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.registry.node.html#Constant-SOME_IP" title="Constant defined in nds.registry.node">SOME_IP</td></tr></table></font>>];
+        "REST_UNSECURE" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.registry.node.html#Constant-REST_UNSECURE" title="Constant defined in nds.registry.node">REST_UNSECURE</td></tr></table></font>>];
+        "REST_OPENAPI30_UNSECURE" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.registry.node.html#Constant-REST_OPENAPI30_UNSECURE" title="Constant defined in nds.registry.node">REST_OPENAPI30_UNSECURE</td></tr></table></font>>];
+        "FILE_SQLITE3" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.registry.node.html#Constant-FILE_SQLITE3" title="Constant defined in nds.registry.node">FILE_SQLITE3</td></tr></table></font>>];
+        "NodeInformation" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.registry.node.html#Structure-NodeInformation" title="Structure defined in nds.registry.node">NodeInformation</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.registry.filestore"
+    {
+        style="dashed, rounded";
+        label="nds.registry.filestore";
+        tooltip="Package nds.registry.filestore";
+        href="../../../content/packages/nds.registry.filestore.html#Package-nds-registry-filestore";
+        target="_parent";
+
+        "RegistryNodeTable" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.registry.filestore.html#SqlTable-RegistryNodeTable" title="SqlTable defined in nds.registry.filestore">RegistryNodeTable</td></tr></table></font>>];
+    }
+
+    "REST" -> "ProtocolType" [label="uses", fontsize=10];
+    "GRPC" -> "ProtocolType" [label="uses", fontsize=10];
+    "MQTT" -> "ProtocolType" [label="uses", fontsize=10];
+    "REST_OPENAPI30" -> "ProtocolType" [label="uses", fontsize=10];
+    "SOME_IP" -> "ProtocolType" [label="uses", fontsize=10];
+    "REST_UNSECURE" -> "ProtocolType" [label="uses", fontsize=10];
+    "REST_OPENAPI30_UNSECURE" -> "ProtocolType" [label="uses", fontsize=10];
+    "FILE_SQLITE3" -> "ProtocolType" [label="uses", fontsize=10];
+    "NodeInformation" -> "ProtocolType" [label="uses", fontsize=10];
+    "RegistryNodeTable" -> "ProtocolType" [label="uses", fontsize=10];
+}

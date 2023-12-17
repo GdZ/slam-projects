@@ -1,0 +1,86 @@
+/**
+ * This dot file creates symbol collaboration diagram for PropertyValue.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="PropertyValue collaboration diagram";
+
+    subgraph "cluster_nds.name.properties"
+    {
+        style="dashed, rounded";
+        label="nds.name.properties";
+        tooltip="Package nds.name.properties";
+        href="../../../content/packages/nds.name.properties.html#Package-nds-name-properties";
+        target="_parent";
+
+        "PropertyValue" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.properties.html#Choice-PropertyValue" title="Choice defined in nds.name.properties">PropertyValue</td></tr></table></font>>];
+        "PropertyType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.properties.html#Enum-PropertyType" title="Enum defined in nds.name.properties">PropertyType</td></tr></table></font>>];
+        "NamePropertyValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.properties.html#Structure-NamePropertyValue" title="Structure defined in nds.name.properties">NamePropertyValue</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.types"
+    {
+        style="dashed, rounded";
+        label="nds.core.types";
+        tooltip="Package nds.core.types";
+        href="../../../content/packages/nds.core.types.html#Package-nds-core-types";
+        target="_parent";
+
+        "LanguageCode" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Subtype-LanguageCode" title="Subtype defined in nds.core.types">LanguageCode</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.name.types"
+    {
+        style="dashed, rounded";
+        label="nds.name.types";
+        tooltip="Package nds.name.types";
+        href="../../../content/packages/nds.name.types.html#Package-nds-name-types";
+        target="_parent";
+
+        "NameUsageType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.types.html#Enum-NameUsageType" title="Enum defined in nds.name.types">NameUsageType</td></tr></table></font>>];
+        "NameDetailType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.types.html#Enum-NameDetailType" title="Enum defined in nds.name.types">NameDetailType</td></tr></table></font>>];
+        "PreferredName" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.types.html#Subtype-PreferredName" title="Subtype defined in nds.name.types">PreferredName</td></tr></table></font>>];
+        "AddressOnly" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.types.html#Subtype-AddressOnly" title="Subtype defined in nds.name.types">AddressOnly</td></tr></table></font>>];
+        "RoadNameId" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.types.html#Subtype-RoadNameId" title="Subtype defined in nds.name.types">RoadNameId</td></tr></table></font>>];
+        "NotAddressRelevant" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.types.html#Subtype-NotAddressRelevant" title="Subtype defined in nds.name.types">NotAddressRelevant</td></tr></table></font>>];
+        "AddressFormatId" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.types.html#Subtype-AddressFormatId" title="Subtype defined in nds.name.types">AddressFormatId</td></tr></table></font>>];
+        "RoadNumberPrefix" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.types.html#Subtype-RoadNumberPrefix" title="Subtype defined in nds.name.types">RoadNumberPrefix</td></tr></table></font>>];
+        "RoadNumberSuffix" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.types.html#Subtype-RoadNumberSuffix" title="Subtype defined in nds.name.types">RoadNumberSuffix</td></tr></table></font>>];
+        "RoadAddressPoint" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.types.html#Structure-RoadAddressPoint" title="Structure defined in nds.name.types">RoadAddressPoint</td></tr></table></font>>];
+        "LaneAddressPoint" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.types.html#Structure-LaneAddressPoint" title="Structure defined in nds.name.types">LaneAddressPoint</td></tr></table></font>>];
+        "HousePosition" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.types.html#Subtype-HousePosition" title="Subtype defined in nds.name.types">HousePosition</td></tr></table></font>>];
+        "PreferRoadNameOverRoadNumber" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.types.html#Subtype-PreferRoadNameOverRoadNumber" title="Subtype defined in nds.name.types">PreferRoadNameOverRoadNumber</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.speech"
+    {
+        style="dashed, rounded";
+        label="nds.core.speech";
+        tooltip="Package nds.core.speech";
+        href="../../../content/packages/nds.core.speech.html#Package-nds-core-speech";
+        target="_parent";
+
+        "PhoneticTranscriptionList" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.speech.html#Structure-PhoneticTranscriptionList" title="Structure defined in nds.core.speech">PhoneticTranscriptionList</td></tr></table></font>>];
+    }
+
+    "PropertyValue" -> "PropertyType" [label="uses", fontsize=10];
+    "PropertyValue" -> "LanguageCode" [label="uses", fontsize=10];
+    "PropertyValue" -> "NameUsageType" [label="uses", fontsize=10];
+    "PropertyValue" -> "NameDetailType" [label="uses", fontsize=10];
+    "PropertyValue" -> "PreferredName" [label="uses", fontsize=10];
+    "PropertyValue" -> "AddressOnly" [label="uses", fontsize=10];
+    "PropertyValue" -> "RoadNameId" [label="uses", fontsize=10];
+    "PropertyValue" -> "NotAddressRelevant" [label="uses", fontsize=10];
+    "PropertyValue" -> "AddressFormatId" [label="uses", fontsize=10];
+    "PropertyValue" -> "RoadNumberPrefix" [label="uses", fontsize=10];
+    "PropertyValue" -> "RoadNumberSuffix" [label="uses", fontsize=10];
+    "PropertyValue" -> "RoadAddressPoint" [label="uses", fontsize=10];
+    "PropertyValue" -> "LaneAddressPoint" [label="uses", fontsize=10];
+    "PropertyValue" -> "HousePosition" [label="uses", fontsize=10];
+    "PropertyValue" -> "PhoneticTranscriptionList" [label="uses", fontsize=10];
+    "PropertyValue" -> "PreferRoadNameOverRoadNumber" [label="uses", fontsize=10];
+    "NamePropertyValue" -> "PropertyValue" [label="uses", fontsize=10];
+}

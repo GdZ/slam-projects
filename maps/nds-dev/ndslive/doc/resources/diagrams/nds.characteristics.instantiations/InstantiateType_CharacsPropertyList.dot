@@ -1,0 +1,38 @@
+/**
+ * This dot file creates symbol collaboration diagram for CharacsPropertyList.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="CharacsPropertyList collaboration diagram";
+
+    subgraph "cluster_nds.characteristics.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.characteristics.instantiations";
+        tooltip="Package nds.characteristics.instantiations";
+        href="../../../content/packages/nds.characteristics.instantiations.html#Package-nds-characteristics-instantiations";
+        target="_parent";
+
+        "CharacsPropertyList" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.instantiations.html#InstantiateType-CharacsPropertyList" title="InstantiateType defined in nds.characteristics.instantiations">CharacsPropertyList</td></tr></table></font>>];
+        "PropertyList&lt;CharacsPropertyType,CharacsPropertyValue&gt;" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.attributemap.html#Structure-PropertyList" title="Structure defined in nds.core.attributemap">PropertyList</td><td>&lt;</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.properties.html#Structure-CharacsPropertyType" title="Structure defined in nds.characteristics.properties">CharacsPropertyType</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.properties.html#Structure-CharacsPropertyValue" title="Structure defined in nds.characteristics.properties">CharacsPropertyValue</td></tr></table></td><td>&gt;</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.characteristics.properties"
+    {
+        style="dashed, rounded";
+        label="nds.characteristics.properties";
+        tooltip="Package nds.characteristics.properties";
+        href="../../../content/packages/nds.characteristics.properties.html#Package-nds-characteristics-properties";
+        target="_parent";
+
+        "CharacsPropertyType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.properties.html#Structure-CharacsPropertyType" title="Structure defined in nds.characteristics.properties">CharacsPropertyType</td></tr></table></font>>];
+        "CharacsPropertyValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.properties.html#Structure-CharacsPropertyValue" title="Structure defined in nds.characteristics.properties">CharacsPropertyValue</td></tr></table></font>>];
+    }
+
+    "CharacsPropertyList" -> "PropertyList&lt;CharacsPropertyType,CharacsPropertyValue&gt;" [label="uses", fontsize=10];
+    "CharacsPropertyList" -> "CharacsPropertyType" [label="uses", fontsize=10];
+    "CharacsPropertyList" -> "CharacsPropertyValue" [label="uses", fontsize=10];
+}

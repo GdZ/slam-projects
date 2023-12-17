@@ -1,0 +1,28 @@
+/**
+ * This dot file creates symbol collaboration diagram for LaneGroupTransitionGeoPath.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="LaneGroupTransitionGeoPath collaboration diagram";
+
+    subgraph "cluster_nds.lane.reference.types"
+    {
+        style="dashed, rounded";
+        label="nds.lane.reference.types";
+        tooltip="Package nds.lane.reference.types";
+        href="../../../content/packages/nds.lane.reference.types.html#Package-nds-lane-reference-types";
+        target="_parent";
+
+        "LaneGroupTransitionGeoPath" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.reference.types.html#Structure-LaneGroupTransitionGeoPath" title="Structure defined in nds.lane.reference.types">LaneGroupTransitionGeoPath</td></tr></table></font>>];
+        "LaneGroupTransition" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.reference.types.html#Structure-LaneGroupTransition" title="Structure defined in nds.lane.reference.types">LaneGroupTransition</td></tr></table></font>>];
+        "LaneGroupReferenceIndirect" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.reference.types.html#Structure-LaneGroupReferenceIndirect" title="Structure defined in nds.lane.reference.types">LaneGroupReferenceIndirect</td></tr></table></font>>];
+        "LaneGroupTransitionReference" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.reference.types.html#Structure-LaneGroupTransitionReference" title="Structure defined in nds.lane.reference.types">LaneGroupTransitionReference</td></tr></table></font>>];
+    }
+
+    "LaneGroupTransitionGeoPath" -> "LaneGroupTransition" [label="uses", fontsize=10];
+    "LaneGroupTransitionGeoPath" -> "LaneGroupReferenceIndirect" [label="uses", fontsize=10];
+    "LaneGroupTransitionReference" -> "LaneGroupTransitionGeoPath" [label="uses", fontsize=10];
+}

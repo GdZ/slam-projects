@@ -1,0 +1,146 @@
+/**
+ * This dot file creates symbol collaboration diagram for ConditionValue.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="ConditionValue collaboration diagram";
+
+    subgraph "cluster_nds.core.conditions"
+    {
+        style="dashed, rounded";
+        label="nds.core.conditions";
+        tooltip="Package nds.core.conditions";
+        href="../../../content/packages/nds.core.conditions.html#Package-nds-core-conditions";
+        target="_parent";
+
+        "ConditionValue" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.conditions.html#Choice-ConditionValue" title="Choice defined in nds.core.conditions">ConditionValue</td></tr></table></font>>];
+        "ConditionTypeCode" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.conditions.html#Enum-ConditionTypeCode" title="Enum defined in nds.core.conditions">ConditionTypeCode</td></tr></table></font>>];
+        "TimeRangeOfDay" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.conditions.html#Structure-TimeRangeOfDay" title="Structure defined in nds.core.conditions">TimeRangeOfDay</td></tr></table></font>>];
+        "TimeRangeOfWeek" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.conditions.html#Structure-TimeRangeOfWeek" title="Structure defined in nds.core.conditions">TimeRangeOfWeek</td></tr></table></font>>];
+        "DateRangeOfYear" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.conditions.html#Structure-DateRangeOfYear" title="Structure defined in nds.core.conditions">DateRangeOfYear</td></tr></table></font>>];
+        "DaysOfWeek" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.conditions.html#Structure-DaysOfWeek" title="Structure defined in nds.core.conditions">DaysOfWeek</td></tr></table></font>>];
+        "DaysOfMonth" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.conditions.html#Structure-DaysOfMonth" title="Structure defined in nds.core.conditions">DaysOfMonth</td></tr></table></font>>];
+        "DayOfYear" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.conditions.html#Structure-DayOfYear" title="Structure defined in nds.core.conditions">DayOfYear</td></tr></table></font>>];
+        "MonthsOfYear" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.conditions.html#Structure-MonthsOfYear" title="Structure defined in nds.core.conditions">MonthsOfYear</td></tr></table></font>>];
+        "WeekInMonth" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.conditions.html#Structure-WeekInMonth" title="Structure defined in nds.core.conditions">WeekInMonth</td></tr></table></font>>];
+        "WeekdayInMonth" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.conditions.html#Structure-WeekdayInMonth" title="Structure defined in nds.core.conditions">WeekdayInMonth</td></tr></table></font>>];
+        "CalendarWeek" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.conditions.html#Structure-CalendarWeek" title="Structure defined in nds.core.conditions">CalendarWeek</td></tr></table></font>>];
+        "TimeDuration" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.conditions.html#Structure-TimeDuration" title="Structure defined in nds.core.conditions">TimeDuration</td></tr></table></font>>];
+        "OddOrEvenDays" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.conditions.html#Subtype-OddOrEvenDays" title="Subtype defined in nds.core.conditions">OddOrEvenDays</td></tr></table></font>>];
+        "FuzzyTimeDomainCondition" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.conditions.html#Structure-FuzzyTimeDomainCondition" title="Structure defined in nds.core.conditions">FuzzyTimeDomainCondition</td></tr></table></font>>];
+        "WeatherCondition" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.conditions.html#Structure-WeatherCondition" title="Structure defined in nds.core.conditions">WeatherCondition</td></tr></table></font>>];
+        "FrequentlyUsedVehicleTypesCondition" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.conditions.html#Structure-FrequentlyUsedVehicleTypesCondition" title="Structure defined in nds.core.conditions">FrequentlyUsedVehicleTypesCondition</td></tr></table></font>>];
+        "SlowRoadUsersCondition" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.conditions.html#Structure-SlowRoadUsersCondition" title="Structure defined in nds.core.conditions">SlowRoadUsersCondition</td></tr></table></font>>];
+        "BigVehiclesCondition" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.conditions.html#Structure-BigVehiclesCondition" title="Structure defined in nds.core.conditions">BigVehiclesCondition</td></tr></table></font>>];
+        "PublicServiceVehiclesCondition" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.conditions.html#Structure-PublicServiceVehiclesCondition" title="Structure defined in nds.core.conditions">PublicServiceVehiclesCondition</td></tr></table></font>>];
+        "EmergencyMilitaryDetailCondition" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.conditions.html#Structure-EmergencyMilitaryDetailCondition" title="Structure defined in nds.core.conditions">EmergencyMilitaryDetailCondition</td></tr></table></font>>];
+        "EquipmentCondition" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.conditions.html#Structure-EquipmentCondition" title="Structure defined in nds.core.conditions">EquipmentCondition</td></tr></table></font>>];
+        "AuthorizationCondition" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.conditions.html#Structure-AuthorizationCondition" title="Structure defined in nds.core.conditions">AuthorizationCondition</td></tr></table></font>>];
+        "LoadCondition" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.conditions.html#Structure-LoadCondition" title="Structure defined in nds.core.conditions">LoadCondition</td></tr></table></font>>];
+        "NumAxles" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.conditions.html#Subtype-NumAxles" title="Subtype defined in nds.core.conditions">NumAxles</td></tr></table></font>>];
+        "Occupancy" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.conditions.html#Structure-Occupancy" title="Structure defined in nds.core.conditions">Occupancy</td></tr></table></font>>];
+        "TimeRangeOfWeekDays" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.conditions.html#Structure-TimeRangeOfWeekDays" title="Structure defined in nds.core.conditions">TimeRangeOfWeekDays</td></tr></table></font>>];
+        "Visibility" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.conditions.html#Enum-Visibility" title="Enum defined in nds.core.conditions">Visibility</td></tr></table></font>>];
+        "Surface" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.conditions.html#Enum-Surface" title="Enum defined in nds.core.conditions">Surface</td></tr></table></font>>];
+        "EuroEmissionClassCondition" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.conditions.html#Subtype-EuroEmissionClassCondition" title="Subtype defined in nds.core.conditions">EuroEmissionClassCondition</td></tr></table></font>>];
+        "TimeDurationHours" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.conditions.html#Structure-TimeDurationHours" title="Structure defined in nds.core.conditions">TimeDurationHours</td></tr></table></font>>];
+        "TimeRangeOfYear" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.conditions.html#Structure-TimeRangeOfYear" title="Structure defined in nds.core.conditions">TimeRangeOfYear</td></tr></table></font>>];
+        "NumTrailersCondition" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.conditions.html#Structure-NumTrailersCondition" title="Structure defined in nds.core.conditions">NumTrailersCondition</td></tr></table></font>>];
+        "TrailerLengthMetricCondition" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.conditions.html#Structure-TrailerLengthMetricCondition" title="Structure defined in nds.core.conditions">TrailerLengthMetricCondition</td></tr></table></font>>];
+        "TrailerLengthImperialCondition" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.conditions.html#Structure-TrailerLengthImperialCondition" title="Structure defined in nds.core.conditions">TrailerLengthImperialCondition</td></tr></table></font>>];
+        "EnergyTypeCondition" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.conditions.html#Structure-EnergyTypeCondition" title="Structure defined in nds.core.conditions">EnergyTypeCondition</td></tr></table></font>>];
+        "BrakedTrailer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.conditions.html#Subtype-BrakedTrailer" title="Subtype defined in nds.core.conditions">BrakedTrailer</td></tr></table></font>>];
+        "PublicBusTypeCondition" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.conditions.html#Structure-PublicBusTypeCondition" title="Structure defined in nds.core.conditions">PublicBusTypeCondition</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.types"
+    {
+        style="dashed, rounded";
+        label="nds.core.types";
+        tooltip="Package nds.core.types";
+        href="../../../content/packages/nds.core.types.html#Package-nds-core-types";
+        target="_parent";
+
+        "LengthCentimeters" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Subtype-LengthCentimeters" title="Subtype defined in nds.core.types">LengthCentimeters</td></tr></table></font>>];
+        "LengthInch" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Subtype-LengthInch" title="Subtype defined in nds.core.types">LengthInch</td></tr></table></font>>];
+        "HeightCentimeters" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Subtype-HeightCentimeters" title="Subtype defined in nds.core.types">HeightCentimeters</td></tr></table></font>>];
+        "HeightInch" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Subtype-HeightInch" title="Subtype defined in nds.core.types">HeightInch</td></tr></table></font>>];
+        "WidthCentimeters" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Subtype-WidthCentimeters" title="Subtype defined in nds.core.types">WidthCentimeters</td></tr></table></font>>];
+        "WidthInch" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Subtype-WidthInch" title="Subtype defined in nds.core.types">WidthInch</td></tr></table></font>>];
+        "Weight10Kilogram" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Subtype-Weight10Kilogram" title="Subtype defined in nds.core.types">Weight10Kilogram</td></tr></table></font>>];
+        "Weight10Lbs" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Subtype-Weight10Lbs" title="Subtype defined in nds.core.types">Weight10Lbs</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.vehicle"
+    {
+        style="dashed, rounded";
+        label="nds.core.vehicle";
+        tooltip="Package nds.core.vehicle";
+        href="../../../content/packages/nds.core.vehicle.html#Package-nds-core-vehicle";
+        target="_parent";
+
+        "EngineDisplacement" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.vehicle.html#Subtype-EngineDisplacement" title="Subtype defined in nds.core.vehicle">EngineDisplacement</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.attributemap"
+    {
+        style="dashed, rounded";
+        label="nds.core.attributemap";
+        tooltip="Package nds.core.attributemap";
+        href="../../../content/packages/nds.core.attributemap.html#Package-nds-core-attributemap";
+        target="_parent";
+
+        "Condition" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.attributemap.html#Structure-Condition" title="Structure defined in nds.core.attributemap">Condition</td></tr></table></font>>];
+    }
+
+    "ConditionValue" -> "ConditionTypeCode" [label="uses", fontsize=10];
+    "ConditionValue" -> "TimeRangeOfDay" [label="uses", fontsize=10];
+    "ConditionValue" -> "TimeRangeOfWeek" [label="uses", fontsize=10];
+    "ConditionValue" -> "DateRangeOfYear" [label="uses", fontsize=10];
+    "ConditionValue" -> "DaysOfWeek" [label="uses", fontsize=10];
+    "ConditionValue" -> "DaysOfMonth" [label="uses", fontsize=10];
+    "ConditionValue" -> "DayOfYear" [label="uses", fontsize=10];
+    "ConditionValue" -> "MonthsOfYear" [label="uses", fontsize=10];
+    "ConditionValue" -> "WeekInMonth" [label="uses", fontsize=10];
+    "ConditionValue" -> "WeekdayInMonth" [label="uses", fontsize=10];
+    "ConditionValue" -> "CalendarWeek" [label="uses", fontsize=10];
+    "ConditionValue" -> "TimeDuration" [label="uses", fontsize=10];
+    "ConditionValue" -> "OddOrEvenDays" [label="uses", fontsize=10];
+    "ConditionValue" -> "FuzzyTimeDomainCondition" [label="uses", fontsize=10];
+    "ConditionValue" -> "WeatherCondition" [label="uses", fontsize=10];
+    "ConditionValue" -> "FrequentlyUsedVehicleTypesCondition" [label="uses", fontsize=10];
+    "ConditionValue" -> "SlowRoadUsersCondition" [label="uses", fontsize=10];
+    "ConditionValue" -> "BigVehiclesCondition" [label="uses", fontsize=10];
+    "ConditionValue" -> "PublicServiceVehiclesCondition" [label="uses", fontsize=10];
+    "ConditionValue" -> "EmergencyMilitaryDetailCondition" [label="uses", fontsize=10];
+    "ConditionValue" -> "EquipmentCondition" [label="uses", fontsize=10];
+    "ConditionValue" -> "AuthorizationCondition" [label="uses", fontsize=10];
+    "ConditionValue" -> "LoadCondition" [label="uses", fontsize=10];
+    "ConditionValue" -> "NumAxles" [label="uses", fontsize=10];
+    "ConditionValue" -> "Occupancy" [label="uses", fontsize=10];
+    "ConditionValue" -> "LengthCentimeters" [label="uses", fontsize=10];
+    "ConditionValue" -> "LengthInch" [label="uses", fontsize=10];
+    "ConditionValue" -> "HeightCentimeters" [label="uses", fontsize=10];
+    "ConditionValue" -> "HeightInch" [label="uses", fontsize=10];
+    "ConditionValue" -> "WidthCentimeters" [label="uses", fontsize=10];
+    "ConditionValue" -> "WidthInch" [label="uses", fontsize=10];
+    "ConditionValue" -> "Weight10Kilogram" [label="uses", fontsize=10];
+    "ConditionValue" -> "Weight10Lbs" [label="uses", fontsize=10];
+    "ConditionValue" -> "TimeRangeOfWeekDays" [label="uses", fontsize=10];
+    "ConditionValue" -> "Visibility" [label="uses", fontsize=10];
+    "ConditionValue" -> "Surface" [label="uses", fontsize=10];
+    "ConditionValue" -> "EuroEmissionClassCondition" [label="uses", fontsize=10];
+    "ConditionValue" -> "TimeDurationHours" [label="uses", fontsize=10];
+    "ConditionValue" -> "TimeRangeOfYear" [label="uses", fontsize=10];
+    "ConditionValue" -> "NumTrailersCondition" [label="uses", fontsize=10];
+    "ConditionValue" -> "TrailerLengthMetricCondition" [label="uses", fontsize=10];
+    "ConditionValue" -> "TrailerLengthImperialCondition" [label="uses", fontsize=10];
+    "ConditionValue" -> "EngineDisplacement" [label="uses", fontsize=10];
+    "ConditionValue" -> "EnergyTypeCondition" [label="uses", fontsize=10];
+    "ConditionValue" -> "BrakedTrailer" [label="uses", fontsize=10];
+    "ConditionValue" -> "PublicBusTypeCondition" [label="uses", fontsize=10];
+    "Condition" -> "ConditionValue" [label="uses", fontsize=10];
+}

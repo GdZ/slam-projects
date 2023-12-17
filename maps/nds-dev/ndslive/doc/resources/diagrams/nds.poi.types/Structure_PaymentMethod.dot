@@ -1,0 +1,36 @@
+/**
+ * This dot file creates symbol collaboration diagram for PaymentMethod.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="PaymentMethod collaboration diagram";
+
+    subgraph "cluster_nds.poi.types"
+    {
+        style="dashed, rounded";
+        label="nds.poi.types";
+        tooltip="Package nds.poi.types";
+        href="../../../content/packages/nds.poi.types.html#Package-nds-poi-types";
+        target="_parent";
+
+        "PaymentMethod" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.types.html#Structure-PaymentMethod" title="Structure defined in nds.poi.types">PaymentMethod</td></tr></table></font>>];
+        "AcceptedPaymentMethods" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.types.html#Structure-AcceptedPaymentMethods" title="Structure defined in nds.poi.types">AcceptedPaymentMethods</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.icons"
+    {
+        style="dashed, rounded";
+        label="nds.core.icons";
+        tooltip="Package nds.core.icons";
+        href="../../../content/packages/nds.core.icons.html#Package-nds-core-icons";
+        target="_parent";
+
+        "IconSetReference" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.icons.html#Subtype-IconSetReference" title="Subtype defined in nds.core.icons">IconSetReference</td></tr></table></font>>];
+    }
+
+    "PaymentMethod" -> "IconSetReference" [label="uses", fontsize=10];
+    "AcceptedPaymentMethods" -> "PaymentMethod" [label="uses", fontsize=10];
+}

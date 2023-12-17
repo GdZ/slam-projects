@@ -1,0 +1,94 @@
+/**
+ * This dot file creates symbol collaboration diagram for RoadNameLayer.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="RoadNameLayer collaboration diagram";
+
+    subgraph "cluster_nds.name.layer"
+    {
+        style="dashed, rounded";
+        label="nds.name.layer";
+        tooltip="Package nds.name.layer";
+        href="../../../content/packages/nds.name.layer.html#Package-nds-name-layer";
+        target="_parent";
+
+        "RoadNameLayer" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.layer.html#Structure-RoadNameLayer" title="Structure defined in nds.name.layer">RoadNameLayer</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.name.metadata"
+    {
+        style="dashed, rounded";
+        label="nds.name.metadata";
+        tooltip="Package nds.name.metadata";
+        href="../../../content/packages/nds.name.metadata.html#Package-nds-name-metadata";
+        target="_parent";
+
+        "RoadNameLayerContent" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.metadata.html#Bitmask-RoadNameLayerContent" title="Bitmask defined in nds.name.metadata">RoadNameLayerContent</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.geometry"
+    {
+        style="dashed, rounded";
+        label="nds.core.geometry";
+        tooltip="Package nds.core.geometry";
+        href="../../../content/packages/nds.core.geometry.html#Package-nds-core-geometry";
+        target="_parent";
+
+        "CoordShift" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Subtype-CoordShift" title="Subtype defined in nds.core.geometry">CoordShift</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.name.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.name.instantiations";
+        tooltip="Package nds.name.instantiations";
+        href="../../../content/packages/nds.name.instantiations.html#Package-nds-name-instantiations";
+        target="_parent";
+
+        "NameRoadRangeAttributeMapList" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.instantiations.html#InstantiateType-NameRoadRangeAttributeMapList" title="InstantiateType defined in nds.name.instantiations">NameRoadRangeAttributeMapList</td></tr></table></font>>];
+        "NameRoadPositionAttributeMapList" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.instantiations.html#InstantiateType-NameRoadPositionAttributeMapList" title="InstantiateType defined in nds.name.instantiations">NameRoadPositionAttributeMapList</td></tr></table></font>>];
+        "NameTransitionAttributeMapList" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.instantiations.html#InstantiateType-NameTransitionAttributeMapList" title="InstantiateType defined in nds.name.instantiations">NameTransitionAttributeMapList</td></tr></table></font>>];
+        "NameRoadRangeAttributeSetList" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.instantiations.html#InstantiateType-NameRoadRangeAttributeSetList" title="InstantiateType defined in nds.name.instantiations">NameRoadRangeAttributeSetList</td></tr></table></font>>];
+        "NameRoadPositionAttributeSetList" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.instantiations.html#InstantiateType-NameRoadPositionAttributeSetList" title="InstantiateType defined in nds.name.instantiations">NameRoadPositionAttributeSetList</td></tr></table></font>>];
+        "NameTransitionAttributeSetList" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.instantiations.html#InstantiateType-NameTransitionAttributeSetList" title="InstantiateType defined in nds.name.instantiations">NameTransitionAttributeSetList</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.name.types"
+    {
+        style="dashed, rounded";
+        label="nds.name.types";
+        tooltip="Package nds.name.types";
+        href="../../../content/packages/nds.name.types.html#Package-nds-name-types";
+        target="_parent";
+
+        "AdministrativeHierarchyElement" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.types.html#Structure-AdministrativeHierarchyElement" title="Structure defined in nds.name.types">AdministrativeHierarchyElement</td></tr></table></font>>];
+        "AddressFormat" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.types.html#Structure-AddressFormat" title="Structure defined in nds.name.types">AddressFormat</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.system.types"
+    {
+        style="dashed, rounded";
+        label="nds.system.types";
+        tooltip="Package nds.system.types";
+        href="../../../content/packages/nds.system.types.html#Package-nds-system-types";
+        target="_parent";
+
+        "LayerType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.system.types.html#Enum-LayerType" title="Enum defined in nds.system.types">LayerType</td></tr></table></font>>];
+    }
+
+    "RoadNameLayer" -> "RoadNameLayerContent" [label="uses", fontsize=10];
+    "RoadNameLayer" -> "CoordShift" [label="uses", fontsize=10];
+    "RoadNameLayer" -> "NameRoadRangeAttributeMapList" [label="uses", fontsize=10];
+    "RoadNameLayer" -> "NameRoadPositionAttributeMapList" [label="uses", fontsize=10];
+    "RoadNameLayer" -> "NameTransitionAttributeMapList" [label="uses", fontsize=10];
+    "RoadNameLayer" -> "NameRoadRangeAttributeSetList" [label="uses", fontsize=10];
+    "RoadNameLayer" -> "NameRoadPositionAttributeSetList" [label="uses", fontsize=10];
+    "RoadNameLayer" -> "NameTransitionAttributeSetList" [label="uses", fontsize=10];
+    "RoadNameLayer" -> "AdministrativeHierarchyElement" [label="uses", fontsize=10];
+    "RoadNameLayer" -> "AddressFormat" [label="uses", fontsize=10];
+    "RoadNameLayer" -> "LayerType" [label="uses", fontsize=10];
+}

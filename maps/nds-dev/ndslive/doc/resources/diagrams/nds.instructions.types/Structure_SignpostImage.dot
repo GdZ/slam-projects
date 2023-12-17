@@ -1,0 +1,50 @@
+/**
+ * This dot file creates symbol collaboration diagram for SignpostImage.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="SignpostImage collaboration diagram";
+
+    subgraph "cluster_nds.instructions.types"
+    {
+        style="dashed, rounded";
+        label="nds.instructions.types";
+        tooltip="Package nds.instructions.types";
+        href="../../../content/packages/nds.instructions.types.html#Package-nds-instructions-types";
+        target="_parent";
+
+        "SignpostImage" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.instructions.types.html#Structure-SignpostImage" title="Structure defined in nds.instructions.types">SignpostImage</td></tr></table></font>>];
+        "SignPostImageReference" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.instructions.types.html#Subtype-SignPostImageReference" title="Subtype defined in nds.instructions.types">SignPostImageReference</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.types"
+    {
+        style="dashed, rounded";
+        label="nds.core.types";
+        tooltip="Package nds.core.types";
+        href="../../../content/packages/nds.core.types.html#Package-nds-core-types";
+        target="_parent";
+
+        "PercentagePosition" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Structure-PercentagePosition" title="Structure defined in nds.core.types">PercentagePosition</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.instructions.attributes"
+    {
+        style="dashed, rounded";
+        label="nds.instructions.attributes";
+        tooltip="Package nds.instructions.attributes";
+        href="../../../content/packages/nds.instructions.attributes.html#Package-nds-instructions-attributes";
+        target="_parent";
+
+        "InstructionsTransitionAttributeValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.instructions.attributes.html#Choice-InstructionsTransitionAttributeValue" title="Choice defined in nds.instructions.attributes">InstructionsTransitionAttributeValue</td></tr></table></font>>];
+        "InstructionsLaneTransitionAttributeValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.instructions.attributes.html#Choice-InstructionsLaneTransitionAttributeValue" title="Choice defined in nds.instructions.attributes">InstructionsLaneTransitionAttributeValue</td></tr></table></font>>];
+    }
+
+    "SignpostImage" -> "SignPostImageReference" [label="uses", fontsize=10];
+    "SignpostImage" -> "PercentagePosition" [label="uses", fontsize=10];
+    "InstructionsTransitionAttributeValue" -> "SignpostImage" [label="uses", fontsize=10];
+    "InstructionsLaneTransitionAttributeValue" -> "SignpostImage" [label="uses", fontsize=10];
+}

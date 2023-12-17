@@ -1,0 +1,38 @@
+/**
+ * This dot file creates symbol collaboration diagram for NameRoadPositionAttribute.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="NameRoadPositionAttribute collaboration diagram";
+
+    subgraph "cluster_nds.name.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.name.instantiations";
+        tooltip="Package nds.name.instantiations";
+        href="../../../content/packages/nds.name.instantiations.html#Package-nds-name-instantiations";
+        target="_parent";
+
+        "NameRoadPositionAttribute" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.instantiations.html#InstantiateType-NameRoadPositionAttribute" title="InstantiateType defined in nds.name.instantiations">NameRoadPositionAttribute</td></tr></table></font>>];
+        "Attribute&lt;NameRoadPositionAttributeType,NameRoadPositionAttributeValue&gt;" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.attributemap.html#Structure-Attribute" title="Structure defined in nds.core.attributemap">Attribute</td><td>&lt;</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.attributes.html#Enum-NameRoadPositionAttributeType" title="Enum defined in nds.name.attributes">NameRoadPositionAttributeType</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.attributes.html#Choice-NameRoadPositionAttributeValue" title="Choice defined in nds.name.attributes">NameRoadPositionAttributeValue</td></tr></table></td><td>&gt;</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.name.attributes"
+    {
+        style="dashed, rounded";
+        label="nds.name.attributes";
+        tooltip="Package nds.name.attributes";
+        href="../../../content/packages/nds.name.attributes.html#Package-nds-name-attributes";
+        target="_parent";
+
+        "NameRoadPositionAttributeType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.attributes.html#Enum-NameRoadPositionAttributeType" title="Enum defined in nds.name.attributes">NameRoadPositionAttributeType</td></tr></table></font>>];
+        "NameRoadPositionAttributeValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.attributes.html#Choice-NameRoadPositionAttributeValue" title="Choice defined in nds.name.attributes">NameRoadPositionAttributeValue</td></tr></table></font>>];
+    }
+
+    "NameRoadPositionAttribute" -> "Attribute&lt;NameRoadPositionAttributeType,NameRoadPositionAttributeValue&gt;" [label="uses", fontsize=10];
+    "NameRoadPositionAttribute" -> "NameRoadPositionAttributeType" [label="uses", fontsize=10];
+    "NameRoadPositionAttribute" -> "NameRoadPositionAttributeValue" [label="uses", fontsize=10];
+}

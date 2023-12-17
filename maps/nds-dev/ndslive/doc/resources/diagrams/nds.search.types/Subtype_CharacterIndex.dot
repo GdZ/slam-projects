@@ -1,0 +1,24 @@
+/**
+ * This dot file creates symbol collaboration diagram for CharacterIndex.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="CharacterIndex collaboration diagram";
+
+    subgraph "cluster_nds.search.types"
+    {
+        style="dashed, rounded";
+        label="nds.search.types";
+        tooltip="Package nds.search.types";
+        href="../../../content/packages/nds.search.types.html#Package-nds-search-types";
+        target="_parent";
+
+        "CharacterIndex" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.search.types.html#Subtype-CharacterIndex" title="Subtype defined in nds.search.types">CharacterIndex</td></tr></table></font>>];
+        "TextRange" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.search.types.html#Structure-TextRange" title="Structure defined in nds.search.types">TextRange</td></tr></table></font>>];
+    }
+
+    "TextRange" -> "CharacterIndex" [label="uses", fontsize=10];
+}

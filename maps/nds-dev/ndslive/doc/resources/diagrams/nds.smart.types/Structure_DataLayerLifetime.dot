@@ -1,0 +1,58 @@
+/**
+ * This dot file creates symbol collaboration diagram for DataLayerLifetime.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="DataLayerLifetime collaboration diagram";
+
+    subgraph "cluster_nds.smart.types"
+    {
+        style="dashed, rounded";
+        label="nds.smart.types";
+        tooltip="Package nds.smart.types";
+        href="../../../content/packages/nds.smart.types.html#Package-nds-smart-types";
+        target="_parent";
+
+        "DataLayerLifetime" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.types.html#Structure-DataLayerLifetime" title="Structure defined in nds.smart.types">DataLayerLifetime</td></tr></table></font>>];
+        "DataLayerLifetimeType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.types.html#Enum-DataLayerLifetimeType" title="Enum defined in nds.smart.types">DataLayerLifetimeType</td></tr></table></font>>];
+        "DataLayerLifetimeInfo" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.types.html#Choice-DataLayerLifetimeInfo" title="Choice defined in nds.smart.types">DataLayerLifetimeInfo</td></tr></table></font>>];
+        "SmartLayerHeader" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.types.html#Structure-SmartLayerHeader" title="Structure defined in nds.smart.types">SmartLayerHeader</td></tr></table></font>>];
+        "RasterImageLifetime" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.types.html#Subtype-RasterImageLifetime" title="Subtype defined in nds.smart.types">RasterImageLifetime</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.smart.tile"
+    {
+        style="dashed, rounded";
+        label="nds.smart.tile";
+        tooltip="Package nds.smart.tile";
+        href="../../../content/packages/nds.smart.tile.html#Package-nds-smart-tile";
+        target="_parent";
+
+        "SmartLayerTileVersionRequest" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.tile.html#Structure-SmartLayerTileVersionRequest" title="Structure defined in nds.smart.tile">SmartLayerTileVersionRequest</td></tr></table></font>>];
+        "DataLayerTileVersionRequest" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.tile.html#Structure-DataLayerTileVersionRequest" title="Structure defined in nds.smart.tile">DataLayerTileVersionRequest</td></tr></table></font>>];
+        "MultiDataLayerTileRequest" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.tile.html#Structure-MultiDataLayerTileRequest" title="Structure defined in nds.smart.tile">MultiDataLayerTileRequest</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.smart.object"
+    {
+        style="dashed, rounded";
+        label="nds.smart.object";
+        tooltip="Package nds.smart.object";
+        href="../../../content/packages/nds.smart.object.html#Package-nds-smart-object";
+        target="_parent";
+
+        "DataLayerObjectVersionRequest" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.object.html#Structure-DataLayerObjectVersionRequest" title="Structure defined in nds.smart.object">DataLayerObjectVersionRequest</td></tr></table></font>>];
+    }
+
+    "DataLayerLifetime" -> "DataLayerLifetimeType" [label="uses", fontsize=10];
+    "DataLayerLifetime" -> "DataLayerLifetimeInfo" [label="uses", fontsize=10];
+    "SmartLayerTileVersionRequest" -> "DataLayerLifetime" [label="uses", fontsize=10];
+    "DataLayerTileVersionRequest" -> "DataLayerLifetime" [label="uses", fontsize=10];
+    "MultiDataLayerTileRequest" -> "DataLayerLifetime" [label="uses", fontsize=10];
+    "SmartLayerHeader" -> "DataLayerLifetime" [label="uses", fontsize=10];
+    "RasterImageLifetime" -> "DataLayerLifetime" [label="uses", fontsize=10];
+    "DataLayerObjectVersionRequest" -> "DataLayerLifetime" [label="uses", fontsize=10];
+}

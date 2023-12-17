@@ -1,0 +1,340 @@
+.anchor:not(h1):not(h2), /* anchors for zserio fields, functions, etc. */
+.anchor-md:not(h1):not(h2) { /* normal anchors from markdown */
+  scroll-margin-top: 3.5rem;
+  padding-top: 0.25rem;
+}
+
+main > h1:first-child, /* package heading */
+main > h2:first-child, /* possible 2nd-level heading in renderd markdown resource
+main > .doc:first-child > h1:first-child, /* floating comment before the package declaration  */
+main > .doc:first-child > h2:first-child {
+  border-top: none;
+  padding-top: 0; /* prevent scrolling above the anchor scroll */
+  scroll-margin-top: 3.5rem;
+}
+
+h1 { /* package name or headings from documentation */
+  border-top: 4px solid rgb(0,0,0,0.1);
+  /* set-up scroll to hide the border-top (horizontal line) */
+  scroll-margin-top: calc(3.5rem - 4px);
+  padding-top: 0.75rem;
+}
+
+h2 { /* symbols in package or doc headings */
+  border-top: 3px solid rgb(0,0,0,0.1);
+  /* set-up scroll to hide the border-top (horizontal line) */
+  scroll-margin-top: calc(3.5rem - 3px);
+  padding-top: 0.75rem;
+}
+
+.code h1,
+.code h2 {
+  border-top: none;
+  padding-top: revert;
+  scroll-margin-top: 3.5rem;
+}
+
+.anchor-group {
+  scroll-margin-top: 3.5rem;
+}
+
+#header {
+  height: 3.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+#header .navbar-nav {
+  color: rgb(255,255,255,0.65);
+  margin-top: 0.25rem;
+  font-size: 1rem;
+}
+
+#header .nav-link {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  color: rgb(255,255,255,0.65);
+}
+
+#header .nav-link:hover {
+  color: white;
+}
+
+#header .nav-link.active {
+  color: white;
+  font-weight: bold;
+}
+
+#header #zserio-logo {
+  height: 1rem;
+  color: rgb(255,255,255,0.65);
+}
+
+#header #zserio-logo:hover #zserio-logo-serio {
+  fill: white;
+}
+
+#header #zserio-logo #zserio-logo-z {
+  fill: rgba(255, 0, 0, 0.85);
+}
+
+#header #zserio-logo:hover #zserio-logo-z {
+  fill: rgba(255, 0, 0, 1);
+}
+
+.navbar-center { /* custom bootstrap extension */
+  position: absolute;
+  left: 50%;
+  transform: translatex(-50%);
+}
+
+#toc_button {
+  padding: 0;
+  margin: 0;
+}
+
+#toc_button:hover {
+  color: white;
+}
+
+#left_panel {
+  top: 3.5rem;
+  height: calc(100vh - 3.5rem);
+  overflow: hidden;
+  position: sticky;
+  border-right: 1px solid rgb(0,0,0,0.1);
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  padding-left: 1rem;
+  padding-right: 0rem;
+}
+
+#search_form {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  margin-left: -1rem; /* bottom border across the whole left panel */
+  border-bottom: 1px solid rgb(0,0,0,0.1);
+}
+
+#search {
+  height: 2.25rem;
+  padding-top: 0.375rem;
+  padding-bottom: 0.375rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  border-color: rgb(0,0,0,0.1);
+}
+
+#search:focus {
+  border-color: rgb(0,0,0,0.2);
+  box-shadow: 0 0 0 3px rgb(0,0,0,0.1);
+}
+
+#symbol_overview,
+#rules_overview {
+  padding-top: 0.75rem;
+  overflow-y: auto;
+  height: calc(100% - 4.25rem);
+  flex-wrap: nowrap;
+}
+
+.nav-link {
+  padding-top: 0.125rem;
+  padding-right: 1.5rem;
+  padding-bottom: 0.125rem;
+  padding-left: 0.5rem;
+}
+
+#toc {
+  top: 3.5rem;
+  height: calc(100vh - 3.5rem);
+  position: sticky;
+  font-size: 0.875rem;
+  overflow-x: hidden;
+  overflow-y: hidden; /* scrolls automatically using javascript */
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+#toc .nav .nav-link.active {
+  border-left: 1px solid rgb(0,0,0,0.2);
+}
+
+.nav-symbols {
+  display: none; /* display only symbols for active package */
+  margin-left: 1rem;
+}
+
+.nav-symbols.active {
+  display: block;
+}
+
+.nav-symbols.active.collapsed {
+  display: none;
+}
+
+.nav-rule-groups {
+  margin-left: 1rem;
+}
+
+.nav-link-package.active {
+  font-weight: bold;
+}
+
+.nav-link,
+a {
+  color: rgb(0,0,0,0.65);
+}
+
+.nav-link:hover,
+a:hover {
+  color: rgb(0,0,0,0.85);
+  text-decoration: none;
+}
+
+.code {
+  font-family: monospace;
+  padding: 0.5rem;
+  margin-top: 1rem;
+}
+
+.code-background {
+  background-color: rgb(0,0,0,0.05);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  max-width: max-content;
+  min-width: min-content;
+  margin-bottom: 0.5rem;
+}
+
+.code td {
+  padding-right: 0.4rem;
+  white-space: nowrap;
+}
+
+.code td:last-child {
+  width: 100%; /* make last columns the only ones which are expanding to preserve whole table compact */
+}
+
+.code td.indent {
+  padding-left: 2rem;
+}
+
+.code td.indent.empty {
+  padding-left: 0;
+  width: 2rem;
+  min-width: 2rem;
+  max-width: 2rem;
+}
+
+.code td.value-expression {
+  padding-left: 1rem;
+}
+
+.code div.doc {
+  white-space: normal;
+  color: gray;
+}
+
+.code p:last-child {
+  margin-bottom: 0;
+}
+
+.code .btn {
+  margin: 0;
+  padding: 0;
+  margin-left: 0.2rem;
+  vertical-align: baseline;
+  color: rgb(0,0,0,0.65);
+}
+
+.code .btn:hover {
+  color: rgb(0,0,0,0.85);
+}
+
+.code .btn.comments-hidden {
+    color: rgba(0,0,0,0.25);
+}
+
+.code .btn.comments-hidden:hover {
+    color: rgba(0,0,0,0.45);
+}
+
+.code .constant-token,
+.code .enumitem-token,
+.code .bitmaskvalue-token {
+  color: rgb(0,0,128,0.65);
+}
+
+.code .constant-token:hover,
+.code .enumitem-token:hover,
+.code .bitmaskvalue-token:hover {
+  color: rgb(0,0,128,0.85);
+}
+
+.code .subtype-token,
+.code .instantiatetype-token {
+  color: rgb(128,0,128,0.65);
+}
+
+.code .subtype-token:hover,
+.code .instantiatetype-token:hover {
+  color: rgb(128,0,128,0.85);
+}
+
+.code .structure-token,
+.code .choice-token,
+.code .union-token,
+.code .sqltable-token,
+.code .sqldatabase-token,
+.code .service-token,
+.code .pubsub-token {
+  color: rgb(128,64,0,0.65);
+}
+
+.code .structure-token:hover,
+.code .choice-token:hover,
+.code .union-token:hover,
+.code .sqltable-token:hover,
+.code .sqldatabase-token:hover,
+.code .service-token:hover,
+.code .pubsub-token:hover {
+  color: rgb(128,64,0,0.85);
+}
+
+.code .enum-token,
+.code .bitmask-token {
+  color: rgb(0,128,0,0.65);
+}
+
+.code .enum-token:hover,
+.code .bitmask-token:hover {
+  color: rgb(0,128,0,0.85);
+}
+
+.rule_group .anchor,
+.rule_group .anchor-md {
+  border-top: none;
+  padding-top: revert;
+  scroll-margin-top: 3.5rem;
+}
+
+.rule_group p:last-child {
+  margin-bottom: 0;
+}
+
+#main code {
+  color: inherit; /* don't use pink color which is default from Bootstrap */
+}
+
+.deprecated {
+  color: gray;
+  text-decoration: line-through;
+}
+
+.svg {
+  width: 100%;
+  overflow-x: auto;
+}

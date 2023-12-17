@@ -1,0 +1,36 @@
+/**
+ * This dot file creates symbol collaboration diagram for DisplayAttributeLayerContent.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="DisplayAttributeLayerContent collaboration diagram";
+
+    subgraph "cluster_nds.display.details.metadata"
+    {
+        style="dashed, rounded";
+        label="nds.display.details.metadata";
+        tooltip="Package nds.display.details.metadata";
+        href="../../../content/packages/nds.display.details.metadata.html#Package-nds-display-details-metadata";
+        target="_parent";
+
+        "DisplayAttributeLayerContent" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.details.metadata.html#Bitmask-DisplayAttributeLayerContent" title="Bitmask defined in nds.display.details.metadata">DisplayAttributeLayerContent</td></tr></table></font>>];
+        "DisplayAttributeLayerMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.details.metadata.html#Structure-DisplayAttributeLayerMetadata" title="Structure defined in nds.display.details.metadata">DisplayAttributeLayerMetadata</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.display.details.layer"
+    {
+        style="dashed, rounded";
+        label="nds.display.details.layer";
+        tooltip="Package nds.display.details.layer";
+        href="../../../content/packages/nds.display.details.layer.html#Package-nds-display-details-layer";
+        target="_parent";
+
+        "DisplayAttributeLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.details.layer.html#Structure-DisplayAttributeLayer" title="Structure defined in nds.display.details.layer">DisplayAttributeLayer</td></tr></table></font>>];
+    }
+
+    "DisplayAttributeLayer" -> "DisplayAttributeLayerContent" [label="uses", fontsize=10];
+    "DisplayAttributeLayerMetadata" -> "DisplayAttributeLayerContent" [label="uses", fontsize=10];
+}

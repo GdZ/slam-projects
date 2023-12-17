@@ -1,0 +1,28 @@
+/**
+ * This dot file creates symbol collaboration diagram for BoundaryReferenceWithPosition.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="BoundaryReferenceWithPosition collaboration diagram";
+
+    subgraph "cluster_nds.lane.boundaries"
+    {
+        style="dashed, rounded";
+        label="nds.lane.boundaries";
+        tooltip="Package nds.lane.boundaries";
+        href="../../../content/packages/nds.lane.boundaries.html#Package-nds-lane-boundaries";
+        target="_parent";
+
+        "BoundaryReferenceWithPosition" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.boundaries.html#Structure-BoundaryReferenceWithPosition" title="Structure defined in nds.lane.boundaries">BoundaryReferenceWithPosition</td></tr></table></font>>];
+        "BoundaryReference" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.boundaries.html#Subtype-BoundaryReference" title="Subtype defined in nds.lane.boundaries">BoundaryReference</td></tr></table></font>>];
+        "BoundaryGeometryPosition" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.boundaries.html#Subtype-BoundaryGeometryPosition" title="Subtype defined in nds.lane.boundaries">BoundaryGeometryPosition</td></tr></table></font>>];
+        "BoundarySet" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.boundaries.html#Structure-BoundarySet" title="Structure defined in nds.lane.boundaries">BoundarySet</td></tr></table></font>>];
+    }
+
+    "BoundaryReferenceWithPosition" -> "BoundaryReference" [label="uses", fontsize=10];
+    "BoundaryReferenceWithPosition" -> "BoundaryGeometryPosition" [label="uses", fontsize=10];
+    "BoundarySet" -> "BoundaryReferenceWithPosition" [label="uses", fontsize=10];
+}

@@ -1,0 +1,62 @@
+/**
+ * This dot file creates symbol collaboration diagram for DisplayLineRulesLayerMetadata.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="DisplayLineRulesLayerMetadata collaboration diagram";
+
+    subgraph "cluster_nds.rules.metadata"
+    {
+        style="dashed, rounded";
+        label="nds.rules.metadata";
+        tooltip="Package nds.rules.metadata";
+        href="../../../content/packages/nds.rules.metadata.html#Package-nds-rules-metadata";
+        target="_parent";
+
+        "DisplayLineRulesLayerMetadata" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.metadata.html#Structure-DisplayLineRulesLayerMetadata" title="Structure defined in nds.rules.metadata">DisplayLineRulesLayerMetadata</td></tr></table></font>>];
+        "DisplayLineRulesLayerContent" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.metadata.html#Bitmask-DisplayLineRulesLayerContent" title="Bitmask defined in nds.rules.metadata">DisplayLineRulesLayerContent</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.rules.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.rules.instantiations";
+        tooltip="Package nds.rules.instantiations";
+        href="../../../content/packages/nds.rules.instantiations.html#Package-nds-rules-instantiations";
+        target="_parent";
+
+        "RulesDisplayLineRangeAttributeMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.instantiations.html#InstantiateType-RulesDisplayLineRangeAttributeMetadata" title="InstantiateType defined in nds.rules.instantiations">RulesDisplayLineRangeAttributeMetadata</td></tr></table></font>>];
+        "RulesDisplayLinePositionAttributeMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.instantiations.html#InstantiateType-RulesDisplayLinePositionAttributeMetadata" title="InstantiateType defined in nds.rules.instantiations">RulesDisplayLinePositionAttributeMetadata</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.types"
+    {
+        style="dashed, rounded";
+        label="nds.core.types";
+        tooltip="Package nds.core.types";
+        href="../../../content/packages/nds.core.types.html#Package-nds-core-types";
+        target="_parent";
+
+        "RoadType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Structure-RoadType" title="Structure defined in nds.core.types">RoadType</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.language"
+    {
+        style="dashed, rounded";
+        label="nds.core.language";
+        tooltip="Package nds.core.language";
+        href="../../../content/packages/nds.core.language.html#Package-nds-core-language";
+        target="_parent";
+
+        "AvailableLanguages" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.language.html#Structure-AvailableLanguages" title="Structure defined in nds.core.language">AvailableLanguages</td></tr></table></font>>];
+    }
+
+    "DisplayLineRulesLayerMetadata" -> "DisplayLineRulesLayerContent" [label="uses", fontsize=10];
+    "DisplayLineRulesLayerMetadata" -> "RulesDisplayLineRangeAttributeMetadata" [label="uses", fontsize=10];
+    "DisplayLineRulesLayerMetadata" -> "RulesDisplayLinePositionAttributeMetadata" [label="uses", fontsize=10];
+    "DisplayLineRulesLayerMetadata" -> "RoadType" [label="uses", fontsize=10];
+    "DisplayLineRulesLayerMetadata" -> "AvailableLanguages" [label="uses", fontsize=10];
+}

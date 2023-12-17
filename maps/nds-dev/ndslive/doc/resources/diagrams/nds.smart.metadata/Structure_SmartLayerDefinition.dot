@@ -1,0 +1,80 @@
+/**
+ * This dot file creates symbol collaboration diagram for SmartLayerDefinition.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="SmartLayerDefinition collaboration diagram";
+
+    subgraph "cluster_nds.smart.metadata"
+    {
+        style="dashed, rounded";
+        label="nds.smart.metadata";
+        tooltip="Package nds.smart.metadata";
+        href="../../../content/packages/nds.smart.metadata.html#Package-nds-smart-metadata";
+        target="_parent";
+
+        "SmartLayerDefinition" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.metadata.html#Structure-SmartLayerDefinition" title="Structure defined in nds.smart.metadata">SmartLayerDefinition</td></tr></table></font>>];
+        "SmartLayerContent" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.metadata.html#Structure-SmartLayerContent" title="Structure defined in nds.smart.metadata">SmartLayerContent</td></tr></table></font>>];
+        "SmartLayerRegistryMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.metadata.html#Structure-SmartLayerRegistryMetadata" title="Structure defined in nds.smart.metadata">SmartLayerRegistryMetadata</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.smart.types"
+    {
+        style="dashed, rounded";
+        label="nds.smart.types";
+        tooltip="Package nds.smart.types";
+        href="../../../content/packages/nds.smart.types.html#Package-nds-smart-types";
+        target="_parent";
+
+        "DataLayerDefinition" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.types.html#Structure-DataLayerDefinition" title="Structure defined in nds.smart.types">DataLayerDefinition</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.smart.object"
+    {
+        style="dashed, rounded";
+        label="nds.smart.object";
+        tooltip="Package nds.smart.object";
+        href="../../../content/packages/nds.smart.object.html#Package-nds-smart-object";
+        target="_parent";
+
+        "SmartLayerObjectDefinition" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.object.html#Structure-SmartLayerObjectDefinition" title="Structure defined in nds.smart.object">SmartLayerObjectDefinition</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.smart.services"
+    {
+        style="dashed, rounded";
+        label="nds.smart.services";
+        tooltip="Package nds.smart.services";
+        href="../../../content/packages/nds.smart.services.html#Package-nds-smart-services";
+        target="_parent";
+
+        "SmartLayerTileService" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.services.html#Service-SmartLayerTileService" title="Service defined in nds.smart.services">SmartLayerTileService</td></tr></table></font>>];
+        "SmartLayerPathService" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.services.html#Service-SmartLayerPathService" title="Service defined in nds.smart.services">SmartLayerPathService</td></tr></table></font>>];
+        "SmartLayerPathHorizonService" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.services.html#Service-SmartLayerPathHorizonService" title="Service defined in nds.smart.services">SmartLayerPathHorizonService</td></tr></table></font>>];
+        "SmartLayerMeshService" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.services.html#Service-SmartLayerMeshService" title="Service defined in nds.smart.services">SmartLayerMeshService</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.smart.filestore"
+    {
+        style="dashed, rounded";
+        label="nds.smart.filestore";
+        tooltip="Package nds.smart.filestore";
+        href="../../../content/packages/nds.smart.filestore.html#Package-nds-smart-filestore";
+        target="_parent";
+
+        "SmartLayerMetadataTable" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.filestore.html#SqlTable-SmartLayerMetadataTable" title="SqlTable defined in nds.smart.filestore">SmartLayerMetadataTable</td></tr></table></font>>];
+    }
+
+    "SmartLayerDefinition" -> "SmartLayerContent" [label="uses", fontsize=10];
+    "SmartLayerDefinition" -> "DataLayerDefinition" [label="uses", fontsize=10];
+    "SmartLayerObjectDefinition" -> "SmartLayerDefinition" [label="uses", fontsize=10];
+    "SmartLayerRegistryMetadata" -> "SmartLayerDefinition" [label="uses", fontsize=10];
+    "SmartLayerTileService" -> "SmartLayerDefinition" [label="uses", fontsize=10];
+    "SmartLayerPathService" -> "SmartLayerDefinition" [label="uses", fontsize=10];
+    "SmartLayerPathHorizonService" -> "SmartLayerDefinition" [label="uses", fontsize=10];
+    "SmartLayerMeshService" -> "SmartLayerDefinition" [label="uses", fontsize=10];
+    "SmartLayerMetadataTable" -> "SmartLayerDefinition" [label="uses", fontsize=10];
+}

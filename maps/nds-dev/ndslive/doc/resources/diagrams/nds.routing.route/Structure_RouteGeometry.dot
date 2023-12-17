@@ -1,0 +1,50 @@
+/**
+ * This dot file creates symbol collaboration diagram for RouteGeometry.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="RouteGeometry collaboration diagram";
+
+    subgraph "cluster_nds.routing.route"
+    {
+        style="dashed, rounded";
+        label="nds.routing.route";
+        tooltip="Package nds.routing.route";
+        href="../../../content/packages/nds.routing.route.html#Package-nds-routing-route";
+        target="_parent";
+
+        "RouteGeometry" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routing.route.html#Structure-RouteGeometry" title="Structure defined in nds.routing.route">RouteGeometry</td></tr></table></font>>];
+        "Route" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routing.route.html#Structure-Route" title="Structure defined in nds.routing.route">Route</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.types"
+    {
+        style="dashed, rounded";
+        label="nds.core.types";
+        tooltip="Package nds.core.types";
+        href="../../../content/packages/nds.core.types.html#Package-nds-core-types";
+        target="_parent";
+
+        "ScaleDenominator" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Subtype-ScaleDenominator" title="Subtype defined in nds.core.types">ScaleDenominator</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.geometry"
+    {
+        style="dashed, rounded";
+        label="nds.core.geometry";
+        tooltip="Package nds.core.geometry";
+        href="../../../content/packages/nds.core.geometry.html#Package-nds-core-geometry";
+        target="_parent";
+
+        "CoordShift" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Subtype-CoordShift" title="Subtype defined in nds.core.geometry">CoordShift</td></tr></table></font>>];
+        "Line2D" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Structure-Line2D" title="Structure defined in nds.core.geometry">Line2D</td></tr></table></font>>];
+    }
+
+    "RouteGeometry" -> "ScaleDenominator" [label="uses", fontsize=10];
+    "RouteGeometry" -> "CoordShift" [label="uses", fontsize=10];
+    "RouteGeometry" -> "Line2D" [label="uses", fontsize=10];
+    "Route" -> "RouteGeometry" [label="uses", fontsize=10];
+}

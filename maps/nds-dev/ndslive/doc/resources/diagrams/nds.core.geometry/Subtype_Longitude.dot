@@ -1,0 +1,36 @@
+/**
+ * This dot file creates symbol collaboration diagram for Longitude.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="Longitude collaboration diagram";
+
+    subgraph "cluster_nds.core.geometry"
+    {
+        style="dashed, rounded";
+        label="nds.core.geometry";
+        tooltip="Package nds.core.geometry";
+        href="../../../content/packages/nds.core.geometry.html#Package-nds-core-geometry";
+        target="_parent";
+
+        "Longitude" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Subtype-Longitude" title="Subtype defined in nds.core.geometry">Longitude</td></tr></table></font>>];
+        "DeltaLongitude" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Subtype-DeltaLongitude" title="Subtype defined in nds.core.geometry">DeltaLongitude</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.vehicle"
+    {
+        style="dashed, rounded";
+        label="nds.core.vehicle";
+        tooltip="Package nds.core.vehicle";
+        href="../../../content/packages/nds.core.vehicle.html#Package-nds-core-vehicle";
+        target="_parent";
+
+        "PoseRaw" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.vehicle.html#Structure-PoseRaw" title="Structure defined in nds.core.vehicle">PoseRaw</td></tr></table></font>>];
+    }
+
+    "PoseRaw" -> "Longitude" [label="uses", fontsize=10];
+    "DeltaLongitude" -> "Longitude" [label="uses", fontsize=10];
+}

@@ -1,0 +1,26 @@
+/**
+ * This dot file creates symbol collaboration diagram for GuidanceNameStringRelationList.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="GuidanceNameStringRelationList collaboration diagram";
+
+    subgraph "cluster_nds.routing.guidance"
+    {
+        style="dashed, rounded";
+        label="nds.routing.guidance";
+        tooltip="Package nds.routing.guidance";
+        href="../../../content/packages/nds.routing.guidance.html#Package-nds-routing-guidance";
+        target="_parent";
+
+        "GuidanceNameStringRelationList" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routing.guidance.html#Structure-GuidanceNameStringRelationList" title="Structure defined in nds.routing.guidance">GuidanceNameStringRelationList</td></tr></table></font>>];
+        "GuidanceNameStringRelation" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routing.guidance.html#Structure-GuidanceNameStringRelation" title="Structure defined in nds.routing.guidance">GuidanceNameStringRelation</td></tr></table></font>>];
+        "GuidanceNameString" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routing.guidance.html#Structure-GuidanceNameString" title="Structure defined in nds.routing.guidance">GuidanceNameString</td></tr></table></font>>];
+    }
+
+    "GuidanceNameStringRelationList" -> "GuidanceNameStringRelation" [label="uses", fontsize=10];
+    "GuidanceNameString" -> "GuidanceNameStringRelationList" [label="uses", fontsize=10];
+}

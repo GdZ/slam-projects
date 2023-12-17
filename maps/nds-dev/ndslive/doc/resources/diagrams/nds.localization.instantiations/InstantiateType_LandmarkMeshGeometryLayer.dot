@@ -1,0 +1,50 @@
+/**
+ * This dot file creates symbol collaboration diagram for LandmarkMeshGeometryLayer.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="LandmarkMeshGeometryLayer collaboration diagram";
+
+    subgraph "cluster_nds.localization.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.localization.instantiations";
+        tooltip="Package nds.localization.instantiations";
+        href="../../../content/packages/nds.localization.instantiations.html#Package-nds-localization-instantiations";
+        target="_parent";
+
+        "LandmarkMeshGeometryLayer" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.localization.instantiations.html#InstantiateType-LandmarkMeshGeometryLayer" title="InstantiateType defined in nds.localization.instantiations">LandmarkMeshGeometryLayer</td></tr></table></font>>];
+        "GeometryLayer&lt;LandmarkId,LandmarkMesh&gt;" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Structure-GeometryLayer" title="Structure defined in nds.core.geometry">GeometryLayer</td><td>&lt;</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.localization.types.html#Subtype-LandmarkId" title="Subtype defined in nds.localization.types">LandmarkId</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.localization.types.html#Structure-LandmarkMesh" title="Structure defined in nds.localization.types">LandmarkMesh</td></tr></table></td><td>&gt;</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.localization.types"
+    {
+        style="dashed, rounded";
+        label="nds.localization.types";
+        tooltip="Package nds.localization.types";
+        href="../../../content/packages/nds.localization.types.html#Package-nds-localization-types";
+        target="_parent";
+
+        "LandmarkId" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.localization.types.html#Subtype-LandmarkId" title="Subtype defined in nds.localization.types">LandmarkId</td></tr></table></font>>];
+        "LandmarkMesh" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.localization.types.html#Structure-LandmarkMesh" title="Structure defined in nds.localization.types">LandmarkMesh</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.localization.layer"
+    {
+        style="dashed, rounded";
+        label="nds.localization.layer";
+        tooltip="Package nds.localization.layer";
+        href="../../../content/packages/nds.localization.layer.html#Package-nds-localization-layer";
+        target="_parent";
+
+        "LandmarkLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.localization.layer.html#Structure-LandmarkLayer" title="Structure defined in nds.localization.layer">LandmarkLayer</td></tr></table></font>>];
+    }
+
+    "LandmarkMeshGeometryLayer" -> "GeometryLayer&lt;LandmarkId,LandmarkMesh&gt;" [label="uses", fontsize=10];
+    "LandmarkMeshGeometryLayer" -> "LandmarkId" [label="uses", fontsize=10];
+    "LandmarkMeshGeometryLayer" -> "LandmarkMesh" [label="uses", fontsize=10];
+    "LandmarkLayer" -> "LandmarkMeshGeometryLayer" [label="uses", fontsize=10];
+}

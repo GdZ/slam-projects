@@ -1,0 +1,48 @@
+/**
+ * This dot file creates symbol collaboration diagram for HorizonRequest.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="HorizonRequest collaboration diagram";
+
+    subgraph "cluster_nds.vehicle.services"
+    {
+        style="dashed, rounded";
+        label="nds.vehicle.services";
+        tooltip="Package nds.vehicle.services";
+        href="../../../content/packages/nds.vehicle.services.html#Package-nds-vehicle-services";
+        target="_parent";
+
+        "HorizonRequest" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.vehicle.services.html#Structure-HorizonRequest" title="Structure defined in nds.vehicle.services">HorizonRequest</td></tr></table></font>>];
+        "VehicleHorizonService" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.vehicle.services.html#Service-VehicleHorizonService" title="Service defined in nds.vehicle.services">VehicleHorizonService</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.vehicle"
+    {
+        style="dashed, rounded";
+        label="nds.core.vehicle";
+        tooltip="Package nds.core.vehicle";
+        href="../../../content/packages/nds.core.vehicle.html#Package-nds-core-vehicle";
+        target="_parent";
+
+        "VehiclePose" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.vehicle.html#Union-VehiclePose" title="Union defined in nds.core.vehicle">VehiclePose</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.types"
+    {
+        style="dashed, rounded";
+        label="nds.core.types";
+        tooltip="Package nds.core.types";
+        href="../../../content/packages/nds.core.types.html#Package-nds-core-types";
+        target="_parent";
+
+        "LengthMeters" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Subtype-LengthMeters" title="Subtype defined in nds.core.types">LengthMeters</td></tr></table></font>>];
+    }
+
+    "HorizonRequest" -> "VehiclePose" [label="uses", fontsize=10];
+    "HorizonRequest" -> "LengthMeters" [label="uses", fontsize=10];
+    "VehicleHorizonService" -> "HorizonRequest" [label="uses", fontsize=10];
+}

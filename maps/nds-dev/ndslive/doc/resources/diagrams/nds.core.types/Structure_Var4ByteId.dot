@@ -1,0 +1,102 @@
+/**
+ * This dot file creates symbol collaboration diagram for Var4ByteId.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="Var4ByteId collaboration diagram";
+
+    subgraph "cluster_nds.core.types"
+    {
+        style="dashed, rounded";
+        label="nds.core.types";
+        tooltip="Package nds.core.types";
+        href="../../../content/packages/nds.core.types.html#Package-nds-core-types";
+        target="_parent";
+
+        "Var4ByteId" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Structure-Var4ByteId" title="Structure defined in nds.core.types">Var4ByteId</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.lane.reference.types"
+    {
+        style="dashed, rounded";
+        label="nds.lane.reference.types";
+        tooltip="Package nds.lane.reference.types";
+        href="../../../content/packages/nds.lane.reference.types.html#Package-nds-lane-reference-types";
+        target="_parent";
+
+        "LaneId" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.reference.types.html#Subtype-LaneId" title="Subtype defined in nds.lane.reference.types">LaneId</td></tr></table></font>>];
+        "LaneGroupId" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.reference.types.html#Subtype-LaneGroupId" title="Subtype defined in nds.lane.reference.types">LaneGroupId</td></tr></table></font>>];
+        "RoadSurfaceId" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.reference.types.html#Subtype-RoadSurfaceId" title="Subtype defined in nds.lane.reference.types">RoadSurfaceId</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.road.reference.types"
+    {
+        style="dashed, rounded";
+        label="nds.road.reference.types";
+        tooltip="Package nds.road.reference.types";
+        href="../../../content/packages/nds.road.reference.types.html#Package-nds-road-reference-types";
+        target="_parent";
+
+        "RoadId" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.road.reference.types.html#Subtype-RoadId" title="Subtype defined in nds.road.reference.types">RoadId</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.display.reference.types"
+    {
+        style="dashed, rounded";
+        label="nds.display.reference.types";
+        tooltip="Package nds.display.reference.types";
+        href="../../../content/packages/nds.display.reference.types.html#Package-nds-display-reference-types";
+        target="_parent";
+
+        "DisplayLineId" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.reference.types.html#Subtype-DisplayLineId" title="Subtype defined in nds.display.reference.types">DisplayLineId</td></tr></table></font>>];
+        "DisplayAreaId" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.reference.types.html#Subtype-DisplayAreaId" title="Subtype defined in nds.display.reference.types">DisplayAreaId</td></tr></table></font>>];
+        "DisplayPointId" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.reference.types.html#Subtype-DisplayPointId" title="Subtype defined in nds.display.reference.types">DisplayPointId</td></tr></table></font>>];
+        "DisplayMesh3dId" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.reference.types.html#Subtype-DisplayMesh3dId" title="Subtype defined in nds.display.reference.types">DisplayMesh3dId</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.venue.reference.types"
+    {
+        style="dashed, rounded";
+        label="nds.venue.reference.types";
+        tooltip="Package nds.venue.reference.types";
+        href="../../../content/packages/nds.venue.reference.types.html#Package-nds-venue-reference-types";
+        target="_parent";
+
+        "ParkingFacilityId" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.reference.types.html#Subtype-ParkingFacilityId" title="Subtype defined in nds.venue.reference.types">ParkingFacilityId</td></tr></table></font>>];
+        "ParkingLevelId" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.reference.types.html#Subtype-ParkingLevelId" title="Subtype defined in nds.venue.reference.types">ParkingLevelId</td></tr></table></font>>];
+        "ParkingSectionId" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.reference.types.html#Subtype-ParkingSectionId" title="Subtype defined in nds.venue.reference.types">ParkingSectionId</td></tr></table></font>>];
+        "ParkingRowId" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.reference.types.html#Subtype-ParkingRowId" title="Subtype defined in nds.venue.reference.types">ParkingRowId</td></tr></table></font>>];
+        "ParkingSpotId" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.reference.types.html#Subtype-ParkingSpotId" title="Subtype defined in nds.venue.reference.types">ParkingSpotId</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.lane.boundaries"
+    {
+        style="dashed, rounded";
+        label="nds.lane.boundaries";
+        tooltip="Package nds.lane.boundaries";
+        href="../../../content/packages/nds.lane.boundaries.html#Package-nds-lane-boundaries";
+        target="_parent";
+
+        "BoundaryGeometryId" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.boundaries.html#Subtype-BoundaryGeometryId" title="Subtype defined in nds.lane.boundaries">BoundaryGeometryId</td></tr></table></font>>];
+        "BoundaryId" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.boundaries.html#Subtype-BoundaryId" title="Subtype defined in nds.lane.boundaries">BoundaryId</td></tr></table></font>>];
+    }
+
+    "LaneId" -> "Var4ByteId" [label="uses", fontsize=10];
+    "LaneGroupId" -> "Var4ByteId" [label="uses", fontsize=10];
+    "RoadSurfaceId" -> "Var4ByteId" [label="uses", fontsize=10];
+    "RoadId" -> "Var4ByteId" [label="uses", fontsize=10];
+    "DisplayLineId" -> "Var4ByteId" [label="uses", fontsize=10];
+    "DisplayAreaId" -> "Var4ByteId" [label="uses", fontsize=10];
+    "DisplayPointId" -> "Var4ByteId" [label="uses", fontsize=10];
+    "DisplayMesh3dId" -> "Var4ByteId" [label="uses", fontsize=10];
+    "ParkingFacilityId" -> "Var4ByteId" [label="uses", fontsize=10];
+    "ParkingLevelId" -> "Var4ByteId" [label="uses", fontsize=10];
+    "ParkingSectionId" -> "Var4ByteId" [label="uses", fontsize=10];
+    "ParkingRowId" -> "Var4ByteId" [label="uses", fontsize=10];
+    "ParkingSpotId" -> "Var4ByteId" [label="uses", fontsize=10];
+    "BoundaryGeometryId" -> "Var4ByteId" [label="uses", fontsize=10];
+    "BoundaryId" -> "Var4ByteId" [label="uses", fontsize=10];
+}

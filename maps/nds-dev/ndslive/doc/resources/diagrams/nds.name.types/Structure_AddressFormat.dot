@@ -1,0 +1,58 @@
+/**
+ * This dot file creates symbol collaboration diagram for AddressFormat.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="AddressFormat collaboration diagram";
+
+    subgraph "cluster_nds.name.types"
+    {
+        style="dashed, rounded";
+        label="nds.name.types";
+        tooltip="Package nds.name.types";
+        href="../../../content/packages/nds.name.types.html#Package-nds-name-types";
+        target="_parent";
+
+        "AddressFormat" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.types.html#Structure-AddressFormat" title="Structure defined in nds.name.types">AddressFormat</td></tr></table></font>>];
+        "AddressFormatId" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.types.html#Subtype-AddressFormatId" title="Subtype defined in nds.name.types">AddressFormatId</td></tr></table></font>>];
+        "AddressFormatElement" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.types.html#Structure-AddressFormatElement" title="Structure defined in nds.name.types">AddressFormatElement</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.name.layer"
+    {
+        style="dashed, rounded";
+        label="nds.name.layer";
+        tooltip="Package nds.name.layer";
+        href="../../../content/packages/nds.name.layer.html#Package-nds-name-layer";
+        target="_parent";
+
+        "RoadNameLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.layer.html#Structure-RoadNameLayer" title="Structure defined in nds.name.layer">RoadNameLayer</td></tr></table></font>>];
+        "LaneNameLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.layer.html#Structure-LaneNameLayer" title="Structure defined in nds.name.layer">LaneNameLayer</td></tr></table></font>>];
+        "DisplayNameLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.layer.html#Structure-DisplayNameLayer" title="Structure defined in nds.name.layer">DisplayNameLayer</td></tr></table></font>>];
+        "PoiNameLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.layer.html#Structure-PoiNameLayer" title="Structure defined in nds.name.layer">PoiNameLayer</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.name.metadata"
+    {
+        style="dashed, rounded";
+        label="nds.name.metadata";
+        tooltip="Package nds.name.metadata";
+        href="../../../content/packages/nds.name.metadata.html#Package-nds-name-metadata";
+        target="_parent";
+
+        "AddressSearchMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.metadata.html#Structure-AddressSearchMetadata" title="Structure defined in nds.name.metadata">AddressSearchMetadata</td></tr></table></font>>];
+        "PoiNameLayerMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.metadata.html#Structure-PoiNameLayerMetadata" title="Structure defined in nds.name.metadata">PoiNameLayerMetadata</td></tr></table></font>>];
+    }
+
+    "AddressFormat" -> "AddressFormatId" [label="uses", fontsize=10];
+    "AddressFormat" -> "AddressFormatElement" [label="uses", fontsize=10];
+    "RoadNameLayer" -> "AddressFormat" [label="uses", fontsize=10];
+    "LaneNameLayer" -> "AddressFormat" [label="uses", fontsize=10];
+    "DisplayNameLayer" -> "AddressFormat" [label="uses", fontsize=10];
+    "PoiNameLayer" -> "AddressFormat" [label="uses", fontsize=10];
+    "AddressSearchMetadata" -> "AddressFormat" [label="uses", fontsize=10];
+    "PoiNameLayerMetadata" -> "AddressFormat" [label="uses", fontsize=10];
+}

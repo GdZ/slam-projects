@@ -1,0 +1,38 @@
+/**
+ * This dot file creates symbol collaboration diagram for NamePropertyList.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="NamePropertyList collaboration diagram";
+
+    subgraph "cluster_nds.name.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.name.instantiations";
+        tooltip="Package nds.name.instantiations";
+        href="../../../content/packages/nds.name.instantiations.html#Package-nds-name-instantiations";
+        target="_parent";
+
+        "NamePropertyList" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.instantiations.html#InstantiateType-NamePropertyList" title="InstantiateType defined in nds.name.instantiations">NamePropertyList</td></tr></table></font>>];
+        "PropertyList&lt;NamePropertyType,NamePropertyValue&gt;" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.attributemap.html#Structure-PropertyList" title="Structure defined in nds.core.attributemap">PropertyList</td><td>&lt;</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.properties.html#Structure-NamePropertyType" title="Structure defined in nds.name.properties">NamePropertyType</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.properties.html#Structure-NamePropertyValue" title="Structure defined in nds.name.properties">NamePropertyValue</td></tr></table></td><td>&gt;</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.name.properties"
+    {
+        style="dashed, rounded";
+        label="nds.name.properties";
+        tooltip="Package nds.name.properties";
+        href="../../../content/packages/nds.name.properties.html#Package-nds-name-properties";
+        target="_parent";
+
+        "NamePropertyType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.properties.html#Structure-NamePropertyType" title="Structure defined in nds.name.properties">NamePropertyType</td></tr></table></font>>];
+        "NamePropertyValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.properties.html#Structure-NamePropertyValue" title="Structure defined in nds.name.properties">NamePropertyValue</td></tr></table></font>>];
+    }
+
+    "NamePropertyList" -> "PropertyList&lt;NamePropertyType,NamePropertyValue&gt;" [label="uses", fontsize=10];
+    "NamePropertyList" -> "NamePropertyType" [label="uses", fontsize=10];
+    "NamePropertyList" -> "NamePropertyValue" [label="uses", fontsize=10];
+}

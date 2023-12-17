@@ -1,0 +1,70 @@
+/**
+ * This dot file creates symbol collaboration diagram for LocationSegment.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="LocationSegment collaboration diagram";
+
+    subgraph "cluster_nds.core.location"
+    {
+        style="dashed, rounded";
+        label="nds.core.location";
+        tooltip="Package nds.core.location";
+        href="../../../content/packages/nds.core.location.html#Package-nds-core-location";
+        target="_parent";
+
+        "LocationSegment" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.location.html#Structure-LocationSegment" title="Structure defined in nds.core.location">LocationSegment</td></tr></table></font>>];
+        "LocationGeometry" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.location.html#Structure-LocationGeometry" title="Structure defined in nds.core.location">LocationGeometry</td></tr></table></font>>];
+        "LocationPathRange" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.location.html#Subtype-LocationPathRange" title="Subtype defined in nds.core.location">LocationPathRange</td></tr></table></font>>];
+        "AbsoluteBearing" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.location.html#Subtype-AbsoluteBearing" title="Subtype defined in nds.core.location">AbsoluteBearing</td></tr></table></font>>];
+        "RoadLocationPath" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.location.html#Structure-RoadLocationPath" title="Structure defined in nds.core.location">RoadLocationPath</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.types"
+    {
+        style="dashed, rounded";
+        label="nds.core.types";
+        tooltip="Package nds.core.types";
+        href="../../../content/packages/nds.core.types.html#Package-nds-core-types";
+        target="_parent";
+
+        "LengthMeters" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Subtype-LengthMeters" title="Subtype defined in nds.core.types">LengthMeters</td></tr></table></font>>];
+        "FunctionalRoadClass" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Subtype-FunctionalRoadClass" title="Subtype defined in nds.core.types">FunctionalRoadClass</td></tr></table></font>>];
+        "RoadType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Structure-RoadType" title="Structure defined in nds.core.types">RoadType</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.lane.reference.types"
+    {
+        style="dashed, rounded";
+        label="nds.lane.reference.types";
+        tooltip="Package nds.lane.reference.types";
+        href="../../../content/packages/nds.lane.reference.types.html#Package-nds-lane-reference-types";
+        target="_parent";
+
+        "LaneGroupLocationSegment" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.reference.types.html#Structure-LaneGroupLocationSegment" title="Structure defined in nds.lane.reference.types">LaneGroupLocationSegment</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.road.reference.types"
+    {
+        style="dashed, rounded";
+        label="nds.road.reference.types";
+        tooltip="Package nds.road.reference.types";
+        href="../../../content/packages/nds.road.reference.types.html#Package-nds-road-reference-types";
+        target="_parent";
+
+        "RoadReferenceIndirect" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.road.reference.types.html#Structure-RoadReferenceIndirect" title="Structure defined in nds.road.reference.types">RoadReferenceIndirect</td></tr></table></font>>];
+    }
+
+    "LocationSegment" -> "LocationGeometry" [label="uses", fontsize=10];
+    "LocationSegment" -> "LocationPathRange" [label="uses", fontsize=10];
+    "LocationSegment" -> "AbsoluteBearing" [label="uses", fontsize=10];
+    "LocationSegment" -> "LengthMeters" [label="uses", fontsize=10];
+    "LocationSegment" -> "FunctionalRoadClass" [label="uses", fontsize=10];
+    "LocationSegment" -> "RoadType" [label="uses", fontsize=10];
+    "RoadLocationPath" -> "LocationSegment" [label="uses", fontsize=10];
+    "LaneGroupLocationSegment" -> "LocationSegment" [label="uses", fontsize=10];
+    "RoadReferenceIndirect" -> "LocationSegment" [label="uses", fontsize=10];
+}

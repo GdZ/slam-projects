@@ -1,0 +1,38 @@
+/**
+ * This dot file creates symbol collaboration diagram for Display3DContent.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="Display3DContent collaboration diagram";
+
+    subgraph "cluster_nds.display.metadata"
+    {
+        style="dashed, rounded";
+        label="nds.display.metadata";
+        tooltip="Package nds.display.metadata";
+        href="../../../content/packages/nds.display.metadata.html#Package-nds-display-metadata";
+        target="_parent";
+
+        "Display3DContent" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.metadata.html#Bitmask-Display3DContent" title="Bitmask defined in nds.display.metadata">Display3DContent</td></tr></table></font>>];
+        "Display3DLayerMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.metadata.html#Structure-Display3DLayerMetadata" title="Structure defined in nds.display.metadata">Display3DLayerMetadata</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.display.layer"
+    {
+        style="dashed, rounded";
+        label="nds.display.layer";
+        tooltip="Package nds.display.layer";
+        href="../../../content/packages/nds.display.layer.html#Package-nds-display-layer";
+        target="_parent";
+
+        "Display3DLayerHeader" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.layer.html#Structure-Display3DLayerHeader" title="Structure defined in nds.display.layer">Display3DLayerHeader</td></tr></table></font>>];
+        "Display3DGeometryLayerList" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.layer.html#Structure-Display3DGeometryLayerList" title="Structure defined in nds.display.layer">Display3DGeometryLayerList</td></tr></table></font>>];
+    }
+
+    "Display3DLayerHeader" -> "Display3DContent" [label="uses", fontsize=10];
+    "Display3DGeometryLayerList" -> "Display3DContent" [label="uses", fontsize=10];
+    "Display3DLayerMetadata" -> "Display3DContent" [label="uses", fontsize=10];
+}

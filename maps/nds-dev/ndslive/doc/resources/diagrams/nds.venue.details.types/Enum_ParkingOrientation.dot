@@ -1,0 +1,24 @@
+/**
+ * This dot file creates symbol collaboration diagram for ParkingOrientation.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="ParkingOrientation collaboration diagram";
+
+    subgraph "cluster_nds.venue.details.types"
+    {
+        style="dashed, rounded";
+        label="nds.venue.details.types";
+        tooltip="Package nds.venue.details.types";
+        href="../../../content/packages/nds.venue.details.types.html#Package-nds-venue-details-types";
+        target="_parent";
+
+        "ParkingOrientation" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.details.types.html#Enum-ParkingOrientation" title="Enum defined in nds.venue.details.types">ParkingOrientation</td></tr></table></font>>];
+        "ParkingRowLayout" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.details.types.html#Structure-ParkingRowLayout" title="Structure defined in nds.venue.details.types">ParkingRowLayout</td></tr></table></font>>];
+    }
+
+    "ParkingRowLayout" -> "ParkingOrientation" [label="uses", fontsize=10];
+}

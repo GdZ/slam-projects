@@ -1,0 +1,42 @@
+/**
+ * This dot file creates symbol collaboration diagram for DeltaEncodingDetails.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="DeltaEncodingDetails collaboration diagram";
+
+    subgraph "cluster_nds.core.packaging"
+    {
+        style="dashed, rounded";
+        label="nds.core.packaging";
+        tooltip="Package nds.core.packaging";
+        href="../../../content/packages/nds.core.packaging.html#Package-nds-core-packaging";
+        target="_parent";
+
+        "DeltaEncodingDetails" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.packaging.html#Structure-DeltaEncodingDetails" title="Structure defined in nds.core.packaging">DeltaEncodingDetails</td></tr></table></font>>];
+        "DeltaEncodingType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.packaging.html#Subtype-DeltaEncodingType" title="Subtype defined in nds.core.packaging">DeltaEncodingType</td></tr></table></font>>];
+        "NO_DELTA" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.packaging.html#Constant-NO_DELTA" title="Constant defined in nds.core.packaging">NO_DELTA</td></tr></table></font>>];
+        "LAYER_DELETED" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.packaging.html#Constant-LAYER_DELETED" title="Constant defined in nds.core.packaging">LAYER_DELETED</td></tr></table></font>>];
+        "PackagingDetails" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.packaging.html#Structure-PackagingDetails" title="Structure defined in nds.core.packaging">PackagingDetails</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.types"
+    {
+        style="dashed, rounded";
+        label="nds.core.types";
+        tooltip="Package nds.core.types";
+        href="../../../content/packages/nds.core.types.html#Package-nds-core-types";
+        target="_parent";
+
+        "VersionId" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Subtype-VersionId" title="Subtype defined in nds.core.types">VersionId</td></tr></table></font>>];
+    }
+
+    "DeltaEncodingDetails" -> "DeltaEncodingType" [label="uses", fontsize=10];
+    "DeltaEncodingDetails" -> "VersionId" [label="uses", fontsize=10];
+    "DeltaEncodingDetails" -> "NO_DELTA" [label="uses", fontsize=10];
+    "DeltaEncodingDetails" -> "LAYER_DELETED" [label="uses", fontsize=10];
+    "PackagingDetails" -> "DeltaEncodingDetails" [label="uses", fontsize=10];
+}

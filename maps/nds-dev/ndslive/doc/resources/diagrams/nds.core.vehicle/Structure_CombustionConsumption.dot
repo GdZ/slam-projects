@@ -1,0 +1,32 @@
+/**
+ * This dot file creates symbol collaboration diagram for CombustionConsumption.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="CombustionConsumption collaboration diagram";
+
+    subgraph "cluster_nds.core.vehicle"
+    {
+        style="dashed, rounded";
+        label="nds.core.vehicle";
+        tooltip="Package nds.core.vehicle";
+        href="../../../content/packages/nds.core.vehicle.html#Package-nds-core-vehicle";
+        target="_parent";
+
+        "CombustionConsumption" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.vehicle.html#Structure-CombustionConsumption" title="Structure defined in nds.core.vehicle">CombustionConsumption</td></tr></table></font>>];
+        "FuelLiters" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.vehicle.html#Subtype-FuelLiters" title="Subtype defined in nds.core.vehicle">FuelLiters</td></tr></table></font>>];
+        "LitersPerHour" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.vehicle.html#Subtype-LitersPerHour" title="Subtype defined in nds.core.vehicle">LitersPerHour</td></tr></table></font>>];
+        "CombustionConsumptionCurve" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.vehicle.html#Structure-CombustionConsumptionCurve" title="Structure defined in nds.core.vehicle">CombustionConsumptionCurve</td></tr></table></font>>];
+        "ConsumptionEfficiency" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.vehicle.html#Structure-ConsumptionEfficiency" title="Structure defined in nds.core.vehicle">ConsumptionEfficiency</td></tr></table></font>>];
+        "VehicleDetails" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.vehicle.html#Structure-VehicleDetails" title="Structure defined in nds.core.vehicle">VehicleDetails</td></tr></table></font>>];
+    }
+
+    "CombustionConsumption" -> "FuelLiters" [label="uses", fontsize=10];
+    "CombustionConsumption" -> "LitersPerHour" [label="uses", fontsize=10];
+    "CombustionConsumption" -> "CombustionConsumptionCurve" [label="uses", fontsize=10];
+    "CombustionConsumption" -> "ConsumptionEfficiency" [label="uses", fontsize=10];
+    "VehicleDetails" -> "CombustionConsumption" [label="uses", fontsize=10];
+}

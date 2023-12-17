@@ -1,0 +1,38 @@
+/**
+ * This dot file creates symbol collaboration diagram for CharacsRoadPositionAttribute.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="CharacsRoadPositionAttribute collaboration diagram";
+
+    subgraph "cluster_nds.characteristics.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.characteristics.instantiations";
+        tooltip="Package nds.characteristics.instantiations";
+        href="../../../content/packages/nds.characteristics.instantiations.html#Package-nds-characteristics-instantiations";
+        target="_parent";
+
+        "CharacsRoadPositionAttribute" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.instantiations.html#InstantiateType-CharacsRoadPositionAttribute" title="InstantiateType defined in nds.characteristics.instantiations">CharacsRoadPositionAttribute</td></tr></table></font>>];
+        "Attribute&lt;CharacsRoadPositionAttributeType,CharacsRoadPositionAttributeValue&gt;" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.attributemap.html#Structure-Attribute" title="Structure defined in nds.core.attributemap">Attribute</td><td>&lt;</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.attributes.html#Enum-CharacsRoadPositionAttributeType" title="Enum defined in nds.characteristics.attributes">CharacsRoadPositionAttributeType</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.attributes.html#Choice-CharacsRoadPositionAttributeValue" title="Choice defined in nds.characteristics.attributes">CharacsRoadPositionAttributeValue</td></tr></table></td><td>&gt;</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.characteristics.attributes"
+    {
+        style="dashed, rounded";
+        label="nds.characteristics.attributes";
+        tooltip="Package nds.characteristics.attributes";
+        href="../../../content/packages/nds.characteristics.attributes.html#Package-nds-characteristics-attributes";
+        target="_parent";
+
+        "CharacsRoadPositionAttributeType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.attributes.html#Enum-CharacsRoadPositionAttributeType" title="Enum defined in nds.characteristics.attributes">CharacsRoadPositionAttributeType</td></tr></table></font>>];
+        "CharacsRoadPositionAttributeValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.attributes.html#Choice-CharacsRoadPositionAttributeValue" title="Choice defined in nds.characteristics.attributes">CharacsRoadPositionAttributeValue</td></tr></table></font>>];
+    }
+
+    "CharacsRoadPositionAttribute" -> "Attribute&lt;CharacsRoadPositionAttributeType,CharacsRoadPositionAttributeValue&gt;" [label="uses", fontsize=10];
+    "CharacsRoadPositionAttribute" -> "CharacsRoadPositionAttributeType" [label="uses", fontsize=10];
+    "CharacsRoadPositionAttribute" -> "CharacsRoadPositionAttributeValue" [label="uses", fontsize=10];
+}

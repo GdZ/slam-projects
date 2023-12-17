@@ -1,0 +1,48 @@
+/**
+ * This dot file creates symbol collaboration diagram for PolyMesh3D.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="PolyMesh3D collaboration diagram";
+
+    subgraph "cluster_nds.core.geometry"
+    {
+        style="dashed, rounded";
+        label="nds.core.geometry";
+        tooltip="Package nds.core.geometry";
+        href="../../../content/packages/nds.core.geometry.html#Package-nds-core-geometry";
+        target="_parent";
+
+        "PolyMesh3D" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Structure-PolyMesh3D" title="Structure defined in nds.core.geometry">PolyMesh3D</td></tr></table></font>>];
+        "IndexBuffer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Structure-IndexBuffer" title="Structure defined in nds.core.geometry">IndexBuffer</td></tr></table></font>>];
+        "PolyMesh3DType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Enum-PolyMesh3DType" title="Enum defined in nds.core.geometry">PolyMesh3DType</td></tr></table></font>>];
+        "IndexType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Enum-IndexType" title="Enum defined in nds.core.geometry">IndexType</td></tr></table></font>>];
+        "PolyMesh3DBuffers" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Structure-PolyMesh3DBuffers" title="Structure defined in nds.core.geometry">PolyMesh3DBuffers</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.display.types"
+    {
+        style="dashed, rounded";
+        label="nds.display.types";
+        tooltip="Package nds.display.types";
+        href="../../../content/packages/nds.display.types.html#Package-nds-display-types";
+        target="_parent";
+
+        "Mesh3DRenderData" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.types.html#Structure-Mesh3DRenderData" title="Structure defined in nds.display.types">Mesh3DRenderData</td></tr></table></font>>];
+        "RenderGroup" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.types.html#Structure-RenderGroup" title="Structure defined in nds.display.types">RenderGroup</td></tr></table></font>>];
+        "RenderGroupTriangleStrip" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.types.html#Structure-RenderGroupTriangleStrip" title="Structure defined in nds.display.types">RenderGroupTriangleStrip</td></tr></table></font>>];
+        "RenderGroupTriangles" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.types.html#Structure-RenderGroupTriangles" title="Structure defined in nds.display.types">RenderGroupTriangles</td></tr></table></font>>];
+    }
+
+    "PolyMesh3D" -> "IndexBuffer" [label="uses", fontsize=10];
+    "PolyMesh3D" -> "PolyMesh3DType" [label="uses", fontsize=10];
+    "PolyMesh3D" -> "IndexType" [label="uses", fontsize=10];
+    "PolyMesh3DBuffers" -> "PolyMesh3D" [label="uses", fontsize=10];
+    "Mesh3DRenderData" -> "PolyMesh3D" [label="uses", fontsize=10];
+    "RenderGroup" -> "PolyMesh3D" [label="uses", fontsize=10];
+    "RenderGroupTriangleStrip" -> "PolyMesh3D" [label="uses", fontsize=10];
+    "RenderGroupTriangles" -> "PolyMesh3D" [label="uses", fontsize=10];
+}

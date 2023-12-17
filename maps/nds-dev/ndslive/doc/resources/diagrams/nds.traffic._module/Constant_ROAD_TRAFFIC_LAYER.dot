@@ -1,0 +1,34 @@
+/**
+ * This dot file creates symbol collaboration diagram for ROAD_TRAFFIC_LAYER.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="ROAD_TRAFFIC_LAYER collaboration diagram";
+
+    subgraph "cluster_nds.traffic._module"
+    {
+        style="dashed, rounded";
+        label="nds.traffic._module";
+        tooltip="Package nds.traffic._module";
+        href="../../../content/packages/nds.traffic._module.html#Package-nds-traffic-_module";
+        target="_parent";
+
+        "ROAD_TRAFFIC_LAYER" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.traffic._module.html#Constant-ROAD_TRAFFIC_LAYER" title="Constant defined in nds.traffic._module">ROAD_TRAFFIC_LAYER</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.system.types"
+    {
+        style="dashed, rounded";
+        label="nds.system.types";
+        tooltip="Package nds.system.types";
+        href="../../../content/packages/nds.system.types.html#Package-nds-system-types";
+        target="_parent";
+
+        "ModuleExtern" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.system.types.html#Subtype-ModuleExtern" title="Subtype defined in nds.system.types">ModuleExtern</td></tr></table></font>>];
+    }
+
+    "ROAD_TRAFFIC_LAYER" -> "ModuleExtern" [label="uses", fontsize=10];
+}

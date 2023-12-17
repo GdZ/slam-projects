@@ -1,0 +1,34 @@
+/**
+ * This dot file creates symbol collaboration diagram for ElectricConsumption.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="ElectricConsumption collaboration diagram";
+
+    subgraph "cluster_nds.core.vehicle"
+    {
+        style="dashed, rounded";
+        label="nds.core.vehicle";
+        tooltip="Package nds.core.vehicle";
+        href="../../../content/packages/nds.core.vehicle.html#Package-nds-core-vehicle";
+        target="_parent";
+
+        "ElectricConsumption" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.vehicle.html#Structure-ElectricConsumption" title="Structure defined in nds.core.vehicle">ElectricConsumption</td></tr></table></font>>];
+        "WattHrs" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.vehicle.html#Subtype-WattHrs" title="Subtype defined in nds.core.vehicle">WattHrs</td></tr></table></font>>];
+        "Watt" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.vehicle.html#Subtype-Watt" title="Subtype defined in nds.core.vehicle">Watt</td></tr></table></font>>];
+        "ElectricConsumptionCurve" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.vehicle.html#Structure-ElectricConsumptionCurve" title="Structure defined in nds.core.vehicle">ElectricConsumptionCurve</td></tr></table></font>>];
+        "ConsumptionEfficiency" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.vehicle.html#Structure-ConsumptionEfficiency" title="Structure defined in nds.core.vehicle">ConsumptionEfficiency</td></tr></table></font>>];
+        "WattHrsPerKm" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.vehicle.html#Subtype-WattHrsPerKm" title="Subtype defined in nds.core.vehicle">WattHrsPerKm</td></tr></table></font>>];
+        "VehicleDetails" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.vehicle.html#Structure-VehicleDetails" title="Structure defined in nds.core.vehicle">VehicleDetails</td></tr></table></font>>];
+    }
+
+    "ElectricConsumption" -> "WattHrs" [label="uses", fontsize=10];
+    "ElectricConsumption" -> "Watt" [label="uses", fontsize=10];
+    "ElectricConsumption" -> "ElectricConsumptionCurve" [label="uses", fontsize=10];
+    "ElectricConsumption" -> "ConsumptionEfficiency" [label="uses", fontsize=10];
+    "ElectricConsumption" -> "WattHrsPerKm" [label="uses", fontsize=10];
+    "VehicleDetails" -> "ElectricConsumption" [label="uses", fontsize=10];
+}

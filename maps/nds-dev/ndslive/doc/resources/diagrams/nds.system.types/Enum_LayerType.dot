@@ -1,0 +1,306 @@
+/**
+ * This dot file creates symbol collaboration diagram for LayerType.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="LayerType collaboration diagram";
+
+    subgraph "cluster_nds.system.types"
+    {
+        style="dashed, rounded";
+        label="nds.system.types";
+        tooltip="Package nds.system.types";
+        href="../../../content/packages/nds.system.types.html#Package-nds-system-types";
+        target="_parent";
+
+        "LayerType" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.system.types.html#Enum-LayerType" title="Enum defined in nds.system.types">LayerType</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.localization.layer"
+    {
+        style="dashed, rounded";
+        label="nds.localization.layer";
+        tooltip="Package nds.localization.layer";
+        href="../../../content/packages/nds.localization.layer.html#Package-nds-localization-layer";
+        target="_parent";
+
+        "LandmarkLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.localization.layer.html#Structure-LandmarkLayer" title="Structure defined in nds.localization.layer">LandmarkLayer</td></tr></table></font>>];
+        "RoadLandmarkLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.localization.layer.html#Structure-RoadLandmarkLayer" title="Structure defined in nds.localization.layer">RoadLandmarkLayer</td></tr></table></font>>];
+        "LaneLandmarkLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.localization.layer.html#Structure-LaneLandmarkLayer" title="Structure defined in nds.localization.layer">LaneLandmarkLayer</td></tr></table></font>>];
+        "RoadSurfaceLandmarkLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.localization.layer.html#Structure-RoadSurfaceLandmarkLayer" title="Structure defined in nds.localization.layer">RoadSurfaceLandmarkLayer</td></tr></table></font>>];
+        "ObstacleLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.localization.layer.html#Structure-ObstacleLayer" title="Structure defined in nds.localization.layer">ObstacleLayer</td></tr></table></font>>];
+        "OccupancyGridLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.localization.layer.html#Structure-OccupancyGridLayer" title="Structure defined in nds.localization.layer">OccupancyGridLayer</td></tr></table></font>>];
+        "RoadOccupancyGridLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.localization.layer.html#Structure-RoadOccupancyGridLayer" title="Structure defined in nds.localization.layer">RoadOccupancyGridLayer</td></tr></table></font>>];
+        "LaneOccupancyGridLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.localization.layer.html#Structure-LaneOccupancyGridLayer" title="Structure defined in nds.localization.layer">LaneOccupancyGridLayer</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.traffic.layer"
+    {
+        style="dashed, rounded";
+        label="nds.traffic.layer";
+        tooltip="Package nds.traffic.layer";
+        href="../../../content/packages/nds.traffic.layer.html#Package-nds-traffic-layer";
+        target="_parent";
+
+        "RoadTrafficLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.traffic.layer.html#Structure-RoadTrafficLayer" title="Structure defined in nds.traffic.layer">RoadTrafficLayer</td></tr></table></font>>];
+        "RoadTrafficLayerIndirect" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.traffic.layer.html#Structure-RoadTrafficLayerIndirect" title="Structure defined in nds.traffic.layer">RoadTrafficLayerIndirect</td></tr></table></font>>];
+        "RoadLocationTrafficLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.traffic.layer.html#Structure-RoadLocationTrafficLayer" title="Structure defined in nds.traffic.layer">RoadLocationTrafficLayer</td></tr></table></font>>];
+        "LaneTrafficLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.traffic.layer.html#Structure-LaneTrafficLayer" title="Structure defined in nds.traffic.layer">LaneTrafficLayer</td></tr></table></font>>];
+        "LaneTrafficLayerIndirect" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.traffic.layer.html#Structure-LaneTrafficLayerIndirect" title="Structure defined in nds.traffic.layer">LaneTrafficLayerIndirect</td></tr></table></font>>];
+        "DisplayLineTrafficLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.traffic.layer.html#Structure-DisplayLineTrafficLayer" title="Structure defined in nds.traffic.layer">DisplayLineTrafficLayer</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.routingdata.layer"
+    {
+        style="dashed, rounded";
+        label="nds.routingdata.layer";
+        tooltip="Package nds.routingdata.layer";
+        href="../../../content/packages/nds.routingdata.layer.html#Package-nds-routingdata-layer";
+        target="_parent";
+
+        "RoadRoutingLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routingdata.layer.html#Structure-RoadRoutingLayer" title="Structure defined in nds.routingdata.layer">RoadRoutingLayer</td></tr></table></font>>];
+        "LaneRoutingLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routingdata.layer.html#Structure-LaneRoutingLayer" title="Structure defined in nds.routingdata.layer">LaneRoutingLayer</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.adas.layer"
+    {
+        style="dashed, rounded";
+        label="nds.adas.layer";
+        tooltip="Package nds.adas.layer";
+        href="../../../content/packages/nds.adas.layer.html#Package-nds-adas-layer";
+        target="_parent";
+
+        "AdasRoadLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.adas.layer.html#Structure-AdasRoadLayer" title="Structure defined in nds.adas.layer">AdasRoadLayer</td></tr></table></font>>];
+        "AdasRoadLocationLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.adas.layer.html#Structure-AdasRoadLocationLayer" title="Structure defined in nds.adas.layer">AdasRoadLocationLayer</td></tr></table></font>>];
+        "AdasLaneLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.adas.layer.html#Structure-AdasLaneLayer" title="Structure defined in nds.adas.layer">AdasLaneLayer</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.instructions.layer"
+    {
+        style="dashed, rounded";
+        label="nds.instructions.layer";
+        tooltip="Package nds.instructions.layer";
+        href="../../../content/packages/nds.instructions.layer.html#Package-nds-instructions-layer";
+        target="_parent";
+
+        "RoadInstructionsLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.instructions.layer.html#Structure-RoadInstructionsLayer" title="Structure defined in nds.instructions.layer">RoadInstructionsLayer</td></tr></table></font>>];
+        "LaneInstructionsLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.instructions.layer.html#Structure-LaneInstructionsLayer" title="Structure defined in nds.instructions.layer">LaneInstructionsLayer</td></tr></table></font>>];
+        "InstructionsImageLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.instructions.layer.html#Structure-InstructionsImageLayer" title="Structure defined in nds.instructions.layer">InstructionsImageLayer</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.poi.layer"
+    {
+        style="dashed, rounded";
+        label="nds.poi.layer";
+        tooltip="Package nds.poi.layer";
+        href="../../../content/packages/nds.poi.layer.html#Package-nds-poi-layer";
+        target="_parent";
+
+        "PoiLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.layer.html#Structure-PoiLayer" title="Structure defined in nds.poi.layer">PoiLayer</td></tr></table></font>>];
+        "PoiAttributeLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.layer.html#Structure-PoiAttributeLayer" title="Structure defined in nds.poi.layer">PoiAttributeLayer</td></tr></table></font>>];
+        "PoiAttributeLayerIndirect" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.layer.html#Structure-PoiAttributeLayerIndirect" title="Structure defined in nds.poi.layer">PoiAttributeLayerIndirect</td></tr></table></font>>];
+        "PoiRelationLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.layer.html#Structure-PoiRelationLayer" title="Structure defined in nds.poi.layer">PoiRelationLayer</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.smart.types"
+    {
+        style="dashed, rounded";
+        label="nds.smart.types";
+        tooltip="Package nds.smart.types";
+        href="../../../content/packages/nds.smart.types.html#Package-nds-smart-types";
+        target="_parent";
+
+        "DataLayerContentType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.types.html#Subtype-DataLayerContentType" title="Subtype defined in nds.smart.types">DataLayerContentType</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.road.layer"
+    {
+        style="dashed, rounded";
+        label="nds.road.layer";
+        tooltip="Package nds.road.layer";
+        href="../../../content/packages/nds.road.layer.html#Package-nds-road-layer";
+        target="_parent";
+
+        "RoadLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.road.layer.html#Structure-RoadLayer" title="Structure defined in nds.road.layer">RoadLayer</td></tr></table></font>>];
+        "RoadGeometryLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.road.layer.html#Structure-RoadGeometryLayer" title="Structure defined in nds.road.layer">RoadGeometryLayer</td></tr></table></font>>];
+        "MatchedRoadPathLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.road.layer.html#Structure-MatchedRoadPathLayer" title="Structure defined in nds.road.layer">MatchedRoadPathLayer</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.venue.layer"
+    {
+        style="dashed, rounded";
+        label="nds.venue.layer";
+        tooltip="Package nds.venue.layer";
+        href="../../../content/packages/nds.venue.layer.html#Package-nds-venue-layer";
+        target="_parent";
+
+        "ParkingFacilityLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.layer.html#Structure-ParkingFacilityLayer" title="Structure defined in nds.venue.layer">ParkingFacilityLayer</td></tr></table></font>>];
+        "ParkingFacilityRelationLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.layer.html#Structure-ParkingFacilityRelationLayer" title="Structure defined in nds.venue.layer">ParkingFacilityRelationLayer</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.venue.details.layer"
+    {
+        style="dashed, rounded";
+        label="nds.venue.details.layer";
+        tooltip="Package nds.venue.details.layer";
+        href="../../../content/packages/nds.venue.details.layer.html#Package-nds-venue-details-layer";
+        target="_parent";
+
+        "ParkingFacilityAttributeLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.details.layer.html#Structure-ParkingFacilityAttributeLayer" title="Structure defined in nds.venue.details.layer">ParkingFacilityAttributeLayer</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.display.layer"
+    {
+        style="dashed, rounded";
+        label="nds.display.layer";
+        tooltip="Package nds.display.layer";
+        href="../../../content/packages/nds.display.layer.html#Package-nds-display-layer";
+        target="_parent";
+
+        "Display2DLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.layer.html#Structure-Display2DLayer" title="Structure defined in nds.display.layer">Display2DLayer</td></tr></table></font>>];
+        "IconLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.layer.html#Structure-IconLayer" title="Structure defined in nds.display.layer">IconLayer</td></tr></table></font>>];
+        "Display3DLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.layer.html#Structure-Display3DLayer" title="Structure defined in nds.display.layer">Display3DLayer</td></tr></table></font>>];
+        "Display3DStyleLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.layer.html#Structure-Display3DStyleLayer" title="Structure defined in nds.display.layer">Display3DStyleLayer</td></tr></table></font>>];
+        "HeightmapLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.layer.html#Structure-HeightmapLayer" title="Structure defined in nds.display.layer">HeightmapLayer</td></tr></table></font>>];
+        "BdamLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.layer.html#Structure-BdamLayer" title="Structure defined in nds.display.layer">BdamLayer</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.display.details.layer"
+    {
+        style="dashed, rounded";
+        label="nds.display.details.layer";
+        tooltip="Package nds.display.details.layer";
+        href="../../../content/packages/nds.display.details.layer.html#Package-nds-display-details-layer";
+        target="_parent";
+
+        "DisplayAttributeLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.details.layer.html#Structure-DisplayAttributeLayer" title="Structure defined in nds.display.details.layer">DisplayAttributeLayer</td></tr></table></font>>];
+        "Display3dAttributeLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.details.layer.html#Structure-Display3dAttributeLayer" title="Structure defined in nds.display.details.layer">Display3dAttributeLayer</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.name.layer"
+    {
+        style="dashed, rounded";
+        label="nds.name.layer";
+        tooltip="Package nds.name.layer";
+        href="../../../content/packages/nds.name.layer.html#Package-nds-name-layer";
+        target="_parent";
+
+        "RoadNameLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.layer.html#Structure-RoadNameLayer" title="Structure defined in nds.name.layer">RoadNameLayer</td></tr></table></font>>];
+        "LaneNameLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.layer.html#Structure-LaneNameLayer" title="Structure defined in nds.name.layer">LaneNameLayer</td></tr></table></font>>];
+        "DisplayNameLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.layer.html#Structure-DisplayNameLayer" title="Structure defined in nds.name.layer">DisplayNameLayer</td></tr></table></font>>];
+        "PoiNameLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.layer.html#Structure-PoiNameLayer" title="Structure defined in nds.name.layer">PoiNameLayer</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.rules.layer"
+    {
+        style="dashed, rounded";
+        label="nds.rules.layer";
+        tooltip="Package nds.rules.layer";
+        href="../../../content/packages/nds.rules.layer.html#Package-nds-rules-layer";
+        target="_parent";
+
+        "RegionRulesLayer&lt;RegionRoadRelationList&gt;" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.layer.html#Structure-RegionRulesLayer" title="Structure defined in nds.rules.layer">RegionRulesLayer</td><td>&lt;</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.layer.html#Structure-RegionRoadRelationList" title="Structure defined in nds.rules.layer">RegionRoadRelationList</td></tr></table></td><td>&gt;</td></tr></table></font>>];
+        "RegionRulesLayer&lt;RegionLaneGroupRelationList&gt;" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.layer.html#Structure-RegionRulesLayer" title="Structure defined in nds.rules.layer">RegionRulesLayer</td><td>&lt;</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.layer.html#Structure-RegionLaneGroupRelationList" title="Structure defined in nds.rules.layer">RegionLaneGroupRelationList</td></tr></table></td><td>&gt;</td></tr></table></font>>];
+        "RoadRulesLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.layer.html#Structure-RoadRulesLayer" title="Structure defined in nds.rules.layer">RoadRulesLayer</td></tr></table></font>>];
+        "RoadRulesLayerIndirect" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.layer.html#Structure-RoadRulesLayerIndirect" title="Structure defined in nds.rules.layer">RoadRulesLayerIndirect</td></tr></table></font>>];
+        "RoadLocationRulesLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.layer.html#Structure-RoadLocationRulesLayer" title="Structure defined in nds.rules.layer">RoadLocationRulesLayer</td></tr></table></font>>];
+        "LaneRulesLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.layer.html#Structure-LaneRulesLayer" title="Structure defined in nds.rules.layer">LaneRulesLayer</td></tr></table></font>>];
+        "LaneRulesLayerIndirect" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.layer.html#Structure-LaneRulesLayerIndirect" title="Structure defined in nds.rules.layer">LaneRulesLayerIndirect</td></tr></table></font>>];
+        "DisplayLineRulesLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.layer.html#Structure-DisplayLineRulesLayer" title="Structure defined in nds.rules.layer">DisplayLineRulesLayer</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.characteristics.layer"
+    {
+        style="dashed, rounded";
+        label="nds.characteristics.layer";
+        tooltip="Package nds.characteristics.layer";
+        href="../../../content/packages/nds.characteristics.layer.html#Package-nds-characteristics-layer";
+        target="_parent";
+
+        "RoadCharacteristicsLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.layer.html#Structure-RoadCharacteristicsLayer" title="Structure defined in nds.characteristics.layer">RoadCharacteristicsLayer</td></tr></table></font>>];
+        "RoadCharacteristicsLayerIndirect" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.layer.html#Structure-RoadCharacteristicsLayerIndirect" title="Structure defined in nds.characteristics.layer">RoadCharacteristicsLayerIndirect</td></tr></table></font>>];
+        "RoadLocationCharacteristicsLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.layer.html#Structure-RoadLocationCharacteristicsLayer" title="Structure defined in nds.characteristics.layer">RoadLocationCharacteristicsLayer</td></tr></table></font>>];
+        "LaneCharacteristicsLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.layer.html#Structure-LaneCharacteristicsLayer" title="Structure defined in nds.characteristics.layer">LaneCharacteristicsLayer</td></tr></table></font>>];
+        "DisplayLineCharacteristicsLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.layer.html#Structure-DisplayLineCharacteristicsLayer" title="Structure defined in nds.characteristics.layer">DisplayLineCharacteristicsLayer</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.lane.layer"
+    {
+        style="dashed, rounded";
+        label="nds.lane.layer";
+        tooltip="Package nds.lane.layer";
+        href="../../../content/packages/nds.lane.layer.html#Package-nds-lane-layer";
+        target="_parent";
+
+        "LaneLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.layer.html#Structure-LaneLayer" title="Structure defined in nds.lane.layer">LaneLayer</td></tr></table></font>>];
+        "LaneGeometryLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.layer.html#Structure-LaneGeometryLayer" title="Structure defined in nds.lane.layer">LaneGeometryLayer</td></tr></table></font>>];
+        "RoadSurfaceLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.layer.html#Structure-RoadSurfaceLayer" title="Structure defined in nds.lane.layer">RoadSurfaceLayer</td></tr></table></font>>];
+        "MatchedLaneGroupPathLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.layer.html#Structure-MatchedLaneGroupPathLayer" title="Structure defined in nds.lane.layer">MatchedLaneGroupPathLayer</td></tr></table></font>>];
+    }
+
+    "LandmarkLayer" -> "LayerType" [label="uses", fontsize=10];
+    "RoadLandmarkLayer" -> "LayerType" [label="uses", fontsize=10];
+    "LaneLandmarkLayer" -> "LayerType" [label="uses", fontsize=10];
+    "RoadSurfaceLandmarkLayer" -> "LayerType" [label="uses", fontsize=10];
+    "ObstacleLayer" -> "LayerType" [label="uses", fontsize=10];
+    "OccupancyGridLayer" -> "LayerType" [label="uses", fontsize=10];
+    "RoadOccupancyGridLayer" -> "LayerType" [label="uses", fontsize=10];
+    "LaneOccupancyGridLayer" -> "LayerType" [label="uses", fontsize=10];
+    "RoadTrafficLayer" -> "LayerType" [label="uses", fontsize=10];
+    "RoadTrafficLayerIndirect" -> "LayerType" [label="uses", fontsize=10];
+    "RoadLocationTrafficLayer" -> "LayerType" [label="uses", fontsize=10];
+    "LaneTrafficLayer" -> "LayerType" [label="uses", fontsize=10];
+    "LaneTrafficLayerIndirect" -> "LayerType" [label="uses", fontsize=10];
+    "DisplayLineTrafficLayer" -> "LayerType" [label="uses", fontsize=10];
+    "RoadRoutingLayer" -> "LayerType" [label="uses", fontsize=10];
+    "LaneRoutingLayer" -> "LayerType" [label="uses", fontsize=10];
+    "AdasRoadLayer" -> "LayerType" [label="uses", fontsize=10];
+    "AdasRoadLocationLayer" -> "LayerType" [label="uses", fontsize=10];
+    "AdasLaneLayer" -> "LayerType" [label="uses", fontsize=10];
+    "RoadInstructionsLayer" -> "LayerType" [label="uses", fontsize=10];
+    "LaneInstructionsLayer" -> "LayerType" [label="uses", fontsize=10];
+    "InstructionsImageLayer" -> "LayerType" [label="uses", fontsize=10];
+    "PoiLayer" -> "LayerType" [label="uses", fontsize=10];
+    "PoiAttributeLayer" -> "LayerType" [label="uses", fontsize=10];
+    "PoiAttributeLayerIndirect" -> "LayerType" [label="uses", fontsize=10];
+    "PoiRelationLayer" -> "LayerType" [label="uses", fontsize=10];
+    "DataLayerContentType" -> "LayerType" [label="uses", fontsize=10];
+    "RoadLayer" -> "LayerType" [label="uses", fontsize=10];
+    "RoadGeometryLayer" -> "LayerType" [label="uses", fontsize=10];
+    "MatchedRoadPathLayer" -> "LayerType" [label="uses", fontsize=10];
+    "ParkingFacilityLayer" -> "LayerType" [label="uses", fontsize=10];
+    "ParkingFacilityRelationLayer" -> "LayerType" [label="uses", fontsize=10];
+    "ParkingFacilityAttributeLayer" -> "LayerType" [label="uses", fontsize=10];
+    "Display2DLayer" -> "LayerType" [label="uses", fontsize=10];
+    "IconLayer" -> "LayerType" [label="uses", fontsize=10];
+    "Display3DLayer" -> "LayerType" [label="uses", fontsize=10];
+    "Display3DStyleLayer" -> "LayerType" [label="uses", fontsize=10];
+    "HeightmapLayer" -> "LayerType" [label="uses", fontsize=10];
+    "BdamLayer" -> "LayerType" [label="uses", fontsize=10];
+    "DisplayAttributeLayer" -> "LayerType" [label="uses", fontsize=10];
+    "Display3dAttributeLayer" -> "LayerType" [label="uses", fontsize=10];
+    "RoadNameLayer" -> "LayerType" [label="uses", fontsize=10];
+    "LaneNameLayer" -> "LayerType" [label="uses", fontsize=10];
+    "DisplayNameLayer" -> "LayerType" [label="uses", fontsize=10];
+    "PoiNameLayer" -> "LayerType" [label="uses", fontsize=10];
+    "RegionRulesLayer&lt;RegionRoadRelationList&gt;" -> "LayerType" [label="uses", fontsize=10];
+    "RegionRulesLayer&lt;RegionLaneGroupRelationList&gt;" -> "LayerType" [label="uses", fontsize=10];
+    "RoadRulesLayer" -> "LayerType" [label="uses", fontsize=10];
+    "RoadRulesLayerIndirect" -> "LayerType" [label="uses", fontsize=10];
+    "RoadLocationRulesLayer" -> "LayerType" [label="uses", fontsize=10];
+    "LaneRulesLayer" -> "LayerType" [label="uses", fontsize=10];
+    "LaneRulesLayerIndirect" -> "LayerType" [label="uses", fontsize=10];
+    "DisplayLineRulesLayer" -> "LayerType" [label="uses", fontsize=10];
+    "RoadCharacteristicsLayer" -> "LayerType" [label="uses", fontsize=10];
+    "RoadCharacteristicsLayerIndirect" -> "LayerType" [label="uses", fontsize=10];
+    "RoadLocationCharacteristicsLayer" -> "LayerType" [label="uses", fontsize=10];
+    "LaneCharacteristicsLayer" -> "LayerType" [label="uses", fontsize=10];
+    "DisplayLineCharacteristicsLayer" -> "LayerType" [label="uses", fontsize=10];
+    "LaneLayer" -> "LayerType" [label="uses", fontsize=10];
+    "LaneGeometryLayer" -> "LayerType" [label="uses", fontsize=10];
+    "RoadSurfaceLayer" -> "LayerType" [label="uses", fontsize=10];
+    "MatchedLaneGroupPathLayer" -> "LayerType" [label="uses", fontsize=10];
+}

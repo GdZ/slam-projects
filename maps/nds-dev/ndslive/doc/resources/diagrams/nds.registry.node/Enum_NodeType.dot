@@ -1,0 +1,38 @@
+/**
+ * This dot file creates symbol collaboration diagram for NodeType.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="NodeType collaboration diagram";
+
+    subgraph "cluster_nds.registry.node"
+    {
+        style="dashed, rounded";
+        label="nds.registry.node";
+        tooltip="Package nds.registry.node";
+        href="../../../content/packages/nds.registry.node.html#Package-nds-registry-node";
+        target="_parent";
+
+        "NodeType" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.registry.node.html#Enum-NodeType" title="Enum defined in nds.registry.node">NodeType</td></tr></table></font>>];
+        "NodeInformation" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.registry.node.html#Structure-NodeInformation" title="Structure defined in nds.registry.node">NodeInformation</td></tr></table></font>>];
+        "NodeSearchFilter" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.registry.node.html#Structure-NodeSearchFilter" title="Structure defined in nds.registry.node">NodeSearchFilter</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.registry.filestore"
+    {
+        style="dashed, rounded";
+        label="nds.registry.filestore";
+        tooltip="Package nds.registry.filestore";
+        href="../../../content/packages/nds.registry.filestore.html#Package-nds-registry-filestore";
+        target="_parent";
+
+        "RegistryNodeTable" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.registry.filestore.html#SqlTable-RegistryNodeTable" title="SqlTable defined in nds.registry.filestore">RegistryNodeTable</td></tr></table></font>>];
+    }
+
+    "NodeInformation" -> "NodeType" [label="uses", fontsize=10];
+    "NodeSearchFilter" -> "NodeType" [label="uses", fontsize=10];
+    "RegistryNodeTable" -> "NodeType" [label="uses", fontsize=10];
+}

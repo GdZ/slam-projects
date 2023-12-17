@@ -1,0 +1,38 @@
+/**
+ * This dot file creates symbol collaboration diagram for InstructionsTransitionAttribute.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="InstructionsTransitionAttribute collaboration diagram";
+
+    subgraph "cluster_nds.instructions.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.instructions.instantiations";
+        tooltip="Package nds.instructions.instantiations";
+        href="../../../content/packages/nds.instructions.instantiations.html#Package-nds-instructions-instantiations";
+        target="_parent";
+
+        "InstructionsTransitionAttribute" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.instructions.instantiations.html#InstantiateType-InstructionsTransitionAttribute" title="InstantiateType defined in nds.instructions.instantiations">InstructionsTransitionAttribute</td></tr></table></font>>];
+        "Attribute&lt;InstructionsTransitionAttributeType,InstructionsTransitionAttributeValue&gt;" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.attributemap.html#Structure-Attribute" title="Structure defined in nds.core.attributemap">Attribute</td><td>&lt;</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.instructions.attributes.html#Enum-InstructionsTransitionAttributeType" title="Enum defined in nds.instructions.attributes">InstructionsTransitionAttributeType</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.instructions.attributes.html#Choice-InstructionsTransitionAttributeValue" title="Choice defined in nds.instructions.attributes">InstructionsTransitionAttributeValue</td></tr></table></td><td>&gt;</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.instructions.attributes"
+    {
+        style="dashed, rounded";
+        label="nds.instructions.attributes";
+        tooltip="Package nds.instructions.attributes";
+        href="../../../content/packages/nds.instructions.attributes.html#Package-nds-instructions-attributes";
+        target="_parent";
+
+        "InstructionsTransitionAttributeType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.instructions.attributes.html#Enum-InstructionsTransitionAttributeType" title="Enum defined in nds.instructions.attributes">InstructionsTransitionAttributeType</td></tr></table></font>>];
+        "InstructionsTransitionAttributeValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.instructions.attributes.html#Choice-InstructionsTransitionAttributeValue" title="Choice defined in nds.instructions.attributes">InstructionsTransitionAttributeValue</td></tr></table></font>>];
+    }
+
+    "InstructionsTransitionAttribute" -> "Attribute&lt;InstructionsTransitionAttributeType,InstructionsTransitionAttributeValue&gt;" [label="uses", fontsize=10];
+    "InstructionsTransitionAttribute" -> "InstructionsTransitionAttributeType" [label="uses", fontsize=10];
+    "InstructionsTransitionAttribute" -> "InstructionsTransitionAttributeValue" [label="uses", fontsize=10];
+}

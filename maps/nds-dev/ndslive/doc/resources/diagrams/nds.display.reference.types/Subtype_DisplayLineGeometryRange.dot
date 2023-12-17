@@ -1,0 +1,36 @@
+/**
+ * This dot file creates symbol collaboration diagram for DisplayLineGeometryRange.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="DisplayLineGeometryRange collaboration diagram";
+
+    subgraph "cluster_nds.display.reference.types"
+    {
+        style="dashed, rounded";
+        label="nds.display.reference.types";
+        tooltip="Package nds.display.reference.types";
+        href="../../../content/packages/nds.display.reference.types.html#Package-nds-display-reference-types";
+        target="_parent";
+
+        "DisplayLineGeometryRange" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.reference.types.html#Subtype-DisplayLineGeometryRange" title="Subtype defined in nds.display.reference.types">DisplayLineGeometryRange</td></tr></table></font>>];
+        "DisplayLineRangeChoice" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.reference.types.html#Choice-DisplayLineRangeChoice" title="Choice defined in nds.display.reference.types">DisplayLineRangeChoice</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.geometry"
+    {
+        style="dashed, rounded";
+        label="nds.core.geometry";
+        tooltip="Package nds.core.geometry";
+        href="../../../content/packages/nds.core.geometry.html#Package-nds-core-geometry";
+        target="_parent";
+
+        "LineRangeUnchecked" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Structure-LineRangeUnchecked" title="Structure defined in nds.core.geometry">LineRangeUnchecked</td></tr></table></font>>];
+    }
+
+    "DisplayLineGeometryRange" -> "LineRangeUnchecked" [label="uses", fontsize=10];
+    "DisplayLineRangeChoice" -> "DisplayLineGeometryRange" [label="uses", fontsize=10];
+}

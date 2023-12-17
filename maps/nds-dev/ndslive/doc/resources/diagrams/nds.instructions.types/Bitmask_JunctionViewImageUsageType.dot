@@ -1,0 +1,24 @@
+/**
+ * This dot file creates symbol collaboration diagram for JunctionViewImageUsageType.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="JunctionViewImageUsageType collaboration diagram";
+
+    subgraph "cluster_nds.instructions.types"
+    {
+        style="dashed, rounded";
+        label="nds.instructions.types";
+        tooltip="Package nds.instructions.types";
+        href="../../../content/packages/nds.instructions.types.html#Package-nds-instructions-types";
+        target="_parent";
+
+        "JunctionViewImageUsageType" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.instructions.types.html#Bitmask-JunctionViewImageUsageType" title="Bitmask defined in nds.instructions.types">JunctionViewImageUsageType</td></tr></table></font>>];
+        "JunctionViewImageList" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.instructions.types.html#Structure-JunctionViewImageList" title="Structure defined in nds.instructions.types">JunctionViewImageList</td></tr></table></font>>];
+    }
+
+    "JunctionViewImageList" -> "JunctionViewImageUsageType" [label="uses", fontsize=10];
+}

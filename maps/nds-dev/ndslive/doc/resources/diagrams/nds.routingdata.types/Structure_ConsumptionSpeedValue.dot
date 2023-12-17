@@ -1,0 +1,50 @@
+/**
+ * This dot file creates symbol collaboration diagram for ConsumptionSpeedValue.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="ConsumptionSpeedValue collaboration diagram";
+
+    subgraph "cluster_nds.routingdata.types"
+    {
+        style="dashed, rounded";
+        label="nds.routingdata.types";
+        tooltip="Package nds.routingdata.types";
+        href="../../../content/packages/nds.routingdata.types.html#Package-nds-routingdata-types";
+        target="_parent";
+
+        "ConsumptionSpeedValue" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routingdata.types.html#Structure-ConsumptionSpeedValue" title="Structure defined in nds.routingdata.types">ConsumptionSpeedValue</td></tr></table></font>>];
+        "ConsumptionSpeedDependencyCurve" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routingdata.types.html#Structure-ConsumptionSpeedDependencyCurve" title="Structure defined in nds.routingdata.types">ConsumptionSpeedDependencyCurve</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.road.reference.types"
+    {
+        style="dashed, rounded";
+        label="nds.road.reference.types";
+        tooltip="Package nds.road.reference.types";
+        href="../../../content/packages/nds.road.reference.types.html#Package-nds-road-reference-types";
+        target="_parent";
+
+        "PercentageIndication" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.road.reference.types.html#Subtype-PercentageIndication" title="Subtype defined in nds.road.reference.types">PercentageIndication</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.types"
+    {
+        style="dashed, rounded";
+        label="nds.core.types";
+        tooltip="Package nds.core.types";
+        href="../../../content/packages/nds.core.types.html#Package-nds-core-types";
+        target="_parent";
+
+        "SpeedKmh" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Subtype-SpeedKmh" title="Subtype defined in nds.core.types">SpeedKmh</td></tr></table></font>>];
+        "SPEED_UNDEFINED" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Constant-SPEED_UNDEFINED" title="Constant defined in nds.core.types">SPEED_UNDEFINED</td></tr></table></font>>];
+    }
+
+    "ConsumptionSpeedValue" -> "PercentageIndication" [label="uses", fontsize=10];
+    "ConsumptionSpeedValue" -> "SpeedKmh" [label="uses", fontsize=10];
+    "ConsumptionSpeedValue" -> "SPEED_UNDEFINED" [label="uses", fontsize=10];
+    "ConsumptionSpeedDependencyCurve" -> "ConsumptionSpeedValue" [label="uses", fontsize=10];
+}

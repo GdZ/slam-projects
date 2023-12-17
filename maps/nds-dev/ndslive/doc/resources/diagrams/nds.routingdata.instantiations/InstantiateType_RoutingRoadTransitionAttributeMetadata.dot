@@ -1,0 +1,60 @@
+/**
+ * This dot file creates symbol collaboration diagram for RoutingRoadTransitionAttributeMetadata.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="RoutingRoadTransitionAttributeMetadata collaboration diagram";
+
+    subgraph "cluster_nds.routingdata.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.routingdata.instantiations";
+        tooltip="Package nds.routingdata.instantiations";
+        href="../../../content/packages/nds.routingdata.instantiations.html#Package-nds-routingdata-instantiations";
+        target="_parent";
+
+        "RoutingRoadTransitionAttributeMetadata" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routingdata.instantiations.html#InstantiateType-RoutingRoadTransitionAttributeMetadata" title="InstantiateType defined in nds.routingdata.instantiations">RoutingRoadTransitionAttributeMetadata</td></tr></table></font>>];
+        "AttributeMetadata&lt;RoutingRoadTransitionAttributeType,RoutingPropertyType&gt;" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.attributemap.html#Structure-AttributeMetadata" title="Structure defined in nds.core.attributemap">AttributeMetadata</td><td>&lt;</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routingdata.attributes.html#Enum-RoutingRoadTransitionAttributeType" title="Enum defined in nds.routingdata.attributes">RoutingRoadTransitionAttributeType</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routingdata.properties.html#Structure-RoutingPropertyType" title="Structure defined in nds.routingdata.properties">RoutingPropertyType</td></tr></table></td><td>&gt;</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.routingdata.attributes"
+    {
+        style="dashed, rounded";
+        label="nds.routingdata.attributes";
+        tooltip="Package nds.routingdata.attributes";
+        href="../../../content/packages/nds.routingdata.attributes.html#Package-nds-routingdata-attributes";
+        target="_parent";
+
+        "RoutingRoadTransitionAttributeType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routingdata.attributes.html#Enum-RoutingRoadTransitionAttributeType" title="Enum defined in nds.routingdata.attributes">RoutingRoadTransitionAttributeType</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.routingdata.properties"
+    {
+        style="dashed, rounded";
+        label="nds.routingdata.properties";
+        tooltip="Package nds.routingdata.properties";
+        href="../../../content/packages/nds.routingdata.properties.html#Package-nds-routingdata-properties";
+        target="_parent";
+
+        "RoutingPropertyType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routingdata.properties.html#Structure-RoutingPropertyType" title="Structure defined in nds.routingdata.properties">RoutingPropertyType</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.routingdata.metadata"
+    {
+        style="dashed, rounded";
+        label="nds.routingdata.metadata";
+        tooltip="Package nds.routingdata.metadata";
+        href="../../../content/packages/nds.routingdata.metadata.html#Package-nds-routingdata-metadata";
+        target="_parent";
+
+        "RoadRoutingLayerMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routingdata.metadata.html#Structure-RoadRoutingLayerMetadata" title="Structure defined in nds.routingdata.metadata">RoadRoutingLayerMetadata</td></tr></table></font>>];
+    }
+
+    "RoutingRoadTransitionAttributeMetadata" -> "AttributeMetadata&lt;RoutingRoadTransitionAttributeType,RoutingPropertyType&gt;" [label="uses", fontsize=10];
+    "RoutingRoadTransitionAttributeMetadata" -> "RoutingRoadTransitionAttributeType" [label="uses", fontsize=10];
+    "RoutingRoadTransitionAttributeMetadata" -> "RoutingPropertyType" [label="uses", fontsize=10];
+    "RoadRoutingLayerMetadata" -> "RoutingRoadTransitionAttributeMetadata" [label="uses", fontsize=10];
+}

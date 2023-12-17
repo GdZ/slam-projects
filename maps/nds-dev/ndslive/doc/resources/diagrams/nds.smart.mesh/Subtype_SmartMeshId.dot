@@ -1,0 +1,50 @@
+/**
+ * This dot file creates symbol collaboration diagram for SmartMeshId.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="SmartMeshId collaboration diagram";
+
+    subgraph "cluster_nds.smart.mesh"
+    {
+        style="dashed, rounded";
+        label="nds.smart.mesh";
+        tooltip="Package nds.smart.mesh";
+        href="../../../content/packages/nds.smart.mesh.html#Package-nds-smart-mesh";
+        target="_parent";
+
+        "SmartMeshId" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.mesh.html#Subtype-SmartMeshId" title="Subtype defined in nds.smart.mesh">SmartMeshId</td></tr></table></font>>];
+        "SmartLayerMesh" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.mesh.html#Structure-SmartLayerMesh" title="Structure defined in nds.smart.mesh">SmartLayerMesh</td></tr></table></font>>];
+        "SmartMeshIndex" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.mesh.html#Structure-SmartMeshIndex" title="Structure defined in nds.smart.mesh">SmartMeshIndex</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.system.types"
+    {
+        style="dashed, rounded";
+        label="nds.system.types";
+        tooltip="Package nds.system.types";
+        href="../../../content/packages/nds.system.types.html#Package-nds-system-types";
+        target="_parent";
+
+        "UUID" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.system.types.html#Structure-UUID" title="Structure defined in nds.system.types">UUID</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.smart.services"
+    {
+        style="dashed, rounded";
+        label="nds.smart.services";
+        tooltip="Package nds.smart.services";
+        href="../../../content/packages/nds.smart.services.html#Package-nds-smart-services";
+        target="_parent";
+
+        "SmartLayerMeshService" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.services.html#Service-SmartLayerMeshService" title="Service defined in nds.smart.services">SmartLayerMeshService</td></tr></table></font>>];
+    }
+
+    "SmartMeshId" -> "UUID" [label="uses", fontsize=10];
+    "SmartLayerMesh" -> "SmartMeshId" [label="uses", fontsize=10];
+    "SmartMeshIndex" -> "SmartMeshId" [label="uses", fontsize=10];
+    "SmartLayerMeshService" -> "SmartMeshId" [label="uses", fontsize=10];
+}

@@ -1,0 +1,38 @@
+/**
+ * This dot file creates symbol collaboration diagram for LaneCenterLineGeometryId.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="LaneCenterLineGeometryId collaboration diagram";
+
+    subgraph "cluster_nds.lane.lanes"
+    {
+        style="dashed, rounded";
+        label="nds.lane.lanes";
+        tooltip="Package nds.lane.lanes";
+        href="../../../content/packages/nds.lane.lanes.html#Package-nds-lane-lanes";
+        target="_parent";
+
+        "LaneCenterLineGeometryId" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.lanes.html#Subtype-LaneCenterLineGeometryId" title="Subtype defined in nds.lane.lanes">LaneCenterLineGeometryId</td></tr></table></font>>];
+        "Lane" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.lanes.html#Structure-Lane" title="Structure defined in nds.lane.lanes">Lane</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.lane.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.lane.instantiations";
+        tooltip="Package nds.lane.instantiations";
+        href="../../../content/packages/nds.lane.instantiations.html#Package-nds-lane-instantiations";
+        target="_parent";
+
+        "CenterLineGeometryLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.instantiations.html#InstantiateType-CenterLineGeometryLayer" title="InstantiateType defined in nds.lane.instantiations">CenterLineGeometryLayer</td></tr></table></font>>];
+        "GeometryLayer&lt;LaneCenterLineGeometryId,GeometryType&gt;" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Structure-GeometryLayer" title="Structure defined in nds.core.geometry">GeometryLayer</td><td>&lt;</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.lanes.html#Subtype-LaneCenterLineGeometryId" title="Subtype defined in nds.lane.lanes">LaneCenterLineGeometryId</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Subtype-GeometryType" title="Subtype defined in nds.core.geometry">GeometryType</td></tr></table></td><td>&gt;</td></tr></table></font>>];
+    }
+
+    "Lane" -> "LaneCenterLineGeometryId" [label="uses", fontsize=10];
+    "CenterLineGeometryLayer" -> "LaneCenterLineGeometryId" [label="uses", fontsize=10];
+    "GeometryLayer&lt;LaneCenterLineGeometryId,GeometryType&gt;" -> "LaneCenterLineGeometryId" [label="uses", fontsize=10];
+}

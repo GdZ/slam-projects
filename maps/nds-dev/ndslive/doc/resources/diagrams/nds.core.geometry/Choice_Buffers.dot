@@ -1,0 +1,110 @@
+/**
+ * This dot file creates symbol collaboration diagram for Buffers.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="Buffers collaboration diagram";
+
+    subgraph "cluster_nds.core.geometry"
+    {
+        style="dashed, rounded";
+        label="nds.core.geometry";
+        tooltip="Package nds.core.geometry";
+        href="../../../content/packages/nds.core.geometry.html#Package-nds-core-geometry";
+        target="_parent";
+
+        "Buffers" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Choice-Buffers" title="Choice defined in nds.core.geometry">Buffers</td></tr></table></font>>];
+        "GeometryLayerType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Enum-GeometryLayerType" title="Enum defined in nds.core.geometry">GeometryLayerType</td></tr></table></font>>];
+        "CoordShift" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Subtype-CoordShift" title="Subtype defined in nds.core.geometry">CoordShift</td></tr></table></font>>];
+        "Position2D" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Structure-Position2D" title="Structure defined in nds.core.geometry">Position2D</td></tr></table></font>>];
+        "Position3D" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Structure-Position3D" title="Structure defined in nds.core.geometry">Position3D</td></tr></table></font>>];
+        "Line2D" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Structure-Line2D" title="Structure defined in nds.core.geometry">Line2D</td></tr></table></font>>];
+        "Line3D" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Structure-Line3D" title="Structure defined in nds.core.geometry">Line3D</td></tr></table></font>>];
+        "Polygon2DBuffers" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Structure-Polygon2DBuffers" title="Structure defined in nds.core.geometry">Polygon2DBuffers</td></tr></table></font>>];
+        "PolyMesh3DType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Enum-PolyMesh3DType" title="Enum defined in nds.core.geometry">PolyMesh3DType</td></tr></table></font>>];
+        "PolyMesh3DBuffers" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Structure-PolyMesh3DBuffers" title="Structure defined in nds.core.geometry">PolyMesh3DBuffers</td></tr></table></font>>];
+        "SimplePolygon2D" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Subtype-SimplePolygon2D" title="Subtype defined in nds.core.geometry">SimplePolygon2D</td></tr></table></font>>];
+        "SimplePolygonSet2D" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Structure-SimplePolygonSet2D" title="Structure defined in nds.core.geometry">SimplePolygonSet2D</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.localization.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.localization.instantiations";
+        tooltip="Package nds.localization.instantiations";
+        href="../../../content/packages/nds.localization.instantiations.html#Package-nds-localization-instantiations";
+        target="_parent";
+
+        "GeometryLayer&lt;GeometryId,ObstacleType&gt;" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Structure-GeometryLayer" title="Structure defined in nds.core.geometry">GeometryLayer</td><td>&lt;</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Subtype-GeometryId" title="Subtype defined in nds.core.geometry">GeometryId</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.localization.types.html#Enum-ObstacleType" title="Enum defined in nds.localization.types">ObstacleType</td></tr></table></td><td>&gt;</td></tr></table></font>>];
+        "GeometryLayer&lt;LandmarkId,LandmarkLine&gt;" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Structure-GeometryLayer" title="Structure defined in nds.core.geometry">GeometryLayer</td><td>&lt;</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.localization.types.html#Subtype-LandmarkId" title="Subtype defined in nds.localization.types">LandmarkId</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.localization.types.html#Structure-LandmarkLine" title="Structure defined in nds.localization.types">LandmarkLine</td></tr></table></td><td>&gt;</td></tr></table></font>>];
+        "GeometryLayer&lt;LandmarkId,LandmarkPolygon&gt;" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Structure-GeometryLayer" title="Structure defined in nds.core.geometry">GeometryLayer</td><td>&lt;</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.localization.types.html#Subtype-LandmarkId" title="Subtype defined in nds.localization.types">LandmarkId</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.localization.types.html#Structure-LandmarkPolygon" title="Structure defined in nds.localization.types">LandmarkPolygon</td></tr></table></td><td>&gt;</td></tr></table></font>>];
+        "GeometryLayer&lt;LandmarkId,LandmarkMesh&gt;" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Structure-GeometryLayer" title="Structure defined in nds.core.geometry">GeometryLayer</td><td>&lt;</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.localization.types.html#Subtype-LandmarkId" title="Subtype defined in nds.localization.types">LandmarkId</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.localization.types.html#Structure-LandmarkMesh" title="Structure defined in nds.localization.types">LandmarkMesh</td></tr></table></td><td>&gt;</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.road.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.road.instantiations";
+        tooltip="Package nds.road.instantiations";
+        href="../../../content/packages/nds.road.instantiations.html#Package-nds-road-instantiations";
+        target="_parent";
+
+        "GeometryLayer&lt;RoadId,GeometryType&gt;" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Structure-GeometryLayer" title="Structure defined in nds.core.geometry">GeometryLayer</td><td>&lt;</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.road.reference.types.html#Subtype-RoadId" title="Subtype defined in nds.road.reference.types">RoadId</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Subtype-GeometryType" title="Subtype defined in nds.core.geometry">GeometryType</td></tr></table></td><td>&gt;</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.display.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.display.instantiations";
+        tooltip="Package nds.display.instantiations";
+        href="../../../content/packages/nds.display.instantiations.html#Package-nds-display-instantiations";
+        target="_parent";
+
+        "GeometryLayer&lt;DisplayAreaId,DisplayAreaType&gt;" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Structure-GeometryLayer" title="Structure defined in nds.core.geometry">GeometryLayer</td><td>&lt;</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.reference.types.html#Subtype-DisplayAreaId" title="Subtype defined in nds.display.reference.types">DisplayAreaId</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.types.html#Enum-DisplayAreaType" title="Enum defined in nds.display.types">DisplayAreaType</td></tr></table></td><td>&gt;</td></tr></table></font>>];
+        "GeometryLayer&lt;DisplayLineId,DisplayLineType&gt;" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Structure-GeometryLayer" title="Structure defined in nds.core.geometry">GeometryLayer</td><td>&lt;</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.reference.types.html#Subtype-DisplayLineId" title="Subtype defined in nds.display.reference.types">DisplayLineId</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.types.html#Enum-DisplayLineType" title="Enum defined in nds.display.types">DisplayLineType</td></tr></table></td><td>&gt;</td></tr></table></font>>];
+        "GeometryLayer&lt;DisplayPointId,DisplayPointType&gt;" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Structure-GeometryLayer" title="Structure defined in nds.core.geometry">GeometryLayer</td><td>&lt;</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.reference.types.html#Subtype-DisplayPointId" title="Subtype defined in nds.display.reference.types">DisplayPointId</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.types.html#Enum-DisplayPointType" title="Enum defined in nds.display.types">DisplayPointType</td></tr></table></td><td>&gt;</td></tr></table></font>>];
+        "GeometryLayer&lt;DisplayMesh3dId,DisplayMesh3dType&gt;" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Structure-GeometryLayer" title="Structure defined in nds.core.geometry">GeometryLayer</td><td>&lt;</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.reference.types.html#Subtype-DisplayMesh3dId" title="Subtype defined in nds.display.reference.types">DisplayMesh3dId</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.types.html#Enum-DisplayMesh3dType" title="Enum defined in nds.display.types">DisplayMesh3dType</td></tr></table></td><td>&gt;</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.lane.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.lane.instantiations";
+        tooltip="Package nds.lane.instantiations";
+        href="../../../content/packages/nds.lane.instantiations.html#Package-nds-lane-instantiations";
+        target="_parent";
+
+        "GeometryLayer&lt;LaneCenterLineGeometryId,GeometryType&gt;" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Structure-GeometryLayer" title="Structure defined in nds.core.geometry">GeometryLayer</td><td>&lt;</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.lanes.html#Subtype-LaneCenterLineGeometryId" title="Subtype defined in nds.lane.lanes">LaneCenterLineGeometryId</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Subtype-GeometryType" title="Subtype defined in nds.core.geometry">GeometryType</td></tr></table></td><td>&gt;</td></tr></table></font>>];
+        "GeometryLayer&lt;BoundaryGeometryId,GeometryType&gt;" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Structure-GeometryLayer" title="Structure defined in nds.core.geometry">GeometryLayer</td><td>&lt;</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.boundaries.html#Subtype-BoundaryGeometryId" title="Subtype defined in nds.lane.boundaries">BoundaryGeometryId</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Subtype-GeometryType" title="Subtype defined in nds.core.geometry">GeometryType</td></tr></table></td><td>&gt;</td></tr></table></font>>];
+        "GeometryLayer&lt;RoadSurfaceId,RoadSurfacePolygonType&gt;" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Structure-GeometryLayer" title="Structure defined in nds.core.geometry">GeometryLayer</td><td>&lt;</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.reference.types.html#Subtype-RoadSurfaceId" title="Subtype defined in nds.lane.reference.types">RoadSurfaceId</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.roadsurface.html#Structure-RoadSurfacePolygonType" title="Structure defined in nds.lane.roadsurface">RoadSurfacePolygonType</td></tr></table></td><td>&gt;</td></tr></table></font>>];
+        "GeometryLayer&lt;RoadSurfaceId,RoadSurfaceLineType&gt;" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Structure-GeometryLayer" title="Structure defined in nds.core.geometry">GeometryLayer</td><td>&lt;</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.reference.types.html#Subtype-RoadSurfaceId" title="Subtype defined in nds.lane.reference.types">RoadSurfaceId</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.roadsurface.html#Structure-RoadSurfaceLineType" title="Structure defined in nds.lane.roadsurface">RoadSurfaceLineType</td></tr></table></td><td>&gt;</td></tr></table></font>>];
+    }
+
+    "Buffers" -> "GeometryLayerType" [label="uses", fontsize=10];
+    "Buffers" -> "CoordShift" [label="uses", fontsize=10];
+    "Buffers" -> "Position2D" [label="uses", fontsize=10];
+    "Buffers" -> "Position3D" [label="uses", fontsize=10];
+    "Buffers" -> "Line2D" [label="uses", fontsize=10];
+    "Buffers" -> "Line3D" [label="uses", fontsize=10];
+    "Buffers" -> "Polygon2DBuffers" [label="uses", fontsize=10];
+    "Buffers" -> "PolyMesh3DType" [label="uses", fontsize=10];
+    "Buffers" -> "PolyMesh3DBuffers" [label="uses", fontsize=10];
+    "Buffers" -> "SimplePolygon2D" [label="uses", fontsize=10];
+    "Buffers" -> "SimplePolygonSet2D" [label="uses", fontsize=10];
+    "GeometryLayer&lt;GeometryId,ObstacleType&gt;" -> "Buffers" [label="uses", fontsize=10];
+    "GeometryLayer&lt;LandmarkId,LandmarkLine&gt;" -> "Buffers" [label="uses", fontsize=10];
+    "GeometryLayer&lt;LandmarkId,LandmarkPolygon&gt;" -> "Buffers" [label="uses", fontsize=10];
+    "GeometryLayer&lt;LandmarkId,LandmarkMesh&gt;" -> "Buffers" [label="uses", fontsize=10];
+    "GeometryLayer&lt;RoadId,GeometryType&gt;" -> "Buffers" [label="uses", fontsize=10];
+    "GeometryLayer&lt;DisplayAreaId,DisplayAreaType&gt;" -> "Buffers" [label="uses", fontsize=10];
+    "GeometryLayer&lt;DisplayLineId,DisplayLineType&gt;" -> "Buffers" [label="uses", fontsize=10];
+    "GeometryLayer&lt;DisplayPointId,DisplayPointType&gt;" -> "Buffers" [label="uses", fontsize=10];
+    "GeometryLayer&lt;DisplayMesh3dId,DisplayMesh3dType&gt;" -> "Buffers" [label="uses", fontsize=10];
+    "GeometryLayer&lt;LaneCenterLineGeometryId,GeometryType&gt;" -> "Buffers" [label="uses", fontsize=10];
+    "GeometryLayer&lt;BoundaryGeometryId,GeometryType&gt;" -> "Buffers" [label="uses", fontsize=10];
+    "GeometryLayer&lt;RoadSurfaceId,RoadSurfacePolygonType&gt;" -> "Buffers" [label="uses", fontsize=10];
+    "GeometryLayer&lt;RoadSurfaceId,RoadSurfaceLineType&gt;" -> "Buffers" [label="uses", fontsize=10];
+}

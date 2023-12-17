@@ -1,0 +1,52 @@
+/**
+ * This dot file creates symbol collaboration diagram for RoadNameLayerMetadata.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="RoadNameLayerMetadata collaboration diagram";
+
+    subgraph "cluster_nds.name.metadata"
+    {
+        style="dashed, rounded";
+        label="nds.name.metadata";
+        tooltip="Package nds.name.metadata";
+        href="../../../content/packages/nds.name.metadata.html#Package-nds-name-metadata";
+        target="_parent";
+
+        "RoadNameLayerMetadata" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.metadata.html#Structure-RoadNameLayerMetadata" title="Structure defined in nds.name.metadata">RoadNameLayerMetadata</td></tr></table></font>>];
+        "RoadNameLayerContent" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.metadata.html#Bitmask-RoadNameLayerContent" title="Bitmask defined in nds.name.metadata">RoadNameLayerContent</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.name.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.name.instantiations";
+        tooltip="Package nds.name.instantiations";
+        href="../../../content/packages/nds.name.instantiations.html#Package-nds-name-instantiations";
+        target="_parent";
+
+        "NameRoadRangeAttributeMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.instantiations.html#InstantiateType-NameRoadRangeAttributeMetadata" title="InstantiateType defined in nds.name.instantiations">NameRoadRangeAttributeMetadata</td></tr></table></font>>];
+        "NameRoadPositionAttributeMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.instantiations.html#InstantiateType-NameRoadPositionAttributeMetadata" title="InstantiateType defined in nds.name.instantiations">NameRoadPositionAttributeMetadata</td></tr></table></font>>];
+        "NameTransitionAttributeMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.instantiations.html#InstantiateType-NameTransitionAttributeMetadata" title="InstantiateType defined in nds.name.instantiations">NameTransitionAttributeMetadata</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.language"
+    {
+        style="dashed, rounded";
+        label="nds.core.language";
+        tooltip="Package nds.core.language";
+        href="../../../content/packages/nds.core.language.html#Package-nds-core-language";
+        target="_parent";
+
+        "AvailableLanguages" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.language.html#Structure-AvailableLanguages" title="Structure defined in nds.core.language">AvailableLanguages</td></tr></table></font>>];
+    }
+
+    "RoadNameLayerMetadata" -> "RoadNameLayerContent" [label="uses", fontsize=10];
+    "RoadNameLayerMetadata" -> "NameRoadRangeAttributeMetadata" [label="uses", fontsize=10];
+    "RoadNameLayerMetadata" -> "NameRoadPositionAttributeMetadata" [label="uses", fontsize=10];
+    "RoadNameLayerMetadata" -> "NameTransitionAttributeMetadata" [label="uses", fontsize=10];
+    "RoadNameLayerMetadata" -> "AvailableLanguages" [label="uses", fontsize=10];
+}

@@ -1,0 +1,38 @@
+/**
+ * This dot file creates symbol collaboration diagram for CharacsRoadRangeAttribute.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="CharacsRoadRangeAttribute collaboration diagram";
+
+    subgraph "cluster_nds.characteristics.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.characteristics.instantiations";
+        tooltip="Package nds.characteristics.instantiations";
+        href="../../../content/packages/nds.characteristics.instantiations.html#Package-nds-characteristics-instantiations";
+        target="_parent";
+
+        "CharacsRoadRangeAttribute" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.instantiations.html#InstantiateType-CharacsRoadRangeAttribute" title="InstantiateType defined in nds.characteristics.instantiations">CharacsRoadRangeAttribute</td></tr></table></font>>];
+        "Attribute&lt;CharacsRoadRangeAttributeType,CharacsRoadRangeAttributeValue&gt;" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.attributemap.html#Structure-Attribute" title="Structure defined in nds.core.attributemap">Attribute</td><td>&lt;</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.attributes.html#Enum-CharacsRoadRangeAttributeType" title="Enum defined in nds.characteristics.attributes">CharacsRoadRangeAttributeType</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.attributes.html#Choice-CharacsRoadRangeAttributeValue" title="Choice defined in nds.characteristics.attributes">CharacsRoadRangeAttributeValue</td></tr></table></td><td>&gt;</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.characteristics.attributes"
+    {
+        style="dashed, rounded";
+        label="nds.characteristics.attributes";
+        tooltip="Package nds.characteristics.attributes";
+        href="../../../content/packages/nds.characteristics.attributes.html#Package-nds-characteristics-attributes";
+        target="_parent";
+
+        "CharacsRoadRangeAttributeType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.attributes.html#Enum-CharacsRoadRangeAttributeType" title="Enum defined in nds.characteristics.attributes">CharacsRoadRangeAttributeType</td></tr></table></font>>];
+        "CharacsRoadRangeAttributeValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.attributes.html#Choice-CharacsRoadRangeAttributeValue" title="Choice defined in nds.characteristics.attributes">CharacsRoadRangeAttributeValue</td></tr></table></font>>];
+    }
+
+    "CharacsRoadRangeAttribute" -> "Attribute&lt;CharacsRoadRangeAttributeType,CharacsRoadRangeAttributeValue&gt;" [label="uses", fontsize=10];
+    "CharacsRoadRangeAttribute" -> "CharacsRoadRangeAttributeType" [label="uses", fontsize=10];
+    "CharacsRoadRangeAttribute" -> "CharacsRoadRangeAttributeValue" [label="uses", fontsize=10];
+}

@@ -1,0 +1,24 @@
+/**
+ * This dot file creates symbol collaboration diagram for LicensePlateRestrictionType.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="LicensePlateRestrictionType collaboration diagram";
+
+    subgraph "cluster_nds.rules.types"
+    {
+        style="dashed, rounded";
+        label="nds.rules.types";
+        tooltip="Package nds.rules.types";
+        href="../../../content/packages/nds.rules.types.html#Package-nds-rules-types";
+        target="_parent";
+
+        "LicensePlateRestrictionType" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.types.html#Enum-LicensePlateRestrictionType" title="Enum defined in nds.rules.types">LicensePlateRestrictionType</td></tr></table></font>>];
+        "LicensePlateRestriction" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.types.html#Structure-LicensePlateRestriction" title="Structure defined in nds.rules.types">LicensePlateRestriction</td></tr></table></font>>];
+    }
+
+    "LicensePlateRestriction" -> "LicensePlateRestrictionType" [label="uses", fontsize=10];
+}

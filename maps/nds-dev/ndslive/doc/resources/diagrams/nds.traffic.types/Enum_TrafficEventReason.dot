@@ -1,0 +1,24 @@
+/**
+ * This dot file creates symbol collaboration diagram for TrafficEventReason.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="TrafficEventReason collaboration diagram";
+
+    subgraph "cluster_nds.traffic.types"
+    {
+        style="dashed, rounded";
+        label="nds.traffic.types";
+        tooltip="Package nds.traffic.types";
+        href="../../../content/packages/nds.traffic.types.html#Package-nds-traffic-types";
+        target="_parent";
+
+        "TrafficEventReason" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.traffic.types.html#Enum-TrafficEventReason" title="Enum defined in nds.traffic.types">TrafficEventReason</td></tr></table></font>>];
+        "TrafficEvent" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.traffic.types.html#Structure-TrafficEvent" title="Structure defined in nds.traffic.types">TrafficEvent</td></tr></table></font>>];
+    }
+
+    "TrafficEvent" -> "TrafficEventReason" [label="uses", fontsize=10];
+}

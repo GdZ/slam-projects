@@ -1,0 +1,38 @@
+/**
+ * This dot file creates symbol collaboration diagram for FeatureLayerMetadata.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="FeatureLayerMetadata collaboration diagram";
+
+    subgraph "cluster_nds.road.metadata"
+    {
+        style="dashed, rounded";
+        label="nds.road.metadata";
+        tooltip="Package nds.road.metadata";
+        href="../../../content/packages/nds.road.metadata.html#Package-nds-road-metadata";
+        target="_parent";
+
+        "FeatureLayerMetadata" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.road.metadata.html#Structure-FeatureLayerMetadata" title="Structure defined in nds.road.metadata">FeatureLayerMetadata</td></tr></table></font>>];
+        "FeatureLayerType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.road.metadata.html#Enum-FeatureLayerType" title="Enum defined in nds.road.metadata">FeatureLayerType</td></tr></table></font>>];
+        "MatchedRoadPathLayerMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.road.metadata.html#Subtype-MatchedRoadPathLayerMetadata" title="Subtype defined in nds.road.metadata">MatchedRoadPathLayerMetadata</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.types"
+    {
+        style="dashed, rounded";
+        label="nds.core.types";
+        tooltip="Package nds.core.types";
+        href="../../../content/packages/nds.core.types.html#Package-nds-core-types";
+        target="_parent";
+
+        "RoadType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Structure-RoadType" title="Structure defined in nds.core.types">RoadType</td></tr></table></font>>];
+    }
+
+    "FeatureLayerMetadata" -> "FeatureLayerType" [label="uses", fontsize=10];
+    "FeatureLayerMetadata" -> "RoadType" [label="uses", fontsize=10];
+    "MatchedRoadPathLayerMetadata" -> "FeatureLayerMetadata" [label="uses", fontsize=10];
+}

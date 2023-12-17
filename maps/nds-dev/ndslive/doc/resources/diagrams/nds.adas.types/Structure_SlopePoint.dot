@@ -1,0 +1,28 @@
+/**
+ * This dot file creates symbol collaboration diagram for SlopePoint.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="SlopePoint collaboration diagram";
+
+    subgraph "cluster_nds.adas.types"
+    {
+        style="dashed, rounded";
+        label="nds.adas.types";
+        tooltip="Package nds.adas.types";
+        href="../../../content/packages/nds.adas.types.html#Package-nds-adas-types";
+        target="_parent";
+
+        "SlopePoint" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.adas.types.html#Structure-SlopePoint" title="Structure defined in nds.adas.types">SlopePoint</td></tr></table></font>>];
+        "AdasGeometryPosition" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.adas.types.html#Subtype-AdasGeometryPosition" title="Subtype defined in nds.adas.types">AdasGeometryPosition</td></tr></table></font>>];
+        "Slope" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.adas.types.html#Subtype-Slope" title="Subtype defined in nds.adas.types">Slope</td></tr></table></font>>];
+        "SlopeArray" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.adas.types.html#Structure-SlopeArray" title="Structure defined in nds.adas.types">SlopeArray</td></tr></table></font>>];
+    }
+
+    "SlopePoint" -> "AdasGeometryPosition" [label="uses", fontsize=10];
+    "SlopePoint" -> "Slope" [label="uses", fontsize=10];
+    "SlopeArray" -> "SlopePoint" [label="uses", fontsize=10];
+}

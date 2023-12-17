@@ -1,0 +1,46 @@
+/**
+ * This dot file creates symbol collaboration diagram for HeightmapMapProjection.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="HeightmapMapProjection collaboration diagram";
+
+    subgraph "cluster_nds.display.types"
+    {
+        style="dashed, rounded";
+        label="nds.display.types";
+        tooltip="Package nds.display.types";
+        href="../../../content/packages/nds.display.types.html#Package-nds-display-types";
+        target="_parent";
+
+        "HeightmapMapProjection" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.types.html#Subtype-HeightmapMapProjection" title="Subtype defined in nds.display.types">HeightmapMapProjection</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.geometry"
+    {
+        style="dashed, rounded";
+        label="nds.core.geometry";
+        tooltip="Package nds.core.geometry";
+        href="../../../content/packages/nds.core.geometry.html#Package-nds-core-geometry";
+        target="_parent";
+
+        "MapProjectionMethod" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Enum-MapProjectionMethod" title="Enum defined in nds.core.geometry">MapProjectionMethod</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.display.metadata"
+    {
+        style="dashed, rounded";
+        label="nds.display.metadata";
+        tooltip="Package nds.display.metadata";
+        href="../../../content/packages/nds.display.metadata.html#Package-nds-display-metadata";
+        target="_parent";
+
+        "HeightmapLayerMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.metadata.html#Structure-HeightmapLayerMetadata" title="Structure defined in nds.display.metadata">HeightmapLayerMetadata</td></tr></table></font>>];
+    }
+
+    "HeightmapMapProjection" -> "MapProjectionMethod" [label="uses", fontsize=10];
+    "HeightmapLayerMetadata" -> "HeightmapMapProjection" [label="uses", fontsize=10];
+}

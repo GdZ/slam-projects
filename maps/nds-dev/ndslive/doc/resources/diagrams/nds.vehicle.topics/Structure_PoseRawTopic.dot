@@ -1,0 +1,48 @@
+/**
+ * This dot file creates symbol collaboration diagram for PoseRawTopic.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="PoseRawTopic collaboration diagram";
+
+    subgraph "cluster_nds.vehicle.topics"
+    {
+        style="dashed, rounded";
+        label="nds.vehicle.topics";
+        tooltip="Package nds.vehicle.topics";
+        href="../../../content/packages/nds.vehicle.topics.html#Package-nds-vehicle-topics";
+        target="_parent";
+
+        "PoseRawTopic" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.vehicle.topics.html#Structure-PoseRawTopic" title="Structure defined in nds.vehicle.topics">PoseRawTopic</td></tr></table></font>>];
+        "VehicleTopicCollection" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.vehicle.topics.html#Pubsub-VehicleTopicCollection" title="Pubsub defined in nds.vehicle.topics">VehicleTopicCollection</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.types"
+    {
+        style="dashed, rounded";
+        label="nds.core.types";
+        tooltip="Package nds.core.types";
+        href="../../../content/packages/nds.core.types.html#Package-nds-core-types";
+        target="_parent";
+
+        "TimeStamp" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Structure-TimeStamp" title="Structure defined in nds.core.types">TimeStamp</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.vehicle"
+    {
+        style="dashed, rounded";
+        label="nds.core.vehicle";
+        tooltip="Package nds.core.vehicle";
+        href="../../../content/packages/nds.core.vehicle.html#Package-nds-core-vehicle";
+        target="_parent";
+
+        "PoseRaw" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.vehicle.html#Structure-PoseRaw" title="Structure defined in nds.core.vehicle">PoseRaw</td></tr></table></font>>];
+    }
+
+    "PoseRawTopic" -> "TimeStamp" [label="uses", fontsize=10];
+    "PoseRawTopic" -> "PoseRaw" [label="uses", fontsize=10];
+    "VehicleTopicCollection" -> "PoseRawTopic" [label="uses", fontsize=10];
+}

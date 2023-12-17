@@ -1,0 +1,26 @@
+/**
+ * This dot file creates symbol collaboration diagram for RegionRulesLayerRoads.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="RegionRulesLayerRoads collaboration diagram";
+
+    subgraph "cluster_nds.rules.layer"
+    {
+        style="dashed, rounded";
+        label="nds.rules.layer";
+        tooltip="Package nds.rules.layer";
+        href="../../../content/packages/nds.rules.layer.html#Package-nds-rules-layer";
+        target="_parent";
+
+        "RegionRulesLayerRoads" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.layer.html#InstantiateType-RegionRulesLayerRoads" title="InstantiateType defined in nds.rules.layer">RegionRulesLayerRoads</td></tr></table></font>>];
+        "RegionRulesLayer&lt;RegionRoadRelationList&gt;" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.layer.html#Structure-RegionRulesLayer" title="Structure defined in nds.rules.layer">RegionRulesLayer</td><td>&lt;</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.layer.html#Structure-RegionRoadRelationList" title="Structure defined in nds.rules.layer">RegionRoadRelationList</td></tr></table></td><td>&gt;</td></tr></table></font>>];
+        "RegionRoadRelationList" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.layer.html#Structure-RegionRoadRelationList" title="Structure defined in nds.rules.layer">RegionRoadRelationList</td></tr></table></font>>];
+    }
+
+    "RegionRulesLayerRoads" -> "RegionRulesLayer&lt;RegionRoadRelationList&gt;" [label="uses", fontsize=10];
+    "RegionRulesLayerRoads" -> "RegionRoadRelationList" [label="uses", fontsize=10];
+}

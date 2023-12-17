@@ -1,0 +1,88 @@
+/**
+ * This dot file creates symbol collaboration diagram for AdasRoadLocationLayer.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="AdasRoadLocationLayer collaboration diagram";
+
+    subgraph "cluster_nds.adas.layer"
+    {
+        style="dashed, rounded";
+        label="nds.adas.layer";
+        tooltip="Package nds.adas.layer";
+        href="../../../content/packages/nds.adas.layer.html#Package-nds-adas-layer";
+        target="_parent";
+
+        "AdasRoadLocationLayer" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.adas.layer.html#Structure-AdasRoadLocationLayer" title="Structure defined in nds.adas.layer">AdasRoadLocationLayer</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.adas.metadata"
+    {
+        style="dashed, rounded";
+        label="nds.adas.metadata";
+        tooltip="Package nds.adas.metadata";
+        href="../../../content/packages/nds.adas.metadata.html#Package-nds-adas-metadata";
+        target="_parent";
+
+        "AdasRoadLocationLayerContent" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.adas.metadata.html#Bitmask-AdasRoadLocationLayerContent" title="Bitmask defined in nds.adas.metadata">AdasRoadLocationLayerContent</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.geometry"
+    {
+        style="dashed, rounded";
+        label="nds.core.geometry";
+        tooltip="Package nds.core.geometry";
+        href="../../../content/packages/nds.core.geometry.html#Package-nds-core-geometry";
+        target="_parent";
+
+        "CoordShift" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Subtype-CoordShift" title="Subtype defined in nds.core.geometry">CoordShift</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.adas.types"
+    {
+        style="dashed, rounded";
+        label="nds.adas.types";
+        tooltip="Package nds.adas.types";
+        href="../../../content/packages/nds.adas.types.html#Package-nds-adas-types";
+        target="_parent";
+
+        "AdasGeometryList" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.adas.types.html#Structure-AdasGeometryList" title="Structure defined in nds.adas.types">AdasGeometryList</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.adas.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.adas.instantiations";
+        tooltip="Package nds.adas.instantiations";
+        href="../../../content/packages/nds.adas.instantiations.html#Package-nds-adas-instantiations";
+        target="_parent";
+
+        "AdasRoadLocationAttributeMapList" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.adas.instantiations.html#InstantiateType-AdasRoadLocationAttributeMapList" title="InstantiateType defined in nds.adas.instantiations">AdasRoadLocationAttributeMapList</td></tr></table></font>>];
+        "AdasRoadLocationAttributeSetList" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.adas.instantiations.html#InstantiateType-AdasRoadLocationAttributeSetList" title="InstantiateType defined in nds.adas.instantiations">AdasRoadLocationAttributeSetList</td></tr></table></font>>];
+        "AdasRoadLocationTransitionAttributeMapList" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.adas.instantiations.html#InstantiateType-AdasRoadLocationTransitionAttributeMapList" title="InstantiateType defined in nds.adas.instantiations">AdasRoadLocationTransitionAttributeMapList</td></tr></table></font>>];
+        "AdasRoadLocationTransitionAttributeSetList" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.adas.instantiations.html#InstantiateType-AdasRoadLocationTransitionAttributeSetList" title="InstantiateType defined in nds.adas.instantiations">AdasRoadLocationTransitionAttributeSetList</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.system.types"
+    {
+        style="dashed, rounded";
+        label="nds.system.types";
+        tooltip="Package nds.system.types";
+        href="../../../content/packages/nds.system.types.html#Package-nds-system-types";
+        target="_parent";
+
+        "LayerType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.system.types.html#Enum-LayerType" title="Enum defined in nds.system.types">LayerType</td></tr></table></font>>];
+    }
+
+    "AdasRoadLocationLayer" -> "AdasRoadLocationLayerContent" [label="uses", fontsize=10];
+    "AdasRoadLocationLayer" -> "CoordShift" [label="uses", fontsize=10];
+    "AdasRoadLocationLayer" -> "AdasGeometryList" [label="uses", fontsize=10];
+    "AdasRoadLocationLayer" -> "AdasRoadLocationAttributeMapList" [label="uses", fontsize=10];
+    "AdasRoadLocationLayer" -> "AdasRoadLocationAttributeSetList" [label="uses", fontsize=10];
+    "AdasRoadLocationLayer" -> "AdasRoadLocationTransitionAttributeMapList" [label="uses", fontsize=10];
+    "AdasRoadLocationLayer" -> "AdasRoadLocationTransitionAttributeSetList" [label="uses", fontsize=10];
+    "AdasRoadLocationLayer" -> "LayerType" [label="uses", fontsize=10];
+}

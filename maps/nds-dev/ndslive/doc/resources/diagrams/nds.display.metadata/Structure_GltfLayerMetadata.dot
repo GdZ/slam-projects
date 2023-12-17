@@ -1,0 +1,38 @@
+/**
+ * This dot file creates symbol collaboration diagram for GltfLayerMetadata.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="GltfLayerMetadata collaboration diagram";
+
+    subgraph "cluster_nds.display.metadata"
+    {
+        style="dashed, rounded";
+        label="nds.display.metadata";
+        tooltip="Package nds.display.metadata";
+        href="../../../content/packages/nds.display.metadata.html#Package-nds-display-metadata";
+        target="_parent";
+
+        "GltfLayerMetadata" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.metadata.html#Structure-GltfLayerMetadata" title="Structure defined in nds.display.metadata">GltfLayerMetadata</td></tr></table></font>>];
+        "DisplayScaleTileLevelMapping" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.metadata.html#Structure-DisplayScaleTileLevelMapping" title="Structure defined in nds.display.metadata">DisplayScaleTileLevelMapping</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.display.types"
+    {
+        style="dashed, rounded";
+        label="nds.display.types";
+        tooltip="Package nds.display.types";
+        href="../../../content/packages/nds.display.types.html#Package-nds-display-types";
+        target="_parent";
+
+        "GltfVersion" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.types.html#Enum-GltfVersion" title="Enum defined in nds.display.types">GltfVersion</td></tr></table></font>>];
+        "GltfExtensionId" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.types.html#Subtype-GltfExtensionId" title="Subtype defined in nds.display.types">GltfExtensionId</td></tr></table></font>>];
+    }
+
+    "GltfLayerMetadata" -> "GltfVersion" [label="uses", fontsize=10];
+    "GltfLayerMetadata" -> "GltfExtensionId" [label="uses", fontsize=10];
+    "GltfLayerMetadata" -> "DisplayScaleTileLevelMapping" [label="uses", fontsize=10];
+}

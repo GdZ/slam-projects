@@ -1,0 +1,36 @@
+/**
+ * This dot file creates symbol collaboration diagram for MultiDataLayerMultiTileRequest.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="MultiDataLayerMultiTileRequest collaboration diagram";
+
+    subgraph "cluster_nds.smart.tile"
+    {
+        style="dashed, rounded";
+        label="nds.smart.tile";
+        tooltip="Package nds.smart.tile";
+        href="../../../content/packages/nds.smart.tile.html#Package-nds-smart-tile";
+        target="_parent";
+
+        "MultiDataLayerMultiTileRequest" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.tile.html#Structure-MultiDataLayerMultiTileRequest" title="Structure defined in nds.smart.tile">MultiDataLayerMultiTileRequest</td></tr></table></font>>];
+        "MultiDataLayerTileRequest" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.tile.html#Structure-MultiDataLayerTileRequest" title="Structure defined in nds.smart.tile">MultiDataLayerTileRequest</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.smart.services"
+    {
+        style="dashed, rounded";
+        label="nds.smart.services";
+        tooltip="Package nds.smart.services";
+        href="../../../content/packages/nds.smart.services.html#Package-nds-smart-services";
+        target="_parent";
+
+        "SmartLayerTileService" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.services.html#Service-SmartLayerTileService" title="Service defined in nds.smart.services">SmartLayerTileService</td></tr></table></font>>];
+    }
+
+    "MultiDataLayerMultiTileRequest" -> "MultiDataLayerTileRequest" [label="uses", fontsize=10];
+    "SmartLayerTileService" -> "MultiDataLayerMultiTileRequest" [label="uses", fontsize=10];
+}

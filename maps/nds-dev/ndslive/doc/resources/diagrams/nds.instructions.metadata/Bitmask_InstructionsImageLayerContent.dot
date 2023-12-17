@@ -1,0 +1,36 @@
+/**
+ * This dot file creates symbol collaboration diagram for InstructionsImageLayerContent.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="InstructionsImageLayerContent collaboration diagram";
+
+    subgraph "cluster_nds.instructions.metadata"
+    {
+        style="dashed, rounded";
+        label="nds.instructions.metadata";
+        tooltip="Package nds.instructions.metadata";
+        href="../../../content/packages/nds.instructions.metadata.html#Package-nds-instructions-metadata";
+        target="_parent";
+
+        "InstructionsImageLayerContent" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.instructions.metadata.html#Bitmask-InstructionsImageLayerContent" title="Bitmask defined in nds.instructions.metadata">InstructionsImageLayerContent</td></tr></table></font>>];
+        "InstructionsImageLayerMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.instructions.metadata.html#Structure-InstructionsImageLayerMetadata" title="Structure defined in nds.instructions.metadata">InstructionsImageLayerMetadata</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.instructions.layer"
+    {
+        style="dashed, rounded";
+        label="nds.instructions.layer";
+        tooltip="Package nds.instructions.layer";
+        href="../../../content/packages/nds.instructions.layer.html#Package-nds-instructions-layer";
+        target="_parent";
+
+        "InstructionsImageLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.instructions.layer.html#Structure-InstructionsImageLayer" title="Structure defined in nds.instructions.layer">InstructionsImageLayer</td></tr></table></font>>];
+    }
+
+    "InstructionsImageLayer" -> "InstructionsImageLayerContent" [label="uses", fontsize=10];
+    "InstructionsImageLayerMetadata" -> "InstructionsImageLayerContent" [label="uses", fontsize=10];
+}

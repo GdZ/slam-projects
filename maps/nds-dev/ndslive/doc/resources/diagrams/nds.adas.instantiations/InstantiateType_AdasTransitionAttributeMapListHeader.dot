@@ -1,0 +1,36 @@
+/**
+ * This dot file creates symbol collaboration diagram for AdasTransitionAttributeMapListHeader.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="AdasTransitionAttributeMapListHeader collaboration diagram";
+
+    subgraph "cluster_nds.adas.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.adas.instantiations";
+        tooltip="Package nds.adas.instantiations";
+        href="../../../content/packages/nds.adas.instantiations.html#Package-nds-adas-instantiations";
+        target="_parent";
+
+        "AdasTransitionAttributeMapListHeader" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.adas.instantiations.html#InstantiateType-AdasTransitionAttributeMapListHeader" title="InstantiateType defined in nds.adas.instantiations">AdasTransitionAttributeMapListHeader</td></tr></table></font>>];
+        "AttributeMapListHeader&lt;AdasTransitionAttributeType&gt;" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.attributemap.html#Structure-AttributeMapListHeader" title="Structure defined in nds.core.attributemap">AttributeMapListHeader</td><td>&lt;</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.adas.attributes.html#Enum-AdasTransitionAttributeType" title="Enum defined in nds.adas.attributes">AdasTransitionAttributeType</td></tr></table></td><td>&gt;</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.adas.attributes"
+    {
+        style="dashed, rounded";
+        label="nds.adas.attributes";
+        tooltip="Package nds.adas.attributes";
+        href="../../../content/packages/nds.adas.attributes.html#Package-nds-adas-attributes";
+        target="_parent";
+
+        "AdasTransitionAttributeType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.adas.attributes.html#Enum-AdasTransitionAttributeType" title="Enum defined in nds.adas.attributes">AdasTransitionAttributeType</td></tr></table></font>>];
+    }
+
+    "AdasTransitionAttributeMapListHeader" -> "AttributeMapListHeader&lt;AdasTransitionAttributeType&gt;" [label="uses", fontsize=10];
+    "AdasTransitionAttributeMapListHeader" -> "AdasTransitionAttributeType" [label="uses", fontsize=10];
+}

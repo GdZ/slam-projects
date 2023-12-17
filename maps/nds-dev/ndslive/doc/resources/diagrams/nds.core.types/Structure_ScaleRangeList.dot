@@ -1,0 +1,36 @@
+/**
+ * This dot file creates symbol collaboration diagram for ScaleRangeList.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="ScaleRangeList collaboration diagram";
+
+    subgraph "cluster_nds.core.types"
+    {
+        style="dashed, rounded";
+        label="nds.core.types";
+        tooltip="Package nds.core.types";
+        href="../../../content/packages/nds.core.types.html#Package-nds-core-types";
+        target="_parent";
+
+        "ScaleRangeList" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Structure-ScaleRangeList" title="Structure defined in nds.core.types">ScaleRangeList</td></tr></table></font>>];
+        "ScaleRange" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Structure-ScaleRange" title="Structure defined in nds.core.types">ScaleRange</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.poi.metadata"
+    {
+        style="dashed, rounded";
+        label="nds.poi.metadata";
+        tooltip="Package nds.poi.metadata";
+        href="../../../content/packages/nds.poi.metadata.html#Package-nds-poi-metadata";
+        target="_parent";
+
+        "PoiLayerMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.metadata.html#Structure-PoiLayerMetadata" title="Structure defined in nds.poi.metadata">PoiLayerMetadata</td></tr></table></font>>];
+    }
+
+    "ScaleRangeList" -> "ScaleRange" [label="uses", fontsize=10];
+    "PoiLayerMetadata" -> "ScaleRangeList" [label="uses", fontsize=10];
+}

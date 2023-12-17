@@ -1,0 +1,38 @@
+/**
+ * This dot file creates symbol collaboration diagram for LaneGroupType.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="LaneGroupType collaboration diagram";
+
+    subgraph "cluster_nds.lane.lanegroups"
+    {
+        style="dashed, rounded";
+        label="nds.lane.lanegroups";
+        tooltip="Package nds.lane.lanegroups";
+        href="../../../content/packages/nds.lane.lanegroups.html#Package-nds-lane-lanegroups";
+        target="_parent";
+
+        "LaneGroupType" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.lanegroups.html#Enum-LaneGroupType" title="Enum defined in nds.lane.lanegroups">LaneGroupType</td></tr></table></font>>];
+        "LaneGroup" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.lanegroups.html#Structure-LaneGroup" title="Structure defined in nds.lane.lanegroups">LaneGroup</td></tr></table></font>>];
+        "LaneGroupChoice" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.lanegroups.html#Choice-LaneGroupChoice" title="Choice defined in nds.lane.lanegroups">LaneGroupChoice</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.lane.metadata"
+    {
+        style="dashed, rounded";
+        label="nds.lane.metadata";
+        tooltip="Package nds.lane.metadata";
+        href="../../../content/packages/nds.lane.metadata.html#Package-nds-lane-metadata";
+        target="_parent";
+
+        "LaneLayerMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.metadata.html#Structure-LaneLayerMetadata" title="Structure defined in nds.lane.metadata">LaneLayerMetadata</td></tr></table></font>>];
+    }
+
+    "LaneLayerMetadata" -> "LaneGroupType" [label="uses", fontsize=10];
+    "LaneGroup" -> "LaneGroupType" [label="uses", fontsize=10];
+    "LaneGroupChoice" -> "LaneGroupType" [label="uses", fontsize=10];
+}

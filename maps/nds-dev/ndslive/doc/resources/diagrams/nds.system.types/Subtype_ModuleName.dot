@@ -1,0 +1,386 @@
+/**
+ * This dot file creates symbol collaboration diagram for ModuleName.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="ModuleName collaboration diagram";
+
+    subgraph "cluster_nds.system.types"
+    {
+        style="dashed, rounded";
+        label="nds.system.types";
+        tooltip="Package nds.system.types";
+        href="../../../content/packages/nds.system.types.html#Package-nds-system-types";
+        target="_parent";
+
+        "ModuleName" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.system.types.html#Subtype-ModuleName" title="Subtype defined in nds.system.types">ModuleName</td></tr></table></font>>];
+        "ModuleDefinition" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.system.types.html#Structure-ModuleDefinition" title="Structure defined in nds.system.types">ModuleDefinition</td></tr></table></font>>];
+        "ExternDescriptor" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.system.types.html#Structure-ExternDescriptor" title="Structure defined in nds.system.types">ExternDescriptor</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.signs._module"
+    {
+        style="dashed, rounded";
+        label="nds.signs._module";
+        tooltip="Package nds.signs._module";
+        href="../../../content/packages/nds.signs._module.html#Package-nds-signs-_module";
+        target="_parent";
+
+        "NAME" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.signs._module.html#Constant-NAME" title="Constant defined in nds.signs._module">NAME</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core._module"
+    {
+        style="dashed, rounded";
+        label="nds.core._module";
+        tooltip="Package nds.core._module";
+        href="../../../content/packages/nds.core._module.html#Package-nds-core-_module";
+        target="_parent";
+
+        "NAME" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core._module.html#Constant-NAME" title="Constant defined in nds.core._module">NAME</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.localization._module"
+    {
+        style="dashed, rounded";
+        label="nds.localization._module";
+        tooltip="Package nds.localization._module";
+        href="../../../content/packages/nds.localization._module.html#Package-nds-localization-_module";
+        target="_parent";
+
+        "NAME" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.localization._module.html#Constant-NAME" title="Constant defined in nds.localization._module">NAME</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.registry._module"
+    {
+        style="dashed, rounded";
+        label="nds.registry._module";
+        tooltip="Package nds.registry._module";
+        href="../../../content/packages/nds.registry._module.html#Package-nds-registry-_module";
+        target="_parent";
+
+        "NAME" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.registry._module.html#Constant-NAME" title="Constant defined in nds.registry._module">NAME</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.search._module"
+    {
+        style="dashed, rounded";
+        label="nds.search._module";
+        tooltip="Package nds.search._module";
+        href="../../../content/packages/nds.search._module.html#Package-nds-search-_module";
+        target="_parent";
+
+        "NAME" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.search._module.html#Constant-NAME" title="Constant defined in nds.search._module">NAME</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.routing._module"
+    {
+        style="dashed, rounded";
+        label="nds.routing._module";
+        tooltip="Package nds.routing._module";
+        href="../../../content/packages/nds.routing._module.html#Package-nds-routing-_module";
+        target="_parent";
+
+        "NAME" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routing._module.html#Constant-NAME" title="Constant defined in nds.routing._module">NAME</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.traffic._module"
+    {
+        style="dashed, rounded";
+        label="nds.traffic._module";
+        tooltip="Package nds.traffic._module";
+        href="../../../content/packages/nds.traffic._module.html#Package-nds-traffic-_module";
+        target="_parent";
+
+        "NAME" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.traffic._module.html#Constant-NAME" title="Constant defined in nds.traffic._module">NAME</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.routingdata._module"
+    {
+        style="dashed, rounded";
+        label="nds.routingdata._module";
+        tooltip="Package nds.routingdata._module";
+        href="../../../content/packages/nds.routingdata._module.html#Package-nds-routingdata-_module";
+        target="_parent";
+
+        "NAME" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routingdata._module.html#Constant-NAME" title="Constant defined in nds.routingdata._module">NAME</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.adas._module"
+    {
+        style="dashed, rounded";
+        label="nds.adas._module";
+        tooltip="Package nds.adas._module";
+        href="../../../content/packages/nds.adas._module.html#Package-nds-adas-_module";
+        target="_parent";
+
+        "NAME" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.adas._module.html#Constant-NAME" title="Constant defined in nds.adas._module">NAME</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.vehicle.reference._module"
+    {
+        style="dashed, rounded";
+        label="nds.vehicle.reference._module";
+        tooltip="Package nds.vehicle.reference._module";
+        href="../../../content/packages/nds.vehicle.reference._module.html#Package-nds-vehicle-reference-_module";
+        target="_parent";
+
+        "NAME" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.vehicle.reference._module.html#Constant-NAME" title="Constant defined in nds.vehicle.reference._module">NAME</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.vehicle._module"
+    {
+        style="dashed, rounded";
+        label="nds.vehicle._module";
+        tooltip="Package nds.vehicle._module";
+        href="../../../content/packages/nds.vehicle._module.html#Package-nds-vehicle-_module";
+        target="_parent";
+
+        "NAME" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.vehicle._module.html#Constant-NAME" title="Constant defined in nds.vehicle._module">NAME</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.instructions._module"
+    {
+        style="dashed, rounded";
+        label="nds.instructions._module";
+        tooltip="Package nds.instructions._module";
+        href="../../../content/packages/nds.instructions._module.html#Package-nds-instructions-_module";
+        target="_parent";
+
+        "NAME" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.instructions._module.html#Constant-NAME" title="Constant defined in nds.instructions._module">NAME</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.poi.reference._module"
+    {
+        style="dashed, rounded";
+        label="nds.poi.reference._module";
+        tooltip="Package nds.poi.reference._module";
+        href="../../../content/packages/nds.poi.reference._module.html#Package-nds-poi-reference-_module";
+        target="_parent";
+
+        "NAME" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.reference._module.html#Constant-NAME" title="Constant defined in nds.poi.reference._module">NAME</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.poi._module"
+    {
+        style="dashed, rounded";
+        label="nds.poi._module";
+        tooltip="Package nds.poi._module";
+        href="../../../content/packages/nds.poi._module.html#Package-nds-poi-_module";
+        target="_parent";
+
+        "NAME" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi._module.html#Constant-NAME" title="Constant defined in nds.poi._module">NAME</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.smart._module"
+    {
+        style="dashed, rounded";
+        label="nds.smart._module";
+        tooltip="Package nds.smart._module";
+        href="../../../content/packages/nds.smart._module.html#Package-nds-smart-_module";
+        target="_parent";
+
+        "NAME" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart._module.html#Constant-NAME" title="Constant defined in nds.smart._module">NAME</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.road.reference._module"
+    {
+        style="dashed, rounded";
+        label="nds.road.reference._module";
+        tooltip="Package nds.road.reference._module";
+        href="../../../content/packages/nds.road.reference._module.html#Package-nds-road-reference-_module";
+        target="_parent";
+
+        "NAME" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.road.reference._module.html#Constant-NAME" title="Constant defined in nds.road.reference._module">NAME</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.road._module"
+    {
+        style="dashed, rounded";
+        label="nds.road._module";
+        tooltip="Package nds.road._module";
+        href="../../../content/packages/nds.road._module.html#Package-nds-road-_module";
+        target="_parent";
+
+        "NAME" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.road._module.html#Constant-NAME" title="Constant defined in nds.road._module">NAME</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.venue.reference._module"
+    {
+        style="dashed, rounded";
+        label="nds.venue.reference._module";
+        tooltip="Package nds.venue.reference._module";
+        href="../../../content/packages/nds.venue.reference._module.html#Package-nds-venue-reference-_module";
+        target="_parent";
+
+        "NAME" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.reference._module.html#Constant-NAME" title="Constant defined in nds.venue.reference._module">NAME</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.venue._module"
+    {
+        style="dashed, rounded";
+        label="nds.venue._module";
+        tooltip="Package nds.venue._module";
+        href="../../../content/packages/nds.venue._module.html#Package-nds-venue-_module";
+        target="_parent";
+
+        "NAME" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue._module.html#Constant-NAME" title="Constant defined in nds.venue._module">NAME</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.venue.details._module"
+    {
+        style="dashed, rounded";
+        label="nds.venue.details._module";
+        tooltip="Package nds.venue.details._module";
+        href="../../../content/packages/nds.venue.details._module.html#Package-nds-venue-details-_module";
+        target="_parent";
+
+        "NAME" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.details._module.html#Constant-NAME" title="Constant defined in nds.venue.details._module">NAME</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.display.reference._module"
+    {
+        style="dashed, rounded";
+        label="nds.display.reference._module";
+        tooltip="Package nds.display.reference._module";
+        href="../../../content/packages/nds.display.reference._module.html#Package-nds-display-reference-_module";
+        target="_parent";
+
+        "NAME" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.reference._module.html#Constant-NAME" title="Constant defined in nds.display.reference._module">NAME</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.display._module"
+    {
+        style="dashed, rounded";
+        label="nds.display._module";
+        tooltip="Package nds.display._module";
+        href="../../../content/packages/nds.display._module.html#Package-nds-display-_module";
+        target="_parent";
+
+        "NAME" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display._module.html#Constant-NAME" title="Constant defined in nds.display._module">NAME</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.display.types"
+    {
+        style="dashed, rounded";
+        label="nds.display.types";
+        tooltip="Package nds.display.types";
+        href="../../../content/packages/nds.display.types.html#Package-nds-display-types";
+        target="_parent";
+
+        "GenericIconSetMap" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.types.html#Structure-GenericIconSetMap" title="Structure defined in nds.display.types">GenericIconSetMap</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.display.details._module"
+    {
+        style="dashed, rounded";
+        label="nds.display.details._module";
+        tooltip="Package nds.display.details._module";
+        href="../../../content/packages/nds.display.details._module.html#Package-nds-display-details-_module";
+        target="_parent";
+
+        "NAME" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.details._module.html#Constant-NAME" title="Constant defined in nds.display.details._module">NAME</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.name._module"
+    {
+        style="dashed, rounded";
+        label="nds.name._module";
+        tooltip="Package nds.name._module";
+        href="../../../content/packages/nds.name._module.html#Package-nds-name-_module";
+        target="_parent";
+
+        "NAME" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name._module.html#Constant-NAME" title="Constant defined in nds.name._module">NAME</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.rules._module"
+    {
+        style="dashed, rounded";
+        label="nds.rules._module";
+        tooltip="Package nds.rules._module";
+        href="../../../content/packages/nds.rules._module.html#Package-nds-rules-_module";
+        target="_parent";
+
+        "NAME" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules._module.html#Constant-NAME" title="Constant defined in nds.rules._module">NAME</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.system._module"
+    {
+        style="dashed, rounded";
+        label="nds.system._module";
+        tooltip="Package nds.system._module";
+        href="../../../content/packages/nds.system._module.html#Package-nds-system-_module";
+        target="_parent";
+
+        "NAME" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.system._module.html#Constant-NAME" title="Constant defined in nds.system._module">NAME</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.characteristics._module"
+    {
+        style="dashed, rounded";
+        label="nds.characteristics._module";
+        tooltip="Package nds.characteristics._module";
+        href="../../../content/packages/nds.characteristics._module.html#Package-nds-characteristics-_module";
+        target="_parent";
+
+        "NAME" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics._module.html#Constant-NAME" title="Constant defined in nds.characteristics._module">NAME</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.lane.reference._module"
+    {
+        style="dashed, rounded";
+        label="nds.lane.reference._module";
+        tooltip="Package nds.lane.reference._module";
+        href="../../../content/packages/nds.lane.reference._module.html#Package-nds-lane-reference-_module";
+        target="_parent";
+
+        "NAME" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.reference._module.html#Constant-NAME" title="Constant defined in nds.lane.reference._module">NAME</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.lane._module"
+    {
+        style="dashed, rounded";
+        label="nds.lane._module";
+        tooltip="Package nds.lane._module";
+        href="../../../content/packages/nds.lane._module.html#Package-nds-lane-_module";
+        target="_parent";
+
+        "NAME" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane._module.html#Constant-NAME" title="Constant defined in nds.lane._module">NAME</td></tr></table></font>>];
+    }
+
+    "NAME" -> "ModuleName" [label="uses", fontsize=10];
+    "ModuleDefinition" -> "ModuleName" [label="uses", fontsize=10];
+    "ExternDescriptor" -> "ModuleName" [label="uses", fontsize=10];
+    "NAME" -> "ModuleName" [label="uses", fontsize=10];
+    "NAME" -> "ModuleName" [label="uses", fontsize=10];
+    "NAME" -> "ModuleName" [label="uses", fontsize=10];
+    "NAME" -> "ModuleName" [label="uses", fontsize=10];
+    "NAME" -> "ModuleName" [label="uses", fontsize=10];
+    "NAME" -> "ModuleName" [label="uses", fontsize=10];
+    "NAME" -> "ModuleName" [label="uses", fontsize=10];
+    "NAME" -> "ModuleName" [label="uses", fontsize=10];
+    "NAME" -> "ModuleName" [label="uses", fontsize=10];
+    "NAME" -> "ModuleName" [label="uses", fontsize=10];
+    "NAME" -> "ModuleName" [label="uses", fontsize=10];
+    "NAME" -> "ModuleName" [label="uses", fontsize=10];
+    "NAME" -> "ModuleName" [label="uses", fontsize=10];
+    "NAME" -> "ModuleName" [label="uses", fontsize=10];
+    "NAME" -> "ModuleName" [label="uses", fontsize=10];
+    "NAME" -> "ModuleName" [label="uses", fontsize=10];
+    "NAME" -> "ModuleName" [label="uses", fontsize=10];
+    "NAME" -> "ModuleName" [label="uses", fontsize=10];
+    "NAME" -> "ModuleName" [label="uses", fontsize=10];
+    "NAME" -> "ModuleName" [label="uses", fontsize=10];
+    "NAME" -> "ModuleName" [label="uses", fontsize=10];
+    "GenericIconSetMap" -> "ModuleName" [label="uses", fontsize=10];
+    "NAME" -> "ModuleName" [label="uses", fontsize=10];
+    "NAME" -> "ModuleName" [label="uses", fontsize=10];
+    "NAME" -> "ModuleName" [label="uses", fontsize=10];
+    "NAME" -> "ModuleName" [label="uses", fontsize=10];
+    "NAME" -> "ModuleName" [label="uses", fontsize=10];
+    "NAME" -> "ModuleName" [label="uses", fontsize=10];
+    "NAME" -> "ModuleName" [label="uses", fontsize=10];
+}

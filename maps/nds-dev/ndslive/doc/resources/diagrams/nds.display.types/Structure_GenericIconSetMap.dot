@@ -1,0 +1,50 @@
+/**
+ * This dot file creates symbol collaboration diagram for GenericIconSetMap.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="GenericIconSetMap collaboration diagram";
+
+    subgraph "cluster_nds.display.types"
+    {
+        style="dashed, rounded";
+        label="nds.display.types";
+        tooltip="Package nds.display.types";
+        href="../../../content/packages/nds.display.types.html#Package-nds-display-types";
+        target="_parent";
+
+        "GenericIconSetMap" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.types.html#Structure-GenericIconSetMap" title="Structure defined in nds.display.types">GenericIconSetMap</td></tr></table></font>>];
+        "GenericIconSetMapElement" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.types.html#Structure-GenericIconSetMapElement" title="Structure defined in nds.display.types">GenericIconSetMapElement</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.system.types"
+    {
+        style="dashed, rounded";
+        label="nds.system.types";
+        tooltip="Package nds.system.types";
+        href="../../../content/packages/nds.system.types.html#Package-nds-system-types";
+        target="_parent";
+
+        "ModuleName" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.system.types.html#Subtype-ModuleName" title="Subtype defined in nds.system.types">ModuleName</td></tr></table></font>>];
+        "ModuleVersion" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.system.types.html#Subtype-ModuleVersion" title="Subtype defined in nds.system.types">ModuleVersion</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.display.layer"
+    {
+        style="dashed, rounded";
+        label="nds.display.layer";
+        tooltip="Package nds.display.layer";
+        href="../../../content/packages/nds.display.layer.html#Package-nds-display-layer";
+        target="_parent";
+
+        "IconLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.layer.html#Structure-IconLayer" title="Structure defined in nds.display.layer">IconLayer</td></tr></table></font>>];
+    }
+
+    "GenericIconSetMap" -> "ModuleName" [label="uses", fontsize=10];
+    "GenericIconSetMap" -> "ModuleVersion" [label="uses", fontsize=10];
+    "GenericIconSetMap" -> "GenericIconSetMapElement" [label="uses", fontsize=10];
+    "IconLayer" -> "GenericIconSetMap" [label="uses", fontsize=10];
+}

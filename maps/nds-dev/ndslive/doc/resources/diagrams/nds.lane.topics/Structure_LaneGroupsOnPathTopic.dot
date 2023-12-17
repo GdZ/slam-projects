@@ -1,0 +1,72 @@
+/**
+ * This dot file creates symbol collaboration diagram for LaneGroupsOnPathTopic.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="LaneGroupsOnPathTopic collaboration diagram";
+
+    subgraph "cluster_nds.lane.topics"
+    {
+        style="dashed, rounded";
+        label="nds.lane.topics";
+        tooltip="Package nds.lane.topics";
+        href="../../../content/packages/nds.lane.topics.html#Package-nds-lane-topics";
+        target="_parent";
+
+        "LaneGroupsOnPathTopic" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.topics.html#Structure-LaneGroupsOnPathTopic" title="Structure defined in nds.lane.topics">LaneGroupsOnPathTopic</td></tr></table></font>>];
+        "LaneTopicCollection" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.topics.html#Pubsub-LaneTopicCollection" title="Pubsub defined in nds.lane.topics">LaneTopicCollection</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.types"
+    {
+        style="dashed, rounded";
+        label="nds.core.types";
+        tooltip="Package nds.core.types";
+        href="../../../content/packages/nds.core.types.html#Package-nds-core-types";
+        target="_parent";
+
+        "TimeStamp" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Structure-TimeStamp" title="Structure defined in nds.core.types">TimeStamp</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.vehicle.reference.types"
+    {
+        style="dashed, rounded";
+        label="nds.vehicle.reference.types";
+        tooltip="Package nds.vehicle.reference.types";
+        href="../../../content/packages/nds.vehicle.reference.types.html#Package-nds-vehicle-reference-types";
+        target="_parent";
+
+        "HorizonPathId" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.vehicle.reference.types.html#Subtype-HorizonPathId" title="Subtype defined in nds.vehicle.reference.types">HorizonPathId</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.lane.boundaries"
+    {
+        style="dashed, rounded";
+        label="nds.lane.boundaries";
+        tooltip="Package nds.lane.boundaries";
+        href="../../../content/packages/nds.lane.boundaries.html#Package-nds-lane-boundaries";
+        target="_parent";
+
+        "BoundaryElementDefinitions" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.boundaries.html#Structure-BoundaryElementDefinitions" title="Structure defined in nds.lane.boundaries">BoundaryElementDefinitions</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.lane.lanegroups"
+    {
+        style="dashed, rounded";
+        label="nds.lane.lanegroups";
+        tooltip="Package nds.lane.lanegroups";
+        href="../../../content/packages/nds.lane.lanegroups.html#Package-nds-lane-lanegroups";
+        target="_parent";
+
+        "LaneGroup" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.lanegroups.html#Structure-LaneGroup" title="Structure defined in nds.lane.lanegroups">LaneGroup</td></tr></table></font>>];
+    }
+
+    "LaneGroupsOnPathTopic" -> "TimeStamp" [label="uses", fontsize=10];
+    "LaneGroupsOnPathTopic" -> "HorizonPathId" [label="uses", fontsize=10];
+    "LaneGroupsOnPathTopic" -> "BoundaryElementDefinitions" [label="uses", fontsize=10];
+    "LaneGroupsOnPathTopic" -> "LaneGroup" [label="uses", fontsize=10];
+    "LaneTopicCollection" -> "LaneGroupsOnPathTopic" [label="uses", fontsize=10];
+}

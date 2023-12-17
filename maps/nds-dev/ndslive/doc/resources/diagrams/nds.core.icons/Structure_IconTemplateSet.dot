@@ -1,0 +1,42 @@
+/**
+ * This dot file creates symbol collaboration diagram for IconTemplateSet.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="IconTemplateSet collaboration diagram";
+
+    subgraph "cluster_nds.core.icons"
+    {
+        style="dashed, rounded";
+        label="nds.core.icons";
+        tooltip="Package nds.core.icons";
+        href="../../../content/packages/nds.core.icons.html#Package-nds-core-icons";
+        target="_parent";
+
+        "IconTemplateSet" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.icons.html#Structure-IconTemplateSet" title="Structure defined in nds.core.icons">IconTemplateSet</td></tr></table></font>>];
+        "IconTemplateSetId" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.icons.html#Subtype-IconTemplateSetId" title="Subtype defined in nds.core.icons">IconTemplateSetId</td></tr></table></font>>];
+        "IconUsageType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.icons.html#Bitmask-IconUsageType" title="Bitmask defined in nds.core.icons">IconUsageType</td></tr></table></font>>];
+        "ImageAnchorPos" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.icons.html#Structure-ImageAnchorPos" title="Structure defined in nds.core.icons">ImageAnchorPos</td></tr></table></font>>];
+        "IconId" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.icons.html#Subtype-IconId" title="Subtype defined in nds.core.icons">IconId</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.display.layer"
+    {
+        style="dashed, rounded";
+        label="nds.display.layer";
+        tooltip="Package nds.display.layer";
+        href="../../../content/packages/nds.display.layer.html#Package-nds-display-layer";
+        target="_parent";
+
+        "IconLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.layer.html#Structure-IconLayer" title="Structure defined in nds.display.layer">IconLayer</td></tr></table></font>>];
+    }
+
+    "IconTemplateSet" -> "IconTemplateSetId" [label="uses", fontsize=10];
+    "IconTemplateSet" -> "IconUsageType" [label="uses", fontsize=10];
+    "IconTemplateSet" -> "ImageAnchorPos" [label="uses", fontsize=10];
+    "IconTemplateSet" -> "IconId" [label="uses", fontsize=10];
+    "IconLayer" -> "IconTemplateSet" [label="uses", fontsize=10];
+}

@@ -1,0 +1,36 @@
+/**
+ * This dot file creates symbol collaboration diagram for HeightmapGridId.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="HeightmapGridId collaboration diagram";
+
+    subgraph "cluster_nds.display.types"
+    {
+        style="dashed, rounded";
+        label="nds.display.types";
+        tooltip="Package nds.display.types";
+        href="../../../content/packages/nds.display.types.html#Package-nds-display-types";
+        target="_parent";
+
+        "HeightmapGridId" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.types.html#Subtype-HeightmapGridId" title="Subtype defined in nds.display.types">HeightmapGridId</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.display.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.display.instantiations";
+        tooltip="Package nds.display.instantiations";
+        href="../../../content/packages/nds.display.instantiations.html#Package-nds-display-instantiations";
+        target="_parent";
+
+        "HeightMapGridLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.instantiations.html#InstantiateType-HeightMapGridLayer" title="InstantiateType defined in nds.display.instantiations">HeightMapGridLayer</td></tr></table></font>>];
+        "GridLayer&lt;HeightmapGridId,GridType,Elevation&gt;" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.grid.html#Structure-GridLayer" title="Structure defined in nds.core.grid">GridLayer</td><td>&lt;</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.types.html#Subtype-HeightmapGridId" title="Subtype defined in nds.display.types">HeightmapGridId</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.grid.html#Subtype-GridType" title="Subtype defined in nds.core.grid">GridType</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Subtype-Elevation" title="Subtype defined in nds.core.geometry">Elevation</td></tr></table></td><td>&gt;</td></tr></table></font>>];
+    }
+
+    "HeightMapGridLayer" -> "HeightmapGridId" [label="uses", fontsize=10];
+    "GridLayer&lt;HeightmapGridId,GridType,Elevation&gt;" -> "HeightmapGridId" [label="uses", fontsize=10];
+}

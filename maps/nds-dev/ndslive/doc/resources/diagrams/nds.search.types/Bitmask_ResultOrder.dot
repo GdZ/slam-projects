@@ -1,0 +1,36 @@
+/**
+ * This dot file creates symbol collaboration diagram for ResultOrder.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="ResultOrder collaboration diagram";
+
+    subgraph "cluster_nds.search.types"
+    {
+        style="dashed, rounded";
+        label="nds.search.types";
+        tooltip="Package nds.search.types";
+        href="../../../content/packages/nds.search.types.html#Package-nds-search-types";
+        target="_parent";
+
+        "ResultOrder" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.search.types.html#Bitmask-ResultOrder" title="Bitmask defined in nds.search.types">ResultOrder</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.search.services"
+    {
+        style="dashed, rounded";
+        label="nds.search.services";
+        tooltip="Package nds.search.services";
+        href="../../../content/packages/nds.search.services.html#Package-nds-search-services";
+        target="_parent";
+
+        "SupportedSearchConfiguration" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.search.services.html#Structure-SupportedSearchConfiguration" title="Structure defined in nds.search.services">SupportedSearchConfiguration</td></tr></table></font>>];
+        "GeneralSearchRequest" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.search.services.html#Structure-GeneralSearchRequest" title="Structure defined in nds.search.services">GeneralSearchRequest</td></tr></table></font>>];
+    }
+
+    "SupportedSearchConfiguration" -> "ResultOrder" [label="uses", fontsize=10];
+    "GeneralSearchRequest" -> "ResultOrder" [label="uses", fontsize=10];
+}

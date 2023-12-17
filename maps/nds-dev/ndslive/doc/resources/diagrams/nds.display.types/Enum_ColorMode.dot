@@ -1,0 +1,24 @@
+/**
+ * This dot file creates symbol collaboration diagram for ColorMode.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="ColorMode collaboration diagram";
+
+    subgraph "cluster_nds.display.types"
+    {
+        style="dashed, rounded";
+        label="nds.display.types";
+        tooltip="Package nds.display.types";
+        href="../../../content/packages/nds.display.types.html#Package-nds-display-types";
+        target="_parent";
+
+        "ColorMode" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.types.html#Enum-ColorMode" title="Enum defined in nds.display.types">ColorMode</td></tr></table></font>>];
+        "Mesh3DRenderConfiguration" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.types.html#Structure-Mesh3DRenderConfiguration" title="Structure defined in nds.display.types">Mesh3DRenderConfiguration</td></tr></table></font>>];
+    }
+
+    "Mesh3DRenderConfiguration" -> "ColorMode" [label="uses", fontsize=10];
+}

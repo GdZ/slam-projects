@@ -1,0 +1,24 @@
+/**
+ * This dot file creates symbol collaboration diagram for UNKNOWN_MARKING_DASH_LENGTH.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="UNKNOWN_MARKING_DASH_LENGTH collaboration diagram";
+
+    subgraph "cluster_nds.lane.boundaries"
+    {
+        style="dashed, rounded";
+        label="nds.lane.boundaries";
+        tooltip="Package nds.lane.boundaries";
+        href="../../../content/packages/nds.lane.boundaries.html#Package-nds-lane-boundaries";
+        target="_parent";
+
+        "UNKNOWN_MARKING_DASH_LENGTH" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.boundaries.html#Constant-UNKNOWN_MARKING_DASH_LENGTH" title="Constant defined in nds.lane.boundaries">UNKNOWN_MARKING_DASH_LENGTH</td></tr></table></font>>];
+        "BoundaryMarkingDashLength" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.boundaries.html#Subtype-BoundaryMarkingDashLength" title="Subtype defined in nds.lane.boundaries">BoundaryMarkingDashLength</td></tr></table></font>>];
+    }
+
+    "UNKNOWN_MARKING_DASH_LENGTH" -> "BoundaryMarkingDashLength" [label="uses", fontsize=10];
+}

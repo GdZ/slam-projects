@@ -1,0 +1,36 @@
+/**
+ * This dot file creates symbol collaboration diagram for SpecialTransitionCode.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="SpecialTransitionCode collaboration diagram";
+
+    subgraph "cluster_nds.routingdata.types"
+    {
+        style="dashed, rounded";
+        label="nds.routingdata.types";
+        tooltip="Package nds.routingdata.types";
+        href="../../../content/packages/nds.routingdata.types.html#Package-nds-routingdata-types";
+        target="_parent";
+
+        "SpecialTransitionCode" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routingdata.types.html#Enum-SpecialTransitionCode" title="Enum defined in nds.routingdata.types">SpecialTransitionCode</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.routingdata.attributes"
+    {
+        style="dashed, rounded";
+        label="nds.routingdata.attributes";
+        tooltip="Package nds.routingdata.attributes";
+        href="../../../content/packages/nds.routingdata.attributes.html#Package-nds-routingdata-attributes";
+        target="_parent";
+
+        "RoutingRoadTransitionAttributeValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routingdata.attributes.html#Choice-RoutingRoadTransitionAttributeValue" title="Choice defined in nds.routingdata.attributes">RoutingRoadTransitionAttributeValue</td></tr></table></font>>];
+        "RoutingLaneTransitionAttributeValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routingdata.attributes.html#Choice-RoutingLaneTransitionAttributeValue" title="Choice defined in nds.routingdata.attributes">RoutingLaneTransitionAttributeValue</td></tr></table></font>>];
+    }
+
+    "RoutingRoadTransitionAttributeValue" -> "SpecialTransitionCode" [label="uses", fontsize=10];
+    "RoutingLaneTransitionAttributeValue" -> "SpecialTransitionCode" [label="uses", fontsize=10];
+}

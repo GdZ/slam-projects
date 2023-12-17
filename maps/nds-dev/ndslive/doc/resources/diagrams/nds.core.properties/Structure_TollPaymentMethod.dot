@@ -1,0 +1,28 @@
+/**
+ * This dot file creates symbol collaboration diagram for TollPaymentMethod.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="TollPaymentMethod collaboration diagram";
+
+    subgraph "cluster_nds.core.properties"
+    {
+        style="dashed, rounded";
+        label="nds.core.properties";
+        tooltip="Package nds.core.properties";
+        href="../../../content/packages/nds.core.properties.html#Package-nds-core-properties";
+        target="_parent";
+
+        "TollPaymentMethod" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.properties.html#Structure-TollPaymentMethod" title="Structure defined in nds.core.properties">TollPaymentMethod</td></tr></table></font>>];
+        "TollPaymentMethodType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.properties.html#Enum-TollPaymentMethodType" title="Enum defined in nds.core.properties">TollPaymentMethodType</td></tr></table></font>>];
+        "TollCollectionProvider" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.properties.html#Subtype-TollCollectionProvider" title="Subtype defined in nds.core.properties">TollCollectionProvider</td></tr></table></font>>];
+        "CorePropertyValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.properties.html#Choice-CorePropertyValue" title="Choice defined in nds.core.properties">CorePropertyValue</td></tr></table></font>>];
+    }
+
+    "TollPaymentMethod" -> "TollPaymentMethodType" [label="uses", fontsize=10];
+    "TollPaymentMethod" -> "TollCollectionProvider" [label="uses", fontsize=10];
+    "CorePropertyValue" -> "TollPaymentMethod" [label="uses", fontsize=10];
+}

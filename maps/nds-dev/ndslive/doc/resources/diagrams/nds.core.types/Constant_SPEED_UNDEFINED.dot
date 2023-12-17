@@ -1,0 +1,36 @@
+/**
+ * This dot file creates symbol collaboration diagram for SPEED_UNDEFINED.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="SPEED_UNDEFINED collaboration diagram";
+
+    subgraph "cluster_nds.core.types"
+    {
+        style="dashed, rounded";
+        label="nds.core.types";
+        tooltip="Package nds.core.types";
+        href="../../../content/packages/nds.core.types.html#Package-nds-core-types";
+        target="_parent";
+
+        "SPEED_UNDEFINED" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Constant-SPEED_UNDEFINED" title="Constant defined in nds.core.types">SPEED_UNDEFINED</td></tr></table></font>>];
+        "Speed" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Subtype-Speed" title="Subtype defined in nds.core.types">Speed</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.routingdata.types"
+    {
+        style="dashed, rounded";
+        label="nds.routingdata.types";
+        tooltip="Package nds.routingdata.types";
+        href="../../../content/packages/nds.routingdata.types.html#Package-nds-routingdata-types";
+        target="_parent";
+
+        "ConsumptionSpeedValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routingdata.types.html#Structure-ConsumptionSpeedValue" title="Structure defined in nds.routingdata.types">ConsumptionSpeedValue</td></tr></table></font>>];
+    }
+
+    "SPEED_UNDEFINED" -> "Speed" [label="uses", fontsize=10];
+    "ConsumptionSpeedValue" -> "SPEED_UNDEFINED" [label="uses", fontsize=10];
+}

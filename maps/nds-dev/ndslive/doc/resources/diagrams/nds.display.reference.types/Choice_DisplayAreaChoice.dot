@@ -1,0 +1,40 @@
+/**
+ * This dot file creates symbol collaboration diagram for DisplayAreaChoice.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="DisplayAreaChoice collaboration diagram";
+
+    subgraph "cluster_nds.display.reference.types"
+    {
+        style="dashed, rounded";
+        label="nds.display.reference.types";
+        tooltip="Package nds.display.reference.types";
+        href="../../../content/packages/nds.display.reference.types.html#Package-nds-display-reference-types";
+        target="_parent";
+
+        "DisplayAreaChoice" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.reference.types.html#Choice-DisplayAreaChoice" title="Choice defined in nds.display.reference.types">DisplayAreaChoice</td></tr></table></font>>];
+        "DisplayAreaValidityType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.reference.types.html#Enum-DisplayAreaValidityType" title="Enum defined in nds.display.reference.types">DisplayAreaValidityType</td></tr></table></font>>];
+        "LabelPositioningHint" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.reference.types.html#Structure-LabelPositioningHint" title="Structure defined in nds.display.reference.types">LabelPositioningHint</td></tr></table></font>>];
+        "DisplayAreaValidity" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.reference.types.html#Structure-DisplayAreaValidity" title="Structure defined in nds.display.reference.types">DisplayAreaValidity</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.geometry"
+    {
+        style="dashed, rounded";
+        label="nds.core.geometry";
+        tooltip="Package nds.core.geometry";
+        href="../../../content/packages/nds.core.geometry.html#Package-nds-core-geometry";
+        target="_parent";
+
+        "CoordShift" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Subtype-CoordShift" title="Subtype defined in nds.core.geometry">CoordShift</td></tr></table></font>>];
+    }
+
+    "DisplayAreaChoice" -> "DisplayAreaValidityType" [label="uses", fontsize=10];
+    "DisplayAreaChoice" -> "CoordShift" [label="uses", fontsize=10];
+    "DisplayAreaChoice" -> "LabelPositioningHint" [label="uses", fontsize=10];
+    "DisplayAreaValidity" -> "DisplayAreaChoice" [label="uses", fontsize=10];
+}

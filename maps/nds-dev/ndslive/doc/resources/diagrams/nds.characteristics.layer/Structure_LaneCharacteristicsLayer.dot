@@ -1,0 +1,64 @@
+/**
+ * This dot file creates symbol collaboration diagram for LaneCharacteristicsLayer.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="LaneCharacteristicsLayer collaboration diagram";
+
+    subgraph "cluster_nds.characteristics.layer"
+    {
+        style="dashed, rounded";
+        label="nds.characteristics.layer";
+        tooltip="Package nds.characteristics.layer";
+        href="../../../content/packages/nds.characteristics.layer.html#Package-nds-characteristics-layer";
+        target="_parent";
+
+        "LaneCharacteristicsLayer" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.layer.html#Structure-LaneCharacteristicsLayer" title="Structure defined in nds.characteristics.layer">LaneCharacteristicsLayer</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.characteristics.metadata"
+    {
+        style="dashed, rounded";
+        label="nds.characteristics.metadata";
+        tooltip="Package nds.characteristics.metadata";
+        href="../../../content/packages/nds.characteristics.metadata.html#Package-nds-characteristics-metadata";
+        target="_parent";
+
+        "LaneCharacsLayerContent" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.metadata.html#Bitmask-LaneCharacsLayerContent" title="Bitmask defined in nds.characteristics.metadata">LaneCharacsLayerContent</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.characteristics.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.characteristics.instantiations";
+        tooltip="Package nds.characteristics.instantiations";
+        href="../../../content/packages/nds.characteristics.instantiations.html#Package-nds-characteristics-instantiations";
+        target="_parent";
+
+        "CharacsLaneRangeAttributeMapList" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.instantiations.html#InstantiateType-CharacsLaneRangeAttributeMapList" title="InstantiateType defined in nds.characteristics.instantiations">CharacsLaneRangeAttributeMapList</td></tr></table></font>>];
+        "CharacsLanePositionAttributeMapList" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.instantiations.html#InstantiateType-CharacsLanePositionAttributeMapList" title="InstantiateType defined in nds.characteristics.instantiations">CharacsLanePositionAttributeMapList</td></tr></table></font>>];
+        "CharacsLaneRangeAttributeSetList" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.instantiations.html#InstantiateType-CharacsLaneRangeAttributeSetList" title="InstantiateType defined in nds.characteristics.instantiations">CharacsLaneRangeAttributeSetList</td></tr></table></font>>];
+        "CharacsLanePositionAttributeSetList" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.instantiations.html#InstantiateType-CharacsLanePositionAttributeSetList" title="InstantiateType defined in nds.characteristics.instantiations">CharacsLanePositionAttributeSetList</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.system.types"
+    {
+        style="dashed, rounded";
+        label="nds.system.types";
+        tooltip="Package nds.system.types";
+        href="../../../content/packages/nds.system.types.html#Package-nds-system-types";
+        target="_parent";
+
+        "LayerType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.system.types.html#Enum-LayerType" title="Enum defined in nds.system.types">LayerType</td></tr></table></font>>];
+    }
+
+    "LaneCharacteristicsLayer" -> "LaneCharacsLayerContent" [label="uses", fontsize=10];
+    "LaneCharacteristicsLayer" -> "CharacsLaneRangeAttributeMapList" [label="uses", fontsize=10];
+    "LaneCharacteristicsLayer" -> "CharacsLanePositionAttributeMapList" [label="uses", fontsize=10];
+    "LaneCharacteristicsLayer" -> "CharacsLaneRangeAttributeSetList" [label="uses", fontsize=10];
+    "LaneCharacteristicsLayer" -> "CharacsLanePositionAttributeSetList" [label="uses", fontsize=10];
+    "LaneCharacteristicsLayer" -> "LayerType" [label="uses", fontsize=10];
+}

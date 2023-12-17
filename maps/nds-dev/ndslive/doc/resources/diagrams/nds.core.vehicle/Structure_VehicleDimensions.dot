@@ -1,0 +1,32 @@
+/**
+ * This dot file creates symbol collaboration diagram for VehicleDimensions.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="VehicleDimensions collaboration diagram";
+
+    subgraph "cluster_nds.core.vehicle"
+    {
+        style="dashed, rounded";
+        label="nds.core.vehicle";
+        tooltip="Package nds.core.vehicle";
+        href="../../../content/packages/nds.core.vehicle.html#Package-nds-core-vehicle";
+        target="_parent";
+
+        "VehicleDimensions" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.vehicle.html#Structure-VehicleDimensions" title="Structure defined in nds.core.vehicle">VehicleDimensions</td></tr></table></font>>];
+        "VehicleLength" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.vehicle.html#Subtype-VehicleLength" title="Subtype defined in nds.core.vehicle">VehicleLength</td></tr></table></font>>];
+        "VehicleWidth" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.vehicle.html#Subtype-VehicleWidth" title="Subtype defined in nds.core.vehicle">VehicleWidth</td></tr></table></font>>];
+        "VehicleHeight" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.vehicle.html#Subtype-VehicleHeight" title="Subtype defined in nds.core.vehicle">VehicleHeight</td></tr></table></font>>];
+        "VehicleWeight" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.vehicle.html#Subtype-VehicleWeight" title="Subtype defined in nds.core.vehicle">VehicleWeight</td></tr></table></font>>];
+        "VehicleClassSpecification" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.vehicle.html#Structure-VehicleClassSpecification" title="Structure defined in nds.core.vehicle">VehicleClassSpecification</td></tr></table></font>>];
+    }
+
+    "VehicleDimensions" -> "VehicleLength" [label="uses", fontsize=10];
+    "VehicleDimensions" -> "VehicleWidth" [label="uses", fontsize=10];
+    "VehicleDimensions" -> "VehicleHeight" [label="uses", fontsize=10];
+    "VehicleDimensions" -> "VehicleWeight" [label="uses", fontsize=10];
+    "VehicleClassSpecification" -> "VehicleDimensions" [label="uses", fontsize=10];
+}

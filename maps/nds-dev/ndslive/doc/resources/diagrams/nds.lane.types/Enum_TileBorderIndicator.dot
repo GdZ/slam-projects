@@ -1,0 +1,34 @@
+/**
+ * This dot file creates symbol collaboration diagram for TileBorderIndicator.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="TileBorderIndicator collaboration diagram";
+
+    subgraph "cluster_nds.lane.types"
+    {
+        style="dashed, rounded";
+        label="nds.lane.types";
+        tooltip="Package nds.lane.types";
+        href="../../../content/packages/nds.lane.types.html#Package-nds-lane-types";
+        target="_parent";
+
+        "TileBorderIndicator" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.types.html#Enum-TileBorderIndicator" title="Enum defined in nds.lane.types">TileBorderIndicator</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.lane.lanegroups"
+    {
+        style="dashed, rounded";
+        label="nds.lane.lanegroups";
+        tooltip="Package nds.lane.lanegroups";
+        href="../../../content/packages/nds.lane.lanegroups.html#Package-nds-lane-lanegroups";
+        target="_parent";
+
+        "LaneGroupConnector" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.lanegroups.html#Structure-LaneGroupConnector" title="Structure defined in nds.lane.lanegroups">LaneGroupConnector</td></tr></table></font>>];
+    }
+
+    "LaneGroupConnector" -> "TileBorderIndicator" [label="uses", fontsize=10];
+}

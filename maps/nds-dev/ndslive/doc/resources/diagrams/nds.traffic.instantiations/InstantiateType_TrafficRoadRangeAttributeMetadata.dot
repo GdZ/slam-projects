@@ -1,0 +1,64 @@
+/**
+ * This dot file creates symbol collaboration diagram for TrafficRoadRangeAttributeMetadata.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="TrafficRoadRangeAttributeMetadata collaboration diagram";
+
+    subgraph "cluster_nds.traffic.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.traffic.instantiations";
+        tooltip="Package nds.traffic.instantiations";
+        href="../../../content/packages/nds.traffic.instantiations.html#Package-nds-traffic-instantiations";
+        target="_parent";
+
+        "TrafficRoadRangeAttributeMetadata" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.traffic.instantiations.html#InstantiateType-TrafficRoadRangeAttributeMetadata" title="InstantiateType defined in nds.traffic.instantiations">TrafficRoadRangeAttributeMetadata</td></tr></table></font>>];
+        "AttributeMetadata&lt;TrafficRoadRangeAttributeType,TrafficPropertyType&gt;" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.attributemap.html#Structure-AttributeMetadata" title="Structure defined in nds.core.attributemap">AttributeMetadata</td><td>&lt;</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.traffic.attributes.html#Enum-TrafficRoadRangeAttributeType" title="Enum defined in nds.traffic.attributes">TrafficRoadRangeAttributeType</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.traffic.properties.html#Structure-TrafficPropertyType" title="Structure defined in nds.traffic.properties">TrafficPropertyType</td></tr></table></td><td>&gt;</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.traffic.attributes"
+    {
+        style="dashed, rounded";
+        label="nds.traffic.attributes";
+        tooltip="Package nds.traffic.attributes";
+        href="../../../content/packages/nds.traffic.attributes.html#Package-nds-traffic-attributes";
+        target="_parent";
+
+        "TrafficRoadRangeAttributeType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.traffic.attributes.html#Enum-TrafficRoadRangeAttributeType" title="Enum defined in nds.traffic.attributes">TrafficRoadRangeAttributeType</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.traffic.properties"
+    {
+        style="dashed, rounded";
+        label="nds.traffic.properties";
+        tooltip="Package nds.traffic.properties";
+        href="../../../content/packages/nds.traffic.properties.html#Package-nds-traffic-properties";
+        target="_parent";
+
+        "TrafficPropertyType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.traffic.properties.html#Structure-TrafficPropertyType" title="Structure defined in nds.traffic.properties">TrafficPropertyType</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.traffic.metadata"
+    {
+        style="dashed, rounded";
+        label="nds.traffic.metadata";
+        tooltip="Package nds.traffic.metadata";
+        href="../../../content/packages/nds.traffic.metadata.html#Package-nds-traffic-metadata";
+        target="_parent";
+
+        "RoadTrafficLayerMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.traffic.metadata.html#Structure-RoadTrafficLayerMetadata" title="Structure defined in nds.traffic.metadata">RoadTrafficLayerMetadata</td></tr></table></font>>];
+        "RoadTrafficLayerIndirectMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.traffic.metadata.html#Structure-RoadTrafficLayerIndirectMetadata" title="Structure defined in nds.traffic.metadata">RoadTrafficLayerIndirectMetadata</td></tr></table></font>>];
+        "RoadLocationTrafficLayerMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.traffic.metadata.html#Structure-RoadLocationTrafficLayerMetadata" title="Structure defined in nds.traffic.metadata">RoadLocationTrafficLayerMetadata</td></tr></table></font>>];
+    }
+
+    "TrafficRoadRangeAttributeMetadata" -> "AttributeMetadata&lt;TrafficRoadRangeAttributeType,TrafficPropertyType&gt;" [label="uses", fontsize=10];
+    "TrafficRoadRangeAttributeMetadata" -> "TrafficRoadRangeAttributeType" [label="uses", fontsize=10];
+    "TrafficRoadRangeAttributeMetadata" -> "TrafficPropertyType" [label="uses", fontsize=10];
+    "RoadTrafficLayerMetadata" -> "TrafficRoadRangeAttributeMetadata" [label="uses", fontsize=10];
+    "RoadTrafficLayerIndirectMetadata" -> "TrafficRoadRangeAttributeMetadata" [label="uses", fontsize=10];
+    "RoadLocationTrafficLayerMetadata" -> "TrafficRoadRangeAttributeMetadata" [label="uses", fontsize=10];
+}

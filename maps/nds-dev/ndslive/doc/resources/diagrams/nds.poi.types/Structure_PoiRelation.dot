@@ -1,0 +1,50 @@
+/**
+ * This dot file creates symbol collaboration diagram for PoiRelation.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="PoiRelation collaboration diagram";
+
+    subgraph "cluster_nds.poi.types"
+    {
+        style="dashed, rounded";
+        label="nds.poi.types";
+        tooltip="Package nds.poi.types";
+        href="../../../content/packages/nds.poi.types.html#Package-nds-poi-types";
+        target="_parent";
+
+        "PoiRelation" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.types.html#Structure-PoiRelation" title="Structure defined in nds.poi.types">PoiRelation</td></tr></table></font>>];
+        "PoiRelationType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.types.html#Enum-PoiRelationType" title="Enum defined in nds.poi.types">PoiRelationType</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.poi.reference.types"
+    {
+        style="dashed, rounded";
+        label="nds.poi.reference.types";
+        tooltip="Package nds.poi.reference.types";
+        href="../../../content/packages/nds.poi.reference.types.html#Package-nds-poi-reference-types";
+        target="_parent";
+
+        "PoiReference" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.reference.types.html#Subtype-PoiReference" title="Subtype defined in nds.poi.reference.types">PoiReference</td></tr></table></font>>];
+        "PoiReferenceIndirect" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.reference.types.html#Structure-PoiReferenceIndirect" title="Structure defined in nds.poi.reference.types">PoiReferenceIndirect</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.poi.poi"
+    {
+        style="dashed, rounded";
+        label="nds.poi.poi";
+        tooltip="Package nds.poi.poi";
+        href="../../../content/packages/nds.poi.poi.html#Package-nds-poi-poi";
+        target="_parent";
+
+        "Poi" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.poi.html#Structure-Poi" title="Structure defined in nds.poi.poi">Poi</td></tr></table></font>>];
+    }
+
+    "PoiRelation" -> "PoiReference" [label="uses", fontsize=10];
+    "PoiRelation" -> "PoiReferenceIndirect" [label="uses", fontsize=10];
+    "PoiRelation" -> "PoiRelationType" [label="uses", fontsize=10];
+    "Poi" -> "PoiRelation" [label="uses", fontsize=10];
+}

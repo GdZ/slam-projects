@@ -1,0 +1,58 @@
+/**
+ * This dot file creates symbol collaboration diagram for IconSet.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="IconSet collaboration diagram";
+
+    subgraph "cluster_nds.core.icons"
+    {
+        style="dashed, rounded";
+        label="nds.core.icons";
+        tooltip="Package nds.core.icons";
+        href="../../../content/packages/nds.core.icons.html#Package-nds-core-icons";
+        target="_parent";
+
+        "IconSet" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.icons.html#Structure-IconSet" title="Structure defined in nds.core.icons">IconSet</td></tr></table></font>>];
+        "IconSetId" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.icons.html#Subtype-IconSetId" title="Subtype defined in nds.core.icons">IconSetId</td></tr></table></font>>];
+        "IconUsageType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.icons.html#Bitmask-IconUsageType" title="Bitmask defined in nds.core.icons">IconUsageType</td></tr></table></font>>];
+        "IconId" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.icons.html#Subtype-IconId" title="Subtype defined in nds.core.icons">IconId</td></tr></table></font>>];
+        "IconDisplayArrangements" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.icons.html#Enum-IconDisplayArrangements" title="Enum defined in nds.core.icons">IconDisplayArrangements</td></tr></table></font>>];
+        "IconDrawingPriority" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.icons.html#Subtype-IconDrawingPriority" title="Subtype defined in nds.core.icons">IconDrawingPriority</td></tr></table></font>>];
+        "IconTemplateSetId" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.icons.html#Subtype-IconTemplateSetId" title="Subtype defined in nds.core.icons">IconTemplateSetId</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.types"
+    {
+        style="dashed, rounded";
+        label="nds.core.types";
+        tooltip="Package nds.core.types";
+        href="../../../content/packages/nds.core.types.html#Package-nds-core-types";
+        target="_parent";
+
+        "ScaleRangeId" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Subtype-ScaleRangeId" title="Subtype defined in nds.core.types">ScaleRangeId</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.display.layer"
+    {
+        style="dashed, rounded";
+        label="nds.display.layer";
+        tooltip="Package nds.display.layer";
+        href="../../../content/packages/nds.display.layer.html#Package-nds-display-layer";
+        target="_parent";
+
+        "IconLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.layer.html#Structure-IconLayer" title="Structure defined in nds.display.layer">IconLayer</td></tr></table></font>>];
+    }
+
+    "IconSet" -> "IconSetId" [label="uses", fontsize=10];
+    "IconSet" -> "ScaleRangeId" [label="uses", fontsize=10];
+    "IconSet" -> "IconUsageType" [label="uses", fontsize=10];
+    "IconSet" -> "IconId" [label="uses", fontsize=10];
+    "IconSet" -> "IconDisplayArrangements" [label="uses", fontsize=10];
+    "IconSet" -> "IconDrawingPriority" [label="uses", fontsize=10];
+    "IconSet" -> "IconTemplateSetId" [label="uses", fontsize=10];
+    "IconLayer" -> "IconSet" [label="uses", fontsize=10];
+}

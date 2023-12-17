@@ -1,0 +1,46 @@
+/**
+ * This dot file creates symbol collaboration diagram for MatchedLaneGroupSegment.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="MatchedLaneGroupSegment collaboration diagram";
+
+    subgraph "cluster_nds.lane.lanegroups"
+    {
+        style="dashed, rounded";
+        label="nds.lane.lanegroups";
+        tooltip="Package nds.lane.lanegroups";
+        href="../../../content/packages/nds.lane.lanegroups.html#Package-nds-lane-lanegroups";
+        target="_parent";
+
+        "MatchedLaneGroupSegment" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.lanegroups.html#Structure-MatchedLaneGroupSegment" title="Structure defined in nds.lane.lanegroups">MatchedLaneGroupSegment</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.lane.reference.types"
+    {
+        style="dashed, rounded";
+        label="nds.lane.reference.types";
+        tooltip="Package nds.lane.reference.types";
+        href="../../../content/packages/nds.lane.reference.types.html#Package-nds-lane-reference-types";
+        target="_parent";
+
+        "LaneGroupId" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.reference.types.html#Subtype-LaneGroupId" title="Subtype defined in nds.lane.reference.types">LaneGroupId</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.lane.layer"
+    {
+        style="dashed, rounded";
+        label="nds.lane.layer";
+        tooltip="Package nds.lane.layer";
+        href="../../../content/packages/nds.lane.layer.html#Package-nds-lane-layer";
+        target="_parent";
+
+        "MatchedLaneGroupPathLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.layer.html#Structure-MatchedLaneGroupPathLayer" title="Structure defined in nds.lane.layer">MatchedLaneGroupPathLayer</td></tr></table></font>>];
+    }
+
+    "MatchedLaneGroupSegment" -> "LaneGroupId" [label="uses", fontsize=10];
+    "MatchedLaneGroupPathLayer" -> "MatchedLaneGroupSegment" [label="uses", fontsize=10];
+}

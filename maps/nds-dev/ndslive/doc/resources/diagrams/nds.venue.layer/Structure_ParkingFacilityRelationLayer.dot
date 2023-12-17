@@ -1,0 +1,64 @@
+/**
+ * This dot file creates symbol collaboration diagram for ParkingFacilityRelationLayer.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="ParkingFacilityRelationLayer collaboration diagram";
+
+    subgraph "cluster_nds.venue.layer"
+    {
+        style="dashed, rounded";
+        label="nds.venue.layer";
+        tooltip="Package nds.venue.layer";
+        href="../../../content/packages/nds.venue.layer.html#Package-nds-venue-layer";
+        target="_parent";
+
+        "ParkingFacilityRelationLayer" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.layer.html#Structure-ParkingFacilityRelationLayer" title="Structure defined in nds.venue.layer">ParkingFacilityRelationLayer</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.venue.metadata"
+    {
+        style="dashed, rounded";
+        label="nds.venue.metadata";
+        tooltip="Package nds.venue.metadata";
+        href="../../../content/packages/nds.venue.metadata.html#Package-nds-venue-metadata";
+        target="_parent";
+
+        "ParkingFacilityRelationLayerContent" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.metadata.html#Bitmask-ParkingFacilityRelationLayerContent" title="Bitmask defined in nds.venue.metadata">ParkingFacilityRelationLayerContent</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.venue.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.venue.instantiations";
+        tooltip="Package nds.venue.instantiations";
+        href="../../../content/packages/nds.venue.instantiations.html#Package-nds-venue-instantiations";
+        target="_parent";
+
+        "ParkingLaneRangeRelationMapList" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.instantiations.html#InstantiateType-ParkingLaneRangeRelationMapList" title="InstantiateType defined in nds.venue.instantiations">ParkingLaneRangeRelationMapList</td></tr></table></font>>];
+        "ParkingLanePositionRelationMapList" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.instantiations.html#InstantiateType-ParkingLanePositionRelationMapList" title="InstantiateType defined in nds.venue.instantiations">ParkingLanePositionRelationMapList</td></tr></table></font>>];
+        "ParkingRoadSurfaceRelationMapList" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.instantiations.html#InstantiateType-ParkingRoadSurfaceRelationMapList" title="InstantiateType defined in nds.venue.instantiations">ParkingRoadSurfaceRelationMapList</td></tr></table></font>>];
+        "ParkingPoiRelationMapList" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.instantiations.html#InstantiateType-ParkingPoiRelationMapList" title="InstantiateType defined in nds.venue.instantiations">ParkingPoiRelationMapList</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.system.types"
+    {
+        style="dashed, rounded";
+        label="nds.system.types";
+        tooltip="Package nds.system.types";
+        href="../../../content/packages/nds.system.types.html#Package-nds-system-types";
+        target="_parent";
+
+        "LayerType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.system.types.html#Enum-LayerType" title="Enum defined in nds.system.types">LayerType</td></tr></table></font>>];
+    }
+
+    "ParkingFacilityRelationLayer" -> "ParkingFacilityRelationLayerContent" [label="uses", fontsize=10];
+    "ParkingFacilityRelationLayer" -> "ParkingLaneRangeRelationMapList" [label="uses", fontsize=10];
+    "ParkingFacilityRelationLayer" -> "ParkingLanePositionRelationMapList" [label="uses", fontsize=10];
+    "ParkingFacilityRelationLayer" -> "ParkingRoadSurfaceRelationMapList" [label="uses", fontsize=10];
+    "ParkingFacilityRelationLayer" -> "ParkingPoiRelationMapList" [label="uses", fontsize=10];
+    "ParkingFacilityRelationLayer" -> "LayerType" [label="uses", fontsize=10];
+}

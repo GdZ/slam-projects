@@ -1,0 +1,24 @@
+/**
+ * This dot file creates symbol collaboration diagram for LitersPer100km.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="LitersPer100km collaboration diagram";
+
+    subgraph "cluster_nds.core.vehicle"
+    {
+        style="dashed, rounded";
+        label="nds.core.vehicle";
+        tooltip="Package nds.core.vehicle";
+        href="../../../content/packages/nds.core.vehicle.html#Package-nds-core-vehicle";
+        target="_parent";
+
+        "LitersPer100km" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.vehicle.html#Subtype-LitersPer100km" title="Subtype defined in nds.core.vehicle">LitersPer100km</td></tr></table></font>>];
+        "CombustionConsumptionCurve" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.vehicle.html#Structure-CombustionConsumptionCurve" title="Structure defined in nds.core.vehicle">CombustionConsumptionCurve</td></tr></table></font>>];
+    }
+
+    "CombustionConsumptionCurve" -> "LitersPer100km" [label="uses", fontsize=10];
+}

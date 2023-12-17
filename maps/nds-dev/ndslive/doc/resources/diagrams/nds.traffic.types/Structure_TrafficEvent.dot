@@ -1,0 +1,52 @@
+/**
+ * This dot file creates symbol collaboration diagram for TrafficEvent.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="TrafficEvent collaboration diagram";
+
+    subgraph "cluster_nds.traffic.types"
+    {
+        style="dashed, rounded";
+        label="nds.traffic.types";
+        tooltip="Package nds.traffic.types";
+        href="../../../content/packages/nds.traffic.types.html#Package-nds-traffic-types";
+        target="_parent";
+
+        "TrafficEvent" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.traffic.types.html#Structure-TrafficEvent" title="Structure defined in nds.traffic.types">TrafficEvent</td></tr></table></font>>];
+        "TrafficEventReason" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.traffic.types.html#Enum-TrafficEventReason" title="Enum defined in nds.traffic.types">TrafficEventReason</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.types"
+    {
+        style="dashed, rounded";
+        label="nds.core.types";
+        tooltip="Package nds.core.types";
+        href="../../../content/packages/nds.core.types.html#Package-nds-core-types";
+        target="_parent";
+
+        "Seconds" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Subtype-Seconds" title="Subtype defined in nds.core.types">Seconds</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.traffic.attributes"
+    {
+        style="dashed, rounded";
+        label="nds.traffic.attributes";
+        tooltip="Package nds.traffic.attributes";
+        href="../../../content/packages/nds.traffic.attributes.html#Package-nds-traffic-attributes";
+        target="_parent";
+
+        "TrafficRoadRangeAttributeValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.traffic.attributes.html#Choice-TrafficRoadRangeAttributeValue" title="Choice defined in nds.traffic.attributes">TrafficRoadRangeAttributeValue</td></tr></table></font>>];
+        "TrafficLaneRangeAttributeValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.traffic.attributes.html#Choice-TrafficLaneRangeAttributeValue" title="Choice defined in nds.traffic.attributes">TrafficLaneRangeAttributeValue</td></tr></table></font>>];
+        "TrafficDisplayLineRangeAttributeValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.traffic.attributes.html#Choice-TrafficDisplayLineRangeAttributeValue" title="Choice defined in nds.traffic.attributes">TrafficDisplayLineRangeAttributeValue</td></tr></table></font>>];
+    }
+
+    "TrafficEvent" -> "TrafficEventReason" [label="uses", fontsize=10];
+    "TrafficEvent" -> "Seconds" [label="uses", fontsize=10];
+    "TrafficRoadRangeAttributeValue" -> "TrafficEvent" [label="uses", fontsize=10];
+    "TrafficLaneRangeAttributeValue" -> "TrafficEvent" [label="uses", fontsize=10];
+    "TrafficDisplayLineRangeAttributeValue" -> "TrafficEvent" [label="uses", fontsize=10];
+}

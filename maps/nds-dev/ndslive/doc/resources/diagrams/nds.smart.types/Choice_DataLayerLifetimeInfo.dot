@@ -1,0 +1,40 @@
+/**
+ * This dot file creates symbol collaboration diagram for DataLayerLifetimeInfo.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="DataLayerLifetimeInfo collaboration diagram";
+
+    subgraph "cluster_nds.smart.types"
+    {
+        style="dashed, rounded";
+        label="nds.smart.types";
+        tooltip="Package nds.smart.types";
+        href="../../../content/packages/nds.smart.types.html#Package-nds-smart-types";
+        target="_parent";
+
+        "DataLayerLifetimeInfo" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.types.html#Choice-DataLayerLifetimeInfo" title="Choice defined in nds.smart.types">DataLayerLifetimeInfo</td></tr></table></font>>];
+        "DataLayerLifetimeType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.types.html#Enum-DataLayerLifetimeType" title="Enum defined in nds.smart.types">DataLayerLifetimeType</td></tr></table></font>>];
+        "DynamicDataLifetimeInfo" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.types.html#Structure-DynamicDataLifetimeInfo" title="Structure defined in nds.smart.types">DynamicDataLifetimeInfo</td></tr></table></font>>];
+        "DataLayerLifetime" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.types.html#Structure-DataLayerLifetime" title="Structure defined in nds.smart.types">DataLayerLifetime</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.types"
+    {
+        style="dashed, rounded";
+        label="nds.core.types";
+        tooltip="Package nds.core.types";
+        href="../../../content/packages/nds.core.types.html#Package-nds-core-types";
+        target="_parent";
+
+        "VersionId" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Subtype-VersionId" title="Subtype defined in nds.core.types">VersionId</td></tr></table></font>>];
+    }
+
+    "DataLayerLifetimeInfo" -> "DataLayerLifetimeType" [label="uses", fontsize=10];
+    "DataLayerLifetimeInfo" -> "VersionId" [label="uses", fontsize=10];
+    "DataLayerLifetimeInfo" -> "DynamicDataLifetimeInfo" [label="uses", fontsize=10];
+    "DataLayerLifetime" -> "DataLayerLifetimeInfo" [label="uses", fontsize=10];
+}

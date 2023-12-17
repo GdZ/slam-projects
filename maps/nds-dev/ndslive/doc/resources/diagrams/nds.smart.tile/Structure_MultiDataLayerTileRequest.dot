@@ -1,0 +1,50 @@
+/**
+ * This dot file creates symbol collaboration diagram for MultiDataLayerTileRequest.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="MultiDataLayerTileRequest collaboration diagram";
+
+    subgraph "cluster_nds.smart.tile"
+    {
+        style="dashed, rounded";
+        label="nds.smart.tile";
+        tooltip="Package nds.smart.tile";
+        href="../../../content/packages/nds.smart.tile.html#Package-nds-smart-tile";
+        target="_parent";
+
+        "MultiDataLayerTileRequest" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.tile.html#Structure-MultiDataLayerTileRequest" title="Structure defined in nds.smart.tile">MultiDataLayerTileRequest</td></tr></table></font>>];
+        "MultiDataLayerMultiTileRequest" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.tile.html#Structure-MultiDataLayerMultiTileRequest" title="Structure defined in nds.smart.tile">MultiDataLayerMultiTileRequest</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.types"
+    {
+        style="dashed, rounded";
+        label="nds.core.types";
+        tooltip="Package nds.core.types";
+        href="../../../content/packages/nds.core.types.html#Package-nds-core-types";
+        target="_parent";
+
+        "TileId" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Structure-TileId" title="Structure defined in nds.core.types">TileId</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.smart.types"
+    {
+        style="dashed, rounded";
+        label="nds.smart.types";
+        tooltip="Package nds.smart.types";
+        href="../../../content/packages/nds.smart.types.html#Package-nds-smart-types";
+        target="_parent";
+
+        "DataLayerId" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.types.html#Subtype-DataLayerId" title="Subtype defined in nds.smart.types">DataLayerId</td></tr></table></font>>];
+        "DataLayerLifetime" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.types.html#Structure-DataLayerLifetime" title="Structure defined in nds.smart.types">DataLayerLifetime</td></tr></table></font>>];
+    }
+
+    "MultiDataLayerTileRequest" -> "TileId" [label="uses", fontsize=10];
+    "MultiDataLayerTileRequest" -> "DataLayerId" [label="uses", fontsize=10];
+    "MultiDataLayerTileRequest" -> "DataLayerLifetime" [label="uses", fontsize=10];
+    "MultiDataLayerMultiTileRequest" -> "MultiDataLayerTileRequest" [label="uses", fontsize=10];
+}

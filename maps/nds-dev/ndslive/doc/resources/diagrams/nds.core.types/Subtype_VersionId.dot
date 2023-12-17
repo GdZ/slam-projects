@@ -1,0 +1,70 @@
+/**
+ * This dot file creates symbol collaboration diagram for VersionId.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="VersionId collaboration diagram";
+
+    subgraph "cluster_nds.core.types"
+    {
+        style="dashed, rounded";
+        label="nds.core.types";
+        tooltip="Package nds.core.types";
+        href="../../../content/packages/nds.core.types.html#Package-nds-core-types";
+        target="_parent";
+
+        "VersionId" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Subtype-VersionId" title="Subtype defined in nds.core.types">VersionId</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.packaging"
+    {
+        style="dashed, rounded";
+        label="nds.core.packaging";
+        tooltip="Package nds.core.packaging";
+        href="../../../content/packages/nds.core.packaging.html#Package-nds-core-packaging";
+        target="_parent";
+
+        "DeltaEncodingDetails" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.packaging.html#Structure-DeltaEncodingDetails" title="Structure defined in nds.core.packaging">DeltaEncodingDetails</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.routing.services"
+    {
+        style="dashed, rounded";
+        label="nds.routing.services";
+        tooltip="Package nds.routing.services";
+        href="../../../content/packages/nds.routing.services.html#Package-nds-routing-services";
+        target="_parent";
+
+        "RoutingServiceResponse" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routing.services.html#Structure-RoutingServiceResponse" title="Structure defined in nds.routing.services">RoutingServiceResponse</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.smart.tile"
+    {
+        style="dashed, rounded";
+        label="nds.smart.tile";
+        tooltip="Package nds.smart.tile";
+        href="../../../content/packages/nds.smart.tile.html#Package-nds-smart-tile";
+        target="_parent";
+
+        "SourceLayerInfo" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.tile.html#Structure-SourceLayerInfo" title="Structure defined in nds.smart.tile">SourceLayerInfo</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.smart.types"
+    {
+        style="dashed, rounded";
+        label="nds.smart.types";
+        tooltip="Package nds.smart.types";
+        href="../../../content/packages/nds.smart.types.html#Package-nds-smart-types";
+        target="_parent";
+
+        "DataLayerLifetimeInfo" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.types.html#Choice-DataLayerLifetimeInfo" title="Choice defined in nds.smart.types">DataLayerLifetimeInfo</td></tr></table></font>>];
+    }
+
+    "DeltaEncodingDetails" -> "VersionId" [label="uses", fontsize=10];
+    "RoutingServiceResponse" -> "VersionId" [label="uses", fontsize=10];
+    "SourceLayerInfo" -> "VersionId" [label="uses", fontsize=10];
+    "DataLayerLifetimeInfo" -> "VersionId" [label="uses", fontsize=10];
+}

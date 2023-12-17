@@ -1,0 +1,56 @@
+/**
+ * This dot file creates symbol collaboration diagram for RegionDrivingRules.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="RegionDrivingRules collaboration diagram";
+
+    subgraph "cluster_nds.rules.types"
+    {
+        style="dashed, rounded";
+        label="nds.rules.types";
+        tooltip="Package nds.rules.types";
+        href="../../../content/packages/nds.rules.types.html#Package-nds-rules-types";
+        target="_parent";
+
+        "RegionDrivingRules" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.types.html#Structure-RegionDrivingRules" title="Structure defined in nds.rules.types">RegionDrivingRules</td></tr></table></font>>];
+        "DrivingRulesContent" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.types.html#Bitmask-DrivingRulesContent" title="Bitmask defined in nds.rules.types">DrivingRulesContent</td></tr></table></font>>];
+        "EmergencyRules" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.types.html#Structure-EmergencyRules" title="Structure defined in nds.rules.types">EmergencyRules</td></tr></table></font>>];
+        "SolidLineCrossingRules" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.types.html#Structure-SolidLineCrossingRules" title="Structure defined in nds.rules.types">SolidLineCrossingRules</td></tr></table></font>>];
+        "RoadSideParkingRules" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.types.html#Structure-RoadSideParkingRules" title="Structure defined in nds.rules.types">RoadSideParkingRules</td></tr></table></font>>];
+        "LaneMergeRules" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.types.html#Structure-LaneMergeRules" title="Structure defined in nds.rules.types">LaneMergeRules</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.lane.reference.types"
+    {
+        style="dashed, rounded";
+        label="nds.lane.reference.types";
+        tooltip="Package nds.lane.reference.types";
+        href="../../../content/packages/nds.lane.reference.types.html#Package-nds-lane-reference-types";
+        target="_parent";
+
+        "MarkingColor" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.reference.types.html#Enum-MarkingColor" title="Enum defined in nds.lane.reference.types">MarkingColor</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.rules.attributes"
+    {
+        style="dashed, rounded";
+        label="nds.rules.attributes";
+        tooltip="Package nds.rules.attributes";
+        href="../../../content/packages/nds.rules.attributes.html#Package-nds-rules-attributes";
+        target="_parent";
+
+        "RulesRegionAttributeValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.attributes.html#Choice-RulesRegionAttributeValue" title="Choice defined in nds.rules.attributes">RulesRegionAttributeValue</td></tr></table></font>>];
+    }
+
+    "RegionDrivingRules" -> "DrivingRulesContent" [label="uses", fontsize=10];
+    "RegionDrivingRules" -> "MarkingColor" [label="uses", fontsize=10];
+    "RegionDrivingRules" -> "EmergencyRules" [label="uses", fontsize=10];
+    "RegionDrivingRules" -> "SolidLineCrossingRules" [label="uses", fontsize=10];
+    "RegionDrivingRules" -> "RoadSideParkingRules" [label="uses", fontsize=10];
+    "RegionDrivingRules" -> "LaneMergeRules" [label="uses", fontsize=10];
+    "RulesRegionAttributeValue" -> "RegionDrivingRules" [label="uses", fontsize=10];
+}

@@ -1,0 +1,36 @@
+/**
+ * This dot file creates symbol collaboration diagram for ParkingFacilityAttributeLayerContent.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="ParkingFacilityAttributeLayerContent collaboration diagram";
+
+    subgraph "cluster_nds.venue.details.metadata"
+    {
+        style="dashed, rounded";
+        label="nds.venue.details.metadata";
+        tooltip="Package nds.venue.details.metadata";
+        href="../../../content/packages/nds.venue.details.metadata.html#Package-nds-venue-details-metadata";
+        target="_parent";
+
+        "ParkingFacilityAttributeLayerContent" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.details.metadata.html#Bitmask-ParkingFacilityAttributeLayerContent" title="Bitmask defined in nds.venue.details.metadata">ParkingFacilityAttributeLayerContent</td></tr></table></font>>];
+        "ParkingFacilityAttributeLayerMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.details.metadata.html#Structure-ParkingFacilityAttributeLayerMetadata" title="Structure defined in nds.venue.details.metadata">ParkingFacilityAttributeLayerMetadata</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.venue.details.layer"
+    {
+        style="dashed, rounded";
+        label="nds.venue.details.layer";
+        tooltip="Package nds.venue.details.layer";
+        href="../../../content/packages/nds.venue.details.layer.html#Package-nds-venue-details-layer";
+        target="_parent";
+
+        "ParkingFacilityAttributeLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.details.layer.html#Structure-ParkingFacilityAttributeLayer" title="Structure defined in nds.venue.details.layer">ParkingFacilityAttributeLayer</td></tr></table></font>>];
+    }
+
+    "ParkingFacilityAttributeLayer" -> "ParkingFacilityAttributeLayerContent" [label="uses", fontsize=10];
+    "ParkingFacilityAttributeLayerMetadata" -> "ParkingFacilityAttributeLayerContent" [label="uses", fontsize=10];
+}

@@ -1,0 +1,48 @@
+/**
+ * This dot file creates symbol collaboration diagram for RoadPositionChoice.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="RoadPositionChoice collaboration diagram";
+
+    subgraph "cluster_nds.road.reference.types"
+    {
+        style="dashed, rounded";
+        label="nds.road.reference.types";
+        tooltip="Package nds.road.reference.types";
+        href="../../../content/packages/nds.road.reference.types.html#Package-nds-road-reference-types";
+        target="_parent";
+
+        "RoadPositionChoice" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.road.reference.types.html#Choice-RoadPositionChoice" title="Choice defined in nds.road.reference.types">RoadPositionChoice</td></tr></table></font>>];
+        "RoadValidityType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.road.reference.types.html#Enum-RoadValidityType" title="Enum defined in nds.road.reference.types">RoadValidityType</td></tr></table></font>>];
+        "RoadValidityPosition" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.road.reference.types.html#Structure-RoadValidityPosition" title="Structure defined in nds.road.reference.types">RoadValidityPosition</td></tr></table></font>>];
+        "RoadLengthPosition" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.road.reference.types.html#Structure-RoadLengthPosition" title="Structure defined in nds.road.reference.types">RoadLengthPosition</td></tr></table></font>>];
+        "RoadGeometryPosition" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.road.reference.types.html#Subtype-RoadGeometryPosition" title="Subtype defined in nds.road.reference.types">RoadGeometryPosition</td></tr></table></font>>];
+        "RoadGeometryOffsetPosition" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.road.reference.types.html#Subtype-RoadGeometryOffsetPosition" title="Subtype defined in nds.road.reference.types">RoadGeometryOffsetPosition</td></tr></table></font>>];
+        "RoadPercentagePosition" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.road.reference.types.html#Subtype-RoadPercentagePosition" title="Subtype defined in nds.road.reference.types">RoadPercentagePosition</td></tr></table></font>>];
+        "RoadPositionValidity" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.road.reference.types.html#Structure-RoadPositionValidity" title="Structure defined in nds.road.reference.types">RoadPositionValidity</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.geometry"
+    {
+        style="dashed, rounded";
+        label="nds.core.geometry";
+        tooltip="Package nds.core.geometry";
+        href="../../../content/packages/nds.core.geometry.html#Package-nds-core-geometry";
+        target="_parent";
+
+        "CoordShift" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Subtype-CoordShift" title="Subtype defined in nds.core.geometry">CoordShift</td></tr></table></font>>];
+    }
+
+    "RoadPositionChoice" -> "RoadValidityType" [label="uses", fontsize=10];
+    "RoadPositionChoice" -> "CoordShift" [label="uses", fontsize=10];
+    "RoadPositionChoice" -> "RoadValidityPosition" [label="uses", fontsize=10];
+    "RoadPositionChoice" -> "RoadLengthPosition" [label="uses", fontsize=10];
+    "RoadPositionChoice" -> "RoadGeometryPosition" [label="uses", fontsize=10];
+    "RoadPositionChoice" -> "RoadGeometryOffsetPosition" [label="uses", fontsize=10];
+    "RoadPositionChoice" -> "RoadPercentagePosition" [label="uses", fontsize=10];
+    "RoadPositionValidity" -> "RoadPositionChoice" [label="uses", fontsize=10];
+}

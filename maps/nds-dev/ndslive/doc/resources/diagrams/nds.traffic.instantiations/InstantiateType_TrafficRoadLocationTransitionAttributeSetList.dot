@@ -1,0 +1,88 @@
+/**
+ * This dot file creates symbol collaboration diagram for TrafficRoadLocationTransitionAttributeSetList.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="TrafficRoadLocationTransitionAttributeSetList collaboration diagram";
+
+    subgraph "cluster_nds.traffic.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.traffic.instantiations";
+        tooltip="Package nds.traffic.instantiations";
+        href="../../../content/packages/nds.traffic.instantiations.html#Package-nds-traffic-instantiations";
+        target="_parent";
+
+        "TrafficRoadLocationTransitionAttributeSetList" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.traffic.instantiations.html#InstantiateType-TrafficRoadLocationTransitionAttributeSetList" title="InstantiateType defined in nds.traffic.instantiations">TrafficRoadLocationTransitionAttributeSetList</td></tr></table></font>>];
+        "AttributeSetList&lt;RoadLocationTransitionReference,Validity,TrafficTransitionAttributeType,TrafficTransitionAttributeValue,TrafficPropertyType,TrafficPropertyValue&gt;" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.attributemap.html#Structure-AttributeSetList" title="Structure defined in nds.core.attributemap">AttributeSetList</td><td>&lt;</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.road.reference.location.html#Structure-RoadLocationTransitionReference" title="Structure defined in nds.road.reference.location">RoadLocationTransitionReference</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.attributemap.html#Structure-Validity" title="Structure defined in nds.core.attributemap">Validity</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.traffic.attributes.html#Enum-TrafficTransitionAttributeType" title="Enum defined in nds.traffic.attributes">TrafficTransitionAttributeType</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.traffic.attributes.html#Choice-TrafficTransitionAttributeValue" title="Choice defined in nds.traffic.attributes">TrafficTransitionAttributeValue</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.traffic.properties.html#Structure-TrafficPropertyType" title="Structure defined in nds.traffic.properties">TrafficPropertyType</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.traffic.properties.html#Structure-TrafficPropertyValue" title="Structure defined in nds.traffic.properties">TrafficPropertyValue</td></tr></table></td><td>&gt;</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.road.reference.location"
+    {
+        style="dashed, rounded";
+        label="nds.road.reference.location";
+        tooltip="Package nds.road.reference.location";
+        href="../../../content/packages/nds.road.reference.location.html#Package-nds-road-reference-location";
+        target="_parent";
+
+        "RoadLocationTransitionReference" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.road.reference.location.html#Structure-RoadLocationTransitionReference" title="Structure defined in nds.road.reference.location">RoadLocationTransitionReference</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.attributemap"
+    {
+        style="dashed, rounded";
+        label="nds.core.attributemap";
+        tooltip="Package nds.core.attributemap";
+        href="../../../content/packages/nds.core.attributemap.html#Package-nds-core-attributemap";
+        target="_parent";
+
+        "Validity" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.attributemap.html#Structure-Validity" title="Structure defined in nds.core.attributemap">Validity</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.traffic.attributes"
+    {
+        style="dashed, rounded";
+        label="nds.traffic.attributes";
+        tooltip="Package nds.traffic.attributes";
+        href="../../../content/packages/nds.traffic.attributes.html#Package-nds-traffic-attributes";
+        target="_parent";
+
+        "TrafficTransitionAttributeType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.traffic.attributes.html#Enum-TrafficTransitionAttributeType" title="Enum defined in nds.traffic.attributes">TrafficTransitionAttributeType</td></tr></table></font>>];
+        "TrafficTransitionAttributeValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.traffic.attributes.html#Choice-TrafficTransitionAttributeValue" title="Choice defined in nds.traffic.attributes">TrafficTransitionAttributeValue</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.traffic.properties"
+    {
+        style="dashed, rounded";
+        label="nds.traffic.properties";
+        tooltip="Package nds.traffic.properties";
+        href="../../../content/packages/nds.traffic.properties.html#Package-nds-traffic-properties";
+        target="_parent";
+
+        "TrafficPropertyType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.traffic.properties.html#Structure-TrafficPropertyType" title="Structure defined in nds.traffic.properties">TrafficPropertyType</td></tr></table></font>>];
+        "TrafficPropertyValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.traffic.properties.html#Structure-TrafficPropertyValue" title="Structure defined in nds.traffic.properties">TrafficPropertyValue</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.traffic.layer"
+    {
+        style="dashed, rounded";
+        label="nds.traffic.layer";
+        tooltip="Package nds.traffic.layer";
+        href="../../../content/packages/nds.traffic.layer.html#Package-nds-traffic-layer";
+        target="_parent";
+
+        "RoadLocationTrafficLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.traffic.layer.html#Structure-RoadLocationTrafficLayer" title="Structure defined in nds.traffic.layer">RoadLocationTrafficLayer</td></tr></table></font>>];
+    }
+
+    "TrafficRoadLocationTransitionAttributeSetList" -> "AttributeSetList&lt;RoadLocationTransitionReference,Validity,TrafficTransitionAttributeType,TrafficTransitionAttributeValue,TrafficPropertyType,TrafficPropertyValue&gt;" [label="uses", fontsize=10];
+    "TrafficRoadLocationTransitionAttributeSetList" -> "RoadLocationTransitionReference" [label="uses", fontsize=10];
+    "TrafficRoadLocationTransitionAttributeSetList" -> "Validity" [label="uses", fontsize=10];
+    "TrafficRoadLocationTransitionAttributeSetList" -> "TrafficTransitionAttributeType" [label="uses", fontsize=10];
+    "TrafficRoadLocationTransitionAttributeSetList" -> "TrafficTransitionAttributeValue" [label="uses", fontsize=10];
+    "TrafficRoadLocationTransitionAttributeSetList" -> "TrafficPropertyType" [label="uses", fontsize=10];
+    "TrafficRoadLocationTransitionAttributeSetList" -> "TrafficPropertyValue" [label="uses", fontsize=10];
+    "RoadLocationTrafficLayer" -> "TrafficRoadLocationTransitionAttributeSetList" [label="uses", fontsize=10];
+}

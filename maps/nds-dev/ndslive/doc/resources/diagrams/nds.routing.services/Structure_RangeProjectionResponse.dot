@@ -1,0 +1,38 @@
+/**
+ * This dot file creates symbol collaboration diagram for RangeProjectionResponse.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="RangeProjectionResponse collaboration diagram";
+
+    subgraph "cluster_nds.routing.services"
+    {
+        style="dashed, rounded";
+        label="nds.routing.services";
+        tooltip="Package nds.routing.services";
+        href="../../../content/packages/nds.routing.services.html#Package-nds-routing-services";
+        target="_parent";
+
+        "RangeProjectionResponse" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routing.services.html#Structure-RangeProjectionResponse" title="Structure defined in nds.routing.services">RangeProjectionResponse</td></tr></table></font>>];
+        "RangeProjectionService" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routing.services.html#Service-RangeProjectionService" title="Service defined in nds.routing.services">RangeProjectionService</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.geometry"
+    {
+        style="dashed, rounded";
+        label="nds.core.geometry";
+        tooltip="Package nds.core.geometry";
+        href="../../../content/packages/nds.core.geometry.html#Package-nds-core-geometry";
+        target="_parent";
+
+        "CoordShift" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Subtype-CoordShift" title="Subtype defined in nds.core.geometry">CoordShift</td></tr></table></font>>];
+        "Ring2D" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Subtype-Ring2D" title="Subtype defined in nds.core.geometry">Ring2D</td></tr></table></font>>];
+    }
+
+    "RangeProjectionResponse" -> "CoordShift" [label="uses", fontsize=10];
+    "RangeProjectionResponse" -> "Ring2D" [label="uses", fontsize=10];
+    "RangeProjectionService" -> "RangeProjectionResponse" [label="uses", fontsize=10];
+}

@@ -1,0 +1,36 @@
+/**
+ * This dot file creates symbol collaboration diagram for WaypointType.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="WaypointType collaboration diagram";
+
+    subgraph "cluster_nds.routing.types"
+    {
+        style="dashed, rounded";
+        label="nds.routing.types";
+        tooltip="Package nds.routing.types";
+        href="../../../content/packages/nds.routing.types.html#Package-nds-routing-types";
+        target="_parent";
+
+        "WaypointType" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routing.types.html#Enum-WaypointType" title="Enum defined in nds.routing.types">WaypointType</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.routing.route"
+    {
+        style="dashed, rounded";
+        label="nds.routing.route";
+        tooltip="Package nds.routing.route";
+        href="../../../content/packages/nds.routing.route.html#Package-nds-routing-route";
+        target="_parent";
+
+        "RoutePoint" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routing.route.html#Structure-RoutePoint" title="Structure defined in nds.routing.route">RoutePoint</td></tr></table></font>>];
+        "Waypoint" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routing.route.html#Structure-Waypoint" title="Structure defined in nds.routing.route">Waypoint</td></tr></table></font>>];
+    }
+
+    "RoutePoint" -> "WaypointType" [label="uses", fontsize=10];
+    "Waypoint" -> "WaypointType" [label="uses", fontsize=10];
+}

@@ -1,0 +1,38 @@
+/**
+ * This dot file creates symbol collaboration diagram for TransitionGeoPathReference.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="TransitionGeoPathReference collaboration diagram";
+
+    subgraph "cluster_nds.road.reference.types"
+    {
+        style="dashed, rounded";
+        label="nds.road.reference.types";
+        tooltip="Package nds.road.reference.types";
+        href="../../../content/packages/nds.road.reference.types.html#Package-nds-road-reference-types";
+        target="_parent";
+
+        "TransitionGeoPathReference" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.road.reference.types.html#Structure-TransitionGeoPathReference" title="Structure defined in nds.road.reference.types">TransitionGeoPathReference</td></tr></table></font>>];
+        "DirectedRoadReference" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.road.reference.types.html#Subtype-DirectedRoadReference" title="Subtype defined in nds.road.reference.types">DirectedRoadReference</td></tr></table></font>>];
+        "TransitionReference" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.road.reference.types.html#Structure-TransitionReference" title="Structure defined in nds.road.reference.types">TransitionReference</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.geometry"
+    {
+        style="dashed, rounded";
+        label="nds.core.geometry";
+        tooltip="Package nds.core.geometry";
+        href="../../../content/packages/nds.core.geometry.html#Package-nds-core-geometry";
+        target="_parent";
+
+        "Line2D" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Structure-Line2D" title="Structure defined in nds.core.geometry">Line2D</td></tr></table></font>>];
+    }
+
+    "TransitionGeoPathReference" -> "DirectedRoadReference" [label="uses", fontsize=10];
+    "TransitionGeoPathReference" -> "Line2D" [label="uses", fontsize=10];
+    "TransitionReference" -> "TransitionGeoPathReference" [label="uses", fontsize=10];
+}

@@ -1,0 +1,40 @@
+/**
+ * This dot file creates symbol collaboration diagram for RoadCharacsLayerContent.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="RoadCharacsLayerContent collaboration diagram";
+
+    subgraph "cluster_nds.characteristics.metadata"
+    {
+        style="dashed, rounded";
+        label="nds.characteristics.metadata";
+        tooltip="Package nds.characteristics.metadata";
+        href="../../../content/packages/nds.characteristics.metadata.html#Package-nds-characteristics-metadata";
+        target="_parent";
+
+        "RoadCharacsLayerContent" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.metadata.html#Bitmask-RoadCharacsLayerContent" title="Bitmask defined in nds.characteristics.metadata">RoadCharacsLayerContent</td></tr></table></font>>];
+        "RoadCharacteristicsLayerMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.metadata.html#Structure-RoadCharacteristicsLayerMetadata" title="Structure defined in nds.characteristics.metadata">RoadCharacteristicsLayerMetadata</td></tr></table></font>>];
+        "RoadCharacteristicsLayerIndirectMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.metadata.html#Structure-RoadCharacteristicsLayerIndirectMetadata" title="Structure defined in nds.characteristics.metadata">RoadCharacteristicsLayerIndirectMetadata</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.characteristics.layer"
+    {
+        style="dashed, rounded";
+        label="nds.characteristics.layer";
+        tooltip="Package nds.characteristics.layer";
+        href="../../../content/packages/nds.characteristics.layer.html#Package-nds-characteristics-layer";
+        target="_parent";
+
+        "RoadCharacteristicsLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.layer.html#Structure-RoadCharacteristicsLayer" title="Structure defined in nds.characteristics.layer">RoadCharacteristicsLayer</td></tr></table></font>>];
+        "RoadCharacteristicsLayerIndirect" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.layer.html#Structure-RoadCharacteristicsLayerIndirect" title="Structure defined in nds.characteristics.layer">RoadCharacteristicsLayerIndirect</td></tr></table></font>>];
+    }
+
+    "RoadCharacteristicsLayer" -> "RoadCharacsLayerContent" [label="uses", fontsize=10];
+    "RoadCharacteristicsLayerIndirect" -> "RoadCharacsLayerContent" [label="uses", fontsize=10];
+    "RoadCharacteristicsLayerMetadata" -> "RoadCharacsLayerContent" [label="uses", fontsize=10];
+    "RoadCharacteristicsLayerIndirectMetadata" -> "RoadCharacsLayerContent" [label="uses", fontsize=10];
+}

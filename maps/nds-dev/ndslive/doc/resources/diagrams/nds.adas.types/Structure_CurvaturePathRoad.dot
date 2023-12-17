@@ -1,0 +1,38 @@
+/**
+ * This dot file creates symbol collaboration diagram for CurvaturePathRoad.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="CurvaturePathRoad collaboration diagram";
+
+    subgraph "cluster_nds.adas.types"
+    {
+        style="dashed, rounded";
+        label="nds.adas.types";
+        tooltip="Package nds.adas.types";
+        href="../../../content/packages/nds.adas.types.html#Package-nds-adas-types";
+        target="_parent";
+
+        "CurvaturePathRoad" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.adas.types.html#Structure-CurvaturePathRoad" title="Structure defined in nds.adas.types">CurvaturePathRoad</td></tr></table></font>>];
+        "CurvaturePointList" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.adas.types.html#Structure-CurvaturePointList" title="Structure defined in nds.adas.types">CurvaturePointList</td></tr></table></font>>];
+        "CurvaturePath" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.adas.types.html#Structure-CurvaturePath" title="Structure defined in nds.adas.types">CurvaturePath</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.road.reference.types"
+    {
+        style="dashed, rounded";
+        label="nds.road.reference.types";
+        tooltip="Package nds.road.reference.types";
+        href="../../../content/packages/nds.road.reference.types.html#Package-nds-road-reference-types";
+        target="_parent";
+
+        "DirectedRoadReference" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.road.reference.types.html#Subtype-DirectedRoadReference" title="Subtype defined in nds.road.reference.types">DirectedRoadReference</td></tr></table></font>>];
+    }
+
+    "CurvaturePathRoad" -> "DirectedRoadReference" [label="uses", fontsize=10];
+    "CurvaturePathRoad" -> "CurvaturePointList" [label="uses", fontsize=10];
+    "CurvaturePath" -> "CurvaturePathRoad" [label="uses", fontsize=10];
+}

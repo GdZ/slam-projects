@@ -1,0 +1,60 @@
+/**
+ * This dot file creates symbol collaboration diagram for LaneInstructionsLayerMetadata.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="LaneInstructionsLayerMetadata collaboration diagram";
+
+    subgraph "cluster_nds.instructions.metadata"
+    {
+        style="dashed, rounded";
+        label="nds.instructions.metadata";
+        tooltip="Package nds.instructions.metadata";
+        href="../../../content/packages/nds.instructions.metadata.html#Package-nds-instructions-metadata";
+        target="_parent";
+
+        "LaneInstructionsLayerMetadata" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.instructions.metadata.html#Structure-LaneInstructionsLayerMetadata" title="Structure defined in nds.instructions.metadata">LaneInstructionsLayerMetadata</td></tr></table></font>>];
+        "LaneInstructionsLayerContent" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.instructions.metadata.html#Bitmask-LaneInstructionsLayerContent" title="Bitmask defined in nds.instructions.metadata">LaneInstructionsLayerContent</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.instructions.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.instructions.instantiations";
+        tooltip="Package nds.instructions.instantiations";
+        href="../../../content/packages/nds.instructions.instantiations.html#Package-nds-instructions-instantiations";
+        target="_parent";
+
+        "InstructionsLaneTransitionAttributeMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.instructions.instantiations.html#InstantiateType-InstructionsLaneTransitionAttributeMetadata" title="InstantiateType defined in nds.instructions.instantiations">InstructionsLaneTransitionAttributeMetadata</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.types"
+    {
+        style="dashed, rounded";
+        label="nds.core.types";
+        tooltip="Package nds.core.types";
+        href="../../../content/packages/nds.core.types.html#Package-nds-core-types";
+        target="_parent";
+
+        "LaneType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Structure-LaneType" title="Structure defined in nds.core.types">LaneType</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.language"
+    {
+        style="dashed, rounded";
+        label="nds.core.language";
+        tooltip="Package nds.core.language";
+        href="../../../content/packages/nds.core.language.html#Package-nds-core-language";
+        target="_parent";
+
+        "AvailableLanguages" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.language.html#Structure-AvailableLanguages" title="Structure defined in nds.core.language">AvailableLanguages</td></tr></table></font>>];
+    }
+
+    "LaneInstructionsLayerMetadata" -> "LaneInstructionsLayerContent" [label="uses", fontsize=10];
+    "LaneInstructionsLayerMetadata" -> "InstructionsLaneTransitionAttributeMetadata" [label="uses", fontsize=10];
+    "LaneInstructionsLayerMetadata" -> "LaneType" [label="uses", fontsize=10];
+    "LaneInstructionsLayerMetadata" -> "AvailableLanguages" [label="uses", fontsize=10];
+}

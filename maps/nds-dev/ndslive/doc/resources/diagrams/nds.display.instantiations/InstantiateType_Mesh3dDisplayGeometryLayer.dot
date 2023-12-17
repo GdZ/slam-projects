@@ -1,0 +1,60 @@
+/**
+ * This dot file creates symbol collaboration diagram for Mesh3dDisplayGeometryLayer.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="Mesh3dDisplayGeometryLayer collaboration diagram";
+
+    subgraph "cluster_nds.display.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.display.instantiations";
+        tooltip="Package nds.display.instantiations";
+        href="../../../content/packages/nds.display.instantiations.html#Package-nds-display-instantiations";
+        target="_parent";
+
+        "Mesh3dDisplayGeometryLayer" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.instantiations.html#InstantiateType-Mesh3dDisplayGeometryLayer" title="InstantiateType defined in nds.display.instantiations">Mesh3dDisplayGeometryLayer</td></tr></table></font>>];
+        "GeometryLayer&lt;DisplayMesh3dId,DisplayMesh3dType&gt;" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Structure-GeometryLayer" title="Structure defined in nds.core.geometry">GeometryLayer</td><td>&lt;</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.reference.types.html#Subtype-DisplayMesh3dId" title="Subtype defined in nds.display.reference.types">DisplayMesh3dId</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.types.html#Enum-DisplayMesh3dType" title="Enum defined in nds.display.types">DisplayMesh3dType</td></tr></table></td><td>&gt;</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.display.reference.types"
+    {
+        style="dashed, rounded";
+        label="nds.display.reference.types";
+        tooltip="Package nds.display.reference.types";
+        href="../../../content/packages/nds.display.reference.types.html#Package-nds-display-reference-types";
+        target="_parent";
+
+        "DisplayMesh3dId" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.reference.types.html#Subtype-DisplayMesh3dId" title="Subtype defined in nds.display.reference.types">DisplayMesh3dId</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.display.types"
+    {
+        style="dashed, rounded";
+        label="nds.display.types";
+        tooltip="Package nds.display.types";
+        href="../../../content/packages/nds.display.types.html#Package-nds-display-types";
+        target="_parent";
+
+        "DisplayMesh3dType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.types.html#Enum-DisplayMesh3dType" title="Enum defined in nds.display.types">DisplayMesh3dType</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.display.layer"
+    {
+        style="dashed, rounded";
+        label="nds.display.layer";
+        tooltip="Package nds.display.layer";
+        href="../../../content/packages/nds.display.layer.html#Package-nds-display-layer";
+        target="_parent";
+
+        "Mesh3DRenderLayerData" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.layer.html#Structure-Mesh3DRenderLayerData" title="Structure defined in nds.display.layer">Mesh3DRenderLayerData</td></tr></table></font>>];
+    }
+
+    "Mesh3dDisplayGeometryLayer" -> "GeometryLayer&lt;DisplayMesh3dId,DisplayMesh3dType&gt;" [label="uses", fontsize=10];
+    "Mesh3dDisplayGeometryLayer" -> "DisplayMesh3dId" [label="uses", fontsize=10];
+    "Mesh3dDisplayGeometryLayer" -> "DisplayMesh3dType" [label="uses", fontsize=10];
+    "Mesh3DRenderLayerData" -> "Mesh3dDisplayGeometryLayer" [label="uses", fontsize=10];
+}

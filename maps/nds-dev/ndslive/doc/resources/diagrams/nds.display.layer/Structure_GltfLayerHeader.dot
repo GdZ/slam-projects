@@ -1,0 +1,48 @@
+/**
+ * This dot file creates symbol collaboration diagram for GltfLayerHeader.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="GltfLayerHeader collaboration diagram";
+
+    subgraph "cluster_nds.display.layer"
+    {
+        style="dashed, rounded";
+        label="nds.display.layer";
+        tooltip="Package nds.display.layer";
+        href="../../../content/packages/nds.display.layer.html#Package-nds-display-layer";
+        target="_parent";
+
+        "GltfLayerHeader" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.layer.html#Structure-GltfLayerHeader" title="Structure defined in nds.display.layer">GltfLayerHeader</td></tr></table></font>>];
+        "GltfLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.layer.html#Structure-GltfLayer" title="Structure defined in nds.display.layer">GltfLayer</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.display.types"
+    {
+        style="dashed, rounded";
+        label="nds.display.types";
+        tooltip="Package nds.display.types";
+        href="../../../content/packages/nds.display.types.html#Package-nds-display-types";
+        target="_parent";
+
+        "GltfVersion" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.types.html#Enum-GltfVersion" title="Enum defined in nds.display.types">GltfVersion</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.types"
+    {
+        style="dashed, rounded";
+        label="nds.core.types";
+        tooltip="Package nds.core.types";
+        href="../../../content/packages/nds.core.types.html#Package-nds-core-types";
+        target="_parent";
+
+        "ScaleDenominator" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Subtype-ScaleDenominator" title="Subtype defined in nds.core.types">ScaleDenominator</td></tr></table></font>>];
+    }
+
+    "GltfLayerHeader" -> "GltfVersion" [label="uses", fontsize=10];
+    "GltfLayerHeader" -> "ScaleDenominator" [label="uses", fontsize=10];
+    "GltfLayer" -> "GltfLayerHeader" [label="uses", fontsize=10];
+}

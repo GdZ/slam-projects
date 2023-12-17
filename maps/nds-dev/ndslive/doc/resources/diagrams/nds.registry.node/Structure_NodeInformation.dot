@@ -1,0 +1,74 @@
+/**
+ * This dot file creates symbol collaboration diagram for NodeInformation.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="NodeInformation collaboration diagram";
+
+    subgraph "cluster_nds.registry.node"
+    {
+        style="dashed, rounded";
+        label="nds.registry.node";
+        tooltip="Package nds.registry.node";
+        href="../../../content/packages/nds.registry.node.html#Package-nds-registry-node";
+        target="_parent";
+
+        "NodeInformation" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.registry.node.html#Structure-NodeInformation" title="Structure defined in nds.registry.node">NodeInformation</td></tr></table></font>>];
+        "NodeType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.registry.node.html#Enum-NodeType" title="Enum defined in nds.registry.node">NodeType</td></tr></table></font>>];
+        "ConnectionCosts" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.registry.node.html#Subtype-ConnectionCosts" title="Subtype defined in nds.registry.node">ConnectionCosts</td></tr></table></font>>];
+        "ProtocolType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.registry.node.html#Subtype-ProtocolType" title="Subtype defined in nds.registry.node">ProtocolType</td></tr></table></font>>];
+        "ServiceInformation" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.registry.node.html#Structure-ServiceInformation" title="Structure defined in nds.registry.node">ServiceInformation</td></tr></table></font>>];
+        "NodeList" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.registry.node.html#Structure-NodeList" title="Structure defined in nds.registry.node">NodeList</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.system.types"
+    {
+        style="dashed, rounded";
+        label="nds.system.types";
+        tooltip="Package nds.system.types";
+        href="../../../content/packages/nds.system.types.html#Package-nds-system-types";
+        target="_parent";
+
+        "NdsSystemToken" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.system.types.html#Structure-NdsSystemToken" title="Structure defined in nds.system.types">NdsSystemToken</td></tr></table></font>>];
+        "NdsNodeToken" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.system.types.html#Structure-NdsNodeToken" title="Structure defined in nds.system.types">NdsNodeToken</td></tr></table></font>>];
+        "NdsNodeLegalInfo" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.system.types.html#Structure-NdsNodeLegalInfo" title="Structure defined in nds.system.types">NdsNodeLegalInfo</td></tr></table></font>>];
+        "ModuleDefinition" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.system.types.html#Structure-ModuleDefinition" title="Structure defined in nds.system.types">ModuleDefinition</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.geometry"
+    {
+        style="dashed, rounded";
+        label="nds.core.geometry";
+        tooltip="Package nds.core.geometry";
+        href="../../../content/packages/nds.core.geometry.html#Package-nds-core-geometry";
+        target="_parent";
+
+        "SpatialExtent" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Structure-SpatialExtent" title="Structure defined in nds.core.geometry">SpatialExtent</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.registry.services"
+    {
+        style="dashed, rounded";
+        label="nds.registry.services";
+        tooltip="Package nds.registry.services";
+        href="../../../content/packages/nds.registry.services.html#Package-nds-registry-services";
+        target="_parent";
+
+        "NdsRegistry" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.registry.services.html#Service-NdsRegistry" title="Service defined in nds.registry.services">NdsRegistry</td></tr></table></font>>];
+    }
+
+    "NodeInformation" -> "NdsSystemToken" [label="uses", fontsize=10];
+    "NodeInformation" -> "NdsNodeToken" [label="uses", fontsize=10];
+    "NodeInformation" -> "NdsNodeLegalInfo" [label="uses", fontsize=10];
+    "NodeInformation" -> "NodeType" [label="uses", fontsize=10];
+    "NodeInformation" -> "ConnectionCosts" [label="uses", fontsize=10];
+    "NodeInformation" -> "SpatialExtent" [label="uses", fontsize=10];
+    "NodeInformation" -> "ProtocolType" [label="uses", fontsize=10];
+    "NodeInformation" -> "ServiceInformation" [label="uses", fontsize=10];
+    "NodeInformation" -> "ModuleDefinition" [label="uses", fontsize=10];
+    "NdsRegistry" -> "NodeInformation" [label="uses", fontsize=10];
+    "NodeList" -> "NodeInformation" [label="uses", fontsize=10];
+}

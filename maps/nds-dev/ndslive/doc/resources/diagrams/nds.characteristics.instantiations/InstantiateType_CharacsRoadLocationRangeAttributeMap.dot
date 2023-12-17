@@ -1,0 +1,66 @@
+/**
+ * This dot file creates symbol collaboration diagram for CharacsRoadLocationRangeAttributeMap.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="CharacsRoadLocationRangeAttributeMap collaboration diagram";
+
+    subgraph "cluster_nds.characteristics.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.characteristics.instantiations";
+        tooltip="Package nds.characteristics.instantiations";
+        href="../../../content/packages/nds.characteristics.instantiations.html#Package-nds-characteristics-instantiations";
+        target="_parent";
+
+        "CharacsRoadLocationRangeAttributeMap" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.instantiations.html#InstantiateType-CharacsRoadLocationRangeAttributeMap" title="InstantiateType defined in nds.characteristics.instantiations">CharacsRoadLocationRangeAttributeMap</td></tr></table></font>>];
+        "AttributeMap&lt;RoadLocationReference,RoadLocationRangeValidity,CharacsRoadRangeAttributeType,CharacsRoadRangeAttributeValue,CharacsPropertyType,CharacsPropertyValue&gt;" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.attributemap.html#Structure-AttributeMap" title="Structure defined in nds.core.attributemap">AttributeMap</td><td>&lt;</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.road.reference.location.html#Structure-RoadLocationReference" title="Structure defined in nds.road.reference.location">RoadLocationReference</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.road.reference.location.html#Structure-RoadLocationRangeValidity" title="Structure defined in nds.road.reference.location">RoadLocationRangeValidity</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.attributes.html#Enum-CharacsRoadRangeAttributeType" title="Enum defined in nds.characteristics.attributes">CharacsRoadRangeAttributeType</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.attributes.html#Choice-CharacsRoadRangeAttributeValue" title="Choice defined in nds.characteristics.attributes">CharacsRoadRangeAttributeValue</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.properties.html#Structure-CharacsPropertyType" title="Structure defined in nds.characteristics.properties">CharacsPropertyType</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.properties.html#Structure-CharacsPropertyValue" title="Structure defined in nds.characteristics.properties">CharacsPropertyValue</td></tr></table></td><td>&gt;</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.road.reference.location"
+    {
+        style="dashed, rounded";
+        label="nds.road.reference.location";
+        tooltip="Package nds.road.reference.location";
+        href="../../../content/packages/nds.road.reference.location.html#Package-nds-road-reference-location";
+        target="_parent";
+
+        "RoadLocationReference" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.road.reference.location.html#Structure-RoadLocationReference" title="Structure defined in nds.road.reference.location">RoadLocationReference</td></tr></table></font>>];
+        "RoadLocationRangeValidity" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.road.reference.location.html#Structure-RoadLocationRangeValidity" title="Structure defined in nds.road.reference.location">RoadLocationRangeValidity</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.characteristics.attributes"
+    {
+        style="dashed, rounded";
+        label="nds.characteristics.attributes";
+        tooltip="Package nds.characteristics.attributes";
+        href="../../../content/packages/nds.characteristics.attributes.html#Package-nds-characteristics-attributes";
+        target="_parent";
+
+        "CharacsRoadRangeAttributeType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.attributes.html#Enum-CharacsRoadRangeAttributeType" title="Enum defined in nds.characteristics.attributes">CharacsRoadRangeAttributeType</td></tr></table></font>>];
+        "CharacsRoadRangeAttributeValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.attributes.html#Choice-CharacsRoadRangeAttributeValue" title="Choice defined in nds.characteristics.attributes">CharacsRoadRangeAttributeValue</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.characteristics.properties"
+    {
+        style="dashed, rounded";
+        label="nds.characteristics.properties";
+        tooltip="Package nds.characteristics.properties";
+        href="../../../content/packages/nds.characteristics.properties.html#Package-nds-characteristics-properties";
+        target="_parent";
+
+        "CharacsPropertyType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.properties.html#Structure-CharacsPropertyType" title="Structure defined in nds.characteristics.properties">CharacsPropertyType</td></tr></table></font>>];
+        "CharacsPropertyValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.properties.html#Structure-CharacsPropertyValue" title="Structure defined in nds.characteristics.properties">CharacsPropertyValue</td></tr></table></font>>];
+    }
+
+    "CharacsRoadLocationRangeAttributeMap" -> "AttributeMap&lt;RoadLocationReference,RoadLocationRangeValidity,CharacsRoadRangeAttributeType,CharacsRoadRangeAttributeValue,CharacsPropertyType,CharacsPropertyValue&gt;" [label="uses", fontsize=10];
+    "CharacsRoadLocationRangeAttributeMap" -> "RoadLocationReference" [label="uses", fontsize=10];
+    "CharacsRoadLocationRangeAttributeMap" -> "RoadLocationRangeValidity" [label="uses", fontsize=10];
+    "CharacsRoadLocationRangeAttributeMap" -> "CharacsRoadRangeAttributeType" [label="uses", fontsize=10];
+    "CharacsRoadLocationRangeAttributeMap" -> "CharacsRoadRangeAttributeValue" [label="uses", fontsize=10];
+    "CharacsRoadLocationRangeAttributeMap" -> "CharacsPropertyType" [label="uses", fontsize=10];
+    "CharacsRoadLocationRangeAttributeMap" -> "CharacsPropertyValue" [label="uses", fontsize=10];
+}

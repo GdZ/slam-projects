@@ -1,0 +1,24 @@
+/**
+ * This dot file creates symbol collaboration diagram for DayOfMonth.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="DayOfMonth collaboration diagram";
+
+    subgraph "cluster_nds.core.conditions"
+    {
+        style="dashed, rounded";
+        label="nds.core.conditions";
+        tooltip="Package nds.core.conditions";
+        href="../../../content/packages/nds.core.conditions.html#Package-nds-core-conditions";
+        target="_parent";
+
+        "DayOfMonth" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.conditions.html#Subtype-DayOfMonth" title="Subtype defined in nds.core.conditions">DayOfMonth</td></tr></table></font>>];
+        "DayOfYear" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.conditions.html#Structure-DayOfYear" title="Structure defined in nds.core.conditions">DayOfYear</td></tr></table></font>>];
+    }
+
+    "DayOfYear" -> "DayOfMonth" [label="uses", fontsize=10];
+}

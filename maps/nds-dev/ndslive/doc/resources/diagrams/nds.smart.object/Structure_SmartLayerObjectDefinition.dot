@@ -1,0 +1,48 @@
+/**
+ * This dot file creates symbol collaboration diagram for SmartLayerObjectDefinition.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="SmartLayerObjectDefinition collaboration diagram";
+
+    subgraph "cluster_nds.smart.object"
+    {
+        style="dashed, rounded";
+        label="nds.smart.object";
+        tooltip="Package nds.smart.object";
+        href="../../../content/packages/nds.smart.object.html#Package-nds-smart-object";
+        target="_parent";
+
+        "SmartLayerObjectDefinition" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.object.html#Structure-SmartLayerObjectDefinition" title="Structure defined in nds.smart.object">SmartLayerObjectDefinition</td></tr></table></font>>];
+        "SmartLayerObjectClass" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.object.html#Subtype-SmartLayerObjectClass" title="Subtype defined in nds.smart.object">SmartLayerObjectClass</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.smart.metadata"
+    {
+        style="dashed, rounded";
+        label="nds.smart.metadata";
+        tooltip="Package nds.smart.metadata";
+        href="../../../content/packages/nds.smart.metadata.html#Package-nds-smart-metadata";
+        target="_parent";
+
+        "SmartLayerDefinition" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.metadata.html#Structure-SmartLayerDefinition" title="Structure defined in nds.smart.metadata">SmartLayerDefinition</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.smart.services"
+    {
+        style="dashed, rounded";
+        label="nds.smart.services";
+        tooltip="Package nds.smart.services";
+        href="../../../content/packages/nds.smart.services.html#Package-nds-smart-services";
+        target="_parent";
+
+        "SmartLayerObjectService" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.services.html#Service-SmartLayerObjectService" title="Service defined in nds.smart.services">SmartLayerObjectService</td></tr></table></font>>];
+    }
+
+    "SmartLayerObjectDefinition" -> "SmartLayerObjectClass" [label="uses", fontsize=10];
+    "SmartLayerObjectDefinition" -> "SmartLayerDefinition" [label="uses", fontsize=10];
+    "SmartLayerObjectService" -> "SmartLayerObjectDefinition" [label="uses", fontsize=10];
+}

@@ -1,0 +1,24 @@
+/**
+ * This dot file creates symbol collaboration diagram for MatchedRoadPathLayerMetadata.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="MatchedRoadPathLayerMetadata collaboration diagram";
+
+    subgraph "cluster_nds.road.metadata"
+    {
+        style="dashed, rounded";
+        label="nds.road.metadata";
+        tooltip="Package nds.road.metadata";
+        href="../../../content/packages/nds.road.metadata.html#Package-nds-road-metadata";
+        target="_parent";
+
+        "MatchedRoadPathLayerMetadata" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.road.metadata.html#Subtype-MatchedRoadPathLayerMetadata" title="Subtype defined in nds.road.metadata">MatchedRoadPathLayerMetadata</td></tr></table></font>>];
+        "FeatureLayerMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.road.metadata.html#Structure-FeatureLayerMetadata" title="Structure defined in nds.road.metadata">FeatureLayerMetadata</td></tr></table></font>>];
+    }
+
+    "MatchedRoadPathLayerMetadata" -> "FeatureLayerMetadata" [label="uses", fontsize=10];
+}

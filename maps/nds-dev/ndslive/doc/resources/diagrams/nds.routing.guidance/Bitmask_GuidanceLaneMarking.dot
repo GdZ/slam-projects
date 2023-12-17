@@ -1,0 +1,24 @@
+/**
+ * This dot file creates symbol collaboration diagram for GuidanceLaneMarking.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="GuidanceLaneMarking collaboration diagram";
+
+    subgraph "cluster_nds.routing.guidance"
+    {
+        style="dashed, rounded";
+        label="nds.routing.guidance";
+        tooltip="Package nds.routing.guidance";
+        href="../../../content/packages/nds.routing.guidance.html#Package-nds-routing-guidance";
+        target="_parent";
+
+        "GuidanceLaneMarking" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routing.guidance.html#Bitmask-GuidanceLaneMarking" title="Bitmask defined in nds.routing.guidance">GuidanceLaneMarking</td></tr></table></font>>];
+        "GuidanceLanes" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routing.guidance.html#Structure-GuidanceLanes" title="Structure defined in nds.routing.guidance">GuidanceLanes</td></tr></table></font>>];
+    }
+
+    "GuidanceLanes" -> "GuidanceLaneMarking" [label="uses", fontsize=10];
+}

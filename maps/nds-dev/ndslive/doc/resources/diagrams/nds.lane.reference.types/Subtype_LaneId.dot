@@ -1,0 +1,78 @@
+/**
+ * This dot file creates symbol collaboration diagram for LaneId.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="LaneId collaboration diagram";
+
+    subgraph "cluster_nds.lane.reference.types"
+    {
+        style="dashed, rounded";
+        label="nds.lane.reference.types";
+        tooltip="Package nds.lane.reference.types";
+        href="../../../content/packages/nds.lane.reference.types.html#Package-nds-lane-reference-types";
+        target="_parent";
+
+        "LaneId" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.reference.types.html#Subtype-LaneId" title="Subtype defined in nds.lane.reference.types">LaneId</td></tr></table></font>>];
+        "LaneGroupTransition" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.reference.types.html#Structure-LaneGroupTransition" title="Structure defined in nds.lane.reference.types">LaneGroupTransition</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.types"
+    {
+        style="dashed, rounded";
+        label="nds.core.types";
+        tooltip="Package nds.core.types";
+        href="../../../content/packages/nds.core.types.html#Package-nds-core-types";
+        target="_parent";
+
+        "Var4ByteId" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Structure-Var4ByteId" title="Structure defined in nds.core.types">Var4ByteId</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.rules.types"
+    {
+        style="dashed, rounded";
+        label="nds.rules.types";
+        tooltip="Package nds.rules.types";
+        href="../../../content/packages/nds.rules.types.html#Package-nds-rules-types";
+        target="_parent";
+
+        "LaneRightOfWayRegulation" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.types.html#Structure-LaneRightOfWayRegulation" title="Structure defined in nds.rules.types">LaneRightOfWayRegulation</td></tr></table></font>>];
+        "LaneTrafficPriority" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.types.html#Structure-LaneTrafficPriority" title="Structure defined in nds.rules.types">LaneTrafficPriority</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.lane.lanes"
+    {
+        style="dashed, rounded";
+        label="nds.lane.lanes";
+        tooltip="Package nds.lane.lanes";
+        href="../../../content/packages/nds.lane.lanes.html#Package-nds-lane-lanes";
+        target="_parent";
+
+        "Lane" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.lanes.html#Structure-Lane" title="Structure defined in nds.lane.lanes">Lane</td></tr></table></font>>];
+        "ZeroLengthLane" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.lanes.html#Structure-ZeroLengthLane" title="Structure defined in nds.lane.lanes">ZeroLengthLane</td></tr></table></font>>];
+        "LaneRelation" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.lanes.html#Structure-LaneRelation" title="Structure defined in nds.lane.lanes">LaneRelation</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.lane.roadsurface"
+    {
+        style="dashed, rounded";
+        label="nds.lane.roadsurface";
+        tooltip="Package nds.lane.roadsurface";
+        href="../../../content/packages/nds.lane.roadsurface.html#Package-nds-lane-roadsurface";
+        target="_parent";
+
+        "RoadSurfaceLaneGroupRelation" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.roadsurface.html#Structure-RoadSurfaceLaneGroupRelation" title="Structure defined in nds.lane.roadsurface">RoadSurfaceLaneGroupRelation</td></tr></table></font>>];
+    }
+
+    "LaneId" -> "Var4ByteId" [label="uses", fontsize=10];
+    "LaneGroupTransition" -> "LaneId" [label="uses", fontsize=10];
+    "LaneRightOfWayRegulation" -> "LaneId" [label="uses", fontsize=10];
+    "LaneTrafficPriority" -> "LaneId" [label="uses", fontsize=10];
+    "Lane" -> "LaneId" [label="uses", fontsize=10];
+    "ZeroLengthLane" -> "LaneId" [label="uses", fontsize=10];
+    "LaneRelation" -> "LaneId" [label="uses", fontsize=10];
+    "RoadSurfaceLaneGroupRelation" -> "LaneId" [label="uses", fontsize=10];
+}

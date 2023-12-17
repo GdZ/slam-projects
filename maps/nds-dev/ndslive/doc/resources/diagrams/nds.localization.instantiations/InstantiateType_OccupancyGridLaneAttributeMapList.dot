@@ -1,0 +1,78 @@
+/**
+ * This dot file creates symbol collaboration diagram for OccupancyGridLaneAttributeMapList.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="OccupancyGridLaneAttributeMapList collaboration diagram";
+
+    subgraph "cluster_nds.localization.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.localization.instantiations";
+        tooltip="Package nds.localization.instantiations";
+        href="../../../content/packages/nds.localization.instantiations.html#Package-nds-localization-instantiations";
+        target="_parent";
+
+        "OccupancyGridLaneAttributeMapList" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.localization.instantiations.html#InstantiateType-OccupancyGridLaneAttributeMapList" title="InstantiateType defined in nds.localization.instantiations">OccupancyGridLaneAttributeMapList</td></tr></table></font>>];
+        "AttributeMapList&lt;LaneGroupId,LaneGroupRangeValidity,OccupancyGridRelationAttributeType,OccupancyGridRelationAttributeValue,LocalizationPropertyType,LocalizationPropertyValue&gt;" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.attributemap.html#Structure-AttributeMapList" title="Structure defined in nds.core.attributemap">AttributeMapList</td><td>&lt;</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.reference.types.html#Subtype-LaneGroupId" title="Subtype defined in nds.lane.reference.types">LaneGroupId</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.reference.types.html#Structure-LaneGroupRangeValidity" title="Structure defined in nds.lane.reference.types">LaneGroupRangeValidity</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.localization.attributes.html#Enum-OccupancyGridRelationAttributeType" title="Enum defined in nds.localization.attributes">OccupancyGridRelationAttributeType</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.localization.attributes.html#Choice-OccupancyGridRelationAttributeValue" title="Choice defined in nds.localization.attributes">OccupancyGridRelationAttributeValue</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.localization.properties.html#Structure-LocalizationPropertyType" title="Structure defined in nds.localization.properties">LocalizationPropertyType</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.localization.properties.html#Structure-LocalizationPropertyValue" title="Structure defined in nds.localization.properties">LocalizationPropertyValue</td></tr></table></td><td>&gt;</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.lane.reference.types"
+    {
+        style="dashed, rounded";
+        label="nds.lane.reference.types";
+        tooltip="Package nds.lane.reference.types";
+        href="../../../content/packages/nds.lane.reference.types.html#Package-nds-lane-reference-types";
+        target="_parent";
+
+        "LaneGroupId" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.reference.types.html#Subtype-LaneGroupId" title="Subtype defined in nds.lane.reference.types">LaneGroupId</td></tr></table></font>>];
+        "LaneGroupRangeValidity" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.reference.types.html#Structure-LaneGroupRangeValidity" title="Structure defined in nds.lane.reference.types">LaneGroupRangeValidity</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.localization.attributes"
+    {
+        style="dashed, rounded";
+        label="nds.localization.attributes";
+        tooltip="Package nds.localization.attributes";
+        href="../../../content/packages/nds.localization.attributes.html#Package-nds-localization-attributes";
+        target="_parent";
+
+        "OccupancyGridRelationAttributeType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.localization.attributes.html#Enum-OccupancyGridRelationAttributeType" title="Enum defined in nds.localization.attributes">OccupancyGridRelationAttributeType</td></tr></table></font>>];
+        "OccupancyGridRelationAttributeValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.localization.attributes.html#Choice-OccupancyGridRelationAttributeValue" title="Choice defined in nds.localization.attributes">OccupancyGridRelationAttributeValue</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.localization.properties"
+    {
+        style="dashed, rounded";
+        label="nds.localization.properties";
+        tooltip="Package nds.localization.properties";
+        href="../../../content/packages/nds.localization.properties.html#Package-nds-localization-properties";
+        target="_parent";
+
+        "LocalizationPropertyType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.localization.properties.html#Structure-LocalizationPropertyType" title="Structure defined in nds.localization.properties">LocalizationPropertyType</td></tr></table></font>>];
+        "LocalizationPropertyValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.localization.properties.html#Structure-LocalizationPropertyValue" title="Structure defined in nds.localization.properties">LocalizationPropertyValue</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.localization.layer"
+    {
+        style="dashed, rounded";
+        label="nds.localization.layer";
+        tooltip="Package nds.localization.layer";
+        href="../../../content/packages/nds.localization.layer.html#Package-nds-localization-layer";
+        target="_parent";
+
+        "LaneOccupancyGridLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.localization.layer.html#Structure-LaneOccupancyGridLayer" title="Structure defined in nds.localization.layer">LaneOccupancyGridLayer</td></tr></table></font>>];
+    }
+
+    "OccupancyGridLaneAttributeMapList" -> "AttributeMapList&lt;LaneGroupId,LaneGroupRangeValidity,OccupancyGridRelationAttributeType,OccupancyGridRelationAttributeValue,LocalizationPropertyType,LocalizationPropertyValue&gt;" [label="uses", fontsize=10];
+    "OccupancyGridLaneAttributeMapList" -> "LaneGroupId" [label="uses", fontsize=10];
+    "OccupancyGridLaneAttributeMapList" -> "LaneGroupRangeValidity" [label="uses", fontsize=10];
+    "OccupancyGridLaneAttributeMapList" -> "OccupancyGridRelationAttributeType" [label="uses", fontsize=10];
+    "OccupancyGridLaneAttributeMapList" -> "OccupancyGridRelationAttributeValue" [label="uses", fontsize=10];
+    "OccupancyGridLaneAttributeMapList" -> "LocalizationPropertyType" [label="uses", fontsize=10];
+    "OccupancyGridLaneAttributeMapList" -> "LocalizationPropertyValue" [label="uses", fontsize=10];
+    "LaneOccupancyGridLayer" -> "OccupancyGridLaneAttributeMapList" [label="uses", fontsize=10];
+}

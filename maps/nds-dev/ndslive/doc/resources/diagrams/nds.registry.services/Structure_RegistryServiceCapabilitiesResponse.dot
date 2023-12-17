@@ -1,0 +1,26 @@
+/**
+ * This dot file creates symbol collaboration diagram for RegistryServiceCapabilitiesResponse.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="RegistryServiceCapabilitiesResponse collaboration diagram";
+
+    subgraph "cluster_nds.registry.services"
+    {
+        style="dashed, rounded";
+        label="nds.registry.services";
+        tooltip="Package nds.registry.services";
+        href="../../../content/packages/nds.registry.services.html#Package-nds-registry-services";
+        target="_parent";
+
+        "RegistryServiceCapabilitiesResponse" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.registry.services.html#Structure-RegistryServiceCapabilitiesResponse" title="Structure defined in nds.registry.services">RegistryServiceCapabilitiesResponse</td></tr></table></font>>];
+        "RegistryServiceCapabilities" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.registry.services.html#Bitmask-RegistryServiceCapabilities" title="Bitmask defined in nds.registry.services">RegistryServiceCapabilities</td></tr></table></font>>];
+        "NdsRegistry" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.registry.services.html#Service-NdsRegistry" title="Service defined in nds.registry.services">NdsRegistry</td></tr></table></font>>];
+    }
+
+    "RegistryServiceCapabilitiesResponse" -> "RegistryServiceCapabilities" [label="uses", fontsize=10];
+    "NdsRegistry" -> "RegistryServiceCapabilitiesResponse" [label="uses", fontsize=10];
+}

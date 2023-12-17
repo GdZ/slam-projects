@@ -1,0 +1,52 @@
+/**
+ * This dot file creates symbol collaboration diagram for SignpostInstruction.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="SignpostInstruction collaboration diagram";
+
+    subgraph "cluster_nds.instructions.types"
+    {
+        style="dashed, rounded";
+        label="nds.instructions.types";
+        tooltip="Package nds.instructions.types";
+        href="../../../content/packages/nds.instructions.types.html#Package-nds-instructions-types";
+        target="_parent";
+
+        "SignpostInstruction" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.instructions.types.html#Structure-SignpostInstruction" title="Structure defined in nds.instructions.types">SignpostInstruction</td></tr></table></font>>];
+        "SignpostIntersectionType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.instructions.types.html#Enum-SignpostIntersectionType" title="Enum defined in nds.instructions.types">SignpostIntersectionType</td></tr></table></font>>];
+        "SignpostInstructionContent" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.instructions.types.html#Bitmask-SignpostInstructionContent" title="Bitmask defined in nds.instructions.types">SignpostInstructionContent</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.types"
+    {
+        style="dashed, rounded";
+        label="nds.core.types";
+        tooltip="Package nds.core.types";
+        href="../../../content/packages/nds.core.types.html#Package-nds-core-types";
+        target="_parent";
+
+        "PercentagePosition" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Structure-PercentagePosition" title="Structure defined in nds.core.types">PercentagePosition</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.instructions.attributes"
+    {
+        style="dashed, rounded";
+        label="nds.instructions.attributes";
+        tooltip="Package nds.instructions.attributes";
+        href="../../../content/packages/nds.instructions.attributes.html#Package-nds-instructions-attributes";
+        target="_parent";
+
+        "InstructionsTransitionAttributeValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.instructions.attributes.html#Choice-InstructionsTransitionAttributeValue" title="Choice defined in nds.instructions.attributes">InstructionsTransitionAttributeValue</td></tr></table></font>>];
+        "InstructionsLaneTransitionAttributeValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.instructions.attributes.html#Choice-InstructionsLaneTransitionAttributeValue" title="Choice defined in nds.instructions.attributes">InstructionsLaneTransitionAttributeValue</td></tr></table></font>>];
+    }
+
+    "SignpostInstruction" -> "SignpostIntersectionType" [label="uses", fontsize=10];
+    "SignpostInstruction" -> "SignpostInstructionContent" [label="uses", fontsize=10];
+    "SignpostInstruction" -> "PercentagePosition" [label="uses", fontsize=10];
+    "InstructionsTransitionAttributeValue" -> "SignpostInstruction" [label="uses", fontsize=10];
+    "InstructionsLaneTransitionAttributeValue" -> "SignpostInstruction" [label="uses", fontsize=10];
+}

@@ -1,0 +1,38 @@
+/**
+ * This dot file creates symbol collaboration diagram for TimeOfDay.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="TimeOfDay collaboration diagram";
+
+    subgraph "cluster_nds.core.conditions"
+    {
+        style="dashed, rounded";
+        label="nds.core.conditions";
+        tooltip="Package nds.core.conditions";
+        href="../../../content/packages/nds.core.conditions.html#Package-nds-core-conditions";
+        target="_parent";
+
+        "TimeOfDay" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.conditions.html#Structure-TimeOfDay" title="Structure defined in nds.core.conditions">TimeOfDay</td></tr></table></font>>];
+        "TimeRangeOfDay" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.conditions.html#Structure-TimeRangeOfDay" title="Structure defined in nds.core.conditions">TimeRangeOfDay</td></tr></table></font>>];
+        "TimeRangeOfYear" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.conditions.html#Structure-TimeRangeOfYear" title="Structure defined in nds.core.conditions">TimeRangeOfYear</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.rules.types"
+    {
+        style="dashed, rounded";
+        label="nds.rules.types";
+        tooltip="Package nds.rules.types";
+        href="../../../content/packages/nds.rules.types.html#Package-nds-rules-types";
+        target="_parent";
+
+        "DayLightSavingTime" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.types.html#Structure-DayLightSavingTime" title="Structure defined in nds.rules.types">DayLightSavingTime</td></tr></table></font>>];
+    }
+
+    "TimeRangeOfDay" -> "TimeOfDay" [label="uses", fontsize=10];
+    "TimeRangeOfYear" -> "TimeOfDay" [label="uses", fontsize=10];
+    "DayLightSavingTime" -> "TimeOfDay" [label="uses", fontsize=10];
+}

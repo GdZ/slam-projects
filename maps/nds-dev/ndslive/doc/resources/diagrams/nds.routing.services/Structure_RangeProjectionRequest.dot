@@ -1,0 +1,78 @@
+/**
+ * This dot file creates symbol collaboration diagram for RangeProjectionRequest.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="RangeProjectionRequest collaboration diagram";
+
+    subgraph "cluster_nds.routing.services"
+    {
+        style="dashed, rounded";
+        label="nds.routing.services";
+        tooltip="Package nds.routing.services";
+        href="../../../content/packages/nds.routing.services.html#Package-nds-routing-services";
+        target="_parent";
+
+        "RangeProjectionRequest" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routing.services.html#Structure-RangeProjectionRequest" title="Structure defined in nds.routing.services">RangeProjectionRequest</td></tr></table></font>>];
+        "RangeProjectionService" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routing.services.html#Service-RangeProjectionService" title="Service defined in nds.routing.services">RangeProjectionService</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.routing.types"
+    {
+        style="dashed, rounded";
+        label="nds.routing.types";
+        tooltip="Package nds.routing.types";
+        href="../../../content/packages/nds.routing.types.html#Package-nds-routing-types";
+        target="_parent";
+
+        "RangeProjectionType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routing.types.html#Bitmask-RangeProjectionType" title="Bitmask defined in nds.routing.types">RangeProjectionType</td></tr></table></font>>];
+        "DriverProfile" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routing.types.html#Structure-DriverProfile" title="Structure defined in nds.routing.types">DriverProfile</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.routing.route"
+    {
+        style="dashed, rounded";
+        label="nds.routing.route";
+        tooltip="Package nds.routing.route";
+        href="../../../content/packages/nds.routing.route.html#Package-nds-routing-route";
+        target="_parent";
+
+        "Waypoint" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routing.route.html#Structure-Waypoint" title="Structure defined in nds.routing.route">Waypoint</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.types"
+    {
+        style="dashed, rounded";
+        label="nds.core.types";
+        tooltip="Package nds.core.types";
+        href="../../../content/packages/nds.core.types.html#Package-nds-core-types";
+        target="_parent";
+
+        "Seconds" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Subtype-Seconds" title="Subtype defined in nds.core.types">Seconds</td></tr></table></font>>];
+        "DistanceMeters" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Subtype-DistanceMeters" title="Subtype defined in nds.core.types">DistanceMeters</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.vehicle"
+    {
+        style="dashed, rounded";
+        label="nds.core.vehicle";
+        tooltip="Package nds.core.vehicle";
+        href="../../../content/packages/nds.core.vehicle.html#Package-nds-core-vehicle";
+        target="_parent";
+
+        "VehicleDetails" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.vehicle.html#Structure-VehicleDetails" title="Structure defined in nds.core.vehicle">VehicleDetails</td></tr></table></font>>];
+        "VehiclePose" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.vehicle.html#Union-VehiclePose" title="Union defined in nds.core.vehicle">VehiclePose</td></tr></table></font>>];
+    }
+
+    "RangeProjectionRequest" -> "RangeProjectionType" [label="uses", fontsize=10];
+    "RangeProjectionRequest" -> "Waypoint" [label="uses", fontsize=10];
+    "RangeProjectionRequest" -> "Seconds" [label="uses", fontsize=10];
+    "RangeProjectionRequest" -> "DistanceMeters" [label="uses", fontsize=10];
+    "RangeProjectionRequest" -> "VehicleDetails" [label="uses", fontsize=10];
+    "RangeProjectionRequest" -> "VehiclePose" [label="uses", fontsize=10];
+    "RangeProjectionRequest" -> "DriverProfile" [label="uses", fontsize=10];
+    "RangeProjectionService" -> "RangeProjectionRequest" [label="uses", fontsize=10];
+}

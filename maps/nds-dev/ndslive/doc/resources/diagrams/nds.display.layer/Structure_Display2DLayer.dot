@@ -1,0 +1,50 @@
+/**
+ * This dot file creates symbol collaboration diagram for Display2DLayer.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="Display2DLayer collaboration diagram";
+
+    subgraph "cluster_nds.display.layer"
+    {
+        style="dashed, rounded";
+        label="nds.display.layer";
+        tooltip="Package nds.display.layer";
+        href="../../../content/packages/nds.display.layer.html#Package-nds-display-layer";
+        target="_parent";
+
+        "Display2DLayer" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.layer.html#Structure-Display2DLayer" title="Structure defined in nds.display.layer">Display2DLayer</td></tr></table></font>>];
+        "Display2DLayerHeader" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.layer.html#Structure-Display2DLayerHeader" title="Structure defined in nds.display.layer">Display2DLayerHeader</td></tr></table></font>>];
+        "Display2DGeometryLayerList" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.layer.html#Structure-Display2DGeometryLayerList" title="Structure defined in nds.display.layer">Display2DGeometryLayerList</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.display.types"
+    {
+        style="dashed, rounded";
+        label="nds.display.types";
+        tooltip="Package nds.display.types";
+        href="../../../content/packages/nds.display.types.html#Package-nds-display-types";
+        target="_parent";
+
+        "ClippingEdgeList" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.types.html#Structure-ClippingEdgeList" title="Structure defined in nds.display.types">ClippingEdgeList</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.system.types"
+    {
+        style="dashed, rounded";
+        label="nds.system.types";
+        tooltip="Package nds.system.types";
+        href="../../../content/packages/nds.system.types.html#Package-nds-system-types";
+        target="_parent";
+
+        "LayerType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.system.types.html#Enum-LayerType" title="Enum defined in nds.system.types">LayerType</td></tr></table></font>>];
+    }
+
+    "Display2DLayer" -> "Display2DLayerHeader" [label="uses", fontsize=10];
+    "Display2DLayer" -> "Display2DGeometryLayerList" [label="uses", fontsize=10];
+    "Display2DLayer" -> "ClippingEdgeList" [label="uses", fontsize=10];
+    "Display2DLayer" -> "LayerType" [label="uses", fontsize=10];
+}

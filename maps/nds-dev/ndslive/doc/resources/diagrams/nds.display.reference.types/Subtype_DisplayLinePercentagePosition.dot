@@ -1,0 +1,36 @@
+/**
+ * This dot file creates symbol collaboration diagram for DisplayLinePercentagePosition.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="DisplayLinePercentagePosition collaboration diagram";
+
+    subgraph "cluster_nds.display.reference.types"
+    {
+        style="dashed, rounded";
+        label="nds.display.reference.types";
+        tooltip="Package nds.display.reference.types";
+        href="../../../content/packages/nds.display.reference.types.html#Package-nds-display-reference-types";
+        target="_parent";
+
+        "DisplayLinePercentagePosition" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.reference.types.html#Subtype-DisplayLinePercentagePosition" title="Subtype defined in nds.display.reference.types">DisplayLinePercentagePosition</td></tr></table></font>>];
+        "DisplayLinePositionChoice" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.reference.types.html#Choice-DisplayLinePositionChoice" title="Choice defined in nds.display.reference.types">DisplayLinePositionChoice</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.types"
+    {
+        style="dashed, rounded";
+        label="nds.core.types";
+        tooltip="Package nds.core.types";
+        href="../../../content/packages/nds.core.types.html#Package-nds-core-types";
+        target="_parent";
+
+        "PercentagePosition" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Structure-PercentagePosition" title="Structure defined in nds.core.types">PercentagePosition</td></tr></table></font>>];
+    }
+
+    "DisplayLinePercentagePosition" -> "PercentagePosition" [label="uses", fontsize=10];
+    "DisplayLinePositionChoice" -> "DisplayLinePercentagePosition" [label="uses", fontsize=10];
+}

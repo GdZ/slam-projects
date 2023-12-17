@@ -1,0 +1,52 @@
+/**
+ * This dot file creates symbol collaboration diagram for LaneGroupLocationSegment.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="LaneGroupLocationSegment collaboration diagram";
+
+    subgraph "cluster_nds.lane.reference.types"
+    {
+        style="dashed, rounded";
+        label="nds.lane.reference.types";
+        tooltip="Package nds.lane.reference.types";
+        href="../../../content/packages/nds.lane.reference.types.html#Package-nds-lane-reference-types";
+        target="_parent";
+
+        "LaneGroupLocationSegment" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.reference.types.html#Structure-LaneGroupLocationSegment" title="Structure defined in nds.lane.reference.types">LaneGroupLocationSegment</td></tr></table></font>>];
+        "LanesInMask" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.reference.types.html#Subtype-LanesInMask" title="Subtype defined in nds.lane.reference.types">LanesInMask</td></tr></table></font>>];
+        "LaneGroupReferenceIndirect" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.reference.types.html#Structure-LaneGroupReferenceIndirect" title="Structure defined in nds.lane.reference.types">LaneGroupReferenceIndirect</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.location"
+    {
+        style="dashed, rounded";
+        label="nds.core.location";
+        tooltip="Package nds.core.location";
+        href="../../../content/packages/nds.core.location.html#Package-nds-core-location";
+        target="_parent";
+
+        "LocationGeometry" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.location.html#Structure-LocationGeometry" title="Structure defined in nds.core.location">LocationGeometry</td></tr></table></font>>];
+        "LocationSegment" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.location.html#Structure-LocationSegment" title="Structure defined in nds.core.location">LocationSegment</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.types"
+    {
+        style="dashed, rounded";
+        label="nds.core.types";
+        tooltip="Package nds.core.types";
+        href="../../../content/packages/nds.core.types.html#Package-nds-core-types";
+        target="_parent";
+
+        "LaneType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Structure-LaneType" title="Structure defined in nds.core.types">LaneType</td></tr></table></font>>];
+    }
+
+    "LaneGroupLocationSegment" -> "LocationGeometry" [label="uses", fontsize=10];
+    "LaneGroupLocationSegment" -> "LocationSegment" [label="uses", fontsize=10];
+    "LaneGroupLocationSegment" -> "LanesInMask" [label="uses", fontsize=10];
+    "LaneGroupLocationSegment" -> "LaneType" [label="uses", fontsize=10];
+    "LaneGroupReferenceIndirect" -> "LaneGroupLocationSegment" [label="uses", fontsize=10];
+}

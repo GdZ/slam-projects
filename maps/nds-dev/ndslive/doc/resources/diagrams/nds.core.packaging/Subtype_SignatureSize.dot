@@ -1,0 +1,26 @@
+/**
+ * This dot file creates symbol collaboration diagram for SignatureSize.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="SignatureSize collaboration diagram";
+
+    subgraph "cluster_nds.core.packaging"
+    {
+        style="dashed, rounded";
+        label="nds.core.packaging";
+        tooltip="Package nds.core.packaging";
+        href="../../../content/packages/nds.core.packaging.html#Package-nds-core-packaging";
+        target="_parent";
+
+        "SignatureSize" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.packaging.html#Subtype-SignatureSize" title="Subtype defined in nds.core.packaging">SignatureSize</td></tr></table></font>>];
+        "SignatureDefinition" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.packaging.html#Structure-SignatureDefinition" title="Structure defined in nds.core.packaging">SignatureDefinition</td></tr></table></font>>];
+        "VARIABLE" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.packaging.html#Constant-VARIABLE" title="Constant defined in nds.core.packaging">VARIABLE</td></tr></table></font>>];
+    }
+
+    "SignatureDefinition" -> "SignatureSize" [label="uses", fontsize=10];
+    "VARIABLE" -> "SignatureSize" [label="uses", fontsize=10];
+}

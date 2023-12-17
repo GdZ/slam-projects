@@ -173,3 +173,6 @@
 [submodule "maps/nds-dev/zserio-pubsub-paho-mqtt-python"]
 	path = maps/nds-dev/zserio-pubsub-paho-mqtt-python
 	url = https://github.com/ndsev/zserio-pubsub-paho-mqtt-python
+[submodule "tutorials/spring-tutorials"]
+	path = tutorials/spring-tutorials
+	url = https://github.com/eugenp/tutorials.git

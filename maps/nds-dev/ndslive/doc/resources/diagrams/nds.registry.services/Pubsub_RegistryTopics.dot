@@ -1,0 +1,46 @@
+/**
+ * This dot file creates symbol collaboration diagram for RegistryTopics.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="RegistryTopics collaboration diagram";
+
+    subgraph "cluster_nds.registry.services"
+    {
+        style="dashed, rounded";
+        label="nds.registry.services";
+        tooltip="Package nds.registry.services";
+        href="../../../content/packages/nds.registry.services.html#Package-nds-registry-services";
+        target="_parent";
+
+        "RegistryTopics" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.registry.services.html#Pubsub-RegistryTopics" title="Pubsub defined in nds.registry.services">RegistryTopics</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.system.types"
+    {
+        style="dashed, rounded";
+        label="nds.system.types";
+        tooltip="Package nds.system.types";
+        href="../../../content/packages/nds.system.types.html#Package-nds-system-types";
+        target="_parent";
+
+        "NdsSystemToken" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.system.types.html#Structure-NdsSystemToken" title="Structure defined in nds.system.types">NdsSystemToken</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.types"
+    {
+        style="dashed, rounded";
+        label="nds.core.types";
+        tooltip="Package nds.core.types";
+        href="../../../content/packages/nds.core.types.html#Package-nds-core-types";
+        target="_parent";
+
+        "Empty" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Structure-Empty" title="Structure defined in nds.core.types">Empty</td></tr></table></font>>];
+    }
+
+    "RegistryTopics" -> "NdsSystemToken" [label="uses", fontsize=10];
+    "RegistryTopics" -> "Empty" [label="uses", fontsize=10];
+}

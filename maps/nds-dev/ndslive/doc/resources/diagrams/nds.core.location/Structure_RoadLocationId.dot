@@ -1,0 +1,90 @@
+/**
+ * This dot file creates symbol collaboration diagram for RoadLocationId.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="RoadLocationId collaboration diagram";
+
+    subgraph "cluster_nds.core.location"
+    {
+        style="dashed, rounded";
+        label="nds.core.location";
+        tooltip="Package nds.core.location";
+        href="../../../content/packages/nds.core.location.html#Package-nds-core-location";
+        target="_parent";
+
+        "RoadLocationId" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.location.html#Structure-RoadLocationId" title="Structure defined in nds.core.location">RoadLocationId</td></tr></table></font>>];
+        "RoadLocationBranchId" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.location.html#Subtype-RoadLocationBranchId" title="Subtype defined in nds.core.location">RoadLocationBranchId</td></tr></table></font>>];
+        "NO_BRANCH" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.location.html#Constant-NO_BRANCH" title="Constant defined in nds.core.location">NO_BRANCH</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.routing.route"
+    {
+        style="dashed, rounded";
+        label="nds.routing.route";
+        tooltip="Package nds.routing.route";
+        href="../../../content/packages/nds.routing.route.html#Package-nds-routing-route";
+        target="_parent";
+
+        "Waypoint" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routing.route.html#Structure-Waypoint" title="Structure defined in nds.routing.route">Waypoint</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.road.reference.location"
+    {
+        style="dashed, rounded";
+        label="nds.road.reference.location";
+        tooltip="Package nds.road.reference.location";
+        href="../../../content/packages/nds.road.reference.location.html#Package-nds-road-reference-location";
+        target="_parent";
+
+        "RoadLocationReference" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.road.reference.location.html#Structure-RoadLocationReference" title="Structure defined in nds.road.reference.location">RoadLocationReference</td></tr></table></font>>];
+        "RoadLocationTransitionReference" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.road.reference.location.html#Structure-RoadLocationTransitionReference" title="Structure defined in nds.road.reference.location">RoadLocationTransitionReference</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.smart.path"
+    {
+        style="dashed, rounded";
+        label="nds.smart.path";
+        tooltip="Package nds.smart.path";
+        href="../../../content/packages/nds.smart.path.html#Package-nds-smart-path";
+        target="_parent";
+
+        "SmartLayerLocationIdPath" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.path.html#Structure-SmartLayerLocationIdPath" title="Structure defined in nds.smart.path">SmartLayerLocationIdPath</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.smart.services"
+    {
+        style="dashed, rounded";
+        label="nds.smart.services";
+        tooltip="Package nds.smart.services";
+        href="../../../content/packages/nds.smart.services.html#Package-nds-smart-services";
+        target="_parent";
+
+        "SmartLayerObjectService" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.services.html#Service-SmartLayerObjectService" title="Service defined in nds.smart.services">SmartLayerObjectService</td></tr></table></font>>];
+        "SmartLayerPathService" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.services.html#Service-SmartLayerPathService" title="Service defined in nds.smart.services">SmartLayerPathService</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.characteristics.types"
+    {
+        style="dashed, rounded";
+        label="nds.characteristics.types";
+        tooltip="Package nds.characteristics.types";
+        href="../../../content/packages/nds.characteristics.types.html#Package-nds-characteristics-types";
+        target="_parent";
+
+        "RoadLocationAssignment" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.types.html#Structure-RoadLocationAssignment" title="Structure defined in nds.characteristics.types">RoadLocationAssignment</td></tr></table></font>>];
+    }
+
+    "RoadLocationId" -> "RoadLocationBranchId" [label="uses", fontsize=10];
+    "RoadLocationId" -> "NO_BRANCH" [label="uses", fontsize=10];
+    "Waypoint" -> "RoadLocationId" [label="uses", fontsize=10];
+    "RoadLocationReference" -> "RoadLocationId" [label="uses", fontsize=10];
+    "RoadLocationTransitionReference" -> "RoadLocationId" [label="uses", fontsize=10];
+    "SmartLayerLocationIdPath" -> "RoadLocationId" [label="uses", fontsize=10];
+    "SmartLayerObjectService" -> "RoadLocationId" [label="uses", fontsize=10];
+    "SmartLayerPathService" -> "RoadLocationId" [label="uses", fontsize=10];
+    "RoadLocationAssignment" -> "RoadLocationId" [label="uses", fontsize=10];
+}

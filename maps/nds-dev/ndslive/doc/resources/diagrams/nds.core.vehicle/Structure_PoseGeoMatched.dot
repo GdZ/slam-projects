@@ -1,0 +1,68 @@
+/**
+ * This dot file creates symbol collaboration diagram for PoseGeoMatched.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="PoseGeoMatched collaboration diagram";
+
+    subgraph "cluster_nds.core.vehicle"
+    {
+        style="dashed, rounded";
+        label="nds.core.vehicle";
+        tooltip="Package nds.core.vehicle";
+        href="../../../content/packages/nds.core.vehicle.html#Package-nds-core-vehicle";
+        target="_parent";
+
+        "PoseGeoMatched" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.vehicle.html#Structure-PoseGeoMatched" title="Structure defined in nds.core.vehicle">PoseGeoMatched</td></tr></table></font>>];
+        "Heading" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.vehicle.html#Subtype-Heading" title="Subtype defined in nds.core.vehicle">Heading</td></tr></table></font>>];
+        "MatchProbability" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.vehicle.html#Structure-MatchProbability" title="Structure defined in nds.core.vehicle">MatchProbability</td></tr></table></font>>];
+        "VehiclePose" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.vehicle.html#Union-VehiclePose" title="Union defined in nds.core.vehicle">VehiclePose</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.geometry"
+    {
+        style="dashed, rounded";
+        label="nds.core.geometry";
+        tooltip="Package nds.core.geometry";
+        href="../../../content/packages/nds.core.geometry.html#Package-nds-core-geometry";
+        target="_parent";
+
+        "Position2D" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Structure-Position2D" title="Structure defined in nds.core.geometry">Position2D</td></tr></table></font>>];
+        "Elevation" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Subtype-Elevation" title="Subtype defined in nds.core.geometry">Elevation</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.types"
+    {
+        style="dashed, rounded";
+        label="nds.core.types";
+        tooltip="Package nds.core.types";
+        href="../../../content/packages/nds.core.types.html#Package-nds-core-types";
+        target="_parent";
+
+        "FunctionalRoadClass" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Subtype-FunctionalRoadClass" title="Subtype defined in nds.core.types">FunctionalRoadClass</td></tr></table></font>>];
+        "SpeedKmh" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Subtype-SpeedKmh" title="Subtype defined in nds.core.types">SpeedKmh</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.vehicle.topics"
+    {
+        style="dashed, rounded";
+        label="nds.vehicle.topics";
+        tooltip="Package nds.vehicle.topics";
+        href="../../../content/packages/nds.vehicle.topics.html#Package-nds-vehicle-topics";
+        target="_parent";
+
+        "PoseGeoMatchedTopic" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.vehicle.topics.html#Structure-PoseGeoMatchedTopic" title="Structure defined in nds.vehicle.topics">PoseGeoMatchedTopic</td></tr></table></font>>];
+    }
+
+    "PoseGeoMatched" -> "Position2D" [label="uses", fontsize=10];
+    "PoseGeoMatched" -> "Elevation" [label="uses", fontsize=10];
+    "PoseGeoMatched" -> "FunctionalRoadClass" [label="uses", fontsize=10];
+    "PoseGeoMatched" -> "Heading" [label="uses", fontsize=10];
+    "PoseGeoMatched" -> "SpeedKmh" [label="uses", fontsize=10];
+    "PoseGeoMatched" -> "MatchProbability" [label="uses", fontsize=10];
+    "VehiclePose" -> "PoseGeoMatched" [label="uses", fontsize=10];
+    "PoseGeoMatchedTopic" -> "PoseGeoMatched" [label="uses", fontsize=10];
+}

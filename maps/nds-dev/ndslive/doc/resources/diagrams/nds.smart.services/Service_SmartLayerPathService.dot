@@ -1,0 +1,122 @@
+/**
+ * This dot file creates symbol collaboration diagram for SmartLayerPathService.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="SmartLayerPathService collaboration diagram";
+
+    subgraph "cluster_nds.smart.services"
+    {
+        style="dashed, rounded";
+        label="nds.smart.services";
+        tooltip="Package nds.smart.services";
+        href="../../../content/packages/nds.smart.services.html#Package-nds-smart-services";
+        target="_parent";
+
+        "SmartLayerPathService" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.services.html#Service-SmartLayerPathService" title="Service defined in nds.smart.services">SmartLayerPathService</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.types"
+    {
+        style="dashed, rounded";
+        label="nds.core.types";
+        tooltip="Package nds.core.types";
+        href="../../../content/packages/nds.core.types.html#Package-nds-core-types";
+        target="_parent";
+
+        "Empty" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Structure-Empty" title="Structure defined in nds.core.types">Empty</td></tr></table></font>>];
+        "TileIdList" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Structure-TileIdList" title="Structure defined in nds.core.types">TileIdList</td></tr></table></font>>];
+        "TileId" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Structure-TileId" title="Structure defined in nds.core.types">TileId</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.system.types"
+    {
+        style="dashed, rounded";
+        label="nds.system.types";
+        tooltip="Package nds.system.types";
+        href="../../../content/packages/nds.system.types.html#Package-nds-system-types";
+        target="_parent";
+
+        "ModuleDefinition" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.system.types.html#Structure-ModuleDefinition" title="Structure defined in nds.system.types">ModuleDefinition</td></tr></table></font>>];
+        "NdsSystemToken" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.system.types.html#Structure-NdsSystemToken" title="Structure defined in nds.system.types">NdsSystemToken</td></tr></table></font>>];
+        "NdsNodeLegalInfo" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.system.types.html#Structure-NdsNodeLegalInfo" title="Structure defined in nds.system.types">NdsNodeLegalInfo</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.smart.metadata"
+    {
+        style="dashed, rounded";
+        label="nds.smart.metadata";
+        tooltip="Package nds.smart.metadata";
+        href="../../../content/packages/nds.smart.metadata.html#Package-nds-smart-metadata";
+        target="_parent";
+
+        "SmartLayerDefinition" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.metadata.html#Structure-SmartLayerDefinition" title="Structure defined in nds.smart.metadata">SmartLayerDefinition</td></tr></table></font>>];
+        "PathServiceCapabilitiesResponse" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.metadata.html#Structure-PathServiceCapabilitiesResponse" title="Structure defined in nds.smart.metadata">PathServiceCapabilitiesResponse</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.smart.path"
+    {
+        style="dashed, rounded";
+        label="nds.smart.path";
+        tooltip="Package nds.smart.path";
+        href="../../../content/packages/nds.smart.path.html#Package-nds-smart-path";
+        target="_parent";
+
+        "SmartLayerPathReference" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.path.html#Subtype-SmartLayerPathReference" title="Subtype defined in nds.smart.path">SmartLayerPathReference</td></tr></table></font>>];
+        "SmartLayerPath" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.path.html#Structure-SmartLayerPath" title="Structure defined in nds.smart.path">SmartLayerPath</td></tr></table></font>>];
+        "SmartLayerLocationIdPath" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.path.html#Structure-SmartLayerLocationIdPath" title="Structure defined in nds.smart.path">SmartLayerLocationIdPath</td></tr></table></font>>];
+        "SmartLayerPathList" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.path.html#Structure-SmartLayerPathList" title="Structure defined in nds.smart.path">SmartLayerPathList</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.location"
+    {
+        style="dashed, rounded";
+        label="nds.core.location";
+        tooltip="Package nds.core.location";
+        href="../../../content/packages/nds.core.location.html#Package-nds-core-location";
+        target="_parent";
+
+        "RoadLocationId" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.location.html#Structure-RoadLocationId" title="Structure defined in nds.core.location">RoadLocationId</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.smart.types"
+    {
+        style="dashed, rounded";
+        label="nds.smart.types";
+        tooltip="Package nds.smart.types";
+        href="../../../content/packages/nds.smart.types.html#Package-nds-smart-types";
+        target="_parent";
+
+        "SmartLayerHeader" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.types.html#Structure-SmartLayerHeader" title="Structure defined in nds.smart.types">SmartLayerHeader</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.smart.tile"
+    {
+        style="dashed, rounded";
+        label="nds.smart.tile";
+        tooltip="Package nds.smart.tile";
+        href="../../../content/packages/nds.smart.tile.html#Package-nds-smart-tile";
+        target="_parent";
+
+        "SmartLayerTileHeaderList" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.tile.html#Structure-SmartLayerTileHeaderList" title="Structure defined in nds.smart.tile">SmartLayerTileHeaderList</td></tr></table></font>>];
+    }
+
+    "SmartLayerPathService" -> "Empty" [label="uses", fontsize=10];
+    "SmartLayerPathService" -> "ModuleDefinition" [label="uses", fontsize=10];
+    "SmartLayerPathService" -> "SmartLayerDefinition" [label="uses", fontsize=10];
+    "SmartLayerPathService" -> "NdsSystemToken" [label="uses", fontsize=10];
+    "SmartLayerPathService" -> "NdsNodeLegalInfo" [label="uses", fontsize=10];
+    "SmartLayerPathService" -> "PathServiceCapabilitiesResponse" [label="uses", fontsize=10];
+    "SmartLayerPathService" -> "SmartLayerPathReference" [label="uses", fontsize=10];
+    "SmartLayerPathService" -> "SmartLayerPath" [label="uses", fontsize=10];
+    "SmartLayerPathService" -> "RoadLocationId" [label="uses", fontsize=10];
+    "SmartLayerPathService" -> "SmartLayerLocationIdPath" [label="uses", fontsize=10];
+    "SmartLayerPathService" -> "TileIdList" [label="uses", fontsize=10];
+    "SmartLayerPathService" -> "SmartLayerPathList" [label="uses", fontsize=10];
+    "SmartLayerPathService" -> "SmartLayerHeader" [label="uses", fontsize=10];
+    "SmartLayerPathService" -> "TileId" [label="uses", fontsize=10];
+    "SmartLayerPathService" -> "SmartLayerTileHeaderList" [label="uses", fontsize=10];
+}

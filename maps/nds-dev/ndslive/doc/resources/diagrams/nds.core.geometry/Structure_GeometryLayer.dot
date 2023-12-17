@@ -1,0 +1,216 @@
+/**
+ * This dot file creates symbol collaboration diagram for GeometryLayer.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="GeometryLayer collaboration diagram";
+
+    subgraph "cluster_nds.core.geometry"
+    {
+        style="dashed, rounded";
+        label="nds.core.geometry";
+        tooltip="Package nds.core.geometry";
+        href="../../../content/packages/nds.core.geometry.html#Package-nds-core-geometry";
+        target="_parent";
+
+        "GeometryLayer" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Structure-GeometryLayer" title="Structure defined in nds.core.geometry">GeometryLayer</td></tr></table></font>>];
+        "GeometryLayerType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Enum-GeometryLayerType" title="Enum defined in nds.core.geometry">GeometryLayerType</td></tr></table></font>>];
+        "CoordShift" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Subtype-CoordShift" title="Subtype defined in nds.core.geometry">CoordShift</td></tr></table></font>>];
+        "GeometryId" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Subtype-GeometryId" title="Subtype defined in nds.core.geometry">GeometryId</td></tr></table></font>>];
+        "Buffers" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Choice-Buffers" title="Choice defined in nds.core.geometry">Buffers</td></tr></table></font>>];
+        "GeometryType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Subtype-GeometryType" title="Subtype defined in nds.core.geometry">GeometryType</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.localization.types"
+    {
+        style="dashed, rounded";
+        label="nds.localization.types";
+        tooltip="Package nds.localization.types";
+        href="../../../content/packages/nds.localization.types.html#Package-nds-localization-types";
+        target="_parent";
+
+        "ObstacleType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.localization.types.html#Enum-ObstacleType" title="Enum defined in nds.localization.types">ObstacleType</td></tr></table></font>>];
+        "LandmarkId" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.localization.types.html#Subtype-LandmarkId" title="Subtype defined in nds.localization.types">LandmarkId</td></tr></table></font>>];
+        "LandmarkLine" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.localization.types.html#Structure-LandmarkLine" title="Structure defined in nds.localization.types">LandmarkLine</td></tr></table></font>>];
+        "LandmarkPolygon" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.localization.types.html#Structure-LandmarkPolygon" title="Structure defined in nds.localization.types">LandmarkPolygon</td></tr></table></font>>];
+        "LandmarkMesh" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.localization.types.html#Structure-LandmarkMesh" title="Structure defined in nds.localization.types">LandmarkMesh</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.road.reference.types"
+    {
+        style="dashed, rounded";
+        label="nds.road.reference.types";
+        tooltip="Package nds.road.reference.types";
+        href="../../../content/packages/nds.road.reference.types.html#Package-nds-road-reference-types";
+        target="_parent";
+
+        "RoadId" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.road.reference.types.html#Subtype-RoadId" title="Subtype defined in nds.road.reference.types">RoadId</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.display.reference.types"
+    {
+        style="dashed, rounded";
+        label="nds.display.reference.types";
+        tooltip="Package nds.display.reference.types";
+        href="../../../content/packages/nds.display.reference.types.html#Package-nds-display-reference-types";
+        target="_parent";
+
+        "DisplayAreaId" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.reference.types.html#Subtype-DisplayAreaId" title="Subtype defined in nds.display.reference.types">DisplayAreaId</td></tr></table></font>>];
+        "DisplayLineId" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.reference.types.html#Subtype-DisplayLineId" title="Subtype defined in nds.display.reference.types">DisplayLineId</td></tr></table></font>>];
+        "DisplayPointId" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.reference.types.html#Subtype-DisplayPointId" title="Subtype defined in nds.display.reference.types">DisplayPointId</td></tr></table></font>>];
+        "DisplayMesh3dId" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.reference.types.html#Subtype-DisplayMesh3dId" title="Subtype defined in nds.display.reference.types">DisplayMesh3dId</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.display.types"
+    {
+        style="dashed, rounded";
+        label="nds.display.types";
+        tooltip="Package nds.display.types";
+        href="../../../content/packages/nds.display.types.html#Package-nds-display-types";
+        target="_parent";
+
+        "DisplayAreaType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.types.html#Enum-DisplayAreaType" title="Enum defined in nds.display.types">DisplayAreaType</td></tr></table></font>>];
+        "DisplayLineType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.types.html#Enum-DisplayLineType" title="Enum defined in nds.display.types">DisplayLineType</td></tr></table></font>>];
+        "DisplayPointType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.types.html#Enum-DisplayPointType" title="Enum defined in nds.display.types">DisplayPointType</td></tr></table></font>>];
+        "DisplayMesh3dType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.types.html#Enum-DisplayMesh3dType" title="Enum defined in nds.display.types">DisplayMesh3dType</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.lane.lanes"
+    {
+        style="dashed, rounded";
+        label="nds.lane.lanes";
+        tooltip="Package nds.lane.lanes";
+        href="../../../content/packages/nds.lane.lanes.html#Package-nds-lane-lanes";
+        target="_parent";
+
+        "LaneCenterLineGeometryId" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.lanes.html#Subtype-LaneCenterLineGeometryId" title="Subtype defined in nds.lane.lanes">LaneCenterLineGeometryId</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.lane.boundaries"
+    {
+        style="dashed, rounded";
+        label="nds.lane.boundaries";
+        tooltip="Package nds.lane.boundaries";
+        href="../../../content/packages/nds.lane.boundaries.html#Package-nds-lane-boundaries";
+        target="_parent";
+
+        "BoundaryGeometryId" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.boundaries.html#Subtype-BoundaryGeometryId" title="Subtype defined in nds.lane.boundaries">BoundaryGeometryId</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.lane.reference.types"
+    {
+        style="dashed, rounded";
+        label="nds.lane.reference.types";
+        tooltip="Package nds.lane.reference.types";
+        href="../../../content/packages/nds.lane.reference.types.html#Package-nds-lane-reference-types";
+        target="_parent";
+
+        "RoadSurfaceId" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.reference.types.html#Subtype-RoadSurfaceId" title="Subtype defined in nds.lane.reference.types">RoadSurfaceId</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.lane.roadsurface"
+    {
+        style="dashed, rounded";
+        label="nds.lane.roadsurface";
+        tooltip="Package nds.lane.roadsurface";
+        href="../../../content/packages/nds.lane.roadsurface.html#Package-nds-lane-roadsurface";
+        target="_parent";
+
+        "RoadSurfacePolygonType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.roadsurface.html#Structure-RoadSurfacePolygonType" title="Structure defined in nds.lane.roadsurface">RoadSurfacePolygonType</td></tr></table></font>>];
+        "RoadSurfaceLineType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.roadsurface.html#Structure-RoadSurfaceLineType" title="Structure defined in nds.lane.roadsurface">RoadSurfaceLineType</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.localization.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.localization.instantiations";
+        tooltip="Package nds.localization.instantiations";
+        href="../../../content/packages/nds.localization.instantiations.html#Package-nds-localization-instantiations";
+        target="_parent";
+
+        "ObstacleGeometryLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.localization.instantiations.html#InstantiateType-ObstacleGeometryLayer" title="InstantiateType defined in nds.localization.instantiations">ObstacleGeometryLayer</td></tr></table></font>>];
+        "LandmarkLineGeometryLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.localization.instantiations.html#InstantiateType-LandmarkLineGeometryLayer" title="InstantiateType defined in nds.localization.instantiations">LandmarkLineGeometryLayer</td></tr></table></font>>];
+        "LandmarkPolygonGeometryLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.localization.instantiations.html#InstantiateType-LandmarkPolygonGeometryLayer" title="InstantiateType defined in nds.localization.instantiations">LandmarkPolygonGeometryLayer</td></tr></table></font>>];
+        "LandmarkMeshGeometryLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.localization.instantiations.html#InstantiateType-LandmarkMeshGeometryLayer" title="InstantiateType defined in nds.localization.instantiations">LandmarkMeshGeometryLayer</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.road.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.road.instantiations";
+        tooltip="Package nds.road.instantiations";
+        href="../../../content/packages/nds.road.instantiations.html#Package-nds-road-instantiations";
+        target="_parent";
+
+        "RoadShapesLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.road.instantiations.html#InstantiateType-RoadShapesLayer" title="InstantiateType defined in nds.road.instantiations">RoadShapesLayer</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.display.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.display.instantiations";
+        tooltip="Package nds.display.instantiations";
+        href="../../../content/packages/nds.display.instantiations.html#Package-nds-display-instantiations";
+        target="_parent";
+
+        "AreaDisplayGeometryLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.instantiations.html#InstantiateType-AreaDisplayGeometryLayer" title="InstantiateType defined in nds.display.instantiations">AreaDisplayGeometryLayer</td></tr></table></font>>];
+        "LineDisplayGeometryLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.instantiations.html#InstantiateType-LineDisplayGeometryLayer" title="InstantiateType defined in nds.display.instantiations">LineDisplayGeometryLayer</td></tr></table></font>>];
+        "PointDisplayGeometryLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.instantiations.html#InstantiateType-PointDisplayGeometryLayer" title="InstantiateType defined in nds.display.instantiations">PointDisplayGeometryLayer</td></tr></table></font>>];
+        "Mesh3dDisplayGeometryLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.instantiations.html#InstantiateType-Mesh3dDisplayGeometryLayer" title="InstantiateType defined in nds.display.instantiations">Mesh3dDisplayGeometryLayer</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.lane.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.lane.instantiations";
+        tooltip="Package nds.lane.instantiations";
+        href="../../../content/packages/nds.lane.instantiations.html#Package-nds-lane-instantiations";
+        target="_parent";
+
+        "CenterLineGeometryLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.instantiations.html#InstantiateType-CenterLineGeometryLayer" title="InstantiateType defined in nds.lane.instantiations">CenterLineGeometryLayer</td></tr></table></font>>];
+        "BoundaryGeometryLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.instantiations.html#InstantiateType-BoundaryGeometryLayer" title="InstantiateType defined in nds.lane.instantiations">BoundaryGeometryLayer</td></tr></table></font>>];
+        "RoadSurfacePolygonGeometryLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.instantiations.html#InstantiateType-RoadSurfacePolygonGeometryLayer" title="InstantiateType defined in nds.lane.instantiations">RoadSurfacePolygonGeometryLayer</td></tr></table></font>>];
+        "RoadSurfaceLineGeometryLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.instantiations.html#InstantiateType-RoadSurfaceLineGeometryLayer" title="InstantiateType defined in nds.lane.instantiations">RoadSurfaceLineGeometryLayer</td></tr></table></font>>];
+    }
+
+    "GeometryLayer" -> "GeometryLayerType" [label="uses", fontsize=10];
+    "GeometryLayer" -> "CoordShift" [label="uses", fontsize=10];
+    "GeometryLayer" -> "GeometryId" [label="uses", fontsize=10];
+    "GeometryLayer" -> "ObstacleType" [label="uses", fontsize=10];
+    "GeometryLayer" -> "Buffers" [label="uses", fontsize=10];
+    "GeometryLayer" -> "LandmarkId" [label="uses", fontsize=10];
+    "GeometryLayer" -> "LandmarkLine" [label="uses", fontsize=10];
+    "GeometryLayer" -> "LandmarkPolygon" [label="uses", fontsize=10];
+    "GeometryLayer" -> "LandmarkMesh" [label="uses", fontsize=10];
+    "GeometryLayer" -> "RoadId" [label="uses", fontsize=10];
+    "GeometryLayer" -> "GeometryType" [label="uses", fontsize=10];
+    "GeometryLayer" -> "DisplayAreaId" [label="uses", fontsize=10];
+    "GeometryLayer" -> "DisplayAreaType" [label="uses", fontsize=10];
+    "GeometryLayer" -> "DisplayLineId" [label="uses", fontsize=10];
+    "GeometryLayer" -> "DisplayLineType" [label="uses", fontsize=10];
+    "GeometryLayer" -> "DisplayPointId" [label="uses", fontsize=10];
+    "GeometryLayer" -> "DisplayPointType" [label="uses", fontsize=10];
+    "GeometryLayer" -> "DisplayMesh3dId" [label="uses", fontsize=10];
+    "GeometryLayer" -> "DisplayMesh3dType" [label="uses", fontsize=10];
+    "GeometryLayer" -> "LaneCenterLineGeometryId" [label="uses", fontsize=10];
+    "GeometryLayer" -> "BoundaryGeometryId" [label="uses", fontsize=10];
+    "GeometryLayer" -> "RoadSurfaceId" [label="uses", fontsize=10];
+    "GeometryLayer" -> "RoadSurfacePolygonType" [label="uses", fontsize=10];
+    "GeometryLayer" -> "RoadSurfaceLineType" [label="uses", fontsize=10];
+    "ObstacleGeometryLayer" -> "GeometryLayer" [label="uses", fontsize=10];
+    "LandmarkLineGeometryLayer" -> "GeometryLayer" [label="uses", fontsize=10];
+    "LandmarkPolygonGeometryLayer" -> "GeometryLayer" [label="uses", fontsize=10];
+    "LandmarkMeshGeometryLayer" -> "GeometryLayer" [label="uses", fontsize=10];
+    "RoadShapesLayer" -> "GeometryLayer" [label="uses", fontsize=10];
+    "AreaDisplayGeometryLayer" -> "GeometryLayer" [label="uses", fontsize=10];
+    "LineDisplayGeometryLayer" -> "GeometryLayer" [label="uses", fontsize=10];
+    "PointDisplayGeometryLayer" -> "GeometryLayer" [label="uses", fontsize=10];
+    "Mesh3dDisplayGeometryLayer" -> "GeometryLayer" [label="uses", fontsize=10];
+    "CenterLineGeometryLayer" -> "GeometryLayer" [label="uses", fontsize=10];
+    "BoundaryGeometryLayer" -> "GeometryLayer" [label="uses", fontsize=10];
+    "RoadSurfacePolygonGeometryLayer" -> "GeometryLayer" [label="uses", fontsize=10];
+    "RoadSurfaceLineGeometryLayer" -> "GeometryLayer" [label="uses", fontsize=10];
+}

@@ -1,0 +1,86 @@
+/**
+ * This dot file creates symbol collaboration diagram for Lane.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="Lane collaboration diagram";
+
+    subgraph "cluster_nds.lane.lanes"
+    {
+        style="dashed, rounded";
+        label="nds.lane.lanes";
+        tooltip="Package nds.lane.lanes";
+        href="../../../content/packages/nds.lane.lanes.html#Package-nds-lane-lanes";
+        target="_parent";
+
+        "Lane" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.lanes.html#Structure-Lane" title="Structure defined in nds.lane.lanes">Lane</td></tr></table></font>>];
+        "DirectedLaneId" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.lanes.html#Subtype-DirectedLaneId" title="Subtype defined in nds.lane.lanes">DirectedLaneId</td></tr></table></font>>];
+        "LaneConnector" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.lanes.html#Structure-LaneConnector" title="Structure defined in nds.lane.lanes">LaneConnector</td></tr></table></font>>];
+        "LaneCenterLineGeometryId" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.lanes.html#Subtype-LaneCenterLineGeometryId" title="Subtype defined in nds.lane.lanes">LaneCenterLineGeometryId</td></tr></table></font>>];
+        "LaneRelation" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.lanes.html#Structure-LaneRelation" title="Structure defined in nds.lane.lanes">LaneRelation</td></tr></table></font>>];
+        "LaneTraversability" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.lanes.html#Structure-LaneTraversability" title="Structure defined in nds.lane.lanes">LaneTraversability</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.lane.types"
+    {
+        style="dashed, rounded";
+        label="nds.lane.types";
+        tooltip="Package nds.lane.types";
+        href="../../../content/packages/nds.lane.types.html#Package-nds-lane-types";
+        target="_parent";
+
+        "LaneLayoutType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.types.html#Enum-LaneLayoutType" title="Enum defined in nds.lane.types">LaneLayoutType</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.lane.reference.types"
+    {
+        style="dashed, rounded";
+        label="nds.lane.reference.types";
+        tooltip="Package nds.lane.reference.types";
+        href="../../../content/packages/nds.lane.reference.types.html#Package-nds-lane-reference-types";
+        target="_parent";
+
+        "LaneId" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.reference.types.html#Subtype-LaneId" title="Subtype defined in nds.lane.reference.types">LaneId</td></tr></table></font>>];
+        "LaneLength" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.reference.types.html#Subtype-LaneLength" title="Subtype defined in nds.lane.reference.types">LaneLength</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.lane.boundaries"
+    {
+        style="dashed, rounded";
+        label="nds.lane.boundaries";
+        tooltip="Package nds.lane.boundaries";
+        href="../../../content/packages/nds.lane.boundaries.html#Package-nds-lane-boundaries";
+        target="_parent";
+
+        "BoundarySet" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.boundaries.html#Structure-BoundarySet" title="Structure defined in nds.lane.boundaries">BoundarySet</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.lane.lanegroups"
+    {
+        style="dashed, rounded";
+        label="nds.lane.lanegroups";
+        tooltip="Package nds.lane.lanegroups";
+        href="../../../content/packages/nds.lane.lanegroups.html#Package-nds-lane-lanegroups";
+        target="_parent";
+
+        "RoadLaneGroup" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.lanegroups.html#Structure-RoadLaneGroup" title="Structure defined in nds.lane.lanegroups">RoadLaneGroup</td></tr></table></font>>];
+        "IntersectionLaneGroup" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.lanegroups.html#Structure-IntersectionLaneGroup" title="Structure defined in nds.lane.lanegroups">IntersectionLaneGroup</td></tr></table></font>>];
+        "ArtificialRoadLaneGroup" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.lanegroups.html#Structure-ArtificialRoadLaneGroup" title="Structure defined in nds.lane.lanegroups">ArtificialRoadLaneGroup</td></tr></table></font>>];
+    }
+
+    "Lane" -> "LaneLayoutType" [label="uses", fontsize=10];
+    "Lane" -> "DirectedLaneId" [label="uses", fontsize=10];
+    "Lane" -> "LaneId" [label="uses", fontsize=10];
+    "Lane" -> "LaneConnector" [label="uses", fontsize=10];
+    "Lane" -> "LaneLength" [label="uses", fontsize=10];
+    "Lane" -> "LaneCenterLineGeometryId" [label="uses", fontsize=10];
+    "Lane" -> "LaneRelation" [label="uses", fontsize=10];
+    "Lane" -> "LaneTraversability" [label="uses", fontsize=10];
+    "Lane" -> "BoundarySet" [label="uses", fontsize=10];
+    "RoadLaneGroup" -> "Lane" [label="uses", fontsize=10];
+    "IntersectionLaneGroup" -> "Lane" [label="uses", fontsize=10];
+    "ArtificialRoadLaneGroup" -> "Lane" [label="uses", fontsize=10];
+}

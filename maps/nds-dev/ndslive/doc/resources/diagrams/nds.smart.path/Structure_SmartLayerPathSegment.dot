@@ -1,0 +1,50 @@
+/**
+ * This dot file creates symbol collaboration diagram for SmartLayerPathSegment.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="SmartLayerPathSegment collaboration diagram";
+
+    subgraph "cluster_nds.smart.path"
+    {
+        style="dashed, rounded";
+        label="nds.smart.path";
+        tooltip="Package nds.smart.path";
+        href="../../../content/packages/nds.smart.path.html#Package-nds-smart-path";
+        target="_parent";
+
+        "SmartLayerPathSegment" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.path.html#Structure-SmartLayerPathSegment" title="Structure defined in nds.smart.path">SmartLayerPathSegment</td></tr></table></font>>];
+        "SmartLayerPath" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.path.html#Structure-SmartLayerPath" title="Structure defined in nds.smart.path">SmartLayerPath</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.smart.types"
+    {
+        style="dashed, rounded";
+        label="nds.smart.types";
+        tooltip="Package nds.smart.types";
+        href="../../../content/packages/nds.smart.types.html#Package-nds-smart-types";
+        target="_parent";
+
+        "SmartLayerHeader" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.types.html#Structure-SmartLayerHeader" title="Structure defined in nds.smart.types">SmartLayerHeader</td></tr></table></font>>];
+        "DataLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.types.html#Structure-DataLayer" title="Structure defined in nds.smart.types">DataLayer</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.types"
+    {
+        style="dashed, rounded";
+        label="nds.core.types";
+        tooltip="Package nds.core.types";
+        href="../../../content/packages/nds.core.types.html#Package-nds-core-types";
+        target="_parent";
+
+        "PackedTileId" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Subtype-PackedTileId" title="Subtype defined in nds.core.types">PackedTileId</td></tr></table></font>>];
+    }
+
+    "SmartLayerPathSegment" -> "SmartLayerHeader" [label="uses", fontsize=10];
+    "SmartLayerPathSegment" -> "PackedTileId" [label="uses", fontsize=10];
+    "SmartLayerPathSegment" -> "DataLayer" [label="uses", fontsize=10];
+    "SmartLayerPath" -> "SmartLayerPathSegment" [label="uses", fontsize=10];
+}

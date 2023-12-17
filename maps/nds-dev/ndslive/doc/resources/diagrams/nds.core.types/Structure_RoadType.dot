@@ -1,0 +1,182 @@
+/**
+ * This dot file creates symbol collaboration diagram for RoadType.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="RoadType collaboration diagram";
+
+    subgraph "cluster_nds.core.types"
+    {
+        style="dashed, rounded";
+        label="nds.core.types";
+        tooltip="Package nds.core.types";
+        href="../../../content/packages/nds.core.types.html#Package-nds-core-types";
+        target="_parent";
+
+        "RoadType" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Structure-RoadType" title="Structure defined in nds.core.types">RoadType</td></tr></table></font>>];
+        "RoadForm" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Enum-RoadForm" title="Enum defined in nds.core.types">RoadForm</td></tr></table></font>>];
+        "RoadCharacter" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Enum-RoadCharacter" title="Enum defined in nds.core.types">RoadCharacter</td></tr></table></font>>];
+        "LaneType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Structure-LaneType" title="Structure defined in nds.core.types">LaneType</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.location"
+    {
+        style="dashed, rounded";
+        label="nds.core.location";
+        tooltip="Package nds.core.location";
+        href="../../../content/packages/nds.core.location.html#Package-nds-core-location";
+        target="_parent";
+
+        "LocationSegment" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.location.html#Structure-LocationSegment" title="Structure defined in nds.core.location">LocationSegment</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.traffic.metadata"
+    {
+        style="dashed, rounded";
+        label="nds.traffic.metadata";
+        tooltip="Package nds.traffic.metadata";
+        href="../../../content/packages/nds.traffic.metadata.html#Package-nds-traffic-metadata";
+        target="_parent";
+
+        "RoadTrafficLayerMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.traffic.metadata.html#Structure-RoadTrafficLayerMetadata" title="Structure defined in nds.traffic.metadata">RoadTrafficLayerMetadata</td></tr></table></font>>];
+        "RoadTrafficLayerIndirectMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.traffic.metadata.html#Structure-RoadTrafficLayerIndirectMetadata" title="Structure defined in nds.traffic.metadata">RoadTrafficLayerIndirectMetadata</td></tr></table></font>>];
+        "RoadLocationTrafficLayerMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.traffic.metadata.html#Structure-RoadLocationTrafficLayerMetadata" title="Structure defined in nds.traffic.metadata">RoadLocationTrafficLayerMetadata</td></tr></table></font>>];
+        "DisplayLineTrafficLayerMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.traffic.metadata.html#Structure-DisplayLineTrafficLayerMetadata" title="Structure defined in nds.traffic.metadata">DisplayLineTrafficLayerMetadata</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.routingdata.metadata"
+    {
+        style="dashed, rounded";
+        label="nds.routingdata.metadata";
+        tooltip="Package nds.routingdata.metadata";
+        href="../../../content/packages/nds.routingdata.metadata.html#Package-nds-routingdata-metadata";
+        target="_parent";
+
+        "RoadRoutingLayerMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routingdata.metadata.html#Structure-RoadRoutingLayerMetadata" title="Structure defined in nds.routingdata.metadata">RoadRoutingLayerMetadata</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.adas.metadata"
+    {
+        style="dashed, rounded";
+        label="nds.adas.metadata";
+        tooltip="Package nds.adas.metadata";
+        href="../../../content/packages/nds.adas.metadata.html#Package-nds-adas-metadata";
+        target="_parent";
+
+        "AdasRoadLayerMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.adas.metadata.html#Structure-AdasRoadLayerMetadata" title="Structure defined in nds.adas.metadata">AdasRoadLayerMetadata</td></tr></table></font>>];
+        "AdasRoadLocationLayerMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.adas.metadata.html#Structure-AdasRoadLocationLayerMetadata" title="Structure defined in nds.adas.metadata">AdasRoadLocationLayerMetadata</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.instructions.metadata"
+    {
+        style="dashed, rounded";
+        label="nds.instructions.metadata";
+        tooltip="Package nds.instructions.metadata";
+        href="../../../content/packages/nds.instructions.metadata.html#Package-nds-instructions-metadata";
+        target="_parent";
+
+        "RoadInstructionsLayerMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.instructions.metadata.html#Structure-RoadInstructionsLayerMetadata" title="Structure defined in nds.instructions.metadata">RoadInstructionsLayerMetadata</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.smart.metadata"
+    {
+        style="dashed, rounded";
+        label="nds.smart.metadata";
+        tooltip="Package nds.smart.metadata";
+        href="../../../content/packages/nds.smart.metadata.html#Package-nds-smart-metadata";
+        target="_parent";
+
+        "SmartLayerContent" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.metadata.html#Structure-SmartLayerContent" title="Structure defined in nds.smart.metadata">SmartLayerContent</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.road.metadata"
+    {
+        style="dashed, rounded";
+        label="nds.road.metadata";
+        tooltip="Package nds.road.metadata";
+        href="../../../content/packages/nds.road.metadata.html#Package-nds-road-metadata";
+        target="_parent";
+
+        "FeatureLayerMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.road.metadata.html#Structure-FeatureLayerMetadata" title="Structure defined in nds.road.metadata">FeatureLayerMetadata</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.rules.metadata"
+    {
+        style="dashed, rounded";
+        label="nds.rules.metadata";
+        tooltip="Package nds.rules.metadata";
+        href="../../../content/packages/nds.rules.metadata.html#Package-nds-rules-metadata";
+        target="_parent";
+
+        "RegionRulesLayerMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.metadata.html#Structure-RegionRulesLayerMetadata" title="Structure defined in nds.rules.metadata">RegionRulesLayerMetadata</td></tr></table></font>>];
+        "RoadRulesLayerMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.metadata.html#Structure-RoadRulesLayerMetadata" title="Structure defined in nds.rules.metadata">RoadRulesLayerMetadata</td></tr></table></font>>];
+        "RoadRulesLayerIndirectMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.metadata.html#Structure-RoadRulesLayerIndirectMetadata" title="Structure defined in nds.rules.metadata">RoadRulesLayerIndirectMetadata</td></tr></table></font>>];
+        "RoadLocationRulesLayerMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.metadata.html#Structure-RoadLocationRulesLayerMetadata" title="Structure defined in nds.rules.metadata">RoadLocationRulesLayerMetadata</td></tr></table></font>>];
+        "DisplayLineRulesLayerMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.metadata.html#Structure-DisplayLineRulesLayerMetadata" title="Structure defined in nds.rules.metadata">DisplayLineRulesLayerMetadata</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.characteristics.attributes"
+    {
+        style="dashed, rounded";
+        label="nds.characteristics.attributes";
+        tooltip="Package nds.characteristics.attributes";
+        href="../../../content/packages/nds.characteristics.attributes.html#Package-nds-characteristics-attributes";
+        target="_parent";
+
+        "CharacsRoadRangeAttributeValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.attributes.html#Choice-CharacsRoadRangeAttributeValue" title="Choice defined in nds.characteristics.attributes">CharacsRoadRangeAttributeValue</td></tr></table></font>>];
+        "CharacsDisplayLineRangeAttributeValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.attributes.html#Choice-CharacsDisplayLineRangeAttributeValue" title="Choice defined in nds.characteristics.attributes">CharacsDisplayLineRangeAttributeValue</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.characteristics.metadata"
+    {
+        style="dashed, rounded";
+        label="nds.characteristics.metadata";
+        tooltip="Package nds.characteristics.metadata";
+        href="../../../content/packages/nds.characteristics.metadata.html#Package-nds-characteristics-metadata";
+        target="_parent";
+
+        "RoadCharacteristicsLayerMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.metadata.html#Structure-RoadCharacteristicsLayerMetadata" title="Structure defined in nds.characteristics.metadata">RoadCharacteristicsLayerMetadata</td></tr></table></font>>];
+        "RoadCharacteristicsLayerIndirectMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.metadata.html#Structure-RoadCharacteristicsLayerIndirectMetadata" title="Structure defined in nds.characteristics.metadata">RoadCharacteristicsLayerIndirectMetadata</td></tr></table></font>>];
+        "RoadLocationCharacteristicsLayerMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.metadata.html#Structure-RoadLocationCharacteristicsLayerMetadata" title="Structure defined in nds.characteristics.metadata">RoadLocationCharacteristicsLayerMetadata</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.lane.metadata"
+    {
+        style="dashed, rounded";
+        label="nds.lane.metadata";
+        tooltip="Package nds.lane.metadata";
+        href="../../../content/packages/nds.lane.metadata.html#Package-nds-lane-metadata";
+        target="_parent";
+
+        "LaneLayerMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.metadata.html#Structure-LaneLayerMetadata" title="Structure defined in nds.lane.metadata">LaneLayerMetadata</td></tr></table></font>>];
+    }
+
+    "RoadType" -> "RoadForm" [label="uses", fontsize=10];
+    "RoadType" -> "RoadCharacter" [label="uses", fontsize=10];
+    "LaneType" -> "RoadType" [label="uses", fontsize=10];
+    "LocationSegment" -> "RoadType" [label="uses", fontsize=10];
+    "RoadTrafficLayerMetadata" -> "RoadType" [label="uses", fontsize=10];
+    "RoadTrafficLayerIndirectMetadata" -> "RoadType" [label="uses", fontsize=10];
+    "RoadLocationTrafficLayerMetadata" -> "RoadType" [label="uses", fontsize=10];
+    "DisplayLineTrafficLayerMetadata" -> "RoadType" [label="uses", fontsize=10];
+    "RoadRoutingLayerMetadata" -> "RoadType" [label="uses", fontsize=10];
+    "AdasRoadLayerMetadata" -> "RoadType" [label="uses", fontsize=10];
+    "AdasRoadLocationLayerMetadata" -> "RoadType" [label="uses", fontsize=10];
+    "RoadInstructionsLayerMetadata" -> "RoadType" [label="uses", fontsize=10];
+    "SmartLayerContent" -> "RoadType" [label="uses", fontsize=10];
+    "FeatureLayerMetadata" -> "RoadType" [label="uses", fontsize=10];
+    "RegionRulesLayerMetadata" -> "RoadType" [label="uses", fontsize=10];
+    "RoadRulesLayerMetadata" -> "RoadType" [label="uses", fontsize=10];
+    "RoadRulesLayerIndirectMetadata" -> "RoadType" [label="uses", fontsize=10];
+    "RoadLocationRulesLayerMetadata" -> "RoadType" [label="uses", fontsize=10];
+    "DisplayLineRulesLayerMetadata" -> "RoadType" [label="uses", fontsize=10];
+    "CharacsRoadRangeAttributeValue" -> "RoadType" [label="uses", fontsize=10];
+    "CharacsDisplayLineRangeAttributeValue" -> "RoadType" [label="uses", fontsize=10];
+    "RoadCharacteristicsLayerMetadata" -> "RoadType" [label="uses", fontsize=10];
+    "RoadCharacteristicsLayerIndirectMetadata" -> "RoadType" [label="uses", fontsize=10];
+    "RoadLocationCharacteristicsLayerMetadata" -> "RoadType" [label="uses", fontsize=10];
+    "LaneLayerMetadata" -> "RoadType" [label="uses", fontsize=10];
+}

@@ -1,0 +1,66 @@
+/**
+ * This dot file creates symbol collaboration diagram for TrafficDisplayLineRangeAttributeSetMap.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="TrafficDisplayLineRangeAttributeSetMap collaboration diagram";
+
+    subgraph "cluster_nds.traffic.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.traffic.instantiations";
+        tooltip="Package nds.traffic.instantiations";
+        href="../../../content/packages/nds.traffic.instantiations.html#Package-nds-traffic-instantiations";
+        target="_parent";
+
+        "TrafficDisplayLineRangeAttributeSetMap" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.traffic.instantiations.html#InstantiateType-TrafficDisplayLineRangeAttributeSetMap" title="InstantiateType defined in nds.traffic.instantiations">TrafficDisplayLineRangeAttributeSetMap</td></tr></table></font>>];
+        "AttributeSetMap&lt;DisplayLineReference,DisplayLineRangeValidity,TrafficDisplayLineRangeAttributeType,TrafficDisplayLineRangeAttributeValue,TrafficPropertyType,TrafficPropertyValue&gt;" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.attributemap.html#Structure-AttributeSetMap" title="Structure defined in nds.core.attributemap">AttributeSetMap</td><td>&lt;</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.reference.types.html#Structure-DisplayLineReference" title="Structure defined in nds.display.reference.types">DisplayLineReference</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.reference.types.html#Structure-DisplayLineRangeValidity" title="Structure defined in nds.display.reference.types">DisplayLineRangeValidity</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.traffic.attributes.html#Enum-TrafficDisplayLineRangeAttributeType" title="Enum defined in nds.traffic.attributes">TrafficDisplayLineRangeAttributeType</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.traffic.attributes.html#Choice-TrafficDisplayLineRangeAttributeValue" title="Choice defined in nds.traffic.attributes">TrafficDisplayLineRangeAttributeValue</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.traffic.properties.html#Structure-TrafficPropertyType" title="Structure defined in nds.traffic.properties">TrafficPropertyType</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.traffic.properties.html#Structure-TrafficPropertyValue" title="Structure defined in nds.traffic.properties">TrafficPropertyValue</td></tr></table></td><td>&gt;</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.display.reference.types"
+    {
+        style="dashed, rounded";
+        label="nds.display.reference.types";
+        tooltip="Package nds.display.reference.types";
+        href="../../../content/packages/nds.display.reference.types.html#Package-nds-display-reference-types";
+        target="_parent";
+
+        "DisplayLineReference" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.reference.types.html#Structure-DisplayLineReference" title="Structure defined in nds.display.reference.types">DisplayLineReference</td></tr></table></font>>];
+        "DisplayLineRangeValidity" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.reference.types.html#Structure-DisplayLineRangeValidity" title="Structure defined in nds.display.reference.types">DisplayLineRangeValidity</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.traffic.attributes"
+    {
+        style="dashed, rounded";
+        label="nds.traffic.attributes";
+        tooltip="Package nds.traffic.attributes";
+        href="../../../content/packages/nds.traffic.attributes.html#Package-nds-traffic-attributes";
+        target="_parent";
+
+        "TrafficDisplayLineRangeAttributeType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.traffic.attributes.html#Enum-TrafficDisplayLineRangeAttributeType" title="Enum defined in nds.traffic.attributes">TrafficDisplayLineRangeAttributeType</td></tr></table></font>>];
+        "TrafficDisplayLineRangeAttributeValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.traffic.attributes.html#Choice-TrafficDisplayLineRangeAttributeValue" title="Choice defined in nds.traffic.attributes">TrafficDisplayLineRangeAttributeValue</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.traffic.properties"
+    {
+        style="dashed, rounded";
+        label="nds.traffic.properties";
+        tooltip="Package nds.traffic.properties";
+        href="../../../content/packages/nds.traffic.properties.html#Package-nds-traffic-properties";
+        target="_parent";
+
+        "TrafficPropertyType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.traffic.properties.html#Structure-TrafficPropertyType" title="Structure defined in nds.traffic.properties">TrafficPropertyType</td></tr></table></font>>];
+        "TrafficPropertyValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.traffic.properties.html#Structure-TrafficPropertyValue" title="Structure defined in nds.traffic.properties">TrafficPropertyValue</td></tr></table></font>>];
+    }
+
+    "TrafficDisplayLineRangeAttributeSetMap" -> "AttributeSetMap&lt;DisplayLineReference,DisplayLineRangeValidity,TrafficDisplayLineRangeAttributeType,TrafficDisplayLineRangeAttributeValue,TrafficPropertyType,TrafficPropertyValue&gt;" [label="uses", fontsize=10];
+    "TrafficDisplayLineRangeAttributeSetMap" -> "DisplayLineReference" [label="uses", fontsize=10];
+    "TrafficDisplayLineRangeAttributeSetMap" -> "DisplayLineRangeValidity" [label="uses", fontsize=10];
+    "TrafficDisplayLineRangeAttributeSetMap" -> "TrafficDisplayLineRangeAttributeType" [label="uses", fontsize=10];
+    "TrafficDisplayLineRangeAttributeSetMap" -> "TrafficDisplayLineRangeAttributeValue" [label="uses", fontsize=10];
+    "TrafficDisplayLineRangeAttributeSetMap" -> "TrafficPropertyType" [label="uses", fontsize=10];
+    "TrafficDisplayLineRangeAttributeSetMap" -> "TrafficPropertyValue" [label="uses", fontsize=10];
+}

@@ -1,0 +1,52 @@
+/**
+ * This dot file creates symbol collaboration diagram for LandmarkLine.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="LandmarkLine collaboration diagram";
+
+    subgraph "cluster_nds.localization.types"
+    {
+        style="dashed, rounded";
+        label="nds.localization.types";
+        tooltip="Package nds.localization.types";
+        href="../../../content/packages/nds.localization.types.html#Package-nds-localization-types";
+        target="_parent";
+
+        "LandmarkLine" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.localization.types.html#Structure-LandmarkLine" title="Structure defined in nds.localization.types">LandmarkLine</td></tr></table></font>>];
+        "LandmarkLineType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.localization.types.html#Enum-LandmarkLineType" title="Enum defined in nds.localization.types">LandmarkLineType</td></tr></table></font>>];
+        "LandmarkConfidence" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.localization.types.html#Subtype-LandmarkConfidence" title="Subtype defined in nds.localization.types">LandmarkConfidence</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.types"
+    {
+        style="dashed, rounded";
+        label="nds.core.types";
+        tooltip="Package nds.core.types";
+        href="../../../content/packages/nds.core.types.html#Package-nds-core-types";
+        target="_parent";
+
+        "WidthCentimeters" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Subtype-WidthCentimeters" title="Subtype defined in nds.core.types">WidthCentimeters</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.localization.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.localization.instantiations";
+        tooltip="Package nds.localization.instantiations";
+        href="../../../content/packages/nds.localization.instantiations.html#Package-nds-localization-instantiations";
+        target="_parent";
+
+        "LandmarkLineGeometryLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.localization.instantiations.html#InstantiateType-LandmarkLineGeometryLayer" title="InstantiateType defined in nds.localization.instantiations">LandmarkLineGeometryLayer</td></tr></table></font>>];
+        "GeometryLayer&lt;LandmarkId,LandmarkLine&gt;" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Structure-GeometryLayer" title="Structure defined in nds.core.geometry">GeometryLayer</td><td>&lt;</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.localization.types.html#Subtype-LandmarkId" title="Subtype defined in nds.localization.types">LandmarkId</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.localization.types.html#Structure-LandmarkLine" title="Structure defined in nds.localization.types">LandmarkLine</td></tr></table></td><td>&gt;</td></tr></table></font>>];
+    }
+
+    "LandmarkLine" -> "LandmarkLineType" [label="uses", fontsize=10];
+    "LandmarkLine" -> "WidthCentimeters" [label="uses", fontsize=10];
+    "LandmarkLine" -> "LandmarkConfidence" [label="uses", fontsize=10];
+    "LandmarkLineGeometryLayer" -> "LandmarkLine" [label="uses", fontsize=10];
+    "GeometryLayer&lt;LandmarkId,LandmarkLine&gt;" -> "LandmarkLine" [label="uses", fontsize=10];
+}

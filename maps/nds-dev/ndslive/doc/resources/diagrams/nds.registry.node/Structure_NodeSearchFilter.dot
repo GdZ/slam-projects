@@ -1,0 +1,50 @@
+/**
+ * This dot file creates symbol collaboration diagram for NodeSearchFilter.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="NodeSearchFilter collaboration diagram";
+
+    subgraph "cluster_nds.registry.node"
+    {
+        style="dashed, rounded";
+        label="nds.registry.node";
+        tooltip="Package nds.registry.node";
+        href="../../../content/packages/nds.registry.node.html#Package-nds-registry-node";
+        target="_parent";
+
+        "NodeSearchFilter" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.registry.node.html#Structure-NodeSearchFilter" title="Structure defined in nds.registry.node">NodeSearchFilter</td></tr></table></font>>];
+        "NodeType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.registry.node.html#Enum-NodeType" title="Enum defined in nds.registry.node">NodeType</td></tr></table></font>>];
+        "ServiceInformationFilter" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.registry.node.html#Structure-ServiceInformationFilter" title="Structure defined in nds.registry.node">ServiceInformationFilter</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.system.types"
+    {
+        style="dashed, rounded";
+        label="nds.system.types";
+        tooltip="Package nds.system.types";
+        href="../../../content/packages/nds.system.types.html#Package-nds-system-types";
+        target="_parent";
+
+        "NdsSystemToken" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.system.types.html#Structure-NdsSystemToken" title="Structure defined in nds.system.types">NdsSystemToken</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.registry.services"
+    {
+        style="dashed, rounded";
+        label="nds.registry.services";
+        tooltip="Package nds.registry.services";
+        href="../../../content/packages/nds.registry.services.html#Package-nds-registry-services";
+        target="_parent";
+
+        "NdsRegistry" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.registry.services.html#Service-NdsRegistry" title="Service defined in nds.registry.services">NdsRegistry</td></tr></table></font>>];
+    }
+
+    "NodeSearchFilter" -> "NdsSystemToken" [label="uses", fontsize=10];
+    "NodeSearchFilter" -> "NodeType" [label="uses", fontsize=10];
+    "NodeSearchFilter" -> "ServiceInformationFilter" [label="uses", fontsize=10];
+    "NdsRegistry" -> "NodeSearchFilter" [label="uses", fontsize=10];
+}

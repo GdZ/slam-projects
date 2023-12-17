@@ -1,0 +1,72 @@
+/**
+ * This dot file creates symbol collaboration diagram for RoadInstructionsLayer.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="RoadInstructionsLayer collaboration diagram";
+
+    subgraph "cluster_nds.instructions.layer"
+    {
+        style="dashed, rounded";
+        label="nds.instructions.layer";
+        tooltip="Package nds.instructions.layer";
+        href="../../../content/packages/nds.instructions.layer.html#Package-nds-instructions-layer";
+        target="_parent";
+
+        "RoadInstructionsLayer" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.instructions.layer.html#Structure-RoadInstructionsLayer" title="Structure defined in nds.instructions.layer">RoadInstructionsLayer</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.instructions.metadata"
+    {
+        style="dashed, rounded";
+        label="nds.instructions.metadata";
+        tooltip="Package nds.instructions.metadata";
+        href="../../../content/packages/nds.instructions.metadata.html#Package-nds-instructions-metadata";
+        target="_parent";
+
+        "RoadInstructionsLayerContent" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.instructions.metadata.html#Bitmask-RoadInstructionsLayerContent" title="Bitmask defined in nds.instructions.metadata">RoadInstructionsLayerContent</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.geometry"
+    {
+        style="dashed, rounded";
+        label="nds.core.geometry";
+        tooltip="Package nds.core.geometry";
+        href="../../../content/packages/nds.core.geometry.html#Package-nds-core-geometry";
+        target="_parent";
+
+        "CoordShift" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Subtype-CoordShift" title="Subtype defined in nds.core.geometry">CoordShift</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.instructions.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.instructions.instantiations";
+        tooltip="Package nds.instructions.instantiations";
+        href="../../../content/packages/nds.instructions.instantiations.html#Package-nds-instructions-instantiations";
+        target="_parent";
+
+        "InstructionsTransitionAttributeMapList" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.instructions.instantiations.html#InstantiateType-InstructionsTransitionAttributeMapList" title="InstantiateType defined in nds.instructions.instantiations">InstructionsTransitionAttributeMapList</td></tr></table></font>>];
+        "InstructionsTransitionAttributeSetList" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.instructions.instantiations.html#InstantiateType-InstructionsTransitionAttributeSetList" title="InstantiateType defined in nds.instructions.instantiations">InstructionsTransitionAttributeSetList</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.system.types"
+    {
+        style="dashed, rounded";
+        label="nds.system.types";
+        tooltip="Package nds.system.types";
+        href="../../../content/packages/nds.system.types.html#Package-nds-system-types";
+        target="_parent";
+
+        "LayerType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.system.types.html#Enum-LayerType" title="Enum defined in nds.system.types">LayerType</td></tr></table></font>>];
+    }
+
+    "RoadInstructionsLayer" -> "RoadInstructionsLayerContent" [label="uses", fontsize=10];
+    "RoadInstructionsLayer" -> "CoordShift" [label="uses", fontsize=10];
+    "RoadInstructionsLayer" -> "InstructionsTransitionAttributeMapList" [label="uses", fontsize=10];
+    "RoadInstructionsLayer" -> "InstructionsTransitionAttributeSetList" [label="uses", fontsize=10];
+    "RoadInstructionsLayer" -> "LayerType" [label="uses", fontsize=10];
+}

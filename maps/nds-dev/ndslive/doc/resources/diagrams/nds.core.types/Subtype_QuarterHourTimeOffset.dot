@@ -1,0 +1,38 @@
+/**
+ * This dot file creates symbol collaboration diagram for QuarterHourTimeOffset.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="QuarterHourTimeOffset collaboration diagram";
+
+    subgraph "cluster_nds.core.types"
+    {
+        style="dashed, rounded";
+        label="nds.core.types";
+        tooltip="Package nds.core.types";
+        href="../../../content/packages/nds.core.types.html#Package-nds-core-types";
+        target="_parent";
+
+        "QuarterHourTimeOffset" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Subtype-QuarterHourTimeOffset" title="Subtype defined in nds.core.types">QuarterHourTimeOffset</td></tr></table></font>>];
+        "TimeWithZone" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Structure-TimeWithZone" title="Structure defined in nds.core.types">TimeWithZone</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.rules.types"
+    {
+        style="dashed, rounded";
+        label="nds.rules.types";
+        tooltip="Package nds.rules.types";
+        href="../../../content/packages/nds.rules.types.html#Package-nds-rules-types";
+        target="_parent";
+
+        "TimeZoneConfiguration" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.types.html#Structure-TimeZoneConfiguration" title="Structure defined in nds.rules.types">TimeZoneConfiguration</td></tr></table></font>>];
+        "DayLightSavingTime" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.types.html#Structure-DayLightSavingTime" title="Structure defined in nds.rules.types">DayLightSavingTime</td></tr></table></font>>];
+    }
+
+    "TimeWithZone" -> "QuarterHourTimeOffset" [label="uses", fontsize=10];
+    "TimeZoneConfiguration" -> "QuarterHourTimeOffset" [label="uses", fontsize=10];
+    "DayLightSavingTime" -> "QuarterHourTimeOffset" [label="uses", fontsize=10];
+}

@@ -1,0 +1,42 @@
+/**
+ * This dot file creates symbol collaboration diagram for RoadSurfacePolygonType.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="RoadSurfacePolygonType collaboration diagram";
+
+    subgraph "cluster_nds.lane.roadsurface"
+    {
+        style="dashed, rounded";
+        label="nds.lane.roadsurface";
+        tooltip="Package nds.lane.roadsurface";
+        href="../../../content/packages/nds.lane.roadsurface.html#Package-nds-lane-roadsurface";
+        target="_parent";
+
+        "RoadSurfacePolygonType" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.roadsurface.html#Structure-RoadSurfacePolygonType" title="Structure defined in nds.lane.roadsurface">RoadSurfacePolygonType</td></tr></table></font>>];
+        "RoadSurfacePolygonPhysicalType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.roadsurface.html#Enum-RoadSurfacePolygonPhysicalType" title="Enum defined in nds.lane.roadsurface">RoadSurfacePolygonPhysicalType</td></tr></table></font>>];
+        "RoadSurfacePolygonLogicalType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.roadsurface.html#Enum-RoadSurfacePolygonLogicalType" title="Enum defined in nds.lane.roadsurface">RoadSurfacePolygonLogicalType</td></tr></table></font>>];
+        "RoadSurfacePolygonMarking" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.roadsurface.html#Structure-RoadSurfacePolygonMarking" title="Structure defined in nds.lane.roadsurface">RoadSurfacePolygonMarking</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.lane.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.lane.instantiations";
+        tooltip="Package nds.lane.instantiations";
+        href="../../../content/packages/nds.lane.instantiations.html#Package-nds-lane-instantiations";
+        target="_parent";
+
+        "RoadSurfacePolygonGeometryLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.instantiations.html#InstantiateType-RoadSurfacePolygonGeometryLayer" title="InstantiateType defined in nds.lane.instantiations">RoadSurfacePolygonGeometryLayer</td></tr></table></font>>];
+        "GeometryLayer&lt;RoadSurfaceId,RoadSurfacePolygonType&gt;" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Structure-GeometryLayer" title="Structure defined in nds.core.geometry">GeometryLayer</td><td>&lt;</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.reference.types.html#Subtype-RoadSurfaceId" title="Subtype defined in nds.lane.reference.types">RoadSurfaceId</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.roadsurface.html#Structure-RoadSurfacePolygonType" title="Structure defined in nds.lane.roadsurface">RoadSurfacePolygonType</td></tr></table></td><td>&gt;</td></tr></table></font>>];
+    }
+
+    "RoadSurfacePolygonType" -> "RoadSurfacePolygonPhysicalType" [label="uses", fontsize=10];
+    "RoadSurfacePolygonType" -> "RoadSurfacePolygonLogicalType" [label="uses", fontsize=10];
+    "RoadSurfacePolygonType" -> "RoadSurfacePolygonMarking" [label="uses", fontsize=10];
+    "RoadSurfacePolygonGeometryLayer" -> "RoadSurfacePolygonType" [label="uses", fontsize=10];
+    "GeometryLayer&lt;RoadSurfaceId,RoadSurfacePolygonType&gt;" -> "RoadSurfacePolygonType" [label="uses", fontsize=10];
+}

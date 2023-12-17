@@ -1,0 +1,46 @@
+/**
+ * This dot file creates symbol collaboration diagram for MatchedRoadPathLayer.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="MatchedRoadPathLayer collaboration diagram";
+
+    subgraph "cluster_nds.road.layer"
+    {
+        style="dashed, rounded";
+        label="nds.road.layer";
+        tooltip="Package nds.road.layer";
+        href="../../../content/packages/nds.road.layer.html#Package-nds-road-layer";
+        target="_parent";
+
+        "MatchedRoadPathLayer" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.road.layer.html#Structure-MatchedRoadPathLayer" title="Structure defined in nds.road.layer">MatchedRoadPathLayer</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.road.road"
+    {
+        style="dashed, rounded";
+        label="nds.road.road";
+        tooltip="Package nds.road.road";
+        href="../../../content/packages/nds.road.road.html#Package-nds-road-road";
+        target="_parent";
+
+        "MatchedRoadSegment" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.road.road.html#Structure-MatchedRoadSegment" title="Structure defined in nds.road.road">MatchedRoadSegment</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.system.types"
+    {
+        style="dashed, rounded";
+        label="nds.system.types";
+        tooltip="Package nds.system.types";
+        href="../../../content/packages/nds.system.types.html#Package-nds-system-types";
+        target="_parent";
+
+        "LayerType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.system.types.html#Enum-LayerType" title="Enum defined in nds.system.types">LayerType</td></tr></table></font>>];
+    }
+
+    "MatchedRoadPathLayer" -> "MatchedRoadSegment" [label="uses", fontsize=10];
+    "MatchedRoadPathLayer" -> "LayerType" [label="uses", fontsize=10];
+}

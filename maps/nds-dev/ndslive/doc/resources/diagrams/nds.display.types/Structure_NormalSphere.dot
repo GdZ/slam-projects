@@ -1,0 +1,38 @@
+/**
+ * This dot file creates symbol collaboration diagram for NormalSphere.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="NormalSphere collaboration diagram";
+
+    subgraph "cluster_nds.display.types"
+    {
+        style="dashed, rounded";
+        label="nds.display.types";
+        tooltip="Package nds.display.types";
+        href="../../../content/packages/nds.display.types.html#Package-nds-display-types";
+        target="_parent";
+
+        "NormalSphere" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.types.html#Structure-NormalSphere" title="Structure defined in nds.display.types">NormalSphere</td></tr></table></font>>];
+        "BdamSurface" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.types.html#Structure-BdamSurface" title="Structure defined in nds.display.types">BdamSurface</td></tr></table></font>>];
+        "RegularGridVertex" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.types.html#Structure-RegularGridVertex" title="Structure defined in nds.display.types">RegularGridVertex</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.display.layer"
+    {
+        style="dashed, rounded";
+        label="nds.display.layer";
+        tooltip="Package nds.display.layer";
+        href="../../../content/packages/nds.display.layer.html#Package-nds-display-layer";
+        target="_parent";
+
+        "Mesh3DRenderLayerData" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.layer.html#Structure-Mesh3DRenderLayerData" title="Structure defined in nds.display.layer">Mesh3DRenderLayerData</td></tr></table></font>>];
+    }
+
+    "Mesh3DRenderLayerData" -> "NormalSphere" [label="uses", fontsize=10];
+    "BdamSurface" -> "NormalSphere" [label="uses", fontsize=10];
+    "RegularGridVertex" -> "NormalSphere" [label="uses", fontsize=10];
+}

@@ -1,0 +1,60 @@
+/**
+ * This dot file creates symbol collaboration diagram for HeightCentimeters.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="HeightCentimeters collaboration diagram";
+
+    subgraph "cluster_nds.core.types"
+    {
+        style="dashed, rounded";
+        label="nds.core.types";
+        tooltip="Package nds.core.types";
+        href="../../../content/packages/nds.core.types.html#Package-nds-core-types";
+        target="_parent";
+
+        "HeightCentimeters" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Subtype-HeightCentimeters" title="Subtype defined in nds.core.types">HeightCentimeters</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.conditions"
+    {
+        style="dashed, rounded";
+        label="nds.core.conditions";
+        tooltip="Package nds.core.conditions";
+        href="../../../content/packages/nds.core.conditions.html#Package-nds-core-conditions";
+        target="_parent";
+
+        "ConditionValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.conditions.html#Choice-ConditionValue" title="Choice defined in nds.core.conditions">ConditionValue</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.vehicle"
+    {
+        style="dashed, rounded";
+        label="nds.core.vehicle";
+        tooltip="Package nds.core.vehicle";
+        href="../../../content/packages/nds.core.vehicle.html#Package-nds-core-vehicle";
+        target="_parent";
+
+        "VehicleHeight" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.vehicle.html#Subtype-VehicleHeight" title="Subtype defined in nds.core.vehicle">VehicleHeight</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.display.details.types"
+    {
+        style="dashed, rounded";
+        label="nds.display.details.types";
+        tooltip="Package nds.display.details.types";
+        href="../../../content/packages/nds.display.details.types.html#Package-nds-display-details-types";
+        target="_parent";
+
+        "BuildingHeight" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.details.types.html#Subtype-BuildingHeight" title="Subtype defined in nds.display.details.types">BuildingHeight</td></tr></table></font>>];
+        "GroundHeight" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.details.types.html#Subtype-GroundHeight" title="Subtype defined in nds.display.details.types">GroundHeight</td></tr></table></font>>];
+    }
+
+    "ConditionValue" -> "HeightCentimeters" [label="uses", fontsize=10];
+    "VehicleHeight" -> "HeightCentimeters" [label="uses", fontsize=10];
+    "BuildingHeight" -> "HeightCentimeters" [label="uses", fontsize=10];
+    "GroundHeight" -> "HeightCentimeters" [label="uses", fontsize=10];
+}

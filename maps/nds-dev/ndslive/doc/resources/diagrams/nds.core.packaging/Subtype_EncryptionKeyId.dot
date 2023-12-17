@@ -1,0 +1,24 @@
+/**
+ * This dot file creates symbol collaboration diagram for EncryptionKeyId.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="EncryptionKeyId collaboration diagram";
+
+    subgraph "cluster_nds.core.packaging"
+    {
+        style="dashed, rounded";
+        label="nds.core.packaging";
+        tooltip="Package nds.core.packaging";
+        href="../../../content/packages/nds.core.packaging.html#Package-nds-core-packaging";
+        target="_parent";
+
+        "EncryptionKeyId" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.packaging.html#Subtype-EncryptionKeyId" title="Subtype defined in nds.core.packaging">EncryptionKeyId</td></tr></table></font>>];
+        "PackagingDetails" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.packaging.html#Structure-PackagingDetails" title="Structure defined in nds.core.packaging">PackagingDetails</td></tr></table></font>>];
+    }
+
+    "PackagingDetails" -> "EncryptionKeyId" [label="uses", fontsize=10];
+}

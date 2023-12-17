@@ -1,0 +1,62 @@
+/**
+ * This dot file creates symbol collaboration diagram for SpeedProfilesWeek.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="SpeedProfilesWeek collaboration diagram";
+
+    subgraph "cluster_nds.routingdata.types"
+    {
+        style="dashed, rounded";
+        label="nds.routingdata.types";
+        tooltip="Package nds.routingdata.types";
+        href="../../../content/packages/nds.routingdata.types.html#Package-nds-routingdata-types";
+        target="_parent";
+
+        "SpeedProfilesWeek" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routingdata.types.html#Structure-SpeedProfilesWeek" title="Structure defined in nds.routingdata.types">SpeedProfilesWeek</td></tr></table></font>>];
+        "SpeedProfileId" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routingdata.types.html#Subtype-SpeedProfileId" title="Subtype defined in nds.routingdata.types">SpeedProfileId</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.conditions"
+    {
+        style="dashed, rounded";
+        label="nds.core.conditions";
+        tooltip="Package nds.core.conditions";
+        href="../../../content/packages/nds.core.conditions.html#Package-nds-core-conditions";
+        target="_parent";
+
+        "DaysOfWeek" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.conditions.html#Structure-DaysOfWeek" title="Structure defined in nds.core.conditions">DaysOfWeek</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.types"
+    {
+        style="dashed, rounded";
+        label="nds.core.types";
+        tooltip="Package nds.core.types";
+        href="../../../content/packages/nds.core.types.html#Package-nds-core-types";
+        target="_parent";
+
+        "SpeedKmh" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Subtype-SpeedKmh" title="Subtype defined in nds.core.types">SpeedKmh</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.routingdata.attributes"
+    {
+        style="dashed, rounded";
+        label="nds.routingdata.attributes";
+        tooltip="Package nds.routingdata.attributes";
+        href="../../../content/packages/nds.routingdata.attributes.html#Package-nds-routingdata-attributes";
+        target="_parent";
+
+        "RoutingRoadRangeAttributeValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routingdata.attributes.html#Choice-RoutingRoadRangeAttributeValue" title="Choice defined in nds.routingdata.attributes">RoutingRoadRangeAttributeValue</td></tr></table></font>>];
+        "RoutingLaneRangeAttributeValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routingdata.attributes.html#Choice-RoutingLaneRangeAttributeValue" title="Choice defined in nds.routingdata.attributes">RoutingLaneRangeAttributeValue</td></tr></table></font>>];
+    }
+
+    "SpeedProfilesWeek" -> "DaysOfWeek" [label="uses", fontsize=10];
+    "SpeedProfilesWeek" -> "SpeedKmh" [label="uses", fontsize=10];
+    "SpeedProfilesWeek" -> "SpeedProfileId" [label="uses", fontsize=10];
+    "RoutingRoadRangeAttributeValue" -> "SpeedProfilesWeek" [label="uses", fontsize=10];
+    "RoutingLaneRangeAttributeValue" -> "SpeedProfilesWeek" [label="uses", fontsize=10];
+}

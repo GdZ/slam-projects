@@ -1,0 +1,36 @@
+/**
+ * This dot file creates symbol collaboration diagram for CharacsLanePositionAttributeMapListHeader.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="CharacsLanePositionAttributeMapListHeader collaboration diagram";
+
+    subgraph "cluster_nds.characteristics.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.characteristics.instantiations";
+        tooltip="Package nds.characteristics.instantiations";
+        href="../../../content/packages/nds.characteristics.instantiations.html#Package-nds-characteristics-instantiations";
+        target="_parent";
+
+        "CharacsLanePositionAttributeMapListHeader" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.instantiations.html#InstantiateType-CharacsLanePositionAttributeMapListHeader" title="InstantiateType defined in nds.characteristics.instantiations">CharacsLanePositionAttributeMapListHeader</td></tr></table></font>>];
+        "AttributeMapListHeader&lt;CharacsLanePositionAttributeType&gt;" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.attributemap.html#Structure-AttributeMapListHeader" title="Structure defined in nds.core.attributemap">AttributeMapListHeader</td><td>&lt;</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.attributes.html#Enum-CharacsLanePositionAttributeType" title="Enum defined in nds.characteristics.attributes">CharacsLanePositionAttributeType</td></tr></table></td><td>&gt;</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.characteristics.attributes"
+    {
+        style="dashed, rounded";
+        label="nds.characteristics.attributes";
+        tooltip="Package nds.characteristics.attributes";
+        href="../../../content/packages/nds.characteristics.attributes.html#Package-nds-characteristics-attributes";
+        target="_parent";
+
+        "CharacsLanePositionAttributeType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.attributes.html#Enum-CharacsLanePositionAttributeType" title="Enum defined in nds.characteristics.attributes">CharacsLanePositionAttributeType</td></tr></table></font>>];
+    }
+
+    "CharacsLanePositionAttributeMapListHeader" -> "AttributeMapListHeader&lt;CharacsLanePositionAttributeType&gt;" [label="uses", fontsize=10];
+    "CharacsLanePositionAttributeMapListHeader" -> "CharacsLanePositionAttributeType" [label="uses", fontsize=10];
+}

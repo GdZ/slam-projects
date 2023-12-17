@@ -1,0 +1,76 @@
+/**
+ * This dot file creates symbol collaboration diagram for Elevation.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="Elevation collaboration diagram";
+
+    subgraph "cluster_nds.core.geometry"
+    {
+        style="dashed, rounded";
+        label="nds.core.geometry";
+        tooltip="Package nds.core.geometry";
+        href="../../../content/packages/nds.core.geometry.html#Package-nds-core-geometry";
+        target="_parent";
+
+        "Elevation" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Subtype-Elevation" title="Subtype defined in nds.core.geometry">Elevation</td></tr></table></font>>];
+        "DeltaElevation" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Subtype-DeltaElevation" title="Subtype defined in nds.core.geometry">DeltaElevation</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.vehicle"
+    {
+        style="dashed, rounded";
+        label="nds.core.vehicle";
+        tooltip="Package nds.core.vehicle";
+        href="../../../content/packages/nds.core.vehicle.html#Package-nds-core-vehicle";
+        target="_parent";
+
+        "PoseRaw" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.vehicle.html#Structure-PoseRaw" title="Structure defined in nds.core.vehicle">PoseRaw</td></tr></table></font>>];
+        "PoseGeoMatched" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.vehicle.html#Structure-PoseGeoMatched" title="Structure defined in nds.core.vehicle">PoseGeoMatched</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.grid"
+    {
+        style="dashed, rounded";
+        label="nds.core.grid";
+        tooltip="Package nds.core.grid";
+        href="../../../content/packages/nds.core.grid.html#Package-nds-core-grid";
+        target="_parent";
+
+        "Grid&lt;Elevation&gt;" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.grid.html#Structure-Grid" title="Structure defined in nds.core.grid">Grid</td><td>&lt;</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Subtype-Elevation" title="Subtype defined in nds.core.geometry">Elevation</td></tr></table></td><td>&gt;</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.display.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.display.instantiations";
+        tooltip="Package nds.display.instantiations";
+        href="../../../content/packages/nds.display.instantiations.html#Package-nds-display-instantiations";
+        target="_parent";
+
+        "HeightMapGridLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.instantiations.html#InstantiateType-HeightMapGridLayer" title="InstantiateType defined in nds.display.instantiations">HeightMapGridLayer</td></tr></table></font>>];
+        "GridLayer&lt;HeightmapGridId,GridType,Elevation&gt;" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.grid.html#Structure-GridLayer" title="Structure defined in nds.core.grid">GridLayer</td><td>&lt;</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.types.html#Subtype-HeightmapGridId" title="Subtype defined in nds.display.types">HeightmapGridId</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.grid.html#Subtype-GridType" title="Subtype defined in nds.core.grid">GridType</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Subtype-Elevation" title="Subtype defined in nds.core.geometry">Elevation</td></tr></table></td><td>&gt;</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.display.details.types"
+    {
+        style="dashed, rounded";
+        label="nds.display.details.types";
+        tooltip="Package nds.display.details.types";
+        href="../../../content/packages/nds.display.details.types.html#Package-nds-display-details-types";
+        target="_parent";
+
+        "BaseElevation" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.details.types.html#Subtype-BaseElevation" title="Subtype defined in nds.display.details.types">BaseElevation</td></tr></table></font>>];
+    }
+
+    "PoseRaw" -> "Elevation" [label="uses", fontsize=10];
+    "PoseGeoMatched" -> "Elevation" [label="uses", fontsize=10];
+    "DeltaElevation" -> "Elevation" [label="uses", fontsize=10];
+    "Grid&lt;Elevation&gt;" -> "Elevation" [label="uses", fontsize=10];
+    "HeightMapGridLayer" -> "Elevation" [label="uses", fontsize=10];
+    "GridLayer&lt;HeightmapGridId,GridType,Elevation&gt;" -> "Elevation" [label="uses", fontsize=10];
+    "BaseElevation" -> "Elevation" [label="uses", fontsize=10];
+}

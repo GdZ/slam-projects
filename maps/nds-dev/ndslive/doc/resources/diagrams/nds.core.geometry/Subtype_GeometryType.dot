@@ -1,0 +1,66 @@
+/**
+ * This dot file creates symbol collaboration diagram for GeometryType.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="GeometryType collaboration diagram";
+
+    subgraph "cluster_nds.core.geometry"
+    {
+        style="dashed, rounded";
+        label="nds.core.geometry";
+        tooltip="Package nds.core.geometry";
+        href="../../../content/packages/nds.core.geometry.html#Package-nds-core-geometry";
+        target="_parent";
+
+        "GeometryType" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Subtype-GeometryType" title="Subtype defined in nds.core.geometry">GeometryType</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.types"
+    {
+        style="dashed, rounded";
+        label="nds.core.types";
+        tooltip="Package nds.core.types";
+        href="../../../content/packages/nds.core.types.html#Package-nds-core-types";
+        target="_parent";
+
+        "Empty" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Structure-Empty" title="Structure defined in nds.core.types">Empty</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.road.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.road.instantiations";
+        tooltip="Package nds.road.instantiations";
+        href="../../../content/packages/nds.road.instantiations.html#Package-nds-road-instantiations";
+        target="_parent";
+
+        "RoadShapesLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.road.instantiations.html#InstantiateType-RoadShapesLayer" title="InstantiateType defined in nds.road.instantiations">RoadShapesLayer</td></tr></table></font>>];
+        "GeometryLayer&lt;RoadId,GeometryType&gt;" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Structure-GeometryLayer" title="Structure defined in nds.core.geometry">GeometryLayer</td><td>&lt;</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.road.reference.types.html#Subtype-RoadId" title="Subtype defined in nds.road.reference.types">RoadId</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Subtype-GeometryType" title="Subtype defined in nds.core.geometry">GeometryType</td></tr></table></td><td>&gt;</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.lane.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.lane.instantiations";
+        tooltip="Package nds.lane.instantiations";
+        href="../../../content/packages/nds.lane.instantiations.html#Package-nds-lane-instantiations";
+        target="_parent";
+
+        "CenterLineGeometryLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.instantiations.html#InstantiateType-CenterLineGeometryLayer" title="InstantiateType defined in nds.lane.instantiations">CenterLineGeometryLayer</td></tr></table></font>>];
+        "GeometryLayer&lt;LaneCenterLineGeometryId,GeometryType&gt;" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Structure-GeometryLayer" title="Structure defined in nds.core.geometry">GeometryLayer</td><td>&lt;</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.lanes.html#Subtype-LaneCenterLineGeometryId" title="Subtype defined in nds.lane.lanes">LaneCenterLineGeometryId</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Subtype-GeometryType" title="Subtype defined in nds.core.geometry">GeometryType</td></tr></table></td><td>&gt;</td></tr></table></font>>];
+        "BoundaryGeometryLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.instantiations.html#InstantiateType-BoundaryGeometryLayer" title="InstantiateType defined in nds.lane.instantiations">BoundaryGeometryLayer</td></tr></table></font>>];
+        "GeometryLayer&lt;BoundaryGeometryId,GeometryType&gt;" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Structure-GeometryLayer" title="Structure defined in nds.core.geometry">GeometryLayer</td><td>&lt;</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.boundaries.html#Subtype-BoundaryGeometryId" title="Subtype defined in nds.lane.boundaries">BoundaryGeometryId</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Subtype-GeometryType" title="Subtype defined in nds.core.geometry">GeometryType</td></tr></table></td><td>&gt;</td></tr></table></font>>];
+    }
+
+    "GeometryType" -> "Empty" [label="uses", fontsize=10];
+    "RoadShapesLayer" -> "GeometryType" [label="uses", fontsize=10];
+    "GeometryLayer&lt;RoadId,GeometryType&gt;" -> "GeometryType" [label="uses", fontsize=10];
+    "CenterLineGeometryLayer" -> "GeometryType" [label="uses", fontsize=10];
+    "GeometryLayer&lt;LaneCenterLineGeometryId,GeometryType&gt;" -> "GeometryType" [label="uses", fontsize=10];
+    "BoundaryGeometryLayer" -> "GeometryType" [label="uses", fontsize=10];
+    "GeometryLayer&lt;BoundaryGeometryId,GeometryType&gt;" -> "GeometryType" [label="uses", fontsize=10];
+}

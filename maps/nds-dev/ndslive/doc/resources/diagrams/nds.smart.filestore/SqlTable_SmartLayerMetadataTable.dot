@@ -1,0 +1,56 @@
+/**
+ * This dot file creates symbol collaboration diagram for SmartLayerMetadataTable.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="SmartLayerMetadataTable collaboration diagram";
+
+    subgraph "cluster_nds.smart.filestore"
+    {
+        style="dashed, rounded";
+        label="nds.smart.filestore";
+        tooltip="Package nds.smart.filestore";
+        href="../../../content/packages/nds.smart.filestore.html#Package-nds-smart-filestore";
+        target="_parent";
+
+        "SmartLayerMetadataTable" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.filestore.html#SqlTable-SmartLayerMetadataTable" title="SqlTable defined in nds.smart.filestore">SmartLayerMetadataTable</td></tr></table></font>>];
+        "SmartLayerTileStore" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.filestore.html#SqlDatabase-SmartLayerTileStore" title="SqlDatabase defined in nds.smart.filestore">SmartLayerTileStore</td></tr></table></font>>];
+        "SmartLayerObjectStore" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.filestore.html#SqlDatabase-SmartLayerObjectStore" title="SqlDatabase defined in nds.smart.filestore">SmartLayerObjectStore</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.smart.metadata"
+    {
+        style="dashed, rounded";
+        label="nds.smart.metadata";
+        tooltip="Package nds.smart.metadata";
+        href="../../../content/packages/nds.smart.metadata.html#Package-nds-smart-metadata";
+        target="_parent";
+
+        "SmartLayerRegistryMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.metadata.html#Structure-SmartLayerRegistryMetadata" title="Structure defined in nds.smart.metadata">SmartLayerRegistryMetadata</td></tr></table></font>>];
+        "SmartLayerDefinition" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.metadata.html#Structure-SmartLayerDefinition" title="Structure defined in nds.smart.metadata">SmartLayerDefinition</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.system.types"
+    {
+        style="dashed, rounded";
+        label="nds.system.types";
+        tooltip="Package nds.system.types";
+        href="../../../content/packages/nds.system.types.html#Package-nds-system-types";
+        target="_parent";
+
+        "ModuleDefinition" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.system.types.html#Structure-ModuleDefinition" title="Structure defined in nds.system.types">ModuleDefinition</td></tr></table></font>>];
+        "NdsSystemToken" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.system.types.html#Structure-NdsSystemToken" title="Structure defined in nds.system.types">NdsSystemToken</td></tr></table></font>>];
+        "NdsNodeLegalInfo" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.system.types.html#Structure-NdsNodeLegalInfo" title="Structure defined in nds.system.types">NdsNodeLegalInfo</td></tr></table></font>>];
+    }
+
+    "SmartLayerMetadataTable" -> "SmartLayerRegistryMetadata" [label="uses", fontsize=10];
+    "SmartLayerMetadataTable" -> "ModuleDefinition" [label="uses", fontsize=10];
+    "SmartLayerMetadataTable" -> "SmartLayerDefinition" [label="uses", fontsize=10];
+    "SmartLayerMetadataTable" -> "NdsSystemToken" [label="uses", fontsize=10];
+    "SmartLayerMetadataTable" -> "NdsNodeLegalInfo" [label="uses", fontsize=10];
+    "SmartLayerTileStore" -> "SmartLayerMetadataTable" [label="uses", fontsize=10];
+    "SmartLayerObjectStore" -> "SmartLayerMetadataTable" [label="uses", fontsize=10];
+}

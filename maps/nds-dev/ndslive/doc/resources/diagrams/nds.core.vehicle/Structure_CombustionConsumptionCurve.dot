@@ -1,0 +1,38 @@
+/**
+ * This dot file creates symbol collaboration diagram for CombustionConsumptionCurve.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="CombustionConsumptionCurve collaboration diagram";
+
+    subgraph "cluster_nds.core.vehicle"
+    {
+        style="dashed, rounded";
+        label="nds.core.vehicle";
+        tooltip="Package nds.core.vehicle";
+        href="../../../content/packages/nds.core.vehicle.html#Package-nds-core-vehicle";
+        target="_parent";
+
+        "CombustionConsumptionCurve" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.vehicle.html#Structure-CombustionConsumptionCurve" title="Structure defined in nds.core.vehicle">CombustionConsumptionCurve</td></tr></table></font>>];
+        "LitersPer100km" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.vehicle.html#Subtype-LitersPer100km" title="Subtype defined in nds.core.vehicle">LitersPer100km</td></tr></table></font>>];
+        "CombustionConsumption" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.vehicle.html#Structure-CombustionConsumption" title="Structure defined in nds.core.vehicle">CombustionConsumption</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.types"
+    {
+        style="dashed, rounded";
+        label="nds.core.types";
+        tooltip="Package nds.core.types";
+        href="../../../content/packages/nds.core.types.html#Package-nds-core-types";
+        target="_parent";
+
+        "SpeedKmh" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Subtype-SpeedKmh" title="Subtype defined in nds.core.types">SpeedKmh</td></tr></table></font>>];
+    }
+
+    "CombustionConsumptionCurve" -> "SpeedKmh" [label="uses", fontsize=10];
+    "CombustionConsumptionCurve" -> "LitersPer100km" [label="uses", fontsize=10];
+    "CombustionConsumption" -> "CombustionConsumptionCurve" [label="uses", fontsize=10];
+}

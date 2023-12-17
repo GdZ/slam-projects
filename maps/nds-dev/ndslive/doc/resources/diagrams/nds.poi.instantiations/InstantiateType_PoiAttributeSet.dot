@@ -1,0 +1,52 @@
+/**
+ * This dot file creates symbol collaboration diagram for PoiAttributeSet.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="PoiAttributeSet collaboration diagram";
+
+    subgraph "cluster_nds.poi.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.poi.instantiations";
+        tooltip="Package nds.poi.instantiations";
+        href="../../../content/packages/nds.poi.instantiations.html#Package-nds-poi-instantiations";
+        target="_parent";
+
+        "PoiAttributeSet" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.instantiations.html#InstantiateType-PoiAttributeSet" title="InstantiateType defined in nds.poi.instantiations">PoiAttributeSet</td></tr></table></font>>];
+        "AttributeSet&lt;PoiAttributeType,PoiAttributeValue,PoiPropertyType,PoiPropertyValue&gt;" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.attributemap.html#Structure-AttributeSet" title="Structure defined in nds.core.attributemap">AttributeSet</td><td>&lt;</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.attributes.html#Enum-PoiAttributeType" title="Enum defined in nds.poi.attributes">PoiAttributeType</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.attributes.html#Choice-PoiAttributeValue" title="Choice defined in nds.poi.attributes">PoiAttributeValue</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.properties.html#Structure-PoiPropertyType" title="Structure defined in nds.poi.properties">PoiPropertyType</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.properties.html#Structure-PoiPropertyValue" title="Structure defined in nds.poi.properties">PoiPropertyValue</td></tr></table></td><td>&gt;</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.poi.attributes"
+    {
+        style="dashed, rounded";
+        label="nds.poi.attributes";
+        tooltip="Package nds.poi.attributes";
+        href="../../../content/packages/nds.poi.attributes.html#Package-nds-poi-attributes";
+        target="_parent";
+
+        "PoiAttributeType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.attributes.html#Enum-PoiAttributeType" title="Enum defined in nds.poi.attributes">PoiAttributeType</td></tr></table></font>>];
+        "PoiAttributeValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.attributes.html#Choice-PoiAttributeValue" title="Choice defined in nds.poi.attributes">PoiAttributeValue</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.poi.properties"
+    {
+        style="dashed, rounded";
+        label="nds.poi.properties";
+        tooltip="Package nds.poi.properties";
+        href="../../../content/packages/nds.poi.properties.html#Package-nds-poi-properties";
+        target="_parent";
+
+        "PoiPropertyType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.properties.html#Structure-PoiPropertyType" title="Structure defined in nds.poi.properties">PoiPropertyType</td></tr></table></font>>];
+        "PoiPropertyValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.properties.html#Structure-PoiPropertyValue" title="Structure defined in nds.poi.properties">PoiPropertyValue</td></tr></table></font>>];
+    }
+
+    "PoiAttributeSet" -> "AttributeSet&lt;PoiAttributeType,PoiAttributeValue,PoiPropertyType,PoiPropertyValue&gt;" [label="uses", fontsize=10];
+    "PoiAttributeSet" -> "PoiAttributeType" [label="uses", fontsize=10];
+    "PoiAttributeSet" -> "PoiAttributeValue" [label="uses", fontsize=10];
+    "PoiAttributeSet" -> "PoiPropertyType" [label="uses", fontsize=10];
+    "PoiAttributeSet" -> "PoiPropertyValue" [label="uses", fontsize=10];
+}

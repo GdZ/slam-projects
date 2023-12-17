@@ -1,0 +1,36 @@
+/**
+ * This dot file creates symbol collaboration diagram for ParkingSectionAttributeMapListHeader.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="ParkingSectionAttributeMapListHeader collaboration diagram";
+
+    subgraph "cluster_nds.venue.details.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.venue.details.instantiations";
+        tooltip="Package nds.venue.details.instantiations";
+        href="../../../content/packages/nds.venue.details.instantiations.html#Package-nds-venue-details-instantiations";
+        target="_parent";
+
+        "ParkingSectionAttributeMapListHeader" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.details.instantiations.html#InstantiateType-ParkingSectionAttributeMapListHeader" title="InstantiateType defined in nds.venue.details.instantiations">ParkingSectionAttributeMapListHeader</td></tr></table></font>>];
+        "AttributeMapListHeader&lt;ParkingSectionAttributeType&gt;" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.attributemap.html#Structure-AttributeMapListHeader" title="Structure defined in nds.core.attributemap">AttributeMapListHeader</td><td>&lt;</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.details.attributes.html#Enum-ParkingSectionAttributeType" title="Enum defined in nds.venue.details.attributes">ParkingSectionAttributeType</td></tr></table></td><td>&gt;</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.venue.details.attributes"
+    {
+        style="dashed, rounded";
+        label="nds.venue.details.attributes";
+        tooltip="Package nds.venue.details.attributes";
+        href="../../../content/packages/nds.venue.details.attributes.html#Package-nds-venue-details-attributes";
+        target="_parent";
+
+        "ParkingSectionAttributeType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.details.attributes.html#Enum-ParkingSectionAttributeType" title="Enum defined in nds.venue.details.attributes">ParkingSectionAttributeType</td></tr></table></font>>];
+    }
+
+    "ParkingSectionAttributeMapListHeader" -> "AttributeMapListHeader&lt;ParkingSectionAttributeType&gt;" [label="uses", fontsize=10];
+    "ParkingSectionAttributeMapListHeader" -> "ParkingSectionAttributeType" [label="uses", fontsize=10];
+}

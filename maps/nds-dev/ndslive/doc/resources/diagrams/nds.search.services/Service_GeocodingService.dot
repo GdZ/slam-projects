@@ -1,0 +1,54 @@
+/**
+ * This dot file creates symbol collaboration diagram for GeocodingService.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="GeocodingService collaboration diagram";
+
+    subgraph "cluster_nds.search.services"
+    {
+        style="dashed, rounded";
+        label="nds.search.services";
+        tooltip="Package nds.search.services";
+        href="../../../content/packages/nds.search.services.html#Package-nds-search-services";
+        target="_parent";
+
+        "GeocodingService" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.search.services.html#Service-GeocodingService" title="Service defined in nds.search.services">GeocodingService</td></tr></table></font>>];
+        "GeocodingServiceCapabilities" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.search.services.html#Structure-GeocodingServiceCapabilities" title="Structure defined in nds.search.services">GeocodingServiceCapabilities</td></tr></table></font>>];
+        "GeocodingAddress" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.search.services.html#Structure-GeocodingAddress" title="Structure defined in nds.search.services">GeocodingAddress</td></tr></table></font>>];
+        "GeocodingPosition" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.search.services.html#Structure-GeocodingPosition" title="Structure defined in nds.search.services">GeocodingPosition</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.types"
+    {
+        style="dashed, rounded";
+        label="nds.core.types";
+        tooltip="Package nds.core.types";
+        href="../../../content/packages/nds.core.types.html#Package-nds-core-types";
+        target="_parent";
+
+        "Empty" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Structure-Empty" title="Structure defined in nds.core.types">Empty</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.system.types"
+    {
+        style="dashed, rounded";
+        label="nds.system.types";
+        tooltip="Package nds.system.types";
+        href="../../../content/packages/nds.system.types.html#Package-nds-system-types";
+        target="_parent";
+
+        "ModuleDefinition" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.system.types.html#Structure-ModuleDefinition" title="Structure defined in nds.system.types">ModuleDefinition</td></tr></table></font>>];
+        "NdsSystemToken" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.system.types.html#Structure-NdsSystemToken" title="Structure defined in nds.system.types">NdsSystemToken</td></tr></table></font>>];
+    }
+
+    "GeocodingService" -> "Empty" [label="uses", fontsize=10];
+    "GeocodingService" -> "ModuleDefinition" [label="uses", fontsize=10];
+    "GeocodingService" -> "NdsSystemToken" [label="uses", fontsize=10];
+    "GeocodingService" -> "GeocodingServiceCapabilities" [label="uses", fontsize=10];
+    "GeocodingService" -> "GeocodingAddress" [label="uses", fontsize=10];
+    "GeocodingService" -> "GeocodingPosition" [label="uses", fontsize=10];
+}

@@ -1,0 +1,40 @@
+/**
+ * This dot file creates symbol collaboration diagram for DisplayLineCharacteristicsLayerMetadata.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="DisplayLineCharacteristicsLayerMetadata collaboration diagram";
+
+    subgraph "cluster_nds.characteristics.metadata"
+    {
+        style="dashed, rounded";
+        label="nds.characteristics.metadata";
+        tooltip="Package nds.characteristics.metadata";
+        href="../../../content/packages/nds.characteristics.metadata.html#Package-nds-characteristics-metadata";
+        target="_parent";
+
+        "DisplayLineCharacteristicsLayerMetadata" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.metadata.html#Structure-DisplayLineCharacteristicsLayerMetadata" title="Structure defined in nds.characteristics.metadata">DisplayLineCharacteristicsLayerMetadata</td></tr></table></font>>];
+        "DisplayLineCharacsLayerContent" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.metadata.html#Bitmask-DisplayLineCharacsLayerContent" title="Bitmask defined in nds.characteristics.metadata">DisplayLineCharacsLayerContent</td></tr></table></font>>];
+        "RoadLocationProviderDetails" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.metadata.html#Structure-RoadLocationProviderDetails" title="Structure defined in nds.characteristics.metadata">RoadLocationProviderDetails</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.characteristics.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.characteristics.instantiations";
+        tooltip="Package nds.characteristics.instantiations";
+        href="../../../content/packages/nds.characteristics.instantiations.html#Package-nds-characteristics-instantiations";
+        target="_parent";
+
+        "CharacsDisplayLineRangeAttributeMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.instantiations.html#InstantiateType-CharacsDisplayLineRangeAttributeMetadata" title="InstantiateType defined in nds.characteristics.instantiations">CharacsDisplayLineRangeAttributeMetadata</td></tr></table></font>>];
+        "CharacsDisplayLinePositionAttributeMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.instantiations.html#InstantiateType-CharacsDisplayLinePositionAttributeMetadata" title="InstantiateType defined in nds.characteristics.instantiations">CharacsDisplayLinePositionAttributeMetadata</td></tr></table></font>>];
+    }
+
+    "DisplayLineCharacteristicsLayerMetadata" -> "DisplayLineCharacsLayerContent" [label="uses", fontsize=10];
+    "DisplayLineCharacteristicsLayerMetadata" -> "CharacsDisplayLineRangeAttributeMetadata" [label="uses", fontsize=10];
+    "DisplayLineCharacteristicsLayerMetadata" -> "CharacsDisplayLinePositionAttributeMetadata" [label="uses", fontsize=10];
+    "DisplayLineCharacteristicsLayerMetadata" -> "RoadLocationProviderDetails" [label="uses", fontsize=10];
+}

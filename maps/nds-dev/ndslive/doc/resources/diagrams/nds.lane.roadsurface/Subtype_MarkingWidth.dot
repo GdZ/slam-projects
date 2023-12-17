@@ -1,0 +1,38 @@
+/**
+ * This dot file creates symbol collaboration diagram for MarkingWidth.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="MarkingWidth collaboration diagram";
+
+    subgraph "cluster_nds.lane.roadsurface"
+    {
+        style="dashed, rounded";
+        label="nds.lane.roadsurface";
+        tooltip="Package nds.lane.roadsurface";
+        href="../../../content/packages/nds.lane.roadsurface.html#Package-nds-lane-roadsurface";
+        target="_parent";
+
+        "MarkingWidth" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.roadsurface.html#Subtype-MarkingWidth" title="Subtype defined in nds.lane.roadsurface">MarkingWidth</td></tr></table></font>>];
+        "RoadSurfaceLineMarking" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.roadsurface.html#Structure-RoadSurfaceLineMarking" title="Structure defined in nds.lane.roadsurface">RoadSurfaceLineMarking</td></tr></table></font>>];
+        "UNKNOWN_MARKING_WIDTH" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.roadsurface.html#Constant-UNKNOWN_MARKING_WIDTH" title="Constant defined in nds.lane.roadsurface">UNKNOWN_MARKING_WIDTH</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.types"
+    {
+        style="dashed, rounded";
+        label="nds.core.types";
+        tooltip="Package nds.core.types";
+        href="../../../content/packages/nds.core.types.html#Package-nds-core-types";
+        target="_parent";
+
+        "WidthCentimeters" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Subtype-WidthCentimeters" title="Subtype defined in nds.core.types">WidthCentimeters</td></tr></table></font>>];
+    }
+
+    "MarkingWidth" -> "WidthCentimeters" [label="uses", fontsize=10];
+    "RoadSurfaceLineMarking" -> "MarkingWidth" [label="uses", fontsize=10];
+    "UNKNOWN_MARKING_WIDTH" -> "MarkingWidth" [label="uses", fontsize=10];
+}

@@ -1,0 +1,24 @@
+/**
+ * This dot file creates symbol collaboration diagram for SupportedFeature.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="SupportedFeature collaboration diagram";
+
+    subgraph "cluster_nds.search.services"
+    {
+        style="dashed, rounded";
+        label="nds.search.services";
+        tooltip="Package nds.search.services";
+        href="../../../content/packages/nds.search.services.html#Package-nds-search-services";
+        target="_parent";
+
+        "SupportedFeature" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.search.services.html#Bitmask-SupportedFeature" title="Bitmask defined in nds.search.services">SupportedFeature</td></tr></table></font>>];
+        "SupportedSearchConfiguration" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.search.services.html#Structure-SupportedSearchConfiguration" title="Structure defined in nds.search.services">SupportedSearchConfiguration</td></tr></table></font>>];
+    }
+
+    "SupportedSearchConfiguration" -> "SupportedFeature" [label="uses", fontsize=10];
+}

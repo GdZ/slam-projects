@@ -1,0 +1,62 @@
+/**
+ * This dot file creates symbol collaboration diagram for GridType.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="GridType collaboration diagram";
+
+    subgraph "cluster_nds.core.grid"
+    {
+        style="dashed, rounded";
+        label="nds.core.grid";
+        tooltip="Package nds.core.grid";
+        href="../../../content/packages/nds.core.grid.html#Package-nds-core-grid";
+        target="_parent";
+
+        "GridType" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.grid.html#Subtype-GridType" title="Subtype defined in nds.core.grid">GridType</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.types"
+    {
+        style="dashed, rounded";
+        label="nds.core.types";
+        tooltip="Package nds.core.types";
+        href="../../../content/packages/nds.core.types.html#Package-nds-core-types";
+        target="_parent";
+
+        "Empty" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Structure-Empty" title="Structure defined in nds.core.types">Empty</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.localization.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.localization.instantiations";
+        tooltip="Package nds.localization.instantiations";
+        href="../../../content/packages/nds.localization.instantiations.html#Package-nds-localization-instantiations";
+        target="_parent";
+
+        "OccupancyProbabilityGridLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.localization.instantiations.html#InstantiateType-OccupancyProbabilityGridLayer" title="InstantiateType defined in nds.localization.instantiations">OccupancyProbabilityGridLayer</td></tr></table></font>>];
+        "GridLayer&lt;OccupancyGridId,GridType,OccupancyProbability&gt;" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.grid.html#Structure-GridLayer" title="Structure defined in nds.core.grid">GridLayer</td><td>&lt;</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.localization.types.html#Subtype-OccupancyGridId" title="Subtype defined in nds.localization.types">OccupancyGridId</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.grid.html#Subtype-GridType" title="Subtype defined in nds.core.grid">GridType</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.localization.types.html#Structure-OccupancyProbability" title="Structure defined in nds.localization.types">OccupancyProbability</td></tr></table></td><td>&gt;</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.display.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.display.instantiations";
+        tooltip="Package nds.display.instantiations";
+        href="../../../content/packages/nds.display.instantiations.html#Package-nds-display-instantiations";
+        target="_parent";
+
+        "HeightMapGridLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.instantiations.html#InstantiateType-HeightMapGridLayer" title="InstantiateType defined in nds.display.instantiations">HeightMapGridLayer</td></tr></table></font>>];
+        "GridLayer&lt;HeightmapGridId,GridType,Elevation&gt;" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.grid.html#Structure-GridLayer" title="Structure defined in nds.core.grid">GridLayer</td><td>&lt;</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.types.html#Subtype-HeightmapGridId" title="Subtype defined in nds.display.types">HeightmapGridId</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.grid.html#Subtype-GridType" title="Subtype defined in nds.core.grid">GridType</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Subtype-Elevation" title="Subtype defined in nds.core.geometry">Elevation</td></tr></table></td><td>&gt;</td></tr></table></font>>];
+    }
+
+    "GridType" -> "Empty" [label="uses", fontsize=10];
+    "OccupancyProbabilityGridLayer" -> "GridType" [label="uses", fontsize=10];
+    "GridLayer&lt;OccupancyGridId,GridType,OccupancyProbability&gt;" -> "GridType" [label="uses", fontsize=10];
+    "HeightMapGridLayer" -> "GridType" [label="uses", fontsize=10];
+    "GridLayer&lt;HeightmapGridId,GridType,Elevation&gt;" -> "GridType" [label="uses", fontsize=10];
+}

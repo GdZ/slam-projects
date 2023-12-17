@@ -1,0 +1,80 @@
+/**
+ * This dot file creates symbol collaboration diagram for SmartLayerPathHorizonService.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="SmartLayerPathHorizonService collaboration diagram";
+
+    subgraph "cluster_nds.smart.services"
+    {
+        style="dashed, rounded";
+        label="nds.smart.services";
+        tooltip="Package nds.smart.services";
+        href="../../../content/packages/nds.smart.services.html#Package-nds-smart-services";
+        target="_parent";
+
+        "SmartLayerPathHorizonService" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.services.html#Service-SmartLayerPathHorizonService" title="Service defined in nds.smart.services">SmartLayerPathHorizonService</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.types"
+    {
+        style="dashed, rounded";
+        label="nds.core.types";
+        tooltip="Package nds.core.types";
+        href="../../../content/packages/nds.core.types.html#Package-nds-core-types";
+        target="_parent";
+
+        "Empty" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Structure-Empty" title="Structure defined in nds.core.types">Empty</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.system.types"
+    {
+        style="dashed, rounded";
+        label="nds.system.types";
+        tooltip="Package nds.system.types";
+        href="../../../content/packages/nds.system.types.html#Package-nds-system-types";
+        target="_parent";
+
+        "ModuleDefinition" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.system.types.html#Structure-ModuleDefinition" title="Structure defined in nds.system.types">ModuleDefinition</td></tr></table></font>>];
+        "NdsSystemToken" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.system.types.html#Structure-NdsSystemToken" title="Structure defined in nds.system.types">NdsSystemToken</td></tr></table></font>>];
+        "NdsNodeLegalInfo" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.system.types.html#Structure-NdsNodeLegalInfo" title="Structure defined in nds.system.types">NdsNodeLegalInfo</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.smart.metadata"
+    {
+        style="dashed, rounded";
+        label="nds.smart.metadata";
+        tooltip="Package nds.smart.metadata";
+        href="../../../content/packages/nds.smart.metadata.html#Package-nds-smart-metadata";
+        target="_parent";
+
+        "SmartLayerDefinition" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.metadata.html#Structure-SmartLayerDefinition" title="Structure defined in nds.smart.metadata">SmartLayerDefinition</td></tr></table></font>>];
+        "PathHorizonServiceCapabilitiesResponse" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.metadata.html#Structure-PathHorizonServiceCapabilitiesResponse" title="Structure defined in nds.smart.metadata">PathHorizonServiceCapabilitiesResponse</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.smart.path"
+    {
+        style="dashed, rounded";
+        label="nds.smart.path";
+        tooltip="Package nds.smart.path";
+        href="../../../content/packages/nds.smart.path.html#Package-nds-smart-path";
+        target="_parent";
+
+        "SmartLayerPathReference" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.path.html#Subtype-SmartLayerPathReference" title="Subtype defined in nds.smart.path">SmartLayerPathReference</td></tr></table></font>>];
+        "SmartLayerPath" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.path.html#Structure-SmartLayerPath" title="Structure defined in nds.smart.path">SmartLayerPath</td></tr></table></font>>];
+        "SmartLayerPosePathRequest" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.path.html#Structure-SmartLayerPosePathRequest" title="Structure defined in nds.smart.path">SmartLayerPosePathRequest</td></tr></table></font>>];
+    }
+
+    "SmartLayerPathHorizonService" -> "Empty" [label="uses", fontsize=10];
+    "SmartLayerPathHorizonService" -> "ModuleDefinition" [label="uses", fontsize=10];
+    "SmartLayerPathHorizonService" -> "SmartLayerDefinition" [label="uses", fontsize=10];
+    "SmartLayerPathHorizonService" -> "NdsSystemToken" [label="uses", fontsize=10];
+    "SmartLayerPathHorizonService" -> "NdsNodeLegalInfo" [label="uses", fontsize=10];
+    "SmartLayerPathHorizonService" -> "PathHorizonServiceCapabilitiesResponse" [label="uses", fontsize=10];
+    "SmartLayerPathHorizonService" -> "SmartLayerPathReference" [label="uses", fontsize=10];
+    "SmartLayerPathHorizonService" -> "SmartLayerPath" [label="uses", fontsize=10];
+    "SmartLayerPathHorizonService" -> "SmartLayerPosePathRequest" [label="uses", fontsize=10];
+}

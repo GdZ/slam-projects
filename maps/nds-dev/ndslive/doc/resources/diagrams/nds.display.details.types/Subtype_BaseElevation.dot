@@ -1,0 +1,46 @@
+/**
+ * This dot file creates symbol collaboration diagram for BaseElevation.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="BaseElevation collaboration diagram";
+
+    subgraph "cluster_nds.display.details.types"
+    {
+        style="dashed, rounded";
+        label="nds.display.details.types";
+        tooltip="Package nds.display.details.types";
+        href="../../../content/packages/nds.display.details.types.html#Package-nds-display-details-types";
+        target="_parent";
+
+        "BaseElevation" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.details.types.html#Subtype-BaseElevation" title="Subtype defined in nds.display.details.types">BaseElevation</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.geometry"
+    {
+        style="dashed, rounded";
+        label="nds.core.geometry";
+        tooltip="Package nds.core.geometry";
+        href="../../../content/packages/nds.core.geometry.html#Package-nds-core-geometry";
+        target="_parent";
+
+        "Elevation" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Subtype-Elevation" title="Subtype defined in nds.core.geometry">Elevation</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.display.details.layer"
+    {
+        style="dashed, rounded";
+        label="nds.display.details.layer";
+        tooltip="Package nds.display.details.layer";
+        href="../../../content/packages/nds.display.details.layer.html#Package-nds-display-details-layer";
+        target="_parent";
+
+        "DisplayAttributeLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.details.layer.html#Structure-DisplayAttributeLayer" title="Structure defined in nds.display.details.layer">DisplayAttributeLayer</td></tr></table></font>>];
+    }
+
+    "BaseElevation" -> "Elevation" [label="uses", fontsize=10];
+    "DisplayAttributeLayer" -> "BaseElevation" [label="uses", fontsize=10];
+}

@@ -1,0 +1,88 @@
+/**
+ * This dot file creates symbol collaboration diagram for AdasRoadLocationTransitionAttributeMapList.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="AdasRoadLocationTransitionAttributeMapList collaboration diagram";
+
+    subgraph "cluster_nds.adas.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.adas.instantiations";
+        tooltip="Package nds.adas.instantiations";
+        href="../../../content/packages/nds.adas.instantiations.html#Package-nds-adas-instantiations";
+        target="_parent";
+
+        "AdasRoadLocationTransitionAttributeMapList" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.adas.instantiations.html#InstantiateType-AdasRoadLocationTransitionAttributeMapList" title="InstantiateType defined in nds.adas.instantiations">AdasRoadLocationTransitionAttributeMapList</td></tr></table></font>>];
+        "AttributeMapList&lt;RoadLocationTransitionReference,Validity,AdasTransitionAttributeType,AdasTransitionAttributeValue,AdasPropertyType,AdasPropertyValue&gt;" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.attributemap.html#Structure-AttributeMapList" title="Structure defined in nds.core.attributemap">AttributeMapList</td><td>&lt;</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.road.reference.location.html#Structure-RoadLocationTransitionReference" title="Structure defined in nds.road.reference.location">RoadLocationTransitionReference</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.attributemap.html#Structure-Validity" title="Structure defined in nds.core.attributemap">Validity</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.adas.attributes.html#Enum-AdasTransitionAttributeType" title="Enum defined in nds.adas.attributes">AdasTransitionAttributeType</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.adas.attributes.html#Choice-AdasTransitionAttributeValue" title="Choice defined in nds.adas.attributes">AdasTransitionAttributeValue</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.adas.properties.html#Structure-AdasPropertyType" title="Structure defined in nds.adas.properties">AdasPropertyType</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.adas.properties.html#Structure-AdasPropertyValue" title="Structure defined in nds.adas.properties">AdasPropertyValue</td></tr></table></td><td>&gt;</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.road.reference.location"
+    {
+        style="dashed, rounded";
+        label="nds.road.reference.location";
+        tooltip="Package nds.road.reference.location";
+        href="../../../content/packages/nds.road.reference.location.html#Package-nds-road-reference-location";
+        target="_parent";
+
+        "RoadLocationTransitionReference" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.road.reference.location.html#Structure-RoadLocationTransitionReference" title="Structure defined in nds.road.reference.location">RoadLocationTransitionReference</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.attributemap"
+    {
+        style="dashed, rounded";
+        label="nds.core.attributemap";
+        tooltip="Package nds.core.attributemap";
+        href="../../../content/packages/nds.core.attributemap.html#Package-nds-core-attributemap";
+        target="_parent";
+
+        "Validity" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.attributemap.html#Structure-Validity" title="Structure defined in nds.core.attributemap">Validity</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.adas.attributes"
+    {
+        style="dashed, rounded";
+        label="nds.adas.attributes";
+        tooltip="Package nds.adas.attributes";
+        href="../../../content/packages/nds.adas.attributes.html#Package-nds-adas-attributes";
+        target="_parent";
+
+        "AdasTransitionAttributeType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.adas.attributes.html#Enum-AdasTransitionAttributeType" title="Enum defined in nds.adas.attributes">AdasTransitionAttributeType</td></tr></table></font>>];
+        "AdasTransitionAttributeValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.adas.attributes.html#Choice-AdasTransitionAttributeValue" title="Choice defined in nds.adas.attributes">AdasTransitionAttributeValue</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.adas.properties"
+    {
+        style="dashed, rounded";
+        label="nds.adas.properties";
+        tooltip="Package nds.adas.properties";
+        href="../../../content/packages/nds.adas.properties.html#Package-nds-adas-properties";
+        target="_parent";
+
+        "AdasPropertyType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.adas.properties.html#Structure-AdasPropertyType" title="Structure defined in nds.adas.properties">AdasPropertyType</td></tr></table></font>>];
+        "AdasPropertyValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.adas.properties.html#Structure-AdasPropertyValue" title="Structure defined in nds.adas.properties">AdasPropertyValue</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.adas.layer"
+    {
+        style="dashed, rounded";
+        label="nds.adas.layer";
+        tooltip="Package nds.adas.layer";
+        href="../../../content/packages/nds.adas.layer.html#Package-nds-adas-layer";
+        target="_parent";
+
+        "AdasRoadLocationLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.adas.layer.html#Structure-AdasRoadLocationLayer" title="Structure defined in nds.adas.layer">AdasRoadLocationLayer</td></tr></table></font>>];
+    }
+
+    "AdasRoadLocationTransitionAttributeMapList" -> "AttributeMapList&lt;RoadLocationTransitionReference,Validity,AdasTransitionAttributeType,AdasTransitionAttributeValue,AdasPropertyType,AdasPropertyValue&gt;" [label="uses", fontsize=10];
+    "AdasRoadLocationTransitionAttributeMapList" -> "RoadLocationTransitionReference" [label="uses", fontsize=10];
+    "AdasRoadLocationTransitionAttributeMapList" -> "Validity" [label="uses", fontsize=10];
+    "AdasRoadLocationTransitionAttributeMapList" -> "AdasTransitionAttributeType" [label="uses", fontsize=10];
+    "AdasRoadLocationTransitionAttributeMapList" -> "AdasTransitionAttributeValue" [label="uses", fontsize=10];
+    "AdasRoadLocationTransitionAttributeMapList" -> "AdasPropertyType" [label="uses", fontsize=10];
+    "AdasRoadLocationTransitionAttributeMapList" -> "AdasPropertyValue" [label="uses", fontsize=10];
+    "AdasRoadLocationLayer" -> "AdasRoadLocationTransitionAttributeMapList" [label="uses", fontsize=10];
+}

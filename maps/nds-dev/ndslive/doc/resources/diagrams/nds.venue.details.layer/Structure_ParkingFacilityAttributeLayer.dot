@@ -1,0 +1,76 @@
+/**
+ * This dot file creates symbol collaboration diagram for ParkingFacilityAttributeLayer.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="ParkingFacilityAttributeLayer collaboration diagram";
+
+    subgraph "cluster_nds.venue.details.layer"
+    {
+        style="dashed, rounded";
+        label="nds.venue.details.layer";
+        tooltip="Package nds.venue.details.layer";
+        href="../../../content/packages/nds.venue.details.layer.html#Package-nds-venue-details-layer";
+        target="_parent";
+
+        "ParkingFacilityAttributeLayer" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.details.layer.html#Structure-ParkingFacilityAttributeLayer" title="Structure defined in nds.venue.details.layer">ParkingFacilityAttributeLayer</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.venue.details.metadata"
+    {
+        style="dashed, rounded";
+        label="nds.venue.details.metadata";
+        tooltip="Package nds.venue.details.metadata";
+        href="../../../content/packages/nds.venue.details.metadata.html#Package-nds-venue-details-metadata";
+        target="_parent";
+
+        "ParkingFacilityAttributeLayerContent" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.details.metadata.html#Bitmask-ParkingFacilityAttributeLayerContent" title="Bitmask defined in nds.venue.details.metadata">ParkingFacilityAttributeLayerContent</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.venue.details.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.venue.details.instantiations";
+        tooltip="Package nds.venue.details.instantiations";
+        href="../../../content/packages/nds.venue.details.instantiations.html#Package-nds-venue-details-instantiations";
+        target="_parent";
+
+        "ParkingFacilityAttributeMapList" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.details.instantiations.html#InstantiateType-ParkingFacilityAttributeMapList" title="InstantiateType defined in nds.venue.details.instantiations">ParkingFacilityAttributeMapList</td></tr></table></font>>];
+        "ParkingFacilityAttributeSetList" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.details.instantiations.html#InstantiateType-ParkingFacilityAttributeSetList" title="InstantiateType defined in nds.venue.details.instantiations">ParkingFacilityAttributeSetList</td></tr></table></font>>];
+        "ParkingLevelAttributeMapList" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.details.instantiations.html#InstantiateType-ParkingLevelAttributeMapList" title="InstantiateType defined in nds.venue.details.instantiations">ParkingLevelAttributeMapList</td></tr></table></font>>];
+        "ParkingLevelAttributeSetList" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.details.instantiations.html#InstantiateType-ParkingLevelAttributeSetList" title="InstantiateType defined in nds.venue.details.instantiations">ParkingLevelAttributeSetList</td></tr></table></font>>];
+        "ParkingSectionAttributeMapList" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.details.instantiations.html#InstantiateType-ParkingSectionAttributeMapList" title="InstantiateType defined in nds.venue.details.instantiations">ParkingSectionAttributeMapList</td></tr></table></font>>];
+        "ParkingSectionAttributeSetList" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.details.instantiations.html#InstantiateType-ParkingSectionAttributeSetList" title="InstantiateType defined in nds.venue.details.instantiations">ParkingSectionAttributeSetList</td></tr></table></font>>];
+        "ParkingRowAttributeMapList" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.details.instantiations.html#InstantiateType-ParkingRowAttributeMapList" title="InstantiateType defined in nds.venue.details.instantiations">ParkingRowAttributeMapList</td></tr></table></font>>];
+        "ParkingRowAttributeSetList" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.details.instantiations.html#InstantiateType-ParkingRowAttributeSetList" title="InstantiateType defined in nds.venue.details.instantiations">ParkingRowAttributeSetList</td></tr></table></font>>];
+        "ParkingSpotAttributeMapList" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.details.instantiations.html#InstantiateType-ParkingSpotAttributeMapList" title="InstantiateType defined in nds.venue.details.instantiations">ParkingSpotAttributeMapList</td></tr></table></font>>];
+        "ParkingSpotAttributeSetList" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.details.instantiations.html#InstantiateType-ParkingSpotAttributeSetList" title="InstantiateType defined in nds.venue.details.instantiations">ParkingSpotAttributeSetList</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.system.types"
+    {
+        style="dashed, rounded";
+        label="nds.system.types";
+        tooltip="Package nds.system.types";
+        href="../../../content/packages/nds.system.types.html#Package-nds-system-types";
+        target="_parent";
+
+        "LayerType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.system.types.html#Enum-LayerType" title="Enum defined in nds.system.types">LayerType</td></tr></table></font>>];
+    }
+
+    "ParkingFacilityAttributeLayer" -> "ParkingFacilityAttributeLayerContent" [label="uses", fontsize=10];
+    "ParkingFacilityAttributeLayer" -> "ParkingFacilityAttributeMapList" [label="uses", fontsize=10];
+    "ParkingFacilityAttributeLayer" -> "ParkingFacilityAttributeSetList" [label="uses", fontsize=10];
+    "ParkingFacilityAttributeLayer" -> "ParkingLevelAttributeMapList" [label="uses", fontsize=10];
+    "ParkingFacilityAttributeLayer" -> "ParkingLevelAttributeSetList" [label="uses", fontsize=10];
+    "ParkingFacilityAttributeLayer" -> "ParkingSectionAttributeMapList" [label="uses", fontsize=10];
+    "ParkingFacilityAttributeLayer" -> "ParkingSectionAttributeSetList" [label="uses", fontsize=10];
+    "ParkingFacilityAttributeLayer" -> "ParkingRowAttributeMapList" [label="uses", fontsize=10];
+    "ParkingFacilityAttributeLayer" -> "ParkingRowAttributeSetList" [label="uses", fontsize=10];
+    "ParkingFacilityAttributeLayer" -> "ParkingSpotAttributeMapList" [label="uses", fontsize=10];
+    "ParkingFacilityAttributeLayer" -> "ParkingSpotAttributeSetList" [label="uses", fontsize=10];
+    "ParkingFacilityAttributeLayer" -> "LayerType" [label="uses", fontsize=10];
+}

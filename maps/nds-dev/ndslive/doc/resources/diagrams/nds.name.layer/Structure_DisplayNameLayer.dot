@@ -1,0 +1,94 @@
+/**
+ * This dot file creates symbol collaboration diagram for DisplayNameLayer.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="DisplayNameLayer collaboration diagram";
+
+    subgraph "cluster_nds.name.layer"
+    {
+        style="dashed, rounded";
+        label="nds.name.layer";
+        tooltip="Package nds.name.layer";
+        href="../../../content/packages/nds.name.layer.html#Package-nds-name-layer";
+        target="_parent";
+
+        "DisplayNameLayer" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.layer.html#Structure-DisplayNameLayer" title="Structure defined in nds.name.layer">DisplayNameLayer</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.name.metadata"
+    {
+        style="dashed, rounded";
+        label="nds.name.metadata";
+        tooltip="Package nds.name.metadata";
+        href="../../../content/packages/nds.name.metadata.html#Package-nds-name-metadata";
+        target="_parent";
+
+        "DisplayNameLayerContent" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.metadata.html#Bitmask-DisplayNameLayerContent" title="Bitmask defined in nds.name.metadata">DisplayNameLayerContent</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.geometry"
+    {
+        style="dashed, rounded";
+        label="nds.core.geometry";
+        tooltip="Package nds.core.geometry";
+        href="../../../content/packages/nds.core.geometry.html#Package-nds-core-geometry";
+        target="_parent";
+
+        "CoordShift" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Subtype-CoordShift" title="Subtype defined in nds.core.geometry">CoordShift</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.name.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.name.instantiations";
+        tooltip="Package nds.name.instantiations";
+        href="../../../content/packages/nds.name.instantiations.html#Package-nds-name-instantiations";
+        target="_parent";
+
+        "NameDisplayLineRangeAttributeMapList" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.instantiations.html#InstantiateType-NameDisplayLineRangeAttributeMapList" title="InstantiateType defined in nds.name.instantiations">NameDisplayLineRangeAttributeMapList</td></tr></table></font>>];
+        "NameDisplayAreaAttributeMapList" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.instantiations.html#InstantiateType-NameDisplayAreaAttributeMapList" title="InstantiateType defined in nds.name.instantiations">NameDisplayAreaAttributeMapList</td></tr></table></font>>];
+        "NameDisplayPointAttributeMapList" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.instantiations.html#InstantiateType-NameDisplayPointAttributeMapList" title="InstantiateType defined in nds.name.instantiations">NameDisplayPointAttributeMapList</td></tr></table></font>>];
+        "NameDisplayLineRangeAttributeSetList" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.instantiations.html#InstantiateType-NameDisplayLineRangeAttributeSetList" title="InstantiateType defined in nds.name.instantiations">NameDisplayLineRangeAttributeSetList</td></tr></table></font>>];
+        "NameDisplayAreaAttributeSetList" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.instantiations.html#InstantiateType-NameDisplayAreaAttributeSetList" title="InstantiateType defined in nds.name.instantiations">NameDisplayAreaAttributeSetList</td></tr></table></font>>];
+        "NameDisplayPointAttributeSetList" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.instantiations.html#InstantiateType-NameDisplayPointAttributeSetList" title="InstantiateType defined in nds.name.instantiations">NameDisplayPointAttributeSetList</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.name.types"
+    {
+        style="dashed, rounded";
+        label="nds.name.types";
+        tooltip="Package nds.name.types";
+        href="../../../content/packages/nds.name.types.html#Package-nds-name-types";
+        target="_parent";
+
+        "AdministrativeHierarchyElement" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.types.html#Structure-AdministrativeHierarchyElement" title="Structure defined in nds.name.types">AdministrativeHierarchyElement</td></tr></table></font>>];
+        "AddressFormat" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.types.html#Structure-AddressFormat" title="Structure defined in nds.name.types">AddressFormat</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.system.types"
+    {
+        style="dashed, rounded";
+        label="nds.system.types";
+        tooltip="Package nds.system.types";
+        href="../../../content/packages/nds.system.types.html#Package-nds-system-types";
+        target="_parent";
+
+        "LayerType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.system.types.html#Enum-LayerType" title="Enum defined in nds.system.types">LayerType</td></tr></table></font>>];
+    }
+
+    "DisplayNameLayer" -> "DisplayNameLayerContent" [label="uses", fontsize=10];
+    "DisplayNameLayer" -> "CoordShift" [label="uses", fontsize=10];
+    "DisplayNameLayer" -> "NameDisplayLineRangeAttributeMapList" [label="uses", fontsize=10];
+    "DisplayNameLayer" -> "NameDisplayAreaAttributeMapList" [label="uses", fontsize=10];
+    "DisplayNameLayer" -> "NameDisplayPointAttributeMapList" [label="uses", fontsize=10];
+    "DisplayNameLayer" -> "NameDisplayLineRangeAttributeSetList" [label="uses", fontsize=10];
+    "DisplayNameLayer" -> "NameDisplayAreaAttributeSetList" [label="uses", fontsize=10];
+    "DisplayNameLayer" -> "NameDisplayPointAttributeSetList" [label="uses", fontsize=10];
+    "DisplayNameLayer" -> "AdministrativeHierarchyElement" [label="uses", fontsize=10];
+    "DisplayNameLayer" -> "AddressFormat" [label="uses", fontsize=10];
+    "DisplayNameLayer" -> "LayerType" [label="uses", fontsize=10];
+}

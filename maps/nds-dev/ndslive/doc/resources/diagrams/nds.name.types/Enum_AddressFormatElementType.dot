@@ -1,0 +1,24 @@
+/**
+ * This dot file creates symbol collaboration diagram for AddressFormatElementType.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="AddressFormatElementType collaboration diagram";
+
+    subgraph "cluster_nds.name.types"
+    {
+        style="dashed, rounded";
+        label="nds.name.types";
+        tooltip="Package nds.name.types";
+        href="../../../content/packages/nds.name.types.html#Package-nds-name-types";
+        target="_parent";
+
+        "AddressFormatElementType" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.types.html#Enum-AddressFormatElementType" title="Enum defined in nds.name.types">AddressFormatElementType</td></tr></table></font>>];
+        "AddressFormatElement" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.types.html#Structure-AddressFormatElement" title="Structure defined in nds.name.types">AddressFormatElement</td></tr></table></font>>];
+    }
+
+    "AddressFormatElement" -> "AddressFormatElementType" [label="uses", fontsize=10];
+}

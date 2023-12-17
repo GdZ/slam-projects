@@ -1,0 +1,646 @@
+/**
+ * This dot file creates symbol collaboration diagram for AttributeMetadata.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="AttributeMetadata collaboration diagram";
+
+    subgraph "cluster_nds.core.attributemap"
+    {
+        style="dashed, rounded";
+        label="nds.core.attributemap";
+        tooltip="Package nds.core.attributemap";
+        href="../../../content/packages/nds.core.attributemap.html#Package-nds-core-attributemap";
+        target="_parent";
+
+        "AttributeMetadata" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.attributemap.html#Structure-AttributeMetadata" title="Structure defined in nds.core.attributemap">AttributeMetadata</td></tr></table></font>>];
+        "ConditionTypeCodeCollection" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.attributemap.html#Structure-ConditionTypeCodeCollection" title="Structure defined in nds.core.attributemap">ConditionTypeCodeCollection</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.localization.attributes"
+    {
+        style="dashed, rounded";
+        label="nds.localization.attributes";
+        tooltip="Package nds.localization.attributes";
+        href="../../../content/packages/nds.localization.attributes.html#Package-nds-localization-attributes";
+        target="_parent";
+
+        "LandmarkRelationAttributeType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.localization.attributes.html#Enum-LandmarkRelationAttributeType" title="Enum defined in nds.localization.attributes">LandmarkRelationAttributeType</td></tr></table></font>>];
+        "OccupancyGridRelationAttributeType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.localization.attributes.html#Enum-OccupancyGridRelationAttributeType" title="Enum defined in nds.localization.attributes">OccupancyGridRelationAttributeType</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.localization.properties"
+    {
+        style="dashed, rounded";
+        label="nds.localization.properties";
+        tooltip="Package nds.localization.properties";
+        href="../../../content/packages/nds.localization.properties.html#Package-nds-localization-properties";
+        target="_parent";
+
+        "LocalizationPropertyType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.localization.properties.html#Structure-LocalizationPropertyType" title="Structure defined in nds.localization.properties">LocalizationPropertyType</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.traffic.attributes"
+    {
+        style="dashed, rounded";
+        label="nds.traffic.attributes";
+        tooltip="Package nds.traffic.attributes";
+        href="../../../content/packages/nds.traffic.attributes.html#Package-nds-traffic-attributes";
+        target="_parent";
+
+        "TrafficRoadRangeAttributeType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.traffic.attributes.html#Enum-TrafficRoadRangeAttributeType" title="Enum defined in nds.traffic.attributes">TrafficRoadRangeAttributeType</td></tr></table></font>>];
+        "TrafficLaneRangeAttributeType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.traffic.attributes.html#Enum-TrafficLaneRangeAttributeType" title="Enum defined in nds.traffic.attributes">TrafficLaneRangeAttributeType</td></tr></table></font>>];
+        "TrafficDisplayLineRangeAttributeType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.traffic.attributes.html#Enum-TrafficDisplayLineRangeAttributeType" title="Enum defined in nds.traffic.attributes">TrafficDisplayLineRangeAttributeType</td></tr></table></font>>];
+        "TrafficTransitionAttributeType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.traffic.attributes.html#Enum-TrafficTransitionAttributeType" title="Enum defined in nds.traffic.attributes">TrafficTransitionAttributeType</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.traffic.properties"
+    {
+        style="dashed, rounded";
+        label="nds.traffic.properties";
+        tooltip="Package nds.traffic.properties";
+        href="../../../content/packages/nds.traffic.properties.html#Package-nds-traffic-properties";
+        target="_parent";
+
+        "TrafficPropertyType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.traffic.properties.html#Structure-TrafficPropertyType" title="Structure defined in nds.traffic.properties">TrafficPropertyType</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.routingdata.attributes"
+    {
+        style="dashed, rounded";
+        label="nds.routingdata.attributes";
+        tooltip="Package nds.routingdata.attributes";
+        href="../../../content/packages/nds.routingdata.attributes.html#Package-nds-routingdata-attributes";
+        target="_parent";
+
+        "RoutingRoadRangeAttributeType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routingdata.attributes.html#Enum-RoutingRoadRangeAttributeType" title="Enum defined in nds.routingdata.attributes">RoutingRoadRangeAttributeType</td></tr></table></font>>];
+        "RoutingRoadTransitionAttributeType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routingdata.attributes.html#Enum-RoutingRoadTransitionAttributeType" title="Enum defined in nds.routingdata.attributes">RoutingRoadTransitionAttributeType</td></tr></table></font>>];
+        "RoutingLaneRangeAttributeType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routingdata.attributes.html#Enum-RoutingLaneRangeAttributeType" title="Enum defined in nds.routingdata.attributes">RoutingLaneRangeAttributeType</td></tr></table></font>>];
+        "RoutingLaneTransitionAttributeType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routingdata.attributes.html#Enum-RoutingLaneTransitionAttributeType" title="Enum defined in nds.routingdata.attributes">RoutingLaneTransitionAttributeType</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.routingdata.properties"
+    {
+        style="dashed, rounded";
+        label="nds.routingdata.properties";
+        tooltip="Package nds.routingdata.properties";
+        href="../../../content/packages/nds.routingdata.properties.html#Package-nds-routingdata-properties";
+        target="_parent";
+
+        "RoutingPropertyType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routingdata.properties.html#Structure-RoutingPropertyType" title="Structure defined in nds.routingdata.properties">RoutingPropertyType</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.adas.attributes"
+    {
+        style="dashed, rounded";
+        label="nds.adas.attributes";
+        tooltip="Package nds.adas.attributes";
+        href="../../../content/packages/nds.adas.attributes.html#Package-nds-adas-attributes";
+        target="_parent";
+
+        "AdasRoadAttributeType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.adas.attributes.html#Enum-AdasRoadAttributeType" title="Enum defined in nds.adas.attributes">AdasRoadAttributeType</td></tr></table></font>>];
+        "AdasTransitionAttributeType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.adas.attributes.html#Enum-AdasTransitionAttributeType" title="Enum defined in nds.adas.attributes">AdasTransitionAttributeType</td></tr></table></font>>];
+        "AdasLaneAttributeType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.adas.attributes.html#Enum-AdasLaneAttributeType" title="Enum defined in nds.adas.attributes">AdasLaneAttributeType</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.adas.properties"
+    {
+        style="dashed, rounded";
+        label="nds.adas.properties";
+        tooltip="Package nds.adas.properties";
+        href="../../../content/packages/nds.adas.properties.html#Package-nds-adas-properties";
+        target="_parent";
+
+        "AdasPropertyType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.adas.properties.html#Structure-AdasPropertyType" title="Structure defined in nds.adas.properties">AdasPropertyType</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.instructions.attributes"
+    {
+        style="dashed, rounded";
+        label="nds.instructions.attributes";
+        tooltip="Package nds.instructions.attributes";
+        href="../../../content/packages/nds.instructions.attributes.html#Package-nds-instructions-attributes";
+        target="_parent";
+
+        "InstructionsTransitionAttributeType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.instructions.attributes.html#Enum-InstructionsTransitionAttributeType" title="Enum defined in nds.instructions.attributes">InstructionsTransitionAttributeType</td></tr></table></font>>];
+        "InstructionsLaneTransitionAttributeType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.instructions.attributes.html#Enum-InstructionsLaneTransitionAttributeType" title="Enum defined in nds.instructions.attributes">InstructionsLaneTransitionAttributeType</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.instructions.properties"
+    {
+        style="dashed, rounded";
+        label="nds.instructions.properties";
+        tooltip="Package nds.instructions.properties";
+        href="../../../content/packages/nds.instructions.properties.html#Package-nds-instructions-properties";
+        target="_parent";
+
+        "InstructionsPropertyType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.instructions.properties.html#Structure-InstructionsPropertyType" title="Structure defined in nds.instructions.properties">InstructionsPropertyType</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.poi.attributes"
+    {
+        style="dashed, rounded";
+        label="nds.poi.attributes";
+        tooltip="Package nds.poi.attributes";
+        href="../../../content/packages/nds.poi.attributes.html#Package-nds-poi-attributes";
+        target="_parent";
+
+        "PoiAttributeType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.attributes.html#Enum-PoiAttributeType" title="Enum defined in nds.poi.attributes">PoiAttributeType</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.poi.properties"
+    {
+        style="dashed, rounded";
+        label="nds.poi.properties";
+        tooltip="Package nds.poi.properties";
+        href="../../../content/packages/nds.poi.properties.html#Package-nds-poi-properties";
+        target="_parent";
+
+        "PoiPropertyType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.properties.html#Structure-PoiPropertyType" title="Structure defined in nds.poi.properties">PoiPropertyType</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.poi.poi"
+    {
+        style="dashed, rounded";
+        label="nds.poi.poi";
+        tooltip="Package nds.poi.poi";
+        href="../../../content/packages/nds.poi.poi.html#Package-nds-poi-poi";
+        target="_parent";
+
+        "PoiRoadPositionRelationType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.poi.html#Enum-PoiRoadPositionRelationType" title="Enum defined in nds.poi.poi">PoiRoadPositionRelationType</td></tr></table></font>>];
+        "PoiDisplayAreaRelationType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.poi.html#Enum-PoiDisplayAreaRelationType" title="Enum defined in nds.poi.poi">PoiDisplayAreaRelationType</td></tr></table></font>>];
+        "PoiDisplayMesh3DRelationType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.poi.html#Enum-PoiDisplayMesh3DRelationType" title="Enum defined in nds.poi.poi">PoiDisplayMesh3DRelationType</td></tr></table></font>>];
+        "PoiLanePositionRelationType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.poi.html#Enum-PoiLanePositionRelationType" title="Enum defined in nds.poi.poi">PoiLanePositionRelationType</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.properties"
+    {
+        style="dashed, rounded";
+        label="nds.core.properties";
+        tooltip="Package nds.core.properties";
+        href="../../../content/packages/nds.core.properties.html#Package-nds-core-properties";
+        target="_parent";
+
+        "CorePropertyType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.properties.html#Enum-CorePropertyType" title="Enum defined in nds.core.properties">CorePropertyType</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.venue.parking"
+    {
+        style="dashed, rounded";
+        label="nds.venue.parking";
+        tooltip="Package nds.venue.parking";
+        href="../../../content/packages/nds.venue.parking.html#Package-nds-venue-parking";
+        target="_parent";
+
+        "ParkingRelationType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.parking.html#Enum-ParkingRelationType" title="Enum defined in nds.venue.parking">ParkingRelationType</td></tr></table></font>>];
+        "ParkingRangeRelationType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.parking.html#Enum-ParkingRangeRelationType" title="Enum defined in nds.venue.parking">ParkingRangeRelationType</td></tr></table></font>>];
+        "ParkingPositionRelationType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.parking.html#Enum-ParkingPositionRelationType" title="Enum defined in nds.venue.parking">ParkingPositionRelationType</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.venue.details.attributes"
+    {
+        style="dashed, rounded";
+        label="nds.venue.details.attributes";
+        tooltip="Package nds.venue.details.attributes";
+        href="../../../content/packages/nds.venue.details.attributes.html#Package-nds-venue-details-attributes";
+        target="_parent";
+
+        "ParkingFacilityAttributeType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.details.attributes.html#Enum-ParkingFacilityAttributeType" title="Enum defined in nds.venue.details.attributes">ParkingFacilityAttributeType</td></tr></table></font>>];
+        "ParkingLevelAttributeType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.details.attributes.html#Enum-ParkingLevelAttributeType" title="Enum defined in nds.venue.details.attributes">ParkingLevelAttributeType</td></tr></table></font>>];
+        "ParkingSectionAttributeType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.details.attributes.html#Enum-ParkingSectionAttributeType" title="Enum defined in nds.venue.details.attributes">ParkingSectionAttributeType</td></tr></table></font>>];
+        "ParkingRowAttributeType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.details.attributes.html#Enum-ParkingRowAttributeType" title="Enum defined in nds.venue.details.attributes">ParkingRowAttributeType</td></tr></table></font>>];
+        "ParkingSpotAttributeType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.details.attributes.html#Enum-ParkingSpotAttributeType" title="Enum defined in nds.venue.details.attributes">ParkingSpotAttributeType</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.venue.details.properties"
+    {
+        style="dashed, rounded";
+        label="nds.venue.details.properties";
+        tooltip="Package nds.venue.details.properties";
+        href="../../../content/packages/nds.venue.details.properties.html#Package-nds-venue-details-properties";
+        target="_parent";
+
+        "VenuePropertyType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.details.properties.html#Structure-VenuePropertyType" title="Structure defined in nds.venue.details.properties">VenuePropertyType</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.display.details.attributes"
+    {
+        style="dashed, rounded";
+        label="nds.display.details.attributes";
+        tooltip="Package nds.display.details.attributes";
+        href="../../../content/packages/nds.display.details.attributes.html#Package-nds-display-details-attributes";
+        target="_parent";
+
+        "DisplayAreaAttributeType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.details.attributes.html#Enum-DisplayAreaAttributeType" title="Enum defined in nds.display.details.attributes">DisplayAreaAttributeType</td></tr></table></font>>];
+        "DisplayLineAttributeType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.details.attributes.html#Enum-DisplayLineAttributeType" title="Enum defined in nds.display.details.attributes">DisplayLineAttributeType</td></tr></table></font>>];
+        "DisplayPointAttributeType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.details.attributes.html#Enum-DisplayPointAttributeType" title="Enum defined in nds.display.details.attributes">DisplayPointAttributeType</td></tr></table></font>>];
+        "Display3dMeshAttributeType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.details.attributes.html#Enum-Display3dMeshAttributeType" title="Enum defined in nds.display.details.attributes">Display3dMeshAttributeType</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.display.details.properties"
+    {
+        style="dashed, rounded";
+        label="nds.display.details.properties";
+        tooltip="Package nds.display.details.properties";
+        href="../../../content/packages/nds.display.details.properties.html#Package-nds-display-details-properties";
+        target="_parent";
+
+        "DisplayPropertyType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.details.properties.html#Structure-DisplayPropertyType" title="Structure defined in nds.display.details.properties">DisplayPropertyType</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.name.attributes"
+    {
+        style="dashed, rounded";
+        label="nds.name.attributes";
+        tooltip="Package nds.name.attributes";
+        href="../../../content/packages/nds.name.attributes.html#Package-nds-name-attributes";
+        target="_parent";
+
+        "NameRoadRangeAttributeType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.attributes.html#Enum-NameRoadRangeAttributeType" title="Enum defined in nds.name.attributes">NameRoadRangeAttributeType</td></tr></table></font>>];
+        "NameRoadPositionAttributeType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.attributes.html#Enum-NameRoadPositionAttributeType" title="Enum defined in nds.name.attributes">NameRoadPositionAttributeType</td></tr></table></font>>];
+        "NameLaneRangeAttributeType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.attributes.html#Enum-NameLaneRangeAttributeType" title="Enum defined in nds.name.attributes">NameLaneRangeAttributeType</td></tr></table></font>>];
+        "NameLanePositionAttributeType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.attributes.html#Enum-NameLanePositionAttributeType" title="Enum defined in nds.name.attributes">NameLanePositionAttributeType</td></tr></table></font>>];
+        "NameTransitionAttributeType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.attributes.html#Enum-NameTransitionAttributeType" title="Enum defined in nds.name.attributes">NameTransitionAttributeType</td></tr></table></font>>];
+        "NameDisplayLineRangeAttributeType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.attributes.html#Enum-NameDisplayLineRangeAttributeType" title="Enum defined in nds.name.attributes">NameDisplayLineRangeAttributeType</td></tr></table></font>>];
+        "NameDisplayAreaAttributeType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.attributes.html#Enum-NameDisplayAreaAttributeType" title="Enum defined in nds.name.attributes">NameDisplayAreaAttributeType</td></tr></table></font>>];
+        "NameDisplayPointAttributeType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.attributes.html#Enum-NameDisplayPointAttributeType" title="Enum defined in nds.name.attributes">NameDisplayPointAttributeType</td></tr></table></font>>];
+        "NamePoiAttributeType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.attributes.html#Enum-NamePoiAttributeType" title="Enum defined in nds.name.attributes">NamePoiAttributeType</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.name.properties"
+    {
+        style="dashed, rounded";
+        label="nds.name.properties";
+        tooltip="Package nds.name.properties";
+        href="../../../content/packages/nds.name.properties.html#Package-nds-name-properties";
+        target="_parent";
+
+        "NamePropertyType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.properties.html#Structure-NamePropertyType" title="Structure defined in nds.name.properties">NamePropertyType</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.rules.attributes"
+    {
+        style="dashed, rounded";
+        label="nds.rules.attributes";
+        tooltip="Package nds.rules.attributes";
+        href="../../../content/packages/nds.rules.attributes.html#Package-nds-rules-attributes";
+        target="_parent";
+
+        "RulesRoadRangeAttributeType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.attributes.html#Enum-RulesRoadRangeAttributeType" title="Enum defined in nds.rules.attributes">RulesRoadRangeAttributeType</td></tr></table></font>>];
+        "RulesRoadPositionAttributeType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.attributes.html#Enum-RulesRoadPositionAttributeType" title="Enum defined in nds.rules.attributes">RulesRoadPositionAttributeType</td></tr></table></font>>];
+        "RulesLaneRangeAttributeType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.attributes.html#Enum-RulesLaneRangeAttributeType" title="Enum defined in nds.rules.attributes">RulesLaneRangeAttributeType</td></tr></table></font>>];
+        "RulesLanePositionAttributeType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.attributes.html#Enum-RulesLanePositionAttributeType" title="Enum defined in nds.rules.attributes">RulesLanePositionAttributeType</td></tr></table></font>>];
+        "RulesTransitionAttributeType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.attributes.html#Enum-RulesTransitionAttributeType" title="Enum defined in nds.rules.attributes">RulesTransitionAttributeType</td></tr></table></font>>];
+        "RulesLaneTransitionAttributeType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.attributes.html#Enum-RulesLaneTransitionAttributeType" title="Enum defined in nds.rules.attributes">RulesLaneTransitionAttributeType</td></tr></table></font>>];
+        "RulesRegionAttributeType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.attributes.html#Enum-RulesRegionAttributeType" title="Enum defined in nds.rules.attributes">RulesRegionAttributeType</td></tr></table></font>>];
+        "RulesDisplayLineRangeAttributeType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.attributes.html#Enum-RulesDisplayLineRangeAttributeType" title="Enum defined in nds.rules.attributes">RulesDisplayLineRangeAttributeType</td></tr></table></font>>];
+        "RulesDisplayLinePositionAttributeType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.attributes.html#Enum-RulesDisplayLinePositionAttributeType" title="Enum defined in nds.rules.attributes">RulesDisplayLinePositionAttributeType</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.rules.properties"
+    {
+        style="dashed, rounded";
+        label="nds.rules.properties";
+        tooltip="Package nds.rules.properties";
+        href="../../../content/packages/nds.rules.properties.html#Package-nds-rules-properties";
+        target="_parent";
+
+        "RulesPropertyType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.properties.html#Structure-RulesPropertyType" title="Structure defined in nds.rules.properties">RulesPropertyType</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.characteristics.attributes"
+    {
+        style="dashed, rounded";
+        label="nds.characteristics.attributes";
+        tooltip="Package nds.characteristics.attributes";
+        href="../../../content/packages/nds.characteristics.attributes.html#Package-nds-characteristics-attributes";
+        target="_parent";
+
+        "CharacsRoadRangeAttributeType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.attributes.html#Enum-CharacsRoadRangeAttributeType" title="Enum defined in nds.characteristics.attributes">CharacsRoadRangeAttributeType</td></tr></table></font>>];
+        "CharacsRoadPositionAttributeType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.attributes.html#Enum-CharacsRoadPositionAttributeType" title="Enum defined in nds.characteristics.attributes">CharacsRoadPositionAttributeType</td></tr></table></font>>];
+        "CharacsLaneRangeAttributeType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.attributes.html#Enum-CharacsLaneRangeAttributeType" title="Enum defined in nds.characteristics.attributes">CharacsLaneRangeAttributeType</td></tr></table></font>>];
+        "CharacsLanePositionAttributeType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.attributes.html#Enum-CharacsLanePositionAttributeType" title="Enum defined in nds.characteristics.attributes">CharacsLanePositionAttributeType</td></tr></table></font>>];
+        "CharacsDisplayLineRangeAttributeType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.attributes.html#Enum-CharacsDisplayLineRangeAttributeType" title="Enum defined in nds.characteristics.attributes">CharacsDisplayLineRangeAttributeType</td></tr></table></font>>];
+        "CharacsDisplayLinePositionAttributeType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.attributes.html#Enum-CharacsDisplayLinePositionAttributeType" title="Enum defined in nds.characteristics.attributes">CharacsDisplayLinePositionAttributeType</td></tr></table></font>>];
+        "CharacsTransitionAttributeType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.attributes.html#Enum-CharacsTransitionAttributeType" title="Enum defined in nds.characteristics.attributes">CharacsTransitionAttributeType</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.characteristics.properties"
+    {
+        style="dashed, rounded";
+        label="nds.characteristics.properties";
+        tooltip="Package nds.characteristics.properties";
+        href="../../../content/packages/nds.characteristics.properties.html#Package-nds-characteristics-properties";
+        target="_parent";
+
+        "CharacsPropertyType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.properties.html#Structure-CharacsPropertyType" title="Structure defined in nds.characteristics.properties">CharacsPropertyType</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.localization.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.localization.instantiations";
+        tooltip="Package nds.localization.instantiations";
+        href="../../../content/packages/nds.localization.instantiations.html#Package-nds-localization-instantiations";
+        target="_parent";
+
+        "LandmarkAttributeMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.localization.instantiations.html#InstantiateType-LandmarkAttributeMetadata" title="InstantiateType defined in nds.localization.instantiations">LandmarkAttributeMetadata</td></tr></table></font>>];
+        "OccupancyGridAttributeMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.localization.instantiations.html#InstantiateType-OccupancyGridAttributeMetadata" title="InstantiateType defined in nds.localization.instantiations">OccupancyGridAttributeMetadata</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.traffic.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.traffic.instantiations";
+        tooltip="Package nds.traffic.instantiations";
+        href="../../../content/packages/nds.traffic.instantiations.html#Package-nds-traffic-instantiations";
+        target="_parent";
+
+        "TrafficRoadRangeAttributeMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.traffic.instantiations.html#InstantiateType-TrafficRoadRangeAttributeMetadata" title="InstantiateType defined in nds.traffic.instantiations">TrafficRoadRangeAttributeMetadata</td></tr></table></font>>];
+        "TrafficLaneRangeAttributeMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.traffic.instantiations.html#InstantiateType-TrafficLaneRangeAttributeMetadata" title="InstantiateType defined in nds.traffic.instantiations">TrafficLaneRangeAttributeMetadata</td></tr></table></font>>];
+        "TrafficDisplayLineRangeAttributeMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.traffic.instantiations.html#InstantiateType-TrafficDisplayLineRangeAttributeMetadata" title="InstantiateType defined in nds.traffic.instantiations">TrafficDisplayLineRangeAttributeMetadata</td></tr></table></font>>];
+        "TrafficTransitionAttributeMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.traffic.instantiations.html#InstantiateType-TrafficTransitionAttributeMetadata" title="InstantiateType defined in nds.traffic.instantiations">TrafficTransitionAttributeMetadata</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.routingdata.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.routingdata.instantiations";
+        tooltip="Package nds.routingdata.instantiations";
+        href="../../../content/packages/nds.routingdata.instantiations.html#Package-nds-routingdata-instantiations";
+        target="_parent";
+
+        "RoutingRoadRangeAttributeMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routingdata.instantiations.html#InstantiateType-RoutingRoadRangeAttributeMetadata" title="InstantiateType defined in nds.routingdata.instantiations">RoutingRoadRangeAttributeMetadata</td></tr></table></font>>];
+        "RoutingRoadTransitionAttributeMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routingdata.instantiations.html#InstantiateType-RoutingRoadTransitionAttributeMetadata" title="InstantiateType defined in nds.routingdata.instantiations">RoutingRoadTransitionAttributeMetadata</td></tr></table></font>>];
+        "RoutingLaneRangeAttributeMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routingdata.instantiations.html#InstantiateType-RoutingLaneRangeAttributeMetadata" title="InstantiateType defined in nds.routingdata.instantiations">RoutingLaneRangeAttributeMetadata</td></tr></table></font>>];
+        "RoutingLaneTransitionAttributeMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routingdata.instantiations.html#InstantiateType-RoutingLaneTransitionAttributeMetadata" title="InstantiateType defined in nds.routingdata.instantiations">RoutingLaneTransitionAttributeMetadata</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.adas.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.adas.instantiations";
+        tooltip="Package nds.adas.instantiations";
+        href="../../../content/packages/nds.adas.instantiations.html#Package-nds-adas-instantiations";
+        target="_parent";
+
+        "AdasRoadAttributeMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.adas.instantiations.html#InstantiateType-AdasRoadAttributeMetadata" title="InstantiateType defined in nds.adas.instantiations">AdasRoadAttributeMetadata</td></tr></table></font>>];
+        "AdasTransitionAttributeMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.adas.instantiations.html#InstantiateType-AdasTransitionAttributeMetadata" title="InstantiateType defined in nds.adas.instantiations">AdasTransitionAttributeMetadata</td></tr></table></font>>];
+        "AdasLaneAttributeMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.adas.instantiations.html#InstantiateType-AdasLaneAttributeMetadata" title="InstantiateType defined in nds.adas.instantiations">AdasLaneAttributeMetadata</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.instructions.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.instructions.instantiations";
+        tooltip="Package nds.instructions.instantiations";
+        href="../../../content/packages/nds.instructions.instantiations.html#Package-nds-instructions-instantiations";
+        target="_parent";
+
+        "InstructionsTransitionAttributeMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.instructions.instantiations.html#InstantiateType-InstructionsTransitionAttributeMetadata" title="InstantiateType defined in nds.instructions.instantiations">InstructionsTransitionAttributeMetadata</td></tr></table></font>>];
+        "InstructionsLaneTransitionAttributeMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.instructions.instantiations.html#InstantiateType-InstructionsLaneTransitionAttributeMetadata" title="InstantiateType defined in nds.instructions.instantiations">InstructionsLaneTransitionAttributeMetadata</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.poi.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.poi.instantiations";
+        tooltip="Package nds.poi.instantiations";
+        href="../../../content/packages/nds.poi.instantiations.html#Package-nds-poi-instantiations";
+        target="_parent";
+
+        "PoiAttributeMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.instantiations.html#InstantiateType-PoiAttributeMetadata" title="InstantiateType defined in nds.poi.instantiations">PoiAttributeMetadata</td></tr></table></font>>];
+        "PoiRoadPositionRelationMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.instantiations.html#InstantiateType-PoiRoadPositionRelationMetadata" title="InstantiateType defined in nds.poi.instantiations">PoiRoadPositionRelationMetadata</td></tr></table></font>>];
+        "PoiDisplayAreaRelationMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.instantiations.html#InstantiateType-PoiDisplayAreaRelationMetadata" title="InstantiateType defined in nds.poi.instantiations">PoiDisplayAreaRelationMetadata</td></tr></table></font>>];
+        "PoiDisplayMesh3DRelationMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.instantiations.html#InstantiateType-PoiDisplayMesh3DRelationMetadata" title="InstantiateType defined in nds.poi.instantiations">PoiDisplayMesh3DRelationMetadata</td></tr></table></font>>];
+        "PoiLanePositionRelationMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.instantiations.html#InstantiateType-PoiLanePositionRelationMetadata" title="InstantiateType defined in nds.poi.instantiations">PoiLanePositionRelationMetadata</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.venue.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.venue.instantiations";
+        tooltip="Package nds.venue.instantiations";
+        href="../../../content/packages/nds.venue.instantiations.html#Package-nds-venue-instantiations";
+        target="_parent";
+
+        "ParkingRelationMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.instantiations.html#InstantiateType-ParkingRelationMetadata" title="InstantiateType defined in nds.venue.instantiations">ParkingRelationMetadata</td></tr></table></font>>];
+        "ParkingRangeRelationMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.instantiations.html#InstantiateType-ParkingRangeRelationMetadata" title="InstantiateType defined in nds.venue.instantiations">ParkingRangeRelationMetadata</td></tr></table></font>>];
+        "ParkingPositionRelationMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.instantiations.html#InstantiateType-ParkingPositionRelationMetadata" title="InstantiateType defined in nds.venue.instantiations">ParkingPositionRelationMetadata</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.venue.details.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.venue.details.instantiations";
+        tooltip="Package nds.venue.details.instantiations";
+        href="../../../content/packages/nds.venue.details.instantiations.html#Package-nds-venue-details-instantiations";
+        target="_parent";
+
+        "ParkingFacilityAttributeMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.details.instantiations.html#InstantiateType-ParkingFacilityAttributeMetadata" title="InstantiateType defined in nds.venue.details.instantiations">ParkingFacilityAttributeMetadata</td></tr></table></font>>];
+        "ParkingLevelAttributeMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.details.instantiations.html#InstantiateType-ParkingLevelAttributeMetadata" title="InstantiateType defined in nds.venue.details.instantiations">ParkingLevelAttributeMetadata</td></tr></table></font>>];
+        "ParkingSectionAttributeMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.details.instantiations.html#InstantiateType-ParkingSectionAttributeMetadata" title="InstantiateType defined in nds.venue.details.instantiations">ParkingSectionAttributeMetadata</td></tr></table></font>>];
+        "ParkingRowAttributeMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.details.instantiations.html#InstantiateType-ParkingRowAttributeMetadata" title="InstantiateType defined in nds.venue.details.instantiations">ParkingRowAttributeMetadata</td></tr></table></font>>];
+        "ParkingSpotAttributeMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.details.instantiations.html#InstantiateType-ParkingSpotAttributeMetadata" title="InstantiateType defined in nds.venue.details.instantiations">ParkingSpotAttributeMetadata</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.display.details.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.display.details.instantiations";
+        tooltip="Package nds.display.details.instantiations";
+        href="../../../content/packages/nds.display.details.instantiations.html#Package-nds-display-details-instantiations";
+        target="_parent";
+
+        "DisplayAreaAttributeMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.details.instantiations.html#InstantiateType-DisplayAreaAttributeMetadata" title="InstantiateType defined in nds.display.details.instantiations">DisplayAreaAttributeMetadata</td></tr></table></font>>];
+        "DisplayLineAttributeMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.details.instantiations.html#InstantiateType-DisplayLineAttributeMetadata" title="InstantiateType defined in nds.display.details.instantiations">DisplayLineAttributeMetadata</td></tr></table></font>>];
+        "DisplayPointAttributeMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.details.instantiations.html#InstantiateType-DisplayPointAttributeMetadata" title="InstantiateType defined in nds.display.details.instantiations">DisplayPointAttributeMetadata</td></tr></table></font>>];
+        "Display3dMeshAttributeMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.details.instantiations.html#InstantiateType-Display3dMeshAttributeMetadata" title="InstantiateType defined in nds.display.details.instantiations">Display3dMeshAttributeMetadata</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.name.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.name.instantiations";
+        tooltip="Package nds.name.instantiations";
+        href="../../../content/packages/nds.name.instantiations.html#Package-nds-name-instantiations";
+        target="_parent";
+
+        "NameRoadRangeAttributeMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.instantiations.html#InstantiateType-NameRoadRangeAttributeMetadata" title="InstantiateType defined in nds.name.instantiations">NameRoadRangeAttributeMetadata</td></tr></table></font>>];
+        "NameRoadPositionAttributeMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.instantiations.html#InstantiateType-NameRoadPositionAttributeMetadata" title="InstantiateType defined in nds.name.instantiations">NameRoadPositionAttributeMetadata</td></tr></table></font>>];
+        "NameLaneRangeAttributeMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.instantiations.html#InstantiateType-NameLaneRangeAttributeMetadata" title="InstantiateType defined in nds.name.instantiations">NameLaneRangeAttributeMetadata</td></tr></table></font>>];
+        "NameLanePositionAttributeMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.instantiations.html#InstantiateType-NameLanePositionAttributeMetadata" title="InstantiateType defined in nds.name.instantiations">NameLanePositionAttributeMetadata</td></tr></table></font>>];
+        "NameTransitionAttributeMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.instantiations.html#InstantiateType-NameTransitionAttributeMetadata" title="InstantiateType defined in nds.name.instantiations">NameTransitionAttributeMetadata</td></tr></table></font>>];
+        "NameDisplayLineRangeAttributeMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.instantiations.html#InstantiateType-NameDisplayLineRangeAttributeMetadata" title="InstantiateType defined in nds.name.instantiations">NameDisplayLineRangeAttributeMetadata</td></tr></table></font>>];
+        "NameDisplayAreaAttributeMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.instantiations.html#InstantiateType-NameDisplayAreaAttributeMetadata" title="InstantiateType defined in nds.name.instantiations">NameDisplayAreaAttributeMetadata</td></tr></table></font>>];
+        "NameDisplayPointAttributeMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.instantiations.html#InstantiateType-NameDisplayPointAttributeMetadata" title="InstantiateType defined in nds.name.instantiations">NameDisplayPointAttributeMetadata</td></tr></table></font>>];
+        "NamePoiAttributeMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.instantiations.html#InstantiateType-NamePoiAttributeMetadata" title="InstantiateType defined in nds.name.instantiations">NamePoiAttributeMetadata</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.rules.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.rules.instantiations";
+        tooltip="Package nds.rules.instantiations";
+        href="../../../content/packages/nds.rules.instantiations.html#Package-nds-rules-instantiations";
+        target="_parent";
+
+        "RulesRoadRangeAttributeMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.instantiations.html#InstantiateType-RulesRoadRangeAttributeMetadata" title="InstantiateType defined in nds.rules.instantiations">RulesRoadRangeAttributeMetadata</td></tr></table></font>>];
+        "RulesRoadPositionAttributeMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.instantiations.html#InstantiateType-RulesRoadPositionAttributeMetadata" title="InstantiateType defined in nds.rules.instantiations">RulesRoadPositionAttributeMetadata</td></tr></table></font>>];
+        "RulesLaneRangeAttributeMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.instantiations.html#InstantiateType-RulesLaneRangeAttributeMetadata" title="InstantiateType defined in nds.rules.instantiations">RulesLaneRangeAttributeMetadata</td></tr></table></font>>];
+        "RulesLanePositionAttributeMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.instantiations.html#InstantiateType-RulesLanePositionAttributeMetadata" title="InstantiateType defined in nds.rules.instantiations">RulesLanePositionAttributeMetadata</td></tr></table></font>>];
+        "RulesTransitionAttributeMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.instantiations.html#InstantiateType-RulesTransitionAttributeMetadata" title="InstantiateType defined in nds.rules.instantiations">RulesTransitionAttributeMetadata</td></tr></table></font>>];
+        "RulesLaneTransitionAttributeMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.instantiations.html#InstantiateType-RulesLaneTransitionAttributeMetadata" title="InstantiateType defined in nds.rules.instantiations">RulesLaneTransitionAttributeMetadata</td></tr></table></font>>];
+        "RulesRegionAttributeMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.instantiations.html#InstantiateType-RulesRegionAttributeMetadata" title="InstantiateType defined in nds.rules.instantiations">RulesRegionAttributeMetadata</td></tr></table></font>>];
+        "RulesDisplayLineRangeAttributeMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.instantiations.html#InstantiateType-RulesDisplayLineRangeAttributeMetadata" title="InstantiateType defined in nds.rules.instantiations">RulesDisplayLineRangeAttributeMetadata</td></tr></table></font>>];
+        "RulesDisplayLinePositionAttributeMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.instantiations.html#InstantiateType-RulesDisplayLinePositionAttributeMetadata" title="InstantiateType defined in nds.rules.instantiations">RulesDisplayLinePositionAttributeMetadata</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.characteristics.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.characteristics.instantiations";
+        tooltip="Package nds.characteristics.instantiations";
+        href="../../../content/packages/nds.characteristics.instantiations.html#Package-nds-characteristics-instantiations";
+        target="_parent";
+
+        "CharacsRoadRangeAttributeMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.instantiations.html#InstantiateType-CharacsRoadRangeAttributeMetadata" title="InstantiateType defined in nds.characteristics.instantiations">CharacsRoadRangeAttributeMetadata</td></tr></table></font>>];
+        "CharacsRoadPositionAttributeMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.instantiations.html#InstantiateType-CharacsRoadPositionAttributeMetadata" title="InstantiateType defined in nds.characteristics.instantiations">CharacsRoadPositionAttributeMetadata</td></tr></table></font>>];
+        "CharacsLaneRangeAttributeMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.instantiations.html#InstantiateType-CharacsLaneRangeAttributeMetadata" title="InstantiateType defined in nds.characteristics.instantiations">CharacsLaneRangeAttributeMetadata</td></tr></table></font>>];
+        "CharacsLanePositionAttributeMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.instantiations.html#InstantiateType-CharacsLanePositionAttributeMetadata" title="InstantiateType defined in nds.characteristics.instantiations">CharacsLanePositionAttributeMetadata</td></tr></table></font>>];
+        "CharacsDisplayLineRangeAttributeMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.instantiations.html#InstantiateType-CharacsDisplayLineRangeAttributeMetadata" title="InstantiateType defined in nds.characteristics.instantiations">CharacsDisplayLineRangeAttributeMetadata</td></tr></table></font>>];
+        "CharacsDisplayLinePositionAttributeMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.instantiations.html#InstantiateType-CharacsDisplayLinePositionAttributeMetadata" title="InstantiateType defined in nds.characteristics.instantiations">CharacsDisplayLinePositionAttributeMetadata</td></tr></table></font>>];
+        "CharacsTransitionAttributeMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.instantiations.html#InstantiateType-CharacsTransitionAttributeMetadata" title="InstantiateType defined in nds.characteristics.instantiations">CharacsTransitionAttributeMetadata</td></tr></table></font>>];
+    }
+
+    "AttributeMetadata" -> "LandmarkRelationAttributeType" [label="uses", fontsize=10];
+    "AttributeMetadata" -> "LocalizationPropertyType" [label="uses", fontsize=10];
+    "AttributeMetadata" -> "ConditionTypeCodeCollection" [label="uses", fontsize=10];
+    "AttributeMetadata" -> "OccupancyGridRelationAttributeType" [label="uses", fontsize=10];
+    "AttributeMetadata" -> "TrafficRoadRangeAttributeType" [label="uses", fontsize=10];
+    "AttributeMetadata" -> "TrafficPropertyType" [label="uses", fontsize=10];
+    "AttributeMetadata" -> "TrafficLaneRangeAttributeType" [label="uses", fontsize=10];
+    "AttributeMetadata" -> "TrafficDisplayLineRangeAttributeType" [label="uses", fontsize=10];
+    "AttributeMetadata" -> "TrafficTransitionAttributeType" [label="uses", fontsize=10];
+    "AttributeMetadata" -> "RoutingRoadRangeAttributeType" [label="uses", fontsize=10];
+    "AttributeMetadata" -> "RoutingPropertyType" [label="uses", fontsize=10];
+    "AttributeMetadata" -> "RoutingRoadTransitionAttributeType" [label="uses", fontsize=10];
+    "AttributeMetadata" -> "RoutingLaneRangeAttributeType" [label="uses", fontsize=10];
+    "AttributeMetadata" -> "RoutingLaneTransitionAttributeType" [label="uses", fontsize=10];
+    "AttributeMetadata" -> "AdasRoadAttributeType" [label="uses", fontsize=10];
+    "AttributeMetadata" -> "AdasPropertyType" [label="uses", fontsize=10];
+    "AttributeMetadata" -> "AdasTransitionAttributeType" [label="uses", fontsize=10];
+    "AttributeMetadata" -> "AdasLaneAttributeType" [label="uses", fontsize=10];
+    "AttributeMetadata" -> "InstructionsTransitionAttributeType" [label="uses", fontsize=10];
+    "AttributeMetadata" -> "InstructionsPropertyType" [label="uses", fontsize=10];
+    "AttributeMetadata" -> "InstructionsLaneTransitionAttributeType" [label="uses", fontsize=10];
+    "AttributeMetadata" -> "PoiAttributeType" [label="uses", fontsize=10];
+    "AttributeMetadata" -> "PoiPropertyType" [label="uses", fontsize=10];
+    "AttributeMetadata" -> "PoiRoadPositionRelationType" [label="uses", fontsize=10];
+    "AttributeMetadata" -> "PoiDisplayAreaRelationType" [label="uses", fontsize=10];
+    "AttributeMetadata" -> "CorePropertyType" [label="uses", fontsize=10];
+    "AttributeMetadata" -> "PoiDisplayMesh3DRelationType" [label="uses", fontsize=10];
+    "AttributeMetadata" -> "PoiLanePositionRelationType" [label="uses", fontsize=10];
+    "AttributeMetadata" -> "ParkingRelationType" [label="uses", fontsize=10];
+    "AttributeMetadata" -> "ParkingRangeRelationType" [label="uses", fontsize=10];
+    "AttributeMetadata" -> "ParkingPositionRelationType" [label="uses", fontsize=10];
+    "AttributeMetadata" -> "ParkingFacilityAttributeType" [label="uses", fontsize=10];
+    "AttributeMetadata" -> "VenuePropertyType" [label="uses", fontsize=10];
+    "AttributeMetadata" -> "ParkingLevelAttributeType" [label="uses", fontsize=10];
+    "AttributeMetadata" -> "ParkingSectionAttributeType" [label="uses", fontsize=10];
+    "AttributeMetadata" -> "ParkingRowAttributeType" [label="uses", fontsize=10];
+    "AttributeMetadata" -> "ParkingSpotAttributeType" [label="uses", fontsize=10];
+    "AttributeMetadata" -> "DisplayAreaAttributeType" [label="uses", fontsize=10];
+    "AttributeMetadata" -> "DisplayPropertyType" [label="uses", fontsize=10];
+    "AttributeMetadata" -> "DisplayLineAttributeType" [label="uses", fontsize=10];
+    "AttributeMetadata" -> "DisplayPointAttributeType" [label="uses", fontsize=10];
+    "AttributeMetadata" -> "Display3dMeshAttributeType" [label="uses", fontsize=10];
+    "AttributeMetadata" -> "NameRoadRangeAttributeType" [label="uses", fontsize=10];
+    "AttributeMetadata" -> "NamePropertyType" [label="uses", fontsize=10];
+    "AttributeMetadata" -> "NameRoadPositionAttributeType" [label="uses", fontsize=10];
+    "AttributeMetadata" -> "NameLaneRangeAttributeType" [label="uses", fontsize=10];
+    "AttributeMetadata" -> "NameLanePositionAttributeType" [label="uses", fontsize=10];
+    "AttributeMetadata" -> "NameTransitionAttributeType" [label="uses", fontsize=10];
+    "AttributeMetadata" -> "NameDisplayLineRangeAttributeType" [label="uses", fontsize=10];
+    "AttributeMetadata" -> "NameDisplayAreaAttributeType" [label="uses", fontsize=10];
+    "AttributeMetadata" -> "NameDisplayPointAttributeType" [label="uses", fontsize=10];
+    "AttributeMetadata" -> "NamePoiAttributeType" [label="uses", fontsize=10];
+    "AttributeMetadata" -> "RulesRoadRangeAttributeType" [label="uses", fontsize=10];
+    "AttributeMetadata" -> "RulesPropertyType" [label="uses", fontsize=10];
+    "AttributeMetadata" -> "RulesRoadPositionAttributeType" [label="uses", fontsize=10];
+    "AttributeMetadata" -> "RulesLaneRangeAttributeType" [label="uses", fontsize=10];
+    "AttributeMetadata" -> "RulesLanePositionAttributeType" [label="uses", fontsize=10];
+    "AttributeMetadata" -> "RulesTransitionAttributeType" [label="uses", fontsize=10];
+    "AttributeMetadata" -> "RulesLaneTransitionAttributeType" [label="uses", fontsize=10];
+    "AttributeMetadata" -> "RulesRegionAttributeType" [label="uses", fontsize=10];
+    "AttributeMetadata" -> "RulesDisplayLineRangeAttributeType" [label="uses", fontsize=10];
+    "AttributeMetadata" -> "RulesDisplayLinePositionAttributeType" [label="uses", fontsize=10];
+    "AttributeMetadata" -> "CharacsRoadRangeAttributeType" [label="uses", fontsize=10];
+    "AttributeMetadata" -> "CharacsPropertyType" [label="uses", fontsize=10];
+    "AttributeMetadata" -> "CharacsRoadPositionAttributeType" [label="uses", fontsize=10];
+    "AttributeMetadata" -> "CharacsLaneRangeAttributeType" [label="uses", fontsize=10];
+    "AttributeMetadata" -> "CharacsLanePositionAttributeType" [label="uses", fontsize=10];
+    "AttributeMetadata" -> "CharacsDisplayLineRangeAttributeType" [label="uses", fontsize=10];
+    "AttributeMetadata" -> "CharacsDisplayLinePositionAttributeType" [label="uses", fontsize=10];
+    "AttributeMetadata" -> "CharacsTransitionAttributeType" [label="uses", fontsize=10];
+    "LandmarkAttributeMetadata" -> "AttributeMetadata" [label="uses", fontsize=10];
+    "OccupancyGridAttributeMetadata" -> "AttributeMetadata" [label="uses", fontsize=10];
+    "TrafficRoadRangeAttributeMetadata" -> "AttributeMetadata" [label="uses", fontsize=10];
+    "TrafficLaneRangeAttributeMetadata" -> "AttributeMetadata" [label="uses", fontsize=10];
+    "TrafficDisplayLineRangeAttributeMetadata" -> "AttributeMetadata" [label="uses", fontsize=10];
+    "TrafficTransitionAttributeMetadata" -> "AttributeMetadata" [label="uses", fontsize=10];
+    "RoutingRoadRangeAttributeMetadata" -> "AttributeMetadata" [label="uses", fontsize=10];
+    "RoutingRoadTransitionAttributeMetadata" -> "AttributeMetadata" [label="uses", fontsize=10];
+    "RoutingLaneRangeAttributeMetadata" -> "AttributeMetadata" [label="uses", fontsize=10];
+    "RoutingLaneTransitionAttributeMetadata" -> "AttributeMetadata" [label="uses", fontsize=10];
+    "AdasRoadAttributeMetadata" -> "AttributeMetadata" [label="uses", fontsize=10];
+    "AdasTransitionAttributeMetadata" -> "AttributeMetadata" [label="uses", fontsize=10];
+    "AdasLaneAttributeMetadata" -> "AttributeMetadata" [label="uses", fontsize=10];
+    "InstructionsTransitionAttributeMetadata" -> "AttributeMetadata" [label="uses", fontsize=10];
+    "InstructionsLaneTransitionAttributeMetadata" -> "AttributeMetadata" [label="uses", fontsize=10];
+    "PoiAttributeMetadata" -> "AttributeMetadata" [label="uses", fontsize=10];
+    "PoiRoadPositionRelationMetadata" -> "AttributeMetadata" [label="uses", fontsize=10];
+    "PoiDisplayAreaRelationMetadata" -> "AttributeMetadata" [label="uses", fontsize=10];
+    "PoiDisplayMesh3DRelationMetadata" -> "AttributeMetadata" [label="uses", fontsize=10];
+    "PoiLanePositionRelationMetadata" -> "AttributeMetadata" [label="uses", fontsize=10];
+    "ParkingRelationMetadata" -> "AttributeMetadata" [label="uses", fontsize=10];
+    "ParkingRangeRelationMetadata" -> "AttributeMetadata" [label="uses", fontsize=10];
+    "ParkingPositionRelationMetadata" -> "AttributeMetadata" [label="uses", fontsize=10];
+    "ParkingFacilityAttributeMetadata" -> "AttributeMetadata" [label="uses", fontsize=10];
+    "ParkingLevelAttributeMetadata" -> "AttributeMetadata" [label="uses", fontsize=10];
+    "ParkingSectionAttributeMetadata" -> "AttributeMetadata" [label="uses", fontsize=10];
+    "ParkingRowAttributeMetadata" -> "AttributeMetadata" [label="uses", fontsize=10];
+    "ParkingSpotAttributeMetadata" -> "AttributeMetadata" [label="uses", fontsize=10];
+    "DisplayAreaAttributeMetadata" -> "AttributeMetadata" [label="uses", fontsize=10];
+    "DisplayLineAttributeMetadata" -> "AttributeMetadata" [label="uses", fontsize=10];
+    "DisplayPointAttributeMetadata" -> "AttributeMetadata" [label="uses", fontsize=10];
+    "Display3dMeshAttributeMetadata" -> "AttributeMetadata" [label="uses", fontsize=10];
+    "NameRoadRangeAttributeMetadata" -> "AttributeMetadata" [label="uses", fontsize=10];
+    "NameRoadPositionAttributeMetadata" -> "AttributeMetadata" [label="uses", fontsize=10];
+    "NameLaneRangeAttributeMetadata" -> "AttributeMetadata" [label="uses", fontsize=10];
+    "NameLanePositionAttributeMetadata" -> "AttributeMetadata" [label="uses", fontsize=10];
+    "NameTransitionAttributeMetadata" -> "AttributeMetadata" [label="uses", fontsize=10];
+    "NameDisplayLineRangeAttributeMetadata" -> "AttributeMetadata" [label="uses", fontsize=10];
+    "NameDisplayAreaAttributeMetadata" -> "AttributeMetadata" [label="uses", fontsize=10];
+    "NameDisplayPointAttributeMetadata" -> "AttributeMetadata" [label="uses", fontsize=10];
+    "NamePoiAttributeMetadata" -> "AttributeMetadata" [label="uses", fontsize=10];
+    "RulesRoadRangeAttributeMetadata" -> "AttributeMetadata" [label="uses", fontsize=10];
+    "RulesRoadPositionAttributeMetadata" -> "AttributeMetadata" [label="uses", fontsize=10];
+    "RulesLaneRangeAttributeMetadata" -> "AttributeMetadata" [label="uses", fontsize=10];
+    "RulesLanePositionAttributeMetadata" -> "AttributeMetadata" [label="uses", fontsize=10];
+    "RulesTransitionAttributeMetadata" -> "AttributeMetadata" [label="uses", fontsize=10];
+    "RulesLaneTransitionAttributeMetadata" -> "AttributeMetadata" [label="uses", fontsize=10];
+    "RulesRegionAttributeMetadata" -> "AttributeMetadata" [label="uses", fontsize=10];
+    "RulesDisplayLineRangeAttributeMetadata" -> "AttributeMetadata" [label="uses", fontsize=10];
+    "RulesDisplayLinePositionAttributeMetadata" -> "AttributeMetadata" [label="uses", fontsize=10];
+    "CharacsRoadRangeAttributeMetadata" -> "AttributeMetadata" [label="uses", fontsize=10];
+    "CharacsRoadPositionAttributeMetadata" -> "AttributeMetadata" [label="uses", fontsize=10];
+    "CharacsLaneRangeAttributeMetadata" -> "AttributeMetadata" [label="uses", fontsize=10];
+    "CharacsLanePositionAttributeMetadata" -> "AttributeMetadata" [label="uses", fontsize=10];
+    "CharacsDisplayLineRangeAttributeMetadata" -> "AttributeMetadata" [label="uses", fontsize=10];
+    "CharacsDisplayLinePositionAttributeMetadata" -> "AttributeMetadata" [label="uses", fontsize=10];
+    "CharacsTransitionAttributeMetadata" -> "AttributeMetadata" [label="uses", fontsize=10];
+}

@@ -1,0 +1,110 @@
+/**
+ * This dot file creates symbol collaboration diagram for WidthCentimeters.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="WidthCentimeters collaboration diagram";
+
+    subgraph "cluster_nds.core.types"
+    {
+        style="dashed, rounded";
+        label="nds.core.types";
+        tooltip="Package nds.core.types";
+        href="../../../content/packages/nds.core.types.html#Package-nds-core-types";
+        target="_parent";
+
+        "WidthCentimeters" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Subtype-WidthCentimeters" title="Subtype defined in nds.core.types">WidthCentimeters</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.conditions"
+    {
+        style="dashed, rounded";
+        label="nds.core.conditions";
+        tooltip="Package nds.core.conditions";
+        href="../../../content/packages/nds.core.conditions.html#Package-nds-core-conditions";
+        target="_parent";
+
+        "ConditionValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.conditions.html#Choice-ConditionValue" title="Choice defined in nds.core.conditions">ConditionValue</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.vehicle"
+    {
+        style="dashed, rounded";
+        label="nds.core.vehicle";
+        tooltip="Package nds.core.vehicle";
+        href="../../../content/packages/nds.core.vehicle.html#Package-nds-core-vehicle";
+        target="_parent";
+
+        "VehicleWidth" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.vehicle.html#Subtype-VehicleWidth" title="Subtype defined in nds.core.vehicle">VehicleWidth</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.localization.types"
+    {
+        style="dashed, rounded";
+        label="nds.localization.types";
+        tooltip="Package nds.localization.types";
+        href="../../../content/packages/nds.localization.types.html#Package-nds-localization-types";
+        target="_parent";
+
+        "LandmarkLine" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.localization.types.html#Structure-LandmarkLine" title="Structure defined in nds.localization.types">LandmarkLine</td></tr></table></font>>];
+        "LandmarkSignDetails" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.localization.types.html#Structure-LandmarkSignDetails" title="Structure defined in nds.localization.types">LandmarkSignDetails</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.rules.types"
+    {
+        style="dashed, rounded";
+        label="nds.rules.types";
+        tooltip="Package nds.rules.types";
+        href="../../../content/packages/nds.rules.types.html#Package-nds-rules-types";
+        target="_parent";
+
+        "MetricRoadWidth" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.types.html#Subtype-MetricRoadWidth" title="Subtype defined in nds.rules.types">MetricRoadWidth</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.characteristics.types"
+    {
+        style="dashed, rounded";
+        label="nds.characteristics.types";
+        tooltip="Package nds.characteristics.types";
+        href="../../../content/packages/nds.characteristics.types.html#Package-nds-characteristics-types";
+        target="_parent";
+
+        "MetricRoadWidth" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.types.html#Subtype-MetricRoadWidth" title="Subtype defined in nds.characteristics.types">MetricRoadWidth</td></tr></table></font>>];
+        "MetricLaneWidth" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.types.html#Subtype-MetricLaneWidth" title="Subtype defined in nds.characteristics.types">MetricLaneWidth</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.lane.boundaries"
+    {
+        style="dashed, rounded";
+        label="nds.lane.boundaries";
+        tooltip="Package nds.lane.boundaries";
+        href="../../../content/packages/nds.lane.boundaries.html#Package-nds-lane-boundaries";
+        target="_parent";
+
+        "BoundaryWidth" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.boundaries.html#Subtype-BoundaryWidth" title="Subtype defined in nds.lane.boundaries">BoundaryWidth</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.lane.roadsurface"
+    {
+        style="dashed, rounded";
+        label="nds.lane.roadsurface";
+        tooltip="Package nds.lane.roadsurface";
+        href="../../../content/packages/nds.lane.roadsurface.html#Package-nds-lane-roadsurface";
+        target="_parent";
+
+        "MarkingWidth" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.roadsurface.html#Subtype-MarkingWidth" title="Subtype defined in nds.lane.roadsurface">MarkingWidth</td></tr></table></font>>];
+    }
+
+    "ConditionValue" -> "WidthCentimeters" [label="uses", fontsize=10];
+    "VehicleWidth" -> "WidthCentimeters" [label="uses", fontsize=10];
+    "LandmarkLine" -> "WidthCentimeters" [label="uses", fontsize=10];
+    "LandmarkSignDetails" -> "WidthCentimeters" [label="uses", fontsize=10];
+    "MetricRoadWidth" -> "WidthCentimeters" [label="uses", fontsize=10];
+    "MetricRoadWidth" -> "WidthCentimeters" [label="uses", fontsize=10];
+    "MetricLaneWidth" -> "WidthCentimeters" [label="uses", fontsize=10];
+    "BoundaryWidth" -> "WidthCentimeters" [label="uses", fontsize=10];
+    "MarkingWidth" -> "WidthCentimeters" [label="uses", fontsize=10];
+}

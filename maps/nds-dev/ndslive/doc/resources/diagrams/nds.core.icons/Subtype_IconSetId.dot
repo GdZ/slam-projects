@@ -1,0 +1,38 @@
+/**
+ * This dot file creates symbol collaboration diagram for IconSetId.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="IconSetId collaboration diagram";
+
+    subgraph "cluster_nds.core.icons"
+    {
+        style="dashed, rounded";
+        label="nds.core.icons";
+        tooltip="Package nds.core.icons";
+        href="../../../content/packages/nds.core.icons.html#Package-nds-core-icons";
+        target="_parent";
+
+        "IconSetId" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.icons.html#Subtype-IconSetId" title="Subtype defined in nds.core.icons">IconSetId</td></tr></table></font>>];
+        "IconSet" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.icons.html#Structure-IconSet" title="Structure defined in nds.core.icons">IconSet</td></tr></table></font>>];
+        "IconSetReference" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.icons.html#Subtype-IconSetReference" title="Subtype defined in nds.core.icons">IconSetReference</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.display.types"
+    {
+        style="dashed, rounded";
+        label="nds.display.types";
+        tooltip="Package nds.display.types";
+        href="../../../content/packages/nds.display.types.html#Package-nds-display-types";
+        target="_parent";
+
+        "GenericIconSetMapElement" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.types.html#Structure-GenericIconSetMapElement" title="Structure defined in nds.display.types">GenericIconSetMapElement</td></tr></table></font>>];
+    }
+
+    "IconSet" -> "IconSetId" [label="uses", fontsize=10];
+    "IconSetReference" -> "IconSetId" [label="uses", fontsize=10];
+    "GenericIconSetMapElement" -> "IconSetId" [label="uses", fontsize=10];
+}

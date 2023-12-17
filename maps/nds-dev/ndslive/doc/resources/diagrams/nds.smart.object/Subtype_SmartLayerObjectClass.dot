@@ -1,0 +1,60 @@
+/**
+ * This dot file creates symbol collaboration diagram for SmartLayerObjectClass.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="SmartLayerObjectClass collaboration diagram";
+
+    subgraph "cluster_nds.smart.object"
+    {
+        style="dashed, rounded";
+        label="nds.smart.object";
+        tooltip="Package nds.smart.object";
+        href="../../../content/packages/nds.smart.object.html#Package-nds-smart-object";
+        target="_parent";
+
+        "SmartLayerObjectClass" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.object.html#Subtype-SmartLayerObjectClass" title="Subtype defined in nds.smart.object">SmartLayerObjectClass</td></tr></table></font>>];
+        "PARKING_FACILITY" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.object.html#Constant-PARKING_FACILITY" title="Constant defined in nds.smart.object">PARKING_FACILITY</td></tr></table></font>>];
+        "FACTORY_SITE" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.object.html#Constant-FACTORY_SITE" title="Constant defined in nds.smart.object">FACTORY_SITE</td></tr></table></font>>];
+        "INDOOR_LOCATION" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.object.html#Constant-INDOOR_LOCATION" title="Constant defined in nds.smart.object">INDOOR_LOCATION</td></tr></table></font>>];
+        "GLOBAL_GENERIC_ICONS" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.object.html#Constant-GLOBAL_GENERIC_ICONS" title="Constant defined in nds.smart.object">GLOBAL_GENERIC_ICONS</td></tr></table></font>>];
+        "GLOBAL_ICONS" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.object.html#Constant-GLOBAL_ICONS" title="Constant defined in nds.smart.object">GLOBAL_ICONS</td></tr></table></font>>];
+        "GLOBAL_INSTRUCTION_IMAGES" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.object.html#Constant-GLOBAL_INSTRUCTION_IMAGES" title="Constant defined in nds.smart.object">GLOBAL_INSTRUCTION_IMAGES</td></tr></table></font>>];
+        "SmartLayerObjectDefinition" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.object.html#Structure-SmartLayerObjectDefinition" title="Structure defined in nds.smart.object">SmartLayerObjectDefinition</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.smart.metadata"
+    {
+        style="dashed, rounded";
+        label="nds.smart.metadata";
+        tooltip="Package nds.smart.metadata";
+        href="../../../content/packages/nds.smart.metadata.html#Package-nds-smart-metadata";
+        target="_parent";
+
+        "SmartLayerRegistryMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.metadata.html#Structure-SmartLayerRegistryMetadata" title="Structure defined in nds.smart.metadata">SmartLayerRegistryMetadata</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.smart.filestore"
+    {
+        style="dashed, rounded";
+        label="nds.smart.filestore";
+        tooltip="Package nds.smart.filestore";
+        href="../../../content/packages/nds.smart.filestore.html#Package-nds-smart-filestore";
+        target="_parent";
+
+        "SmartLayerObjectTable" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.filestore.html#SqlTable-SmartLayerObjectTable" title="SqlTable defined in nds.smart.filestore">SmartLayerObjectTable</td></tr></table></font>>];
+    }
+
+    "PARKING_FACILITY" -> "SmartLayerObjectClass" [label="uses", fontsize=10];
+    "FACTORY_SITE" -> "SmartLayerObjectClass" [label="uses", fontsize=10];
+    "INDOOR_LOCATION" -> "SmartLayerObjectClass" [label="uses", fontsize=10];
+    "GLOBAL_GENERIC_ICONS" -> "SmartLayerObjectClass" [label="uses", fontsize=10];
+    "GLOBAL_ICONS" -> "SmartLayerObjectClass" [label="uses", fontsize=10];
+    "GLOBAL_INSTRUCTION_IMAGES" -> "SmartLayerObjectClass" [label="uses", fontsize=10];
+    "SmartLayerObjectDefinition" -> "SmartLayerObjectClass" [label="uses", fontsize=10];
+    "SmartLayerRegistryMetadata" -> "SmartLayerObjectClass" [label="uses", fontsize=10];
+    "SmartLayerObjectTable" -> "SmartLayerObjectClass" [label="uses", fontsize=10];
+}

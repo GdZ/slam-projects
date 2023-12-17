@@ -1,0 +1,50 @@
+/**
+ * This dot file creates symbol collaboration diagram for LaneLength.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="LaneLength collaboration diagram";
+
+    subgraph "cluster_nds.lane.reference.types"
+    {
+        style="dashed, rounded";
+        label="nds.lane.reference.types";
+        tooltip="Package nds.lane.reference.types";
+        href="../../../content/packages/nds.lane.reference.types.html#Package-nds-lane-reference-types";
+        target="_parent";
+
+        "LaneLength" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.reference.types.html#Subtype-LaneLength" title="Subtype defined in nds.lane.reference.types">LaneLength</td></tr></table></font>>];
+        "LaneLengthPosition" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.reference.types.html#Structure-LaneLengthPosition" title="Structure defined in nds.lane.reference.types">LaneLengthPosition</td></tr></table></font>>];
+        "LaneLengthRange" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.reference.types.html#Structure-LaneLengthRange" title="Structure defined in nds.lane.reference.types">LaneLengthRange</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.types"
+    {
+        style="dashed, rounded";
+        label="nds.core.types";
+        tooltip="Package nds.core.types";
+        href="../../../content/packages/nds.core.types.html#Package-nds-core-types";
+        target="_parent";
+
+        "LengthCentimeters" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Subtype-LengthCentimeters" title="Subtype defined in nds.core.types">LengthCentimeters</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.lane.lanes"
+    {
+        style="dashed, rounded";
+        label="nds.lane.lanes";
+        tooltip="Package nds.lane.lanes";
+        href="../../../content/packages/nds.lane.lanes.html#Package-nds-lane-lanes";
+        target="_parent";
+
+        "Lane" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.lanes.html#Structure-Lane" title="Structure defined in nds.lane.lanes">Lane</td></tr></table></font>>];
+    }
+
+    "LaneLength" -> "LengthCentimeters" [label="uses", fontsize=10];
+    "LaneLengthPosition" -> "LaneLength" [label="uses", fontsize=10];
+    "LaneLengthRange" -> "LaneLength" [label="uses", fontsize=10];
+    "Lane" -> "LaneLength" [label="uses", fontsize=10];
+}

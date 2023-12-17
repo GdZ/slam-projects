@@ -1,0 +1,42 @@
+/**
+ * This dot file creates symbol collaboration diagram for Material.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="Material collaboration diagram";
+
+    subgraph "cluster_nds.display.types"
+    {
+        style="dashed, rounded";
+        label="nds.display.types";
+        tooltip="Package nds.display.types";
+        href="../../../content/packages/nds.display.types.html#Package-nds-display-types";
+        target="_parent";
+
+        "Material" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.types.html#Structure-Material" title="Structure defined in nds.display.types">Material</td></tr></table></font>>];
+        "MaterialContent" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.types.html#Structure-MaterialContent" title="Structure defined in nds.display.types">MaterialContent</td></tr></table></font>>];
+        "ColorId" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.types.html#Subtype-ColorId" title="Subtype defined in nds.display.types">ColorId</td></tr></table></font>>];
+        "RenderGroup" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.types.html#Structure-RenderGroup" title="Structure defined in nds.display.types">RenderGroup</td></tr></table></font>>];
+        "RenderSurfacePart" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.types.html#Structure-RenderSurfacePart" title="Structure defined in nds.display.types">RenderSurfacePart</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.display.reference.types"
+    {
+        style="dashed, rounded";
+        label="nds.display.reference.types";
+        tooltip="Package nds.display.reference.types";
+        href="../../../content/packages/nds.display.reference.types.html#Package-nds-display-reference-types";
+        target="_parent";
+
+        "TextureReference" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.reference.types.html#Structure-TextureReference" title="Structure defined in nds.display.reference.types">TextureReference</td></tr></table></font>>];
+    }
+
+    "Material" -> "MaterialContent" [label="uses", fontsize=10];
+    "Material" -> "ColorId" [label="uses", fontsize=10];
+    "Material" -> "TextureReference" [label="uses", fontsize=10];
+    "RenderGroup" -> "Material" [label="uses", fontsize=10];
+    "RenderSurfacePart" -> "Material" [label="uses", fontsize=10];
+}

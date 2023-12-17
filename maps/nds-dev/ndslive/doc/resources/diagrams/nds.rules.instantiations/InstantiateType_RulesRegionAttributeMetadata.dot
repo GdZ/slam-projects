@@ -1,0 +1,60 @@
+/**
+ * This dot file creates symbol collaboration diagram for RulesRegionAttributeMetadata.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="RulesRegionAttributeMetadata collaboration diagram";
+
+    subgraph "cluster_nds.rules.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.rules.instantiations";
+        tooltip="Package nds.rules.instantiations";
+        href="../../../content/packages/nds.rules.instantiations.html#Package-nds-rules-instantiations";
+        target="_parent";
+
+        "RulesRegionAttributeMetadata" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.instantiations.html#InstantiateType-RulesRegionAttributeMetadata" title="InstantiateType defined in nds.rules.instantiations">RulesRegionAttributeMetadata</td></tr></table></font>>];
+        "AttributeMetadata&lt;RulesRegionAttributeType,RulesPropertyType&gt;" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.attributemap.html#Structure-AttributeMetadata" title="Structure defined in nds.core.attributemap">AttributeMetadata</td><td>&lt;</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.attributes.html#Enum-RulesRegionAttributeType" title="Enum defined in nds.rules.attributes">RulesRegionAttributeType</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.properties.html#Structure-RulesPropertyType" title="Structure defined in nds.rules.properties">RulesPropertyType</td></tr></table></td><td>&gt;</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.rules.attributes"
+    {
+        style="dashed, rounded";
+        label="nds.rules.attributes";
+        tooltip="Package nds.rules.attributes";
+        href="../../../content/packages/nds.rules.attributes.html#Package-nds-rules-attributes";
+        target="_parent";
+
+        "RulesRegionAttributeType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.attributes.html#Enum-RulesRegionAttributeType" title="Enum defined in nds.rules.attributes">RulesRegionAttributeType</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.rules.properties"
+    {
+        style="dashed, rounded";
+        label="nds.rules.properties";
+        tooltip="Package nds.rules.properties";
+        href="../../../content/packages/nds.rules.properties.html#Package-nds-rules-properties";
+        target="_parent";
+
+        "RulesPropertyType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.properties.html#Structure-RulesPropertyType" title="Structure defined in nds.rules.properties">RulesPropertyType</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.rules.metadata"
+    {
+        style="dashed, rounded";
+        label="nds.rules.metadata";
+        tooltip="Package nds.rules.metadata";
+        href="../../../content/packages/nds.rules.metadata.html#Package-nds-rules-metadata";
+        target="_parent";
+
+        "RegionRulesLayerMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.metadata.html#Structure-RegionRulesLayerMetadata" title="Structure defined in nds.rules.metadata">RegionRulesLayerMetadata</td></tr></table></font>>];
+    }
+
+    "RulesRegionAttributeMetadata" -> "AttributeMetadata&lt;RulesRegionAttributeType,RulesPropertyType&gt;" [label="uses", fontsize=10];
+    "RulesRegionAttributeMetadata" -> "RulesRegionAttributeType" [label="uses", fontsize=10];
+    "RulesRegionAttributeMetadata" -> "RulesPropertyType" [label="uses", fontsize=10];
+    "RegionRulesLayerMetadata" -> "RulesRegionAttributeMetadata" [label="uses", fontsize=10];
+}

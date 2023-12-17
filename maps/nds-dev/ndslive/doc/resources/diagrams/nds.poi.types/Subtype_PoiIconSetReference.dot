@@ -1,0 +1,46 @@
+/**
+ * This dot file creates symbol collaboration diagram for PoiIconSetReference.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="PoiIconSetReference collaboration diagram";
+
+    subgraph "cluster_nds.poi.types"
+    {
+        style="dashed, rounded";
+        label="nds.poi.types";
+        tooltip="Package nds.poi.types";
+        href="../../../content/packages/nds.poi.types.html#Package-nds-poi-types";
+        target="_parent";
+
+        "PoiIconSetReference" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.types.html#Subtype-PoiIconSetReference" title="Subtype defined in nds.poi.types">PoiIconSetReference</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.icons"
+    {
+        style="dashed, rounded";
+        label="nds.core.icons";
+        tooltip="Package nds.core.icons";
+        href="../../../content/packages/nds.core.icons.html#Package-nds-core-icons";
+        target="_parent";
+
+        "IconSetReference" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.icons.html#Subtype-IconSetReference" title="Subtype defined in nds.core.icons">IconSetReference</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.poi.poi"
+    {
+        style="dashed, rounded";
+        label="nds.poi.poi";
+        tooltip="Package nds.poi.poi";
+        href="../../../content/packages/nds.poi.poi.html#Package-nds-poi-poi";
+        target="_parent";
+
+        "Poi" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.poi.html#Structure-Poi" title="Structure defined in nds.poi.poi">Poi</td></tr></table></font>>];
+    }
+
+    "PoiIconSetReference" -> "IconSetReference" [label="uses", fontsize=10];
+    "Poi" -> "PoiIconSetReference" [label="uses", fontsize=10];
+}

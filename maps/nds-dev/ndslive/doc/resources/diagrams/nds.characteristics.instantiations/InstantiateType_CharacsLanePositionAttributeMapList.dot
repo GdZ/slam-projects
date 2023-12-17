@@ -1,0 +1,78 @@
+/**
+ * This dot file creates symbol collaboration diagram for CharacsLanePositionAttributeMapList.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="CharacsLanePositionAttributeMapList collaboration diagram";
+
+    subgraph "cluster_nds.characteristics.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.characteristics.instantiations";
+        tooltip="Package nds.characteristics.instantiations";
+        href="../../../content/packages/nds.characteristics.instantiations.html#Package-nds-characteristics-instantiations";
+        target="_parent";
+
+        "CharacsLanePositionAttributeMapList" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.instantiations.html#InstantiateType-CharacsLanePositionAttributeMapList" title="InstantiateType defined in nds.characteristics.instantiations">CharacsLanePositionAttributeMapList</td></tr></table></font>>];
+        "AttributeMapList&lt;LaneGroupId,LaneGroupPositionValidity,CharacsLanePositionAttributeType,CharacsLanePositionAttributeValue,CharacsPropertyType,CharacsPropertyValue&gt;" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.attributemap.html#Structure-AttributeMapList" title="Structure defined in nds.core.attributemap">AttributeMapList</td><td>&lt;</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.reference.types.html#Subtype-LaneGroupId" title="Subtype defined in nds.lane.reference.types">LaneGroupId</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.reference.types.html#Structure-LaneGroupPositionValidity" title="Structure defined in nds.lane.reference.types">LaneGroupPositionValidity</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.attributes.html#Enum-CharacsLanePositionAttributeType" title="Enum defined in nds.characteristics.attributes">CharacsLanePositionAttributeType</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.attributes.html#Choice-CharacsLanePositionAttributeValue" title="Choice defined in nds.characteristics.attributes">CharacsLanePositionAttributeValue</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.properties.html#Structure-CharacsPropertyType" title="Structure defined in nds.characteristics.properties">CharacsPropertyType</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.properties.html#Structure-CharacsPropertyValue" title="Structure defined in nds.characteristics.properties">CharacsPropertyValue</td></tr></table></td><td>&gt;</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.lane.reference.types"
+    {
+        style="dashed, rounded";
+        label="nds.lane.reference.types";
+        tooltip="Package nds.lane.reference.types";
+        href="../../../content/packages/nds.lane.reference.types.html#Package-nds-lane-reference-types";
+        target="_parent";
+
+        "LaneGroupId" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.reference.types.html#Subtype-LaneGroupId" title="Subtype defined in nds.lane.reference.types">LaneGroupId</td></tr></table></font>>];
+        "LaneGroupPositionValidity" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.reference.types.html#Structure-LaneGroupPositionValidity" title="Structure defined in nds.lane.reference.types">LaneGroupPositionValidity</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.characteristics.attributes"
+    {
+        style="dashed, rounded";
+        label="nds.characteristics.attributes";
+        tooltip="Package nds.characteristics.attributes";
+        href="../../../content/packages/nds.characteristics.attributes.html#Package-nds-characteristics-attributes";
+        target="_parent";
+
+        "CharacsLanePositionAttributeType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.attributes.html#Enum-CharacsLanePositionAttributeType" title="Enum defined in nds.characteristics.attributes">CharacsLanePositionAttributeType</td></tr></table></font>>];
+        "CharacsLanePositionAttributeValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.attributes.html#Choice-CharacsLanePositionAttributeValue" title="Choice defined in nds.characteristics.attributes">CharacsLanePositionAttributeValue</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.characteristics.properties"
+    {
+        style="dashed, rounded";
+        label="nds.characteristics.properties";
+        tooltip="Package nds.characteristics.properties";
+        href="../../../content/packages/nds.characteristics.properties.html#Package-nds-characteristics-properties";
+        target="_parent";
+
+        "CharacsPropertyType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.properties.html#Structure-CharacsPropertyType" title="Structure defined in nds.characteristics.properties">CharacsPropertyType</td></tr></table></font>>];
+        "CharacsPropertyValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.properties.html#Structure-CharacsPropertyValue" title="Structure defined in nds.characteristics.properties">CharacsPropertyValue</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.characteristics.layer"
+    {
+        style="dashed, rounded";
+        label="nds.characteristics.layer";
+        tooltip="Package nds.characteristics.layer";
+        href="../../../content/packages/nds.characteristics.layer.html#Package-nds-characteristics-layer";
+        target="_parent";
+
+        "LaneCharacteristicsLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.layer.html#Structure-LaneCharacteristicsLayer" title="Structure defined in nds.characteristics.layer">LaneCharacteristicsLayer</td></tr></table></font>>];
+    }
+
+    "CharacsLanePositionAttributeMapList" -> "AttributeMapList&lt;LaneGroupId,LaneGroupPositionValidity,CharacsLanePositionAttributeType,CharacsLanePositionAttributeValue,CharacsPropertyType,CharacsPropertyValue&gt;" [label="uses", fontsize=10];
+    "CharacsLanePositionAttributeMapList" -> "LaneGroupId" [label="uses", fontsize=10];
+    "CharacsLanePositionAttributeMapList" -> "LaneGroupPositionValidity" [label="uses", fontsize=10];
+    "CharacsLanePositionAttributeMapList" -> "CharacsLanePositionAttributeType" [label="uses", fontsize=10];
+    "CharacsLanePositionAttributeMapList" -> "CharacsLanePositionAttributeValue" [label="uses", fontsize=10];
+    "CharacsLanePositionAttributeMapList" -> "CharacsPropertyType" [label="uses", fontsize=10];
+    "CharacsLanePositionAttributeMapList" -> "CharacsPropertyValue" [label="uses", fontsize=10];
+    "LaneCharacteristicsLayer" -> "CharacsLanePositionAttributeMapList" [label="uses", fontsize=10];
+}

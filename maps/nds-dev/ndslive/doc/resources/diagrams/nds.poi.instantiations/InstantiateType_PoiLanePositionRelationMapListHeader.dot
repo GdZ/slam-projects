@@ -1,0 +1,36 @@
+/**
+ * This dot file creates symbol collaboration diagram for PoiLanePositionRelationMapListHeader.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="PoiLanePositionRelationMapListHeader collaboration diagram";
+
+    subgraph "cluster_nds.poi.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.poi.instantiations";
+        tooltip="Package nds.poi.instantiations";
+        href="../../../content/packages/nds.poi.instantiations.html#Package-nds-poi-instantiations";
+        target="_parent";
+
+        "PoiLanePositionRelationMapListHeader" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.instantiations.html#InstantiateType-PoiLanePositionRelationMapListHeader" title="InstantiateType defined in nds.poi.instantiations">PoiLanePositionRelationMapListHeader</td></tr></table></font>>];
+        "AttributeMapListHeader&lt;PoiLanePositionRelationType&gt;" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.attributemap.html#Structure-AttributeMapListHeader" title="Structure defined in nds.core.attributemap">AttributeMapListHeader</td><td>&lt;</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.poi.html#Enum-PoiLanePositionRelationType" title="Enum defined in nds.poi.poi">PoiLanePositionRelationType</td></tr></table></td><td>&gt;</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.poi.poi"
+    {
+        style="dashed, rounded";
+        label="nds.poi.poi";
+        tooltip="Package nds.poi.poi";
+        href="../../../content/packages/nds.poi.poi.html#Package-nds-poi-poi";
+        target="_parent";
+
+        "PoiLanePositionRelationType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.poi.html#Enum-PoiLanePositionRelationType" title="Enum defined in nds.poi.poi">PoiLanePositionRelationType</td></tr></table></font>>];
+    }
+
+    "PoiLanePositionRelationMapListHeader" -> "AttributeMapListHeader&lt;PoiLanePositionRelationType&gt;" [label="uses", fontsize=10];
+    "PoiLanePositionRelationMapListHeader" -> "PoiLanePositionRelationType" [label="uses", fontsize=10];
+}

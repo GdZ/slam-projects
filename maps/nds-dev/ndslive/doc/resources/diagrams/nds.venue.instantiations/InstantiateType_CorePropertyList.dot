@@ -1,0 +1,38 @@
+/**
+ * This dot file creates symbol collaboration diagram for CorePropertyList.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="CorePropertyList collaboration diagram";
+
+    subgraph "cluster_nds.venue.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.venue.instantiations";
+        tooltip="Package nds.venue.instantiations";
+        href="../../../content/packages/nds.venue.instantiations.html#Package-nds-venue-instantiations";
+        target="_parent";
+
+        "CorePropertyList" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.instantiations.html#InstantiateType-CorePropertyList" title="InstantiateType defined in nds.venue.instantiations">CorePropertyList</td></tr></table></font>>];
+        "PropertyList&lt;CorePropertyType,CorePropertyValue&gt;" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.attributemap.html#Structure-PropertyList" title="Structure defined in nds.core.attributemap">PropertyList</td><td>&lt;</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.properties.html#Enum-CorePropertyType" title="Enum defined in nds.core.properties">CorePropertyType</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.properties.html#Choice-CorePropertyValue" title="Choice defined in nds.core.properties">CorePropertyValue</td></tr></table></td><td>&gt;</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.properties"
+    {
+        style="dashed, rounded";
+        label="nds.core.properties";
+        tooltip="Package nds.core.properties";
+        href="../../../content/packages/nds.core.properties.html#Package-nds-core-properties";
+        target="_parent";
+
+        "CorePropertyType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.properties.html#Enum-CorePropertyType" title="Enum defined in nds.core.properties">CorePropertyType</td></tr></table></font>>];
+        "CorePropertyValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.properties.html#Choice-CorePropertyValue" title="Choice defined in nds.core.properties">CorePropertyValue</td></tr></table></font>>];
+    }
+
+    "CorePropertyList" -> "PropertyList&lt;CorePropertyType,CorePropertyValue&gt;" [label="uses", fontsize=10];
+    "CorePropertyList" -> "CorePropertyType" [label="uses", fontsize=10];
+    "CorePropertyList" -> "CorePropertyValue" [label="uses", fontsize=10];
+}

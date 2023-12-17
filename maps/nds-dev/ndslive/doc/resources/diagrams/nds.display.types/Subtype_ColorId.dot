@@ -1,0 +1,40 @@
+/**
+ * This dot file creates symbol collaboration diagram for ColorId.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="ColorId collaboration diagram";
+
+    subgraph "cluster_nds.display.types"
+    {
+        style="dashed, rounded";
+        label="nds.display.types";
+        tooltip="Package nds.display.types";
+        href="../../../content/packages/nds.display.types.html#Package-nds-display-types";
+        target="_parent";
+
+        "ColorId" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.types.html#Subtype-ColorId" title="Subtype defined in nds.display.types">ColorId</td></tr></table></font>>];
+        "RenderGroup" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.types.html#Structure-RenderGroup" title="Structure defined in nds.display.types">RenderGroup</td></tr></table></font>>];
+        "Material" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.types.html#Structure-Material" title="Structure defined in nds.display.types">Material</td></tr></table></font>>];
+        "Style3DColor" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.types.html#Structure-Style3DColor" title="Structure defined in nds.display.types">Style3DColor</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.display.layer"
+    {
+        style="dashed, rounded";
+        label="nds.display.layer";
+        tooltip="Package nds.display.layer";
+        href="../../../content/packages/nds.display.layer.html#Package-nds-display-layer";
+        target="_parent";
+
+        "Mesh3DRenderLayerData" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.layer.html#Structure-Mesh3DRenderLayerData" title="Structure defined in nds.display.layer">Mesh3DRenderLayerData</td></tr></table></font>>];
+    }
+
+    "Mesh3DRenderLayerData" -> "ColorId" [label="uses", fontsize=10];
+    "RenderGroup" -> "ColorId" [label="uses", fontsize=10];
+    "Material" -> "ColorId" [label="uses", fontsize=10];
+    "Style3DColor" -> "ColorId" [label="uses", fontsize=10];
+}

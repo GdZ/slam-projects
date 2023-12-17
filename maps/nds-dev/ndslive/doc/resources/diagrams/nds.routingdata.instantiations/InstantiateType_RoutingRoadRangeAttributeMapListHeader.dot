@@ -1,0 +1,36 @@
+/**
+ * This dot file creates symbol collaboration diagram for RoutingRoadRangeAttributeMapListHeader.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="RoutingRoadRangeAttributeMapListHeader collaboration diagram";
+
+    subgraph "cluster_nds.routingdata.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.routingdata.instantiations";
+        tooltip="Package nds.routingdata.instantiations";
+        href="../../../content/packages/nds.routingdata.instantiations.html#Package-nds-routingdata-instantiations";
+        target="_parent";
+
+        "RoutingRoadRangeAttributeMapListHeader" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routingdata.instantiations.html#InstantiateType-RoutingRoadRangeAttributeMapListHeader" title="InstantiateType defined in nds.routingdata.instantiations">RoutingRoadRangeAttributeMapListHeader</td></tr></table></font>>];
+        "AttributeMapListHeader&lt;RoutingRoadRangeAttributeType&gt;" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.attributemap.html#Structure-AttributeMapListHeader" title="Structure defined in nds.core.attributemap">AttributeMapListHeader</td><td>&lt;</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routingdata.attributes.html#Enum-RoutingRoadRangeAttributeType" title="Enum defined in nds.routingdata.attributes">RoutingRoadRangeAttributeType</td></tr></table></td><td>&gt;</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.routingdata.attributes"
+    {
+        style="dashed, rounded";
+        label="nds.routingdata.attributes";
+        tooltip="Package nds.routingdata.attributes";
+        href="../../../content/packages/nds.routingdata.attributes.html#Package-nds-routingdata-attributes";
+        target="_parent";
+
+        "RoutingRoadRangeAttributeType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routingdata.attributes.html#Enum-RoutingRoadRangeAttributeType" title="Enum defined in nds.routingdata.attributes">RoutingRoadRangeAttributeType</td></tr></table></font>>];
+    }
+
+    "RoutingRoadRangeAttributeMapListHeader" -> "AttributeMapListHeader&lt;RoutingRoadRangeAttributeType&gt;" [label="uses", fontsize=10];
+    "RoutingRoadRangeAttributeMapListHeader" -> "RoutingRoadRangeAttributeType" [label="uses", fontsize=10];
+}

@@ -1,0 +1,24 @@
+/**
+ * This dot file creates symbol collaboration diagram for INVALID_NUM_PIXEL.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="INVALID_NUM_PIXEL collaboration diagram";
+
+    subgraph "cluster_nds.core.icons"
+    {
+        style="dashed, rounded";
+        label="nds.core.icons";
+        tooltip="Package nds.core.icons";
+        href="../../../content/packages/nds.core.icons.html#Package-nds-core-icons";
+        target="_parent";
+
+        "INVALID_NUM_PIXEL" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.icons.html#Constant-INVALID_NUM_PIXEL" title="Constant defined in nds.core.icons">INVALID_NUM_PIXEL</td></tr></table></font>>];
+        "NumPixels" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.icons.html#Subtype-NumPixels" title="Subtype defined in nds.core.icons">NumPixels</td></tr></table></font>>];
+    }
+
+    "INVALID_NUM_PIXEL" -> "NumPixels" [label="uses", fontsize=10];
+}

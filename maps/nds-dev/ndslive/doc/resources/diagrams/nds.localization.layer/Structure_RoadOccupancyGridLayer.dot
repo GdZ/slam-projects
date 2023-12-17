@@ -1,0 +1,58 @@
+/**
+ * This dot file creates symbol collaboration diagram for RoadOccupancyGridLayer.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="RoadOccupancyGridLayer collaboration diagram";
+
+    subgraph "cluster_nds.localization.layer"
+    {
+        style="dashed, rounded";
+        label="nds.localization.layer";
+        tooltip="Package nds.localization.layer";
+        href="../../../content/packages/nds.localization.layer.html#Package-nds-localization-layer";
+        target="_parent";
+
+        "RoadOccupancyGridLayer" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.localization.layer.html#Structure-RoadOccupancyGridLayer" title="Structure defined in nds.localization.layer">RoadOccupancyGridLayer</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.geometry"
+    {
+        style="dashed, rounded";
+        label="nds.core.geometry";
+        tooltip="Package nds.core.geometry";
+        href="../../../content/packages/nds.core.geometry.html#Package-nds-core-geometry";
+        target="_parent";
+
+        "CoordShift" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Subtype-CoordShift" title="Subtype defined in nds.core.geometry">CoordShift</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.localization.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.localization.instantiations";
+        tooltip="Package nds.localization.instantiations";
+        href="../../../content/packages/nds.localization.instantiations.html#Package-nds-localization-instantiations";
+        target="_parent";
+
+        "OccupancyGridRoadAttributeMapList" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.localization.instantiations.html#InstantiateType-OccupancyGridRoadAttributeMapList" title="InstantiateType defined in nds.localization.instantiations">OccupancyGridRoadAttributeMapList</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.system.types"
+    {
+        style="dashed, rounded";
+        label="nds.system.types";
+        tooltip="Package nds.system.types";
+        href="../../../content/packages/nds.system.types.html#Package-nds-system-types";
+        target="_parent";
+
+        "LayerType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.system.types.html#Enum-LayerType" title="Enum defined in nds.system.types">LayerType</td></tr></table></font>>];
+    }
+
+    "RoadOccupancyGridLayer" -> "CoordShift" [label="uses", fontsize=10];
+    "RoadOccupancyGridLayer" -> "OccupancyGridRoadAttributeMapList" [label="uses", fontsize=10];
+    "RoadOccupancyGridLayer" -> "LayerType" [label="uses", fontsize=10];
+}

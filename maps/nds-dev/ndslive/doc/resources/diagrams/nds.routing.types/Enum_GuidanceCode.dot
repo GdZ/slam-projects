@@ -1,0 +1,34 @@
+/**
+ * This dot file creates symbol collaboration diagram for GuidanceCode.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="GuidanceCode collaboration diagram";
+
+    subgraph "cluster_nds.routing.types"
+    {
+        style="dashed, rounded";
+        label="nds.routing.types";
+        tooltip="Package nds.routing.types";
+        href="../../../content/packages/nds.routing.types.html#Package-nds-routing-types";
+        target="_parent";
+
+        "GuidanceCode" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routing.types.html#Enum-GuidanceCode" title="Enum defined in nds.routing.types">GuidanceCode</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.routing.guidance"
+    {
+        style="dashed, rounded";
+        label="nds.routing.guidance";
+        tooltip="Package nds.routing.guidance";
+        href="../../../content/packages/nds.routing.guidance.html#Package-nds-routing-guidance";
+        target="_parent";
+
+        "Instruction" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routing.guidance.html#Structure-Instruction" title="Structure defined in nds.routing.guidance">Instruction</td></tr></table></font>>];
+    }
+
+    "Instruction" -> "GuidanceCode" [label="uses", fontsize=10];
+}

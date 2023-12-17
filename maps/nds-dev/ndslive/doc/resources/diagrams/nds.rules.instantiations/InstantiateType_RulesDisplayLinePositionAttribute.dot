@@ -1,0 +1,38 @@
+/**
+ * This dot file creates symbol collaboration diagram for RulesDisplayLinePositionAttribute.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="RulesDisplayLinePositionAttribute collaboration diagram";
+
+    subgraph "cluster_nds.rules.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.rules.instantiations";
+        tooltip="Package nds.rules.instantiations";
+        href="../../../content/packages/nds.rules.instantiations.html#Package-nds-rules-instantiations";
+        target="_parent";
+
+        "RulesDisplayLinePositionAttribute" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.instantiations.html#InstantiateType-RulesDisplayLinePositionAttribute" title="InstantiateType defined in nds.rules.instantiations">RulesDisplayLinePositionAttribute</td></tr></table></font>>];
+        "Attribute&lt;RulesDisplayLinePositionAttributeType,RulesDisplayLinePositionAttributeValue&gt;" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.attributemap.html#Structure-Attribute" title="Structure defined in nds.core.attributemap">Attribute</td><td>&lt;</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.attributes.html#Enum-RulesDisplayLinePositionAttributeType" title="Enum defined in nds.rules.attributes">RulesDisplayLinePositionAttributeType</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.attributes.html#Choice-RulesDisplayLinePositionAttributeValue" title="Choice defined in nds.rules.attributes">RulesDisplayLinePositionAttributeValue</td></tr></table></td><td>&gt;</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.rules.attributes"
+    {
+        style="dashed, rounded";
+        label="nds.rules.attributes";
+        tooltip="Package nds.rules.attributes";
+        href="../../../content/packages/nds.rules.attributes.html#Package-nds-rules-attributes";
+        target="_parent";
+
+        "RulesDisplayLinePositionAttributeType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.attributes.html#Enum-RulesDisplayLinePositionAttributeType" title="Enum defined in nds.rules.attributes">RulesDisplayLinePositionAttributeType</td></tr></table></font>>];
+        "RulesDisplayLinePositionAttributeValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.attributes.html#Choice-RulesDisplayLinePositionAttributeValue" title="Choice defined in nds.rules.attributes">RulesDisplayLinePositionAttributeValue</td></tr></table></font>>];
+    }
+
+    "RulesDisplayLinePositionAttribute" -> "Attribute&lt;RulesDisplayLinePositionAttributeType,RulesDisplayLinePositionAttributeValue&gt;" [label="uses", fontsize=10];
+    "RulesDisplayLinePositionAttribute" -> "RulesDisplayLinePositionAttributeType" [label="uses", fontsize=10];
+    "RulesDisplayLinePositionAttribute" -> "RulesDisplayLinePositionAttributeValue" [label="uses", fontsize=10];
+}

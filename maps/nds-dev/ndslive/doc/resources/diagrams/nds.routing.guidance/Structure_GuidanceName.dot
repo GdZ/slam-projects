@@ -1,0 +1,28 @@
+/**
+ * This dot file creates symbol collaboration diagram for GuidanceName.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="GuidanceName collaboration diagram";
+
+    subgraph "cluster_nds.routing.guidance"
+    {
+        style="dashed, rounded";
+        label="nds.routing.guidance";
+        tooltip="Package nds.routing.guidance";
+        href="../../../content/packages/nds.routing.guidance.html#Package-nds-routing-guidance";
+        target="_parent";
+
+        "GuidanceName" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routing.guidance.html#Structure-GuidanceName" title="Structure defined in nds.routing.guidance">GuidanceName</td></tr></table></font>>];
+        "GuidanceNameClass" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routing.guidance.html#Enum-GuidanceNameClass" title="Enum defined in nds.routing.guidance">GuidanceNameClass</td></tr></table></font>>];
+        "GuidanceNameString" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routing.guidance.html#Structure-GuidanceNameString" title="Structure defined in nds.routing.guidance">GuidanceNameString</td></tr></table></font>>];
+        "Instruction" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routing.guidance.html#Structure-Instruction" title="Structure defined in nds.routing.guidance">Instruction</td></tr></table></font>>];
+    }
+
+    "GuidanceName" -> "GuidanceNameClass" [label="uses", fontsize=10];
+    "GuidanceName" -> "GuidanceNameString" [label="uses", fontsize=10];
+    "Instruction" -> "GuidanceName" [label="uses", fontsize=10];
+}

@@ -1,0 +1,38 @@
+/**
+ * This dot file creates symbol collaboration diagram for SmartLayerPathLocation.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="SmartLayerPathLocation collaboration diagram";
+
+    subgraph "cluster_nds.smart.path"
+    {
+        style="dashed, rounded";
+        label="nds.smart.path";
+        tooltip="Package nds.smart.path";
+        href="../../../content/packages/nds.smart.path.html#Package-nds-smart-path";
+        target="_parent";
+
+        "SmartLayerPathLocation" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.path.html#Structure-SmartLayerPathLocation" title="Structure defined in nds.smart.path">SmartLayerPathLocation</td></tr></table></font>>];
+        "SmartLayerPath" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.path.html#Structure-SmartLayerPath" title="Structure defined in nds.smart.path">SmartLayerPath</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.location"
+    {
+        style="dashed, rounded";
+        label="nds.core.location";
+        tooltip="Package nds.core.location";
+        href="../../../content/packages/nds.core.location.html#Package-nds-core-location";
+        target="_parent";
+
+        "LocationGeometry" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.location.html#Structure-LocationGeometry" title="Structure defined in nds.core.location">LocationGeometry</td></tr></table></font>>];
+        "LocationPathRange" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.location.html#Subtype-LocationPathRange" title="Subtype defined in nds.core.location">LocationPathRange</td></tr></table></font>>];
+    }
+
+    "SmartLayerPathLocation" -> "LocationGeometry" [label="uses", fontsize=10];
+    "SmartLayerPathLocation" -> "LocationPathRange" [label="uses", fontsize=10];
+    "SmartLayerPath" -> "SmartLayerPathLocation" [label="uses", fontsize=10];
+}

@@ -1,0 +1,74 @@
+/**
+ * This dot file creates symbol collaboration diagram for RegionValidity.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="RegionValidity collaboration diagram";
+
+    subgraph "cluster_nds.rules.types"
+    {
+        style="dashed, rounded";
+        label="nds.rules.types";
+        tooltip="Package nds.rules.types";
+        href="../../../content/packages/nds.rules.types.html#Package-nds-rules-types";
+        target="_parent";
+
+        "RegionValidity" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.types.html#Structure-RegionValidity" title="Structure defined in nds.rules.types">RegionValidity</td></tr></table></font>>];
+        "RegionValidityAttribute" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.types.html#Structure-RegionValidityAttribute" title="Structure defined in nds.rules.types">RegionValidityAttribute</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.geometry"
+    {
+        style="dashed, rounded";
+        label="nds.core.geometry";
+        tooltip="Package nds.core.geometry";
+        href="../../../content/packages/nds.core.geometry.html#Package-nds-core-geometry";
+        target="_parent";
+
+        "CoordShift" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Subtype-CoordShift" title="Subtype defined in nds.core.geometry">CoordShift</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.types"
+    {
+        style="dashed, rounded";
+        label="nds.core.types";
+        tooltip="Package nds.core.types";
+        href="../../../content/packages/nds.core.types.html#Package-nds-core-types";
+        target="_parent";
+
+        "RoadTypeSet" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Structure-RoadTypeSet" title="Structure defined in nds.core.types">RoadTypeSet</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.rules.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.rules.instantiations";
+        tooltip="Package nds.rules.instantiations";
+        href="../../../content/packages/nds.rules.instantiations.html#Package-nds-rules-instantiations";
+        target="_parent";
+
+        "RulesRegionAttributeMapList" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.instantiations.html#InstantiateType-RulesRegionAttributeMapList" title="InstantiateType defined in nds.rules.instantiations">RulesRegionAttributeMapList</td></tr></table></font>>];
+        "AttributeMapList&lt;RegionId,RegionValidity,RulesRegionAttributeType,RulesRegionAttributeValue,RulesPropertyType,RulesPropertyValue&gt;" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.attributemap.html#Structure-AttributeMapList" title="Structure defined in nds.core.attributemap">AttributeMapList</td><td>&lt;</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Subtype-RegionId" title="Subtype defined in nds.core.types">RegionId</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.types.html#Structure-RegionValidity" title="Structure defined in nds.rules.types">RegionValidity</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.attributes.html#Enum-RulesRegionAttributeType" title="Enum defined in nds.rules.attributes">RulesRegionAttributeType</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.attributes.html#Choice-RulesRegionAttributeValue" title="Choice defined in nds.rules.attributes">RulesRegionAttributeValue</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.properties.html#Structure-RulesPropertyType" title="Structure defined in nds.rules.properties">RulesPropertyType</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.properties.html#Structure-RulesPropertyValue" title="Structure defined in nds.rules.properties">RulesPropertyValue</td></tr></table></td><td>&gt;</td></tr></table></font>>];
+        "RulesRegionAttributeMap" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.instantiations.html#InstantiateType-RulesRegionAttributeMap" title="InstantiateType defined in nds.rules.instantiations">RulesRegionAttributeMap</td></tr></table></font>>];
+        "AttributeMap&lt;RegionId,RegionValidity,RulesRegionAttributeType,RulesRegionAttributeValue,RulesPropertyType,RulesPropertyValue&gt;" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.attributemap.html#Structure-AttributeMap" title="Structure defined in nds.core.attributemap">AttributeMap</td><td>&lt;</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Subtype-RegionId" title="Subtype defined in nds.core.types">RegionId</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.types.html#Structure-RegionValidity" title="Structure defined in nds.rules.types">RegionValidity</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.attributes.html#Enum-RulesRegionAttributeType" title="Enum defined in nds.rules.attributes">RulesRegionAttributeType</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.attributes.html#Choice-RulesRegionAttributeValue" title="Choice defined in nds.rules.attributes">RulesRegionAttributeValue</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.properties.html#Structure-RulesPropertyType" title="Structure defined in nds.rules.properties">RulesPropertyType</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.properties.html#Structure-RulesPropertyValue" title="Structure defined in nds.rules.properties">RulesPropertyValue</td></tr></table></td><td>&gt;</td></tr></table></font>>];
+        "RulesRegionAttributeSetMap" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.instantiations.html#InstantiateType-RulesRegionAttributeSetMap" title="InstantiateType defined in nds.rules.instantiations">RulesRegionAttributeSetMap</td></tr></table></font>>];
+        "AttributeSetMap&lt;RegionId,RegionValidity,RulesRegionAttributeType,RulesRegionAttributeValue,RulesPropertyType,RulesPropertyValue&gt;" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.attributemap.html#Structure-AttributeSetMap" title="Structure defined in nds.core.attributemap">AttributeSetMap</td><td>&lt;</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Subtype-RegionId" title="Subtype defined in nds.core.types">RegionId</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.types.html#Structure-RegionValidity" title="Structure defined in nds.rules.types">RegionValidity</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.attributes.html#Enum-RulesRegionAttributeType" title="Enum defined in nds.rules.attributes">RulesRegionAttributeType</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.attributes.html#Choice-RulesRegionAttributeValue" title="Choice defined in nds.rules.attributes">RulesRegionAttributeValue</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.properties.html#Structure-RulesPropertyType" title="Structure defined in nds.rules.properties">RulesPropertyType</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.properties.html#Structure-RulesPropertyValue" title="Structure defined in nds.rules.properties">RulesPropertyValue</td></tr></table></td><td>&gt;</td></tr></table></font>>];
+        "RulesRegionAttributeSetList" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.instantiations.html#InstantiateType-RulesRegionAttributeSetList" title="InstantiateType defined in nds.rules.instantiations">RulesRegionAttributeSetList</td></tr></table></font>>];
+        "AttributeSetList&lt;RegionId,RegionValidity,RulesRegionAttributeType,RulesRegionAttributeValue,RulesPropertyType,RulesPropertyValue&gt;" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.attributemap.html#Structure-AttributeSetList" title="Structure defined in nds.core.attributemap">AttributeSetList</td><td>&lt;</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Subtype-RegionId" title="Subtype defined in nds.core.types">RegionId</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.types.html#Structure-RegionValidity" title="Structure defined in nds.rules.types">RegionValidity</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.attributes.html#Enum-RulesRegionAttributeType" title="Enum defined in nds.rules.attributes">RulesRegionAttributeType</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.attributes.html#Choice-RulesRegionAttributeValue" title="Choice defined in nds.rules.attributes">RulesRegionAttributeValue</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.properties.html#Structure-RulesPropertyType" title="Structure defined in nds.rules.properties">RulesPropertyType</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.properties.html#Structure-RulesPropertyValue" title="Structure defined in nds.rules.properties">RulesPropertyValue</td></tr></table></td><td>&gt;</td></tr></table></font>>];
+    }
+
+    "RegionValidity" -> "CoordShift" [label="uses", fontsize=10];
+    "RegionValidity" -> "RoadTypeSet" [label="uses", fontsize=10];
+    "RegionValidity" -> "RegionValidityAttribute" [label="uses", fontsize=10];
+    "RulesRegionAttributeMapList" -> "RegionValidity" [label="uses", fontsize=10];
+    "AttributeMapList&lt;RegionId,RegionValidity,RulesRegionAttributeType,RulesRegionAttributeValue,RulesPropertyType,RulesPropertyValue&gt;" -> "RegionValidity" [label="uses", fontsize=10];
+    "RulesRegionAttributeMap" -> "RegionValidity" [label="uses", fontsize=10];
+    "AttributeMap&lt;RegionId,RegionValidity,RulesRegionAttributeType,RulesRegionAttributeValue,RulesPropertyType,RulesPropertyValue&gt;" -> "RegionValidity" [label="uses", fontsize=10];
+    "RulesRegionAttributeSetMap" -> "RegionValidity" [label="uses", fontsize=10];
+    "AttributeSetMap&lt;RegionId,RegionValidity,RulesRegionAttributeType,RulesRegionAttributeValue,RulesPropertyType,RulesPropertyValue&gt;" -> "RegionValidity" [label="uses", fontsize=10];
+    "RulesRegionAttributeSetList" -> "RegionValidity" [label="uses", fontsize=10];
+    "AttributeSetList&lt;RegionId,RegionValidity,RulesRegionAttributeType,RulesRegionAttributeValue,RulesPropertyType,RulesPropertyValue&gt;" -> "RegionValidity" [label="uses", fontsize=10];
+}

@@ -1,0 +1,38 @@
+/**
+ * This dot file creates symbol collaboration diagram for DelayInformation.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="DelayInformation collaboration diagram";
+
+    subgraph "cluster_nds.routing.route"
+    {
+        style="dashed, rounded";
+        label="nds.routing.route";
+        tooltip="Package nds.routing.route";
+        href="../../../content/packages/nds.routing.route.html#Package-nds-routing-route";
+        target="_parent";
+
+        "DelayInformation" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routing.route.html#Structure-DelayInformation" title="Structure defined in nds.routing.route">DelayInformation</td></tr></table></font>>];
+        "DelayReasonType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routing.route.html#Enum-DelayReasonType" title="Enum defined in nds.routing.route">DelayReasonType</td></tr></table></font>>];
+        "RouteSegmentDetails" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routing.route.html#Choice-RouteSegmentDetails" title="Choice defined in nds.routing.route">RouteSegmentDetails</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.types"
+    {
+        style="dashed, rounded";
+        label="nds.core.types";
+        tooltip="Package nds.core.types";
+        href="../../../content/packages/nds.core.types.html#Package-nds-core-types";
+        target="_parent";
+
+        "Seconds" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Subtype-Seconds" title="Subtype defined in nds.core.types">Seconds</td></tr></table></font>>];
+    }
+
+    "DelayInformation" -> "Seconds" [label="uses", fontsize=10];
+    "DelayInformation" -> "DelayReasonType" [label="uses", fontsize=10];
+    "RouteSegmentDetails" -> "DelayInformation" [label="uses", fontsize=10];
+}

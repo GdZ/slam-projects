@@ -1,0 +1,58 @@
+/**
+ * This dot file creates symbol collaboration diagram for RoadGeometryLayer.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="RoadGeometryLayer collaboration diagram";
+
+    subgraph "cluster_nds.road.layer"
+    {
+        style="dashed, rounded";
+        label="nds.road.layer";
+        tooltip="Package nds.road.layer";
+        href="../../../content/packages/nds.road.layer.html#Package-nds-road-layer";
+        target="_parent";
+
+        "RoadGeometryLayer" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.road.layer.html#Structure-RoadGeometryLayer" title="Structure defined in nds.road.layer">RoadGeometryLayer</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.geometry"
+    {
+        style="dashed, rounded";
+        label="nds.core.geometry";
+        tooltip="Package nds.core.geometry";
+        href="../../../content/packages/nds.core.geometry.html#Package-nds-core-geometry";
+        target="_parent";
+
+        "GeometryLayerType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Enum-GeometryLayerType" title="Enum defined in nds.core.geometry">GeometryLayerType</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.road.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.road.instantiations";
+        tooltip="Package nds.road.instantiations";
+        href="../../../content/packages/nds.road.instantiations.html#Package-nds-road-instantiations";
+        target="_parent";
+
+        "RoadShapesLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.road.instantiations.html#InstantiateType-RoadShapesLayer" title="InstantiateType defined in nds.road.instantiations">RoadShapesLayer</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.system.types"
+    {
+        style="dashed, rounded";
+        label="nds.system.types";
+        tooltip="Package nds.system.types";
+        href="../../../content/packages/nds.system.types.html#Package-nds-system-types";
+        target="_parent";
+
+        "LayerType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.system.types.html#Enum-LayerType" title="Enum defined in nds.system.types">LayerType</td></tr></table></font>>];
+    }
+
+    "RoadGeometryLayer" -> "GeometryLayerType" [label="uses", fontsize=10];
+    "RoadGeometryLayer" -> "RoadShapesLayer" [label="uses", fontsize=10];
+    "RoadGeometryLayer" -> "LayerType" [label="uses", fontsize=10];
+}

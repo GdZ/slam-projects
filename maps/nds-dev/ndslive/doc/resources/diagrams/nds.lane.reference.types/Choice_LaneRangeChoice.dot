@@ -1,0 +1,36 @@
+/**
+ * This dot file creates symbol collaboration diagram for LaneRangeChoice.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="LaneRangeChoice collaboration diagram";
+
+    subgraph "cluster_nds.lane.reference.types"
+    {
+        style="dashed, rounded";
+        label="nds.lane.reference.types";
+        tooltip="Package nds.lane.reference.types";
+        href="../../../content/packages/nds.lane.reference.types.html#Package-nds-lane-reference-types";
+        target="_parent";
+
+        "LaneRangeChoice" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.reference.types.html#Choice-LaneRangeChoice" title="Choice defined in nds.lane.reference.types">LaneRangeChoice</td></tr></table></font>>];
+        "LaneValidityType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.reference.types.html#Enum-LaneValidityType" title="Enum defined in nds.lane.reference.types">LaneValidityType</td></tr></table></font>>];
+        "LaneValidityRange" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.reference.types.html#Structure-LaneValidityRange" title="Structure defined in nds.lane.reference.types">LaneValidityRange</td></tr></table></font>>];
+        "LaneLengthRange" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.reference.types.html#Structure-LaneLengthRange" title="Structure defined in nds.lane.reference.types">LaneLengthRange</td></tr></table></font>>];
+        "LaneGeometryRange" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.reference.types.html#Subtype-LaneGeometryRange" title="Subtype defined in nds.lane.reference.types">LaneGeometryRange</td></tr></table></font>>];
+        "LaneGeometryRangeOffset" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.reference.types.html#Subtype-LaneGeometryRangeOffset" title="Subtype defined in nds.lane.reference.types">LaneGeometryRangeOffset</td></tr></table></font>>];
+        "LanePercentageRange" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.reference.types.html#Subtype-LanePercentageRange" title="Subtype defined in nds.lane.reference.types">LanePercentageRange</td></tr></table></font>>];
+        "LaneRange" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.reference.types.html#Structure-LaneRange" title="Structure defined in nds.lane.reference.types">LaneRange</td></tr></table></font>>];
+    }
+
+    "LaneRangeChoice" -> "LaneValidityType" [label="uses", fontsize=10];
+    "LaneRangeChoice" -> "LaneValidityRange" [label="uses", fontsize=10];
+    "LaneRangeChoice" -> "LaneLengthRange" [label="uses", fontsize=10];
+    "LaneRangeChoice" -> "LaneGeometryRange" [label="uses", fontsize=10];
+    "LaneRangeChoice" -> "LaneGeometryRangeOffset" [label="uses", fontsize=10];
+    "LaneRangeChoice" -> "LanePercentageRange" [label="uses", fontsize=10];
+    "LaneRange" -> "LaneRangeChoice" [label="uses", fontsize=10];
+}

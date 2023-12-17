@@ -1,0 +1,42 @@
+/**
+ * This dot file creates symbol collaboration diagram for CurvaturePointList.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="CurvaturePointList collaboration diagram";
+
+    subgraph "cluster_nds.adas.types"
+    {
+        style="dashed, rounded";
+        label="nds.adas.types";
+        tooltip="Package nds.adas.types";
+        href="../../../content/packages/nds.adas.types.html#Package-nds-adas-types";
+        target="_parent";
+
+        "CurvaturePointList" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.adas.types.html#Structure-CurvaturePointList" title="Structure defined in nds.adas.types">CurvaturePointList</td></tr></table></font>>];
+        "CurvaturePoint" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.adas.types.html#Structure-CurvaturePoint" title="Structure defined in nds.adas.types">CurvaturePoint</td></tr></table></font>>];
+        "CurvaturePath" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.adas.types.html#Structure-CurvaturePath" title="Structure defined in nds.adas.types">CurvaturePath</td></tr></table></font>>];
+        "CurvaturePathRoad" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.adas.types.html#Structure-CurvaturePathRoad" title="Structure defined in nds.adas.types">CurvaturePathRoad</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.adas.attributes"
+    {
+        style="dashed, rounded";
+        label="nds.adas.attributes";
+        tooltip="Package nds.adas.attributes";
+        href="../../../content/packages/nds.adas.attributes.html#Package-nds-adas-attributes";
+        target="_parent";
+
+        "AdasRoadAttributeValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.adas.attributes.html#Choice-AdasRoadAttributeValue" title="Choice defined in nds.adas.attributes">AdasRoadAttributeValue</td></tr></table></font>>];
+        "AdasLaneAttributeValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.adas.attributes.html#Choice-AdasLaneAttributeValue" title="Choice defined in nds.adas.attributes">AdasLaneAttributeValue</td></tr></table></font>>];
+    }
+
+    "CurvaturePointList" -> "CurvaturePoint" [label="uses", fontsize=10];
+    "AdasRoadAttributeValue" -> "CurvaturePointList" [label="uses", fontsize=10];
+    "AdasLaneAttributeValue" -> "CurvaturePointList" [label="uses", fontsize=10];
+    "CurvaturePath" -> "CurvaturePointList" [label="uses", fontsize=10];
+    "CurvaturePathRoad" -> "CurvaturePointList" [label="uses", fontsize=10];
+}

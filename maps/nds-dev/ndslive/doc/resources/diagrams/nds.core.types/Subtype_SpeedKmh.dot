@@ -1,0 +1,122 @@
+/**
+ * This dot file creates symbol collaboration diagram for SpeedKmh.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="SpeedKmh collaboration diagram";
+
+    subgraph "cluster_nds.core.types"
+    {
+        style="dashed, rounded";
+        label="nds.core.types";
+        tooltip="Package nds.core.types";
+        href="../../../content/packages/nds.core.types.html#Package-nds-core-types";
+        target="_parent";
+
+        "SpeedKmh" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Subtype-SpeedKmh" title="Subtype defined in nds.core.types">SpeedKmh</td></tr></table></font>>];
+        "Speed" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Subtype-Speed" title="Subtype defined in nds.core.types">Speed</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.vehicle"
+    {
+        style="dashed, rounded";
+        label="nds.core.vehicle";
+        tooltip="Package nds.core.vehicle";
+        href="../../../content/packages/nds.core.vehicle.html#Package-nds-core-vehicle";
+        target="_parent";
+
+        "PoseRaw" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.vehicle.html#Structure-PoseRaw" title="Structure defined in nds.core.vehicle">PoseRaw</td></tr></table></font>>];
+        "PoseGeoMatched" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.vehicle.html#Structure-PoseGeoMatched" title="Structure defined in nds.core.vehicle">PoseGeoMatched</td></tr></table></font>>];
+        "VehicleDetails" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.vehicle.html#Structure-VehicleDetails" title="Structure defined in nds.core.vehicle">VehicleDetails</td></tr></table></font>>];
+        "CombustionConsumptionCurve" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.vehicle.html#Structure-CombustionConsumptionCurve" title="Structure defined in nds.core.vehicle">CombustionConsumptionCurve</td></tr></table></font>>];
+        "ElectricConsumptionCurve" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.vehicle.html#Structure-ElectricConsumptionCurve" title="Structure defined in nds.core.vehicle">ElectricConsumptionCurve</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.traffic.properties"
+    {
+        style="dashed, rounded";
+        label="nds.traffic.properties";
+        tooltip="Package nds.traffic.properties";
+        href="../../../content/packages/nds.traffic.properties.html#Package-nds-traffic-properties";
+        target="_parent";
+
+        "PropertyValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.traffic.properties.html#Choice-PropertyValue" title="Choice defined in nds.traffic.properties">PropertyValue</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.routingdata.types"
+    {
+        style="dashed, rounded";
+        label="nds.routingdata.types";
+        tooltip="Package nds.routingdata.types";
+        href="../../../content/packages/nds.routingdata.types.html#Package-nds-routingdata-types";
+        target="_parent";
+
+        "ConsumptionSpeedValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routingdata.types.html#Structure-ConsumptionSpeedValue" title="Structure defined in nds.routingdata.types">ConsumptionSpeedValue</td></tr></table></font>>];
+        "SpeedProfilesWeek" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routingdata.types.html#Structure-SpeedProfilesWeek" title="Structure defined in nds.routingdata.types">SpeedProfilesWeek</td></tr></table></font>>];
+        "SpeedProfilesDays" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routingdata.types.html#Structure-SpeedProfilesDays" title="Structure defined in nds.routingdata.types">SpeedProfilesDays</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.vehicle.types"
+    {
+        style="dashed, rounded";
+        label="nds.vehicle.types";
+        tooltip="Package nds.vehicle.types";
+        href="../../../content/packages/nds.vehicle.types.html#Package-nds-vehicle-types";
+        target="_parent";
+
+        "PoseRoadPathMatched" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.vehicle.types.html#Structure-PoseRoadPathMatched" title="Structure defined in nds.vehicle.types">PoseRoadPathMatched</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.rules.types"
+    {
+        style="dashed, rounded";
+        label="nds.rules.types";
+        tooltip="Package nds.rules.types";
+        href="../../../content/packages/nds.rules.types.html#Package-nds-rules-types";
+        target="_parent";
+
+        "AdminSpeedLimitKmh" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.types.html#Subtype-AdminSpeedLimitKmh" title="Subtype defined in nds.rules.types">AdminSpeedLimitKmh</td></tr></table></font>>];
+        "AdminMinimumSpeedKmh" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.types.html#Subtype-AdminMinimumSpeedKmh" title="Subtype defined in nds.rules.types">AdminMinimumSpeedKmh</td></tr></table></font>>];
+        "AdminAdvisorySpeedLimitKmh" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.types.html#Subtype-AdminAdvisorySpeedLimitKmh" title="Subtype defined in nds.rules.types">AdminAdvisorySpeedLimitKmh</td></tr></table></font>>];
+        "SpeedLimitKmh" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.types.html#Subtype-SpeedLimitKmh" title="Subtype defined in nds.rules.types">SpeedLimitKmh</td></tr></table></font>>];
+        "MinimumSpeedKmh" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.types.html#Subtype-MinimumSpeedKmh" title="Subtype defined in nds.rules.types">MinimumSpeedKmh</td></tr></table></font>>];
+        "AdvisorySpeedLimitKmh" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.types.html#Subtype-AdvisorySpeedLimitKmh" title="Subtype defined in nds.rules.types">AdvisorySpeedLimitKmh</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.characteristics.attributes"
+    {
+        style="dashed, rounded";
+        label="nds.characteristics.attributes";
+        tooltip="Package nds.characteristics.attributes";
+        href="../../../content/packages/nds.characteristics.attributes.html#Package-nds-characteristics-attributes";
+        target="_parent";
+
+        "CharacsRoadRangeAttributeValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.attributes.html#Choice-CharacsRoadRangeAttributeValue" title="Choice defined in nds.characteristics.attributes">CharacsRoadRangeAttributeValue</td></tr></table></font>>];
+        "CharacsLaneRangeAttributeValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.attributes.html#Choice-CharacsLaneRangeAttributeValue" title="Choice defined in nds.characteristics.attributes">CharacsLaneRangeAttributeValue</td></tr></table></font>>];
+        "CharacsDisplayLineRangeAttributeValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.attributes.html#Choice-CharacsDisplayLineRangeAttributeValue" title="Choice defined in nds.characteristics.attributes">CharacsDisplayLineRangeAttributeValue</td></tr></table></font>>];
+    }
+
+    "SpeedKmh" -> "Speed" [label="uses", fontsize=10];
+    "PoseRaw" -> "SpeedKmh" [label="uses", fontsize=10];
+    "PoseGeoMatched" -> "SpeedKmh" [label="uses", fontsize=10];
+    "VehicleDetails" -> "SpeedKmh" [label="uses", fontsize=10];
+    "CombustionConsumptionCurve" -> "SpeedKmh" [label="uses", fontsize=10];
+    "ElectricConsumptionCurve" -> "SpeedKmh" [label="uses", fontsize=10];
+    "PropertyValue" -> "SpeedKmh" [label="uses", fontsize=10];
+    "ConsumptionSpeedValue" -> "SpeedKmh" [label="uses", fontsize=10];
+    "SpeedProfilesWeek" -> "SpeedKmh" [label="uses", fontsize=10];
+    "SpeedProfilesDays" -> "SpeedKmh" [label="uses", fontsize=10];
+    "PoseRoadPathMatched" -> "SpeedKmh" [label="uses", fontsize=10];
+    "AdminSpeedLimitKmh" -> "SpeedKmh" [label="uses", fontsize=10];
+    "AdminMinimumSpeedKmh" -> "SpeedKmh" [label="uses", fontsize=10];
+    "AdminAdvisorySpeedLimitKmh" -> "SpeedKmh" [label="uses", fontsize=10];
+    "SpeedLimitKmh" -> "SpeedKmh" [label="uses", fontsize=10];
+    "MinimumSpeedKmh" -> "SpeedKmh" [label="uses", fontsize=10];
+    "AdvisorySpeedLimitKmh" -> "SpeedKmh" [label="uses", fontsize=10];
+    "CharacsRoadRangeAttributeValue" -> "SpeedKmh" [label="uses", fontsize=10];
+    "CharacsLaneRangeAttributeValue" -> "SpeedKmh" [label="uses", fontsize=10];
+    "CharacsDisplayLineRangeAttributeValue" -> "SpeedKmh" [label="uses", fontsize=10];
+}

@@ -1,0 +1,78 @@
+/**
+ * This dot file creates symbol collaboration diagram for NameLanePositionAttributeSetList.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="NameLanePositionAttributeSetList collaboration diagram";
+
+    subgraph "cluster_nds.name.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.name.instantiations";
+        tooltip="Package nds.name.instantiations";
+        href="../../../content/packages/nds.name.instantiations.html#Package-nds-name-instantiations";
+        target="_parent";
+
+        "NameLanePositionAttributeSetList" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.instantiations.html#InstantiateType-NameLanePositionAttributeSetList" title="InstantiateType defined in nds.name.instantiations">NameLanePositionAttributeSetList</td></tr></table></font>>];
+        "AttributeSetList&lt;LaneGroupId,LaneGroupPositionValidity,NameLanePositionAttributeType,NameLanePositionAttributeValue,NamePropertyType,NamePropertyValue&gt;" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.attributemap.html#Structure-AttributeSetList" title="Structure defined in nds.core.attributemap">AttributeSetList</td><td>&lt;</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.reference.types.html#Subtype-LaneGroupId" title="Subtype defined in nds.lane.reference.types">LaneGroupId</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.reference.types.html#Structure-LaneGroupPositionValidity" title="Structure defined in nds.lane.reference.types">LaneGroupPositionValidity</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.attributes.html#Enum-NameLanePositionAttributeType" title="Enum defined in nds.name.attributes">NameLanePositionAttributeType</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.attributes.html#Choice-NameLanePositionAttributeValue" title="Choice defined in nds.name.attributes">NameLanePositionAttributeValue</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.properties.html#Structure-NamePropertyType" title="Structure defined in nds.name.properties">NamePropertyType</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.properties.html#Structure-NamePropertyValue" title="Structure defined in nds.name.properties">NamePropertyValue</td></tr></table></td><td>&gt;</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.lane.reference.types"
+    {
+        style="dashed, rounded";
+        label="nds.lane.reference.types";
+        tooltip="Package nds.lane.reference.types";
+        href="../../../content/packages/nds.lane.reference.types.html#Package-nds-lane-reference-types";
+        target="_parent";
+
+        "LaneGroupId" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.reference.types.html#Subtype-LaneGroupId" title="Subtype defined in nds.lane.reference.types">LaneGroupId</td></tr></table></font>>];
+        "LaneGroupPositionValidity" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.reference.types.html#Structure-LaneGroupPositionValidity" title="Structure defined in nds.lane.reference.types">LaneGroupPositionValidity</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.name.attributes"
+    {
+        style="dashed, rounded";
+        label="nds.name.attributes";
+        tooltip="Package nds.name.attributes";
+        href="../../../content/packages/nds.name.attributes.html#Package-nds-name-attributes";
+        target="_parent";
+
+        "NameLanePositionAttributeType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.attributes.html#Enum-NameLanePositionAttributeType" title="Enum defined in nds.name.attributes">NameLanePositionAttributeType</td></tr></table></font>>];
+        "NameLanePositionAttributeValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.attributes.html#Choice-NameLanePositionAttributeValue" title="Choice defined in nds.name.attributes">NameLanePositionAttributeValue</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.name.properties"
+    {
+        style="dashed, rounded";
+        label="nds.name.properties";
+        tooltip="Package nds.name.properties";
+        href="../../../content/packages/nds.name.properties.html#Package-nds-name-properties";
+        target="_parent";
+
+        "NamePropertyType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.properties.html#Structure-NamePropertyType" title="Structure defined in nds.name.properties">NamePropertyType</td></tr></table></font>>];
+        "NamePropertyValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.properties.html#Structure-NamePropertyValue" title="Structure defined in nds.name.properties">NamePropertyValue</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.name.layer"
+    {
+        style="dashed, rounded";
+        label="nds.name.layer";
+        tooltip="Package nds.name.layer";
+        href="../../../content/packages/nds.name.layer.html#Package-nds-name-layer";
+        target="_parent";
+
+        "LaneNameLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.layer.html#Structure-LaneNameLayer" title="Structure defined in nds.name.layer">LaneNameLayer</td></tr></table></font>>];
+    }
+
+    "NameLanePositionAttributeSetList" -> "AttributeSetList&lt;LaneGroupId,LaneGroupPositionValidity,NameLanePositionAttributeType,NameLanePositionAttributeValue,NamePropertyType,NamePropertyValue&gt;" [label="uses", fontsize=10];
+    "NameLanePositionAttributeSetList" -> "LaneGroupId" [label="uses", fontsize=10];
+    "NameLanePositionAttributeSetList" -> "LaneGroupPositionValidity" [label="uses", fontsize=10];
+    "NameLanePositionAttributeSetList" -> "NameLanePositionAttributeType" [label="uses", fontsize=10];
+    "NameLanePositionAttributeSetList" -> "NameLanePositionAttributeValue" [label="uses", fontsize=10];
+    "NameLanePositionAttributeSetList" -> "NamePropertyType" [label="uses", fontsize=10];
+    "NameLanePositionAttributeSetList" -> "NamePropertyValue" [label="uses", fontsize=10];
+    "LaneNameLayer" -> "NameLanePositionAttributeSetList" [label="uses", fontsize=10];
+}

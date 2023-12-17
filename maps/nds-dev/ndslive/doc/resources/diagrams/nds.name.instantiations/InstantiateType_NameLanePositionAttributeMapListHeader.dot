@@ -1,0 +1,36 @@
+/**
+ * This dot file creates symbol collaboration diagram for NameLanePositionAttributeMapListHeader.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="NameLanePositionAttributeMapListHeader collaboration diagram";
+
+    subgraph "cluster_nds.name.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.name.instantiations";
+        tooltip="Package nds.name.instantiations";
+        href="../../../content/packages/nds.name.instantiations.html#Package-nds-name-instantiations";
+        target="_parent";
+
+        "NameLanePositionAttributeMapListHeader" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.instantiations.html#InstantiateType-NameLanePositionAttributeMapListHeader" title="InstantiateType defined in nds.name.instantiations">NameLanePositionAttributeMapListHeader</td></tr></table></font>>];
+        "AttributeMapListHeader&lt;NameLanePositionAttributeType&gt;" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.attributemap.html#Structure-AttributeMapListHeader" title="Structure defined in nds.core.attributemap">AttributeMapListHeader</td><td>&lt;</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.attributes.html#Enum-NameLanePositionAttributeType" title="Enum defined in nds.name.attributes">NameLanePositionAttributeType</td></tr></table></td><td>&gt;</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.name.attributes"
+    {
+        style="dashed, rounded";
+        label="nds.name.attributes";
+        tooltip="Package nds.name.attributes";
+        href="../../../content/packages/nds.name.attributes.html#Package-nds-name-attributes";
+        target="_parent";
+
+        "NameLanePositionAttributeType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.attributes.html#Enum-NameLanePositionAttributeType" title="Enum defined in nds.name.attributes">NameLanePositionAttributeType</td></tr></table></font>>];
+    }
+
+    "NameLanePositionAttributeMapListHeader" -> "AttributeMapListHeader&lt;NameLanePositionAttributeType&gt;" [label="uses", fontsize=10];
+    "NameLanePositionAttributeMapListHeader" -> "NameLanePositionAttributeType" [label="uses", fontsize=10];
+}

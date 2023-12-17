@@ -1,0 +1,62 @@
+/**
+ * This dot file creates symbol collaboration diagram for RoadLocationRulesLayerMetadata.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="RoadLocationRulesLayerMetadata collaboration diagram";
+
+    subgraph "cluster_nds.rules.metadata"
+    {
+        style="dashed, rounded";
+        label="nds.rules.metadata";
+        tooltip="Package nds.rules.metadata";
+        href="../../../content/packages/nds.rules.metadata.html#Package-nds-rules-metadata";
+        target="_parent";
+
+        "RoadLocationRulesLayerMetadata" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.metadata.html#Structure-RoadLocationRulesLayerMetadata" title="Structure defined in nds.rules.metadata">RoadLocationRulesLayerMetadata</td></tr></table></font>>];
+        "RoadLocationRulesLayerContent" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.metadata.html#Bitmask-RoadLocationRulesLayerContent" title="Bitmask defined in nds.rules.metadata">RoadLocationRulesLayerContent</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.rules.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.rules.instantiations";
+        tooltip="Package nds.rules.instantiations";
+        href="../../../content/packages/nds.rules.instantiations.html#Package-nds-rules-instantiations";
+        target="_parent";
+
+        "RulesRoadRangeAttributeMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.instantiations.html#InstantiateType-RulesRoadRangeAttributeMetadata" title="InstantiateType defined in nds.rules.instantiations">RulesRoadRangeAttributeMetadata</td></tr></table></font>>];
+        "RulesTransitionAttributeMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.instantiations.html#InstantiateType-RulesTransitionAttributeMetadata" title="InstantiateType defined in nds.rules.instantiations">RulesTransitionAttributeMetadata</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.types"
+    {
+        style="dashed, rounded";
+        label="nds.core.types";
+        tooltip="Package nds.core.types";
+        href="../../../content/packages/nds.core.types.html#Package-nds-core-types";
+        target="_parent";
+
+        "RoadType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Structure-RoadType" title="Structure defined in nds.core.types">RoadType</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.language"
+    {
+        style="dashed, rounded";
+        label="nds.core.language";
+        tooltip="Package nds.core.language";
+        href="../../../content/packages/nds.core.language.html#Package-nds-core-language";
+        target="_parent";
+
+        "AvailableLanguages" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.language.html#Structure-AvailableLanguages" title="Structure defined in nds.core.language">AvailableLanguages</td></tr></table></font>>];
+    }
+
+    "RoadLocationRulesLayerMetadata" -> "RoadLocationRulesLayerContent" [label="uses", fontsize=10];
+    "RoadLocationRulesLayerMetadata" -> "RulesRoadRangeAttributeMetadata" [label="uses", fontsize=10];
+    "RoadLocationRulesLayerMetadata" -> "RulesTransitionAttributeMetadata" [label="uses", fontsize=10];
+    "RoadLocationRulesLayerMetadata" -> "RoadType" [label="uses", fontsize=10];
+    "RoadLocationRulesLayerMetadata" -> "AvailableLanguages" [label="uses", fontsize=10];
+}

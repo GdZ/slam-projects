@@ -1,0 +1,38 @@
+/**
+ * This dot file creates symbol collaboration diagram for DisplayLineValidityRange.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="DisplayLineValidityRange collaboration diagram";
+
+    subgraph "cluster_nds.display.reference.types"
+    {
+        style="dashed, rounded";
+        label="nds.display.reference.types";
+        tooltip="Package nds.display.reference.types";
+        href="../../../content/packages/nds.display.reference.types.html#Package-nds-display-reference-types";
+        target="_parent";
+
+        "DisplayLineValidityRange" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.reference.types.html#Structure-DisplayLineValidityRange" title="Structure defined in nds.display.reference.types">DisplayLineValidityRange</td></tr></table></font>>];
+        "DisplayLineValidityPosition" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.reference.types.html#Structure-DisplayLineValidityPosition" title="Structure defined in nds.display.reference.types">DisplayLineValidityPosition</td></tr></table></font>>];
+        "DisplayLineRangeChoice" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.reference.types.html#Choice-DisplayLineRangeChoice" title="Choice defined in nds.display.reference.types">DisplayLineRangeChoice</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.geometry"
+    {
+        style="dashed, rounded";
+        label="nds.core.geometry";
+        tooltip="Package nds.core.geometry";
+        href="../../../content/packages/nds.core.geometry.html#Package-nds-core-geometry";
+        target="_parent";
+
+        "CoordShift" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Subtype-CoordShift" title="Subtype defined in nds.core.geometry">CoordShift</td></tr></table></font>>];
+    }
+
+    "DisplayLineValidityRange" -> "CoordShift" [label="uses", fontsize=10];
+    "DisplayLineValidityRange" -> "DisplayLineValidityPosition" [label="uses", fontsize=10];
+    "DisplayLineRangeChoice" -> "DisplayLineValidityRange" [label="uses", fontsize=10];
+}

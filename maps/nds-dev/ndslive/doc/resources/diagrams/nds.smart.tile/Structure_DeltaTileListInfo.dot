@@ -1,0 +1,48 @@
+/**
+ * This dot file creates symbol collaboration diagram for DeltaTileListInfo.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="DeltaTileListInfo collaboration diagram";
+
+    subgraph "cluster_nds.smart.tile"
+    {
+        style="dashed, rounded";
+        label="nds.smart.tile";
+        tooltip="Package nds.smart.tile";
+        href="../../../content/packages/nds.smart.tile.html#Package-nds-smart-tile";
+        target="_parent";
+
+        "DeltaTileListInfo" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.tile.html#Structure-DeltaTileListInfo" title="Structure defined in nds.smart.tile">DeltaTileListInfo</td></tr></table></font>>];
+        "SourceLayerInfo" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.tile.html#Structure-SourceLayerInfo" title="Structure defined in nds.smart.tile">SourceLayerInfo</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.types"
+    {
+        style="dashed, rounded";
+        label="nds.core.types";
+        tooltip="Package nds.core.types";
+        href="../../../content/packages/nds.core.types.html#Package-nds-core-types";
+        target="_parent";
+
+        "PackedTileId" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Subtype-PackedTileId" title="Subtype defined in nds.core.types">PackedTileId</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.smart.services"
+    {
+        style="dashed, rounded";
+        label="nds.smart.services";
+        tooltip="Package nds.smart.services";
+        href="../../../content/packages/nds.smart.services.html#Package-nds-smart-services";
+        target="_parent";
+
+        "SmartLayerTileService" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.services.html#Service-SmartLayerTileService" title="Service defined in nds.smart.services">SmartLayerTileService</td></tr></table></font>>];
+    }
+
+    "DeltaTileListInfo" -> "PackedTileId" [label="uses", fontsize=10];
+    "DeltaTileListInfo" -> "SourceLayerInfo" [label="uses", fontsize=10];
+    "SmartLayerTileService" -> "DeltaTileListInfo" [label="uses", fontsize=10];
+}

@@ -1,0 +1,44 @@
+/**
+ * This dot file creates symbol collaboration diagram for IndexBuffer.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="IndexBuffer collaboration diagram";
+
+    subgraph "cluster_nds.core.geometry"
+    {
+        style="dashed, rounded";
+        label="nds.core.geometry";
+        tooltip="Package nds.core.geometry";
+        href="../../../content/packages/nds.core.geometry.html#Package-nds-core-geometry";
+        target="_parent";
+
+        "IndexBuffer" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Structure-IndexBuffer" title="Structure defined in nds.core.geometry">IndexBuffer</td></tr></table></font>>];
+        "IndexBufferEntry" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Structure-IndexBufferEntry" title="Structure defined in nds.core.geometry">IndexBufferEntry</td></tr></table></font>>];
+        "Polygon2DBuffers" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Structure-Polygon2DBuffers" title="Structure defined in nds.core.geometry">Polygon2DBuffers</td></tr></table></font>>];
+        "PolyMesh3DBuffers" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Structure-PolyMesh3DBuffers" title="Structure defined in nds.core.geometry">PolyMesh3DBuffers</td></tr></table></font>>];
+        "Polygon2D" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Structure-Polygon2D" title="Structure defined in nds.core.geometry">Polygon2D</td></tr></table></font>>];
+        "PolyMesh3D" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Structure-PolyMesh3D" title="Structure defined in nds.core.geometry">PolyMesh3D</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.display.layer"
+    {
+        style="dashed, rounded";
+        label="nds.display.layer";
+        tooltip="Package nds.display.layer";
+        href="../../../content/packages/nds.display.layer.html#Package-nds-display-layer";
+        target="_parent";
+
+        "Mesh3DRenderLayerData" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.layer.html#Structure-Mesh3DRenderLayerData" title="Structure defined in nds.display.layer">Mesh3DRenderLayerData</td></tr></table></font>>];
+    }
+
+    "IndexBuffer" -> "IndexBufferEntry" [label="uses", fontsize=10];
+    "Polygon2DBuffers" -> "IndexBuffer" [label="uses", fontsize=10];
+    "PolyMesh3DBuffers" -> "IndexBuffer" [label="uses", fontsize=10];
+    "Polygon2D" -> "IndexBuffer" [label="uses", fontsize=10];
+    "PolyMesh3D" -> "IndexBuffer" [label="uses", fontsize=10];
+    "Mesh3DRenderLayerData" -> "IndexBuffer" [label="uses", fontsize=10];
+}

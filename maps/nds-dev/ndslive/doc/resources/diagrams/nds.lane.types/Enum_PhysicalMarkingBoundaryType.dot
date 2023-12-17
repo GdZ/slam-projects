@@ -1,0 +1,46 @@
+/**
+ * This dot file creates symbol collaboration diagram for PhysicalMarkingBoundaryType.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="PhysicalMarkingBoundaryType collaboration diagram";
+
+    subgraph "cluster_nds.lane.types"
+    {
+        style="dashed, rounded";
+        label="nds.lane.types";
+        tooltip="Package nds.lane.types";
+        href="../../../content/packages/nds.lane.types.html#Package-nds-lane-types";
+        target="_parent";
+
+        "PhysicalMarkingBoundaryType" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.types.html#Enum-PhysicalMarkingBoundaryType" title="Enum defined in nds.lane.types">PhysicalMarkingBoundaryType</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.lane.metadata"
+    {
+        style="dashed, rounded";
+        label="nds.lane.metadata";
+        tooltip="Package nds.lane.metadata";
+        href="../../../content/packages/nds.lane.metadata.html#Package-nds-lane-metadata";
+        target="_parent";
+
+        "LaneLayerMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.metadata.html#Structure-LaneLayerMetadata" title="Structure defined in nds.lane.metadata">LaneLayerMetadata</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.lane.boundaries"
+    {
+        style="dashed, rounded";
+        label="nds.lane.boundaries";
+        tooltip="Package nds.lane.boundaries";
+        href="../../../content/packages/nds.lane.boundaries.html#Package-nds-lane-boundaries";
+        target="_parent";
+
+        "PhysicalMarkingBoundaryElement" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.boundaries.html#Structure-PhysicalMarkingBoundaryElement" title="Structure defined in nds.lane.boundaries">PhysicalMarkingBoundaryElement</td></tr></table></font>>];
+    }
+
+    "LaneLayerMetadata" -> "PhysicalMarkingBoundaryType" [label="uses", fontsize=10];
+    "PhysicalMarkingBoundaryElement" -> "PhysicalMarkingBoundaryType" [label="uses", fontsize=10];
+}

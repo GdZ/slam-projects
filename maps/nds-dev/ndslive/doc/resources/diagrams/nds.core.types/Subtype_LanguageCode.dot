@@ -1,0 +1,150 @@
+/**
+ * This dot file creates symbol collaboration diagram for LanguageCode.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="LanguageCode collaboration diagram";
+
+    subgraph "cluster_nds.core.types"
+    {
+        style="dashed, rounded";
+        label="nds.core.types";
+        tooltip="Package nds.core.types";
+        href="../../../content/packages/nds.core.types.html#Package-nds-core-types";
+        target="_parent";
+
+        "LanguageCode" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Subtype-LanguageCode" title="Subtype defined in nds.core.types">LanguageCode</td></tr></table></font>>];
+        "UNDEFINED_LANGUAGE_CODE" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Constant-UNDEFINED_LANGUAGE_CODE" title="Constant defined in nds.core.types">UNDEFINED_LANGUAGE_CODE</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.language"
+    {
+        style="dashed, rounded";
+        label="nds.core.language";
+        tooltip="Package nds.core.language";
+        href="../../../content/packages/nds.core.language.html#Package-nds-core-language";
+        target="_parent";
+
+        "LanguageMapping" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.language.html#Structure-LanguageMapping" title="Structure defined in nds.core.language">LanguageMapping</td></tr></table></font>>];
+        "LanguageName" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.language.html#Structure-LanguageName" title="Structure defined in nds.core.language">LanguageName</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.search.services"
+    {
+        style="dashed, rounded";
+        label="nds.search.services";
+        tooltip="Package nds.search.services";
+        href="../../../content/packages/nds.search.services.html#Package-nds-search-services";
+        target="_parent";
+
+        "GeneralSearchRequest" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.search.services.html#Structure-GeneralSearchRequest" title="Structure defined in nds.search.services">GeneralSearchRequest</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.routing.guidance"
+    {
+        style="dashed, rounded";
+        label="nds.routing.guidance";
+        tooltip="Package nds.routing.guidance";
+        href="../../../content/packages/nds.routing.guidance.html#Package-nds-routing-guidance";
+        target="_parent";
+
+        "GuidanceNameString" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routing.guidance.html#Structure-GuidanceNameString" title="Structure defined in nds.routing.guidance">GuidanceNameString</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.routing.services"
+    {
+        style="dashed, rounded";
+        label="nds.routing.services";
+        tooltip="Package nds.routing.services";
+        href="../../../content/packages/nds.routing.services.html#Package-nds-routing-services";
+        target="_parent";
+
+        "RoutingServiceRequest" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routing.services.html#Structure-RoutingServiceRequest" title="Structure defined in nds.routing.services">RoutingServiceRequest</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.routing.metadata"
+    {
+        style="dashed, rounded";
+        label="nds.routing.metadata";
+        tooltip="Package nds.routing.metadata";
+        href="../../../content/packages/nds.routing.metadata.html#Package-nds-routing-metadata";
+        target="_parent";
+
+        "RouteServiceCapabilities" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routing.metadata.html#Structure-RouteServiceCapabilities" title="Structure defined in nds.routing.metadata">RouteServiceCapabilities</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.instructions.properties"
+    {
+        style="dashed, rounded";
+        label="nds.instructions.properties";
+        tooltip="Package nds.instructions.properties";
+        href="../../../content/packages/nds.instructions.properties.html#Package-nds-instructions-properties";
+        target="_parent";
+
+        "PropertyValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.instructions.properties.html#Choice-PropertyValue" title="Choice defined in nds.instructions.properties">PropertyValue</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.poi.types"
+    {
+        style="dashed, rounded";
+        label="nds.poi.types";
+        tooltip="Package nds.poi.types";
+        href="../../../content/packages/nds.poi.types.html#Package-nds-poi-types";
+        target="_parent";
+
+        "NameString" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.types.html#Structure-NameString" title="Structure defined in nds.poi.types">NameString</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.poi.properties"
+    {
+        style="dashed, rounded";
+        label="nds.poi.properties";
+        tooltip="Package nds.poi.properties";
+        href="../../../content/packages/nds.poi.properties.html#Package-nds-poi-properties";
+        target="_parent";
+
+        "PropertyValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.properties.html#Choice-PropertyValue" title="Choice defined in nds.poi.properties">PropertyValue</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.name.properties"
+    {
+        style="dashed, rounded";
+        label="nds.name.properties";
+        tooltip="Package nds.name.properties";
+        href="../../../content/packages/nds.name.properties.html#Package-nds-name-properties";
+        target="_parent";
+
+        "PropertyValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.properties.html#Choice-PropertyValue" title="Choice defined in nds.name.properties">PropertyValue</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.rules.types"
+    {
+        style="dashed, rounded";
+        label="nds.rules.types";
+        tooltip="Package nds.rules.types";
+        href="../../../content/packages/nds.rules.types.html#Package-nds-rules-types";
+        target="_parent";
+
+        "OfficialLanguages" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.types.html#Structure-OfficialLanguages" title="Structure defined in nds.rules.types">OfficialLanguages</td></tr></table></font>>];
+        "SupplementaryWarningSignText" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.types.html#Structure-SupplementaryWarningSignText" title="Structure defined in nds.rules.types">SupplementaryWarningSignText</td></tr></table></font>>];
+        "TimeZoneName" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.types.html#Structure-TimeZoneName" title="Structure defined in nds.rules.types">TimeZoneName</td></tr></table></font>>];
+    }
+
+    "UNDEFINED_LANGUAGE_CODE" -> "LanguageCode" [label="uses", fontsize=10];
+    "LanguageMapping" -> "LanguageCode" [label="uses", fontsize=10];
+    "LanguageName" -> "LanguageCode" [label="uses", fontsize=10];
+    "GeneralSearchRequest" -> "LanguageCode" [label="uses", fontsize=10];
+    "GuidanceNameString" -> "LanguageCode" [label="uses", fontsize=10];
+    "RoutingServiceRequest" -> "LanguageCode" [label="uses", fontsize=10];
+    "RouteServiceCapabilities" -> "LanguageCode" [label="uses", fontsize=10];
+    "PropertyValue" -> "LanguageCode" [label="uses", fontsize=10];
+    "NameString" -> "LanguageCode" [label="uses", fontsize=10];
+    "PropertyValue" -> "LanguageCode" [label="uses", fontsize=10];
+    "PropertyValue" -> "LanguageCode" [label="uses", fontsize=10];
+    "OfficialLanguages" -> "LanguageCode" [label="uses", fontsize=10];
+    "SupplementaryWarningSignText" -> "LanguageCode" [label="uses", fontsize=10];
+    "TimeZoneName" -> "LanguageCode" [label="uses", fontsize=10];
+}

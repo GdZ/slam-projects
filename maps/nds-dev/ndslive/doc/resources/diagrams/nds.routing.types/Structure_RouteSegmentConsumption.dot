@@ -1,0 +1,48 @@
+/**
+ * This dot file creates symbol collaboration diagram for RouteSegmentConsumption.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="RouteSegmentConsumption collaboration diagram";
+
+    subgraph "cluster_nds.routing.types"
+    {
+        style="dashed, rounded";
+        label="nds.routing.types";
+        tooltip="Package nds.routing.types";
+        href="../../../content/packages/nds.routing.types.html#Package-nds-routing-types";
+        target="_parent";
+
+        "RouteSegmentConsumption" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routing.types.html#Structure-RouteSegmentConsumption" title="Structure defined in nds.routing.types">RouteSegmentConsumption</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.vehicle"
+    {
+        style="dashed, rounded";
+        label="nds.core.vehicle";
+        tooltip="Package nds.core.vehicle";
+        href="../../../content/packages/nds.core.vehicle.html#Package-nds-core-vehicle";
+        target="_parent";
+
+        "FuelLiters" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.vehicle.html#Subtype-FuelLiters" title="Subtype defined in nds.core.vehicle">FuelLiters</td></tr></table></font>>];
+        "WattHrs" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.vehicle.html#Subtype-WattHrs" title="Subtype defined in nds.core.vehicle">WattHrs</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.routing.route"
+    {
+        style="dashed, rounded";
+        label="nds.routing.route";
+        tooltip="Package nds.routing.route";
+        href="../../../content/packages/nds.routing.route.html#Package-nds-routing-route";
+        target="_parent";
+
+        "Route" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routing.route.html#Structure-Route" title="Structure defined in nds.routing.route">Route</td></tr></table></font>>];
+    }
+
+    "RouteSegmentConsumption" -> "FuelLiters" [label="uses", fontsize=10];
+    "RouteSegmentConsumption" -> "WattHrs" [label="uses", fontsize=10];
+    "Route" -> "RouteSegmentConsumption" [label="uses", fontsize=10];
+}

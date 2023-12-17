@@ -1,0 +1,26 @@
+/**
+ * This dot file creates symbol collaboration diagram for SimplePolygon2D.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="SimplePolygon2D collaboration diagram";
+
+    subgraph "cluster_nds.core.geometry"
+    {
+        style="dashed, rounded";
+        label="nds.core.geometry";
+        tooltip="Package nds.core.geometry";
+        href="../../../content/packages/nds.core.geometry.html#Package-nds-core-geometry";
+        target="_parent";
+
+        "SimplePolygon2D" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Subtype-SimplePolygon2D" title="Subtype defined in nds.core.geometry">SimplePolygon2D</td></tr></table></font>>];
+        "Ring2D" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Subtype-Ring2D" title="Subtype defined in nds.core.geometry">Ring2D</td></tr></table></font>>];
+        "Buffers" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Choice-Buffers" title="Choice defined in nds.core.geometry">Buffers</td></tr></table></font>>];
+    }
+
+    "SimplePolygon2D" -> "Ring2D" [label="uses", fontsize=10];
+    "Buffers" -> "SimplePolygon2D" [label="uses", fontsize=10];
+}

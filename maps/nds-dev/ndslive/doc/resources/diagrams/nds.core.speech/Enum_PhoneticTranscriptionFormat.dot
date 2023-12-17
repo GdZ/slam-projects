@@ -1,0 +1,24 @@
+/**
+ * This dot file creates symbol collaboration diagram for PhoneticTranscriptionFormat.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="PhoneticTranscriptionFormat collaboration diagram";
+
+    subgraph "cluster_nds.core.speech"
+    {
+        style="dashed, rounded";
+        label="nds.core.speech";
+        tooltip="Package nds.core.speech";
+        href="../../../content/packages/nds.core.speech.html#Package-nds-core-speech";
+        target="_parent";
+
+        "PhoneticTranscriptionFormat" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.speech.html#Enum-PhoneticTranscriptionFormat" title="Enum defined in nds.core.speech">PhoneticTranscriptionFormat</td></tr></table></font>>];
+        "PhoneticTranscriptionList" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.speech.html#Structure-PhoneticTranscriptionList" title="Structure defined in nds.core.speech">PhoneticTranscriptionList</td></tr></table></font>>];
+    }
+
+    "PhoneticTranscriptionList" -> "PhoneticTranscriptionFormat" [label="uses", fontsize=10];
+}

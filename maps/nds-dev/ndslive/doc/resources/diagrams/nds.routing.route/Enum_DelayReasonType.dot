@@ -1,0 +1,24 @@
+/**
+ * This dot file creates symbol collaboration diagram for DelayReasonType.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="DelayReasonType collaboration diagram";
+
+    subgraph "cluster_nds.routing.route"
+    {
+        style="dashed, rounded";
+        label="nds.routing.route";
+        tooltip="Package nds.routing.route";
+        href="../../../content/packages/nds.routing.route.html#Package-nds-routing-route";
+        target="_parent";
+
+        "DelayReasonType" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routing.route.html#Enum-DelayReasonType" title="Enum defined in nds.routing.route">DelayReasonType</td></tr></table></font>>];
+        "DelayInformation" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routing.route.html#Structure-DelayInformation" title="Structure defined in nds.routing.route">DelayInformation</td></tr></table></font>>];
+    }
+
+    "DelayInformation" -> "DelayReasonType" [label="uses", fontsize=10];
+}

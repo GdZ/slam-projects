@@ -1,0 +1,486 @@
+/**
+ * This dot file creates symbol collaboration diagram for ModuleExtern.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="ModuleExtern collaboration diagram";
+
+    subgraph "cluster_nds.system.types"
+    {
+        style="dashed, rounded";
+        label="nds.system.types";
+        tooltip="Package nds.system.types";
+        href="../../../content/packages/nds.system.types.html#Package-nds-system-types";
+        target="_parent";
+
+        "ModuleExtern" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.system.types.html#Subtype-ModuleExtern" title="Subtype defined in nds.system.types">ModuleExtern</td></tr></table></font>>];
+        "ExternDescriptor" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.system.types.html#Structure-ExternDescriptor" title="Structure defined in nds.system.types">ExternDescriptor</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.localization._module"
+    {
+        style="dashed, rounded";
+        label="nds.localization._module";
+        tooltip="Package nds.localization._module";
+        href="../../../content/packages/nds.localization._module.html#Package-nds-localization-_module";
+        target="_parent";
+
+        "OBSTACLE_LAYER" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.localization._module.html#Constant-OBSTACLE_LAYER" title="Constant defined in nds.localization._module">OBSTACLE_LAYER</td></tr></table></font>>];
+        "OBSTACLE_LAYER_METADATA" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.localization._module.html#Constant-OBSTACLE_LAYER_METADATA" title="Constant defined in nds.localization._module">OBSTACLE_LAYER_METADATA</td></tr></table></font>>];
+        "LANDMARK_LAYER" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.localization._module.html#Constant-LANDMARK_LAYER" title="Constant defined in nds.localization._module">LANDMARK_LAYER</td></tr></table></font>>];
+        "LANDMARK_LAYER_METADATA" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.localization._module.html#Constant-LANDMARK_LAYER_METADATA" title="Constant defined in nds.localization._module">LANDMARK_LAYER_METADATA</td></tr></table></font>>];
+        "ROAD_LANDMARK_LAYER" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.localization._module.html#Constant-ROAD_LANDMARK_LAYER" title="Constant defined in nds.localization._module">ROAD_LANDMARK_LAYER</td></tr></table></font>>];
+        "ROAD_LANDMARK_LAYER_METADATA" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.localization._module.html#Constant-ROAD_LANDMARK_LAYER_METADATA" title="Constant defined in nds.localization._module">ROAD_LANDMARK_LAYER_METADATA</td></tr></table></font>>];
+        "LANE_LANDMARK_LAYER" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.localization._module.html#Constant-LANE_LANDMARK_LAYER" title="Constant defined in nds.localization._module">LANE_LANDMARK_LAYER</td></tr></table></font>>];
+        "LANE_LANDMARK_LAYER_METADATA" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.localization._module.html#Constant-LANE_LANDMARK_LAYER_METADATA" title="Constant defined in nds.localization._module">LANE_LANDMARK_LAYER_METADATA</td></tr></table></font>>];
+        "ROAD_SURFACE_LANDMARK_LAYER" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.localization._module.html#Constant-ROAD_SURFACE_LANDMARK_LAYER" title="Constant defined in nds.localization._module">ROAD_SURFACE_LANDMARK_LAYER</td></tr></table></font>>];
+        "ROAD_SURFACE_LANDMARK_LAYER_METADATA" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.localization._module.html#Constant-ROAD_SURFACE_LANDMARK_LAYER_METADATA" title="Constant defined in nds.localization._module">ROAD_SURFACE_LANDMARK_LAYER_METADATA</td></tr></table></font>>];
+        "OCCUPANCY_GRID_LAYER" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.localization._module.html#Constant-OCCUPANCY_GRID_LAYER" title="Constant defined in nds.localization._module">OCCUPANCY_GRID_LAYER</td></tr></table></font>>];
+        "OCCUPANCY_GRID_LAYER_METADATA" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.localization._module.html#Constant-OCCUPANCY_GRID_LAYER_METADATA" title="Constant defined in nds.localization._module">OCCUPANCY_GRID_LAYER_METADATA</td></tr></table></font>>];
+        "ROAD_OCCUPANCY_GRID_LAYER" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.localization._module.html#Constant-ROAD_OCCUPANCY_GRID_LAYER" title="Constant defined in nds.localization._module">ROAD_OCCUPANCY_GRID_LAYER</td></tr></table></font>>];
+        "ROAD_OCCUPANCY_GRID_LAYER_METADATA" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.localization._module.html#Constant-ROAD_OCCUPANCY_GRID_LAYER_METADATA" title="Constant defined in nds.localization._module">ROAD_OCCUPANCY_GRID_LAYER_METADATA</td></tr></table></font>>];
+        "LANE_OCCUPANCY_GRID_LAYER" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.localization._module.html#Constant-LANE_OCCUPANCY_GRID_LAYER" title="Constant defined in nds.localization._module">LANE_OCCUPANCY_GRID_LAYER</td></tr></table></font>>];
+        "LANE_OCCUPANCY_GRID_LAYER_METADATA" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.localization._module.html#Constant-LANE_OCCUPANCY_GRID_LAYER_METADATA" title="Constant defined in nds.localization._module">LANE_OCCUPANCY_GRID_LAYER_METADATA</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.routing._module"
+    {
+        style="dashed, rounded";
+        label="nds.routing._module";
+        tooltip="Package nds.routing._module";
+        href="../../../content/packages/nds.routing._module.html#Package-nds-routing-_module";
+        target="_parent";
+
+        "ROUTING_SERVICE_METADATA" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routing._module.html#Constant-ROUTING_SERVICE_METADATA" title="Constant defined in nds.routing._module">ROUTING_SERVICE_METADATA</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.traffic._module"
+    {
+        style="dashed, rounded";
+        label="nds.traffic._module";
+        tooltip="Package nds.traffic._module";
+        href="../../../content/packages/nds.traffic._module.html#Package-nds-traffic-_module";
+        target="_parent";
+
+        "ROAD_TRAFFIC_LAYER" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.traffic._module.html#Constant-ROAD_TRAFFIC_LAYER" title="Constant defined in nds.traffic._module">ROAD_TRAFFIC_LAYER</td></tr></table></font>>];
+        "ROAD_TRAFFIC_LAYER_INDIRECT" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.traffic._module.html#Constant-ROAD_TRAFFIC_LAYER_INDIRECT" title="Constant defined in nds.traffic._module">ROAD_TRAFFIC_LAYER_INDIRECT</td></tr></table></font>>];
+        "ROAD_LOCATION_TRAFFIC_LAYER" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.traffic._module.html#Constant-ROAD_LOCATION_TRAFFIC_LAYER" title="Constant defined in nds.traffic._module">ROAD_LOCATION_TRAFFIC_LAYER</td></tr></table></font>>];
+        "LANE_TRAFFIC_LAYER" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.traffic._module.html#Constant-LANE_TRAFFIC_LAYER" title="Constant defined in nds.traffic._module">LANE_TRAFFIC_LAYER</td></tr></table></font>>];
+        "LANE_TRAFFIC_LAYER_INDIRECT" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.traffic._module.html#Constant-LANE_TRAFFIC_LAYER_INDIRECT" title="Constant defined in nds.traffic._module">LANE_TRAFFIC_LAYER_INDIRECT</td></tr></table></font>>];
+        "DISPLAY_LINE_TRAFFIC_LAYER" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.traffic._module.html#Constant-DISPLAY_LINE_TRAFFIC_LAYER" title="Constant defined in nds.traffic._module">DISPLAY_LINE_TRAFFIC_LAYER</td></tr></table></font>>];
+        "ROAD_TRAFFIC_LAYER_METADATA" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.traffic._module.html#Constant-ROAD_TRAFFIC_LAYER_METADATA" title="Constant defined in nds.traffic._module">ROAD_TRAFFIC_LAYER_METADATA</td></tr></table></font>>];
+        "ROAD_TRAFFIC_LAYER_INDIRECT_METADATA" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.traffic._module.html#Constant-ROAD_TRAFFIC_LAYER_INDIRECT_METADATA" title="Constant defined in nds.traffic._module">ROAD_TRAFFIC_LAYER_INDIRECT_METADATA</td></tr></table></font>>];
+        "ROAD_LOCATION_TRAFFIC_LAYER_METADATA" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.traffic._module.html#Constant-ROAD_LOCATION_TRAFFIC_LAYER_METADATA" title="Constant defined in nds.traffic._module">ROAD_LOCATION_TRAFFIC_LAYER_METADATA</td></tr></table></font>>];
+        "LANE_TRAFFIC_LAYER_METADATA" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.traffic._module.html#Constant-LANE_TRAFFIC_LAYER_METADATA" title="Constant defined in nds.traffic._module">LANE_TRAFFIC_LAYER_METADATA</td></tr></table></font>>];
+        "LANE_TRAFFIC_LAYER_INDIRECT_METADATA" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.traffic._module.html#Constant-LANE_TRAFFIC_LAYER_INDIRECT_METADATA" title="Constant defined in nds.traffic._module">LANE_TRAFFIC_LAYER_INDIRECT_METADATA</td></tr></table></font>>];
+        "DISPLAY_LINE_TRAFFIC_LAYER_METADATA" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.traffic._module.html#Constant-DISPLAY_LINE_TRAFFIC_LAYER_METADATA" title="Constant defined in nds.traffic._module">DISPLAY_LINE_TRAFFIC_LAYER_METADATA</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.routingdata._module"
+    {
+        style="dashed, rounded";
+        label="nds.routingdata._module";
+        tooltip="Package nds.routingdata._module";
+        href="../../../content/packages/nds.routingdata._module.html#Package-nds-routingdata-_module";
+        target="_parent";
+
+        "ROAD_ROUTING_LAYER" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routingdata._module.html#Constant-ROAD_ROUTING_LAYER" title="Constant defined in nds.routingdata._module">ROAD_ROUTING_LAYER</td></tr></table></font>>];
+        "ROAD_ROUTING_METADATA" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routingdata._module.html#Constant-ROAD_ROUTING_METADATA" title="Constant defined in nds.routingdata._module">ROAD_ROUTING_METADATA</td></tr></table></font>>];
+        "LANE_ROUTING_LAYER" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routingdata._module.html#Constant-LANE_ROUTING_LAYER" title="Constant defined in nds.routingdata._module">LANE_ROUTING_LAYER</td></tr></table></font>>];
+        "LANE_ROUTING_METADATA" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routingdata._module.html#Constant-LANE_ROUTING_METADATA" title="Constant defined in nds.routingdata._module">LANE_ROUTING_METADATA</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.adas._module"
+    {
+        style="dashed, rounded";
+        label="nds.adas._module";
+        tooltip="Package nds.adas._module";
+        href="../../../content/packages/nds.adas._module.html#Package-nds-adas-_module";
+        target="_parent";
+
+        "ADAS_ROAD_LAYER" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.adas._module.html#Constant-ADAS_ROAD_LAYER" title="Constant defined in nds.adas._module">ADAS_ROAD_LAYER</td></tr></table></font>>];
+        "ADAS_CLASSIC_LOCATION_LAYER" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.adas._module.html#Constant-ADAS_CLASSIC_LOCATION_LAYER" title="Constant defined in nds.adas._module">ADAS_CLASSIC_LOCATION_LAYER</td></tr></table></font>>];
+        "ADAS_LANE_LAYER" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.adas._module.html#Constant-ADAS_LANE_LAYER" title="Constant defined in nds.adas._module">ADAS_LANE_LAYER</td></tr></table></font>>];
+        "ADAS_ROAD_LAYER_METADATA" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.adas._module.html#Constant-ADAS_ROAD_LAYER_METADATA" title="Constant defined in nds.adas._module">ADAS_ROAD_LAYER_METADATA</td></tr></table></font>>];
+        "ADAS_CLASSIC_LOCATION_LAYER_METADATA" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.adas._module.html#Constant-ADAS_CLASSIC_LOCATION_LAYER_METADATA" title="Constant defined in nds.adas._module">ADAS_CLASSIC_LOCATION_LAYER_METADATA</td></tr></table></font>>];
+        "ADAS_LANE_LAYER_METADATA" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.adas._module.html#Constant-ADAS_LANE_LAYER_METADATA" title="Constant defined in nds.adas._module">ADAS_LANE_LAYER_METADATA</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.vehicle._module"
+    {
+        style="dashed, rounded";
+        label="nds.vehicle._module";
+        tooltip="Package nds.vehicle._module";
+        href="../../../content/packages/nds.vehicle._module.html#Package-nds-vehicle-_module";
+        target="_parent";
+
+        "VEHICLE_SERVICE_METADATA" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.vehicle._module.html#Constant-VEHICLE_SERVICE_METADATA" title="Constant defined in nds.vehicle._module">VEHICLE_SERVICE_METADATA</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.instructions._module"
+    {
+        style="dashed, rounded";
+        label="nds.instructions._module";
+        tooltip="Package nds.instructions._module";
+        href="../../../content/packages/nds.instructions._module.html#Package-nds-instructions-_module";
+        target="_parent";
+
+        "ROAD_INSTRUCTIONS_LAYER" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.instructions._module.html#Constant-ROAD_INSTRUCTIONS_LAYER" title="Constant defined in nds.instructions._module">ROAD_INSTRUCTIONS_LAYER</td></tr></table></font>>];
+        "ROAD_INSTRUCTIONS_LAYER_METADATA" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.instructions._module.html#Constant-ROAD_INSTRUCTIONS_LAYER_METADATA" title="Constant defined in nds.instructions._module">ROAD_INSTRUCTIONS_LAYER_METADATA</td></tr></table></font>>];
+        "LANE_INSTRUCTIONS_LAYER" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.instructions._module.html#Constant-LANE_INSTRUCTIONS_LAYER" title="Constant defined in nds.instructions._module">LANE_INSTRUCTIONS_LAYER</td></tr></table></font>>];
+        "LANE_INSTRUCTIONS_LAYER_METADATA" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.instructions._module.html#Constant-LANE_INSTRUCTIONS_LAYER_METADATA" title="Constant defined in nds.instructions._module">LANE_INSTRUCTIONS_LAYER_METADATA</td></tr></table></font>>];
+        "INSTRUCTIONS_IMAGE_LAYER" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.instructions._module.html#Constant-INSTRUCTIONS_IMAGE_LAYER" title="Constant defined in nds.instructions._module">INSTRUCTIONS_IMAGE_LAYER</td></tr></table></font>>];
+        "INSTRUCTIONS_IMAGE_LAYER_METADATA" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.instructions._module.html#Constant-INSTRUCTIONS_IMAGE_LAYER_METADATA" title="Constant defined in nds.instructions._module">INSTRUCTIONS_IMAGE_LAYER_METADATA</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.poi._module"
+    {
+        style="dashed, rounded";
+        label="nds.poi._module";
+        tooltip="Package nds.poi._module";
+        href="../../../content/packages/nds.poi._module.html#Package-nds-poi-_module";
+        target="_parent";
+
+        "POI_LAYER" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi._module.html#Constant-POI_LAYER" title="Constant defined in nds.poi._module">POI_LAYER</td></tr></table></font>>];
+        "POI_ATTRIBUTE_LAYER" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi._module.html#Constant-POI_ATTRIBUTE_LAYER" title="Constant defined in nds.poi._module">POI_ATTRIBUTE_LAYER</td></tr></table></font>>];
+        "POI_ATTRIBUTE_LAYER_INDIRECT" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi._module.html#Constant-POI_ATTRIBUTE_LAYER_INDIRECT" title="Constant defined in nds.poi._module">POI_ATTRIBUTE_LAYER_INDIRECT</td></tr></table></font>>];
+        "POI_RELATION_LAYER" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi._module.html#Constant-POI_RELATION_LAYER" title="Constant defined in nds.poi._module">POI_RELATION_LAYER</td></tr></table></font>>];
+        "POI_LAYER_METADATA" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi._module.html#Constant-POI_LAYER_METADATA" title="Constant defined in nds.poi._module">POI_LAYER_METADATA</td></tr></table></font>>];
+        "POI_ATTRIBUTE_LAYER_METADATA" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi._module.html#Constant-POI_ATTRIBUTE_LAYER_METADATA" title="Constant defined in nds.poi._module">POI_ATTRIBUTE_LAYER_METADATA</td></tr></table></font>>];
+        "POI_ATTRIBUTE_LAYER_INDIRECT_METADATA" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi._module.html#Constant-POI_ATTRIBUTE_LAYER_INDIRECT_METADATA" title="Constant defined in nds.poi._module">POI_ATTRIBUTE_LAYER_INDIRECT_METADATA</td></tr></table></font>>];
+        "POI_RELATION_LAYER_METADATA" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi._module.html#Constant-POI_RELATION_LAYER_METADATA" title="Constant defined in nds.poi._module">POI_RELATION_LAYER_METADATA</td></tr></table></font>>];
+        "POI_SEARCH_METADATA" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi._module.html#Constant-POI_SEARCH_METADATA" title="Constant defined in nds.poi._module">POI_SEARCH_METADATA</td></tr></table></font>>];
+        "POI_SEARCH_RESULT_DETAILS" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi._module.html#Constant-POI_SEARCH_RESULT_DETAILS" title="Constant defined in nds.poi._module">POI_SEARCH_RESULT_DETAILS</td></tr></table></font>>];
+        "POI_SEARCH_FILTER" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi._module.html#Constant-POI_SEARCH_FILTER" title="Constant defined in nds.poi._module">POI_SEARCH_FILTER</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.smart._module"
+    {
+        style="dashed, rounded";
+        label="nds.smart._module";
+        tooltip="Package nds.smart._module";
+        href="../../../content/packages/nds.smart._module.html#Package-nds-smart-_module";
+        target="_parent";
+
+        "SMART_LAYER_SERVICE_METADATA" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart._module.html#Constant-SMART_LAYER_SERVICE_METADATA" title="Constant defined in nds.smart._module">SMART_LAYER_SERVICE_METADATA</td></tr></table></font>>];
+        "SMART_RASTER_SERVICE_METADATA" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart._module.html#Constant-SMART_RASTER_SERVICE_METADATA" title="Constant defined in nds.smart._module">SMART_RASTER_SERVICE_METADATA</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.road._module"
+    {
+        style="dashed, rounded";
+        label="nds.road._module";
+        tooltip="Package nds.road._module";
+        href="../../../content/packages/nds.road._module.html#Package-nds-road-_module";
+        target="_parent";
+
+        "ROAD_LAYER" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.road._module.html#Constant-ROAD_LAYER" title="Constant defined in nds.road._module">ROAD_LAYER</td></tr></table></font>>];
+        "ROAD_GEOMETRY_LAYER" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.road._module.html#Constant-ROAD_GEOMETRY_LAYER" title="Constant defined in nds.road._module">ROAD_GEOMETRY_LAYER</td></tr></table></font>>];
+        "MATCHED_ROAD_PATH_LAYER" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.road._module.html#Constant-MATCHED_ROAD_PATH_LAYER" title="Constant defined in nds.road._module">MATCHED_ROAD_PATH_LAYER</td></tr></table></font>>];
+        "ROAD_LAYER_METADATA" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.road._module.html#Constant-ROAD_LAYER_METADATA" title="Constant defined in nds.road._module">ROAD_LAYER_METADATA</td></tr></table></font>>];
+        "ROAD_GEOMETRY_LAYER_METADATA" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.road._module.html#Constant-ROAD_GEOMETRY_LAYER_METADATA" title="Constant defined in nds.road._module">ROAD_GEOMETRY_LAYER_METADATA</td></tr></table></font>>];
+        "MATCHED_ROAD_PATH_LAYER_METADATA" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.road._module.html#Constant-MATCHED_ROAD_PATH_LAYER_METADATA" title="Constant defined in nds.road._module">MATCHED_ROAD_PATH_LAYER_METADATA</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.venue._module"
+    {
+        style="dashed, rounded";
+        label="nds.venue._module";
+        tooltip="Package nds.venue._module";
+        href="../../../content/packages/nds.venue._module.html#Package-nds-venue-_module";
+        target="_parent";
+
+        "PARKING_FACILITY_LAYER" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue._module.html#Constant-PARKING_FACILITY_LAYER" title="Constant defined in nds.venue._module">PARKING_FACILITY_LAYER</td></tr></table></font>>];
+        "PARKING_FACILITY_LAYER_METADATA" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue._module.html#Constant-PARKING_FACILITY_LAYER_METADATA" title="Constant defined in nds.venue._module">PARKING_FACILITY_LAYER_METADATA</td></tr></table></font>>];
+        "PARKING_FACILITY_RELATION_LAYER" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue._module.html#Constant-PARKING_FACILITY_RELATION_LAYER" title="Constant defined in nds.venue._module">PARKING_FACILITY_RELATION_LAYER</td></tr></table></font>>];
+        "PARKING_FACILITY_RELATION_LAYER_METADATA" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue._module.html#Constant-PARKING_FACILITY_RELATION_LAYER_METADATA" title="Constant defined in nds.venue._module">PARKING_FACILITY_RELATION_LAYER_METADATA</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.venue.details._module"
+    {
+        style="dashed, rounded";
+        label="nds.venue.details._module";
+        tooltip="Package nds.venue.details._module";
+        href="../../../content/packages/nds.venue.details._module.html#Package-nds-venue-details-_module";
+        target="_parent";
+
+        "PARKING_FACILITY_ATTRIBUTE_LAYER" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.details._module.html#Constant-PARKING_FACILITY_ATTRIBUTE_LAYER" title="Constant defined in nds.venue.details._module">PARKING_FACILITY_ATTRIBUTE_LAYER</td></tr></table></font>>];
+        "PARKING_FACILITY_ATTRIBUTE_LAYER_METADATA" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.details._module.html#Constant-PARKING_FACILITY_ATTRIBUTE_LAYER_METADATA" title="Constant defined in nds.venue.details._module">PARKING_FACILITY_ATTRIBUTE_LAYER_METADATA</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.display._module"
+    {
+        style="dashed, rounded";
+        label="nds.display._module";
+        tooltip="Package nds.display._module";
+        href="../../../content/packages/nds.display._module.html#Package-nds-display-_module";
+        target="_parent";
+
+        "DISPLAY_LAYER_2D" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display._module.html#Constant-DISPLAY_LAYER_2D" title="Constant defined in nds.display._module">DISPLAY_LAYER_2D</td></tr></table></font>>];
+        "ICON_LAYER" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display._module.html#Constant-ICON_LAYER" title="Constant defined in nds.display._module">ICON_LAYER</td></tr></table></font>>];
+        "DISPLAY_LAYER_2D_METADATA" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display._module.html#Constant-DISPLAY_LAYER_2D_METADATA" title="Constant defined in nds.display._module">DISPLAY_LAYER_2D_METADATA</td></tr></table></font>>];
+        "ICON_LAYER_METADATA" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display._module.html#Constant-ICON_LAYER_METADATA" title="Constant defined in nds.display._module">ICON_LAYER_METADATA</td></tr></table></font>>];
+        "DISPLAY_LAYER_3D" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display._module.html#Constant-DISPLAY_LAYER_3D" title="Constant defined in nds.display._module">DISPLAY_LAYER_3D</td></tr></table></font>>];
+        "DISPLAY_LAYER_3D_METADATA" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display._module.html#Constant-DISPLAY_LAYER_3D_METADATA" title="Constant defined in nds.display._module">DISPLAY_LAYER_3D_METADATA</td></tr></table></font>>];
+        "DISPLAY_LAYER_3D_STYLE" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display._module.html#Constant-DISPLAY_LAYER_3D_STYLE" title="Constant defined in nds.display._module">DISPLAY_LAYER_3D_STYLE</td></tr></table></font>>];
+        "DISPLAY_LAYER_3D_STYLE_METADATA" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display._module.html#Constant-DISPLAY_LAYER_3D_STYLE_METADATA" title="Constant defined in nds.display._module">DISPLAY_LAYER_3D_STYLE_METADATA</td></tr></table></font>>];
+        "HEIGHTMAP_LAYER" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display._module.html#Constant-HEIGHTMAP_LAYER" title="Constant defined in nds.display._module">HEIGHTMAP_LAYER</td></tr></table></font>>];
+        "HEIGHTMAP_LAYER_METADATA" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display._module.html#Constant-HEIGHTMAP_LAYER_METADATA" title="Constant defined in nds.display._module">HEIGHTMAP_LAYER_METADATA</td></tr></table></font>>];
+        "BDAM_LAYER" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display._module.html#Constant-BDAM_LAYER" title="Constant defined in nds.display._module">BDAM_LAYER</td></tr></table></font>>];
+        "BDAM_LAYER_METADATA" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display._module.html#Constant-BDAM_LAYER_METADATA" title="Constant defined in nds.display._module">BDAM_LAYER_METADATA</td></tr></table></font>>];
+        "GLTF_LAYER" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display._module.html#Constant-GLTF_LAYER" title="Constant defined in nds.display._module">GLTF_LAYER</td></tr></table></font>>];
+        "GLTF_LAYER_METADATA" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display._module.html#Constant-GLTF_LAYER_METADATA" title="Constant defined in nds.display._module">GLTF_LAYER_METADATA</td></tr></table></font>>];
+        "DISPLAY_ORTHO_IMAGE_CONFIG" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display._module.html#Constant-DISPLAY_ORTHO_IMAGE_CONFIG" title="Constant defined in nds.display._module">DISPLAY_ORTHO_IMAGE_CONFIG</td></tr></table></font>>];
+        "DISPLAY_ORTHO_IMAGE_SERVICE_METADATA" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display._module.html#Constant-DISPLAY_ORTHO_IMAGE_SERVICE_METADATA" title="Constant defined in nds.display._module">DISPLAY_ORTHO_IMAGE_SERVICE_METADATA</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.display.types"
+    {
+        style="dashed, rounded";
+        label="nds.display.types";
+        tooltip="Package nds.display.types";
+        href="../../../content/packages/nds.display.types.html#Package-nds-display-types";
+        target="_parent";
+
+        "GenericIconSetMapElement" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.types.html#Structure-GenericIconSetMapElement" title="Structure defined in nds.display.types">GenericIconSetMapElement</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.display.details._module"
+    {
+        style="dashed, rounded";
+        label="nds.display.details._module";
+        tooltip="Package nds.display.details._module";
+        href="../../../content/packages/nds.display.details._module.html#Package-nds-display-details-_module";
+        target="_parent";
+
+        "DISPLAY_ATTRIBUTE_LAYER" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.details._module.html#Constant-DISPLAY_ATTRIBUTE_LAYER" title="Constant defined in nds.display.details._module">DISPLAY_ATTRIBUTE_LAYER</td></tr></table></font>>];
+        "DISPLAY_3D_ATTRIBUTE_LAYER" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.details._module.html#Constant-DISPLAY_3D_ATTRIBUTE_LAYER" title="Constant defined in nds.display.details._module">DISPLAY_3D_ATTRIBUTE_LAYER</td></tr></table></font>>];
+        "DISPLAY_ATTRIBUTE_LAYER_METADATA" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.details._module.html#Constant-DISPLAY_ATTRIBUTE_LAYER_METADATA" title="Constant defined in nds.display.details._module">DISPLAY_ATTRIBUTE_LAYER_METADATA</td></tr></table></font>>];
+        "DISPLAY_3D_ATTRIBUTE_LAYER_METADATA" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.details._module.html#Constant-DISPLAY_3D_ATTRIBUTE_LAYER_METADATA" title="Constant defined in nds.display.details._module">DISPLAY_3D_ATTRIBUTE_LAYER_METADATA</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.name._module"
+    {
+        style="dashed, rounded";
+        label="nds.name._module";
+        tooltip="Package nds.name._module";
+        href="../../../content/packages/nds.name._module.html#Package-nds-name-_module";
+        target="_parent";
+
+        "ROAD_NAME_LAYER" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name._module.html#Constant-ROAD_NAME_LAYER" title="Constant defined in nds.name._module">ROAD_NAME_LAYER</td></tr></table></font>>];
+        "LANE_NAME_LAYER" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name._module.html#Constant-LANE_NAME_LAYER" title="Constant defined in nds.name._module">LANE_NAME_LAYER</td></tr></table></font>>];
+        "POI_NAME_LAYER" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name._module.html#Constant-POI_NAME_LAYER" title="Constant defined in nds.name._module">POI_NAME_LAYER</td></tr></table></font>>];
+        "DISPLAY_NAME_LAYER" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name._module.html#Constant-DISPLAY_NAME_LAYER" title="Constant defined in nds.name._module">DISPLAY_NAME_LAYER</td></tr></table></font>>];
+        "ROAD_NAME_LAYER_METADATA" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name._module.html#Constant-ROAD_NAME_LAYER_METADATA" title="Constant defined in nds.name._module">ROAD_NAME_LAYER_METADATA</td></tr></table></font>>];
+        "LANE_NAME_LAYER_METADATA" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name._module.html#Constant-LANE_NAME_LAYER_METADATA" title="Constant defined in nds.name._module">LANE_NAME_LAYER_METADATA</td></tr></table></font>>];
+        "POI_NAME_LAYER_METADATA" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name._module.html#Constant-POI_NAME_LAYER_METADATA" title="Constant defined in nds.name._module">POI_NAME_LAYER_METADATA</td></tr></table></font>>];
+        "DISPLAY_NAME_LAYER_METADATA" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name._module.html#Constant-DISPLAY_NAME_LAYER_METADATA" title="Constant defined in nds.name._module">DISPLAY_NAME_LAYER_METADATA</td></tr></table></font>>];
+        "ADDRESS_SEARCH_METADATA" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name._module.html#Constant-ADDRESS_SEARCH_METADATA" title="Constant defined in nds.name._module">ADDRESS_SEARCH_METADATA</td></tr></table></font>>];
+        "ADDRESS_SEARCH_RESULT_DETAILS" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name._module.html#Constant-ADDRESS_SEARCH_RESULT_DETAILS" title="Constant defined in nds.name._module">ADDRESS_SEARCH_RESULT_DETAILS</td></tr></table></font>>];
+        "ADDRESS_SEARCH_FILTER" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name._module.html#Constant-ADDRESS_SEARCH_FILTER" title="Constant defined in nds.name._module">ADDRESS_SEARCH_FILTER</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.rules._module"
+    {
+        style="dashed, rounded";
+        label="nds.rules._module";
+        tooltip="Package nds.rules._module";
+        href="../../../content/packages/nds.rules._module.html#Package-nds-rules-_module";
+        target="_parent";
+
+        "ROAD_RULES_LAYER" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules._module.html#Constant-ROAD_RULES_LAYER" title="Constant defined in nds.rules._module">ROAD_RULES_LAYER</td></tr></table></font>>];
+        "ROAD_RULES_LAYER_INDIRECT" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules._module.html#Constant-ROAD_RULES_LAYER_INDIRECT" title="Constant defined in nds.rules._module">ROAD_RULES_LAYER_INDIRECT</td></tr></table></font>>];
+        "ROAD_LOCATION_RULES_LAYER" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules._module.html#Constant-ROAD_LOCATION_RULES_LAYER" title="Constant defined in nds.rules._module">ROAD_LOCATION_RULES_LAYER</td></tr></table></font>>];
+        "LANE_RULES_LAYER" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules._module.html#Constant-LANE_RULES_LAYER" title="Constant defined in nds.rules._module">LANE_RULES_LAYER</td></tr></table></font>>];
+        "LANE_RULES_LAYER_INDIRECT" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules._module.html#Constant-LANE_RULES_LAYER_INDIRECT" title="Constant defined in nds.rules._module">LANE_RULES_LAYER_INDIRECT</td></tr></table></font>>];
+        "REGION_RULES_LAYER_ROADS" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules._module.html#Constant-REGION_RULES_LAYER_ROADS" title="Constant defined in nds.rules._module">REGION_RULES_LAYER_ROADS</td></tr></table></font>>];
+        "REGION_RULES_LAYER_LANES" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules._module.html#Constant-REGION_RULES_LAYER_LANES" title="Constant defined in nds.rules._module">REGION_RULES_LAYER_LANES</td></tr></table></font>>];
+        "DISPLAY_LINE_RULES_LAYER" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules._module.html#Constant-DISPLAY_LINE_RULES_LAYER" title="Constant defined in nds.rules._module">DISPLAY_LINE_RULES_LAYER</td></tr></table></font>>];
+        "REGION_RULES_LAYER_ROADS_METADATA" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules._module.html#Constant-REGION_RULES_LAYER_ROADS_METADATA" title="Constant defined in nds.rules._module">REGION_RULES_LAYER_ROADS_METADATA</td></tr></table></font>>];
+        "REGION_RULES_LAYER_LANES_METADATA" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules._module.html#Constant-REGION_RULES_LAYER_LANES_METADATA" title="Constant defined in nds.rules._module">REGION_RULES_LAYER_LANES_METADATA</td></tr></table></font>>];
+        "ROAD_RULES_LAYER_METADATA" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules._module.html#Constant-ROAD_RULES_LAYER_METADATA" title="Constant defined in nds.rules._module">ROAD_RULES_LAYER_METADATA</td></tr></table></font>>];
+        "ROAD_RULES_LAYER_INDIRECT_METADATA" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules._module.html#Constant-ROAD_RULES_LAYER_INDIRECT_METADATA" title="Constant defined in nds.rules._module">ROAD_RULES_LAYER_INDIRECT_METADATA</td></tr></table></font>>];
+        "ROAD_LOCATION_RULES_LAYER_METADATA" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules._module.html#Constant-ROAD_LOCATION_RULES_LAYER_METADATA" title="Constant defined in nds.rules._module">ROAD_LOCATION_RULES_LAYER_METADATA</td></tr></table></font>>];
+        "LANE_RULES_LAYER_METADATA" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules._module.html#Constant-LANE_RULES_LAYER_METADATA" title="Constant defined in nds.rules._module">LANE_RULES_LAYER_METADATA</td></tr></table></font>>];
+        "LANE_RULES_LAYER_INDIRECT_METADATA" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules._module.html#Constant-LANE_RULES_LAYER_INDIRECT_METADATA" title="Constant defined in nds.rules._module">LANE_RULES_LAYER_INDIRECT_METADATA</td></tr></table></font>>];
+        "DISPLAY_LINE_RULES_LAYER_METADATA" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules._module.html#Constant-DISPLAY_LINE_RULES_LAYER_METADATA" title="Constant defined in nds.rules._module">DISPLAY_LINE_RULES_LAYER_METADATA</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.characteristics._module"
+    {
+        style="dashed, rounded";
+        label="nds.characteristics._module";
+        tooltip="Package nds.characteristics._module";
+        href="../../../content/packages/nds.characteristics._module.html#Package-nds-characteristics-_module";
+        target="_parent";
+
+        "ROAD_CHARACTERISTICS_LAYER" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics._module.html#Constant-ROAD_CHARACTERISTICS_LAYER" title="Constant defined in nds.characteristics._module">ROAD_CHARACTERISTICS_LAYER</td></tr></table></font>>];
+        "ROAD_CHARACTERISTICS_LAYER_INDIRECT" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics._module.html#Constant-ROAD_CHARACTERISTICS_LAYER_INDIRECT" title="Constant defined in nds.characteristics._module">ROAD_CHARACTERISTICS_LAYER_INDIRECT</td></tr></table></font>>];
+        "LANE_CHARACTERISTICS_LAYER" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics._module.html#Constant-LANE_CHARACTERISTICS_LAYER" title="Constant defined in nds.characteristics._module">LANE_CHARACTERISTICS_LAYER</td></tr></table></font>>];
+        "ROAD_LOCATION_CHARACTERISTICS_LAYER" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics._module.html#Constant-ROAD_LOCATION_CHARACTERISTICS_LAYER" title="Constant defined in nds.characteristics._module">ROAD_LOCATION_CHARACTERISTICS_LAYER</td></tr></table></font>>];
+        "DISPLAY_LINE_CHARACTERISTICS_LAYER" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics._module.html#Constant-DISPLAY_LINE_CHARACTERISTICS_LAYER" title="Constant defined in nds.characteristics._module">DISPLAY_LINE_CHARACTERISTICS_LAYER</td></tr></table></font>>];
+        "ROAD_CHARACTERISTICS_LAYER_METADATA" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics._module.html#Constant-ROAD_CHARACTERISTICS_LAYER_METADATA" title="Constant defined in nds.characteristics._module">ROAD_CHARACTERISTICS_LAYER_METADATA</td></tr></table></font>>];
+        "ROAD_CHARACTERISTICS_LAYER_INDIRECT_METADATA" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics._module.html#Constant-ROAD_CHARACTERISTICS_LAYER_INDIRECT_METADATA" title="Constant defined in nds.characteristics._module">ROAD_CHARACTERISTICS_LAYER_INDIRECT_METADATA</td></tr></table></font>>];
+        "LANE_CHARACTERISTICS_LAYER_METADATA" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics._module.html#Constant-LANE_CHARACTERISTICS_LAYER_METADATA" title="Constant defined in nds.characteristics._module">LANE_CHARACTERISTICS_LAYER_METADATA</td></tr></table></font>>];
+        "ROAD_LOCATION_CHARACTERISTICS_LAYER_METADATA" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics._module.html#Constant-ROAD_LOCATION_CHARACTERISTICS_LAYER_METADATA" title="Constant defined in nds.characteristics._module">ROAD_LOCATION_CHARACTERISTICS_LAYER_METADATA</td></tr></table></font>>];
+        "DISPLAY_LINE_CHARACTERISTICS_LAYER_METADATA" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics._module.html#Constant-DISPLAY_LINE_CHARACTERISTICS_LAYER_METADATA" title="Constant defined in nds.characteristics._module">DISPLAY_LINE_CHARACTERISTICS_LAYER_METADATA</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.lane._module"
+    {
+        style="dashed, rounded";
+        label="nds.lane._module";
+        tooltip="Package nds.lane._module";
+        href="../../../content/packages/nds.lane._module.html#Package-nds-lane-_module";
+        target="_parent";
+
+        "LANE_LAYER" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane._module.html#Constant-LANE_LAYER" title="Constant defined in nds.lane._module">LANE_LAYER</td></tr></table></font>>];
+        "LANE_GEOMETRY_LAYER" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane._module.html#Constant-LANE_GEOMETRY_LAYER" title="Constant defined in nds.lane._module">LANE_GEOMETRY_LAYER</td></tr></table></font>>];
+        "ROAD_SURFACE_LAYER" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane._module.html#Constant-ROAD_SURFACE_LAYER" title="Constant defined in nds.lane._module">ROAD_SURFACE_LAYER</td></tr></table></font>>];
+        "MATCHED_LANE_GROUP_PATH_LAYER" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane._module.html#Constant-MATCHED_LANE_GROUP_PATH_LAYER" title="Constant defined in nds.lane._module">MATCHED_LANE_GROUP_PATH_LAYER</td></tr></table></font>>];
+        "LANE_LAYER_METADATA" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane._module.html#Constant-LANE_LAYER_METADATA" title="Constant defined in nds.lane._module">LANE_LAYER_METADATA</td></tr></table></font>>];
+        "LANE_GEOMETRY_LAYER_METADATA" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane._module.html#Constant-LANE_GEOMETRY_LAYER_METADATA" title="Constant defined in nds.lane._module">LANE_GEOMETRY_LAYER_METADATA</td></tr></table></font>>];
+        "ROAD_SURFACE_LAYER_METADATA" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane._module.html#Constant-ROAD_SURFACE_LAYER_METADATA" title="Constant defined in nds.lane._module">ROAD_SURFACE_LAYER_METADATA</td></tr></table></font>>];
+    }
+
+    "ExternDescriptor" -> "ModuleExtern" [label="uses", fontsize=10];
+    "OBSTACLE_LAYER" -> "ModuleExtern" [label="uses", fontsize=10];
+    "OBSTACLE_LAYER_METADATA" -> "ModuleExtern" [label="uses", fontsize=10];
+    "LANDMARK_LAYER" -> "ModuleExtern" [label="uses", fontsize=10];
+    "LANDMARK_LAYER_METADATA" -> "ModuleExtern" [label="uses", fontsize=10];
+    "ROAD_LANDMARK_LAYER" -> "ModuleExtern" [label="uses", fontsize=10];
+    "ROAD_LANDMARK_LAYER_METADATA" -> "ModuleExtern" [label="uses", fontsize=10];
+    "LANE_LANDMARK_LAYER" -> "ModuleExtern" [label="uses", fontsize=10];
+    "LANE_LANDMARK_LAYER_METADATA" -> "ModuleExtern" [label="uses", fontsize=10];
+    "ROAD_SURFACE_LANDMARK_LAYER" -> "ModuleExtern" [label="uses", fontsize=10];
+    "ROAD_SURFACE_LANDMARK_LAYER_METADATA" -> "ModuleExtern" [label="uses", fontsize=10];
+    "OCCUPANCY_GRID_LAYER" -> "ModuleExtern" [label="uses", fontsize=10];
+    "OCCUPANCY_GRID_LAYER_METADATA" -> "ModuleExtern" [label="uses", fontsize=10];
+    "ROAD_OCCUPANCY_GRID_LAYER" -> "ModuleExtern" [label="uses", fontsize=10];
+    "ROAD_OCCUPANCY_GRID_LAYER_METADATA" -> "ModuleExtern" [label="uses", fontsize=10];
+    "LANE_OCCUPANCY_GRID_LAYER" -> "ModuleExtern" [label="uses", fontsize=10];
+    "LANE_OCCUPANCY_GRID_LAYER_METADATA" -> "ModuleExtern" [label="uses", fontsize=10];
+    "ROUTING_SERVICE_METADATA" -> "ModuleExtern" [label="uses", fontsize=10];
+    "ROAD_TRAFFIC_LAYER" -> "ModuleExtern" [label="uses", fontsize=10];
+    "ROAD_TRAFFIC_LAYER_INDIRECT" -> "ModuleExtern" [label="uses", fontsize=10];
+    "ROAD_LOCATION_TRAFFIC_LAYER" -> "ModuleExtern" [label="uses", fontsize=10];
+    "LANE_TRAFFIC_LAYER" -> "ModuleExtern" [label="uses", fontsize=10];
+    "LANE_TRAFFIC_LAYER_INDIRECT" -> "ModuleExtern" [label="uses", fontsize=10];
+    "DISPLAY_LINE_TRAFFIC_LAYER" -> "ModuleExtern" [label="uses", fontsize=10];
+    "ROAD_TRAFFIC_LAYER_METADATA" -> "ModuleExtern" [label="uses", fontsize=10];
+    "ROAD_TRAFFIC_LAYER_INDIRECT_METADATA" -> "ModuleExtern" [label="uses", fontsize=10];
+    "ROAD_LOCATION_TRAFFIC_LAYER_METADATA" -> "ModuleExtern" [label="uses", fontsize=10];
+    "LANE_TRAFFIC_LAYER_METADATA" -> "ModuleExtern" [label="uses", fontsize=10];
+    "LANE_TRAFFIC_LAYER_INDIRECT_METADATA" -> "ModuleExtern" [label="uses", fontsize=10];
+    "DISPLAY_LINE_TRAFFIC_LAYER_METADATA" -> "ModuleExtern" [label="uses", fontsize=10];
+    "ROAD_ROUTING_LAYER" -> "ModuleExtern" [label="uses", fontsize=10];
+    "ROAD_ROUTING_METADATA" -> "ModuleExtern" [label="uses", fontsize=10];
+    "LANE_ROUTING_LAYER" -> "ModuleExtern" [label="uses", fontsize=10];
+    "LANE_ROUTING_METADATA" -> "ModuleExtern" [label="uses", fontsize=10];
+    "ADAS_ROAD_LAYER" -> "ModuleExtern" [label="uses", fontsize=10];
+    "ADAS_CLASSIC_LOCATION_LAYER" -> "ModuleExtern" [label="uses", fontsize=10];
+    "ADAS_LANE_LAYER" -> "ModuleExtern" [label="uses", fontsize=10];
+    "ADAS_ROAD_LAYER_METADATA" -> "ModuleExtern" [label="uses", fontsize=10];
+    "ADAS_CLASSIC_LOCATION_LAYER_METADATA" -> "ModuleExtern" [label="uses", fontsize=10];
+    "ADAS_LANE_LAYER_METADATA" -> "ModuleExtern" [label="uses", fontsize=10];
+    "VEHICLE_SERVICE_METADATA" -> "ModuleExtern" [label="uses", fontsize=10];
+    "ROAD_INSTRUCTIONS_LAYER" -> "ModuleExtern" [label="uses", fontsize=10];
+    "ROAD_INSTRUCTIONS_LAYER_METADATA" -> "ModuleExtern" [label="uses", fontsize=10];
+    "LANE_INSTRUCTIONS_LAYER" -> "ModuleExtern" [label="uses", fontsize=10];
+    "LANE_INSTRUCTIONS_LAYER_METADATA" -> "ModuleExtern" [label="uses", fontsize=10];
+    "INSTRUCTIONS_IMAGE_LAYER" -> "ModuleExtern" [label="uses", fontsize=10];
+    "INSTRUCTIONS_IMAGE_LAYER_METADATA" -> "ModuleExtern" [label="uses", fontsize=10];
+    "POI_LAYER" -> "ModuleExtern" [label="uses", fontsize=10];
+    "POI_ATTRIBUTE_LAYER" -> "ModuleExtern" [label="uses", fontsize=10];
+    "POI_ATTRIBUTE_LAYER_INDIRECT" -> "ModuleExtern" [label="uses", fontsize=10];
+    "POI_RELATION_LAYER" -> "ModuleExtern" [label="uses", fontsize=10];
+    "POI_LAYER_METADATA" -> "ModuleExtern" [label="uses", fontsize=10];
+    "POI_ATTRIBUTE_LAYER_METADATA" -> "ModuleExtern" [label="uses", fontsize=10];
+    "POI_ATTRIBUTE_LAYER_INDIRECT_METADATA" -> "ModuleExtern" [label="uses", fontsize=10];
+    "POI_RELATION_LAYER_METADATA" -> "ModuleExtern" [label="uses", fontsize=10];
+    "POI_SEARCH_METADATA" -> "ModuleExtern" [label="uses", fontsize=10];
+    "POI_SEARCH_RESULT_DETAILS" -> "ModuleExtern" [label="uses", fontsize=10];
+    "POI_SEARCH_FILTER" -> "ModuleExtern" [label="uses", fontsize=10];
+    "SMART_LAYER_SERVICE_METADATA" -> "ModuleExtern" [label="uses", fontsize=10];
+    "SMART_RASTER_SERVICE_METADATA" -> "ModuleExtern" [label="uses", fontsize=10];
+    "ROAD_LAYER" -> "ModuleExtern" [label="uses", fontsize=10];
+    "ROAD_GEOMETRY_LAYER" -> "ModuleExtern" [label="uses", fontsize=10];
+    "MATCHED_ROAD_PATH_LAYER" -> "ModuleExtern" [label="uses", fontsize=10];
+    "ROAD_LAYER_METADATA" -> "ModuleExtern" [label="uses", fontsize=10];
+    "ROAD_GEOMETRY_LAYER_METADATA" -> "ModuleExtern" [label="uses", fontsize=10];
+    "MATCHED_ROAD_PATH_LAYER_METADATA" -> "ModuleExtern" [label="uses", fontsize=10];
+    "PARKING_FACILITY_LAYER" -> "ModuleExtern" [label="uses", fontsize=10];
+    "PARKING_FACILITY_LAYER_METADATA" -> "ModuleExtern" [label="uses", fontsize=10];
+    "PARKING_FACILITY_RELATION_LAYER" -> "ModuleExtern" [label="uses", fontsize=10];
+    "PARKING_FACILITY_RELATION_LAYER_METADATA" -> "ModuleExtern" [label="uses", fontsize=10];
+    "PARKING_FACILITY_ATTRIBUTE_LAYER" -> "ModuleExtern" [label="uses", fontsize=10];
+    "PARKING_FACILITY_ATTRIBUTE_LAYER_METADATA" -> "ModuleExtern" [label="uses", fontsize=10];
+    "DISPLAY_LAYER_2D" -> "ModuleExtern" [label="uses", fontsize=10];
+    "ICON_LAYER" -> "ModuleExtern" [label="uses", fontsize=10];
+    "DISPLAY_LAYER_2D_METADATA" -> "ModuleExtern" [label="uses", fontsize=10];
+    "ICON_LAYER_METADATA" -> "ModuleExtern" [label="uses", fontsize=10];
+    "DISPLAY_LAYER_3D" -> "ModuleExtern" [label="uses", fontsize=10];
+    "DISPLAY_LAYER_3D_METADATA" -> "ModuleExtern" [label="uses", fontsize=10];
+    "DISPLAY_LAYER_3D_STYLE" -> "ModuleExtern" [label="uses", fontsize=10];
+    "DISPLAY_LAYER_3D_STYLE_METADATA" -> "ModuleExtern" [label="uses", fontsize=10];
+    "HEIGHTMAP_LAYER" -> "ModuleExtern" [label="uses", fontsize=10];
+    "HEIGHTMAP_LAYER_METADATA" -> "ModuleExtern" [label="uses", fontsize=10];
+    "BDAM_LAYER" -> "ModuleExtern" [label="uses", fontsize=10];
+    "BDAM_LAYER_METADATA" -> "ModuleExtern" [label="uses", fontsize=10];
+    "GLTF_LAYER" -> "ModuleExtern" [label="uses", fontsize=10];
+    "GLTF_LAYER_METADATA" -> "ModuleExtern" [label="uses", fontsize=10];
+    "DISPLAY_ORTHO_IMAGE_CONFIG" -> "ModuleExtern" [label="uses", fontsize=10];
+    "DISPLAY_ORTHO_IMAGE_SERVICE_METADATA" -> "ModuleExtern" [label="uses", fontsize=10];
+    "GenericIconSetMapElement" -> "ModuleExtern" [label="uses", fontsize=10];
+    "DISPLAY_ATTRIBUTE_LAYER" -> "ModuleExtern" [label="uses", fontsize=10];
+    "DISPLAY_3D_ATTRIBUTE_LAYER" -> "ModuleExtern" [label="uses", fontsize=10];
+    "DISPLAY_ATTRIBUTE_LAYER_METADATA" -> "ModuleExtern" [label="uses", fontsize=10];
+    "DISPLAY_3D_ATTRIBUTE_LAYER_METADATA" -> "ModuleExtern" [label="uses", fontsize=10];
+    "ROAD_NAME_LAYER" -> "ModuleExtern" [label="uses", fontsize=10];
+    "LANE_NAME_LAYER" -> "ModuleExtern" [label="uses", fontsize=10];
+    "POI_NAME_LAYER" -> "ModuleExtern" [label="uses", fontsize=10];
+    "DISPLAY_NAME_LAYER" -> "ModuleExtern" [label="uses", fontsize=10];
+    "ROAD_NAME_LAYER_METADATA" -> "ModuleExtern" [label="uses", fontsize=10];
+    "LANE_NAME_LAYER_METADATA" -> "ModuleExtern" [label="uses", fontsize=10];
+    "POI_NAME_LAYER_METADATA" -> "ModuleExtern" [label="uses", fontsize=10];
+    "DISPLAY_NAME_LAYER_METADATA" -> "ModuleExtern" [label="uses", fontsize=10];
+    "ADDRESS_SEARCH_METADATA" -> "ModuleExtern" [label="uses", fontsize=10];
+    "ADDRESS_SEARCH_RESULT_DETAILS" -> "ModuleExtern" [label="uses", fontsize=10];
+    "ADDRESS_SEARCH_FILTER" -> "ModuleExtern" [label="uses", fontsize=10];
+    "ROAD_RULES_LAYER" -> "ModuleExtern" [label="uses", fontsize=10];
+    "ROAD_RULES_LAYER_INDIRECT" -> "ModuleExtern" [label="uses", fontsize=10];
+    "ROAD_LOCATION_RULES_LAYER" -> "ModuleExtern" [label="uses", fontsize=10];
+    "LANE_RULES_LAYER" -> "ModuleExtern" [label="uses", fontsize=10];
+    "LANE_RULES_LAYER_INDIRECT" -> "ModuleExtern" [label="uses", fontsize=10];
+    "REGION_RULES_LAYER_ROADS" -> "ModuleExtern" [label="uses", fontsize=10];
+    "REGION_RULES_LAYER_LANES" -> "ModuleExtern" [label="uses", fontsize=10];
+    "DISPLAY_LINE_RULES_LAYER" -> "ModuleExtern" [label="uses", fontsize=10];
+    "REGION_RULES_LAYER_ROADS_METADATA" -> "ModuleExtern" [label="uses", fontsize=10];
+    "REGION_RULES_LAYER_LANES_METADATA" -> "ModuleExtern" [label="uses", fontsize=10];
+    "ROAD_RULES_LAYER_METADATA" -> "ModuleExtern" [label="uses", fontsize=10];
+    "ROAD_RULES_LAYER_INDIRECT_METADATA" -> "ModuleExtern" [label="uses", fontsize=10];
+    "ROAD_LOCATION_RULES_LAYER_METADATA" -> "ModuleExtern" [label="uses", fontsize=10];
+    "LANE_RULES_LAYER_METADATA" -> "ModuleExtern" [label="uses", fontsize=10];
+    "LANE_RULES_LAYER_INDIRECT_METADATA" -> "ModuleExtern" [label="uses", fontsize=10];
+    "DISPLAY_LINE_RULES_LAYER_METADATA" -> "ModuleExtern" [label="uses", fontsize=10];
+    "ROAD_CHARACTERISTICS_LAYER" -> "ModuleExtern" [label="uses", fontsize=10];
+    "ROAD_CHARACTERISTICS_LAYER_INDIRECT" -> "ModuleExtern" [label="uses", fontsize=10];
+    "LANE_CHARACTERISTICS_LAYER" -> "ModuleExtern" [label="uses", fontsize=10];
+    "ROAD_LOCATION_CHARACTERISTICS_LAYER" -> "ModuleExtern" [label="uses", fontsize=10];
+    "DISPLAY_LINE_CHARACTERISTICS_LAYER" -> "ModuleExtern" [label="uses", fontsize=10];
+    "ROAD_CHARACTERISTICS_LAYER_METADATA" -> "ModuleExtern" [label="uses", fontsize=10];
+    "ROAD_CHARACTERISTICS_LAYER_INDIRECT_METADATA" -> "ModuleExtern" [label="uses", fontsize=10];
+    "LANE_CHARACTERISTICS_LAYER_METADATA" -> "ModuleExtern" [label="uses", fontsize=10];
+    "ROAD_LOCATION_CHARACTERISTICS_LAYER_METADATA" -> "ModuleExtern" [label="uses", fontsize=10];
+    "DISPLAY_LINE_CHARACTERISTICS_LAYER_METADATA" -> "ModuleExtern" [label="uses", fontsize=10];
+    "LANE_LAYER" -> "ModuleExtern" [label="uses", fontsize=10];
+    "LANE_GEOMETRY_LAYER" -> "ModuleExtern" [label="uses", fontsize=10];
+    "ROAD_SURFACE_LAYER" -> "ModuleExtern" [label="uses", fontsize=10];
+    "MATCHED_LANE_GROUP_PATH_LAYER" -> "ModuleExtern" [label="uses", fontsize=10];
+    "LANE_LAYER_METADATA" -> "ModuleExtern" [label="uses", fontsize=10];
+    "LANE_GEOMETRY_LAYER_METADATA" -> "ModuleExtern" [label="uses", fontsize=10];
+    "ROAD_SURFACE_LAYER_METADATA" -> "ModuleExtern" [label="uses", fontsize=10];
+}

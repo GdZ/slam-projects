@@ -1,0 +1,36 @@
+/**
+ * This dot file creates symbol collaboration diagram for OccupancyGridAttributeMapListHeader.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="OccupancyGridAttributeMapListHeader collaboration diagram";
+
+    subgraph "cluster_nds.localization.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.localization.instantiations";
+        tooltip="Package nds.localization.instantiations";
+        href="../../../content/packages/nds.localization.instantiations.html#Package-nds-localization-instantiations";
+        target="_parent";
+
+        "OccupancyGridAttributeMapListHeader" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.localization.instantiations.html#InstantiateType-OccupancyGridAttributeMapListHeader" title="InstantiateType defined in nds.localization.instantiations">OccupancyGridAttributeMapListHeader</td></tr></table></font>>];
+        "AttributeMapListHeader&lt;OccupancyGridRelationAttributeType&gt;" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.attributemap.html#Structure-AttributeMapListHeader" title="Structure defined in nds.core.attributemap">AttributeMapListHeader</td><td>&lt;</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.localization.attributes.html#Enum-OccupancyGridRelationAttributeType" title="Enum defined in nds.localization.attributes">OccupancyGridRelationAttributeType</td></tr></table></td><td>&gt;</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.localization.attributes"
+    {
+        style="dashed, rounded";
+        label="nds.localization.attributes";
+        tooltip="Package nds.localization.attributes";
+        href="../../../content/packages/nds.localization.attributes.html#Package-nds-localization-attributes";
+        target="_parent";
+
+        "OccupancyGridRelationAttributeType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.localization.attributes.html#Enum-OccupancyGridRelationAttributeType" title="Enum defined in nds.localization.attributes">OccupancyGridRelationAttributeType</td></tr></table></font>>];
+    }
+
+    "OccupancyGridAttributeMapListHeader" -> "AttributeMapListHeader&lt;OccupancyGridRelationAttributeType&gt;" [label="uses", fontsize=10];
+    "OccupancyGridAttributeMapListHeader" -> "OccupancyGridRelationAttributeType" [label="uses", fontsize=10];
+}

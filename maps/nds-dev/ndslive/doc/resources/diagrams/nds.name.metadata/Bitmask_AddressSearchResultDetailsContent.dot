@@ -1,0 +1,24 @@
+/**
+ * This dot file creates symbol collaboration diagram for AddressSearchResultDetailsContent.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="AddressSearchResultDetailsContent collaboration diagram";
+
+    subgraph "cluster_nds.name.metadata"
+    {
+        style="dashed, rounded";
+        label="nds.name.metadata";
+        tooltip="Package nds.name.metadata";
+        href="../../../content/packages/nds.name.metadata.html#Package-nds-name-metadata";
+        target="_parent";
+
+        "AddressSearchResultDetailsContent" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.metadata.html#Bitmask-AddressSearchResultDetailsContent" title="Bitmask defined in nds.name.metadata">AddressSearchResultDetailsContent</td></tr></table></font>>];
+        "AddressSearchResultDetails" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.metadata.html#Structure-AddressSearchResultDetails" title="Structure defined in nds.name.metadata">AddressSearchResultDetails</td></tr></table></font>>];
+    }
+
+    "AddressSearchResultDetails" -> "AddressSearchResultDetailsContent" [label="uses", fontsize=10];
+}

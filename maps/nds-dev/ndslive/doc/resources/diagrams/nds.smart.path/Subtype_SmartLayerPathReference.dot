@@ -1,0 +1,48 @@
+/**
+ * This dot file creates symbol collaboration diagram for SmartLayerPathReference.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="SmartLayerPathReference collaboration diagram";
+
+    subgraph "cluster_nds.smart.path"
+    {
+        style="dashed, rounded";
+        label="nds.smart.path";
+        tooltip="Package nds.smart.path";
+        href="../../../content/packages/nds.smart.path.html#Package-nds-smart-path";
+        target="_parent";
+
+        "SmartLayerPathReference" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.path.html#Subtype-SmartLayerPathReference" title="Subtype defined in nds.smart.path">SmartLayerPathReference</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.location"
+    {
+        style="dashed, rounded";
+        label="nds.core.location";
+        tooltip="Package nds.core.location";
+        href="../../../content/packages/nds.core.location.html#Package-nds-core-location";
+        target="_parent";
+
+        "RoadLocationPath" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.location.html#Structure-RoadLocationPath" title="Structure defined in nds.core.location">RoadLocationPath</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.smart.services"
+    {
+        style="dashed, rounded";
+        label="nds.smart.services";
+        tooltip="Package nds.smart.services";
+        href="../../../content/packages/nds.smart.services.html#Package-nds-smart-services";
+        target="_parent";
+
+        "SmartLayerPathService" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.services.html#Service-SmartLayerPathService" title="Service defined in nds.smart.services">SmartLayerPathService</td></tr></table></font>>];
+        "SmartLayerPathHorizonService" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.services.html#Service-SmartLayerPathHorizonService" title="Service defined in nds.smart.services">SmartLayerPathHorizonService</td></tr></table></font>>];
+    }
+
+    "SmartLayerPathReference" -> "RoadLocationPath" [label="uses", fontsize=10];
+    "SmartLayerPathService" -> "SmartLayerPathReference" [label="uses", fontsize=10];
+    "SmartLayerPathHorizonService" -> "SmartLayerPathReference" [label="uses", fontsize=10];
+}

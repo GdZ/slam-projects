@@ -1,0 +1,126 @@
+/**
+ * This dot file creates symbol collaboration diagram for SmartLayerHeader.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="SmartLayerHeader collaboration diagram";
+
+    subgraph "cluster_nds.smart.types"
+    {
+        style="dashed, rounded";
+        label="nds.smart.types";
+        tooltip="Package nds.smart.types";
+        href="../../../content/packages/nds.smart.types.html#Package-nds-smart-types";
+        target="_parent";
+
+        "SmartLayerHeader" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.types.html#Structure-SmartLayerHeader" title="Structure defined in nds.smart.types">SmartLayerHeader</td></tr></table></font>>];
+        "DataLayerId" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.types.html#Subtype-DataLayerId" title="Subtype defined in nds.smart.types">DataLayerId</td></tr></table></font>>];
+        "DataLayerLifetime" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.types.html#Structure-DataLayerLifetime" title="Structure defined in nds.smart.types">DataLayerLifetime</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.packaging"
+    {
+        style="dashed, rounded";
+        label="nds.core.packaging";
+        tooltip="Package nds.core.packaging";
+        href="../../../content/packages/nds.core.packaging.html#Package-nds-core-packaging";
+        target="_parent";
+
+        "PackagingDetails" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.packaging.html#Structure-PackagingDetails" title="Structure defined in nds.core.packaging">PackagingDetails</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.smart.tile"
+    {
+        style="dashed, rounded";
+        label="nds.smart.tile";
+        tooltip="Package nds.smart.tile";
+        href="../../../content/packages/nds.smart.tile.html#Package-nds-smart-tile";
+        target="_parent";
+
+        "SmartLayerTile" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.tile.html#Structure-SmartLayerTile" title="Structure defined in nds.smart.tile">SmartLayerTile</td></tr></table></font>>];
+        "SmartLayerTileHeaderList" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.tile.html#Structure-SmartLayerTileHeaderList" title="Structure defined in nds.smart.tile">SmartLayerTileHeaderList</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.smart.object"
+    {
+        style="dashed, rounded";
+        label="nds.smart.object";
+        tooltip="Package nds.smart.object";
+        href="../../../content/packages/nds.smart.object.html#Package-nds-smart-object";
+        target="_parent";
+
+        "SmartLayerObject" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.object.html#Structure-SmartLayerObject" title="Structure defined in nds.smart.object">SmartLayerObject</td></tr></table></font>>];
+        "SmartLayerObjectHeaderList" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.object.html#Structure-SmartLayerObjectHeaderList" title="Structure defined in nds.smart.object">SmartLayerObjectHeaderList</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.smart.path"
+    {
+        style="dashed, rounded";
+        label="nds.smart.path";
+        tooltip="Package nds.smart.path";
+        href="../../../content/packages/nds.smart.path.html#Package-nds-smart-path";
+        target="_parent";
+
+        "SmartLayerPath" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.path.html#Structure-SmartLayerPath" title="Structure defined in nds.smart.path">SmartLayerPath</td></tr></table></font>>];
+        "SmartLayerPathSegment" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.path.html#Structure-SmartLayerPathSegment" title="Structure defined in nds.smart.path">SmartLayerPathSegment</td></tr></table></font>>];
+        "SmartLayerLocationIdPath" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.path.html#Structure-SmartLayerLocationIdPath" title="Structure defined in nds.smart.path">SmartLayerLocationIdPath</td></tr></table></font>>];
+        "SmartLayerLocationIdPathSegment" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.path.html#Structure-SmartLayerLocationIdPathSegment" title="Structure defined in nds.smart.path">SmartLayerLocationIdPathSegment</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.smart.mesh"
+    {
+        style="dashed, rounded";
+        label="nds.smart.mesh";
+        tooltip="Package nds.smart.mesh";
+        href="../../../content/packages/nds.smart.mesh.html#Package-nds-smart-mesh";
+        target="_parent";
+
+        "SmartMeshIndex" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.mesh.html#Structure-SmartMeshIndex" title="Structure defined in nds.smart.mesh">SmartMeshIndex</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.smart.services"
+    {
+        style="dashed, rounded";
+        label="nds.smart.services";
+        tooltip="Package nds.smart.services";
+        href="../../../content/packages/nds.smart.services.html#Package-nds-smart-services";
+        target="_parent";
+
+        "SmartLayerTileService" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.services.html#Service-SmartLayerTileService" title="Service defined in nds.smart.services">SmartLayerTileService</td></tr></table></font>>];
+        "SmartLayerObjectService" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.services.html#Service-SmartLayerObjectService" title="Service defined in nds.smart.services">SmartLayerObjectService</td></tr></table></font>>];
+        "SmartLayerPathService" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.services.html#Service-SmartLayerPathService" title="Service defined in nds.smart.services">SmartLayerPathService</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.smart.filestore"
+    {
+        style="dashed, rounded";
+        label="nds.smart.filestore";
+        tooltip="Package nds.smart.filestore";
+        href="../../../content/packages/nds.smart.filestore.html#Package-nds-smart-filestore";
+        target="_parent";
+
+        "SmartLayerTileTable" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.filestore.html#SqlTable-SmartLayerTileTable" title="SqlTable defined in nds.smart.filestore">SmartLayerTileTable</td></tr></table></font>>];
+        "SmartLayerObjectTable" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.filestore.html#SqlTable-SmartLayerObjectTable" title="SqlTable defined in nds.smart.filestore">SmartLayerObjectTable</td></tr></table></font>>];
+    }
+
+    "SmartLayerHeader" -> "DataLayerId" [label="uses", fontsize=10];
+    "SmartLayerHeader" -> "DataLayerLifetime" [label="uses", fontsize=10];
+    "SmartLayerHeader" -> "PackagingDetails" [label="uses", fontsize=10];
+    "SmartLayerTile" -> "SmartLayerHeader" [label="uses", fontsize=10];
+    "SmartLayerTileHeaderList" -> "SmartLayerHeader" [label="uses", fontsize=10];
+    "SmartLayerObject" -> "SmartLayerHeader" [label="uses", fontsize=10];
+    "SmartLayerObjectHeaderList" -> "SmartLayerHeader" [label="uses", fontsize=10];
+    "SmartLayerPath" -> "SmartLayerHeader" [label="uses", fontsize=10];
+    "SmartLayerPathSegment" -> "SmartLayerHeader" [label="uses", fontsize=10];
+    "SmartLayerLocationIdPath" -> "SmartLayerHeader" [label="uses", fontsize=10];
+    "SmartLayerLocationIdPathSegment" -> "SmartLayerHeader" [label="uses", fontsize=10];
+    "SmartMeshIndex" -> "SmartLayerHeader" [label="uses", fontsize=10];
+    "SmartLayerTileService" -> "SmartLayerHeader" [label="uses", fontsize=10];
+    "SmartLayerObjectService" -> "SmartLayerHeader" [label="uses", fontsize=10];
+    "SmartLayerPathService" -> "SmartLayerHeader" [label="uses", fontsize=10];
+    "SmartLayerTileTable" -> "SmartLayerHeader" [label="uses", fontsize=10];
+    "SmartLayerObjectTable" -> "SmartLayerHeader" [label="uses", fontsize=10];
+}

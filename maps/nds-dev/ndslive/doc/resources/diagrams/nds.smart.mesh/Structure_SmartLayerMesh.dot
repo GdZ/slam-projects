@@ -1,0 +1,48 @@
+/**
+ * This dot file creates symbol collaboration diagram for SmartLayerMesh.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="SmartLayerMesh collaboration diagram";
+
+    subgraph "cluster_nds.smart.mesh"
+    {
+        style="dashed, rounded";
+        label="nds.smart.mesh";
+        tooltip="Package nds.smart.mesh";
+        href="../../../content/packages/nds.smart.mesh.html#Package-nds-smart-mesh";
+        target="_parent";
+
+        "SmartLayerMesh" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.mesh.html#Structure-SmartLayerMesh" title="Structure defined in nds.smart.mesh">SmartLayerMesh</td></tr></table></font>>];
+        "SmartMeshId" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.mesh.html#Subtype-SmartMeshId" title="Subtype defined in nds.smart.mesh">SmartMeshId</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.smart.tile"
+    {
+        style="dashed, rounded";
+        label="nds.smart.tile";
+        tooltip="Package nds.smart.tile";
+        href="../../../content/packages/nds.smart.tile.html#Package-nds-smart-tile";
+        target="_parent";
+
+        "SmartLayerTile" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.tile.html#Structure-SmartLayerTile" title="Structure defined in nds.smart.tile">SmartLayerTile</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.smart.services"
+    {
+        style="dashed, rounded";
+        label="nds.smart.services";
+        tooltip="Package nds.smart.services";
+        href="../../../content/packages/nds.smart.services.html#Package-nds-smart-services";
+        target="_parent";
+
+        "SmartLayerMeshService" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.services.html#Service-SmartLayerMeshService" title="Service defined in nds.smart.services">SmartLayerMeshService</td></tr></table></font>>];
+    }
+
+    "SmartLayerMesh" -> "SmartMeshId" [label="uses", fontsize=10];
+    "SmartLayerMesh" -> "SmartLayerTile" [label="uses", fontsize=10];
+    "SmartLayerMeshService" -> "SmartLayerMesh" [label="uses", fontsize=10];
+}

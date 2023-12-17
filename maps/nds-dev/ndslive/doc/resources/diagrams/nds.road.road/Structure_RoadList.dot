@@ -1,0 +1,36 @@
+/**
+ * This dot file creates symbol collaboration diagram for RoadList.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="RoadList collaboration diagram";
+
+    subgraph "cluster_nds.road.road"
+    {
+        style="dashed, rounded";
+        label="nds.road.road";
+        tooltip="Package nds.road.road";
+        href="../../../content/packages/nds.road.road.html#Package-nds-road-road";
+        target="_parent";
+
+        "RoadList" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.road.road.html#Structure-RoadList" title="Structure defined in nds.road.road">RoadList</td></tr></table></font>>];
+        "Road" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.road.road.html#Structure-Road" title="Structure defined in nds.road.road">Road</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.road.layer"
+    {
+        style="dashed, rounded";
+        label="nds.road.layer";
+        tooltip="Package nds.road.layer";
+        href="../../../content/packages/nds.road.layer.html#Package-nds-road-layer";
+        target="_parent";
+
+        "RoadLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.road.layer.html#Structure-RoadLayer" title="Structure defined in nds.road.layer">RoadLayer</td></tr></table></font>>];
+    }
+
+    "RoadList" -> "Road" [label="uses", fontsize=10];
+    "RoadLayer" -> "RoadList" [label="uses", fontsize=10];
+}

@@ -1,0 +1,24 @@
+/**
+ * This dot file creates symbol collaboration diagram for WattHrsPer100km.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="WattHrsPer100km collaboration diagram";
+
+    subgraph "cluster_nds.core.vehicle"
+    {
+        style="dashed, rounded";
+        label="nds.core.vehicle";
+        tooltip="Package nds.core.vehicle";
+        href="../../../content/packages/nds.core.vehicle.html#Package-nds-core-vehicle";
+        target="_parent";
+
+        "WattHrsPer100km" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.vehicle.html#Subtype-WattHrsPer100km" title="Subtype defined in nds.core.vehicle">WattHrsPer100km</td></tr></table></font>>];
+        "ElectricConsumptionCurve" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.vehicle.html#Structure-ElectricConsumptionCurve" title="Structure defined in nds.core.vehicle">ElectricConsumptionCurve</td></tr></table></font>>];
+    }
+
+    "ElectricConsumptionCurve" -> "WattHrsPer100km" [label="uses", fontsize=10];
+}

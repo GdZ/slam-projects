@@ -1,0 +1,80 @@
+/**
+ * This dot file creates symbol collaboration diagram for RoadCharacteristicsLayer.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="RoadCharacteristicsLayer collaboration diagram";
+
+    subgraph "cluster_nds.characteristics.layer"
+    {
+        style="dashed, rounded";
+        label="nds.characteristics.layer";
+        tooltip="Package nds.characteristics.layer";
+        href="../../../content/packages/nds.characteristics.layer.html#Package-nds-characteristics-layer";
+        target="_parent";
+
+        "RoadCharacteristicsLayer" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.layer.html#Structure-RoadCharacteristicsLayer" title="Structure defined in nds.characteristics.layer">RoadCharacteristicsLayer</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.geometry"
+    {
+        style="dashed, rounded";
+        label="nds.core.geometry";
+        tooltip="Package nds.core.geometry";
+        href="../../../content/packages/nds.core.geometry.html#Package-nds-core-geometry";
+        target="_parent";
+
+        "CoordShift" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Subtype-CoordShift" title="Subtype defined in nds.core.geometry">CoordShift</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.characteristics.metadata"
+    {
+        style="dashed, rounded";
+        label="nds.characteristics.metadata";
+        tooltip="Package nds.characteristics.metadata";
+        href="../../../content/packages/nds.characteristics.metadata.html#Package-nds-characteristics-metadata";
+        target="_parent";
+
+        "RoadCharacsLayerContent" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.metadata.html#Bitmask-RoadCharacsLayerContent" title="Bitmask defined in nds.characteristics.metadata">RoadCharacsLayerContent</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.characteristics.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.characteristics.instantiations";
+        tooltip="Package nds.characteristics.instantiations";
+        href="../../../content/packages/nds.characteristics.instantiations.html#Package-nds-characteristics-instantiations";
+        target="_parent";
+
+        "CharacsRoadRangeAttributeMapList" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.instantiations.html#InstantiateType-CharacsRoadRangeAttributeMapList" title="InstantiateType defined in nds.characteristics.instantiations">CharacsRoadRangeAttributeMapList</td></tr></table></font>>];
+        "CharacsRoadPositionAttributeMapList" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.instantiations.html#InstantiateType-CharacsRoadPositionAttributeMapList" title="InstantiateType defined in nds.characteristics.instantiations">CharacsRoadPositionAttributeMapList</td></tr></table></font>>];
+        "CharacsRoadRangeAttributeSetList" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.instantiations.html#InstantiateType-CharacsRoadRangeAttributeSetList" title="InstantiateType defined in nds.characteristics.instantiations">CharacsRoadRangeAttributeSetList</td></tr></table></font>>];
+        "CharacsRoadPositionAttributeSetList" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.instantiations.html#InstantiateType-CharacsRoadPositionAttributeSetList" title="InstantiateType defined in nds.characteristics.instantiations">CharacsRoadPositionAttributeSetList</td></tr></table></font>>];
+        "CharacsTransitionAttributeMapList" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.instantiations.html#InstantiateType-CharacsTransitionAttributeMapList" title="InstantiateType defined in nds.characteristics.instantiations">CharacsTransitionAttributeMapList</td></tr></table></font>>];
+        "CharacsTransitionAttributeSetList" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.instantiations.html#InstantiateType-CharacsTransitionAttributeSetList" title="InstantiateType defined in nds.characteristics.instantiations">CharacsTransitionAttributeSetList</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.system.types"
+    {
+        style="dashed, rounded";
+        label="nds.system.types";
+        tooltip="Package nds.system.types";
+        href="../../../content/packages/nds.system.types.html#Package-nds-system-types";
+        target="_parent";
+
+        "LayerType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.system.types.html#Enum-LayerType" title="Enum defined in nds.system.types">LayerType</td></tr></table></font>>];
+    }
+
+    "RoadCharacteristicsLayer" -> "CoordShift" [label="uses", fontsize=10];
+    "RoadCharacteristicsLayer" -> "RoadCharacsLayerContent" [label="uses", fontsize=10];
+    "RoadCharacteristicsLayer" -> "CharacsRoadRangeAttributeMapList" [label="uses", fontsize=10];
+    "RoadCharacteristicsLayer" -> "CharacsRoadPositionAttributeMapList" [label="uses", fontsize=10];
+    "RoadCharacteristicsLayer" -> "CharacsRoadRangeAttributeSetList" [label="uses", fontsize=10];
+    "RoadCharacteristicsLayer" -> "CharacsRoadPositionAttributeSetList" [label="uses", fontsize=10];
+    "RoadCharacteristicsLayer" -> "CharacsTransitionAttributeMapList" [label="uses", fontsize=10];
+    "RoadCharacteristicsLayer" -> "CharacsTransitionAttributeSetList" [label="uses", fontsize=10];
+    "RoadCharacteristicsLayer" -> "LayerType" [label="uses", fontsize=10];
+}

@@ -1,0 +1,36 @@
+/**
+ * This dot file creates symbol collaboration diagram for PhysicalBoundaryMaterial.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="PhysicalBoundaryMaterial collaboration diagram";
+
+    subgraph "cluster_nds.lane.types"
+    {
+        style="dashed, rounded";
+        label="nds.lane.types";
+        tooltip="Package nds.lane.types";
+        href="../../../content/packages/nds.lane.types.html#Package-nds-lane-types";
+        target="_parent";
+
+        "PhysicalBoundaryMaterial" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.types.html#Enum-PhysicalBoundaryMaterial" title="Enum defined in nds.lane.types">PhysicalBoundaryMaterial</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.lane.boundaries"
+    {
+        style="dashed, rounded";
+        label="nds.lane.boundaries";
+        tooltip="Package nds.lane.boundaries";
+        href="../../../content/packages/nds.lane.boundaries.html#Package-nds-lane-boundaries";
+        target="_parent";
+
+        "PhysicalDividerBoundaryElement" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.boundaries.html#Structure-PhysicalDividerBoundaryElement" title="Structure defined in nds.lane.boundaries">PhysicalDividerBoundaryElement</td></tr></table></font>>];
+        "PhysicalMarkingBoundaryElement" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.boundaries.html#Structure-PhysicalMarkingBoundaryElement" title="Structure defined in nds.lane.boundaries">PhysicalMarkingBoundaryElement</td></tr></table></font>>];
+    }
+
+    "PhysicalDividerBoundaryElement" -> "PhysicalBoundaryMaterial" [label="uses", fontsize=10];
+    "PhysicalMarkingBoundaryElement" -> "PhysicalBoundaryMaterial" [label="uses", fontsize=10];
+}

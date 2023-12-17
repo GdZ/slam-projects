@@ -1,0 +1,78 @@
+/**
+ * This dot file creates symbol collaboration diagram for PoiRoadPositionRelationMapList.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="PoiRoadPositionRelationMapList collaboration diagram";
+
+    subgraph "cluster_nds.poi.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.poi.instantiations";
+        tooltip="Package nds.poi.instantiations";
+        href="../../../content/packages/nds.poi.instantiations.html#Package-nds-poi-instantiations";
+        target="_parent";
+
+        "PoiRoadPositionRelationMapList" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.instantiations.html#InstantiateType-PoiRoadPositionRelationMapList" title="InstantiateType defined in nds.poi.instantiations">PoiRoadPositionRelationMapList</td></tr></table></font>>];
+        "AttributeMapList&lt;RoadReference,RoadPositionValidity,PoiRoadPositionRelationType,PoiRoadPositionRelationValue,CorePropertyType,CorePropertyValue&gt;" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.attributemap.html#Structure-AttributeMapList" title="Structure defined in nds.core.attributemap">AttributeMapList</td><td>&lt;</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.road.reference.types.html#Structure-RoadReference" title="Structure defined in nds.road.reference.types">RoadReference</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.road.reference.types.html#Structure-RoadPositionValidity" title="Structure defined in nds.road.reference.types">RoadPositionValidity</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.poi.html#Enum-PoiRoadPositionRelationType" title="Enum defined in nds.poi.poi">PoiRoadPositionRelationType</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.poi.html#Choice-PoiRoadPositionRelationValue" title="Choice defined in nds.poi.poi">PoiRoadPositionRelationValue</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.properties.html#Enum-CorePropertyType" title="Enum defined in nds.core.properties">CorePropertyType</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.properties.html#Choice-CorePropertyValue" title="Choice defined in nds.core.properties">CorePropertyValue</td></tr></table></td><td>&gt;</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.road.reference.types"
+    {
+        style="dashed, rounded";
+        label="nds.road.reference.types";
+        tooltip="Package nds.road.reference.types";
+        href="../../../content/packages/nds.road.reference.types.html#Package-nds-road-reference-types";
+        target="_parent";
+
+        "RoadReference" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.road.reference.types.html#Structure-RoadReference" title="Structure defined in nds.road.reference.types">RoadReference</td></tr></table></font>>];
+        "RoadPositionValidity" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.road.reference.types.html#Structure-RoadPositionValidity" title="Structure defined in nds.road.reference.types">RoadPositionValidity</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.poi.poi"
+    {
+        style="dashed, rounded";
+        label="nds.poi.poi";
+        tooltip="Package nds.poi.poi";
+        href="../../../content/packages/nds.poi.poi.html#Package-nds-poi-poi";
+        target="_parent";
+
+        "PoiRoadPositionRelationType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.poi.html#Enum-PoiRoadPositionRelationType" title="Enum defined in nds.poi.poi">PoiRoadPositionRelationType</td></tr></table></font>>];
+        "PoiRoadPositionRelationValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.poi.html#Choice-PoiRoadPositionRelationValue" title="Choice defined in nds.poi.poi">PoiRoadPositionRelationValue</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.properties"
+    {
+        style="dashed, rounded";
+        label="nds.core.properties";
+        tooltip="Package nds.core.properties";
+        href="../../../content/packages/nds.core.properties.html#Package-nds-core-properties";
+        target="_parent";
+
+        "CorePropertyType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.properties.html#Enum-CorePropertyType" title="Enum defined in nds.core.properties">CorePropertyType</td></tr></table></font>>];
+        "CorePropertyValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.properties.html#Choice-CorePropertyValue" title="Choice defined in nds.core.properties">CorePropertyValue</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.poi.layer"
+    {
+        style="dashed, rounded";
+        label="nds.poi.layer";
+        tooltip="Package nds.poi.layer";
+        href="../../../content/packages/nds.poi.layer.html#Package-nds-poi-layer";
+        target="_parent";
+
+        "PoiRelationLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.layer.html#Structure-PoiRelationLayer" title="Structure defined in nds.poi.layer">PoiRelationLayer</td></tr></table></font>>];
+    }
+
+    "PoiRoadPositionRelationMapList" -> "AttributeMapList&lt;RoadReference,RoadPositionValidity,PoiRoadPositionRelationType,PoiRoadPositionRelationValue,CorePropertyType,CorePropertyValue&gt;" [label="uses", fontsize=10];
+    "PoiRoadPositionRelationMapList" -> "RoadReference" [label="uses", fontsize=10];
+    "PoiRoadPositionRelationMapList" -> "RoadPositionValidity" [label="uses", fontsize=10];
+    "PoiRoadPositionRelationMapList" -> "PoiRoadPositionRelationType" [label="uses", fontsize=10];
+    "PoiRoadPositionRelationMapList" -> "PoiRoadPositionRelationValue" [label="uses", fontsize=10];
+    "PoiRoadPositionRelationMapList" -> "CorePropertyType" [label="uses", fontsize=10];
+    "PoiRoadPositionRelationMapList" -> "CorePropertyValue" [label="uses", fontsize=10];
+    "PoiRelationLayer" -> "PoiRoadPositionRelationMapList" [label="uses", fontsize=10];
+}

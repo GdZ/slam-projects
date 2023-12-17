@@ -1,0 +1,76 @@
+/**
+ * This dot file creates symbol collaboration diagram for RoadRulesLayerIndirect.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="RoadRulesLayerIndirect collaboration diagram";
+
+    subgraph "cluster_nds.rules.layer"
+    {
+        style="dashed, rounded";
+        label="nds.rules.layer";
+        tooltip="Package nds.rules.layer";
+        href="../../../content/packages/nds.rules.layer.html#Package-nds-rules-layer";
+        target="_parent";
+
+        "RoadRulesLayerIndirect" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.layer.html#Structure-RoadRulesLayerIndirect" title="Structure defined in nds.rules.layer">RoadRulesLayerIndirect</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.rules.metadata"
+    {
+        style="dashed, rounded";
+        label="nds.rules.metadata";
+        tooltip="Package nds.rules.metadata";
+        href="../../../content/packages/nds.rules.metadata.html#Package-nds-rules-metadata";
+        target="_parent";
+
+        "RoadRulesLayerContent" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.metadata.html#Bitmask-RoadRulesLayerContent" title="Bitmask defined in nds.rules.metadata">RoadRulesLayerContent</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.geometry"
+    {
+        style="dashed, rounded";
+        label="nds.core.geometry";
+        tooltip="Package nds.core.geometry";
+        href="../../../content/packages/nds.core.geometry.html#Package-nds-core-geometry";
+        target="_parent";
+
+        "CoordShift" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Subtype-CoordShift" title="Subtype defined in nds.core.geometry">CoordShift</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.rules.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.rules.instantiations";
+        tooltip="Package nds.rules.instantiations";
+        href="../../../content/packages/nds.rules.instantiations.html#Package-nds-rules-instantiations";
+        target="_parent";
+
+        "RulesIndirectRoadRangeAttributeMapList" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.instantiations.html#InstantiateType-RulesIndirectRoadRangeAttributeMapList" title="InstantiateType defined in nds.rules.instantiations">RulesIndirectRoadRangeAttributeMapList</td></tr></table></font>>];
+        "RulesIndirectRoadPositionAttributeMapList" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.instantiations.html#InstantiateType-RulesIndirectRoadPositionAttributeMapList" title="InstantiateType defined in nds.rules.instantiations">RulesIndirectRoadPositionAttributeMapList</td></tr></table></font>>];
+        "RulesIndirectRoadRangeAttributeSetList" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.instantiations.html#InstantiateType-RulesIndirectRoadRangeAttributeSetList" title="InstantiateType defined in nds.rules.instantiations">RulesIndirectRoadRangeAttributeSetList</td></tr></table></font>>];
+        "RulesIndirectRoadPositionAttributeSetList" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.instantiations.html#InstantiateType-RulesIndirectRoadPositionAttributeSetList" title="InstantiateType defined in nds.rules.instantiations">RulesIndirectRoadPositionAttributeSetList</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.system.types"
+    {
+        style="dashed, rounded";
+        label="nds.system.types";
+        tooltip="Package nds.system.types";
+        href="../../../content/packages/nds.system.types.html#Package-nds-system-types";
+        target="_parent";
+
+        "LayerType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.system.types.html#Enum-LayerType" title="Enum defined in nds.system.types">LayerType</td></tr></table></font>>];
+    }
+
+    "RoadRulesLayerIndirect" -> "RoadRulesLayerContent" [label="uses", fontsize=10];
+    "RoadRulesLayerIndirect" -> "CoordShift" [label="uses", fontsize=10];
+    "RoadRulesLayerIndirect" -> "RulesIndirectRoadRangeAttributeMapList" [label="uses", fontsize=10];
+    "RoadRulesLayerIndirect" -> "RulesIndirectRoadPositionAttributeMapList" [label="uses", fontsize=10];
+    "RoadRulesLayerIndirect" -> "RulesIndirectRoadRangeAttributeSetList" [label="uses", fontsize=10];
+    "RoadRulesLayerIndirect" -> "RulesIndirectRoadPositionAttributeSetList" [label="uses", fontsize=10];
+    "RoadRulesLayerIndirect" -> "LayerType" [label="uses", fontsize=10];
+}

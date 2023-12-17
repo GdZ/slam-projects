@@ -1,0 +1,78 @@
+/**
+ * This dot file creates symbol collaboration diagram for CharacsDisplayLineRangeAttributeMapList.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="CharacsDisplayLineRangeAttributeMapList collaboration diagram";
+
+    subgraph "cluster_nds.characteristics.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.characteristics.instantiations";
+        tooltip="Package nds.characteristics.instantiations";
+        href="../../../content/packages/nds.characteristics.instantiations.html#Package-nds-characteristics-instantiations";
+        target="_parent";
+
+        "CharacsDisplayLineRangeAttributeMapList" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.instantiations.html#InstantiateType-CharacsDisplayLineRangeAttributeMapList" title="InstantiateType defined in nds.characteristics.instantiations">CharacsDisplayLineRangeAttributeMapList</td></tr></table></font>>];
+        "AttributeMapList&lt;DisplayLineReference,DisplayLineRangeValidity,CharacsDisplayLineRangeAttributeType,CharacsDisplayLineRangeAttributeValue,CharacsPropertyType,CharacsPropertyValue&gt;" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.attributemap.html#Structure-AttributeMapList" title="Structure defined in nds.core.attributemap">AttributeMapList</td><td>&lt;</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.reference.types.html#Structure-DisplayLineReference" title="Structure defined in nds.display.reference.types">DisplayLineReference</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.reference.types.html#Structure-DisplayLineRangeValidity" title="Structure defined in nds.display.reference.types">DisplayLineRangeValidity</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.attributes.html#Enum-CharacsDisplayLineRangeAttributeType" title="Enum defined in nds.characteristics.attributes">CharacsDisplayLineRangeAttributeType</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.attributes.html#Choice-CharacsDisplayLineRangeAttributeValue" title="Choice defined in nds.characteristics.attributes">CharacsDisplayLineRangeAttributeValue</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.properties.html#Structure-CharacsPropertyType" title="Structure defined in nds.characteristics.properties">CharacsPropertyType</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.properties.html#Structure-CharacsPropertyValue" title="Structure defined in nds.characteristics.properties">CharacsPropertyValue</td></tr></table></td><td>&gt;</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.display.reference.types"
+    {
+        style="dashed, rounded";
+        label="nds.display.reference.types";
+        tooltip="Package nds.display.reference.types";
+        href="../../../content/packages/nds.display.reference.types.html#Package-nds-display-reference-types";
+        target="_parent";
+
+        "DisplayLineReference" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.reference.types.html#Structure-DisplayLineReference" title="Structure defined in nds.display.reference.types">DisplayLineReference</td></tr></table></font>>];
+        "DisplayLineRangeValidity" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.reference.types.html#Structure-DisplayLineRangeValidity" title="Structure defined in nds.display.reference.types">DisplayLineRangeValidity</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.characteristics.attributes"
+    {
+        style="dashed, rounded";
+        label="nds.characteristics.attributes";
+        tooltip="Package nds.characteristics.attributes";
+        href="../../../content/packages/nds.characteristics.attributes.html#Package-nds-characteristics-attributes";
+        target="_parent";
+
+        "CharacsDisplayLineRangeAttributeType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.attributes.html#Enum-CharacsDisplayLineRangeAttributeType" title="Enum defined in nds.characteristics.attributes">CharacsDisplayLineRangeAttributeType</td></tr></table></font>>];
+        "CharacsDisplayLineRangeAttributeValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.attributes.html#Choice-CharacsDisplayLineRangeAttributeValue" title="Choice defined in nds.characteristics.attributes">CharacsDisplayLineRangeAttributeValue</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.characteristics.properties"
+    {
+        style="dashed, rounded";
+        label="nds.characteristics.properties";
+        tooltip="Package nds.characteristics.properties";
+        href="../../../content/packages/nds.characteristics.properties.html#Package-nds-characteristics-properties";
+        target="_parent";
+
+        "CharacsPropertyType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.properties.html#Structure-CharacsPropertyType" title="Structure defined in nds.characteristics.properties">CharacsPropertyType</td></tr></table></font>>];
+        "CharacsPropertyValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.properties.html#Structure-CharacsPropertyValue" title="Structure defined in nds.characteristics.properties">CharacsPropertyValue</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.characteristics.layer"
+    {
+        style="dashed, rounded";
+        label="nds.characteristics.layer";
+        tooltip="Package nds.characteristics.layer";
+        href="../../../content/packages/nds.characteristics.layer.html#Package-nds-characteristics-layer";
+        target="_parent";
+
+        "DisplayLineCharacteristicsLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.layer.html#Structure-DisplayLineCharacteristicsLayer" title="Structure defined in nds.characteristics.layer">DisplayLineCharacteristicsLayer</td></tr></table></font>>];
+    }
+
+    "CharacsDisplayLineRangeAttributeMapList" -> "AttributeMapList&lt;DisplayLineReference,DisplayLineRangeValidity,CharacsDisplayLineRangeAttributeType,CharacsDisplayLineRangeAttributeValue,CharacsPropertyType,CharacsPropertyValue&gt;" [label="uses", fontsize=10];
+    "CharacsDisplayLineRangeAttributeMapList" -> "DisplayLineReference" [label="uses", fontsize=10];
+    "CharacsDisplayLineRangeAttributeMapList" -> "DisplayLineRangeValidity" [label="uses", fontsize=10];
+    "CharacsDisplayLineRangeAttributeMapList" -> "CharacsDisplayLineRangeAttributeType" [label="uses", fontsize=10];
+    "CharacsDisplayLineRangeAttributeMapList" -> "CharacsDisplayLineRangeAttributeValue" [label="uses", fontsize=10];
+    "CharacsDisplayLineRangeAttributeMapList" -> "CharacsPropertyType" [label="uses", fontsize=10];
+    "CharacsDisplayLineRangeAttributeMapList" -> "CharacsPropertyValue" [label="uses", fontsize=10];
+    "DisplayLineCharacteristicsLayer" -> "CharacsDisplayLineRangeAttributeMapList" [label="uses", fontsize=10];
+}

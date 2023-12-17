@@ -1,0 +1,40 @@
+/**
+ * This dot file creates symbol collaboration diagram for RegionLaneGroupRelationList.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="RegionLaneGroupRelationList collaboration diagram";
+
+    subgraph "cluster_nds.rules.layer"
+    {
+        style="dashed, rounded";
+        label="nds.rules.layer";
+        tooltip="Package nds.rules.layer";
+        href="../../../content/packages/nds.rules.layer.html#Package-nds-rules-layer";
+        target="_parent";
+
+        "RegionLaneGroupRelationList" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.layer.html#Structure-RegionLaneGroupRelationList" title="Structure defined in nds.rules.layer">RegionLaneGroupRelationList</td></tr></table></font>>];
+        "RegionRulesLayer&lt;RegionLaneGroupRelationList&gt;" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.layer.html#Structure-RegionRulesLayer" title="Structure defined in nds.rules.layer">RegionRulesLayer</td><td>&lt;</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.layer.html#Structure-RegionLaneGroupRelationList" title="Structure defined in nds.rules.layer">RegionLaneGroupRelationList</td></tr></table></td><td>&gt;</td></tr></table></font>>];
+        "RegionRulesLayerLanes" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.layer.html#InstantiateType-RegionRulesLayerLanes" title="InstantiateType defined in nds.rules.layer">RegionRulesLayerLanes</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.lane.reference.types"
+    {
+        style="dashed, rounded";
+        label="nds.lane.reference.types";
+        tooltip="Package nds.lane.reference.types";
+        href="../../../content/packages/nds.lane.reference.types.html#Package-nds-lane-reference-types";
+        target="_parent";
+
+        "LaneGroupId" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.reference.types.html#Subtype-LaneGroupId" title="Subtype defined in nds.lane.reference.types">LaneGroupId</td></tr></table></font>>];
+        "LaneGroupRangeValidity" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.reference.types.html#Structure-LaneGroupRangeValidity" title="Structure defined in nds.lane.reference.types">LaneGroupRangeValidity</td></tr></table></font>>];
+    }
+
+    "RegionLaneGroupRelationList" -> "LaneGroupId" [label="uses", fontsize=10];
+    "RegionLaneGroupRelationList" -> "LaneGroupRangeValidity" [label="uses", fontsize=10];
+    "RegionRulesLayer&lt;RegionLaneGroupRelationList&gt;" -> "RegionLaneGroupRelationList" [label="uses", fontsize=10];
+    "RegionRulesLayerLanes" -> "RegionLaneGroupRelationList" [label="uses", fontsize=10];
+}

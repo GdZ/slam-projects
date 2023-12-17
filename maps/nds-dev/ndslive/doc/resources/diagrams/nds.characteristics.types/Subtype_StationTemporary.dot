@@ -1,0 +1,46 @@
+/**
+ * This dot file creates symbol collaboration diagram for StationTemporary.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="StationTemporary collaboration diagram";
+
+    subgraph "cluster_nds.characteristics.types"
+    {
+        style="dashed, rounded";
+        label="nds.characteristics.types";
+        tooltip="Package nds.characteristics.types";
+        href="../../../content/packages/nds.characteristics.types.html#Package-nds-characteristics-types";
+        target="_parent";
+
+        "StationTemporary" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.types.html#Subtype-StationTemporary" title="Subtype defined in nds.characteristics.types">StationTemporary</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.types"
+    {
+        style="dashed, rounded";
+        label="nds.core.types";
+        tooltip="Package nds.core.types";
+        href="../../../content/packages/nds.core.types.html#Package-nds-core-types";
+        target="_parent";
+
+        "Flag" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Structure-Flag" title="Structure defined in nds.core.types">Flag</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.characteristics.properties"
+    {
+        style="dashed, rounded";
+        label="nds.characteristics.properties";
+        tooltip="Package nds.characteristics.properties";
+        href="../../../content/packages/nds.characteristics.properties.html#Package-nds-characteristics-properties";
+        target="_parent";
+
+        "PropertyValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.properties.html#Choice-PropertyValue" title="Choice defined in nds.characteristics.properties">PropertyValue</td></tr></table></font>>];
+    }
+
+    "StationTemporary" -> "Flag" [label="uses", fontsize=10];
+    "PropertyValue" -> "StationTemporary" [label="uses", fontsize=10];
+}

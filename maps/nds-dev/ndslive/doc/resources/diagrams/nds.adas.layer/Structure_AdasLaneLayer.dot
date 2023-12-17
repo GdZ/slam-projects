@@ -1,0 +1,60 @@
+/**
+ * This dot file creates symbol collaboration diagram for AdasLaneLayer.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="AdasLaneLayer collaboration diagram";
+
+    subgraph "cluster_nds.adas.layer"
+    {
+        style="dashed, rounded";
+        label="nds.adas.layer";
+        tooltip="Package nds.adas.layer";
+        href="../../../content/packages/nds.adas.layer.html#Package-nds-adas-layer";
+        target="_parent";
+
+        "AdasLaneLayer" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.adas.layer.html#Structure-AdasLaneLayer" title="Structure defined in nds.adas.layer">AdasLaneLayer</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.adas.metadata"
+    {
+        style="dashed, rounded";
+        label="nds.adas.metadata";
+        tooltip="Package nds.adas.metadata";
+        href="../../../content/packages/nds.adas.metadata.html#Package-nds-adas-metadata";
+        target="_parent";
+
+        "AdasLaneLayerContent" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.adas.metadata.html#Bitmask-AdasLaneLayerContent" title="Bitmask defined in nds.adas.metadata">AdasLaneLayerContent</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.adas.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.adas.instantiations";
+        tooltip="Package nds.adas.instantiations";
+        href="../../../content/packages/nds.adas.instantiations.html#Package-nds-adas-instantiations";
+        target="_parent";
+
+        "AdasLaneAttributeMapList" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.adas.instantiations.html#InstantiateType-AdasLaneAttributeMapList" title="InstantiateType defined in nds.adas.instantiations">AdasLaneAttributeMapList</td></tr></table></font>>];
+        "AdasLaneAttributeSetList" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.adas.instantiations.html#InstantiateType-AdasLaneAttributeSetList" title="InstantiateType defined in nds.adas.instantiations">AdasLaneAttributeSetList</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.system.types"
+    {
+        style="dashed, rounded";
+        label="nds.system.types";
+        tooltip="Package nds.system.types";
+        href="../../../content/packages/nds.system.types.html#Package-nds-system-types";
+        target="_parent";
+
+        "LayerType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.system.types.html#Enum-LayerType" title="Enum defined in nds.system.types">LayerType</td></tr></table></font>>];
+    }
+
+    "AdasLaneLayer" -> "AdasLaneLayerContent" [label="uses", fontsize=10];
+    "AdasLaneLayer" -> "AdasLaneAttributeMapList" [label="uses", fontsize=10];
+    "AdasLaneLayer" -> "AdasLaneAttributeSetList" [label="uses", fontsize=10];
+    "AdasLaneLayer" -> "LayerType" [label="uses", fontsize=10];
+}

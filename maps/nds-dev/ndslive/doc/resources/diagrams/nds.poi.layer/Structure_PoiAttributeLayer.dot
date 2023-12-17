@@ -1,0 +1,60 @@
+/**
+ * This dot file creates symbol collaboration diagram for PoiAttributeLayer.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="PoiAttributeLayer collaboration diagram";
+
+    subgraph "cluster_nds.poi.layer"
+    {
+        style="dashed, rounded";
+        label="nds.poi.layer";
+        tooltip="Package nds.poi.layer";
+        href="../../../content/packages/nds.poi.layer.html#Package-nds-poi-layer";
+        target="_parent";
+
+        "PoiAttributeLayer" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.layer.html#Structure-PoiAttributeLayer" title="Structure defined in nds.poi.layer">PoiAttributeLayer</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.poi.metadata"
+    {
+        style="dashed, rounded";
+        label="nds.poi.metadata";
+        tooltip="Package nds.poi.metadata";
+        href="../../../content/packages/nds.poi.metadata.html#Package-nds-poi-metadata";
+        target="_parent";
+
+        "PoiAttributeLayerContent" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.metadata.html#Bitmask-PoiAttributeLayerContent" title="Bitmask defined in nds.poi.metadata">PoiAttributeLayerContent</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.poi.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.poi.instantiations";
+        tooltip="Package nds.poi.instantiations";
+        href="../../../content/packages/nds.poi.instantiations.html#Package-nds-poi-instantiations";
+        target="_parent";
+
+        "PoiAttributeMapList" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.instantiations.html#InstantiateType-PoiAttributeMapList" title="InstantiateType defined in nds.poi.instantiations">PoiAttributeMapList</td></tr></table></font>>];
+        "PoiAttributeSetList" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.instantiations.html#InstantiateType-PoiAttributeSetList" title="InstantiateType defined in nds.poi.instantiations">PoiAttributeSetList</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.system.types"
+    {
+        style="dashed, rounded";
+        label="nds.system.types";
+        tooltip="Package nds.system.types";
+        href="../../../content/packages/nds.system.types.html#Package-nds-system-types";
+        target="_parent";
+
+        "LayerType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.system.types.html#Enum-LayerType" title="Enum defined in nds.system.types">LayerType</td></tr></table></font>>];
+    }
+
+    "PoiAttributeLayer" -> "PoiAttributeLayerContent" [label="uses", fontsize=10];
+    "PoiAttributeLayer" -> "PoiAttributeMapList" [label="uses", fontsize=10];
+    "PoiAttributeLayer" -> "PoiAttributeSetList" [label="uses", fontsize=10];
+    "PoiAttributeLayer" -> "LayerType" [label="uses", fontsize=10];
+}

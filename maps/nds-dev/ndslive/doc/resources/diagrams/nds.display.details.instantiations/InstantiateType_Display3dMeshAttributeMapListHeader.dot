@@ -1,0 +1,36 @@
+/**
+ * This dot file creates symbol collaboration diagram for Display3dMeshAttributeMapListHeader.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="Display3dMeshAttributeMapListHeader collaboration diagram";
+
+    subgraph "cluster_nds.display.details.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.display.details.instantiations";
+        tooltip="Package nds.display.details.instantiations";
+        href="../../../content/packages/nds.display.details.instantiations.html#Package-nds-display-details-instantiations";
+        target="_parent";
+
+        "Display3dMeshAttributeMapListHeader" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.details.instantiations.html#InstantiateType-Display3dMeshAttributeMapListHeader" title="InstantiateType defined in nds.display.details.instantiations">Display3dMeshAttributeMapListHeader</td></tr></table></font>>];
+        "AttributeMapListHeader&lt;Display3dMeshAttributeType&gt;" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.attributemap.html#Structure-AttributeMapListHeader" title="Structure defined in nds.core.attributemap">AttributeMapListHeader</td><td>&lt;</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.details.attributes.html#Enum-Display3dMeshAttributeType" title="Enum defined in nds.display.details.attributes">Display3dMeshAttributeType</td></tr></table></td><td>&gt;</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.display.details.attributes"
+    {
+        style="dashed, rounded";
+        label="nds.display.details.attributes";
+        tooltip="Package nds.display.details.attributes";
+        href="../../../content/packages/nds.display.details.attributes.html#Package-nds-display-details-attributes";
+        target="_parent";
+
+        "Display3dMeshAttributeType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.details.attributes.html#Enum-Display3dMeshAttributeType" title="Enum defined in nds.display.details.attributes">Display3dMeshAttributeType</td></tr></table></font>>];
+    }
+
+    "Display3dMeshAttributeMapListHeader" -> "AttributeMapListHeader&lt;Display3dMeshAttributeType&gt;" [label="uses", fontsize=10];
+    "Display3dMeshAttributeMapListHeader" -> "Display3dMeshAttributeType" [label="uses", fontsize=10];
+}

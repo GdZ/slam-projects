@@ -1,0 +1,88 @@
+/**
+ * This dot file creates symbol collaboration diagram for NameTransitionAttributeMapList.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="NameTransitionAttributeMapList collaboration diagram";
+
+    subgraph "cluster_nds.name.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.name.instantiations";
+        tooltip="Package nds.name.instantiations";
+        href="../../../content/packages/nds.name.instantiations.html#Package-nds-name-instantiations";
+        target="_parent";
+
+        "NameTransitionAttributeMapList" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.instantiations.html#InstantiateType-NameTransitionAttributeMapList" title="InstantiateType defined in nds.name.instantiations">NameTransitionAttributeMapList</td></tr></table></font>>];
+        "AttributeMapList&lt;TransitionReference,Validity,NameTransitionAttributeType,NameTransitionAttributeValue,NamePropertyType,NamePropertyValue&gt;" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.attributemap.html#Structure-AttributeMapList" title="Structure defined in nds.core.attributemap">AttributeMapList</td><td>&lt;</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.road.reference.types.html#Structure-TransitionReference" title="Structure defined in nds.road.reference.types">TransitionReference</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.attributemap.html#Structure-Validity" title="Structure defined in nds.core.attributemap">Validity</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.attributes.html#Enum-NameTransitionAttributeType" title="Enum defined in nds.name.attributes">NameTransitionAttributeType</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.attributes.html#Choice-NameTransitionAttributeValue" title="Choice defined in nds.name.attributes">NameTransitionAttributeValue</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.properties.html#Structure-NamePropertyType" title="Structure defined in nds.name.properties">NamePropertyType</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.properties.html#Structure-NamePropertyValue" title="Structure defined in nds.name.properties">NamePropertyValue</td></tr></table></td><td>&gt;</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.road.reference.types"
+    {
+        style="dashed, rounded";
+        label="nds.road.reference.types";
+        tooltip="Package nds.road.reference.types";
+        href="../../../content/packages/nds.road.reference.types.html#Package-nds-road-reference-types";
+        target="_parent";
+
+        "TransitionReference" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.road.reference.types.html#Structure-TransitionReference" title="Structure defined in nds.road.reference.types">TransitionReference</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.attributemap"
+    {
+        style="dashed, rounded";
+        label="nds.core.attributemap";
+        tooltip="Package nds.core.attributemap";
+        href="../../../content/packages/nds.core.attributemap.html#Package-nds-core-attributemap";
+        target="_parent";
+
+        "Validity" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.attributemap.html#Structure-Validity" title="Structure defined in nds.core.attributemap">Validity</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.name.attributes"
+    {
+        style="dashed, rounded";
+        label="nds.name.attributes";
+        tooltip="Package nds.name.attributes";
+        href="../../../content/packages/nds.name.attributes.html#Package-nds-name-attributes";
+        target="_parent";
+
+        "NameTransitionAttributeType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.attributes.html#Enum-NameTransitionAttributeType" title="Enum defined in nds.name.attributes">NameTransitionAttributeType</td></tr></table></font>>];
+        "NameTransitionAttributeValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.attributes.html#Choice-NameTransitionAttributeValue" title="Choice defined in nds.name.attributes">NameTransitionAttributeValue</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.name.properties"
+    {
+        style="dashed, rounded";
+        label="nds.name.properties";
+        tooltip="Package nds.name.properties";
+        href="../../../content/packages/nds.name.properties.html#Package-nds-name-properties";
+        target="_parent";
+
+        "NamePropertyType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.properties.html#Structure-NamePropertyType" title="Structure defined in nds.name.properties">NamePropertyType</td></tr></table></font>>];
+        "NamePropertyValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.properties.html#Structure-NamePropertyValue" title="Structure defined in nds.name.properties">NamePropertyValue</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.name.layer"
+    {
+        style="dashed, rounded";
+        label="nds.name.layer";
+        tooltip="Package nds.name.layer";
+        href="../../../content/packages/nds.name.layer.html#Package-nds-name-layer";
+        target="_parent";
+
+        "RoadNameLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.layer.html#Structure-RoadNameLayer" title="Structure defined in nds.name.layer">RoadNameLayer</td></tr></table></font>>];
+    }
+
+    "NameTransitionAttributeMapList" -> "AttributeMapList&lt;TransitionReference,Validity,NameTransitionAttributeType,NameTransitionAttributeValue,NamePropertyType,NamePropertyValue&gt;" [label="uses", fontsize=10];
+    "NameTransitionAttributeMapList" -> "TransitionReference" [label="uses", fontsize=10];
+    "NameTransitionAttributeMapList" -> "Validity" [label="uses", fontsize=10];
+    "NameTransitionAttributeMapList" -> "NameTransitionAttributeType" [label="uses", fontsize=10];
+    "NameTransitionAttributeMapList" -> "NameTransitionAttributeValue" [label="uses", fontsize=10];
+    "NameTransitionAttributeMapList" -> "NamePropertyType" [label="uses", fontsize=10];
+    "NameTransitionAttributeMapList" -> "NamePropertyValue" [label="uses", fontsize=10];
+    "RoadNameLayer" -> "NameTransitionAttributeMapList" [label="uses", fontsize=10];
+}

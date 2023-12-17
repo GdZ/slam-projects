@@ -1,0 +1,58 @@
+/**
+ * This dot file creates symbol collaboration diagram for LengthMeters.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="LengthMeters collaboration diagram";
+
+    subgraph "cluster_nds.core.types"
+    {
+        style="dashed, rounded";
+        label="nds.core.types";
+        tooltip="Package nds.core.types";
+        href="../../../content/packages/nds.core.types.html#Package-nds-core-types";
+        target="_parent";
+
+        "LengthMeters" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Subtype-LengthMeters" title="Subtype defined in nds.core.types">LengthMeters</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.location"
+    {
+        style="dashed, rounded";
+        label="nds.core.location";
+        tooltip="Package nds.core.location";
+        href="../../../content/packages/nds.core.location.html#Package-nds-core-location";
+        target="_parent";
+
+        "LocationSegment" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.location.html#Structure-LocationSegment" title="Structure defined in nds.core.location">LocationSegment</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.vehicle.services"
+    {
+        style="dashed, rounded";
+        label="nds.vehicle.services";
+        tooltip="Package nds.vehicle.services";
+        href="../../../content/packages/nds.vehicle.services.html#Package-nds-vehicle-services";
+        target="_parent";
+
+        "HorizonRequest" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.vehicle.services.html#Structure-HorizonRequest" title="Structure defined in nds.vehicle.services">HorizonRequest</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.rules.types"
+    {
+        style="dashed, rounded";
+        label="nds.rules.types";
+        tooltip="Package nds.rules.types";
+        href="../../../content/packages/nds.rules.types.html#Package-nds-rules-types";
+        target="_parent";
+
+        "TrafficEnforcementZone" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.types.html#Structure-TrafficEnforcementZone" title="Structure defined in nds.rules.types">TrafficEnforcementZone</td></tr></table></font>>];
+    }
+
+    "LocationSegment" -> "LengthMeters" [label="uses", fontsize=10];
+    "HorizonRequest" -> "LengthMeters" [label="uses", fontsize=10];
+    "TrafficEnforcementZone" -> "LengthMeters" [label="uses", fontsize=10];
+}

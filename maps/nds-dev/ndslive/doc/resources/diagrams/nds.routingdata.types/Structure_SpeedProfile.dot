@@ -1,0 +1,38 @@
+/**
+ * This dot file creates symbol collaboration diagram for SpeedProfile.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="SpeedProfile collaboration diagram";
+
+    subgraph "cluster_nds.routingdata.types"
+    {
+        style="dashed, rounded";
+        label="nds.routingdata.types";
+        tooltip="Package nds.routingdata.types";
+        href="../../../content/packages/nds.routingdata.types.html#Package-nds-routingdata-types";
+        target="_parent";
+
+        "SpeedProfile" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routingdata.types.html#Structure-SpeedProfile" title="Structure defined in nds.routingdata.types">SpeedProfile</td></tr></table></font>>];
+        "SpeedProfileId" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routingdata.types.html#Subtype-SpeedProfileId" title="Subtype defined in nds.routingdata.types">SpeedProfileId</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.routingdata.layer"
+    {
+        style="dashed, rounded";
+        label="nds.routingdata.layer";
+        tooltip="Package nds.routingdata.layer";
+        href="../../../content/packages/nds.routingdata.layer.html#Package-nds-routingdata-layer";
+        target="_parent";
+
+        "RoadRoutingLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routingdata.layer.html#Structure-RoadRoutingLayer" title="Structure defined in nds.routingdata.layer">RoadRoutingLayer</td></tr></table></font>>];
+        "LaneRoutingLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routingdata.layer.html#Structure-LaneRoutingLayer" title="Structure defined in nds.routingdata.layer">LaneRoutingLayer</td></tr></table></font>>];
+    }
+
+    "SpeedProfile" -> "SpeedProfileId" [label="uses", fontsize=10];
+    "RoadRoutingLayer" -> "SpeedProfile" [label="uses", fontsize=10];
+    "LaneRoutingLayer" -> "SpeedProfile" [label="uses", fontsize=10];
+}

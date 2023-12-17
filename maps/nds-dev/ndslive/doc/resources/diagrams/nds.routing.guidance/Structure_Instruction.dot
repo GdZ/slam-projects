@@ -1,0 +1,42 @@
+/**
+ * This dot file creates symbol collaboration diagram for Instruction.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="Instruction collaboration diagram";
+
+    subgraph "cluster_nds.routing.guidance"
+    {
+        style="dashed, rounded";
+        label="nds.routing.guidance";
+        tooltip="Package nds.routing.guidance";
+        href="../../../content/packages/nds.routing.guidance.html#Package-nds-routing-guidance";
+        target="_parent";
+
+        "Instruction" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routing.guidance.html#Structure-Instruction" title="Structure defined in nds.routing.guidance">Instruction</td></tr></table></font>>];
+        "GuidanceName" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routing.guidance.html#Structure-GuidanceName" title="Structure defined in nds.routing.guidance">GuidanceName</td></tr></table></font>>];
+        "GuidanceLanes" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routing.guidance.html#Structure-GuidanceLanes" title="Structure defined in nds.routing.guidance">GuidanceLanes</td></tr></table></font>>];
+        "GuidanceInstructions" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routing.guidance.html#Structure-GuidanceInstructions" title="Structure defined in nds.routing.guidance">GuidanceInstructions</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.routing.types"
+    {
+        style="dashed, rounded";
+        label="nds.routing.types";
+        tooltip="Package nds.routing.types";
+        href="../../../content/packages/nds.routing.types.html#Package-nds-routing-types";
+        target="_parent";
+
+        "GuidanceCode" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routing.types.html#Enum-GuidanceCode" title="Enum defined in nds.routing.types">GuidanceCode</td></tr></table></font>>];
+        "ExtGuidanceCode" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routing.types.html#Subtype-ExtGuidanceCode" title="Subtype defined in nds.routing.types">ExtGuidanceCode</td></tr></table></font>>];
+    }
+
+    "Instruction" -> "GuidanceCode" [label="uses", fontsize=10];
+    "Instruction" -> "ExtGuidanceCode" [label="uses", fontsize=10];
+    "Instruction" -> "GuidanceName" [label="uses", fontsize=10];
+    "Instruction" -> "GuidanceLanes" [label="uses", fontsize=10];
+    "GuidanceInstructions" -> "Instruction" [label="uses", fontsize=10];
+}

@@ -1,0 +1,70 @@
+/**
+ * This dot file creates symbol collaboration diagram for DataLayerDefinition.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="DataLayerDefinition collaboration diagram";
+
+    subgraph "cluster_nds.smart.types"
+    {
+        style="dashed, rounded";
+        label="nds.smart.types";
+        tooltip="Package nds.smart.types";
+        href="../../../content/packages/nds.smart.types.html#Package-nds-smart-types";
+        target="_parent";
+
+        "DataLayerDefinition" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.types.html#Structure-DataLayerDefinition" title="Structure defined in nds.smart.types">DataLayerDefinition</td></tr></table></font>>];
+        "DataLayerId" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.types.html#Subtype-DataLayerId" title="Subtype defined in nds.smart.types">DataLayerId</td></tr></table></font>>];
+        "DataLayerLifetimeType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.types.html#Enum-DataLayerLifetimeType" title="Enum defined in nds.smart.types">DataLayerLifetimeType</td></tr></table></font>>];
+        "CustomExtensionIdentifier" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.types.html#Subtype-CustomExtensionIdentifier" title="Subtype defined in nds.smart.types">CustomExtensionIdentifier</td></tr></table></font>>];
+        "DataLayerName" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.types.html#Subtype-DataLayerName" title="Subtype defined in nds.smart.types">DataLayerName</td></tr></table></font>>];
+        "DataLayerContentType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.types.html#Subtype-DataLayerContentType" title="Subtype defined in nds.smart.types">DataLayerContentType</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.system.types"
+    {
+        style="dashed, rounded";
+        label="nds.system.types";
+        tooltip="Package nds.system.types";
+        href="../../../content/packages/nds.system.types.html#Package-nds-system-types";
+        target="_parent";
+
+        "ExternDescriptor" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.system.types.html#Structure-ExternDescriptor" title="Structure defined in nds.system.types">ExternDescriptor</td></tr></table></font>>];
+        "ExternData" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.system.types.html#Structure-ExternData" title="Structure defined in nds.system.types">ExternData</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.packaging"
+    {
+        style="dashed, rounded";
+        label="nds.core.packaging";
+        tooltip="Package nds.core.packaging";
+        href="../../../content/packages/nds.core.packaging.html#Package-nds-core-packaging";
+        target="_parent";
+
+        "SignatureDefinition" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.packaging.html#Structure-SignatureDefinition" title="Structure defined in nds.core.packaging">SignatureDefinition</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.smart.metadata"
+    {
+        style="dashed, rounded";
+        label="nds.smart.metadata";
+        tooltip="Package nds.smart.metadata";
+        href="../../../content/packages/nds.smart.metadata.html#Package-nds-smart-metadata";
+        target="_parent";
+
+        "SmartLayerDefinition" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.metadata.html#Structure-SmartLayerDefinition" title="Structure defined in nds.smart.metadata">SmartLayerDefinition</td></tr></table></font>>];
+    }
+
+    "DataLayerDefinition" -> "DataLayerId" [label="uses", fontsize=10];
+    "DataLayerDefinition" -> "DataLayerLifetimeType" [label="uses", fontsize=10];
+    "DataLayerDefinition" -> "ExternDescriptor" [label="uses", fontsize=10];
+    "DataLayerDefinition" -> "CustomExtensionIdentifier" [label="uses", fontsize=10];
+    "DataLayerDefinition" -> "DataLayerName" [label="uses", fontsize=10];
+    "DataLayerDefinition" -> "DataLayerContentType" [label="uses", fontsize=10];
+    "DataLayerDefinition" -> "SignatureDefinition" [label="uses", fontsize=10];
+    "DataLayerDefinition" -> "ExternData" [label="uses", fontsize=10];
+    "SmartLayerDefinition" -> "DataLayerDefinition" [label="uses", fontsize=10];
+}

@@ -1,0 +1,46 @@
+/**
+ * This dot file creates symbol collaboration diagram for MatchedRoadSegment.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="MatchedRoadSegment collaboration diagram";
+
+    subgraph "cluster_nds.road.road"
+    {
+        style="dashed, rounded";
+        label="nds.road.road";
+        tooltip="Package nds.road.road";
+        href="../../../content/packages/nds.road.road.html#Package-nds-road-road";
+        target="_parent";
+
+        "MatchedRoadSegment" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.road.road.html#Structure-MatchedRoadSegment" title="Structure defined in nds.road.road">MatchedRoadSegment</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.road.reference.types"
+    {
+        style="dashed, rounded";
+        label="nds.road.reference.types";
+        tooltip="Package nds.road.reference.types";
+        href="../../../content/packages/nds.road.reference.types.html#Package-nds-road-reference-types";
+        target="_parent";
+
+        "DirectedRoadReference" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.road.reference.types.html#Subtype-DirectedRoadReference" title="Subtype defined in nds.road.reference.types">DirectedRoadReference</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.road.layer"
+    {
+        style="dashed, rounded";
+        label="nds.road.layer";
+        tooltip="Package nds.road.layer";
+        href="../../../content/packages/nds.road.layer.html#Package-nds-road-layer";
+        target="_parent";
+
+        "MatchedRoadPathLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.road.layer.html#Structure-MatchedRoadPathLayer" title="Structure defined in nds.road.layer">MatchedRoadPathLayer</td></tr></table></font>>];
+    }
+
+    "MatchedRoadSegment" -> "DirectedRoadReference" [label="uses", fontsize=10];
+    "MatchedRoadPathLayer" -> "MatchedRoadSegment" [label="uses", fontsize=10];
+}

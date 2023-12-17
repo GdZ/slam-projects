@@ -1,0 +1,50 @@
+/**
+ * This dot file creates symbol collaboration diagram for RoadTrafficLayerIndirectMetadata.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="RoadTrafficLayerIndirectMetadata collaboration diagram";
+
+    subgraph "cluster_nds.traffic.metadata"
+    {
+        style="dashed, rounded";
+        label="nds.traffic.metadata";
+        tooltip="Package nds.traffic.metadata";
+        href="../../../content/packages/nds.traffic.metadata.html#Package-nds-traffic-metadata";
+        target="_parent";
+
+        "RoadTrafficLayerIndirectMetadata" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.traffic.metadata.html#Structure-RoadTrafficLayerIndirectMetadata" title="Structure defined in nds.traffic.metadata">RoadTrafficLayerIndirectMetadata</td></tr></table></font>>];
+        "RoadTrafficLayerContent" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.traffic.metadata.html#Bitmask-RoadTrafficLayerContent" title="Bitmask defined in nds.traffic.metadata">RoadTrafficLayerContent</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.traffic.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.traffic.instantiations";
+        tooltip="Package nds.traffic.instantiations";
+        href="../../../content/packages/nds.traffic.instantiations.html#Package-nds-traffic-instantiations";
+        target="_parent";
+
+        "TrafficRoadRangeAttributeMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.traffic.instantiations.html#InstantiateType-TrafficRoadRangeAttributeMetadata" title="InstantiateType defined in nds.traffic.instantiations">TrafficRoadRangeAttributeMetadata</td></tr></table></font>>];
+        "TrafficTransitionAttributeMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.traffic.instantiations.html#InstantiateType-TrafficTransitionAttributeMetadata" title="InstantiateType defined in nds.traffic.instantiations">TrafficTransitionAttributeMetadata</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.types"
+    {
+        style="dashed, rounded";
+        label="nds.core.types";
+        tooltip="Package nds.core.types";
+        href="../../../content/packages/nds.core.types.html#Package-nds-core-types";
+        target="_parent";
+
+        "RoadType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Structure-RoadType" title="Structure defined in nds.core.types">RoadType</td></tr></table></font>>];
+    }
+
+    "RoadTrafficLayerIndirectMetadata" -> "RoadTrafficLayerContent" [label="uses", fontsize=10];
+    "RoadTrafficLayerIndirectMetadata" -> "TrafficRoadRangeAttributeMetadata" [label="uses", fontsize=10];
+    "RoadTrafficLayerIndirectMetadata" -> "TrafficTransitionAttributeMetadata" [label="uses", fontsize=10];
+    "RoadTrafficLayerIndirectMetadata" -> "RoadType" [label="uses", fontsize=10];
+}

@@ -1,0 +1,58 @@
+/**
+ * This dot file creates symbol collaboration diagram for RouteOptions.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="RouteOptions collaboration diagram";
+
+    subgraph "cluster_nds.routing.route"
+    {
+        style="dashed, rounded";
+        label="nds.routing.route";
+        tooltip="Package nds.routing.route";
+        href="../../../content/packages/nds.routing.route.html#Package-nds-routing-route";
+        target="_parent";
+
+        "RouteOptions" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routing.route.html#Structure-RouteOptions" title="Structure defined in nds.routing.route">RouteOptions</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.routing.types"
+    {
+        style="dashed, rounded";
+        label="nds.routing.types";
+        tooltip="Package nds.routing.types";
+        href="../../../content/packages/nds.routing.types.html#Package-nds-routing-types";
+        target="_parent";
+
+        "RouteOptionType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routing.types.html#Enum-RouteOptionType" title="Enum defined in nds.routing.types">RouteOptionType</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.routing.services"
+    {
+        style="dashed, rounded";
+        label="nds.routing.services";
+        tooltip="Package nds.routing.services";
+        href="../../../content/packages/nds.routing.services.html#Package-nds-routing-services";
+        target="_parent";
+
+        "RoutingServiceRequest" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routing.services.html#Structure-RoutingServiceRequest" title="Structure defined in nds.routing.services">RoutingServiceRequest</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.routing.metadata"
+    {
+        style="dashed, rounded";
+        label="nds.routing.metadata";
+        tooltip="Package nds.routing.metadata";
+        href="../../../content/packages/nds.routing.metadata.html#Package-nds-routing-metadata";
+        target="_parent";
+
+        "RouteServiceCapabilities" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routing.metadata.html#Structure-RouteServiceCapabilities" title="Structure defined in nds.routing.metadata">RouteServiceCapabilities</td></tr></table></font>>];
+    }
+
+    "RouteOptions" -> "RouteOptionType" [label="uses", fontsize=10];
+    "RoutingServiceRequest" -> "RouteOptions" [label="uses", fontsize=10];
+    "RouteServiceCapabilities" -> "RouteOptions" [label="uses", fontsize=10];
+}

@@ -1,0 +1,360 @@
+/**
+ * This dot file creates symbol collaboration diagram for Property.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="Property collaboration diagram";
+
+    subgraph "cluster_nds.core.attributemap"
+    {
+        style="dashed, rounded";
+        label="nds.core.attributemap";
+        tooltip="Package nds.core.attributemap";
+        href="../../../content/packages/nds.core.attributemap.html#Package-nds-core-attributemap";
+        target="_parent";
+
+        "Property" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.attributemap.html#Structure-Property" title="Structure defined in nds.core.attributemap">Property</td></tr></table></font>>];
+        "PropertyList&lt;CorePropertyType,CorePropertyValue&gt;" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.attributemap.html#Structure-PropertyList" title="Structure defined in nds.core.attributemap">PropertyList</td><td>&lt;</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.properties.html#Enum-CorePropertyType" title="Enum defined in nds.core.properties">CorePropertyType</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.properties.html#Choice-CorePropertyValue" title="Choice defined in nds.core.properties">CorePropertyValue</td></tr></table></td><td>&gt;</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.localization.properties"
+    {
+        style="dashed, rounded";
+        label="nds.localization.properties";
+        tooltip="Package nds.localization.properties";
+        href="../../../content/packages/nds.localization.properties.html#Package-nds-localization-properties";
+        target="_parent";
+
+        "LocalizationPropertyType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.localization.properties.html#Structure-LocalizationPropertyType" title="Structure defined in nds.localization.properties">LocalizationPropertyType</td></tr></table></font>>];
+        "LocalizationPropertyValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.localization.properties.html#Structure-LocalizationPropertyValue" title="Structure defined in nds.localization.properties">LocalizationPropertyValue</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.traffic.properties"
+    {
+        style="dashed, rounded";
+        label="nds.traffic.properties";
+        tooltip="Package nds.traffic.properties";
+        href="../../../content/packages/nds.traffic.properties.html#Package-nds-traffic-properties";
+        target="_parent";
+
+        "TrafficPropertyType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.traffic.properties.html#Structure-TrafficPropertyType" title="Structure defined in nds.traffic.properties">TrafficPropertyType</td></tr></table></font>>];
+        "TrafficPropertyValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.traffic.properties.html#Structure-TrafficPropertyValue" title="Structure defined in nds.traffic.properties">TrafficPropertyValue</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.routingdata.properties"
+    {
+        style="dashed, rounded";
+        label="nds.routingdata.properties";
+        tooltip="Package nds.routingdata.properties";
+        href="../../../content/packages/nds.routingdata.properties.html#Package-nds-routingdata-properties";
+        target="_parent";
+
+        "RoutingPropertyType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routingdata.properties.html#Structure-RoutingPropertyType" title="Structure defined in nds.routingdata.properties">RoutingPropertyType</td></tr></table></font>>];
+        "RoutingPropertyValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routingdata.properties.html#Structure-RoutingPropertyValue" title="Structure defined in nds.routingdata.properties">RoutingPropertyValue</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.adas.properties"
+    {
+        style="dashed, rounded";
+        label="nds.adas.properties";
+        tooltip="Package nds.adas.properties";
+        href="../../../content/packages/nds.adas.properties.html#Package-nds-adas-properties";
+        target="_parent";
+
+        "AdasPropertyType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.adas.properties.html#Structure-AdasPropertyType" title="Structure defined in nds.adas.properties">AdasPropertyType</td></tr></table></font>>];
+        "AdasPropertyValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.adas.properties.html#Structure-AdasPropertyValue" title="Structure defined in nds.adas.properties">AdasPropertyValue</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.instructions.properties"
+    {
+        style="dashed, rounded";
+        label="nds.instructions.properties";
+        tooltip="Package nds.instructions.properties";
+        href="../../../content/packages/nds.instructions.properties.html#Package-nds-instructions-properties";
+        target="_parent";
+
+        "InstructionsPropertyType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.instructions.properties.html#Structure-InstructionsPropertyType" title="Structure defined in nds.instructions.properties">InstructionsPropertyType</td></tr></table></font>>];
+        "InstructionsPropertyValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.instructions.properties.html#Structure-InstructionsPropertyValue" title="Structure defined in nds.instructions.properties">InstructionsPropertyValue</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.poi.properties"
+    {
+        style="dashed, rounded";
+        label="nds.poi.properties";
+        tooltip="Package nds.poi.properties";
+        href="../../../content/packages/nds.poi.properties.html#Package-nds-poi-properties";
+        target="_parent";
+
+        "PoiPropertyType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.properties.html#Structure-PoiPropertyType" title="Structure defined in nds.poi.properties">PoiPropertyType</td></tr></table></font>>];
+        "PoiPropertyValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.properties.html#Structure-PoiPropertyValue" title="Structure defined in nds.poi.properties">PoiPropertyValue</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.properties"
+    {
+        style="dashed, rounded";
+        label="nds.core.properties";
+        tooltip="Package nds.core.properties";
+        href="../../../content/packages/nds.core.properties.html#Package-nds-core-properties";
+        target="_parent";
+
+        "CorePropertyType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.properties.html#Enum-CorePropertyType" title="Enum defined in nds.core.properties">CorePropertyType</td></tr></table></font>>];
+        "CorePropertyValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.properties.html#Choice-CorePropertyValue" title="Choice defined in nds.core.properties">CorePropertyValue</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.venue.details.properties"
+    {
+        style="dashed, rounded";
+        label="nds.venue.details.properties";
+        tooltip="Package nds.venue.details.properties";
+        href="../../../content/packages/nds.venue.details.properties.html#Package-nds-venue-details-properties";
+        target="_parent";
+
+        "VenuePropertyType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.details.properties.html#Structure-VenuePropertyType" title="Structure defined in nds.venue.details.properties">VenuePropertyType</td></tr></table></font>>];
+        "VenuePropertyValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.details.properties.html#Structure-VenuePropertyValue" title="Structure defined in nds.venue.details.properties">VenuePropertyValue</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.display.details.properties"
+    {
+        style="dashed, rounded";
+        label="nds.display.details.properties";
+        tooltip="Package nds.display.details.properties";
+        href="../../../content/packages/nds.display.details.properties.html#Package-nds-display-details-properties";
+        target="_parent";
+
+        "DisplayPropertyType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.details.properties.html#Structure-DisplayPropertyType" title="Structure defined in nds.display.details.properties">DisplayPropertyType</td></tr></table></font>>];
+        "DisplayPropertyValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.details.properties.html#Structure-DisplayPropertyValue" title="Structure defined in nds.display.details.properties">DisplayPropertyValue</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.name.properties"
+    {
+        style="dashed, rounded";
+        label="nds.name.properties";
+        tooltip="Package nds.name.properties";
+        href="../../../content/packages/nds.name.properties.html#Package-nds-name-properties";
+        target="_parent";
+
+        "NamePropertyType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.properties.html#Structure-NamePropertyType" title="Structure defined in nds.name.properties">NamePropertyType</td></tr></table></font>>];
+        "NamePropertyValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.properties.html#Structure-NamePropertyValue" title="Structure defined in nds.name.properties">NamePropertyValue</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.rules.properties"
+    {
+        style="dashed, rounded";
+        label="nds.rules.properties";
+        tooltip="Package nds.rules.properties";
+        href="../../../content/packages/nds.rules.properties.html#Package-nds-rules-properties";
+        target="_parent";
+
+        "RulesPropertyType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.properties.html#Structure-RulesPropertyType" title="Structure defined in nds.rules.properties">RulesPropertyType</td></tr></table></font>>];
+        "RulesPropertyValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.properties.html#Structure-RulesPropertyValue" title="Structure defined in nds.rules.properties">RulesPropertyValue</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.characteristics.properties"
+    {
+        style="dashed, rounded";
+        label="nds.characteristics.properties";
+        tooltip="Package nds.characteristics.properties";
+        href="../../../content/packages/nds.characteristics.properties.html#Package-nds-characteristics-properties";
+        target="_parent";
+
+        "CharacsPropertyType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.properties.html#Structure-CharacsPropertyType" title="Structure defined in nds.characteristics.properties">CharacsPropertyType</td></tr></table></font>>];
+        "CharacsPropertyValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.properties.html#Structure-CharacsPropertyValue" title="Structure defined in nds.characteristics.properties">CharacsPropertyValue</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.localization.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.localization.instantiations";
+        tooltip="Package nds.localization.instantiations";
+        href="../../../content/packages/nds.localization.instantiations.html#Package-nds-localization-instantiations";
+        target="_parent";
+
+        "LocalizationProperty" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.localization.instantiations.html#InstantiateType-LocalizationProperty" title="InstantiateType defined in nds.localization.instantiations">LocalizationProperty</td></tr></table></font>>];
+        "PropertyList&lt;LocalizationPropertyType,LocalizationPropertyValue&gt;" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.attributemap.html#Structure-PropertyList" title="Structure defined in nds.core.attributemap">PropertyList</td><td>&lt;</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.localization.properties.html#Structure-LocalizationPropertyType" title="Structure defined in nds.localization.properties">LocalizationPropertyType</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.localization.properties.html#Structure-LocalizationPropertyValue" title="Structure defined in nds.localization.properties">LocalizationPropertyValue</td></tr></table></td><td>&gt;</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.traffic.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.traffic.instantiations";
+        tooltip="Package nds.traffic.instantiations";
+        href="../../../content/packages/nds.traffic.instantiations.html#Package-nds-traffic-instantiations";
+        target="_parent";
+
+        "TrafficProperty" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.traffic.instantiations.html#InstantiateType-TrafficProperty" title="InstantiateType defined in nds.traffic.instantiations">TrafficProperty</td></tr></table></font>>];
+        "PropertyList&lt;TrafficPropertyType,TrafficPropertyValue&gt;" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.attributemap.html#Structure-PropertyList" title="Structure defined in nds.core.attributemap">PropertyList</td><td>&lt;</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.traffic.properties.html#Structure-TrafficPropertyType" title="Structure defined in nds.traffic.properties">TrafficPropertyType</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.traffic.properties.html#Structure-TrafficPropertyValue" title="Structure defined in nds.traffic.properties">TrafficPropertyValue</td></tr></table></td><td>&gt;</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.routingdata.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.routingdata.instantiations";
+        tooltip="Package nds.routingdata.instantiations";
+        href="../../../content/packages/nds.routingdata.instantiations.html#Package-nds-routingdata-instantiations";
+        target="_parent";
+
+        "RoutingProperty" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routingdata.instantiations.html#InstantiateType-RoutingProperty" title="InstantiateType defined in nds.routingdata.instantiations">RoutingProperty</td></tr></table></font>>];
+        "PropertyList&lt;RoutingPropertyType,RoutingPropertyValue&gt;" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.attributemap.html#Structure-PropertyList" title="Structure defined in nds.core.attributemap">PropertyList</td><td>&lt;</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routingdata.properties.html#Structure-RoutingPropertyType" title="Structure defined in nds.routingdata.properties">RoutingPropertyType</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routingdata.properties.html#Structure-RoutingPropertyValue" title="Structure defined in nds.routingdata.properties">RoutingPropertyValue</td></tr></table></td><td>&gt;</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.adas.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.adas.instantiations";
+        tooltip="Package nds.adas.instantiations";
+        href="../../../content/packages/nds.adas.instantiations.html#Package-nds-adas-instantiations";
+        target="_parent";
+
+        "AdasProperty" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.adas.instantiations.html#InstantiateType-AdasProperty" title="InstantiateType defined in nds.adas.instantiations">AdasProperty</td></tr></table></font>>];
+        "PropertyList&lt;AdasPropertyType,AdasPropertyValue&gt;" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.attributemap.html#Structure-PropertyList" title="Structure defined in nds.core.attributemap">PropertyList</td><td>&lt;</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.adas.properties.html#Structure-AdasPropertyType" title="Structure defined in nds.adas.properties">AdasPropertyType</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.adas.properties.html#Structure-AdasPropertyValue" title="Structure defined in nds.adas.properties">AdasPropertyValue</td></tr></table></td><td>&gt;</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.instructions.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.instructions.instantiations";
+        tooltip="Package nds.instructions.instantiations";
+        href="../../../content/packages/nds.instructions.instantiations.html#Package-nds-instructions-instantiations";
+        target="_parent";
+
+        "InstructionsProperty" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.instructions.instantiations.html#InstantiateType-InstructionsProperty" title="InstantiateType defined in nds.instructions.instantiations">InstructionsProperty</td></tr></table></font>>];
+        "PropertyList&lt;InstructionsPropertyType,InstructionsPropertyValue&gt;" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.attributemap.html#Structure-PropertyList" title="Structure defined in nds.core.attributemap">PropertyList</td><td>&lt;</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.instructions.properties.html#Structure-InstructionsPropertyType" title="Structure defined in nds.instructions.properties">InstructionsPropertyType</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.instructions.properties.html#Structure-InstructionsPropertyValue" title="Structure defined in nds.instructions.properties">InstructionsPropertyValue</td></tr></table></td><td>&gt;</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.poi.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.poi.instantiations";
+        tooltip="Package nds.poi.instantiations";
+        href="../../../content/packages/nds.poi.instantiations.html#Package-nds-poi-instantiations";
+        target="_parent";
+
+        "PoiProperty" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.instantiations.html#InstantiateType-PoiProperty" title="InstantiateType defined in nds.poi.instantiations">PoiProperty</td></tr></table></font>>];
+        "PropertyList&lt;PoiPropertyType,PoiPropertyValue&gt;" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.attributemap.html#Structure-PropertyList" title="Structure defined in nds.core.attributemap">PropertyList</td><td>&lt;</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.properties.html#Structure-PoiPropertyType" title="Structure defined in nds.poi.properties">PoiPropertyType</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.properties.html#Structure-PoiPropertyValue" title="Structure defined in nds.poi.properties">PoiPropertyValue</td></tr></table></td><td>&gt;</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.venue.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.venue.instantiations";
+        tooltip="Package nds.venue.instantiations";
+        href="../../../content/packages/nds.venue.instantiations.html#Package-nds-venue-instantiations";
+        target="_parent";
+
+        "CoreProperty" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.instantiations.html#InstantiateType-CoreProperty" title="InstantiateType defined in nds.venue.instantiations">CoreProperty</td></tr></table></font>>];
+        "PropertyList&lt;CorePropertyType,CorePropertyValue&gt;" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.attributemap.html#Structure-PropertyList" title="Structure defined in nds.core.attributemap">PropertyList</td><td>&lt;</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.properties.html#Enum-CorePropertyType" title="Enum defined in nds.core.properties">CorePropertyType</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.properties.html#Choice-CorePropertyValue" title="Choice defined in nds.core.properties">CorePropertyValue</td></tr></table></td><td>&gt;</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.venue.details.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.venue.details.instantiations";
+        tooltip="Package nds.venue.details.instantiations";
+        href="../../../content/packages/nds.venue.details.instantiations.html#Package-nds-venue-details-instantiations";
+        target="_parent";
+
+        "VenueProperty" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.details.instantiations.html#InstantiateType-VenueProperty" title="InstantiateType defined in nds.venue.details.instantiations">VenueProperty</td></tr></table></font>>];
+        "PropertyList&lt;VenuePropertyType,VenuePropertyValue&gt;" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.attributemap.html#Structure-PropertyList" title="Structure defined in nds.core.attributemap">PropertyList</td><td>&lt;</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.details.properties.html#Structure-VenuePropertyType" title="Structure defined in nds.venue.details.properties">VenuePropertyType</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.details.properties.html#Structure-VenuePropertyValue" title="Structure defined in nds.venue.details.properties">VenuePropertyValue</td></tr></table></td><td>&gt;</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.display.details.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.display.details.instantiations";
+        tooltip="Package nds.display.details.instantiations";
+        href="../../../content/packages/nds.display.details.instantiations.html#Package-nds-display-details-instantiations";
+        target="_parent";
+
+        "DisplayProperty" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.details.instantiations.html#InstantiateType-DisplayProperty" title="InstantiateType defined in nds.display.details.instantiations">DisplayProperty</td></tr></table></font>>];
+        "PropertyList&lt;DisplayPropertyType,DisplayPropertyValue&gt;" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.attributemap.html#Structure-PropertyList" title="Structure defined in nds.core.attributemap">PropertyList</td><td>&lt;</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.details.properties.html#Structure-DisplayPropertyType" title="Structure defined in nds.display.details.properties">DisplayPropertyType</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.details.properties.html#Structure-DisplayPropertyValue" title="Structure defined in nds.display.details.properties">DisplayPropertyValue</td></tr></table></td><td>&gt;</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.name.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.name.instantiations";
+        tooltip="Package nds.name.instantiations";
+        href="../../../content/packages/nds.name.instantiations.html#Package-nds-name-instantiations";
+        target="_parent";
+
+        "NameProperty" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.instantiations.html#InstantiateType-NameProperty" title="InstantiateType defined in nds.name.instantiations">NameProperty</td></tr></table></font>>];
+        "PropertyList&lt;NamePropertyType,NamePropertyValue&gt;" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.attributemap.html#Structure-PropertyList" title="Structure defined in nds.core.attributemap">PropertyList</td><td>&lt;</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.properties.html#Structure-NamePropertyType" title="Structure defined in nds.name.properties">NamePropertyType</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.properties.html#Structure-NamePropertyValue" title="Structure defined in nds.name.properties">NamePropertyValue</td></tr></table></td><td>&gt;</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.rules.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.rules.instantiations";
+        tooltip="Package nds.rules.instantiations";
+        href="../../../content/packages/nds.rules.instantiations.html#Package-nds-rules-instantiations";
+        target="_parent";
+
+        "RulesProperty" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.instantiations.html#InstantiateType-RulesProperty" title="InstantiateType defined in nds.rules.instantiations">RulesProperty</td></tr></table></font>>];
+        "PropertyList&lt;RulesPropertyType,RulesPropertyValue&gt;" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.attributemap.html#Structure-PropertyList" title="Structure defined in nds.core.attributemap">PropertyList</td><td>&lt;</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.properties.html#Structure-RulesPropertyType" title="Structure defined in nds.rules.properties">RulesPropertyType</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.properties.html#Structure-RulesPropertyValue" title="Structure defined in nds.rules.properties">RulesPropertyValue</td></tr></table></td><td>&gt;</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.characteristics.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.characteristics.instantiations";
+        tooltip="Package nds.characteristics.instantiations";
+        href="../../../content/packages/nds.characteristics.instantiations.html#Package-nds-characteristics-instantiations";
+        target="_parent";
+
+        "CharacsProperty" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.instantiations.html#InstantiateType-CharacsProperty" title="InstantiateType defined in nds.characteristics.instantiations">CharacsProperty</td></tr></table></font>>];
+        "PropertyList&lt;CharacsPropertyType,CharacsPropertyValue&gt;" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.attributemap.html#Structure-PropertyList" title="Structure defined in nds.core.attributemap">PropertyList</td><td>&lt;</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.properties.html#Structure-CharacsPropertyType" title="Structure defined in nds.characteristics.properties">CharacsPropertyType</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.properties.html#Structure-CharacsPropertyValue" title="Structure defined in nds.characteristics.properties">CharacsPropertyValue</td></tr></table></td><td>&gt;</td></tr></table></font>>];
+    }
+
+    "Property" -> "LocalizationPropertyType" [label="uses", fontsize=10];
+    "Property" -> "LocalizationPropertyValue" [label="uses", fontsize=10];
+    "Property" -> "TrafficPropertyType" [label="uses", fontsize=10];
+    "Property" -> "TrafficPropertyValue" [label="uses", fontsize=10];
+    "Property" -> "RoutingPropertyType" [label="uses", fontsize=10];
+    "Property" -> "RoutingPropertyValue" [label="uses", fontsize=10];
+    "Property" -> "AdasPropertyType" [label="uses", fontsize=10];
+    "Property" -> "AdasPropertyValue" [label="uses", fontsize=10];
+    "Property" -> "InstructionsPropertyType" [label="uses", fontsize=10];
+    "Property" -> "InstructionsPropertyValue" [label="uses", fontsize=10];
+    "Property" -> "PoiPropertyType" [label="uses", fontsize=10];
+    "Property" -> "PoiPropertyValue" [label="uses", fontsize=10];
+    "Property" -> "CorePropertyType" [label="uses", fontsize=10];
+    "Property" -> "CorePropertyValue" [label="uses", fontsize=10];
+    "Property" -> "VenuePropertyType" [label="uses", fontsize=10];
+    "Property" -> "VenuePropertyValue" [label="uses", fontsize=10];
+    "Property" -> "DisplayPropertyType" [label="uses", fontsize=10];
+    "Property" -> "DisplayPropertyValue" [label="uses", fontsize=10];
+    "Property" -> "NamePropertyType" [label="uses", fontsize=10];
+    "Property" -> "NamePropertyValue" [label="uses", fontsize=10];
+    "Property" -> "RulesPropertyType" [label="uses", fontsize=10];
+    "Property" -> "RulesPropertyValue" [label="uses", fontsize=10];
+    "Property" -> "CharacsPropertyType" [label="uses", fontsize=10];
+    "Property" -> "CharacsPropertyValue" [label="uses", fontsize=10];
+    "LocalizationProperty" -> "Property" [label="uses", fontsize=10];
+    "PropertyList&lt;LocalizationPropertyType,LocalizationPropertyValue&gt;" -> "Property" [label="uses", fontsize=10];
+    "TrafficProperty" -> "Property" [label="uses", fontsize=10];
+    "PropertyList&lt;TrafficPropertyType,TrafficPropertyValue&gt;" -> "Property" [label="uses", fontsize=10];
+    "RoutingProperty" -> "Property" [label="uses", fontsize=10];
+    "PropertyList&lt;RoutingPropertyType,RoutingPropertyValue&gt;" -> "Property" [label="uses", fontsize=10];
+    "AdasProperty" -> "Property" [label="uses", fontsize=10];
+    "PropertyList&lt;AdasPropertyType,AdasPropertyValue&gt;" -> "Property" [label="uses", fontsize=10];
+    "InstructionsProperty" -> "Property" [label="uses", fontsize=10];
+    "PropertyList&lt;InstructionsPropertyType,InstructionsPropertyValue&gt;" -> "Property" [label="uses", fontsize=10];
+    "PoiProperty" -> "Property" [label="uses", fontsize=10];
+    "PropertyList&lt;PoiPropertyType,PoiPropertyValue&gt;" -> "Property" [label="uses", fontsize=10];
+    "PropertyList&lt;CorePropertyType,CorePropertyValue&gt;" -> "Property" [label="uses", fontsize=10];
+    "CoreProperty" -> "Property" [label="uses", fontsize=10];
+    "PropertyList&lt;CorePropertyType,CorePropertyValue&gt;" -> "Property" [label="uses", fontsize=10];
+    "VenueProperty" -> "Property" [label="uses", fontsize=10];
+    "PropertyList&lt;VenuePropertyType,VenuePropertyValue&gt;" -> "Property" [label="uses", fontsize=10];
+    "DisplayProperty" -> "Property" [label="uses", fontsize=10];
+    "PropertyList&lt;DisplayPropertyType,DisplayPropertyValue&gt;" -> "Property" [label="uses", fontsize=10];
+    "NameProperty" -> "Property" [label="uses", fontsize=10];
+    "PropertyList&lt;NamePropertyType,NamePropertyValue&gt;" -> "Property" [label="uses", fontsize=10];
+    "RulesProperty" -> "Property" [label="uses", fontsize=10];
+    "PropertyList&lt;RulesPropertyType,RulesPropertyValue&gt;" -> "Property" [label="uses", fontsize=10];
+    "CharacsProperty" -> "Property" [label="uses", fontsize=10];
+    "PropertyList&lt;CharacsPropertyType,CharacsPropertyValue&gt;" -> "Property" [label="uses", fontsize=10];
+}

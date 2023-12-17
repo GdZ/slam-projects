@@ -1,0 +1,26 @@
+/**
+ * This dot file creates symbol collaboration diagram for RenderSurfacePart.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="RenderSurfacePart collaboration diagram";
+
+    subgraph "cluster_nds.display.types"
+    {
+        style="dashed, rounded";
+        label="nds.display.types";
+        tooltip="Package nds.display.types";
+        href="../../../content/packages/nds.display.types.html#Package-nds-display-types";
+        target="_parent";
+
+        "RenderSurfacePart" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.types.html#Structure-RenderSurfacePart" title="Structure defined in nds.display.types">RenderSurfacePart</td></tr></table></font>>];
+        "Material" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.types.html#Structure-Material" title="Structure defined in nds.display.types">Material</td></tr></table></font>>];
+        "RenderSurface" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.types.html#Structure-RenderSurface" title="Structure defined in nds.display.types">RenderSurface</td></tr></table></font>>];
+    }
+
+    "RenderSurfacePart" -> "Material" [label="uses", fontsize=10];
+    "RenderSurface" -> "RenderSurfacePart" [label="uses", fontsize=10];
+}

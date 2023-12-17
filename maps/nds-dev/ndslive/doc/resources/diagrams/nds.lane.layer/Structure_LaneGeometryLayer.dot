@@ -1,0 +1,60 @@
+/**
+ * This dot file creates symbol collaboration diagram for LaneGeometryLayer.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="LaneGeometryLayer collaboration diagram";
+
+    subgraph "cluster_nds.lane.layer"
+    {
+        style="dashed, rounded";
+        label="nds.lane.layer";
+        tooltip="Package nds.lane.layer";
+        href="../../../content/packages/nds.lane.layer.html#Package-nds-lane-layer";
+        target="_parent";
+
+        "LaneGeometryLayer" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.layer.html#Structure-LaneGeometryLayer" title="Structure defined in nds.lane.layer">LaneGeometryLayer</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.geometry"
+    {
+        style="dashed, rounded";
+        label="nds.core.geometry";
+        tooltip="Package nds.core.geometry";
+        href="../../../content/packages/nds.core.geometry.html#Package-nds-core-geometry";
+        target="_parent";
+
+        "GeometryLayerType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Enum-GeometryLayerType" title="Enum defined in nds.core.geometry">GeometryLayerType</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.lane.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.lane.instantiations";
+        tooltip="Package nds.lane.instantiations";
+        href="../../../content/packages/nds.lane.instantiations.html#Package-nds-lane-instantiations";
+        target="_parent";
+
+        "CenterLineGeometryLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.instantiations.html#InstantiateType-CenterLineGeometryLayer" title="InstantiateType defined in nds.lane.instantiations">CenterLineGeometryLayer</td></tr></table></font>>];
+        "BoundaryGeometryLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.instantiations.html#InstantiateType-BoundaryGeometryLayer" title="InstantiateType defined in nds.lane.instantiations">BoundaryGeometryLayer</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.system.types"
+    {
+        style="dashed, rounded";
+        label="nds.system.types";
+        tooltip="Package nds.system.types";
+        href="../../../content/packages/nds.system.types.html#Package-nds-system-types";
+        target="_parent";
+
+        "LayerType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.system.types.html#Enum-LayerType" title="Enum defined in nds.system.types">LayerType</td></tr></table></font>>];
+    }
+
+    "LaneGeometryLayer" -> "GeometryLayerType" [label="uses", fontsize=10];
+    "LaneGeometryLayer" -> "CenterLineGeometryLayer" [label="uses", fontsize=10];
+    "LaneGeometryLayer" -> "BoundaryGeometryLayer" [label="uses", fontsize=10];
+    "LaneGeometryLayer" -> "LayerType" [label="uses", fontsize=10];
+}

@@ -1,0 +1,24 @@
+/**
+ * This dot file creates symbol collaboration diagram for DrivingRulesContent.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="DrivingRulesContent collaboration diagram";
+
+    subgraph "cluster_nds.rules.types"
+    {
+        style="dashed, rounded";
+        label="nds.rules.types";
+        tooltip="Package nds.rules.types";
+        href="../../../content/packages/nds.rules.types.html#Package-nds-rules-types";
+        target="_parent";
+
+        "DrivingRulesContent" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.types.html#Bitmask-DrivingRulesContent" title="Bitmask defined in nds.rules.types">DrivingRulesContent</td></tr></table></font>>];
+        "RegionDrivingRules" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.types.html#Structure-RegionDrivingRules" title="Structure defined in nds.rules.types">RegionDrivingRules</td></tr></table></font>>];
+    }
+
+    "RegionDrivingRules" -> "DrivingRulesContent" [label="uses", fontsize=10];
+}

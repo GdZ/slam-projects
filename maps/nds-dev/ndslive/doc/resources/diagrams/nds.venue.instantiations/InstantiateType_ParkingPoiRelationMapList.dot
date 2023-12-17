@@ -1,0 +1,88 @@
+/**
+ * This dot file creates symbol collaboration diagram for ParkingPoiRelationMapList.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="ParkingPoiRelationMapList collaboration diagram";
+
+    subgraph "cluster_nds.venue.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.venue.instantiations";
+        tooltip="Package nds.venue.instantiations";
+        href="../../../content/packages/nds.venue.instantiations.html#Package-nds-venue-instantiations";
+        target="_parent";
+
+        "ParkingPoiRelationMapList" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.instantiations.html#InstantiateType-ParkingPoiRelationMapList" title="InstantiateType defined in nds.venue.instantiations">ParkingPoiRelationMapList</td></tr></table></font>>];
+        "AttributeMapList&lt;PoiId,Validity,ParkingRelationType,ParkingRelationValue,CorePropertyType,CorePropertyValue&gt;" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.attributemap.html#Structure-AttributeMapList" title="Structure defined in nds.core.attributemap">AttributeMapList</td><td>&lt;</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.reference.types.html#Subtype-PoiId" title="Subtype defined in nds.poi.reference.types">PoiId</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.attributemap.html#Structure-Validity" title="Structure defined in nds.core.attributemap">Validity</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.parking.html#Enum-ParkingRelationType" title="Enum defined in nds.venue.parking">ParkingRelationType</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.parking.html#Choice-ParkingRelationValue" title="Choice defined in nds.venue.parking">ParkingRelationValue</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.properties.html#Enum-CorePropertyType" title="Enum defined in nds.core.properties">CorePropertyType</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.properties.html#Choice-CorePropertyValue" title="Choice defined in nds.core.properties">CorePropertyValue</td></tr></table></td><td>&gt;</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.poi.reference.types"
+    {
+        style="dashed, rounded";
+        label="nds.poi.reference.types";
+        tooltip="Package nds.poi.reference.types";
+        href="../../../content/packages/nds.poi.reference.types.html#Package-nds-poi-reference-types";
+        target="_parent";
+
+        "PoiId" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.reference.types.html#Subtype-PoiId" title="Subtype defined in nds.poi.reference.types">PoiId</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.attributemap"
+    {
+        style="dashed, rounded";
+        label="nds.core.attributemap";
+        tooltip="Package nds.core.attributemap";
+        href="../../../content/packages/nds.core.attributemap.html#Package-nds-core-attributemap";
+        target="_parent";
+
+        "Validity" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.attributemap.html#Structure-Validity" title="Structure defined in nds.core.attributemap">Validity</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.venue.parking"
+    {
+        style="dashed, rounded";
+        label="nds.venue.parking";
+        tooltip="Package nds.venue.parking";
+        href="../../../content/packages/nds.venue.parking.html#Package-nds-venue-parking";
+        target="_parent";
+
+        "ParkingRelationType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.parking.html#Enum-ParkingRelationType" title="Enum defined in nds.venue.parking">ParkingRelationType</td></tr></table></font>>];
+        "ParkingRelationValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.parking.html#Choice-ParkingRelationValue" title="Choice defined in nds.venue.parking">ParkingRelationValue</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.properties"
+    {
+        style="dashed, rounded";
+        label="nds.core.properties";
+        tooltip="Package nds.core.properties";
+        href="../../../content/packages/nds.core.properties.html#Package-nds-core-properties";
+        target="_parent";
+
+        "CorePropertyType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.properties.html#Enum-CorePropertyType" title="Enum defined in nds.core.properties">CorePropertyType</td></tr></table></font>>];
+        "CorePropertyValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.properties.html#Choice-CorePropertyValue" title="Choice defined in nds.core.properties">CorePropertyValue</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.venue.layer"
+    {
+        style="dashed, rounded";
+        label="nds.venue.layer";
+        tooltip="Package nds.venue.layer";
+        href="../../../content/packages/nds.venue.layer.html#Package-nds-venue-layer";
+        target="_parent";
+
+        "ParkingFacilityRelationLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.layer.html#Structure-ParkingFacilityRelationLayer" title="Structure defined in nds.venue.layer">ParkingFacilityRelationLayer</td></tr></table></font>>];
+    }
+
+    "ParkingPoiRelationMapList" -> "AttributeMapList&lt;PoiId,Validity,ParkingRelationType,ParkingRelationValue,CorePropertyType,CorePropertyValue&gt;" [label="uses", fontsize=10];
+    "ParkingPoiRelationMapList" -> "PoiId" [label="uses", fontsize=10];
+    "ParkingPoiRelationMapList" -> "Validity" [label="uses", fontsize=10];
+    "ParkingPoiRelationMapList" -> "ParkingRelationType" [label="uses", fontsize=10];
+    "ParkingPoiRelationMapList" -> "ParkingRelationValue" [label="uses", fontsize=10];
+    "ParkingPoiRelationMapList" -> "CorePropertyType" [label="uses", fontsize=10];
+    "ParkingPoiRelationMapList" -> "CorePropertyValue" [label="uses", fontsize=10];
+    "ParkingFacilityRelationLayer" -> "ParkingPoiRelationMapList" [label="uses", fontsize=10];
+}

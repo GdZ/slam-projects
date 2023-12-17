@@ -1,0 +1,48 @@
+/**
+ * This dot file creates symbol collaboration diagram for ParkingLevelConnector.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="ParkingLevelConnector collaboration diagram";
+
+    subgraph "cluster_nds.venue.parking"
+    {
+        style="dashed, rounded";
+        label="nds.venue.parking";
+        tooltip="Package nds.venue.parking";
+        href="../../../content/packages/nds.venue.parking.html#Package-nds-venue-parking";
+        target="_parent";
+
+        "ParkingLevelConnector" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.parking.html#Structure-ParkingLevelConnector" title="Structure defined in nds.venue.parking">ParkingLevelConnector</td></tr></table></font>>];
+        "ParkingLevel" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.parking.html#Structure-ParkingLevel" title="Structure defined in nds.venue.parking">ParkingLevel</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.venue.reference.types"
+    {
+        style="dashed, rounded";
+        label="nds.venue.reference.types";
+        tooltip="Package nds.venue.reference.types";
+        href="../../../content/packages/nds.venue.reference.types.html#Package-nds-venue-reference-types";
+        target="_parent";
+
+        "ParkingLevelId" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.reference.types.html#Subtype-ParkingLevelId" title="Subtype defined in nds.venue.reference.types">ParkingLevelId</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.geometry"
+    {
+        style="dashed, rounded";
+        label="nds.core.geometry";
+        tooltip="Package nds.core.geometry";
+        href="../../../content/packages/nds.core.geometry.html#Package-nds-core-geometry";
+        target="_parent";
+
+        "BoundingPolygon3D" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Structure-BoundingPolygon3D" title="Structure defined in nds.core.geometry">BoundingPolygon3D</td></tr></table></font>>];
+    }
+
+    "ParkingLevelConnector" -> "ParkingLevelId" [label="uses", fontsize=10];
+    "ParkingLevelConnector" -> "BoundingPolygon3D" [label="uses", fontsize=10];
+    "ParkingLevel" -> "ParkingLevelConnector" [label="uses", fontsize=10];
+}

@@ -1,0 +1,24 @@
+/**
+ * This dot file creates symbol collaboration diagram for UNKNOWN_BOUNDARY_WIDTH.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="UNKNOWN_BOUNDARY_WIDTH collaboration diagram";
+
+    subgraph "cluster_nds.lane.boundaries"
+    {
+        style="dashed, rounded";
+        label="nds.lane.boundaries";
+        tooltip="Package nds.lane.boundaries";
+        href="../../../content/packages/nds.lane.boundaries.html#Package-nds-lane-boundaries";
+        target="_parent";
+
+        "UNKNOWN_BOUNDARY_WIDTH" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.boundaries.html#Constant-UNKNOWN_BOUNDARY_WIDTH" title="Constant defined in nds.lane.boundaries">UNKNOWN_BOUNDARY_WIDTH</td></tr></table></font>>];
+        "BoundaryWidth" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.boundaries.html#Subtype-BoundaryWidth" title="Subtype defined in nds.lane.boundaries">BoundaryWidth</td></tr></table></font>>];
+    }
+
+    "UNKNOWN_BOUNDARY_WIDTH" -> "BoundaryWidth" [label="uses", fontsize=10];
+}

@@ -1,0 +1,36 @@
+/**
+ * This dot file creates symbol collaboration diagram for RulesLaneTransitionAttributeMapListHeader.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="RulesLaneTransitionAttributeMapListHeader collaboration diagram";
+
+    subgraph "cluster_nds.rules.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.rules.instantiations";
+        tooltip="Package nds.rules.instantiations";
+        href="../../../content/packages/nds.rules.instantiations.html#Package-nds-rules-instantiations";
+        target="_parent";
+
+        "RulesLaneTransitionAttributeMapListHeader" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.instantiations.html#InstantiateType-RulesLaneTransitionAttributeMapListHeader" title="InstantiateType defined in nds.rules.instantiations">RulesLaneTransitionAttributeMapListHeader</td></tr></table></font>>];
+        "AttributeMapListHeader&lt;RulesLaneTransitionAttributeType&gt;" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.attributemap.html#Structure-AttributeMapListHeader" title="Structure defined in nds.core.attributemap">AttributeMapListHeader</td><td>&lt;</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.attributes.html#Enum-RulesLaneTransitionAttributeType" title="Enum defined in nds.rules.attributes">RulesLaneTransitionAttributeType</td></tr></table></td><td>&gt;</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.rules.attributes"
+    {
+        style="dashed, rounded";
+        label="nds.rules.attributes";
+        tooltip="Package nds.rules.attributes";
+        href="../../../content/packages/nds.rules.attributes.html#Package-nds-rules-attributes";
+        target="_parent";
+
+        "RulesLaneTransitionAttributeType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.attributes.html#Enum-RulesLaneTransitionAttributeType" title="Enum defined in nds.rules.attributes">RulesLaneTransitionAttributeType</td></tr></table></font>>];
+    }
+
+    "RulesLaneTransitionAttributeMapListHeader" -> "AttributeMapListHeader&lt;RulesLaneTransitionAttributeType&gt;" [label="uses", fontsize=10];
+    "RulesLaneTransitionAttributeMapListHeader" -> "RulesLaneTransitionAttributeType" [label="uses", fontsize=10];
+}

@@ -1,0 +1,50 @@
+/**
+ * This dot file creates symbol collaboration diagram for ExcessSlope.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="ExcessSlope collaboration diagram";
+
+    subgraph "cluster_nds.routingdata.types"
+    {
+        style="dashed, rounded";
+        label="nds.routingdata.types";
+        tooltip="Package nds.routingdata.types";
+        href="../../../content/packages/nds.routingdata.types.html#Package-nds-routingdata-types";
+        target="_parent";
+
+        "ExcessSlope" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routingdata.types.html#Subtype-ExcessSlope" title="Subtype defined in nds.routingdata.types">ExcessSlope</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.routingdata.attributes"
+    {
+        style="dashed, rounded";
+        label="nds.routingdata.attributes";
+        tooltip="Package nds.routingdata.attributes";
+        href="../../../content/packages/nds.routingdata.attributes.html#Package-nds-routingdata-attributes";
+        target="_parent";
+
+        "RoutingRoadRangeAttributeValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routingdata.attributes.html#Choice-RoutingRoadRangeAttributeValue" title="Choice defined in nds.routingdata.attributes">RoutingRoadRangeAttributeValue</td></tr></table></font>>];
+        "RoutingLaneRangeAttributeValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routingdata.attributes.html#Choice-RoutingLaneRangeAttributeValue" title="Choice defined in nds.routingdata.attributes">RoutingLaneRangeAttributeValue</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.routingdata.metadata"
+    {
+        style="dashed, rounded";
+        label="nds.routingdata.metadata";
+        tooltip="Package nds.routingdata.metadata";
+        href="../../../content/packages/nds.routingdata.metadata.html#Package-nds-routingdata-metadata";
+        target="_parent";
+
+        "RoadRoutingLayerMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routingdata.metadata.html#Structure-RoadRoutingLayerMetadata" title="Structure defined in nds.routingdata.metadata">RoadRoutingLayerMetadata</td></tr></table></font>>];
+        "LaneRoutingLayerMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routingdata.metadata.html#Structure-LaneRoutingLayerMetadata" title="Structure defined in nds.routingdata.metadata">LaneRoutingLayerMetadata</td></tr></table></font>>];
+    }
+
+    "RoutingRoadRangeAttributeValue" -> "ExcessSlope" [label="uses", fontsize=10];
+    "RoutingLaneRangeAttributeValue" -> "ExcessSlope" [label="uses", fontsize=10];
+    "RoadRoutingLayerMetadata" -> "ExcessSlope" [label="uses", fontsize=10];
+    "LaneRoutingLayerMetadata" -> "ExcessSlope" [label="uses", fontsize=10];
+}

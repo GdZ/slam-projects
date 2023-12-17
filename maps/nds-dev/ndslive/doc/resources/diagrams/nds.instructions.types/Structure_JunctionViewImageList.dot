@@ -1,0 +1,42 @@
+/**
+ * This dot file creates symbol collaboration diagram for JunctionViewImageList.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="JunctionViewImageList collaboration diagram";
+
+    subgraph "cluster_nds.instructions.types"
+    {
+        style="dashed, rounded";
+        label="nds.instructions.types";
+        tooltip="Package nds.instructions.types";
+        href="../../../content/packages/nds.instructions.types.html#Package-nds-instructions-types";
+        target="_parent";
+
+        "JunctionViewImageList" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.instructions.types.html#Structure-JunctionViewImageList" title="Structure defined in nds.instructions.types">JunctionViewImageList</td></tr></table></font>>];
+        "JunctionViewImageFormat" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.instructions.types.html#Enum-JunctionViewImageFormat" title="Enum defined in nds.instructions.types">JunctionViewImageFormat</td></tr></table></font>>];
+        "JunctionViewImageSetId" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.instructions.types.html#Subtype-JunctionViewImageSetId" title="Subtype defined in nds.instructions.types">JunctionViewImageSetId</td></tr></table></font>>];
+        "JunctionViewImageUsageType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.instructions.types.html#Bitmask-JunctionViewImageUsageType" title="Bitmask defined in nds.instructions.types">JunctionViewImageUsageType</td></tr></table></font>>];
+        "JunctionViewImageRatio" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.instructions.types.html#Structure-JunctionViewImageRatio" title="Structure defined in nds.instructions.types">JunctionViewImageRatio</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.instructions.layer"
+    {
+        style="dashed, rounded";
+        label="nds.instructions.layer";
+        tooltip="Package nds.instructions.layer";
+        href="../../../content/packages/nds.instructions.layer.html#Package-nds-instructions-layer";
+        target="_parent";
+
+        "InstructionsImageLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.instructions.layer.html#Structure-InstructionsImageLayer" title="Structure defined in nds.instructions.layer">InstructionsImageLayer</td></tr></table></font>>];
+    }
+
+    "JunctionViewImageList" -> "JunctionViewImageFormat" [label="uses", fontsize=10];
+    "JunctionViewImageList" -> "JunctionViewImageSetId" [label="uses", fontsize=10];
+    "JunctionViewImageList" -> "JunctionViewImageUsageType" [label="uses", fontsize=10];
+    "JunctionViewImageList" -> "JunctionViewImageRatio" [label="uses", fontsize=10];
+    "InstructionsImageLayer" -> "JunctionViewImageList" [label="uses", fontsize=10];
+}

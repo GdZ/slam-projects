@@ -1,0 +1,26 @@
+/**
+ * This dot file creates symbol collaboration diagram for SmartLayerTileStore.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="SmartLayerTileStore collaboration diagram";
+
+    subgraph "cluster_nds.smart.filestore"
+    {
+        style="dashed, rounded";
+        label="nds.smart.filestore";
+        tooltip="Package nds.smart.filestore";
+        href="../../../content/packages/nds.smart.filestore.html#Package-nds-smart-filestore";
+        target="_parent";
+
+        "SmartLayerTileStore" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.filestore.html#SqlDatabase-SmartLayerTileStore" title="SqlDatabase defined in nds.smart.filestore">SmartLayerTileStore</td></tr></table></font>>];
+        "SmartLayerMetadataTable" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.filestore.html#SqlTable-SmartLayerMetadataTable" title="SqlTable defined in nds.smart.filestore">SmartLayerMetadataTable</td></tr></table></font>>];
+        "SmartLayerTileTable" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.filestore.html#SqlTable-SmartLayerTileTable" title="SqlTable defined in nds.smart.filestore">SmartLayerTileTable</td></tr></table></font>>];
+    }
+
+    "SmartLayerTileStore" -> "SmartLayerMetadataTable" [label="uses", fontsize=10];
+    "SmartLayerTileStore" -> "SmartLayerTileTable" [label="uses", fontsize=10];
+}

@@ -1,0 +1,76 @@
+/**
+ * This dot file creates symbol collaboration diagram for PoiDisplayMesh3DRelationMap.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="PoiDisplayMesh3DRelationMap collaboration diagram";
+
+    subgraph "cluster_nds.poi.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.poi.instantiations";
+        tooltip="Package nds.poi.instantiations";
+        href="../../../content/packages/nds.poi.instantiations.html#Package-nds-poi-instantiations";
+        target="_parent";
+
+        "PoiDisplayMesh3DRelationMap" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.instantiations.html#InstantiateType-PoiDisplayMesh3DRelationMap" title="InstantiateType defined in nds.poi.instantiations">PoiDisplayMesh3DRelationMap</td></tr></table></font>>];
+        "AttributeMap&lt;DisplayMesh3dId,Validity,PoiDisplayMesh3DRelationType,PoiDisplayMesh3DRelationValue,CorePropertyType,CorePropertyValue&gt;" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.attributemap.html#Structure-AttributeMap" title="Structure defined in nds.core.attributemap">AttributeMap</td><td>&lt;</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.reference.types.html#Subtype-DisplayMesh3dId" title="Subtype defined in nds.display.reference.types">DisplayMesh3dId</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.attributemap.html#Structure-Validity" title="Structure defined in nds.core.attributemap">Validity</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.poi.html#Enum-PoiDisplayMesh3DRelationType" title="Enum defined in nds.poi.poi">PoiDisplayMesh3DRelationType</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.poi.html#Choice-PoiDisplayMesh3DRelationValue" title="Choice defined in nds.poi.poi">PoiDisplayMesh3DRelationValue</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.properties.html#Enum-CorePropertyType" title="Enum defined in nds.core.properties">CorePropertyType</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.properties.html#Choice-CorePropertyValue" title="Choice defined in nds.core.properties">CorePropertyValue</td></tr></table></td><td>&gt;</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.display.reference.types"
+    {
+        style="dashed, rounded";
+        label="nds.display.reference.types";
+        tooltip="Package nds.display.reference.types";
+        href="../../../content/packages/nds.display.reference.types.html#Package-nds-display-reference-types";
+        target="_parent";
+
+        "DisplayMesh3dId" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.reference.types.html#Subtype-DisplayMesh3dId" title="Subtype defined in nds.display.reference.types">DisplayMesh3dId</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.attributemap"
+    {
+        style="dashed, rounded";
+        label="nds.core.attributemap";
+        tooltip="Package nds.core.attributemap";
+        href="../../../content/packages/nds.core.attributemap.html#Package-nds-core-attributemap";
+        target="_parent";
+
+        "Validity" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.attributemap.html#Structure-Validity" title="Structure defined in nds.core.attributemap">Validity</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.poi.poi"
+    {
+        style="dashed, rounded";
+        label="nds.poi.poi";
+        tooltip="Package nds.poi.poi";
+        href="../../../content/packages/nds.poi.poi.html#Package-nds-poi-poi";
+        target="_parent";
+
+        "PoiDisplayMesh3DRelationType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.poi.html#Enum-PoiDisplayMesh3DRelationType" title="Enum defined in nds.poi.poi">PoiDisplayMesh3DRelationType</td></tr></table></font>>];
+        "PoiDisplayMesh3DRelationValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.poi.html#Choice-PoiDisplayMesh3DRelationValue" title="Choice defined in nds.poi.poi">PoiDisplayMesh3DRelationValue</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.properties"
+    {
+        style="dashed, rounded";
+        label="nds.core.properties";
+        tooltip="Package nds.core.properties";
+        href="../../../content/packages/nds.core.properties.html#Package-nds-core-properties";
+        target="_parent";
+
+        "CorePropertyType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.properties.html#Enum-CorePropertyType" title="Enum defined in nds.core.properties">CorePropertyType</td></tr></table></font>>];
+        "CorePropertyValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.properties.html#Choice-CorePropertyValue" title="Choice defined in nds.core.properties">CorePropertyValue</td></tr></table></font>>];
+    }
+
+    "PoiDisplayMesh3DRelationMap" -> "AttributeMap&lt;DisplayMesh3dId,Validity,PoiDisplayMesh3DRelationType,PoiDisplayMesh3DRelationValue,CorePropertyType,CorePropertyValue&gt;" [label="uses", fontsize=10];
+    "PoiDisplayMesh3DRelationMap" -> "DisplayMesh3dId" [label="uses", fontsize=10];
+    "PoiDisplayMesh3DRelationMap" -> "Validity" [label="uses", fontsize=10];
+    "PoiDisplayMesh3DRelationMap" -> "PoiDisplayMesh3DRelationType" [label="uses", fontsize=10];
+    "PoiDisplayMesh3DRelationMap" -> "PoiDisplayMesh3DRelationValue" [label="uses", fontsize=10];
+    "PoiDisplayMesh3DRelationMap" -> "CorePropertyType" [label="uses", fontsize=10];
+    "PoiDisplayMesh3DRelationMap" -> "CorePropertyValue" [label="uses", fontsize=10];
+}

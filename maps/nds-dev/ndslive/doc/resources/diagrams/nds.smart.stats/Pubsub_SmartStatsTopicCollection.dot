@@ -1,0 +1,26 @@
+/**
+ * This dot file creates symbol collaboration diagram for SmartStatsTopicCollection.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="SmartStatsTopicCollection collaboration diagram";
+
+    subgraph "cluster_nds.smart.stats"
+    {
+        style="dashed, rounded";
+        label="nds.smart.stats";
+        tooltip="Package nds.smart.stats";
+        href="../../../content/packages/nds.smart.stats.html#Package-nds-smart-stats";
+        target="_parent";
+
+        "SmartStatsTopicCollection" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.stats.html#Pubsub-SmartStatsTopicCollection" title="Pubsub defined in nds.smart.stats">SmartStatsTopicCollection</td></tr></table></font>>];
+        "ServerStatsTopic" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.stats.html#Structure-ServerStatsTopic" title="Structure defined in nds.smart.stats">ServerStatsTopic</td></tr></table></font>>];
+        "ClientStatsTopic" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.stats.html#Structure-ClientStatsTopic" title="Structure defined in nds.smart.stats">ClientStatsTopic</td></tr></table></font>>];
+    }
+
+    "SmartStatsTopicCollection" -> "ServerStatsTopic" [label="uses", fontsize=10];
+    "SmartStatsTopicCollection" -> "ClientStatsTopic" [label="uses", fontsize=10];
+}

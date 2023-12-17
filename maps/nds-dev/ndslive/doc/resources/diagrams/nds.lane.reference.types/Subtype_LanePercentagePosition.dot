@@ -1,0 +1,36 @@
+/**
+ * This dot file creates symbol collaboration diagram for LanePercentagePosition.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="LanePercentagePosition collaboration diagram";
+
+    subgraph "cluster_nds.lane.reference.types"
+    {
+        style="dashed, rounded";
+        label="nds.lane.reference.types";
+        tooltip="Package nds.lane.reference.types";
+        href="../../../content/packages/nds.lane.reference.types.html#Package-nds-lane-reference-types";
+        target="_parent";
+
+        "LanePercentagePosition" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.reference.types.html#Subtype-LanePercentagePosition" title="Subtype defined in nds.lane.reference.types">LanePercentagePosition</td></tr></table></font>>];
+        "LanePositionChoice" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.reference.types.html#Choice-LanePositionChoice" title="Choice defined in nds.lane.reference.types">LanePositionChoice</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.types"
+    {
+        style="dashed, rounded";
+        label="nds.core.types";
+        tooltip="Package nds.core.types";
+        href="../../../content/packages/nds.core.types.html#Package-nds-core-types";
+        target="_parent";
+
+        "PercentagePosition" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Structure-PercentagePosition" title="Structure defined in nds.core.types">PercentagePosition</td></tr></table></font>>];
+    }
+
+    "LanePercentagePosition" -> "PercentagePosition" [label="uses", fontsize=10];
+    "LanePositionChoice" -> "LanePercentagePosition" [label="uses", fontsize=10];
+}

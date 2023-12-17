@@ -1,0 +1,50 @@
+/**
+ * This dot file creates symbol collaboration diagram for PoiSearchMetadata.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="PoiSearchMetadata collaboration diagram";
+
+    subgraph "cluster_nds.poi.metadata"
+    {
+        style="dashed, rounded";
+        label="nds.poi.metadata";
+        tooltip="Package nds.poi.metadata";
+        href="../../../content/packages/nds.poi.metadata.html#Package-nds-poi-metadata";
+        target="_parent";
+
+        "PoiSearchMetadata" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.metadata.html#Structure-PoiSearchMetadata" title="Structure defined in nds.poi.metadata">PoiSearchMetadata</td></tr></table></font>>];
+        "PoiSearchFilterOptions" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.metadata.html#Bitmask-PoiSearchFilterOptions" title="Bitmask defined in nds.poi.metadata">PoiSearchFilterOptions</td></tr></table></font>>];
+        "PoiCategory" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.metadata.html#Structure-PoiCategory" title="Structure defined in nds.poi.metadata">PoiCategory</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.poi.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.poi.instantiations";
+        tooltip="Package nds.poi.instantiations";
+        href="../../../content/packages/nds.poi.instantiations.html#Package-nds-poi-instantiations";
+        target="_parent";
+
+        "PoiAttributeMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.instantiations.html#InstantiateType-PoiAttributeMetadata" title="InstantiateType defined in nds.poi.instantiations">PoiAttributeMetadata</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.language"
+    {
+        style="dashed, rounded";
+        label="nds.core.language";
+        tooltip="Package nds.core.language";
+        href="../../../content/packages/nds.core.language.html#Package-nds-core-language";
+        target="_parent";
+
+        "AvailableLanguages" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.language.html#Structure-AvailableLanguages" title="Structure defined in nds.core.language">AvailableLanguages</td></tr></table></font>>];
+    }
+
+    "PoiSearchMetadata" -> "PoiSearchFilterOptions" [label="uses", fontsize=10];
+    "PoiSearchMetadata" -> "PoiCategory" [label="uses", fontsize=10];
+    "PoiSearchMetadata" -> "PoiAttributeMetadata" [label="uses", fontsize=10];
+    "PoiSearchMetadata" -> "AvailableLanguages" [label="uses", fontsize=10];
+}

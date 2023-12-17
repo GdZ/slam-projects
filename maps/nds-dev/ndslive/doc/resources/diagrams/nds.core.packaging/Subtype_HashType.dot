@@ -1,0 +1,46 @@
+/**
+ * This dot file creates symbol collaboration diagram for HashType.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="HashType collaboration diagram";
+
+    subgraph "cluster_nds.core.packaging"
+    {
+        style="dashed, rounded";
+        label="nds.core.packaging";
+        tooltip="Package nds.core.packaging";
+        href="../../../content/packages/nds.core.packaging.html#Package-nds-core-packaging";
+        target="_parent";
+
+        "HashType" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.packaging.html#Subtype-HashType" title="Subtype defined in nds.core.packaging">HashType</td></tr></table></font>>];
+        "SignatureDefinition" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.packaging.html#Structure-SignatureDefinition" title="Structure defined in nds.core.packaging">SignatureDefinition</td></tr></table></font>>];
+        "CRC32" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.packaging.html#Constant-CRC32" title="Constant defined in nds.core.packaging">CRC32</td></tr></table></font>>];
+        "SHA2_224" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.packaging.html#Constant-SHA2_224" title="Constant defined in nds.core.packaging">SHA2_224</td></tr></table></font>>];
+        "SHA2_256" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.packaging.html#Constant-SHA2_256" title="Constant defined in nds.core.packaging">SHA2_256</td></tr></table></font>>];
+        "SHA2_384" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.packaging.html#Constant-SHA2_384" title="Constant defined in nds.core.packaging">SHA2_384</td></tr></table></font>>];
+        "SHA2_512" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.packaging.html#Constant-SHA2_512" title="Constant defined in nds.core.packaging">SHA2_512</td></tr></table></font>>];
+        "SHA2_512_224" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.packaging.html#Constant-SHA2_512_224" title="Constant defined in nds.core.packaging">SHA2_512_224</td></tr></table></font>>];
+        "SHA2_512_256" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.packaging.html#Constant-SHA2_512_256" title="Constant defined in nds.core.packaging">SHA2_512_256</td></tr></table></font>>];
+        "SHA3_224" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.packaging.html#Constant-SHA3_224" title="Constant defined in nds.core.packaging">SHA3_224</td></tr></table></font>>];
+        "SHA3_256" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.packaging.html#Constant-SHA3_256" title="Constant defined in nds.core.packaging">SHA3_256</td></tr></table></font>>];
+        "SHA3_384" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.packaging.html#Constant-SHA3_384" title="Constant defined in nds.core.packaging">SHA3_384</td></tr></table></font>>];
+        "SHA3_512" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.packaging.html#Constant-SHA3_512" title="Constant defined in nds.core.packaging">SHA3_512</td></tr></table></font>>];
+    }
+
+    "SignatureDefinition" -> "HashType" [label="uses", fontsize=10];
+    "CRC32" -> "HashType" [label="uses", fontsize=10];
+    "SHA2_224" -> "HashType" [label="uses", fontsize=10];
+    "SHA2_256" -> "HashType" [label="uses", fontsize=10];
+    "SHA2_384" -> "HashType" [label="uses", fontsize=10];
+    "SHA2_512" -> "HashType" [label="uses", fontsize=10];
+    "SHA2_512_224" -> "HashType" [label="uses", fontsize=10];
+    "SHA2_512_256" -> "HashType" [label="uses", fontsize=10];
+    "SHA3_224" -> "HashType" [label="uses", fontsize=10];
+    "SHA3_256" -> "HashType" [label="uses", fontsize=10];
+    "SHA3_384" -> "HashType" [label="uses", fontsize=10];
+    "SHA3_512" -> "HashType" [label="uses", fontsize=10];
+}

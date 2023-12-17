@@ -1,0 +1,26 @@
+/**
+ * This dot file creates symbol collaboration diagram for LandmarkColor.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="LandmarkColor collaboration diagram";
+
+    subgraph "cluster_nds.localization.types"
+    {
+        style="dashed, rounded";
+        label="nds.localization.types";
+        tooltip="Package nds.localization.types";
+        href="../../../content/packages/nds.localization.types.html#Package-nds-localization-types";
+        target="_parent";
+
+        "LandmarkColor" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.localization.types.html#Structure-LandmarkColor" title="Structure defined in nds.localization.types">LandmarkColor</td></tr></table></font>>];
+        "LandmarkPolygon" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.localization.types.html#Structure-LandmarkPolygon" title="Structure defined in nds.localization.types">LandmarkPolygon</td></tr></table></font>>];
+        "LandmarkMesh" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.localization.types.html#Structure-LandmarkMesh" title="Structure defined in nds.localization.types">LandmarkMesh</td></tr></table></font>>];
+    }
+
+    "LandmarkPolygon" -> "LandmarkColor" [label="uses", fontsize=10];
+    "LandmarkMesh" -> "LandmarkColor" [label="uses", fontsize=10];
+}

@@ -1,0 +1,84 @@
+/**
+ * This dot file creates symbol collaboration diagram for LaneBoundaryGeometryOnPathTopic.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="LaneBoundaryGeometryOnPathTopic collaboration diagram";
+
+    subgraph "cluster_nds.lane.topics"
+    {
+        style="dashed, rounded";
+        label="nds.lane.topics";
+        tooltip="Package nds.lane.topics";
+        href="../../../content/packages/nds.lane.topics.html#Package-nds-lane-topics";
+        target="_parent";
+
+        "LaneBoundaryGeometryOnPathTopic" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.topics.html#Structure-LaneBoundaryGeometryOnPathTopic" title="Structure defined in nds.lane.topics">LaneBoundaryGeometryOnPathTopic</td></tr></table></font>>];
+        "LaneTopicCollection" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.topics.html#Pubsub-LaneTopicCollection" title="Pubsub defined in nds.lane.topics">LaneTopicCollection</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.types"
+    {
+        style="dashed, rounded";
+        label="nds.core.types";
+        tooltip="Package nds.core.types";
+        href="../../../content/packages/nds.core.types.html#Package-nds-core-types";
+        target="_parent";
+
+        "TimeStamp" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Structure-TimeStamp" title="Structure defined in nds.core.types">TimeStamp</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.vehicle.reference.types"
+    {
+        style="dashed, rounded";
+        label="nds.vehicle.reference.types";
+        tooltip="Package nds.vehicle.reference.types";
+        href="../../../content/packages/nds.vehicle.reference.types.html#Package-nds-vehicle-reference-types";
+        target="_parent";
+
+        "HorizonPathId" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.vehicle.reference.types.html#Subtype-HorizonPathId" title="Subtype defined in nds.vehicle.reference.types">HorizonPathId</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.lane.boundaries"
+    {
+        style="dashed, rounded";
+        label="nds.lane.boundaries";
+        tooltip="Package nds.lane.boundaries";
+        href="../../../content/packages/nds.lane.boundaries.html#Package-nds-lane-boundaries";
+        target="_parent";
+
+        "BoundaryElementDefinitions" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.boundaries.html#Structure-BoundaryElementDefinitions" title="Structure defined in nds.lane.boundaries">BoundaryElementDefinitions</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.geometry"
+    {
+        style="dashed, rounded";
+        label="nds.core.geometry";
+        tooltip="Package nds.core.geometry";
+        href="../../../content/packages/nds.core.geometry.html#Package-nds-core-geometry";
+        target="_parent";
+
+        "GeometryLayerType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Enum-GeometryLayerType" title="Enum defined in nds.core.geometry">GeometryLayerType</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.lane.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.lane.instantiations";
+        tooltip="Package nds.lane.instantiations";
+        href="../../../content/packages/nds.lane.instantiations.html#Package-nds-lane-instantiations";
+        target="_parent";
+
+        "BoundaryGeometryLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.instantiations.html#InstantiateType-BoundaryGeometryLayer" title="InstantiateType defined in nds.lane.instantiations">BoundaryGeometryLayer</td></tr></table></font>>];
+    }
+
+    "LaneBoundaryGeometryOnPathTopic" -> "TimeStamp" [label="uses", fontsize=10];
+    "LaneBoundaryGeometryOnPathTopic" -> "HorizonPathId" [label="uses", fontsize=10];
+    "LaneBoundaryGeometryOnPathTopic" -> "BoundaryElementDefinitions" [label="uses", fontsize=10];
+    "LaneBoundaryGeometryOnPathTopic" -> "GeometryLayerType" [label="uses", fontsize=10];
+    "LaneBoundaryGeometryOnPathTopic" -> "BoundaryGeometryLayer" [label="uses", fontsize=10];
+    "LaneTopicCollection" -> "LaneBoundaryGeometryOnPathTopic" [label="uses", fontsize=10];
+}

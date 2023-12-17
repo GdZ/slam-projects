@@ -1,0 +1,38 @@
+/**
+ * This dot file creates symbol collaboration diagram for DisplayProperty.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="DisplayProperty collaboration diagram";
+
+    subgraph "cluster_nds.display.details.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.display.details.instantiations";
+        tooltip="Package nds.display.details.instantiations";
+        href="../../../content/packages/nds.display.details.instantiations.html#Package-nds-display-details-instantiations";
+        target="_parent";
+
+        "DisplayProperty" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.details.instantiations.html#InstantiateType-DisplayProperty" title="InstantiateType defined in nds.display.details.instantiations">DisplayProperty</td></tr></table></font>>];
+        "Property&lt;DisplayPropertyType,DisplayPropertyValue&gt;" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.attributemap.html#Structure-Property" title="Structure defined in nds.core.attributemap">Property</td><td>&lt;</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.details.properties.html#Structure-DisplayPropertyType" title="Structure defined in nds.display.details.properties">DisplayPropertyType</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.details.properties.html#Structure-DisplayPropertyValue" title="Structure defined in nds.display.details.properties">DisplayPropertyValue</td></tr></table></td><td>&gt;</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.display.details.properties"
+    {
+        style="dashed, rounded";
+        label="nds.display.details.properties";
+        tooltip="Package nds.display.details.properties";
+        href="../../../content/packages/nds.display.details.properties.html#Package-nds-display-details-properties";
+        target="_parent";
+
+        "DisplayPropertyType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.details.properties.html#Structure-DisplayPropertyType" title="Structure defined in nds.display.details.properties">DisplayPropertyType</td></tr></table></font>>];
+        "DisplayPropertyValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.details.properties.html#Structure-DisplayPropertyValue" title="Structure defined in nds.display.details.properties">DisplayPropertyValue</td></tr></table></font>>];
+    }
+
+    "DisplayProperty" -> "Property&lt;DisplayPropertyType,DisplayPropertyValue&gt;" [label="uses", fontsize=10];
+    "DisplayProperty" -> "DisplayPropertyType" [label="uses", fontsize=10];
+    "DisplayProperty" -> "DisplayPropertyValue" [label="uses", fontsize=10];
+}

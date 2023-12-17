@@ -1,0 +1,26 @@
+/**
+ * This dot file creates symbol collaboration diagram for SignPostImageReference.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="SignPostImageReference collaboration diagram";
+
+    subgraph "cluster_nds.instructions.types"
+    {
+        style="dashed, rounded";
+        label="nds.instructions.types";
+        tooltip="Package nds.instructions.types";
+        href="../../../content/packages/nds.instructions.types.html#Package-nds-instructions-types";
+        target="_parent";
+
+        "SignPostImageReference" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.instructions.types.html#Subtype-SignPostImageReference" title="Subtype defined in nds.instructions.types">SignPostImageReference</td></tr></table></font>>];
+        "SignpostImageId" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.instructions.types.html#Subtype-SignpostImageId" title="Subtype defined in nds.instructions.types">SignpostImageId</td></tr></table></font>>];
+        "SignpostImage" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.instructions.types.html#Structure-SignpostImage" title="Structure defined in nds.instructions.types">SignpostImage</td></tr></table></font>>];
+    }
+
+    "SignPostImageReference" -> "SignpostImageId" [label="uses", fontsize=10];
+    "SignpostImage" -> "SignPostImageReference" [label="uses", fontsize=10];
+}

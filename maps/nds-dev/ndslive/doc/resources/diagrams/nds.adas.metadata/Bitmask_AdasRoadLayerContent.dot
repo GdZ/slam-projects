@@ -1,0 +1,36 @@
+/**
+ * This dot file creates symbol collaboration diagram for AdasRoadLayerContent.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="AdasRoadLayerContent collaboration diagram";
+
+    subgraph "cluster_nds.adas.metadata"
+    {
+        style="dashed, rounded";
+        label="nds.adas.metadata";
+        tooltip="Package nds.adas.metadata";
+        href="../../../content/packages/nds.adas.metadata.html#Package-nds-adas-metadata";
+        target="_parent";
+
+        "AdasRoadLayerContent" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.adas.metadata.html#Bitmask-AdasRoadLayerContent" title="Bitmask defined in nds.adas.metadata">AdasRoadLayerContent</td></tr></table></font>>];
+        "AdasRoadLayerMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.adas.metadata.html#Structure-AdasRoadLayerMetadata" title="Structure defined in nds.adas.metadata">AdasRoadLayerMetadata</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.adas.layer"
+    {
+        style="dashed, rounded";
+        label="nds.adas.layer";
+        tooltip="Package nds.adas.layer";
+        href="../../../content/packages/nds.adas.layer.html#Package-nds-adas-layer";
+        target="_parent";
+
+        "AdasRoadLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.adas.layer.html#Structure-AdasRoadLayer" title="Structure defined in nds.adas.layer">AdasRoadLayer</td></tr></table></font>>];
+    }
+
+    "AdasRoadLayer" -> "AdasRoadLayerContent" [label="uses", fontsize=10];
+    "AdasRoadLayerMetadata" -> "AdasRoadLayerContent" [label="uses", fontsize=10];
+}

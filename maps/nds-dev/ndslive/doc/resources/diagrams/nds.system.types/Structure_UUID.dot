@@ -1,0 +1,50 @@
+/**
+ * This dot file creates symbol collaboration diagram for UUID.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="UUID collaboration diagram";
+
+    subgraph "cluster_nds.system.types"
+    {
+        style="dashed, rounded";
+        label="nds.system.types";
+        tooltip="Package nds.system.types";
+        href="../../../content/packages/nds.system.types.html#Package-nds-system-types";
+        target="_parent";
+
+        "UUID" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.system.types.html#Structure-UUID" title="Structure defined in nds.system.types">UUID</td></tr></table></font>>];
+        "NdsSystemToken" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.system.types.html#Structure-NdsSystemToken" title="Structure defined in nds.system.types">NdsSystemToken</td></tr></table></font>>];
+        "NdsNodeToken" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.system.types.html#Structure-NdsNodeToken" title="Structure defined in nds.system.types">NdsNodeToken</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.traffic.types"
+    {
+        style="dashed, rounded";
+        label="nds.traffic.types";
+        tooltip="Package nds.traffic.types";
+        href="../../../content/packages/nds.traffic.types.html#Package-nds-traffic-types";
+        target="_parent";
+
+        "TrafficEventUuid" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.traffic.types.html#Subtype-TrafficEventUuid" title="Subtype defined in nds.traffic.types">TrafficEventUuid</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.smart.mesh"
+    {
+        style="dashed, rounded";
+        label="nds.smart.mesh";
+        tooltip="Package nds.smart.mesh";
+        href="../../../content/packages/nds.smart.mesh.html#Package-nds-smart-mesh";
+        target="_parent";
+
+        "SmartMeshId" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.mesh.html#Subtype-SmartMeshId" title="Subtype defined in nds.smart.mesh">SmartMeshId</td></tr></table></font>>];
+    }
+
+    "NdsSystemToken" -> "UUID" [label="uses", fontsize=10];
+    "NdsNodeToken" -> "UUID" [label="uses", fontsize=10];
+    "TrafficEventUuid" -> "UUID" [label="uses", fontsize=10];
+    "SmartMeshId" -> "UUID" [label="uses", fontsize=10];
+}

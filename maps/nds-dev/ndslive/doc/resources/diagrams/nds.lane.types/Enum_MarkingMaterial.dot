@@ -1,0 +1,48 @@
+/**
+ * This dot file creates symbol collaboration diagram for MarkingMaterial.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="MarkingMaterial collaboration diagram";
+
+    subgraph "cluster_nds.lane.types"
+    {
+        style="dashed, rounded";
+        label="nds.lane.types";
+        tooltip="Package nds.lane.types";
+        href="../../../content/packages/nds.lane.types.html#Package-nds-lane-types";
+        target="_parent";
+
+        "MarkingMaterial" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.types.html#Enum-MarkingMaterial" title="Enum defined in nds.lane.types">MarkingMaterial</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.lane.boundaries"
+    {
+        style="dashed, rounded";
+        label="nds.lane.boundaries";
+        tooltip="Package nds.lane.boundaries";
+        href="../../../content/packages/nds.lane.boundaries.html#Package-nds-lane-boundaries";
+        target="_parent";
+
+        "MarkingBoundaryElement" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.boundaries.html#Structure-MarkingBoundaryElement" title="Structure defined in nds.lane.boundaries">MarkingBoundaryElement</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.lane.roadsurface"
+    {
+        style="dashed, rounded";
+        label="nds.lane.roadsurface";
+        tooltip="Package nds.lane.roadsurface";
+        href="../../../content/packages/nds.lane.roadsurface.html#Package-nds-lane-roadsurface";
+        target="_parent";
+
+        "RoadSurfacePolygonMarking" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.roadsurface.html#Structure-RoadSurfacePolygonMarking" title="Structure defined in nds.lane.roadsurface">RoadSurfacePolygonMarking</td></tr></table></font>>];
+        "RoadSurfaceLineMarking" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.roadsurface.html#Structure-RoadSurfaceLineMarking" title="Structure defined in nds.lane.roadsurface">RoadSurfaceLineMarking</td></tr></table></font>>];
+    }
+
+    "MarkingBoundaryElement" -> "MarkingMaterial" [label="uses", fontsize=10];
+    "RoadSurfacePolygonMarking" -> "MarkingMaterial" [label="uses", fontsize=10];
+    "RoadSurfaceLineMarking" -> "MarkingMaterial" [label="uses", fontsize=10];
+}

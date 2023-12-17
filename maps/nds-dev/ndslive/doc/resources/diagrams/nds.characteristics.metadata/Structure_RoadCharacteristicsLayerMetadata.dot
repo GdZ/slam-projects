@@ -1,0 +1,54 @@
+/**
+ * This dot file creates symbol collaboration diagram for RoadCharacteristicsLayerMetadata.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="RoadCharacteristicsLayerMetadata collaboration diagram";
+
+    subgraph "cluster_nds.characteristics.metadata"
+    {
+        style="dashed, rounded";
+        label="nds.characteristics.metadata";
+        tooltip="Package nds.characteristics.metadata";
+        href="../../../content/packages/nds.characteristics.metadata.html#Package-nds-characteristics-metadata";
+        target="_parent";
+
+        "RoadCharacteristicsLayerMetadata" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.metadata.html#Structure-RoadCharacteristicsLayerMetadata" title="Structure defined in nds.characteristics.metadata">RoadCharacteristicsLayerMetadata</td></tr></table></font>>];
+        "RoadCharacsLayerContent" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.metadata.html#Bitmask-RoadCharacsLayerContent" title="Bitmask defined in nds.characteristics.metadata">RoadCharacsLayerContent</td></tr></table></font>>];
+        "RoadLocationProviderDetails" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.metadata.html#Structure-RoadLocationProviderDetails" title="Structure defined in nds.characteristics.metadata">RoadLocationProviderDetails</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.characteristics.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.characteristics.instantiations";
+        tooltip="Package nds.characteristics.instantiations";
+        href="../../../content/packages/nds.characteristics.instantiations.html#Package-nds-characteristics-instantiations";
+        target="_parent";
+
+        "CharacsRoadRangeAttributeMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.instantiations.html#InstantiateType-CharacsRoadRangeAttributeMetadata" title="InstantiateType defined in nds.characteristics.instantiations">CharacsRoadRangeAttributeMetadata</td></tr></table></font>>];
+        "CharacsRoadPositionAttributeMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.instantiations.html#InstantiateType-CharacsRoadPositionAttributeMetadata" title="InstantiateType defined in nds.characteristics.instantiations">CharacsRoadPositionAttributeMetadata</td></tr></table></font>>];
+        "CharacsTransitionAttributeMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.instantiations.html#InstantiateType-CharacsTransitionAttributeMetadata" title="InstantiateType defined in nds.characteristics.instantiations">CharacsTransitionAttributeMetadata</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.types"
+    {
+        style="dashed, rounded";
+        label="nds.core.types";
+        tooltip="Package nds.core.types";
+        href="../../../content/packages/nds.core.types.html#Package-nds-core-types";
+        target="_parent";
+
+        "RoadType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Structure-RoadType" title="Structure defined in nds.core.types">RoadType</td></tr></table></font>>];
+    }
+
+    "RoadCharacteristicsLayerMetadata" -> "RoadCharacsLayerContent" [label="uses", fontsize=10];
+    "RoadCharacteristicsLayerMetadata" -> "CharacsRoadRangeAttributeMetadata" [label="uses", fontsize=10];
+    "RoadCharacteristicsLayerMetadata" -> "CharacsRoadPositionAttributeMetadata" [label="uses", fontsize=10];
+    "RoadCharacteristicsLayerMetadata" -> "RoadType" [label="uses", fontsize=10];
+    "RoadCharacteristicsLayerMetadata" -> "RoadLocationProviderDetails" [label="uses", fontsize=10];
+    "RoadCharacteristicsLayerMetadata" -> "CharacsTransitionAttributeMetadata" [label="uses", fontsize=10];
+}

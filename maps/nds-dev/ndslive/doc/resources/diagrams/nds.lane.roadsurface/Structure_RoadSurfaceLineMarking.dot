@@ -1,0 +1,52 @@
+/**
+ * This dot file creates symbol collaboration diagram for RoadSurfaceLineMarking.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="RoadSurfaceLineMarking collaboration diagram";
+
+    subgraph "cluster_nds.lane.roadsurface"
+    {
+        style="dashed, rounded";
+        label="nds.lane.roadsurface";
+        tooltip="Package nds.lane.roadsurface";
+        href="../../../content/packages/nds.lane.roadsurface.html#Package-nds-lane-roadsurface";
+        target="_parent";
+
+        "RoadSurfaceLineMarking" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.roadsurface.html#Structure-RoadSurfaceLineMarking" title="Structure defined in nds.lane.roadsurface">RoadSurfaceLineMarking</td></tr></table></font>>];
+        "RoadSurfaceLineMarkingType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.roadsurface.html#Enum-RoadSurfaceLineMarkingType" title="Enum defined in nds.lane.roadsurface">RoadSurfaceLineMarkingType</td></tr></table></font>>];
+        "MarkingWidth" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.roadsurface.html#Subtype-MarkingWidth" title="Subtype defined in nds.lane.roadsurface">MarkingWidth</td></tr></table></font>>];
+        "RoadSurfaceLineType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.roadsurface.html#Structure-RoadSurfaceLineType" title="Structure defined in nds.lane.roadsurface">RoadSurfaceLineType</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.lane.reference.types"
+    {
+        style="dashed, rounded";
+        label="nds.lane.reference.types";
+        tooltip="Package nds.lane.reference.types";
+        href="../../../content/packages/nds.lane.reference.types.html#Package-nds-lane-reference-types";
+        target="_parent";
+
+        "MarkingColor" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.reference.types.html#Enum-MarkingColor" title="Enum defined in nds.lane.reference.types">MarkingColor</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.lane.types"
+    {
+        style="dashed, rounded";
+        label="nds.lane.types";
+        tooltip="Package nds.lane.types";
+        href="../../../content/packages/nds.lane.types.html#Package-nds-lane-types";
+        target="_parent";
+
+        "MarkingMaterial" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.types.html#Enum-MarkingMaterial" title="Enum defined in nds.lane.types">MarkingMaterial</td></tr></table></font>>];
+    }
+
+    "RoadSurfaceLineMarking" -> "RoadSurfaceLineMarkingType" [label="uses", fontsize=10];
+    "RoadSurfaceLineMarking" -> "MarkingColor" [label="uses", fontsize=10];
+    "RoadSurfaceLineMarking" -> "MarkingMaterial" [label="uses", fontsize=10];
+    "RoadSurfaceLineMarking" -> "MarkingWidth" [label="uses", fontsize=10];
+    "RoadSurfaceLineType" -> "RoadSurfaceLineMarking" [label="uses", fontsize=10];
+}

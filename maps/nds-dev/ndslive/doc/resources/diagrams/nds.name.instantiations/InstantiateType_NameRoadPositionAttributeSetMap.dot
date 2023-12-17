@@ -1,0 +1,66 @@
+/**
+ * This dot file creates symbol collaboration diagram for NameRoadPositionAttributeSetMap.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="NameRoadPositionAttributeSetMap collaboration diagram";
+
+    subgraph "cluster_nds.name.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.name.instantiations";
+        tooltip="Package nds.name.instantiations";
+        href="../../../content/packages/nds.name.instantiations.html#Package-nds-name-instantiations";
+        target="_parent";
+
+        "NameRoadPositionAttributeSetMap" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.instantiations.html#InstantiateType-NameRoadPositionAttributeSetMap" title="InstantiateType defined in nds.name.instantiations">NameRoadPositionAttributeSetMap</td></tr></table></font>>];
+        "AttributeSetMap&lt;RoadReference,RoadPositionValidity,NameRoadPositionAttributeType,NameRoadPositionAttributeValue,NamePropertyType,NamePropertyValue&gt;" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.attributemap.html#Structure-AttributeSetMap" title="Structure defined in nds.core.attributemap">AttributeSetMap</td><td>&lt;</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.road.reference.types.html#Structure-RoadReference" title="Structure defined in nds.road.reference.types">RoadReference</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.road.reference.types.html#Structure-RoadPositionValidity" title="Structure defined in nds.road.reference.types">RoadPositionValidity</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.attributes.html#Enum-NameRoadPositionAttributeType" title="Enum defined in nds.name.attributes">NameRoadPositionAttributeType</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.attributes.html#Choice-NameRoadPositionAttributeValue" title="Choice defined in nds.name.attributes">NameRoadPositionAttributeValue</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.properties.html#Structure-NamePropertyType" title="Structure defined in nds.name.properties">NamePropertyType</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.properties.html#Structure-NamePropertyValue" title="Structure defined in nds.name.properties">NamePropertyValue</td></tr></table></td><td>&gt;</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.road.reference.types"
+    {
+        style="dashed, rounded";
+        label="nds.road.reference.types";
+        tooltip="Package nds.road.reference.types";
+        href="../../../content/packages/nds.road.reference.types.html#Package-nds-road-reference-types";
+        target="_parent";
+
+        "RoadReference" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.road.reference.types.html#Structure-RoadReference" title="Structure defined in nds.road.reference.types">RoadReference</td></tr></table></font>>];
+        "RoadPositionValidity" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.road.reference.types.html#Structure-RoadPositionValidity" title="Structure defined in nds.road.reference.types">RoadPositionValidity</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.name.attributes"
+    {
+        style="dashed, rounded";
+        label="nds.name.attributes";
+        tooltip="Package nds.name.attributes";
+        href="../../../content/packages/nds.name.attributes.html#Package-nds-name-attributes";
+        target="_parent";
+
+        "NameRoadPositionAttributeType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.attributes.html#Enum-NameRoadPositionAttributeType" title="Enum defined in nds.name.attributes">NameRoadPositionAttributeType</td></tr></table></font>>];
+        "NameRoadPositionAttributeValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.attributes.html#Choice-NameRoadPositionAttributeValue" title="Choice defined in nds.name.attributes">NameRoadPositionAttributeValue</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.name.properties"
+    {
+        style="dashed, rounded";
+        label="nds.name.properties";
+        tooltip="Package nds.name.properties";
+        href="../../../content/packages/nds.name.properties.html#Package-nds-name-properties";
+        target="_parent";
+
+        "NamePropertyType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.properties.html#Structure-NamePropertyType" title="Structure defined in nds.name.properties">NamePropertyType</td></tr></table></font>>];
+        "NamePropertyValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.properties.html#Structure-NamePropertyValue" title="Structure defined in nds.name.properties">NamePropertyValue</td></tr></table></font>>];
+    }
+
+    "NameRoadPositionAttributeSetMap" -> "AttributeSetMap&lt;RoadReference,RoadPositionValidity,NameRoadPositionAttributeType,NameRoadPositionAttributeValue,NamePropertyType,NamePropertyValue&gt;" [label="uses", fontsize=10];
+    "NameRoadPositionAttributeSetMap" -> "RoadReference" [label="uses", fontsize=10];
+    "NameRoadPositionAttributeSetMap" -> "RoadPositionValidity" [label="uses", fontsize=10];
+    "NameRoadPositionAttributeSetMap" -> "NameRoadPositionAttributeType" [label="uses", fontsize=10];
+    "NameRoadPositionAttributeSetMap" -> "NameRoadPositionAttributeValue" [label="uses", fontsize=10];
+    "NameRoadPositionAttributeSetMap" -> "NamePropertyType" [label="uses", fontsize=10];
+    "NameRoadPositionAttributeSetMap" -> "NamePropertyValue" [label="uses", fontsize=10];
+}

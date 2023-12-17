@@ -1,0 +1,48 @@
+/**
+ * This dot file creates symbol collaboration diagram for MetricRoadWidth.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="MetricRoadWidth collaboration diagram";
+
+    subgraph "cluster_nds.characteristics.types"
+    {
+        style="dashed, rounded";
+        label="nds.characteristics.types";
+        tooltip="Package nds.characteristics.types";
+        href="../../../content/packages/nds.characteristics.types.html#Package-nds-characteristics-types";
+        target="_parent";
+
+        "MetricRoadWidth" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.types.html#Subtype-MetricRoadWidth" title="Subtype defined in nds.characteristics.types">MetricRoadWidth</td></tr></table></font>>];
+        "NARROW_ROAD" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.types.html#Constant-NARROW_ROAD" title="Constant defined in nds.characteristics.types">NARROW_ROAD</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.types"
+    {
+        style="dashed, rounded";
+        label="nds.core.types";
+        tooltip="Package nds.core.types";
+        href="../../../content/packages/nds.core.types.html#Package-nds-core-types";
+        target="_parent";
+
+        "WidthCentimeters" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Subtype-WidthCentimeters" title="Subtype defined in nds.core.types">WidthCentimeters</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.characteristics.attributes"
+    {
+        style="dashed, rounded";
+        label="nds.characteristics.attributes";
+        tooltip="Package nds.characteristics.attributes";
+        href="../../../content/packages/nds.characteristics.attributes.html#Package-nds-characteristics-attributes";
+        target="_parent";
+
+        "CharacsRoadRangeAttributeValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.attributes.html#Choice-CharacsRoadRangeAttributeValue" title="Choice defined in nds.characteristics.attributes">CharacsRoadRangeAttributeValue</td></tr></table></font>>];
+    }
+
+    "MetricRoadWidth" -> "WidthCentimeters" [label="uses", fontsize=10];
+    "CharacsRoadRangeAttributeValue" -> "MetricRoadWidth" [label="uses", fontsize=10];
+    "NARROW_ROAD" -> "MetricRoadWidth" [label="uses", fontsize=10];
+}

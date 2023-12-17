@@ -1,0 +1,38 @@
+/**
+ * This dot file creates symbol collaboration diagram for Condition.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="Condition collaboration diagram";
+
+    subgraph "cluster_nds.core.attributemap"
+    {
+        style="dashed, rounded";
+        label="nds.core.attributemap";
+        tooltip="Package nds.core.attributemap";
+        href="../../../content/packages/nds.core.attributemap.html#Package-nds-core-attributemap";
+        target="_parent";
+
+        "Condition" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.attributemap.html#Structure-Condition" title="Structure defined in nds.core.attributemap">Condition</td></tr></table></font>>];
+        "ConditionList" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.attributemap.html#Structure-ConditionList" title="Structure defined in nds.core.attributemap">ConditionList</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.conditions"
+    {
+        style="dashed, rounded";
+        label="nds.core.conditions";
+        tooltip="Package nds.core.conditions";
+        href="../../../content/packages/nds.core.conditions.html#Package-nds-core-conditions";
+        target="_parent";
+
+        "ConditionTypeCode" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.conditions.html#Enum-ConditionTypeCode" title="Enum defined in nds.core.conditions">ConditionTypeCode</td></tr></table></font>>];
+        "ConditionValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.conditions.html#Choice-ConditionValue" title="Choice defined in nds.core.conditions">ConditionValue</td></tr></table></font>>];
+    }
+
+    "Condition" -> "ConditionTypeCode" [label="uses", fontsize=10];
+    "Condition" -> "ConditionValue" [label="uses", fontsize=10];
+    "ConditionList" -> "Condition" [label="uses", fontsize=10];
+}

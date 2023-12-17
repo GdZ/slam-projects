@@ -1,0 +1,66 @@
+/**
+ * This dot file creates symbol collaboration diagram for ParkingPositionRelationValue.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="ParkingPositionRelationValue collaboration diagram";
+
+    subgraph "cluster_nds.venue.parking"
+    {
+        style="dashed, rounded";
+        label="nds.venue.parking";
+        tooltip="Package nds.venue.parking";
+        href="../../../content/packages/nds.venue.parking.html#Package-nds-venue-parking";
+        target="_parent";
+
+        "ParkingPositionRelationValue" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.parking.html#Choice-ParkingPositionRelationValue" title="Choice defined in nds.venue.parking">ParkingPositionRelationValue</td></tr></table></font>>];
+        "ParkingPositionRelationType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.parking.html#Enum-ParkingPositionRelationType" title="Enum defined in nds.venue.parking">ParkingPositionRelationType</td></tr></table></font>>];
+        "RoadNetworkAccessRoadReference" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.parking.html#Structure-RoadNetworkAccessRoadReference" title="Structure defined in nds.venue.parking">RoadNetworkAccessRoadReference</td></tr></table></font>>];
+        "RoadNetworkAccessLaneReference" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.parking.html#Structure-RoadNetworkAccessLaneReference" title="Structure defined in nds.venue.parking">RoadNetworkAccessLaneReference</td></tr></table></font>>];
+        "RoadNetworkAccess" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.parking.html#Structure-RoadNetworkAccess" title="Structure defined in nds.venue.parking">RoadNetworkAccess</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.venue.reference.types"
+    {
+        style="dashed, rounded";
+        label="nds.venue.reference.types";
+        tooltip="Package nds.venue.reference.types";
+        href="../../../content/packages/nds.venue.reference.types.html#Package-nds-venue-reference-types";
+        target="_parent";
+
+        "ParkingSectionId" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.reference.types.html#Subtype-ParkingSectionId" title="Subtype defined in nds.venue.reference.types">ParkingSectionId</td></tr></table></font>>];
+        "ParkingSpotId" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.reference.types.html#Subtype-ParkingSpotId" title="Subtype defined in nds.venue.reference.types">ParkingSpotId</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.venue.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.venue.instantiations";
+        tooltip="Package nds.venue.instantiations";
+        href="../../../content/packages/nds.venue.instantiations.html#Package-nds-venue-instantiations";
+        target="_parent";
+
+        "ParkingLanePositionRelationMapList" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.instantiations.html#InstantiateType-ParkingLanePositionRelationMapList" title="InstantiateType defined in nds.venue.instantiations">ParkingLanePositionRelationMapList</td></tr></table></font>>];
+        "AttributeMapList&lt;LaneGroupId,LaneGroupPositionValidity,ParkingPositionRelationType,ParkingPositionRelationValue,CorePropertyType,CorePropertyValue&gt;" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.attributemap.html#Structure-AttributeMapList" title="Structure defined in nds.core.attributemap">AttributeMapList</td><td>&lt;</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.reference.types.html#Subtype-LaneGroupId" title="Subtype defined in nds.lane.reference.types">LaneGroupId</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.reference.types.html#Structure-LaneGroupPositionValidity" title="Structure defined in nds.lane.reference.types">LaneGroupPositionValidity</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.parking.html#Enum-ParkingPositionRelationType" title="Enum defined in nds.venue.parking">ParkingPositionRelationType</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.parking.html#Choice-ParkingPositionRelationValue" title="Choice defined in nds.venue.parking">ParkingPositionRelationValue</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.properties.html#Enum-CorePropertyType" title="Enum defined in nds.core.properties">CorePropertyType</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.properties.html#Choice-CorePropertyValue" title="Choice defined in nds.core.properties">CorePropertyValue</td></tr></table></td><td>&gt;</td></tr></table></font>>];
+        "ParkingLanePositionRelationMap" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.instantiations.html#InstantiateType-ParkingLanePositionRelationMap" title="InstantiateType defined in nds.venue.instantiations">ParkingLanePositionRelationMap</td></tr></table></font>>];
+        "AttributeMap&lt;LaneGroupId,LaneGroupPositionValidity,ParkingPositionRelationType,ParkingPositionRelationValue,CorePropertyType,CorePropertyValue&gt;" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.attributemap.html#Structure-AttributeMap" title="Structure defined in nds.core.attributemap">AttributeMap</td><td>&lt;</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.reference.types.html#Subtype-LaneGroupId" title="Subtype defined in nds.lane.reference.types">LaneGroupId</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.reference.types.html#Structure-LaneGroupPositionValidity" title="Structure defined in nds.lane.reference.types">LaneGroupPositionValidity</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.parking.html#Enum-ParkingPositionRelationType" title="Enum defined in nds.venue.parking">ParkingPositionRelationType</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.parking.html#Choice-ParkingPositionRelationValue" title="Choice defined in nds.venue.parking">ParkingPositionRelationValue</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.properties.html#Enum-CorePropertyType" title="Enum defined in nds.core.properties">CorePropertyType</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.properties.html#Choice-CorePropertyValue" title="Choice defined in nds.core.properties">CorePropertyValue</td></tr></table></td><td>&gt;</td></tr></table></font>>];
+        "ParkingPositionRelation" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.instantiations.html#InstantiateType-ParkingPositionRelation" title="InstantiateType defined in nds.venue.instantiations">ParkingPositionRelation</td></tr></table></font>>];
+        "Attribute&lt;ParkingPositionRelationType,ParkingPositionRelationValue&gt;" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.attributemap.html#Structure-Attribute" title="Structure defined in nds.core.attributemap">Attribute</td><td>&lt;</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.parking.html#Enum-ParkingPositionRelationType" title="Enum defined in nds.venue.parking">ParkingPositionRelationType</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.parking.html#Choice-ParkingPositionRelationValue" title="Choice defined in nds.venue.parking">ParkingPositionRelationValue</td></tr></table></td><td>&gt;</td></tr></table></font>>];
+    }
+
+    "ParkingPositionRelationValue" -> "ParkingPositionRelationType" [label="uses", fontsize=10];
+    "ParkingPositionRelationValue" -> "ParkingSectionId" [label="uses", fontsize=10];
+    "ParkingPositionRelationValue" -> "ParkingSpotId" [label="uses", fontsize=10];
+    "ParkingPositionRelationValue" -> "RoadNetworkAccessRoadReference" [label="uses", fontsize=10];
+    "ParkingPositionRelationValue" -> "RoadNetworkAccessLaneReference" [label="uses", fontsize=10];
+    "ParkingPositionRelationValue" -> "RoadNetworkAccess" [label="uses", fontsize=10];
+    "ParkingLanePositionRelationMapList" -> "ParkingPositionRelationValue" [label="uses", fontsize=10];
+    "AttributeMapList&lt;LaneGroupId,LaneGroupPositionValidity,ParkingPositionRelationType,ParkingPositionRelationValue,CorePropertyType,CorePropertyValue&gt;" -> "ParkingPositionRelationValue" [label="uses", fontsize=10];
+    "ParkingLanePositionRelationMap" -> "ParkingPositionRelationValue" [label="uses", fontsize=10];
+    "AttributeMap&lt;LaneGroupId,LaneGroupPositionValidity,ParkingPositionRelationType,ParkingPositionRelationValue,CorePropertyType,CorePropertyValue&gt;" -> "ParkingPositionRelationValue" [label="uses", fontsize=10];
+    "ParkingPositionRelation" -> "ParkingPositionRelationValue" [label="uses", fontsize=10];
+    "Attribute&lt;ParkingPositionRelationType,ParkingPositionRelationValue&gt;" -> "ParkingPositionRelationValue" [label="uses", fontsize=10];
+}

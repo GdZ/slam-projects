@@ -1,0 +1,38 @@
+/**
+ * This dot file creates symbol collaboration diagram for CharacsDisplayLineRangeAttribute.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="CharacsDisplayLineRangeAttribute collaboration diagram";
+
+    subgraph "cluster_nds.characteristics.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.characteristics.instantiations";
+        tooltip="Package nds.characteristics.instantiations";
+        href="../../../content/packages/nds.characteristics.instantiations.html#Package-nds-characteristics-instantiations";
+        target="_parent";
+
+        "CharacsDisplayLineRangeAttribute" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.instantiations.html#InstantiateType-CharacsDisplayLineRangeAttribute" title="InstantiateType defined in nds.characteristics.instantiations">CharacsDisplayLineRangeAttribute</td></tr></table></font>>];
+        "Attribute&lt;CharacsDisplayLineRangeAttributeType,CharacsDisplayLineRangeAttributeValue&gt;" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.attributemap.html#Structure-Attribute" title="Structure defined in nds.core.attributemap">Attribute</td><td>&lt;</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.attributes.html#Enum-CharacsDisplayLineRangeAttributeType" title="Enum defined in nds.characteristics.attributes">CharacsDisplayLineRangeAttributeType</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.attributes.html#Choice-CharacsDisplayLineRangeAttributeValue" title="Choice defined in nds.characteristics.attributes">CharacsDisplayLineRangeAttributeValue</td></tr></table></td><td>&gt;</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.characteristics.attributes"
+    {
+        style="dashed, rounded";
+        label="nds.characteristics.attributes";
+        tooltip="Package nds.characteristics.attributes";
+        href="../../../content/packages/nds.characteristics.attributes.html#Package-nds-characteristics-attributes";
+        target="_parent";
+
+        "CharacsDisplayLineRangeAttributeType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.attributes.html#Enum-CharacsDisplayLineRangeAttributeType" title="Enum defined in nds.characteristics.attributes">CharacsDisplayLineRangeAttributeType</td></tr></table></font>>];
+        "CharacsDisplayLineRangeAttributeValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.characteristics.attributes.html#Choice-CharacsDisplayLineRangeAttributeValue" title="Choice defined in nds.characteristics.attributes">CharacsDisplayLineRangeAttributeValue</td></tr></table></font>>];
+    }
+
+    "CharacsDisplayLineRangeAttribute" -> "Attribute&lt;CharacsDisplayLineRangeAttributeType,CharacsDisplayLineRangeAttributeValue&gt;" [label="uses", fontsize=10];
+    "CharacsDisplayLineRangeAttribute" -> "CharacsDisplayLineRangeAttributeType" [label="uses", fontsize=10];
+    "CharacsDisplayLineRangeAttribute" -> "CharacsDisplayLineRangeAttributeValue" [label="uses", fontsize=10];
+}

@@ -1,0 +1,46 @@
+/**
+ * This dot file creates symbol collaboration diagram for GroundHeight.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="GroundHeight collaboration diagram";
+
+    subgraph "cluster_nds.display.details.types"
+    {
+        style="dashed, rounded";
+        label="nds.display.details.types";
+        tooltip="Package nds.display.details.types";
+        href="../../../content/packages/nds.display.details.types.html#Package-nds-display-details-types";
+        target="_parent";
+
+        "GroundHeight" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.details.types.html#Subtype-GroundHeight" title="Subtype defined in nds.display.details.types">GroundHeight</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.types"
+    {
+        style="dashed, rounded";
+        label="nds.core.types";
+        tooltip="Package nds.core.types";
+        href="../../../content/packages/nds.core.types.html#Package-nds-core-types";
+        target="_parent";
+
+        "HeightCentimeters" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Subtype-HeightCentimeters" title="Subtype defined in nds.core.types">HeightCentimeters</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.display.details.attributes"
+    {
+        style="dashed, rounded";
+        label="nds.display.details.attributes";
+        tooltip="Package nds.display.details.attributes";
+        href="../../../content/packages/nds.display.details.attributes.html#Package-nds-display-details-attributes";
+        target="_parent";
+
+        "DisplayAreaAttributeValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.details.attributes.html#Choice-DisplayAreaAttributeValue" title="Choice defined in nds.display.details.attributes">DisplayAreaAttributeValue</td></tr></table></font>>];
+    }
+
+    "GroundHeight" -> "HeightCentimeters" [label="uses", fontsize=10];
+    "DisplayAreaAttributeValue" -> "GroundHeight" [label="uses", fontsize=10];
+}

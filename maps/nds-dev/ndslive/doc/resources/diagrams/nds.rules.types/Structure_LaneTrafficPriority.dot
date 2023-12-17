@@ -1,0 +1,50 @@
+/**
+ * This dot file creates symbol collaboration diagram for LaneTrafficPriority.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="LaneTrafficPriority collaboration diagram";
+
+    subgraph "cluster_nds.rules.types"
+    {
+        style="dashed, rounded";
+        label="nds.rules.types";
+        tooltip="Package nds.rules.types";
+        href="../../../content/packages/nds.rules.types.html#Package-nds-rules-types";
+        target="_parent";
+
+        "LaneTrafficPriority" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.types.html#Structure-LaneTrafficPriority" title="Structure defined in nds.rules.types">LaneTrafficPriority</td></tr></table></font>>];
+        "LaneTrafficPriorityReason" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.types.html#Enum-LaneTrafficPriorityReason" title="Enum defined in nds.rules.types">LaneTrafficPriorityReason</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.lane.reference.types"
+    {
+        style="dashed, rounded";
+        label="nds.lane.reference.types";
+        tooltip="Package nds.lane.reference.types";
+        href="../../../content/packages/nds.lane.reference.types.html#Package-nds-lane-reference-types";
+        target="_parent";
+
+        "LaneId" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.reference.types.html#Subtype-LaneId" title="Subtype defined in nds.lane.reference.types">LaneId</td></tr></table></font>>];
+        "LaneGeometryRange" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.reference.types.html#Subtype-LaneGeometryRange" title="Subtype defined in nds.lane.reference.types">LaneGeometryRange</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.rules.attributes"
+    {
+        style="dashed, rounded";
+        label="nds.rules.attributes";
+        tooltip="Package nds.rules.attributes";
+        href="../../../content/packages/nds.rules.attributes.html#Package-nds-rules-attributes";
+        target="_parent";
+
+        "RulesLaneRangeAttributeValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.attributes.html#Choice-RulesLaneRangeAttributeValue" title="Choice defined in nds.rules.attributes">RulesLaneRangeAttributeValue</td></tr></table></font>>];
+    }
+
+    "LaneTrafficPriority" -> "LaneTrafficPriorityReason" [label="uses", fontsize=10];
+    "LaneTrafficPriority" -> "LaneId" [label="uses", fontsize=10];
+    "LaneTrafficPriority" -> "LaneGeometryRange" [label="uses", fontsize=10];
+    "RulesLaneRangeAttributeValue" -> "LaneTrafficPriority" [label="uses", fontsize=10];
+}

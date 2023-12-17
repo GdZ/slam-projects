@@ -1,0 +1,40 @@
+/**
+ * This dot file creates symbol collaboration diagram for RoadTrafficLayerContent.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="RoadTrafficLayerContent collaboration diagram";
+
+    subgraph "cluster_nds.traffic.metadata"
+    {
+        style="dashed, rounded";
+        label="nds.traffic.metadata";
+        tooltip="Package nds.traffic.metadata";
+        href="../../../content/packages/nds.traffic.metadata.html#Package-nds-traffic-metadata";
+        target="_parent";
+
+        "RoadTrafficLayerContent" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.traffic.metadata.html#Bitmask-RoadTrafficLayerContent" title="Bitmask defined in nds.traffic.metadata">RoadTrafficLayerContent</td></tr></table></font>>];
+        "RoadTrafficLayerMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.traffic.metadata.html#Structure-RoadTrafficLayerMetadata" title="Structure defined in nds.traffic.metadata">RoadTrafficLayerMetadata</td></tr></table></font>>];
+        "RoadTrafficLayerIndirectMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.traffic.metadata.html#Structure-RoadTrafficLayerIndirectMetadata" title="Structure defined in nds.traffic.metadata">RoadTrafficLayerIndirectMetadata</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.traffic.layer"
+    {
+        style="dashed, rounded";
+        label="nds.traffic.layer";
+        tooltip="Package nds.traffic.layer";
+        href="../../../content/packages/nds.traffic.layer.html#Package-nds-traffic-layer";
+        target="_parent";
+
+        "RoadTrafficLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.traffic.layer.html#Structure-RoadTrafficLayer" title="Structure defined in nds.traffic.layer">RoadTrafficLayer</td></tr></table></font>>];
+        "RoadTrafficLayerIndirect" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.traffic.layer.html#Structure-RoadTrafficLayerIndirect" title="Structure defined in nds.traffic.layer">RoadTrafficLayerIndirect</td></tr></table></font>>];
+    }
+
+    "RoadTrafficLayer" -> "RoadTrafficLayerContent" [label="uses", fontsize=10];
+    "RoadTrafficLayerIndirect" -> "RoadTrafficLayerContent" [label="uses", fontsize=10];
+    "RoadTrafficLayerMetadata" -> "RoadTrafficLayerContent" [label="uses", fontsize=10];
+    "RoadTrafficLayerIndirectMetadata" -> "RoadTrafficLayerContent" [label="uses", fontsize=10];
+}

@@ -1,0 +1,120 @@
+/**
+ * This dot file creates symbol collaboration diagram for AvailableLanguages.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="AvailableLanguages collaboration diagram";
+
+    subgraph "cluster_nds.core.language"
+    {
+        style="dashed, rounded";
+        label="nds.core.language";
+        tooltip="Package nds.core.language";
+        href="../../../content/packages/nds.core.language.html#Package-nds-core-language";
+        target="_parent";
+
+        "AvailableLanguages" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.language.html#Structure-AvailableLanguages" title="Structure defined in nds.core.language">AvailableLanguages</td></tr></table></font>>];
+        "LanguageMapping" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.language.html#Structure-LanguageMapping" title="Structure defined in nds.core.language">LanguageMapping</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.search.services"
+    {
+        style="dashed, rounded";
+        label="nds.search.services";
+        tooltip="Package nds.search.services";
+        href="../../../content/packages/nds.search.services.html#Package-nds-search-services";
+        target="_parent";
+
+        "SupportedSearchConfiguration" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.search.services.html#Structure-SupportedSearchConfiguration" title="Structure defined in nds.search.services">SupportedSearchConfiguration</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.routing.metadata"
+    {
+        style="dashed, rounded";
+        label="nds.routing.metadata";
+        tooltip="Package nds.routing.metadata";
+        href="../../../content/packages/nds.routing.metadata.html#Package-nds-routing-metadata";
+        target="_parent";
+
+        "RoutingRegistryMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routing.metadata.html#Structure-RoutingRegistryMetadata" title="Structure defined in nds.routing.metadata">RoutingRegistryMetadata</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.instructions.metadata"
+    {
+        style="dashed, rounded";
+        label="nds.instructions.metadata";
+        tooltip="Package nds.instructions.metadata";
+        href="../../../content/packages/nds.instructions.metadata.html#Package-nds-instructions-metadata";
+        target="_parent";
+
+        "RoadInstructionsLayerMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.instructions.metadata.html#Structure-RoadInstructionsLayerMetadata" title="Structure defined in nds.instructions.metadata">RoadInstructionsLayerMetadata</td></tr></table></font>>];
+        "LaneInstructionsLayerMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.instructions.metadata.html#Structure-LaneInstructionsLayerMetadata" title="Structure defined in nds.instructions.metadata">LaneInstructionsLayerMetadata</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.poi.metadata"
+    {
+        style="dashed, rounded";
+        label="nds.poi.metadata";
+        tooltip="Package nds.poi.metadata";
+        href="../../../content/packages/nds.poi.metadata.html#Package-nds-poi-metadata";
+        target="_parent";
+
+        "PoiLayerMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.metadata.html#Structure-PoiLayerMetadata" title="Structure defined in nds.poi.metadata">PoiLayerMetadata</td></tr></table></font>>];
+        "PoiAttributeLayerMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.metadata.html#Structure-PoiAttributeLayerMetadata" title="Structure defined in nds.poi.metadata">PoiAttributeLayerMetadata</td></tr></table></font>>];
+        "PoiSearchMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.metadata.html#Structure-PoiSearchMetadata" title="Structure defined in nds.poi.metadata">PoiSearchMetadata</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.name.metadata"
+    {
+        style="dashed, rounded";
+        label="nds.name.metadata";
+        tooltip="Package nds.name.metadata";
+        href="../../../content/packages/nds.name.metadata.html#Package-nds-name-metadata";
+        target="_parent";
+
+        "RoadNameLayerMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.metadata.html#Structure-RoadNameLayerMetadata" title="Structure defined in nds.name.metadata">RoadNameLayerMetadata</td></tr></table></font>>];
+        "LaneNameLayerMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.metadata.html#Structure-LaneNameLayerMetadata" title="Structure defined in nds.name.metadata">LaneNameLayerMetadata</td></tr></table></font>>];
+        "DisplayNameLayerMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.metadata.html#Structure-DisplayNameLayerMetadata" title="Structure defined in nds.name.metadata">DisplayNameLayerMetadata</td></tr></table></font>>];
+        "PoiNameLayerMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.metadata.html#Structure-PoiNameLayerMetadata" title="Structure defined in nds.name.metadata">PoiNameLayerMetadata</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.rules.metadata"
+    {
+        style="dashed, rounded";
+        label="nds.rules.metadata";
+        tooltip="Package nds.rules.metadata";
+        href="../../../content/packages/nds.rules.metadata.html#Package-nds-rules-metadata";
+        target="_parent";
+
+        "RegionRulesLayerMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.metadata.html#Structure-RegionRulesLayerMetadata" title="Structure defined in nds.rules.metadata">RegionRulesLayerMetadata</td></tr></table></font>>];
+        "RoadRulesLayerMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.metadata.html#Structure-RoadRulesLayerMetadata" title="Structure defined in nds.rules.metadata">RoadRulesLayerMetadata</td></tr></table></font>>];
+        "RoadRulesLayerIndirectMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.metadata.html#Structure-RoadRulesLayerIndirectMetadata" title="Structure defined in nds.rules.metadata">RoadRulesLayerIndirectMetadata</td></tr></table></font>>];
+        "RoadLocationRulesLayerMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.metadata.html#Structure-RoadLocationRulesLayerMetadata" title="Structure defined in nds.rules.metadata">RoadLocationRulesLayerMetadata</td></tr></table></font>>];
+        "LaneRulesLayerMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.metadata.html#Structure-LaneRulesLayerMetadata" title="Structure defined in nds.rules.metadata">LaneRulesLayerMetadata</td></tr></table></font>>];
+        "LaneRulesLayerIndirectMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.metadata.html#Structure-LaneRulesLayerIndirectMetadata" title="Structure defined in nds.rules.metadata">LaneRulesLayerIndirectMetadata</td></tr></table></font>>];
+        "DisplayLineRulesLayerMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.metadata.html#Structure-DisplayLineRulesLayerMetadata" title="Structure defined in nds.rules.metadata">DisplayLineRulesLayerMetadata</td></tr></table></font>>];
+    }
+
+    "AvailableLanguages" -> "LanguageMapping" [label="uses", fontsize=10];
+    "SupportedSearchConfiguration" -> "AvailableLanguages" [label="uses", fontsize=10];
+    "RoutingRegistryMetadata" -> "AvailableLanguages" [label="uses", fontsize=10];
+    "RoadInstructionsLayerMetadata" -> "AvailableLanguages" [label="uses", fontsize=10];
+    "LaneInstructionsLayerMetadata" -> "AvailableLanguages" [label="uses", fontsize=10];
+    "PoiLayerMetadata" -> "AvailableLanguages" [label="uses", fontsize=10];
+    "PoiAttributeLayerMetadata" -> "AvailableLanguages" [label="uses", fontsize=10];
+    "PoiSearchMetadata" -> "AvailableLanguages" [label="uses", fontsize=10];
+    "RoadNameLayerMetadata" -> "AvailableLanguages" [label="uses", fontsize=10];
+    "LaneNameLayerMetadata" -> "AvailableLanguages" [label="uses", fontsize=10];
+    "DisplayNameLayerMetadata" -> "AvailableLanguages" [label="uses", fontsize=10];
+    "PoiNameLayerMetadata" -> "AvailableLanguages" [label="uses", fontsize=10];
+    "RegionRulesLayerMetadata" -> "AvailableLanguages" [label="uses", fontsize=10];
+    "RoadRulesLayerMetadata" -> "AvailableLanguages" [label="uses", fontsize=10];
+    "RoadRulesLayerIndirectMetadata" -> "AvailableLanguages" [label="uses", fontsize=10];
+    "RoadLocationRulesLayerMetadata" -> "AvailableLanguages" [label="uses", fontsize=10];
+    "LaneRulesLayerMetadata" -> "AvailableLanguages" [label="uses", fontsize=10];
+    "LaneRulesLayerIndirectMetadata" -> "AvailableLanguages" [label="uses", fontsize=10];
+    "DisplayLineRulesLayerMetadata" -> "AvailableLanguages" [label="uses", fontsize=10];
+}

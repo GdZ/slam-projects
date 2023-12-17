@@ -1,0 +1,44 @@
+/**
+ * This dot file creates symbol collaboration diagram for SmartLayerObjectReference.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="SmartLayerObjectReference collaboration diagram";
+
+    subgraph "cluster_nds.smart.object"
+    {
+        style="dashed, rounded";
+        label="nds.smart.object";
+        tooltip="Package nds.smart.object";
+        href="../../../content/packages/nds.smart.object.html#Package-nds-smart-object";
+        target="_parent";
+
+        "SmartLayerObjectReference" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.object.html#Structure-SmartLayerObjectReference" title="Structure defined in nds.smart.object">SmartLayerObjectReference</td></tr></table></font>>];
+        "SmartLayerObjectId" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.object.html#Subtype-SmartLayerObjectId" title="Subtype defined in nds.smart.object">SmartLayerObjectId</td></tr></table></font>>];
+        "SmartLayerObjectReferenceList" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.object.html#Structure-SmartLayerObjectReferenceList" title="Structure defined in nds.smart.object">SmartLayerObjectReferenceList</td></tr></table></font>>];
+        "DataLayerObjectVersionRequest" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.object.html#Structure-DataLayerObjectVersionRequest" title="Structure defined in nds.smart.object">DataLayerObjectVersionRequest</td></tr></table></font>>];
+        "SmartLayerObjectHeaderList" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.object.html#Structure-SmartLayerObjectHeaderList" title="Structure defined in nds.smart.object">SmartLayerObjectHeaderList</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.smart.services"
+    {
+        style="dashed, rounded";
+        label="nds.smart.services";
+        tooltip="Package nds.smart.services";
+        href="../../../content/packages/nds.smart.services.html#Package-nds-smart-services";
+        target="_parent";
+
+        "SmartLayerObjectService" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.services.html#Service-SmartLayerObjectService" title="Service defined in nds.smart.services">SmartLayerObjectService</td></tr></table></font>>];
+        "SmartLayerObjectTopics" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.services.html#Pubsub-SmartLayerObjectTopics" title="Pubsub defined in nds.smart.services">SmartLayerObjectTopics</td></tr></table></font>>];
+    }
+
+    "SmartLayerObjectReference" -> "SmartLayerObjectId" [label="uses", fontsize=10];
+    "SmartLayerObjectReferenceList" -> "SmartLayerObjectReference" [label="uses", fontsize=10];
+    "DataLayerObjectVersionRequest" -> "SmartLayerObjectReference" [label="uses", fontsize=10];
+    "SmartLayerObjectHeaderList" -> "SmartLayerObjectReference" [label="uses", fontsize=10];
+    "SmartLayerObjectService" -> "SmartLayerObjectReference" [label="uses", fontsize=10];
+    "SmartLayerObjectTopics" -> "SmartLayerObjectReference" [label="uses", fontsize=10];
+}

@@ -1,0 +1,66 @@
+/**
+ * This dot file creates symbol collaboration diagram for PoiCategory.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="PoiCategory collaboration diagram";
+
+    subgraph "cluster_nds.poi.metadata"
+    {
+        style="dashed, rounded";
+        label="nds.poi.metadata";
+        tooltip="Package nds.poi.metadata";
+        href="../../../content/packages/nds.poi.metadata.html#Package-nds-poi-metadata";
+        target="_parent";
+
+        "PoiCategory" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.metadata.html#Structure-PoiCategory" title="Structure defined in nds.poi.metadata">PoiCategory</td></tr></table></font>>];
+        "PoiLayerMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.metadata.html#Structure-PoiLayerMetadata" title="Structure defined in nds.poi.metadata">PoiLayerMetadata</td></tr></table></font>>];
+        "PoiSearchMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.metadata.html#Structure-PoiSearchMetadata" title="Structure defined in nds.poi.metadata">PoiSearchMetadata</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.poi.reference.types"
+    {
+        style="dashed, rounded";
+        label="nds.poi.reference.types";
+        tooltip="Package nds.poi.reference.types";
+        href="../../../content/packages/nds.poi.reference.types.html#Package-nds-poi-reference-types";
+        target="_parent";
+
+        "PoiCategoryId" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.reference.types.html#Subtype-PoiCategoryId" title="Subtype defined in nds.poi.reference.types">PoiCategoryId</td></tr></table></font>>];
+        "PoiStandardCategory" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.reference.types.html#Enum-PoiStandardCategory" title="Enum defined in nds.poi.reference.types">PoiStandardCategory</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.poi.types"
+    {
+        style="dashed, rounded";
+        label="nds.poi.types";
+        tooltip="Package nds.poi.types";
+        href="../../../content/packages/nds.poi.types.html#Package-nds-poi-types";
+        target="_parent";
+
+        "NameStringCollection" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.types.html#Structure-NameStringCollection" title="Structure defined in nds.poi.types">NameStringCollection</td></tr></table></font>>];
+        "CategoryIconSetReference" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.types.html#Subtype-CategoryIconSetReference" title="Subtype defined in nds.poi.types">CategoryIconSetReference</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.types"
+    {
+        style="dashed, rounded";
+        label="nds.core.types";
+        tooltip="Package nds.core.types";
+        href="../../../content/packages/nds.core.types.html#Package-nds-core-types";
+        target="_parent";
+
+        "ScaleRangeId" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Subtype-ScaleRangeId" title="Subtype defined in nds.core.types">ScaleRangeId</td></tr></table></font>>];
+    }
+
+    "PoiCategory" -> "PoiCategoryId" [label="uses", fontsize=10];
+    "PoiCategory" -> "PoiStandardCategory" [label="uses", fontsize=10];
+    "PoiCategory" -> "NameStringCollection" [label="uses", fontsize=10];
+    "PoiCategory" -> "CategoryIconSetReference" [label="uses", fontsize=10];
+    "PoiCategory" -> "ScaleRangeId" [label="uses", fontsize=10];
+    "PoiLayerMetadata" -> "PoiCategory" [label="uses", fontsize=10];
+    "PoiSearchMetadata" -> "PoiCategory" [label="uses", fontsize=10];
+}

@@ -1,0 +1,38 @@
+/**
+ * This dot file creates symbol collaboration diagram for AdasAccuracy.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="AdasAccuracy collaboration diagram";
+
+    subgraph "cluster_nds.adas.types"
+    {
+        style="dashed, rounded";
+        label="nds.adas.types";
+        tooltip="Package nds.adas.types";
+        href="../../../content/packages/nds.adas.types.html#Package-nds-adas-types";
+        target="_parent";
+
+        "AdasAccuracy" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.adas.types.html#Enum-AdasAccuracy" title="Enum defined in nds.adas.types">AdasAccuracy</td></tr></table></font>>];
+        "ClothoidMetaData" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.adas.types.html#Structure-ClothoidMetaData" title="Structure defined in nds.adas.types">ClothoidMetaData</td></tr></table></font>>];
+        "GradientMetaData" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.adas.types.html#Structure-GradientMetaData" title="Structure defined in nds.adas.types">GradientMetaData</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.adas.properties"
+    {
+        style="dashed, rounded";
+        label="nds.adas.properties";
+        tooltip="Package nds.adas.properties";
+        href="../../../content/packages/nds.adas.properties.html#Package-nds-adas-properties";
+        target="_parent";
+
+        "PropertyValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.adas.properties.html#Choice-PropertyValue" title="Choice defined in nds.adas.properties">PropertyValue</td></tr></table></font>>];
+    }
+
+    "ClothoidMetaData" -> "AdasAccuracy" [label="uses", fontsize=10];
+    "GradientMetaData" -> "AdasAccuracy" [label="uses", fontsize=10];
+    "PropertyValue" -> "AdasAccuracy" [label="uses", fontsize=10];
+}

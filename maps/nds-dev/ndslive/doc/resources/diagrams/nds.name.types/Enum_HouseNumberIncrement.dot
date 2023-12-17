@@ -1,0 +1,24 @@
+/**
+ * This dot file creates symbol collaboration diagram for HouseNumberIncrement.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="HouseNumberIncrement collaboration diagram";
+
+    subgraph "cluster_nds.name.types"
+    {
+        style="dashed, rounded";
+        label="nds.name.types";
+        tooltip="Package nds.name.types";
+        href="../../../content/packages/nds.name.types.html#Package-nds-name-types";
+        target="_parent";
+
+        "HouseNumberIncrement" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.types.html#Enum-HouseNumberIncrement" title="Enum defined in nds.name.types">HouseNumberIncrement</td></tr></table></font>>];
+        "HouseNumberNumericRange" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.name.types.html#Structure-HouseNumberNumericRange" title="Structure defined in nds.name.types">HouseNumberNumericRange</td></tr></table></font>>];
+    }
+
+    "HouseNumberNumericRange" -> "HouseNumberIncrement" [label="uses", fontsize=10];
+}

@@ -1,0 +1,36 @@
+/**
+ * This dot file creates symbol collaboration diagram for LaneTraversability.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="LaneTraversability collaboration diagram";
+
+    subgraph "cluster_nds.lane.lanes"
+    {
+        style="dashed, rounded";
+        label="nds.lane.lanes";
+        tooltip="Package nds.lane.lanes";
+        href="../../../content/packages/nds.lane.lanes.html#Package-nds-lane-lanes";
+        target="_parent";
+
+        "LaneTraversability" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.lanes.html#Structure-LaneTraversability" title="Structure defined in nds.lane.lanes">LaneTraversability</td></tr></table></font>>];
+        "Lane" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.lanes.html#Structure-Lane" title="Structure defined in nds.lane.lanes">Lane</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.lane.reference.types"
+    {
+        style="dashed, rounded";
+        label="nds.lane.reference.types";
+        tooltip="Package nds.lane.reference.types";
+        href="../../../content/packages/nds.lane.reference.types.html#Package-nds-lane-reference-types";
+        target="_parent";
+
+        "LaneGeometryRange" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.reference.types.html#Subtype-LaneGeometryRange" title="Subtype defined in nds.lane.reference.types">LaneGeometryRange</td></tr></table></font>>];
+    }
+
+    "LaneTraversability" -> "LaneGeometryRange" [label="uses", fontsize=10];
+    "Lane" -> "LaneTraversability" [label="uses", fontsize=10];
+}

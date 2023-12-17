@@ -1,0 +1,52 @@
+/**
+ * This dot file creates symbol collaboration diagram for RulesLaneRangeFullAttribute.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="RulesLaneRangeFullAttribute collaboration diagram";
+
+    subgraph "cluster_nds.rules.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.rules.instantiations";
+        tooltip="Package nds.rules.instantiations";
+        href="../../../content/packages/nds.rules.instantiations.html#Package-nds-rules-instantiations";
+        target="_parent";
+
+        "RulesLaneRangeFullAttribute" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.instantiations.html#InstantiateType-RulesLaneRangeFullAttribute" title="InstantiateType defined in nds.rules.instantiations">RulesLaneRangeFullAttribute</td></tr></table></font>>];
+        "FullAttribute&lt;RulesLaneRangeAttributeType,RulesLaneRangeAttributeValue,RulesPropertyType,RulesPropertyValue&gt;" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.attributemap.html#Structure-FullAttribute" title="Structure defined in nds.core.attributemap">FullAttribute</td><td>&lt;</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.attributes.html#Enum-RulesLaneRangeAttributeType" title="Enum defined in nds.rules.attributes">RulesLaneRangeAttributeType</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.attributes.html#Choice-RulesLaneRangeAttributeValue" title="Choice defined in nds.rules.attributes">RulesLaneRangeAttributeValue</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.properties.html#Structure-RulesPropertyType" title="Structure defined in nds.rules.properties">RulesPropertyType</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.properties.html#Structure-RulesPropertyValue" title="Structure defined in nds.rules.properties">RulesPropertyValue</td></tr></table></td><td>&gt;</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.rules.attributes"
+    {
+        style="dashed, rounded";
+        label="nds.rules.attributes";
+        tooltip="Package nds.rules.attributes";
+        href="../../../content/packages/nds.rules.attributes.html#Package-nds-rules-attributes";
+        target="_parent";
+
+        "RulesLaneRangeAttributeType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.attributes.html#Enum-RulesLaneRangeAttributeType" title="Enum defined in nds.rules.attributes">RulesLaneRangeAttributeType</td></tr></table></font>>];
+        "RulesLaneRangeAttributeValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.attributes.html#Choice-RulesLaneRangeAttributeValue" title="Choice defined in nds.rules.attributes">RulesLaneRangeAttributeValue</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.rules.properties"
+    {
+        style="dashed, rounded";
+        label="nds.rules.properties";
+        tooltip="Package nds.rules.properties";
+        href="../../../content/packages/nds.rules.properties.html#Package-nds-rules-properties";
+        target="_parent";
+
+        "RulesPropertyType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.properties.html#Structure-RulesPropertyType" title="Structure defined in nds.rules.properties">RulesPropertyType</td></tr></table></font>>];
+        "RulesPropertyValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.properties.html#Structure-RulesPropertyValue" title="Structure defined in nds.rules.properties">RulesPropertyValue</td></tr></table></font>>];
+    }
+
+    "RulesLaneRangeFullAttribute" -> "FullAttribute&lt;RulesLaneRangeAttributeType,RulesLaneRangeAttributeValue,RulesPropertyType,RulesPropertyValue&gt;" [label="uses", fontsize=10];
+    "RulesLaneRangeFullAttribute" -> "RulesLaneRangeAttributeType" [label="uses", fontsize=10];
+    "RulesLaneRangeFullAttribute" -> "RulesLaneRangeAttributeValue" [label="uses", fontsize=10];
+    "RulesLaneRangeFullAttribute" -> "RulesPropertyType" [label="uses", fontsize=10];
+    "RulesLaneRangeFullAttribute" -> "RulesPropertyValue" [label="uses", fontsize=10];
+}

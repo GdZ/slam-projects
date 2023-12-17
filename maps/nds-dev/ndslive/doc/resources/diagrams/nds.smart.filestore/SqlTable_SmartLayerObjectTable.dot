@@ -1,0 +1,52 @@
+/**
+ * This dot file creates symbol collaboration diagram for SmartLayerObjectTable.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="SmartLayerObjectTable collaboration diagram";
+
+    subgraph "cluster_nds.smart.filestore"
+    {
+        style="dashed, rounded";
+        label="nds.smart.filestore";
+        tooltip="Package nds.smart.filestore";
+        href="../../../content/packages/nds.smart.filestore.html#Package-nds-smart-filestore";
+        target="_parent";
+
+        "SmartLayerObjectTable" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.filestore.html#SqlTable-SmartLayerObjectTable" title="SqlTable defined in nds.smart.filestore">SmartLayerObjectTable</td></tr></table></font>>];
+        "SmartLayerObjectStore" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.filestore.html#SqlDatabase-SmartLayerObjectStore" title="SqlDatabase defined in nds.smart.filestore">SmartLayerObjectStore</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.smart.object"
+    {
+        style="dashed, rounded";
+        label="nds.smart.object";
+        tooltip="Package nds.smart.object";
+        href="../../../content/packages/nds.smart.object.html#Package-nds-smart-object";
+        target="_parent";
+
+        "SmartLayerObjectId" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.object.html#Subtype-SmartLayerObjectId" title="Subtype defined in nds.smart.object">SmartLayerObjectId</td></tr></table></font>>];
+        "SmartLayerObjectClass" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.object.html#Subtype-SmartLayerObjectClass" title="Subtype defined in nds.smart.object">SmartLayerObjectClass</td></tr></table></font>>];
+        "SmartLayerObject" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.object.html#Structure-SmartLayerObject" title="Structure defined in nds.smart.object">SmartLayerObject</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.smart.types"
+    {
+        style="dashed, rounded";
+        label="nds.smart.types";
+        tooltip="Package nds.smart.types";
+        href="../../../content/packages/nds.smart.types.html#Package-nds-smart-types";
+        target="_parent";
+
+        "SmartLayerHeader" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart.types.html#Structure-SmartLayerHeader" title="Structure defined in nds.smart.types">SmartLayerHeader</td></tr></table></font>>];
+    }
+
+    "SmartLayerObjectTable" -> "SmartLayerObjectId" [label="uses", fontsize=10];
+    "SmartLayerObjectTable" -> "SmartLayerObjectClass" [label="uses", fontsize=10];
+    "SmartLayerObjectTable" -> "SmartLayerObject" [label="uses", fontsize=10];
+    "SmartLayerObjectTable" -> "SmartLayerHeader" [label="uses", fontsize=10];
+    "SmartLayerObjectStore" -> "SmartLayerObjectTable" [label="uses", fontsize=10];
+}

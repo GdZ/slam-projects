@@ -1,0 +1,60 @@
+/**
+ * This dot file creates symbol collaboration diagram for RoadShapesLayer.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="RoadShapesLayer collaboration diagram";
+
+    subgraph "cluster_nds.road.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.road.instantiations";
+        tooltip="Package nds.road.instantiations";
+        href="../../../content/packages/nds.road.instantiations.html#Package-nds-road-instantiations";
+        target="_parent";
+
+        "RoadShapesLayer" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.road.instantiations.html#InstantiateType-RoadShapesLayer" title="InstantiateType defined in nds.road.instantiations">RoadShapesLayer</td></tr></table></font>>];
+        "GeometryLayer&lt;RoadId,GeometryType&gt;" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Structure-GeometryLayer" title="Structure defined in nds.core.geometry">GeometryLayer</td><td>&lt;</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.road.reference.types.html#Subtype-RoadId" title="Subtype defined in nds.road.reference.types">RoadId</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Subtype-GeometryType" title="Subtype defined in nds.core.geometry">GeometryType</td></tr></table></td><td>&gt;</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.road.reference.types"
+    {
+        style="dashed, rounded";
+        label="nds.road.reference.types";
+        tooltip="Package nds.road.reference.types";
+        href="../../../content/packages/nds.road.reference.types.html#Package-nds-road-reference-types";
+        target="_parent";
+
+        "RoadId" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.road.reference.types.html#Subtype-RoadId" title="Subtype defined in nds.road.reference.types">RoadId</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.geometry"
+    {
+        style="dashed, rounded";
+        label="nds.core.geometry";
+        tooltip="Package nds.core.geometry";
+        href="../../../content/packages/nds.core.geometry.html#Package-nds-core-geometry";
+        target="_parent";
+
+        "GeometryType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Subtype-GeometryType" title="Subtype defined in nds.core.geometry">GeometryType</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.road.layer"
+    {
+        style="dashed, rounded";
+        label="nds.road.layer";
+        tooltip="Package nds.road.layer";
+        href="../../../content/packages/nds.road.layer.html#Package-nds-road-layer";
+        target="_parent";
+
+        "RoadGeometryLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.road.layer.html#Structure-RoadGeometryLayer" title="Structure defined in nds.road.layer">RoadGeometryLayer</td></tr></table></font>>];
+    }
+
+    "RoadShapesLayer" -> "GeometryLayer&lt;RoadId,GeometryType&gt;" [label="uses", fontsize=10];
+    "RoadShapesLayer" -> "RoadId" [label="uses", fontsize=10];
+    "RoadShapesLayer" -> "GeometryType" [label="uses", fontsize=10];
+    "RoadGeometryLayer" -> "RoadShapesLayer" [label="uses", fontsize=10];
+}

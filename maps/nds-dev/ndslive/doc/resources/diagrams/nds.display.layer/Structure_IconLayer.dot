@@ -1,0 +1,74 @@
+/**
+ * This dot file creates symbol collaboration diagram for IconLayer.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="IconLayer collaboration diagram";
+
+    subgraph "cluster_nds.display.layer"
+    {
+        style="dashed, rounded";
+        label="nds.display.layer";
+        tooltip="Package nds.display.layer";
+        href="../../../content/packages/nds.display.layer.html#Package-nds-display-layer";
+        target="_parent";
+
+        "IconLayer" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.layer.html#Structure-IconLayer" title="Structure defined in nds.display.layer">IconLayer</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.display.metadata"
+    {
+        style="dashed, rounded";
+        label="nds.display.metadata";
+        tooltip="Package nds.display.metadata";
+        href="../../../content/packages/nds.display.metadata.html#Package-nds-display-metadata";
+        target="_parent";
+
+        "IconLayerContent" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.metadata.html#Bitmask-IconLayerContent" title="Bitmask defined in nds.display.metadata">IconLayerContent</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.icons"
+    {
+        style="dashed, rounded";
+        label="nds.core.icons";
+        tooltip="Package nds.core.icons";
+        href="../../../content/packages/nds.core.icons.html#Package-nds-core-icons";
+        target="_parent";
+
+        "IconImage" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.icons.html#Structure-IconImage" title="Structure defined in nds.core.icons">IconImage</td></tr></table></font>>];
+        "IconSet" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.icons.html#Structure-IconSet" title="Structure defined in nds.core.icons">IconSet</td></tr></table></font>>];
+        "IconTemplateSet" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.icons.html#Structure-IconTemplateSet" title="Structure defined in nds.core.icons">IconTemplateSet</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.display.types"
+    {
+        style="dashed, rounded";
+        label="nds.display.types";
+        tooltip="Package nds.display.types";
+        href="../../../content/packages/nds.display.types.html#Package-nds-display-types";
+        target="_parent";
+
+        "GenericIconSetMap" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.types.html#Structure-GenericIconSetMap" title="Structure defined in nds.display.types">GenericIconSetMap</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.system.types"
+    {
+        style="dashed, rounded";
+        label="nds.system.types";
+        tooltip="Package nds.system.types";
+        href="../../../content/packages/nds.system.types.html#Package-nds-system-types";
+        target="_parent";
+
+        "LayerType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.system.types.html#Enum-LayerType" title="Enum defined in nds.system.types">LayerType</td></tr></table></font>>];
+    }
+
+    "IconLayer" -> "IconLayerContent" [label="uses", fontsize=10];
+    "IconLayer" -> "IconImage" [label="uses", fontsize=10];
+    "IconLayer" -> "IconSet" [label="uses", fontsize=10];
+    "IconLayer" -> "GenericIconSetMap" [label="uses", fontsize=10];
+    "IconLayer" -> "IconTemplateSet" [label="uses", fontsize=10];
+    "IconLayer" -> "LayerType" [label="uses", fontsize=10];
+}

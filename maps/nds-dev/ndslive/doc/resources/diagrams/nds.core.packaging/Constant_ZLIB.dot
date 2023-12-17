@@ -1,0 +1,24 @@
+/**
+ * This dot file creates symbol collaboration diagram for ZLIB.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="ZLIB collaboration diagram";
+
+    subgraph "cluster_nds.core.packaging"
+    {
+        style="dashed, rounded";
+        label="nds.core.packaging";
+        tooltip="Package nds.core.packaging";
+        href="../../../content/packages/nds.core.packaging.html#Package-nds-core-packaging";
+        target="_parent";
+
+        "ZLIB" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.packaging.html#Constant-ZLIB" title="Constant defined in nds.core.packaging">ZLIB</td></tr></table></font>>];
+        "CompressionType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.packaging.html#Subtype-CompressionType" title="Subtype defined in nds.core.packaging">CompressionType</td></tr></table></font>>];
+    }
+
+    "ZLIB" -> "CompressionType" [label="uses", fontsize=10];
+}

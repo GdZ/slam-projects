@@ -1,0 +1,110 @@
+/**
+ * This dot file creates symbol collaboration diagram for ModuleService.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="ModuleService collaboration diagram";
+
+    subgraph "cluster_nds.system.types"
+    {
+        style="dashed, rounded";
+        label="nds.system.types";
+        tooltip="Package nds.system.types";
+        href="../../../content/packages/nds.system.types.html#Package-nds-system-types";
+        target="_parent";
+
+        "ModuleService" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.system.types.html#Subtype-ModuleService" title="Subtype defined in nds.system.types">ModuleService</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.registry._module"
+    {
+        style="dashed, rounded";
+        label="nds.registry._module";
+        tooltip="Package nds.registry._module";
+        href="../../../content/packages/nds.registry._module.html#Package-nds-registry-_module";
+        target="_parent";
+
+        "REGISTRY_SERVICE" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.registry._module.html#Constant-REGISTRY_SERVICE" title="Constant defined in nds.registry._module">REGISTRY_SERVICE</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.registry.node"
+    {
+        style="dashed, rounded";
+        label="nds.registry.node";
+        tooltip="Package nds.registry.node";
+        href="../../../content/packages/nds.registry.node.html#Package-nds-registry-node";
+        target="_parent";
+
+        "ServiceInformation" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.registry.node.html#Structure-ServiceInformation" title="Structure defined in nds.registry.node">ServiceInformation</td></tr></table></font>>];
+        "ServiceInformationFilter" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.registry.node.html#Structure-ServiceInformationFilter" title="Structure defined in nds.registry.node">ServiceInformationFilter</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.search._module"
+    {
+        style="dashed, rounded";
+        label="nds.search._module";
+        tooltip="Package nds.search._module";
+        href="../../../content/packages/nds.search._module.html#Package-nds-search-_module";
+        target="_parent";
+
+        "SEARCH_SERVICE" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.search._module.html#Constant-SEARCH_SERVICE" title="Constant defined in nds.search._module">SEARCH_SERVICE</td></tr></table></font>>];
+        "GEOCODING_SERVICE" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.search._module.html#Constant-GEOCODING_SERVICE" title="Constant defined in nds.search._module">GEOCODING_SERVICE</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.routing._module"
+    {
+        style="dashed, rounded";
+        label="nds.routing._module";
+        tooltip="Package nds.routing._module";
+        href="../../../content/packages/nds.routing._module.html#Package-nds-routing-_module";
+        target="_parent";
+
+        "ROUTING_SERVICE" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routing._module.html#Constant-ROUTING_SERVICE" title="Constant defined in nds.routing._module">ROUTING_SERVICE</td></tr></table></font>>];
+        "RANGE_PROJECTION_SERVICE" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routing._module.html#Constant-RANGE_PROJECTION_SERVICE" title="Constant defined in nds.routing._module">RANGE_PROJECTION_SERVICE</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.vehicle._module"
+    {
+        style="dashed, rounded";
+        label="nds.vehicle._module";
+        tooltip="Package nds.vehicle._module";
+        href="../../../content/packages/nds.vehicle._module.html#Package-nds-vehicle-_module";
+        target="_parent";
+
+        "VEHICLE_HORIZON_SERVICE" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.vehicle._module.html#Constant-VEHICLE_HORIZON_SERVICE" title="Constant defined in nds.vehicle._module">VEHICLE_HORIZON_SERVICE</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.smart._module"
+    {
+        style="dashed, rounded";
+        label="nds.smart._module";
+        tooltip="Package nds.smart._module";
+        href="../../../content/packages/nds.smart._module.html#Package-nds-smart-_module";
+        target="_parent";
+
+        "SMART_LAYER_TILE_SERVICE" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart._module.html#Constant-SMART_LAYER_TILE_SERVICE" title="Constant defined in nds.smart._module">SMART_LAYER_TILE_SERVICE</td></tr></table></font>>];
+        "SMART_LAYER_OBJECT_SERVICE" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart._module.html#Constant-SMART_LAYER_OBJECT_SERVICE" title="Constant defined in nds.smart._module">SMART_LAYER_OBJECT_SERVICE</td></tr></table></font>>];
+        "SMART_LAYER_PATH_SERVICE" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart._module.html#Constant-SMART_LAYER_PATH_SERVICE" title="Constant defined in nds.smart._module">SMART_LAYER_PATH_SERVICE</td></tr></table></font>>];
+        "SMART_LAYER_PATH_HORIZON_SERVICE" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart._module.html#Constant-SMART_LAYER_PATH_HORIZON_SERVICE" title="Constant defined in nds.smart._module">SMART_LAYER_PATH_HORIZON_SERVICE</td></tr></table></font>>];
+        "SMART_LAYER_MESH_SERVICE" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart._module.html#Constant-SMART_LAYER_MESH_SERVICE" title="Constant defined in nds.smart._module">SMART_LAYER_MESH_SERVICE</td></tr></table></font>>];
+        "SMART_RASTER_TILE_SERVICE" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.smart._module.html#Constant-SMART_RASTER_TILE_SERVICE" title="Constant defined in nds.smart._module">SMART_RASTER_TILE_SERVICE</td></tr></table></font>>];
+    }
+
+    "REGISTRY_SERVICE" -> "ModuleService" [label="uses", fontsize=10];
+    "ServiceInformation" -> "ModuleService" [label="uses", fontsize=10];
+    "ServiceInformationFilter" -> "ModuleService" [label="uses", fontsize=10];
+    "SEARCH_SERVICE" -> "ModuleService" [label="uses", fontsize=10];
+    "GEOCODING_SERVICE" -> "ModuleService" [label="uses", fontsize=10];
+    "ROUTING_SERVICE" -> "ModuleService" [label="uses", fontsize=10];
+    "RANGE_PROJECTION_SERVICE" -> "ModuleService" [label="uses", fontsize=10];
+    "VEHICLE_HORIZON_SERVICE" -> "ModuleService" [label="uses", fontsize=10];
+    "SMART_LAYER_TILE_SERVICE" -> "ModuleService" [label="uses", fontsize=10];
+    "SMART_LAYER_OBJECT_SERVICE" -> "ModuleService" [label="uses", fontsize=10];
+    "SMART_LAYER_PATH_SERVICE" -> "ModuleService" [label="uses", fontsize=10];
+    "SMART_LAYER_PATH_HORIZON_SERVICE" -> "ModuleService" [label="uses", fontsize=10];
+    "SMART_LAYER_MESH_SERVICE" -> "ModuleService" [label="uses", fontsize=10];
+    "SMART_RASTER_TILE_SERVICE" -> "ModuleService" [label="uses", fontsize=10];
+}

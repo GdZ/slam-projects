@@ -1,0 +1,62 @@
+/**
+ * This dot file creates symbol collaboration diagram for AdasTransitionAttributeMetadata.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="AdasTransitionAttributeMetadata collaboration diagram";
+
+    subgraph "cluster_nds.adas.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.adas.instantiations";
+        tooltip="Package nds.adas.instantiations";
+        href="../../../content/packages/nds.adas.instantiations.html#Package-nds-adas-instantiations";
+        target="_parent";
+
+        "AdasTransitionAttributeMetadata" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.adas.instantiations.html#InstantiateType-AdasTransitionAttributeMetadata" title="InstantiateType defined in nds.adas.instantiations">AdasTransitionAttributeMetadata</td></tr></table></font>>];
+        "AttributeMetadata&lt;AdasTransitionAttributeType,AdasPropertyType&gt;" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.attributemap.html#Structure-AttributeMetadata" title="Structure defined in nds.core.attributemap">AttributeMetadata</td><td>&lt;</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.adas.attributes.html#Enum-AdasTransitionAttributeType" title="Enum defined in nds.adas.attributes">AdasTransitionAttributeType</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.adas.properties.html#Structure-AdasPropertyType" title="Structure defined in nds.adas.properties">AdasPropertyType</td></tr></table></td><td>&gt;</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.adas.attributes"
+    {
+        style="dashed, rounded";
+        label="nds.adas.attributes";
+        tooltip="Package nds.adas.attributes";
+        href="../../../content/packages/nds.adas.attributes.html#Package-nds-adas-attributes";
+        target="_parent";
+
+        "AdasTransitionAttributeType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.adas.attributes.html#Enum-AdasTransitionAttributeType" title="Enum defined in nds.adas.attributes">AdasTransitionAttributeType</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.adas.properties"
+    {
+        style="dashed, rounded";
+        label="nds.adas.properties";
+        tooltip="Package nds.adas.properties";
+        href="../../../content/packages/nds.adas.properties.html#Package-nds-adas-properties";
+        target="_parent";
+
+        "AdasPropertyType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.adas.properties.html#Structure-AdasPropertyType" title="Structure defined in nds.adas.properties">AdasPropertyType</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.adas.metadata"
+    {
+        style="dashed, rounded";
+        label="nds.adas.metadata";
+        tooltip="Package nds.adas.metadata";
+        href="../../../content/packages/nds.adas.metadata.html#Package-nds-adas-metadata";
+        target="_parent";
+
+        "AdasRoadLayerMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.adas.metadata.html#Structure-AdasRoadLayerMetadata" title="Structure defined in nds.adas.metadata">AdasRoadLayerMetadata</td></tr></table></font>>];
+        "AdasRoadLocationLayerMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.adas.metadata.html#Structure-AdasRoadLocationLayerMetadata" title="Structure defined in nds.adas.metadata">AdasRoadLocationLayerMetadata</td></tr></table></font>>];
+    }
+
+    "AdasTransitionAttributeMetadata" -> "AttributeMetadata&lt;AdasTransitionAttributeType,AdasPropertyType&gt;" [label="uses", fontsize=10];
+    "AdasTransitionAttributeMetadata" -> "AdasTransitionAttributeType" [label="uses", fontsize=10];
+    "AdasTransitionAttributeMetadata" -> "AdasPropertyType" [label="uses", fontsize=10];
+    "AdasRoadLayerMetadata" -> "AdasTransitionAttributeMetadata" [label="uses", fontsize=10];
+    "AdasRoadLocationLayerMetadata" -> "AdasTransitionAttributeMetadata" [label="uses", fontsize=10];
+}

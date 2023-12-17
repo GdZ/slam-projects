@@ -1,0 +1,76 @@
+/**
+ * This dot file creates symbol collaboration diagram for ParkingRowId.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="ParkingRowId collaboration diagram";
+
+    subgraph "cluster_nds.venue.reference.types"
+    {
+        style="dashed, rounded";
+        label="nds.venue.reference.types";
+        tooltip="Package nds.venue.reference.types";
+        href="../../../content/packages/nds.venue.reference.types.html#Package-nds-venue-reference-types";
+        target="_parent";
+
+        "ParkingRowId" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.reference.types.html#Subtype-ParkingRowId" title="Subtype defined in nds.venue.reference.types">ParkingRowId</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.types"
+    {
+        style="dashed, rounded";
+        label="nds.core.types";
+        tooltip="Package nds.core.types";
+        href="../../../content/packages/nds.core.types.html#Package-nds-core-types";
+        target="_parent";
+
+        "Var4ByteId" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Structure-Var4ByteId" title="Structure defined in nds.core.types">Var4ByteId</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.venue.parking"
+    {
+        style="dashed, rounded";
+        label="nds.venue.parking";
+        tooltip="Package nds.venue.parking";
+        href="../../../content/packages/nds.venue.parking.html#Package-nds-venue-parking";
+        target="_parent";
+
+        "ParkingRow" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.parking.html#Structure-ParkingRow" title="Structure defined in nds.venue.parking">ParkingRow</td></tr></table></font>>];
+        "ParkingRangeRelationValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.parking.html#Choice-ParkingRangeRelationValue" title="Choice defined in nds.venue.parking">ParkingRangeRelationValue</td></tr></table></font>>];
+        "ParkingRelationValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.parking.html#Choice-ParkingRelationValue" title="Choice defined in nds.venue.parking">ParkingRelationValue</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.venue.details.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.venue.details.instantiations";
+        tooltip="Package nds.venue.details.instantiations";
+        href="../../../content/packages/nds.venue.details.instantiations.html#Package-nds-venue-details-instantiations";
+        target="_parent";
+
+        "ParkingRowAttributeMapList" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.details.instantiations.html#InstantiateType-ParkingRowAttributeMapList" title="InstantiateType defined in nds.venue.details.instantiations">ParkingRowAttributeMapList</td></tr></table></font>>];
+        "AttributeMapList&lt;ParkingRowId,Validity,ParkingRowAttributeType,ParkingRowAttributeValue,VenuePropertyType,VenuePropertyValue&gt;" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.attributemap.html#Structure-AttributeMapList" title="Structure defined in nds.core.attributemap">AttributeMapList</td><td>&lt;</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.reference.types.html#Subtype-ParkingRowId" title="Subtype defined in nds.venue.reference.types">ParkingRowId</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.attributemap.html#Structure-Validity" title="Structure defined in nds.core.attributemap">Validity</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.details.attributes.html#Enum-ParkingRowAttributeType" title="Enum defined in nds.venue.details.attributes">ParkingRowAttributeType</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.details.attributes.html#Choice-ParkingRowAttributeValue" title="Choice defined in nds.venue.details.attributes">ParkingRowAttributeValue</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.details.properties.html#Structure-VenuePropertyType" title="Structure defined in nds.venue.details.properties">VenuePropertyType</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.details.properties.html#Structure-VenuePropertyValue" title="Structure defined in nds.venue.details.properties">VenuePropertyValue</td></tr></table></td><td>&gt;</td></tr></table></font>>];
+        "ParkingRowAttributeMap" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.details.instantiations.html#InstantiateType-ParkingRowAttributeMap" title="InstantiateType defined in nds.venue.details.instantiations">ParkingRowAttributeMap</td></tr></table></font>>];
+        "AttributeMap&lt;ParkingRowId,Validity,ParkingRowAttributeType,ParkingRowAttributeValue,VenuePropertyType,VenuePropertyValue&gt;" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.attributemap.html#Structure-AttributeMap" title="Structure defined in nds.core.attributemap">AttributeMap</td><td>&lt;</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.reference.types.html#Subtype-ParkingRowId" title="Subtype defined in nds.venue.reference.types">ParkingRowId</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.attributemap.html#Structure-Validity" title="Structure defined in nds.core.attributemap">Validity</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.details.attributes.html#Enum-ParkingRowAttributeType" title="Enum defined in nds.venue.details.attributes">ParkingRowAttributeType</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.details.attributes.html#Choice-ParkingRowAttributeValue" title="Choice defined in nds.venue.details.attributes">ParkingRowAttributeValue</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.details.properties.html#Structure-VenuePropertyType" title="Structure defined in nds.venue.details.properties">VenuePropertyType</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.details.properties.html#Structure-VenuePropertyValue" title="Structure defined in nds.venue.details.properties">VenuePropertyValue</td></tr></table></td><td>&gt;</td></tr></table></font>>];
+        "ParkingRowAttributeSetMap" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.details.instantiations.html#InstantiateType-ParkingRowAttributeSetMap" title="InstantiateType defined in nds.venue.details.instantiations">ParkingRowAttributeSetMap</td></tr></table></font>>];
+        "AttributeSetMap&lt;ParkingRowId,Validity,ParkingRowAttributeType,ParkingRowAttributeValue,VenuePropertyType,VenuePropertyValue&gt;" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.attributemap.html#Structure-AttributeSetMap" title="Structure defined in nds.core.attributemap">AttributeSetMap</td><td>&lt;</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.reference.types.html#Subtype-ParkingRowId" title="Subtype defined in nds.venue.reference.types">ParkingRowId</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.attributemap.html#Structure-Validity" title="Structure defined in nds.core.attributemap">Validity</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.details.attributes.html#Enum-ParkingRowAttributeType" title="Enum defined in nds.venue.details.attributes">ParkingRowAttributeType</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.details.attributes.html#Choice-ParkingRowAttributeValue" title="Choice defined in nds.venue.details.attributes">ParkingRowAttributeValue</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.details.properties.html#Structure-VenuePropertyType" title="Structure defined in nds.venue.details.properties">VenuePropertyType</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.details.properties.html#Structure-VenuePropertyValue" title="Structure defined in nds.venue.details.properties">VenuePropertyValue</td></tr></table></td><td>&gt;</td></tr></table></font>>];
+        "ParkingRowAttributeSetList" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.details.instantiations.html#InstantiateType-ParkingRowAttributeSetList" title="InstantiateType defined in nds.venue.details.instantiations">ParkingRowAttributeSetList</td></tr></table></font>>];
+        "AttributeSetList&lt;ParkingRowId,Validity,ParkingRowAttributeType,ParkingRowAttributeValue,VenuePropertyType,VenuePropertyValue&gt;" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.attributemap.html#Structure-AttributeSetList" title="Structure defined in nds.core.attributemap">AttributeSetList</td><td>&lt;</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.reference.types.html#Subtype-ParkingRowId" title="Subtype defined in nds.venue.reference.types">ParkingRowId</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.attributemap.html#Structure-Validity" title="Structure defined in nds.core.attributemap">Validity</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.details.attributes.html#Enum-ParkingRowAttributeType" title="Enum defined in nds.venue.details.attributes">ParkingRowAttributeType</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.details.attributes.html#Choice-ParkingRowAttributeValue" title="Choice defined in nds.venue.details.attributes">ParkingRowAttributeValue</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.details.properties.html#Structure-VenuePropertyType" title="Structure defined in nds.venue.details.properties">VenuePropertyType</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.details.properties.html#Structure-VenuePropertyValue" title="Structure defined in nds.venue.details.properties">VenuePropertyValue</td></tr></table></td><td>&gt;</td></tr></table></font>>];
+    }
+
+    "ParkingRowId" -> "Var4ByteId" [label="uses", fontsize=10];
+    "ParkingRow" -> "ParkingRowId" [label="uses", fontsize=10];
+    "ParkingRangeRelationValue" -> "ParkingRowId" [label="uses", fontsize=10];
+    "ParkingRelationValue" -> "ParkingRowId" [label="uses", fontsize=10];
+    "ParkingRowAttributeMapList" -> "ParkingRowId" [label="uses", fontsize=10];
+    "AttributeMapList&lt;ParkingRowId,Validity,ParkingRowAttributeType,ParkingRowAttributeValue,VenuePropertyType,VenuePropertyValue&gt;" -> "ParkingRowId" [label="uses", fontsize=10];
+    "ParkingRowAttributeMap" -> "ParkingRowId" [label="uses", fontsize=10];
+    "AttributeMap&lt;ParkingRowId,Validity,ParkingRowAttributeType,ParkingRowAttributeValue,VenuePropertyType,VenuePropertyValue&gt;" -> "ParkingRowId" [label="uses", fontsize=10];
+    "ParkingRowAttributeSetMap" -> "ParkingRowId" [label="uses", fontsize=10];
+    "AttributeSetMap&lt;ParkingRowId,Validity,ParkingRowAttributeType,ParkingRowAttributeValue,VenuePropertyType,VenuePropertyValue&gt;" -> "ParkingRowId" [label="uses", fontsize=10];
+    "ParkingRowAttributeSetList" -> "ParkingRowId" [label="uses", fontsize=10];
+    "AttributeSetList&lt;ParkingRowId,Validity,ParkingRowAttributeType,ParkingRowAttributeValue,VenuePropertyType,VenuePropertyValue&gt;" -> "ParkingRowId" [label="uses", fontsize=10];
+}

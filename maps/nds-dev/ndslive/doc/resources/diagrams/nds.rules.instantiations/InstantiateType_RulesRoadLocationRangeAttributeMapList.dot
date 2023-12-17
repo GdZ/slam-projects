@@ -1,0 +1,78 @@
+/**
+ * This dot file creates symbol collaboration diagram for RulesRoadLocationRangeAttributeMapList.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="RulesRoadLocationRangeAttributeMapList collaboration diagram";
+
+    subgraph "cluster_nds.rules.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.rules.instantiations";
+        tooltip="Package nds.rules.instantiations";
+        href="../../../content/packages/nds.rules.instantiations.html#Package-nds-rules-instantiations";
+        target="_parent";
+
+        "RulesRoadLocationRangeAttributeMapList" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.instantiations.html#InstantiateType-RulesRoadLocationRangeAttributeMapList" title="InstantiateType defined in nds.rules.instantiations">RulesRoadLocationRangeAttributeMapList</td></tr></table></font>>];
+        "AttributeMapList&lt;RoadLocationReference,RoadLocationRangeValidity,RulesRoadRangeAttributeType,RulesRoadRangeAttributeValue,RulesPropertyType,RulesPropertyValue&gt;" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.attributemap.html#Structure-AttributeMapList" title="Structure defined in nds.core.attributemap">AttributeMapList</td><td>&lt;</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.road.reference.location.html#Structure-RoadLocationReference" title="Structure defined in nds.road.reference.location">RoadLocationReference</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.road.reference.location.html#Structure-RoadLocationRangeValidity" title="Structure defined in nds.road.reference.location">RoadLocationRangeValidity</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.attributes.html#Enum-RulesRoadRangeAttributeType" title="Enum defined in nds.rules.attributes">RulesRoadRangeAttributeType</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.attributes.html#Choice-RulesRoadRangeAttributeValue" title="Choice defined in nds.rules.attributes">RulesRoadRangeAttributeValue</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.properties.html#Structure-RulesPropertyType" title="Structure defined in nds.rules.properties">RulesPropertyType</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.properties.html#Structure-RulesPropertyValue" title="Structure defined in nds.rules.properties">RulesPropertyValue</td></tr></table></td><td>&gt;</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.road.reference.location"
+    {
+        style="dashed, rounded";
+        label="nds.road.reference.location";
+        tooltip="Package nds.road.reference.location";
+        href="../../../content/packages/nds.road.reference.location.html#Package-nds-road-reference-location";
+        target="_parent";
+
+        "RoadLocationReference" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.road.reference.location.html#Structure-RoadLocationReference" title="Structure defined in nds.road.reference.location">RoadLocationReference</td></tr></table></font>>];
+        "RoadLocationRangeValidity" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.road.reference.location.html#Structure-RoadLocationRangeValidity" title="Structure defined in nds.road.reference.location">RoadLocationRangeValidity</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.rules.attributes"
+    {
+        style="dashed, rounded";
+        label="nds.rules.attributes";
+        tooltip="Package nds.rules.attributes";
+        href="../../../content/packages/nds.rules.attributes.html#Package-nds-rules-attributes";
+        target="_parent";
+
+        "RulesRoadRangeAttributeType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.attributes.html#Enum-RulesRoadRangeAttributeType" title="Enum defined in nds.rules.attributes">RulesRoadRangeAttributeType</td></tr></table></font>>];
+        "RulesRoadRangeAttributeValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.attributes.html#Choice-RulesRoadRangeAttributeValue" title="Choice defined in nds.rules.attributes">RulesRoadRangeAttributeValue</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.rules.properties"
+    {
+        style="dashed, rounded";
+        label="nds.rules.properties";
+        tooltip="Package nds.rules.properties";
+        href="../../../content/packages/nds.rules.properties.html#Package-nds-rules-properties";
+        target="_parent";
+
+        "RulesPropertyType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.properties.html#Structure-RulesPropertyType" title="Structure defined in nds.rules.properties">RulesPropertyType</td></tr></table></font>>];
+        "RulesPropertyValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.properties.html#Structure-RulesPropertyValue" title="Structure defined in nds.rules.properties">RulesPropertyValue</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.rules.layer"
+    {
+        style="dashed, rounded";
+        label="nds.rules.layer";
+        tooltip="Package nds.rules.layer";
+        href="../../../content/packages/nds.rules.layer.html#Package-nds-rules-layer";
+        target="_parent";
+
+        "RoadLocationRulesLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.layer.html#Structure-RoadLocationRulesLayer" title="Structure defined in nds.rules.layer">RoadLocationRulesLayer</td></tr></table></font>>];
+    }
+
+    "RulesRoadLocationRangeAttributeMapList" -> "AttributeMapList&lt;RoadLocationReference,RoadLocationRangeValidity,RulesRoadRangeAttributeType,RulesRoadRangeAttributeValue,RulesPropertyType,RulesPropertyValue&gt;" [label="uses", fontsize=10];
+    "RulesRoadLocationRangeAttributeMapList" -> "RoadLocationReference" [label="uses", fontsize=10];
+    "RulesRoadLocationRangeAttributeMapList" -> "RoadLocationRangeValidity" [label="uses", fontsize=10];
+    "RulesRoadLocationRangeAttributeMapList" -> "RulesRoadRangeAttributeType" [label="uses", fontsize=10];
+    "RulesRoadLocationRangeAttributeMapList" -> "RulesRoadRangeAttributeValue" [label="uses", fontsize=10];
+    "RulesRoadLocationRangeAttributeMapList" -> "RulesPropertyType" [label="uses", fontsize=10];
+    "RulesRoadLocationRangeAttributeMapList" -> "RulesPropertyValue" [label="uses", fontsize=10];
+    "RoadLocationRulesLayer" -> "RulesRoadLocationRangeAttributeMapList" [label="uses", fontsize=10];
+}

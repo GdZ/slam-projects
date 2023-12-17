@@ -1,0 +1,24 @@
+/**
+ * This dot file creates symbol collaboration diagram for SERVICE_ROAD_ENTER_RIGHT.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="SERVICE_ROAD_ENTER_RIGHT collaboration diagram";
+
+    subgraph "cluster_nds.routing.types"
+    {
+        style="dashed, rounded";
+        label="nds.routing.types";
+        tooltip="Package nds.routing.types";
+        href="../../../content/packages/nds.routing.types.html#Package-nds-routing-types";
+        target="_parent";
+
+        "SERVICE_ROAD_ENTER_RIGHT" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routing.types.html#Constant-SERVICE_ROAD_ENTER_RIGHT" title="Constant defined in nds.routing.types">SERVICE_ROAD_ENTER_RIGHT</td></tr></table></font>>];
+        "ExtGuidanceCode" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.routing.types.html#Subtype-ExtGuidanceCode" title="Subtype defined in nds.routing.types">ExtGuidanceCode</td></tr></table></font>>];
+    }
+
+    "SERVICE_ROAD_ENTER_RIGHT" -> "ExtGuidanceCode" [label="uses", fontsize=10];
+}

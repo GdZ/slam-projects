@@ -1,0 +1,64 @@
+/**
+ * This dot file creates symbol collaboration diagram for RoadLocationPositionValidity.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="RoadLocationPositionValidity collaboration diagram";
+
+    subgraph "cluster_nds.road.reference.location"
+    {
+        style="dashed, rounded";
+        label="nds.road.reference.location";
+        tooltip="Package nds.road.reference.location";
+        href="../../../content/packages/nds.road.reference.location.html#Package-nds-road-reference-location";
+        target="_parent";
+
+        "RoadLocationPositionValidity" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.road.reference.location.html#Structure-RoadLocationPositionValidity" title="Structure defined in nds.road.reference.location">RoadLocationPositionValidity</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.geometry"
+    {
+        style="dashed, rounded";
+        label="nds.core.geometry";
+        tooltip="Package nds.core.geometry";
+        href="../../../content/packages/nds.core.geometry.html#Package-nds-core-geometry";
+        target="_parent";
+
+        "CoordShift" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Subtype-CoordShift" title="Subtype defined in nds.core.geometry">CoordShift</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.location"
+    {
+        style="dashed, rounded";
+        label="nds.core.location";
+        tooltip="Package nds.core.location";
+        href="../../../content/packages/nds.core.location.html#Package-nds-core-location";
+        target="_parent";
+
+        "RoadLocationIdPosition" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.location.html#Subtype-RoadLocationIdPosition" title="Subtype defined in nds.core.location">RoadLocationIdPosition</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.poi.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.poi.instantiations";
+        tooltip="Package nds.poi.instantiations";
+        href="../../../content/packages/nds.poi.instantiations.html#Package-nds-poi-instantiations";
+        target="_parent";
+
+        "PoiRoadLocationPositionRelationMapList" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.instantiations.html#InstantiateType-PoiRoadLocationPositionRelationMapList" title="InstantiateType defined in nds.poi.instantiations">PoiRoadLocationPositionRelationMapList</td></tr></table></font>>];
+        "AttributeMapList&lt;RoadLocationReference,RoadLocationPositionValidity,PoiRoadPositionRelationType,PoiRoadPositionRelationValue,CorePropertyType,CorePropertyValue&gt;" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.attributemap.html#Structure-AttributeMapList" title="Structure defined in nds.core.attributemap">AttributeMapList</td><td>&lt;</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.road.reference.location.html#Structure-RoadLocationReference" title="Structure defined in nds.road.reference.location">RoadLocationReference</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.road.reference.location.html#Structure-RoadLocationPositionValidity" title="Structure defined in nds.road.reference.location">RoadLocationPositionValidity</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.poi.html#Enum-PoiRoadPositionRelationType" title="Enum defined in nds.poi.poi">PoiRoadPositionRelationType</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.poi.html#Choice-PoiRoadPositionRelationValue" title="Choice defined in nds.poi.poi">PoiRoadPositionRelationValue</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.properties.html#Enum-CorePropertyType" title="Enum defined in nds.core.properties">CorePropertyType</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.properties.html#Choice-CorePropertyValue" title="Choice defined in nds.core.properties">CorePropertyValue</td></tr></table></td><td>&gt;</td></tr></table></font>>];
+        "PoiRoadLocationPositionRelationMap" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.instantiations.html#InstantiateType-PoiRoadLocationPositionRelationMap" title="InstantiateType defined in nds.poi.instantiations">PoiRoadLocationPositionRelationMap</td></tr></table></font>>];
+        "AttributeMap&lt;RoadLocationReference,RoadLocationPositionValidity,PoiRoadPositionRelationType,PoiRoadPositionRelationValue,CorePropertyType,CorePropertyValue&gt;" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.attributemap.html#Structure-AttributeMap" title="Structure defined in nds.core.attributemap">AttributeMap</td><td>&lt;</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.road.reference.location.html#Structure-RoadLocationReference" title="Structure defined in nds.road.reference.location">RoadLocationReference</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.road.reference.location.html#Structure-RoadLocationPositionValidity" title="Structure defined in nds.road.reference.location">RoadLocationPositionValidity</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.poi.html#Enum-PoiRoadPositionRelationType" title="Enum defined in nds.poi.poi">PoiRoadPositionRelationType</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.poi.poi.html#Choice-PoiRoadPositionRelationValue" title="Choice defined in nds.poi.poi">PoiRoadPositionRelationValue</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.properties.html#Enum-CorePropertyType" title="Enum defined in nds.core.properties">CorePropertyType</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.properties.html#Choice-CorePropertyValue" title="Choice defined in nds.core.properties">CorePropertyValue</td></tr></table></td><td>&gt;</td></tr></table></font>>];
+    }
+
+    "RoadLocationPositionValidity" -> "CoordShift" [label="uses", fontsize=10];
+    "RoadLocationPositionValidity" -> "RoadLocationIdPosition" [label="uses", fontsize=10];
+    "PoiRoadLocationPositionRelationMapList" -> "RoadLocationPositionValidity" [label="uses", fontsize=10];
+    "AttributeMapList&lt;RoadLocationReference,RoadLocationPositionValidity,PoiRoadPositionRelationType,PoiRoadPositionRelationValue,CorePropertyType,CorePropertyValue&gt;" -> "RoadLocationPositionValidity" [label="uses", fontsize=10];
+    "PoiRoadLocationPositionRelationMap" -> "RoadLocationPositionValidity" [label="uses", fontsize=10];
+    "AttributeMap&lt;RoadLocationReference,RoadLocationPositionValidity,PoiRoadPositionRelationType,PoiRoadPositionRelationValue,CorePropertyType,CorePropertyValue&gt;" -> "RoadLocationPositionValidity" [label="uses", fontsize=10];
+}

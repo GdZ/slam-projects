@@ -1,0 +1,24 @@
+/**
+ * This dot file creates symbol collaboration diagram for GeometryLayerType.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="GeometryLayerType collaboration diagram";
+
+    subgraph "cluster_nds.road.metadata"
+    {
+        style="dashed, rounded";
+        label="nds.road.metadata";
+        tooltip="Package nds.road.metadata";
+        href="../../../content/packages/nds.road.metadata.html#Package-nds-road-metadata";
+        target="_parent";
+
+        "GeometryLayerType" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.road.metadata.html#Enum-GeometryLayerType" title="Enum defined in nds.road.metadata">GeometryLayerType</td></tr></table></font>>];
+        "GeometryLayerMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.road.metadata.html#Structure-GeometryLayerMetadata" title="Structure defined in nds.road.metadata">GeometryLayerMetadata</td></tr></table></font>>];
+    }
+
+    "GeometryLayerMetadata" -> "GeometryLayerType" [label="uses", fontsize=10];
+}

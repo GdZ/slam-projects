@@ -1,0 +1,40 @@
+/**
+ * This dot file creates symbol collaboration diagram for ParkingFacilityRelationLayerMetadata.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="ParkingFacilityRelationLayerMetadata collaboration diagram";
+
+    subgraph "cluster_nds.venue.metadata"
+    {
+        style="dashed, rounded";
+        label="nds.venue.metadata";
+        tooltip="Package nds.venue.metadata";
+        href="../../../content/packages/nds.venue.metadata.html#Package-nds-venue-metadata";
+        target="_parent";
+
+        "ParkingFacilityRelationLayerMetadata" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.metadata.html#Structure-ParkingFacilityRelationLayerMetadata" title="Structure defined in nds.venue.metadata">ParkingFacilityRelationLayerMetadata</td></tr></table></font>>];
+        "ParkingFacilityRelationLayerContent" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.metadata.html#Bitmask-ParkingFacilityRelationLayerContent" title="Bitmask defined in nds.venue.metadata">ParkingFacilityRelationLayerContent</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.venue.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.venue.instantiations";
+        tooltip="Package nds.venue.instantiations";
+        href="../../../content/packages/nds.venue.instantiations.html#Package-nds-venue-instantiations";
+        target="_parent";
+
+        "ParkingRelationMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.instantiations.html#InstantiateType-ParkingRelationMetadata" title="InstantiateType defined in nds.venue.instantiations">ParkingRelationMetadata</td></tr></table></font>>];
+        "ParkingRangeRelationMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.instantiations.html#InstantiateType-ParkingRangeRelationMetadata" title="InstantiateType defined in nds.venue.instantiations">ParkingRangeRelationMetadata</td></tr></table></font>>];
+        "ParkingPositionRelationMetadata" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.venue.instantiations.html#InstantiateType-ParkingPositionRelationMetadata" title="InstantiateType defined in nds.venue.instantiations">ParkingPositionRelationMetadata</td></tr></table></font>>];
+    }
+
+    "ParkingFacilityRelationLayerMetadata" -> "ParkingFacilityRelationLayerContent" [label="uses", fontsize=10];
+    "ParkingFacilityRelationLayerMetadata" -> "ParkingRelationMetadata" [label="uses", fontsize=10];
+    "ParkingFacilityRelationLayerMetadata" -> "ParkingRangeRelationMetadata" [label="uses", fontsize=10];
+    "ParkingFacilityRelationLayerMetadata" -> "ParkingPositionRelationMetadata" [label="uses", fontsize=10];
+}

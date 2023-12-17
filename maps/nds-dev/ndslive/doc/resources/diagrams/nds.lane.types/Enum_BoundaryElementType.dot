@@ -1,0 +1,36 @@
+/**
+ * This dot file creates symbol collaboration diagram for BoundaryElementType.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="BoundaryElementType collaboration diagram";
+
+    subgraph "cluster_nds.lane.types"
+    {
+        style="dashed, rounded";
+        label="nds.lane.types";
+        tooltip="Package nds.lane.types";
+        href="../../../content/packages/nds.lane.types.html#Package-nds-lane-types";
+        target="_parent";
+
+        "BoundaryElementType" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.types.html#Enum-BoundaryElementType" title="Enum defined in nds.lane.types">BoundaryElementType</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.lane.boundaries"
+    {
+        style="dashed, rounded";
+        label="nds.lane.boundaries";
+        tooltip="Package nds.lane.boundaries";
+        href="../../../content/packages/nds.lane.boundaries.html#Package-nds-lane-boundaries";
+        target="_parent";
+
+        "BoundaryElement" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.boundaries.html#Structure-BoundaryElement" title="Structure defined in nds.lane.boundaries">BoundaryElement</td></tr></table></font>>];
+        "BoundaryElementDetails" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.boundaries.html#Choice-BoundaryElementDetails" title="Choice defined in nds.lane.boundaries">BoundaryElementDetails</td></tr></table></font>>];
+    }
+
+    "BoundaryElement" -> "BoundaryElementType" [label="uses", fontsize=10];
+    "BoundaryElementDetails" -> "BoundaryElementType" [label="uses", fontsize=10];
+}

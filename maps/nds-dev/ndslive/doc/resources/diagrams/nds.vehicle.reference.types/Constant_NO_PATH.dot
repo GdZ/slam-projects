@@ -1,0 +1,24 @@
+/**
+ * This dot file creates symbol collaboration diagram for NO_PATH.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="NO_PATH collaboration diagram";
+
+    subgraph "cluster_nds.vehicle.reference.types"
+    {
+        style="dashed, rounded";
+        label="nds.vehicle.reference.types";
+        tooltip="Package nds.vehicle.reference.types";
+        href="../../../content/packages/nds.vehicle.reference.types.html#Package-nds-vehicle-reference-types";
+        target="_parent";
+
+        "NO_PATH" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.vehicle.reference.types.html#Constant-NO_PATH" title="Constant defined in nds.vehicle.reference.types">NO_PATH</td></tr></table></font>>];
+        "HorizonPathId" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.vehicle.reference.types.html#Subtype-HorizonPathId" title="Subtype defined in nds.vehicle.reference.types">HorizonPathId</td></tr></table></font>>];
+    }
+
+    "NO_PATH" -> "HorizonPathId" [label="uses", fontsize=10];
+}

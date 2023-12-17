@@ -1,0 +1,26 @@
+/**
+ * This dot file creates symbol collaboration diagram for NO_COMPRESSION.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="NO_COMPRESSION collaboration diagram";
+
+    subgraph "cluster_nds.core.packaging"
+    {
+        style="dashed, rounded";
+        label="nds.core.packaging";
+        tooltip="Package nds.core.packaging";
+        href="../../../content/packages/nds.core.packaging.html#Package-nds-core-packaging";
+        target="_parent";
+
+        "NO_COMPRESSION" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.packaging.html#Constant-NO_COMPRESSION" title="Constant defined in nds.core.packaging">NO_COMPRESSION</td></tr></table></font>>];
+        "CompressionType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.packaging.html#Subtype-CompressionType" title="Subtype defined in nds.core.packaging">CompressionType</td></tr></table></font>>];
+        "PackagingDetails" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.packaging.html#Structure-PackagingDetails" title="Structure defined in nds.core.packaging">PackagingDetails</td></tr></table></font>>];
+    }
+
+    "NO_COMPRESSION" -> "CompressionType" [label="uses", fontsize=10];
+    "PackagingDetails" -> "NO_COMPRESSION" [label="uses", fontsize=10];
+}

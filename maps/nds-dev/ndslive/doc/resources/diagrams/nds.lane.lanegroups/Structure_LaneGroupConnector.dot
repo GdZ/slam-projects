@@ -1,0 +1,70 @@
+/**
+ * This dot file creates symbol collaboration diagram for LaneGroupConnector.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="LaneGroupConnector collaboration diagram";
+
+    subgraph "cluster_nds.lane.lanegroups"
+    {
+        style="dashed, rounded";
+        label="nds.lane.lanegroups";
+        tooltip="Package nds.lane.lanegroups";
+        href="../../../content/packages/nds.lane.lanegroups.html#Package-nds-lane-lanegroups";
+        target="_parent";
+
+        "LaneGroupConnector" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.lanegroups.html#Structure-LaneGroupConnector" title="Structure defined in nds.lane.lanegroups">LaneGroupConnector</td></tr></table></font>>];
+        "RoadLaneGroup" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.lanegroups.html#Structure-RoadLaneGroup" title="Structure defined in nds.lane.lanegroups">RoadLaneGroup</td></tr></table></font>>];
+        "IntersectionLaneGroup" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.lanegroups.html#Structure-IntersectionLaneGroup" title="Structure defined in nds.lane.lanegroups">IntersectionLaneGroup</td></tr></table></font>>];
+        "BorderLaneGroup" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.lanegroups.html#Structure-BorderLaneGroup" title="Structure defined in nds.lane.lanegroups">BorderLaneGroup</td></tr></table></font>>];
+        "ForkLaneGroup" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.lanegroups.html#Structure-ForkLaneGroup" title="Structure defined in nds.lane.lanegroups">ForkLaneGroup</td></tr></table></font>>];
+        "ArtificialRoadLaneGroup" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.lanegroups.html#Structure-ArtificialRoadLaneGroup" title="Structure defined in nds.lane.lanegroups">ArtificialRoadLaneGroup</td></tr></table></font>>];
+        "ArtificialIntersectionLaneGroup" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.lanegroups.html#Structure-ArtificialIntersectionLaneGroup" title="Structure defined in nds.lane.lanegroups">ArtificialIntersectionLaneGroup</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.geometry"
+    {
+        style="dashed, rounded";
+        label="nds.core.geometry";
+        tooltip="Package nds.core.geometry";
+        href="../../../content/packages/nds.core.geometry.html#Package-nds-core-geometry";
+        target="_parent";
+
+        "Position3D" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Structure-Position3D" title="Structure defined in nds.core.geometry">Position3D</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.lane.reference.types"
+    {
+        style="dashed, rounded";
+        label="nds.lane.reference.types";
+        tooltip="Package nds.lane.reference.types";
+        href="../../../content/packages/nds.lane.reference.types.html#Package-nds-lane-reference-types";
+        target="_parent";
+
+        "LaneGroupId" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.reference.types.html#Subtype-LaneGroupId" title="Subtype defined in nds.lane.reference.types">LaneGroupId</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.lane.types"
+    {
+        style="dashed, rounded";
+        label="nds.lane.types";
+        tooltip="Package nds.lane.types";
+        href="../../../content/packages/nds.lane.types.html#Package-nds-lane-types";
+        target="_parent";
+
+        "TileBorderIndicator" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.lane.types.html#Enum-TileBorderIndicator" title="Enum defined in nds.lane.types">TileBorderIndicator</td></tr></table></font>>];
+    }
+
+    "LaneGroupConnector" -> "Position3D" [label="uses", fontsize=10];
+    "LaneGroupConnector" -> "LaneGroupId" [label="uses", fontsize=10];
+    "LaneGroupConnector" -> "TileBorderIndicator" [label="uses", fontsize=10];
+    "RoadLaneGroup" -> "LaneGroupConnector" [label="uses", fontsize=10];
+    "IntersectionLaneGroup" -> "LaneGroupConnector" [label="uses", fontsize=10];
+    "BorderLaneGroup" -> "LaneGroupConnector" [label="uses", fontsize=10];
+    "ForkLaneGroup" -> "LaneGroupConnector" [label="uses", fontsize=10];
+    "ArtificialRoadLaneGroup" -> "LaneGroupConnector" [label="uses", fontsize=10];
+    "ArtificialIntersectionLaneGroup" -> "LaneGroupConnector" [label="uses", fontsize=10];
+}

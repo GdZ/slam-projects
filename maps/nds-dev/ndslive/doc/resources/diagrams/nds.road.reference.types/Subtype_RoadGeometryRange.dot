@@ -1,0 +1,36 @@
+/**
+ * This dot file creates symbol collaboration diagram for RoadGeometryRange.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="RoadGeometryRange collaboration diagram";
+
+    subgraph "cluster_nds.road.reference.types"
+    {
+        style="dashed, rounded";
+        label="nds.road.reference.types";
+        tooltip="Package nds.road.reference.types";
+        href="../../../content/packages/nds.road.reference.types.html#Package-nds-road-reference-types";
+        target="_parent";
+
+        "RoadGeometryRange" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.road.reference.types.html#Subtype-RoadGeometryRange" title="Subtype defined in nds.road.reference.types">RoadGeometryRange</td></tr></table></font>>];
+        "RoadRangeChoice" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.road.reference.types.html#Choice-RoadRangeChoice" title="Choice defined in nds.road.reference.types">RoadRangeChoice</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.geometry"
+    {
+        style="dashed, rounded";
+        label="nds.core.geometry";
+        tooltip="Package nds.core.geometry";
+        href="../../../content/packages/nds.core.geometry.html#Package-nds-core-geometry";
+        target="_parent";
+
+        "LineRangeUnchecked" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Structure-LineRangeUnchecked" title="Structure defined in nds.core.geometry">LineRangeUnchecked</td></tr></table></font>>];
+    }
+
+    "RoadGeometryRange" -> "LineRangeUnchecked" [label="uses", fontsize=10];
+    "RoadRangeChoice" -> "RoadGeometryRange" [label="uses", fontsize=10];
+}

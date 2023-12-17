@@ -1,0 +1,24 @@
+/**
+ * This dot file creates symbol collaboration diagram for REST_OPENAPI30_UNSECURE.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="REST_OPENAPI30_UNSECURE collaboration diagram";
+
+    subgraph "cluster_nds.registry.node"
+    {
+        style="dashed, rounded";
+        label="nds.registry.node";
+        tooltip="Package nds.registry.node";
+        href="../../../content/packages/nds.registry.node.html#Package-nds-registry-node";
+        target="_parent";
+
+        "REST_OPENAPI30_UNSECURE" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.registry.node.html#Constant-REST_OPENAPI30_UNSECURE" title="Constant defined in nds.registry.node">REST_OPENAPI30_UNSECURE</td></tr></table></font>>];
+        "ProtocolType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.registry.node.html#Subtype-ProtocolType" title="Subtype defined in nds.registry.node">ProtocolType</td></tr></table></font>>];
+    }
+
+    "REST_OPENAPI30_UNSECURE" -> "ProtocolType" [label="uses", fontsize=10];
+}

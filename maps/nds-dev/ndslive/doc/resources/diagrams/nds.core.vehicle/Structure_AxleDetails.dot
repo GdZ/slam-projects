@@ -1,0 +1,28 @@
+/**
+ * This dot file creates symbol collaboration diagram for AxleDetails.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="AxleDetails collaboration diagram";
+
+    subgraph "cluster_nds.core.vehicle"
+    {
+        style="dashed, rounded";
+        label="nds.core.vehicle";
+        tooltip="Package nds.core.vehicle";
+        href="../../../content/packages/nds.core.vehicle.html#Package-nds-core-vehicle";
+        target="_parent";
+
+        "AxleDetails" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.vehicle.html#Structure-AxleDetails" title="Structure defined in nds.core.vehicle">AxleDetails</td></tr></table></font>>];
+        "NumAxles" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.vehicle.html#Subtype-NumAxles" title="Subtype defined in nds.core.vehicle">NumAxles</td></tr></table></font>>];
+        "AxleWeight" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.vehicle.html#Subtype-AxleWeight" title="Subtype defined in nds.core.vehicle">AxleWeight</td></tr></table></font>>];
+        "VehicleClassSpecification" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.vehicle.html#Structure-VehicleClassSpecification" title="Structure defined in nds.core.vehicle">VehicleClassSpecification</td></tr></table></font>>];
+    }
+
+    "AxleDetails" -> "NumAxles" [label="uses", fontsize=10];
+    "AxleDetails" -> "AxleWeight" [label="uses", fontsize=10];
+    "VehicleClassSpecification" -> "AxleDetails" [label="uses", fontsize=10];
+}

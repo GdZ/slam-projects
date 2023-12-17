@@ -1,0 +1,50 @@
+/**
+ * This dot file creates symbol collaboration diagram for MovableWarningSign.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="MovableWarningSign collaboration diagram";
+
+    subgraph "cluster_nds.rules.types"
+    {
+        style="dashed, rounded";
+        label="nds.rules.types";
+        tooltip="Package nds.rules.types";
+        href="../../../content/packages/nds.rules.types.html#Package-nds-rules-types";
+        target="_parent";
+
+        "MovableWarningSign" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.types.html#Subtype-MovableWarningSign" title="Subtype defined in nds.rules.types">MovableWarningSign</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.signs.warning"
+    {
+        style="dashed, rounded";
+        label="nds.signs.warning";
+        tooltip="Package nds.signs.warning";
+        href="../../../content/packages/nds.signs.warning.html#Package-nds-signs-warning";
+        target="_parent";
+
+        "WarningSign" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.signs.warning.html#Enum-WarningSign" title="Enum defined in nds.signs.warning">WarningSign</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.rules.attributes"
+    {
+        style="dashed, rounded";
+        label="nds.rules.attributes";
+        tooltip="Package nds.rules.attributes";
+        href="../../../content/packages/nds.rules.attributes.html#Package-nds-rules-attributes";
+        target="_parent";
+
+        "RulesRoadPositionAttributeValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.attributes.html#Choice-RulesRoadPositionAttributeValue" title="Choice defined in nds.rules.attributes">RulesRoadPositionAttributeValue</td></tr></table></font>>];
+        "RulesLanePositionAttributeValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.attributes.html#Choice-RulesLanePositionAttributeValue" title="Choice defined in nds.rules.attributes">RulesLanePositionAttributeValue</td></tr></table></font>>];
+        "RulesDisplayLinePositionAttributeValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.rules.attributes.html#Choice-RulesDisplayLinePositionAttributeValue" title="Choice defined in nds.rules.attributes">RulesDisplayLinePositionAttributeValue</td></tr></table></font>>];
+    }
+
+    "MovableWarningSign" -> "WarningSign" [label="uses", fontsize=10];
+    "RulesRoadPositionAttributeValue" -> "MovableWarningSign" [label="uses", fontsize=10];
+    "RulesLanePositionAttributeValue" -> "MovableWarningSign" [label="uses", fontsize=10];
+    "RulesDisplayLinePositionAttributeValue" -> "MovableWarningSign" [label="uses", fontsize=10];
+}

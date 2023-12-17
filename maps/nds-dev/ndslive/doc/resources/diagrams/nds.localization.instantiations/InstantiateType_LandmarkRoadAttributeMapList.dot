@@ -1,0 +1,78 @@
+/**
+ * This dot file creates symbol collaboration diagram for LandmarkRoadAttributeMapList.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="LandmarkRoadAttributeMapList collaboration diagram";
+
+    subgraph "cluster_nds.localization.instantiations"
+    {
+        style="dashed, rounded";
+        label="nds.localization.instantiations";
+        tooltip="Package nds.localization.instantiations";
+        href="../../../content/packages/nds.localization.instantiations.html#Package-nds-localization-instantiations";
+        target="_parent";
+
+        "LandmarkRoadAttributeMapList" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.localization.instantiations.html#InstantiateType-LandmarkRoadAttributeMapList" title="InstantiateType defined in nds.localization.instantiations">LandmarkRoadAttributeMapList</td></tr></table></font>>];
+        "AttributeMapList&lt;RoadReference,RoadValidityRange,LandmarkRelationAttributeType,LandmarkRelationAttributeValue,LocalizationPropertyType,LocalizationPropertyValue&gt;" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.attributemap.html#Structure-AttributeMapList" title="Structure defined in nds.core.attributemap">AttributeMapList</td><td>&lt;</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.road.reference.types.html#Structure-RoadReference" title="Structure defined in nds.road.reference.types">RoadReference</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.road.reference.types.html#Structure-RoadValidityRange" title="Structure defined in nds.road.reference.types">RoadValidityRange</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.localization.attributes.html#Enum-LandmarkRelationAttributeType" title="Enum defined in nds.localization.attributes">LandmarkRelationAttributeType</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.localization.attributes.html#Choice-LandmarkRelationAttributeValue" title="Choice defined in nds.localization.attributes">LandmarkRelationAttributeValue</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.localization.properties.html#Structure-LocalizationPropertyType" title="Structure defined in nds.localization.properties">LocalizationPropertyType</td></tr></table></td><td>,</td><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.localization.properties.html#Structure-LocalizationPropertyValue" title="Structure defined in nds.localization.properties">LocalizationPropertyValue</td></tr></table></td><td>&gt;</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.road.reference.types"
+    {
+        style="dashed, rounded";
+        label="nds.road.reference.types";
+        tooltip="Package nds.road.reference.types";
+        href="../../../content/packages/nds.road.reference.types.html#Package-nds-road-reference-types";
+        target="_parent";
+
+        "RoadReference" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.road.reference.types.html#Structure-RoadReference" title="Structure defined in nds.road.reference.types">RoadReference</td></tr></table></font>>];
+        "RoadValidityRange" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.road.reference.types.html#Structure-RoadValidityRange" title="Structure defined in nds.road.reference.types">RoadValidityRange</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.localization.attributes"
+    {
+        style="dashed, rounded";
+        label="nds.localization.attributes";
+        tooltip="Package nds.localization.attributes";
+        href="../../../content/packages/nds.localization.attributes.html#Package-nds-localization-attributes";
+        target="_parent";
+
+        "LandmarkRelationAttributeType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.localization.attributes.html#Enum-LandmarkRelationAttributeType" title="Enum defined in nds.localization.attributes">LandmarkRelationAttributeType</td></tr></table></font>>];
+        "LandmarkRelationAttributeValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.localization.attributes.html#Choice-LandmarkRelationAttributeValue" title="Choice defined in nds.localization.attributes">LandmarkRelationAttributeValue</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.localization.properties"
+    {
+        style="dashed, rounded";
+        label="nds.localization.properties";
+        tooltip="Package nds.localization.properties";
+        href="../../../content/packages/nds.localization.properties.html#Package-nds-localization-properties";
+        target="_parent";
+
+        "LocalizationPropertyType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.localization.properties.html#Structure-LocalizationPropertyType" title="Structure defined in nds.localization.properties">LocalizationPropertyType</td></tr></table></font>>];
+        "LocalizationPropertyValue" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.localization.properties.html#Structure-LocalizationPropertyValue" title="Structure defined in nds.localization.properties">LocalizationPropertyValue</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.localization.layer"
+    {
+        style="dashed, rounded";
+        label="nds.localization.layer";
+        tooltip="Package nds.localization.layer";
+        href="../../../content/packages/nds.localization.layer.html#Package-nds-localization-layer";
+        target="_parent";
+
+        "RoadLandmarkLayer" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.localization.layer.html#Structure-RoadLandmarkLayer" title="Structure defined in nds.localization.layer">RoadLandmarkLayer</td></tr></table></font>>];
+    }
+
+    "LandmarkRoadAttributeMapList" -> "AttributeMapList&lt;RoadReference,RoadValidityRange,LandmarkRelationAttributeType,LandmarkRelationAttributeValue,LocalizationPropertyType,LocalizationPropertyValue&gt;" [label="uses", fontsize=10];
+    "LandmarkRoadAttributeMapList" -> "RoadReference" [label="uses", fontsize=10];
+    "LandmarkRoadAttributeMapList" -> "RoadValidityRange" [label="uses", fontsize=10];
+    "LandmarkRoadAttributeMapList" -> "LandmarkRelationAttributeType" [label="uses", fontsize=10];
+    "LandmarkRoadAttributeMapList" -> "LandmarkRelationAttributeValue" [label="uses", fontsize=10];
+    "LandmarkRoadAttributeMapList" -> "LocalizationPropertyType" [label="uses", fontsize=10];
+    "LandmarkRoadAttributeMapList" -> "LocalizationPropertyValue" [label="uses", fontsize=10];
+    "RoadLandmarkLayer" -> "LandmarkRoadAttributeMapList" [label="uses", fontsize=10];
+}

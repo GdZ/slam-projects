@@ -1,0 +1,44 @@
+/**
+ * This dot file creates symbol collaboration diagram for Speed.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="Speed collaboration diagram";
+
+    subgraph "cluster_nds.core.types"
+    {
+        style="dashed, rounded";
+        label="nds.core.types";
+        tooltip="Package nds.core.types";
+        href="../../../content/packages/nds.core.types.html#Package-nds-core-types";
+        target="_parent";
+
+        "Speed" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Subtype-Speed" title="Subtype defined in nds.core.types">Speed</td></tr></table></font>>];
+        "SpeedKmh" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Subtype-SpeedKmh" title="Subtype defined in nds.core.types">SpeedKmh</td></tr></table></font>>];
+        "SpeedMph" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Subtype-SpeedMph" title="Subtype defined in nds.core.types">SpeedMph</td></tr></table></font>>];
+        "SPEED_UNDEFINED" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Constant-SPEED_UNDEFINED" title="Constant defined in nds.core.types">SPEED_UNDEFINED</td></tr></table></font>>];
+        "SPEED_UNLIMITED" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Constant-SPEED_UNLIMITED" title="Constant defined in nds.core.types">SPEED_UNLIMITED</td></tr></table></font>>];
+        "SPEED_VARIABLE" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.types.html#Constant-SPEED_VARIABLE" title="Constant defined in nds.core.types">SPEED_VARIABLE</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.adas.types"
+    {
+        style="dashed, rounded";
+        label="nds.adas.types";
+        tooltip="Package nds.adas.types";
+        href="../../../content/packages/nds.adas.types.html#Package-nds-adas-types";
+        target="_parent";
+
+        "ComfortableSpeed" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.adas.types.html#Subtype-ComfortableSpeed" title="Subtype defined in nds.adas.types">ComfortableSpeed</td></tr></table></font>>];
+    }
+
+    "SpeedKmh" -> "Speed" [label="uses", fontsize=10];
+    "SpeedMph" -> "Speed" [label="uses", fontsize=10];
+    "SPEED_UNDEFINED" -> "Speed" [label="uses", fontsize=10];
+    "SPEED_UNLIMITED" -> "Speed" [label="uses", fontsize=10];
+    "SPEED_VARIABLE" -> "Speed" [label="uses", fontsize=10];
+    "ComfortableSpeed" -> "Speed" [label="uses", fontsize=10];
+}

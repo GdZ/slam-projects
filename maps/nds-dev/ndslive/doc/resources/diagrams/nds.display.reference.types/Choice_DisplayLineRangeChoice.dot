@@ -1,0 +1,48 @@
+/**
+ * This dot file creates symbol collaboration diagram for DisplayLineRangeChoice.
+ */
+digraph ZSERIO
+{
+    node [shape=box, fontsize=10];
+    rankdir="LR";
+    fontsize=10;
+    tooltip="DisplayLineRangeChoice collaboration diagram";
+
+    subgraph "cluster_nds.display.reference.types"
+    {
+        style="dashed, rounded";
+        label="nds.display.reference.types";
+        tooltip="Package nds.display.reference.types";
+        href="../../../content/packages/nds.display.reference.types.html#Package-nds-display-reference-types";
+        target="_parent";
+
+        "DisplayLineRangeChoice" [style="filled", fillcolor="#0000000D", target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.reference.types.html#Choice-DisplayLineRangeChoice" title="Choice defined in nds.display.reference.types">DisplayLineRangeChoice</td></tr></table></font>>];
+        "DisplayLineValidityType" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.reference.types.html#Enum-DisplayLineValidityType" title="Enum defined in nds.display.reference.types">DisplayLineValidityType</td></tr></table></font>>];
+        "DisplayLineValidityRange" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.reference.types.html#Structure-DisplayLineValidityRange" title="Structure defined in nds.display.reference.types">DisplayLineValidityRange</td></tr></table></font>>];
+        "DisplayLineGeometryRange" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.reference.types.html#Subtype-DisplayLineGeometryRange" title="Subtype defined in nds.display.reference.types">DisplayLineGeometryRange</td></tr></table></font>>];
+        "DisplayLineGeometryOffsetRange" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.reference.types.html#Subtype-DisplayLineGeometryOffsetRange" title="Subtype defined in nds.display.reference.types">DisplayLineGeometryOffsetRange</td></tr></table></font>>];
+        "DisplayLinePercentageRange" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.reference.types.html#Subtype-DisplayLinePercentageRange" title="Subtype defined in nds.display.reference.types">DisplayLinePercentageRange</td></tr></table></font>>];
+        "CurvedLabelPositioningHint" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.reference.types.html#Structure-CurvedLabelPositioningHint" title="Structure defined in nds.display.reference.types">CurvedLabelPositioningHint</td></tr></table></font>>];
+        "DisplayLineRangeValidity" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.display.reference.types.html#Structure-DisplayLineRangeValidity" title="Structure defined in nds.display.reference.types">DisplayLineRangeValidity</td></tr></table></font>>];
+    }
+
+    subgraph "cluster_nds.core.geometry"
+    {
+        style="dashed, rounded";
+        label="nds.core.geometry";
+        tooltip="Package nds.core.geometry";
+        href="../../../content/packages/nds.core.geometry.html#Package-nds-core-geometry";
+        target="_parent";
+
+        "CoordShift" [target="_parent", label=<<font face="monospace"><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td href="../../../content/packages/nds.core.geometry.html#Subtype-CoordShift" title="Subtype defined in nds.core.geometry">CoordShift</td></tr></table></font>>];
+    }
+
+    "DisplayLineRangeChoice" -> "DisplayLineValidityType" [label="uses", fontsize=10];
+    "DisplayLineRangeChoice" -> "CoordShift" [label="uses", fontsize=10];
+    "DisplayLineRangeChoice" -> "DisplayLineValidityRange" [label="uses", fontsize=10];
+    "DisplayLineRangeChoice" -> "DisplayLineGeometryRange" [label="uses", fontsize=10];
+    "DisplayLineRangeChoice" -> "DisplayLineGeometryOffsetRange" [label="uses", fontsize=10];
+    "DisplayLineRangeChoice" -> "DisplayLinePercentageRange" [label="uses", fontsize=10];
+    "DisplayLineRangeChoice" -> "CurvedLabelPositioningHint" [label="uses", fontsize=10];
+    "DisplayLineRangeValidity" -> "DisplayLineRangeChoice" [label="uses", fontsize=10];
+}
