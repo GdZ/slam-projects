@@ -179,3 +179,9 @@
 [submodule "ORB_SLAM/ORB_SLAM2_detailed_comments"]
 	path = ORB_SLAM/ORB_SLAM2_detailed_comments
 	url = https://github.com/electech6/ORB_SLAM2_detailed_comments.git
+[submodule "Cartographer/cartographer_detailed_comments"]
+	path = Cartographer/cartographer_detailed_comments
+	url = https://github.com/electech6/cartographer_detailed_comments.git
+[submodule "ORB_SLAM/NeRF-Based-SLAM-Incredible-Insights"]
+	path = ORB_SLAM/NeRF-Based-SLAM-Incredible-Insights
+	url = https://github.com/electech6/NeRF-Based-SLAM-Incredible-Insights.git
