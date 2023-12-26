@@ -1,0 +1,23 @@
+# Maven build image
+image: maven:3.3.9
+
+# Limit Git clone depth to 2 for change detection in AsciiDoc
+clone:
+  depth: 2
+
+# Pipelines
+pipelines:
+  default:
+    - step:
+        name: Build and test
+        caches:
+          - maven
+        script:
+          - export ASCII_DOC=$(git diff --name-only --exit-code HEAD~1..HEAD src/doc) # Check if last commit includes changes in AsciiDoc directory
+          - export POM=$(git diff --name-only --exit-code HEAD~1..HEAD pom.xml) # Check if last commit includes changes in pom.xml for potential version changes
+          - if [[ "$ASCII_DOC" ]] || [[ "$POM" ]]; then mvn -B clean install -P generateAsciiDocPdf; else mvn -B clean install; fi # -B batch mode makes Maven less verbose
+          - export POM_VERSION=$(mvn org.apache.maven.plugins:maven-help-plugin:3.1.0:evaluate -Dexpression=project.version -q -DforceStdout) # Derive Maven POM version
+          - export BRANCH_NAME=$(git symbolic-ref --short HEAD | sed -e 's/\//-/g') # Derive branch name with / replaced by -, e.g. feature/CR-123 to feature-CR-123
+          - if [[ "$BITBUCKET_BRANCH" == "master" ]] || [[ "$BITBUCKET_BRANCH" == "release/"* ]]; then curl -X POST --user "${BB_AUTH_STRING}" "https://api.bitbucket.org/2.0/repositories/${BITBUCKET_REPO_OWNER}/${BITBUCKET_REPO_SLUG}/downloads" --form files=@"target/sensoris-specification-${POM_VERSION}.jar"; fi # POST jar to Downloads for master and release branches
+          - if [[ "$ASCII_DOC" ]] || [[ "$POM" ]]; then cp "target/doc/architecture.pdf" "target/doc/${BRANCH_NAME}-architecture-${POM_VERSION}.pdf"; fi # Rename architecture pdf document
+          - if [[ "$ASCII_DOC" ]] || [[ "$POM" ]]; then curl -X POST --user "${BB_AUTH_STRING}" "https://api.bitbucket.org/2.0/repositories/${BITBUCKET_REPO_OWNER}/${BITBUCKET_REPO_SLUG}/downloads" --form files=@"target/doc/${BRANCH_NAME}-architecture-${POM_VERSION}.pdf"; fi # Rename architecture pdf document

@@ -1,0 +1,311 @@
+{
+  "envelope": {
+    "version": {
+      "major": "1",
+      "minor": "1",
+      "patch": "0"
+    },
+    "submitter": [{
+      "primaryId": "Campaign management",
+      "type": "CampaignManagement",
+      "softwareVersion": {
+        "major": "2",
+        "minor": "0",
+        "patch": "1",
+        "name": "PROD001"
+      }
+    }]
+  },
+  "jobRequestMessage": [{
+    "envelope": {
+      "jobIds": {
+        "submitter": [{
+          "primaryId": "Data processor LTD",
+          "type": "REQUESTER"
+        }, {
+          "primaryId": "Campaign management",
+          "type": "CampaignManagement",
+          "softwareVersion": {
+            "major": "2",
+            "minor": "0",
+            "patch": "1",
+            "name": "PROD001"
+          }
+        }],
+        "jobId": ["C1-0002-0003-2019-10-12-TEST"]
+      }
+    },
+    "metadata": {
+      "priority": "10",
+      "requestedSubmitBefore": "21600",
+      "invalidateMessageAfter": "86400",
+      "collectWhenAccessoryIsTurnedOff": false
+    },
+    "overallRestrictions": {
+      "maxSubmissionsPerTime": {
+        "timeUnitAndValue": {
+          "unit": "DAY",
+          "value": "1"
+        },
+        "submissionsPerTimeUnit": "10"
+      },
+      "maxSubmissionsPerSpatialRestriction": "10000",
+      "totalCollectionExtent": {
+        "count": "100000",
+        "dataMessageSize": "123289600",
+        "pathLength": "100000",
+        "duration": "86400"
+      }
+    },
+    "validityRestrictions": {
+      "basicJobValidityRestrictions": {
+        "timeRestrictions": {
+          "dateRange": [{
+            "startInclusive": {
+              "posixTime": "1548979200000"
+            },
+            "endExclusive": {
+              "posixTime": "1554076799000"
+            }
+          }],
+          "weekday": ["SATURDAY", "SUNDAY"],
+          "timeOfTheDayRange": [{
+            "minInclusive": "8",
+            "maxExclusive": "20"
+          }]
+        },
+        "spatialRestrictions": {
+          "directedPolylineCorridor": [{
+            "polylineCorridor": {
+              "centerPolylineAndAccuracy": {
+                "positionAndAccuracy": [{
+                  "geographicWgs84": {
+                    "longitude": {
+                      "value": "-8766111367"
+                    },
+                    "latitude": {
+                      "value": "4190604273"
+                    }
+                  }
+                }, {
+                  "geographicWgs84": {
+                    "longitude": {
+                      "value": "-8766131752"
+                    },
+                    "latitude": {
+                      "value": "4190648988"
+                    }
+                  }
+                }, {
+                  "geographicWgs84": {
+                    "longitude": {
+                      "value": "-8766151064"
+                    },
+                    "latitude": {
+                      "value": "4190687315"
+                    }
+                  }
+                }, {
+                  "geographicWgs84": {
+                    "longitude": {
+                      "value": "-8766186469"
+                    },
+                    "latitude": {
+                      "value": "4190732828"
+                    }
+                  }
+                }, {
+                  "geographicWgs84": {
+                    "longitude": {
+                      "value": "-8766249769"
+                    },
+                    "latitude": {
+                      "value": "4190799100"
+                    }
+                  }
+                }, {
+                  "geographicWgs84": {
+                    "longitude": {
+                      "value": "-8766300195"
+                    },
+                    "latitude": {
+                      "value": "4190844612"
+                    }
+                  }
+                }, {
+                  "geographicWgs84": {
+                    "longitude": {
+                      "value": "-8766378515"
+                    },
+                    "latitude": {
+                      "value": "4190917271"
+                    }
+                  }
+                }, {
+                  "geographicWgs84": {
+                    "longitude": {
+                      "value": "-8766447180"
+                    },
+                    "latitude": {
+                      "value": "4190993921"
+                    }
+                  }
+                }, {
+                  "geographicWgs84": {
+                    "longitude": {
+                      "value": "-8766539448"
+                    },
+                    "latitude": {
+                      "value": "4191132848"
+                    }
+                  }
+                }, {
+                  "geographicWgs84": {
+                    "longitude": {
+                      "value": "-8766772800"
+                    },
+                    "latitude": {
+                      "value": "4191511686"
+                    }
+                  }
+                }, {
+                  "geographicWgs84": {
+                    "longitude": {
+                      "value": "-8766862922"
+                    },
+                    "latitude": {
+                      "value": "4191621860"
+                    }
+                  }
+                }, {
+                  "geographicWgs84": {
+                    "longitude": {
+                      "value": "-8766968065"
+                    },
+                    "latitude": {
+                      "value": "4191732032"
+                    }
+                  }
+                }, {
+                  "geographicWgs84": {
+                    "longitude": {
+                      "value": "-8767120414"
+                    },
+                    "latitude": {
+                      "value": "4191835816"
+                    }
+                  }
+                }, {
+                  "geographicWgs84": {
+                    "longitude": {
+                      "value": "-8767446571"
+                    },
+                    "latitude": {
+                      "value": "4192025816"
+                    }
+                  }
+                }, {
+                  "geographicWgs84": {
+                    "longitude": {
+                      "value": "-8768645719"
+                    },
+                    "latitude": {
+                      "value": "4192706869"
+                    }
+                  }
+                }]
+              },
+              "totalWidthAndAccuracy": {
+                "valueAndAccuracy": {
+                  "value": "4000",
+                  "accuracy": "1"
+                }
+              }
+            },
+            "isBidirectional": true,
+            "headingDeviationFromCenterLine": "30"
+          }]
+        }
+      }
+    },
+    "collectionTrigger": {
+      "collectionCondition": {
+        "operand": [{
+          "comparisonExpression": {
+            "not": true,
+            "firstOperation": {
+              "firstOperand": {
+                "eventFieldValue": {
+                  "absolute": {
+                    "fieldNumber": ["2", "2", "4", "2", "3", "1"]
+                  }
+                }
+              },
+              "operator": "NO_OPERATION"
+            },
+            "operator": "EQUAL",
+            "secondOperation": {
+              "firstOperand": {
+                "int64ValueAndExponent": {
+                  "value": "1"
+                }
+              },
+              "operator": "NO_OPERATION"
+            }
+          }
+        }]
+      },
+      "maxExtentsPerCollectionEvent": {
+        "count": "100",
+        "dataMessageSize": "1024"
+      }
+    },
+    "actions": {
+      "collectionAction": {
+        "collectionTask": [{
+          "optional": false,
+          "preventOverlappingByTime": false,
+          "collectionEventOrEventField": [{
+            "eventOrEventFieldToCollect": {
+              "absolute": {
+                "fieldNumber": ["2", "2", "7"]
+              }
+            },
+            "optional": false,
+            "currentValue": true
+          }],
+          "collectionConfiguration": {
+            "triggerFrequency": {
+              "type": "NATIVE_FREQUENCY"
+            }
+          }
+        }, {
+          "optional": false,
+          "preventOverlappingByTime": false,
+          "collectionEventOrEventField": [{
+            "eventOrEventFieldToCollect": {
+              "absolute": {
+                "fieldNumber": ["2", "2", "2", "2", "2"]
+              }
+            },
+            "optional": false,
+            "currentValue": true
+          }, {
+            "eventOrEventFieldToCollect": {
+              "absolute": {
+                "fieldNumber": ["2", "2", "2", "2", "3"]
+              }
+            },
+            "optional": false,
+            "currentValue": true
+          }],
+          "collectionConfiguration": {
+            "triggerFrequency": {
+              "type": "NATIVE_FREQUENCY"
+            }
+          }
+        }]
+      }
+    }
+  }]
+}

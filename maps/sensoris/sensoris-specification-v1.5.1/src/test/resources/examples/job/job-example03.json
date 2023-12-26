@@ -1,0 +1,163 @@
+{
+  "envelope": {
+    "version": {
+      "major": "1",
+      "minor": "1",
+      "patch": "0"
+    }
+  },
+  "jobRequestMessage": [{
+    "envelope": {
+      "jobIds": {
+        "jobId": ["C1-0003-3333-2019-10-12-TEST"]
+      }
+    },
+    "capabilityRequirements": {
+      "supportedDataMessagesVersions": {
+        "versionRange": [{
+          "minInclusive": {
+            "major": "1",
+            "minor": "0",
+            "patch": "0"
+          },
+          "maxExclusive": {
+            "major": "1",
+            "minor": "0",
+            "patch": "1"
+          }
+        }]
+      }
+    },
+    "collectionTrigger": {
+      "collectionCondition": {
+        "operand": [{
+          "comparisonExpression": {
+            "firstOperation": {
+              "firstOperand": {
+                "boolValue": true
+              },
+              "operator": "NO_OPERATION"
+            },
+            "operator": "EQUAL",
+            "secondOperation": {
+              "firstOperand": {
+                "boolValue": true
+              },
+              "operator": "NO_OPERATION"
+            }
+          }
+        }]
+      }
+    },
+    "actions": {
+      "collectionAction": {
+        "collectionTask": [{
+          "optional": false,
+          "preventOverlappingByTime": false,
+          "collectionEventOrEventField": [{
+            "eventOrEventFieldToCollect": {
+              "absolute": {
+                "fieldNumber": ["2", "2", "2"]
+              }
+            },
+            "optional": true,
+            "currentValue": true
+          }, {
+            "eventOrEventFieldToCollect": {
+              "absolute": {
+                "fieldNumber": ["2", "2", "3"]
+              }
+            },
+            "optional": true,
+            "currentValue": true
+          }, {
+            "eventOrEventFieldToCollect": {
+              "absolute": {
+                "fieldNumber": ["2", "2", "4"]
+              }
+            },
+            "optional": true,
+            "currentValue": true
+          }, {
+            "eventOrEventFieldToCollect": {
+              "absolute": {
+                "fieldNumber": ["2", "2", "5"]
+              }
+            },
+            "optional": true,
+            "currentValue": true
+          }, {
+            "eventOrEventFieldToCollect": {
+              "absolute": {
+                "fieldNumber": ["2", "2", "6"]
+              }
+            },
+            "optional": true,
+            "currentValue": true
+          }, {
+            "eventOrEventFieldToCollect": {
+              "absolute": {
+                "fieldNumber": ["2", "2", "7"]
+              }
+            },
+            "optional": true,
+            "currentValue": true
+          }, {
+            "eventOrEventFieldToCollect": {
+              "absolute": {
+                "fieldNumber": ["2", "2", "8"]
+              }
+            },
+            "optional": true,
+            "currentValue": true
+          }, {
+            "eventOrEventFieldToCollect": {
+              "absolute": {
+                "fieldNumber": ["2", "2", "9"]
+              }
+            },
+            "optional": true,
+            "currentValue": true
+          }, {
+            "eventOrEventFieldToCollect": {
+              "absolute": {
+                "fieldNumber": ["2", "2", "10"]
+              }
+            },
+            "optional": true,
+            "currentValue": true
+          }, {
+            "eventOrEventFieldToCollect": {
+              "absolute": {
+                "fieldNumber": ["2", "2", "11"]
+              }
+            },
+            "optional": true,
+            "currentValue": true
+          }, {
+            "eventOrEventFieldToCollect": {
+              "absolute": {
+                "fieldNumber": ["2", "2", "12"]
+              }
+            },
+            "optional": true,
+            "currentValue": true
+          }, {
+            "eventOrEventFieldToCollect": {
+              "absolute": {
+                "fieldNumber": ["2", "2", "13"]
+              }
+            },
+            "optional": true,
+            "currentValue": true
+          }],
+          "collectionConfiguration": {
+            "triggerFrequency": {
+              "type": "NATIVE_FREQUENCY"
+            }
+          }
+        }]
+      }
+    }
+  }]
+}

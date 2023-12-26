@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
+<svg width="29cm" height="17cm" viewBox="99 139 567 324" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <ellipse style="fill: #000000" cx="380" cy="150" rx="10" ry="10"/>
+  <g>
+    <ellipse style="fill: #ffffff" cx="622.274" cy="407" rx="15" ry="15"/>
+    <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" cx="622.274" cy="407" rx="15" ry="15"/>
+    <ellipse style="fill: #000000" cx="622.274" cy="407" rx="10" ry="10"/>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="100" y="312" width="80" height="36" rx="10" ry="10"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="100" y="312" width="80" height="36" rx="10" ry="10"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="140" y="334.8">
+      <tspan x="140" y="334.8">Inactive</tspan>
+    </text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="340" y="312" width="80" height="36" rx="10" ry="10"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="340" y="312" width="80" height="36" rx="10" ry="10"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="380" y="334.8">
+      <tspan x="380" y="334.8">Active</tspan>
+    </text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="580" y="312" width="84.55" height="36" rx="10" ry="10"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="580" y="312" width="84.55" height="36" rx="10" ry="10"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="622.275" y="334.8">
+      <tspan x="622.275" y="334.8">Terminated</tspan>
+    </text>
+  </g>
+  <g>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 331.106,326.064 A 186.778,186.778 0 0 0 180,330"/>
+    <polygon style="fill: #000000" points="337.979,329.042 326.802,329.277 331.202,325.83 331.085,320.241 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="337.979,329.042 326.802,329.277 331.202,325.83 331.085,320.241 "/>
+  </g>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="199.125" y="297">
+    <tspan x="199.125" y="297">Collection trigger met</tspan>
+  </text>
+  <g>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 188.894,333.936 A 186.778,186.778 0 0 0 340,330"/>
+    <polygon style="fill: #000000" points="182.021,330.958 193.198,330.723 188.798,334.17 188.915,339.759 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="182.021,330.958 193.198,330.723 188.798,334.17 188.915,339.759 "/>
+  </g>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="187.925" y="372">
+    <tspan x="187.925" y="372">Collection trigger not met</tspan>
+  </text>
+  <g>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 360,220 A 365.4,365.4 0 0 0 147.349,305.617"/>
+    <polygon style="fill: #000000" points="141.669,310.511 145.802,300.123 147.265,305.518 152.459,307.585 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="141.669,310.511 145.802,300.123 147.265,305.518 152.459,307.585 "/>
+  </g>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="175" y="240">
+    <tspan x="175" y="240">Job is valid</tspan>
+  </text>
+  <g>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 614.905,305.642 A 368.339,368.339 0 0 0 400,220"/>
+    <polygon style="fill: #000000" points="620.601,310.517 609.801,307.627 614.988,305.543 616.433,300.143 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="620.601,310.517 609.801,307.627 614.988,305.543 616.433,300.143 "/>
+  </g>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="525" y="240">
+    <tspan x="525" y="240">Job is not valid</tspan>
+  </text>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="380" y1="160" x2="380" y2="190.264"/>
+    <polygon style="fill: #000000" points="380,197.764 375,187.764 380,190.264 385,187.764 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="380,197.764 375,187.764 380,190.264 385,187.764 "/>
+  </g>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="442.068" y="317">
+    <tspan x="442.068" y="317">Collection completed</tspan>
+  </text>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="473.294" y="352">
+    <tspan x="473.294" y="352">Exception</tspan>
+  </text>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="622.275" y1="348" x2="622.274" y2="381.304"/>
+    <polygon style="fill: #000000" points="622.274,388.804 617.274,378.804 622.274,381.304 627.274,378.804 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="622.274,388.804 617.274,378.804 622.274,381.304 627.274,378.804 "/>
+  </g>
+  <g>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 140,348 A 359.342,359.342 0 0 0 614.971,354.433"/>
+    <polygon style="fill: #000000" points="620.617,349.501 616.558,359.918 615.057,354.533 609.848,352.504 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="620.617,349.501 616.558,359.918 615.057,354.533 609.848,352.504 "/>
+  </g>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="420" y1="330" x2="570.264" y2="330"/>
+    <polygon style="fill: #000000" points="577.764,330 567.764,335 570.264,330 567.764,325 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="577.764,330 567.764,335 570.264,330 567.764,325 "/>
+  </g>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="322.78" y="425">
+    <tspan x="322.78" y="425">Collection completed</tspan>
+  </text>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="353.812" y="460">
+    <tspan x="353.812" y="460">Exception</tspan>
+  </text>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="565" y="260">
+    <tspan x="565" y="260">Exception</tspan>
+  </text>
+  <g>
+    <polygon style="fill: #ffffff" points="360,220 380,200 400,220 380,240 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="360,220 380,200 400,220 380,240 "/>
+  </g>
+  <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="180" y="220">
+    <tspan x="180" y="220"></tspan>
+  </text>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="395" y="180">
+    <tspan x="395" y="180">Validation</tspan>
+  </text>
+</svg>

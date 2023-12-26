@@ -1,0 +1,83 @@
+font:
+  catalog:
+    Lato:
+      normal: lato-regular.ttf
+      bold: lato-bold.ttf
+      italic: lato-italic.ttf
+      bold_italic: lato-bold-italic.ttf
+page:
+  margin: [2cm 1.5cm 2cm 1.5cm]
+base:
+  align: justify
+  font:
+    color: 000000
+    family: Lato
+    size: 10
+    size_min: 9
+  line_heigth_length: 11
+  line_height: $base_line_height_length / $base_font_size
+link:
+  font_color: 000000
+heading:
+  align: left
+  h1_font_size: 20
+  h2_font_size: 16
+  h3_font_size: 12
+  h4_font_size: 10
+title_page:
+  align: right
+  title:
+    top: 44%
+    font_size: $heading_h1_font_size
+    font_color: 000000
+outline_list:
+  indent: $base_line_height_length
+  item_spacing: 0
+caption:
+  font_size: $base_font_size_min
+table:
+  font_size: $base_font_size_min
+  caption:
+    max_width: none
+    side: bottom
+  cell_padding: [4, 2, 2, 5]
+footnotes:
+  font_size: $base_font_size_min
+header:
+  border:
+    color: 000000
+    width: 0.25
+  font:
+    color: 000000
+    size: 7
+  height: 1.4cm
+  line_height: 1
+  padding: [0, 1, 2, 1]
+  vertical_align: bottom
+  recto:
+    columns: <50 >50%
+    left_content: 'SENSORIS Interface Architecture'
+    right_content: '{project-version}'
+  verso:
+    columns: $header_recto_columns
+    left_content: $header_recto_right_content
+    right_content: $header_recto_left_content
+footer:
+  border:
+    color: 000000
+    width: 0.25
+  font:
+    color: 000000
+    size: 7
+  height: 1.4cm
+  line_height: 1
+  padding: [4, 1, 0, 1]
+  vertical_align: top
+  recto:
+    columns: <96% >4%
+    left_content: 'Copyright (C) 2017-{docyear} SENSORIS Innovation Platform hosted by ERTICO - ITS Europe. This work is licensed under a Creative Commons Attribution-NoDerivatives 4.0 International License - \https://creativecommons.org/licenses/by-nd/4.0/legalcode.'
+    right_content: '{page-number}'
+  verso:
+    columns: <4% >96%
+    left_content: $footer_recto_right_content
+    right_content: $footer_recto_left_content
