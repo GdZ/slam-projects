@@ -176,3 +176,6 @@
 [submodule "tutorials/spring-tutorials"]
 	path = tutorials/spring-tutorials
 	url = https://github.com/eugenp/tutorials.git
+[submodule "ORB_SLAM/ORB_SLAM2_detailed_comments"]
+	path = ORB_SLAM/ORB_SLAM2_detailed_comments
+	url = https://github.com/electech6/ORB_SLAM2_detailed_comments.git
