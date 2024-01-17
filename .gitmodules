@@ -185,3 +185,6 @@
 [submodule "ORB_SLAM/NeRF-Based-SLAM-Incredible-Insights"]
 	path = ORB_SLAM/NeRF-Based-SLAM-Incredible-Insights
 	url = https://github.com/electech6/NeRF-Based-SLAM-Incredible-Insights.git
+[submodule "location/localization_in_auto_driving"]
+	path = location/localization_in_auto_driving
+	url = https://github.com/Little-Potato-1990/localization_in_auto_driving.git
